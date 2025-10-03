@@ -1,10 +1,22 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star } from "lucide-react";
+import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const Features = () => {
   const features = [
+    {
+      icon: Mic,
+      badge: "SPRAAK INTERACTIE",
+      title: "Praat tegen de bot, krijg directe antwoorden",
+      description: "Klanten kunnen simpelweg tegen de bot praten via spraak. De bot transcribeert automatisch en geeft textuele antwoorden. Perfect voor hands-free winkelen en mobiele gebruikers.",
+      benefits: [
+        "Spraak-naar-tekst in realtime",
+        "Hoge nauwkeurigheid in Nederlands",
+        "Hands-free shopping ervaring"
+      ],
+      mockupType: "voice"
+    },
     {
       icon: Bot,
       badge: "CHECKOUT BOT",
@@ -194,6 +206,73 @@ const Features = () => {
                     
                     {/* Main mockup card */}
                     <div className="relative bg-card border border-border rounded-2xl shadow-2xl p-8">
+                      {feature.mockupType === "voice" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-primary/10 rounded-xl">
+                            <div className="relative">
+                              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center animate-pulse">
+                                <Mic className="w-5 h-5 text-primary-foreground" />
+                              </div>
+                              <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
+                            </div>
+                            <span className="text-sm font-medium">SPRAAK INTERACTIE</span>
+                          </div>
+                          
+                          <div className="p-4 bg-muted/30 rounded-xl border border-primary/20">
+                            <div className="flex items-start gap-3 mb-3">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <Mic className="w-4 h-4 text-primary" />
+                              </div>
+                              <div className="flex-1">
+                                <div className="text-xs text-muted-foreground mb-2">Aan het luisteren...</div>
+                                <div className="flex items-center gap-1 mb-2">
+                                  {[...Array(20)].map((_, i) => (
+                                    <div 
+                                      key={i}
+                                      className="w-1 bg-primary rounded-full animate-pulse"
+                                      style={{
+                                        height: `${Math.random() * 24 + 8}px`,
+                                        animationDelay: `${i * 0.1}s`
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                                <p className="text-sm italic text-muted-foreground">
+                                  "Ik zoek een rode winterjas in maat M"
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="p-4 bg-muted/50 rounded-xl">
+                            <div className="flex items-start gap-3">
+                              <Bot className="w-5 h-5 text-primary mt-0.5" />
+                              <div className="flex-1 space-y-3">
+                                <p className="text-sm">Ik heb je vraag begrepen! 👍</p>
+                                <p className="text-sm">Laat me even de perfecte rode winterjas voor je zoeken in maat M...</p>
+                                
+                                <div className="flex items-center gap-3 p-3 border border-border rounded-lg bg-background">
+                                  <div className="w-16 h-16 bg-primary rounded" />
+                                  <div className="flex-1">
+                                    <div className="font-semibold text-sm mb-1">Winterjas Classic</div>
+                                    <div className="text-xs text-muted-foreground mb-1">Maat M</div>
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-primary font-bold">€89,99</span>
+                                      <span className="text-xs bg-green-500/20 text-green-600 px-2 py-0.5 rounded">Op voorraad</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center justify-center gap-2 p-3 bg-muted/30 rounded-lg">
+                            <Mic className="w-4 h-4 text-muted-foreground" />
+                            <span className="text-xs text-muted-foreground">💡 Tip: Klik op de microfoon om te spreken</span>
+                          </div>
+                        </div>
+                      )}
+                      
                       {feature.mockupType === "checkout" && (
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
