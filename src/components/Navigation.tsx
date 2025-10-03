@@ -15,10 +15,9 @@ const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="hidden items-center gap-8 md:flex">
-            <button className="flex items-center gap-1 text-sm font-medium hover:text-primary">
-              Mogelijkheden
-              <ChevronDown className="h-4 w-4" />
-            </button>
+            <a href="/features" className="text-sm font-medium hover:text-primary">
+              Features
+            </a>
             <a href="#demo" className="text-sm font-medium hover:text-primary">
               Demo
             </a>
