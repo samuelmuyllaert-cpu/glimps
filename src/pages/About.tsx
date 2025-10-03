@@ -45,7 +45,11 @@ const About = () => {
             <p className="text-muted-foreground">
               Gepassioneerd door AI-technologieën en workflows om herhaalde taken om te zetten in automatiseringen.
             </p>
-            <Button variant="default" className="rounded-full">
+            <Button 
+              variant="default" 
+              className="rounded-full"
+              onClick={() => window.open('https://www.linkedin.com/in/samuel-muyllaert-17311823a/', '_blank')}
+            >
               LinkedIn profiel
             </Button>
           </div>
@@ -68,7 +72,11 @@ const About = () => {
             <p className="text-muted-foreground">
               Digital Business Professional met +15 ervaring in digital sales en marketing.
             </p>
-            <Button variant="default" className="rounded-full">
+            <Button 
+              variant="default" 
+              className="rounded-full"
+              onClick={() => window.open('https://www.linkedin.com/in/tmuyllaert/', '_blank')}
+            >
               LinkedIn profiel
             </Button>
           </div>
