@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic } from "lucide-react";
+import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const Features = () => {
@@ -64,6 +64,18 @@ const Features = () => {
         "Hands-free shopping ervaring"
       ],
       mockupType: "voice"
+    },
+    {
+      icon: Globe,
+      badge: "MULTILINGUAL SUPPORT",
+      title: "Communiceer wereldwijd in 50+ talen",
+      description: "De chatbot detecteert automatisch de taal van je klant en antwoordt in diezelfde taal. Perfect voor internationale webshops die klanten over de hele wereld bedienen - zonder extra configuratie.",
+      benefits: [
+        "Automatische taaldetectie - 50+ talen ondersteund",
+        "Natuurlijke conversaties in elke taal met context begrip",
+        "Real-time vertaling van productinfo en antwoorden"
+      ],
+      mockupType: "multilingual"
     },
     {
       icon: Package,
@@ -269,6 +281,127 @@ const Features = () => {
                           <div className="flex items-center justify-center gap-2 p-3 bg-muted/30 rounded-lg">
                             <Mic className="w-4 h-4 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">💡 Tip: Klik op de microfoon om te spreken</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "multilingual" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between p-4 bg-primary/10 rounded-xl mb-4">
+                            <div className="flex items-center gap-2">
+                              <Globe className="w-5 h-5 text-primary" />
+                              <span className="text-sm font-medium">Multilingual Chat</span>
+                            </div>
+                            <span className="text-xs bg-green-500/20 text-green-600 px-3 py-1 rounded-full font-medium">Auto-detect ON</span>
+                          </div>
+
+                          <div className="space-y-3">
+                            {/* Dutch message */}
+                            <div className="p-4 bg-muted/50 rounded-xl">
+                              <div className="flex items-start gap-3">
+                                <div className="text-xl">🇳🇱</div>
+                                <div className="flex-1">
+                                  <p className="text-sm mb-1">Hallo! Hoe kan ik je helpen?</p>
+                                  <p className="text-xs text-muted-foreground">Nederlands gedetecteerd</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* English message */}
+                            <div className="p-4 bg-muted/50 rounded-xl">
+                              <div className="flex items-start gap-3">
+                                <div className="text-xl">🇬🇧</div>
+                                <div className="flex-1">
+                                  <p className="text-sm mb-1">Hello! How can I help you today?</p>
+                                  <p className="text-xs text-muted-foreground">English detected</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* German message */}
+                            <div className="p-4 bg-muted/50 rounded-xl">
+                              <div className="flex items-start gap-3">
+                                <div className="text-xl">🇩🇪</div>
+                                <div className="flex-1">
+                                  <p className="text-sm mb-1">Hallo! Wie kann ich Ihnen helfen?</p>
+                                  <p className="text-xs text-muted-foreground">Deutsch erkannt</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* French message */}
+                            <div className="p-4 bg-muted/50 rounded-xl">
+                              <div className="flex items-start gap-3">
+                                <div className="text-xl">🇫🇷</div>
+                                <div className="flex-1">
+                                  <p className="text-sm mb-1">Bonjour! Comment puis-je vous aider?</p>
+                                  <p className="text-xs text-muted-foreground">Français détecté</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Spanish message */}
+                            <div className="p-4 bg-muted/50 rounded-xl">
+                              <div className="flex items-start gap-3">
+                                <div className="text-xl">🇪🇸</div>
+                                <div className="flex-1">
+                                  <p className="text-sm mb-1">¡Hola! ¿Cómo puedo ayudarte?</p>
+                                  <p className="text-xs text-muted-foreground">Español detectado</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Stats section */}
+                          <div className="grid grid-cols-2 gap-3 mt-4 p-4 bg-green-500/10 rounded-xl">
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-primary mb-1">🌍 50+</div>
+                              <div className="text-xs text-muted-foreground">Ondersteunde talen</div>
+                            </div>
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-primary mb-1">⚡ &lt;1s</div>
+                              <div className="text-xs text-muted-foreground">Detectietijd</div>
+                            </div>
+                          </div>
+
+                          {/* Language badges */}
+                          <div className="flex flex-wrap gap-2 p-4 bg-muted/30 rounded-xl">
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇳🇱 NL
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇬🇧 EN
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇩🇪 DE
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇫🇷 FR
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇪🇸 ES
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇮🇹 IT
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇵🇹 PT
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇵🇱 PL
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇷🇺 RU
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇯🇵 JP
+                            </div>
+                            <div className="flex items-center gap-1 text-xs bg-background px-2 py-1 rounded border border-border">
+                              🇨🇳 ZH
+                            </div>
+                            <div className="text-xs bg-primary/20 text-primary px-2 py-1 rounded font-medium">
+                              +40 meer
+                            </div>
                           </div>
                         </div>
                       )}
