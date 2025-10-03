@@ -54,11 +54,6 @@ const Hero = () => {
         </div>
 
       </div>
-
-      {/* Bottom section hint (decorative) */}
-      <div className="absolute bottom-20 left-1/2 w-full max-w-2xl -translate-x-1/2">
-        <div className="h-32 rounded-t-3xl bg-white/80 backdrop-blur-sm" />
-      </div>
     </div>
   );
 };
