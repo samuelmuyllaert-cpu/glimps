@@ -180,8 +180,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/pricing" className="text-muted-foreground hover:text-primary">
-                  Prijzen
+                <a href="/roi" className="text-muted-foreground hover:text-primary">
+                  ROI Calculator
                 </a>
               </li>
               <li>
