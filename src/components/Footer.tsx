@@ -185,6 +185,16 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/ecom-readiness" className="text-muted-foreground hover:text-primary">
+                  Readiness Quiz
+                </a>
+              </li>
+              <li>
+                <a href="/ecom-agents" className="text-muted-foreground hover:text-primary">
+                  Ecom Agents
+                </a>
+              </li>
+              <li>
                 <a href="/changelog" className="text-muted-foreground hover:text-primary">
                   Changelog
                 </a>
