@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Send } from "lucide-react";
 
@@ -131,6 +132,7 @@ const Demo = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

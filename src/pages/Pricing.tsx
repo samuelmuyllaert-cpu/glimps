@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
@@ -158,6 +159,7 @@ const Pricing = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 const Blog = () => {
@@ -167,6 +168,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

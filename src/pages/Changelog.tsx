@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Sparkles, Zap, Bug, Calendar } from "lucide-react";
 
 const Changelog = () => {
@@ -168,6 +169,7 @@ const Changelog = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
