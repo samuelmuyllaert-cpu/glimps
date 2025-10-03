@@ -53,28 +53,140 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Social Proof */}
-        <div className="flex flex-col items-center gap-3">
-          {/* Customer Avatars */}
-          <div className="flex -space-x-2">
-            {customers.map((customer, index) => (
-              <div
-                key={index}
-                className={`flex h-12 w-12 items-center justify-center rounded-full border-2 border-background ${customer.bg} text-sm font-semibold text-white`}
-              >
-                {customer.name.charAt(0)}
+        {/* Product Showcase Cards */}
+        <div className="mb-20 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {/* Changelog Card */}
+          <div className="rounded-xl bg-white/90 p-6 shadow-lg backdrop-blur-sm">
+            <div className="mb-4 flex items-center gap-2">
+              <div className="flex gap-1.5">
+                <div className="h-3 w-3 rounded-full bg-red-400" />
+                <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                <div className="h-3 w-3 rounded-full bg-green-400" />
               </div>
-            ))}
+            </div>
+            <h3 className="mb-4 text-center text-lg font-bold text-primary">CHANGELOG</h3>
+            <div className="flex items-start gap-3">
+              <span className="text-sm text-muted-foreground">JAN '23</span>
+              <p className="text-sm font-medium">Intercom Integration with Supahub</p>
+            </div>
           </div>
 
-          {/* Rating */}
-          <div className="flex items-center gap-2">
-            <div className="flex gap-1">
+          {/* Feedback Portal Card */}
+          <div className="rounded-xl bg-white/90 p-6 shadow-lg backdrop-blur-sm">
+            <div className="mb-4 flex items-center gap-2">
+              <div className="flex gap-1.5">
+                <div className="h-3 w-3 rounded-full bg-red-400" />
+                <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                <div className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+            </div>
+            <h3 className="mb-4 text-center text-lg font-bold text-primary">FEEDBACK PORTAL</h3>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 rounded-lg border p-3">
+                <div className="flex h-12 w-12 flex-col items-center justify-center rounded-lg border-2">
+                  <span className="text-xs font-bold">786</span>
+                </div>
+                <span className="text-sm font-medium">Create posts from Slack</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-lg border p-3">
+                <div className="flex h-12 w-12 flex-col items-center justify-center rounded-lg border-2">
+                  <span className="text-xs font-bold">214</span>
+                </div>
+                <span className="text-sm font-medium">Merge duplicate posts</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Roadmap Card */}
+          <div className="rounded-xl bg-white/90 p-6 shadow-lg backdrop-blur-sm">
+            <div className="mb-4 flex items-center gap-2">
+              <div className="flex gap-1.5">
+                <div className="h-3 w-3 rounded-full bg-red-400" />
+                <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                <div className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+            </div>
+            <h3 className="mb-4 text-center text-lg font-bold text-primary">ROADMAP</h3>
+            <div className="space-y-2 text-xs">
+              <div className="grid grid-cols-3 gap-2 font-bold">
+                <span>IMPACT</span>
+                <span>EFFORT</span>
+                <span>SCORE</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2 items-center">
+                <span>129</span>
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="rounded-full bg-foreground px-2 py-1 text-background">750</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2 items-center">
+                <span>96</span>
+                <div className="flex gap-0.5">
+                  {[...Array(4)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <Star className="h-3 w-3 text-yellow-400" />
+                </div>
+                <span className="rounded-full bg-foreground px-2 py-1 text-background">396</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2 items-center">
+                <span>58</span>
+                <div className="flex gap-0.5">
+                  {[...Array(3)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  {[...Array(2)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="rounded-full bg-foreground px-2 py-1 text-background">518</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Customer Testimonials */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="flex flex-col items-center text-center">
+            <div className="mb-4 h-16 w-16 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/40" />
+            <p className="mb-4 text-sm text-foreground">
+              "I love how simple Supahub makes it for our users and for admins to manage user feedback and changelog."
+            </p>
+            <div className="mb-2 flex gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-sm font-medium">loved by 300+ customers</span>
+            <span className="text-sm font-medium">Jackson Schaal</span>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <div className="mb-4 h-16 w-16 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/40" />
+            <p className="mb-4 text-sm text-foreground">
+              "I dig this concept - Supahub helped us out a ton with prioritizing customer feedback!"
+            </p>
+            <div className="mb-2 flex gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <span className="text-sm font-medium">Anant Dubey</span>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <div className="mb-4 h-16 w-16 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/40" />
+            <p className="mb-4 text-sm text-foreground">
+              "Our Support team loves having a place to direct customers where they can feel like their voice is heard."
+            </p>
+            <div className="mb-2 flex gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <span className="text-sm font-medium">Emily Studer</span>
           </div>
         </div>
       </div>
