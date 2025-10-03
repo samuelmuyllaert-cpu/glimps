@@ -53,30 +53,6 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Social Proof */}
-        <div className="flex flex-col items-center gap-3">
-          {/* Customer Avatars */}
-          <div className="flex -space-x-2">
-            {customers.map((customer, index) => (
-              <div
-                key={index}
-                className={`flex h-12 w-12 items-center justify-center rounded-full border-2 border-background ${customer.bg} text-sm font-semibold text-white`}
-              >
-                {customer.name.charAt(0)}
-              </div>
-            ))}
-          </div>
-
-          {/* Rating */}
-          <div className="flex items-center gap-2">
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-            <span className="text-sm font-medium">loved by 300+ customers</span>
-          </div>
-        </div>
       </div>
 
       {/* Bottom section hint (decorative) */}
