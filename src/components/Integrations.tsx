@@ -1,14 +1,19 @@
+import bpostLogo from "@/assets/bpost-logo.png";
+import odooLogo from "@/assets/odoo-logo.png";
+import postnlLogo from "@/assets/postnl-logo.png";
+
 const Integrations = () => {
   const integrations = [
     { name: "Shopify", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" },
     { name: "SendCloud", logo: "https://www.sendcloud.com/wp-content/themes/sendcloud/assets/images/logo.svg" },
     { name: "WooCommerce", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg" },
     { name: "WhatsApp", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" },
-    { name: "Odoo", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Odoo_Official_Logo.svg" },
+    { name: "Odoo", logo: odooLogo },
     { name: "Supabase", logo: "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" },
     { name: "Slack", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
     { name: "Magento", logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Magento_Logo.svg" },
-    { name: "bpost", logo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Bpost_logo.svg" },
+    { name: "bpost", logo: bpostLogo },
+    { name: "PostNL", logo: postnlLogo },
   ];
 
   return (
