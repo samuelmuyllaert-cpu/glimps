@@ -35,6 +35,9 @@ const Navigation = () => {
             <a href="/about" className="text-sm font-medium hover:text-primary">
               Over Ons
             </a>
+            <a href="/ecom-agents" className="text-sm font-medium hover:text-primary">
+              Ecom Agents
+            </a>
             <a href="/login" className="text-sm font-medium hover:text-primary">
               Inloggen
             </a>

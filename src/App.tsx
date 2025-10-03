@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Career from "./pages/Career";
 import Login from "./pages/Login";
+import EcomAgents from "./pages/EcomAgents";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Career />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/ecom-agents" element={<EcomAgents />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
