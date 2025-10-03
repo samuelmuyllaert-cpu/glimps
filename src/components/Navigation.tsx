@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import logoIcon from "@/assets/logo-icon.png";
+import glimpsLogo from "@/assets/glimps-logo.png";
 
 const Navigation = () => {
   return (
@@ -8,10 +8,9 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <img src={logoIcon} alt="glimps" className="h-8 w-8" />
-            <span className="font-inter text-xl font-normal">glimps</span>
-          </div>
+          <a href="/" className="flex items-center">
+            <img src={glimpsLogo} alt="glimps" className="h-10" />
+          </a>
 
           {/* Navigation Links */}
           <div className="hidden items-center gap-8 md:flex">
