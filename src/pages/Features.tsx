@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox } from "lucide-react";
+import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const Features = () => {
@@ -15,6 +15,42 @@ const Features = () => {
         "Live voorraad en leveringstijden"
       ],
       mockupType: "checkout"
+    },
+    {
+      icon: ShoppingCart,
+      badge: "WINKELMANDJE CONTEXT",
+      title: "De bot weet precies wat er in het winkelmandje zit",
+      description: "Onze chatbot heeft realtime toegang tot de winkelmandje inhoud en kan klanten begeleiden met gerichte suggesties, kortingen en productinformatie op basis van hun huidige selectie.",
+      benefits: [
+        "Realtime synchronisatie met winkelmandje",
+        "Slimme suggesties gebaseerd op mandje inhoud",
+        "Directe checkout vanuit chat mogelijk"
+      ],
+      mockupType: "cart-context"
+    },
+    {
+      icon: Search,
+      badge: "SLIMME PRODUCT ZOEKER",
+      title: "AI zoekt automatisch de perfecte producten",
+      description: "De chatbot doorzoekt intelligent je volledige productdatabase en vindt precies wat klanten zoeken op basis van kleur, maat, prijs, categorie en beschikbaarheid. Gebruik natuurlijke taal, geen zoekfilters nodig.",
+      benefits: [
+        "Semantische zoekopdrachten in natuurlijke taal",
+        "Filter op maat, kleur, prijs en voorraad",
+        "Realtime synchronisatie met productcatalogus"
+      ],
+      mockupType: "product-search"
+    },
+    {
+      icon: TrendingUp,
+      badge: "UPSELL & CROSS-SELL",
+      title: "Verhoog je gemiddelde orderwaarde met 40%",
+      description: "Onze AI herkent het perfecte moment om aanvullende producten voor te stellen. Van bundels tot premium varianten - altijd relevant en nooit opdringerig.",
+      benefits: [
+        "Slimme product bundels en combinaties",
+        "Premium variant suggesties op juiste moment",
+        "Automatische kortingen bij bundel aankoop"
+      ],
+      mockupType: "upsell"
     },
     {
       icon: Package,
@@ -41,14 +77,50 @@ const Features = () => {
       mockupType: "return"
     },
     {
-      icon: ShoppingCart,
-      badge: "PRODUCT CAROUSEL",
-      title: "Slimme product suggesties met AI-powered upsell",
-      description: "Toon relevante producten in een visueel aantrekkelijke carousel met intelligente upsell en cross-sell suggesties op basis van gedrag en voorkeuren.",
+      icon: Users,
+      badge: "LEAD VERZAMELING",
+      title: "Verzamel kwaliteitsvolle leads tijdens gesprekken",
+      description: "Maak van elke conversatie een kans om leads te verzamelen. De bot vraagt op natuurlijke wijze naar contactgegevens en voorkeuren, zonder opdringerig te zijn.",
       benefits: [
-        "Dynamische product aanbevelingen",
-        "Automatische bundel suggesties",
-        "Visuele productweergave met prijzen"
+        "Natuurlijke vraagflow voor contactgegevens",
+        "Automatische segmentatie op basis van interesse",
+        "Directe export naar CRM en email tools"
+      ],
+      mockupType: "lead-collection"
+    },
+    {
+      icon: Zap,
+      badge: "QUICK REPLY BUTTONS",
+      title: "Snelle interactie met één klik antwoorden",
+      description: "Maak het makkelijk voor klanten met visuele knoppen en snelle antwoorden. Geen typen nodig - gewoon klikken en doorgaan. Perfect voor mobiele gebruikers.",
+      benefits: [
+        "Contextuele knoppen gebaseerd op situatie",
+        "Visuele knoppen met emoji's en iconen",
+        "Mobiel-geoptimaliseerd voor touch interfaces"
+      ],
+      mockupType: "quick-replies"
+    },
+    {
+      icon: Code,
+      badge: "API & INTEGRATIES",
+      title: "Koppel met al je bestaande systemen",
+      description: "Naadloze integratie met je e-commerce platform, CRM, helpdesk en meer. Gebruik onze REST API of kant-en-klare connectoren voor populaire platforms.",
+      benefits: [
+        "RESTful API met uitgebreide documentatie",
+        "Native integraties met Shopify, WooCommerce",
+        "Webhooks voor realtime event notificaties"
+      ],
+      mockupType: "api"
+    },
+    {
+      icon: MessageSquare,
+      badge: "CONVERSATIONAL FLOWS",
+      title: "Intelligente gespreksflows die zich aanpassen",
+      description: "Onze AI past zich aan aan de behoeften van elke klant. Van simpele vragen tot complexe productadvies - altijd de juiste flow.",
+      benefits: [
+        "Dynamische flows op basis van context",
+        "Multi-turn conversaties met geheugen",
+        "Natuurlijke taalverwerking voor begrip"
       ],
       mockupType: "carousel"
     },
@@ -298,6 +370,340 @@ const Features = () => {
                           </div>
                           <div className="p-3 bg-primary/10 rounded-lg text-sm text-primary">
                             🎁 Bestel 2 producten en krijg 10% korting
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "cart-context" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
+                            <ShoppingCart className="w-5 h-5 text-primary" />
+                            <span className="text-sm">Ik zie dat je 2 items in je winkelmandje hebt 🛒</span>
+                          </div>
+                          <div className="space-y-3 p-4 border border-border rounded-lg">
+                            <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
+                              <div className="w-16 h-16 bg-muted rounded" />
+                              <div className="flex-1">
+                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                <div className="h-3 bg-muted rounded w-1/2" />
+                              </div>
+                              <span className="text-primary font-semibold">€49,99</span>
+                            </div>
+                            <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
+                              <div className="w-16 h-16 bg-muted rounded" />
+                              <div className="flex-1">
+                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                <div className="h-3 bg-muted rounded w-1/2" />
+                              </div>
+                              <span className="text-primary font-semibold">€29,99</span>
+                            </div>
+                            <div className="pt-3 border-t border-border flex justify-between items-center">
+                              <span className="font-semibold">Totaal</span>
+                              <span className="text-xl font-bold">€79,98</span>
+                            </div>
+                          </div>
+                          <div className="p-4 bg-muted/30 rounded-lg">
+                            <div className="text-sm font-semibold mb-3">Perfect bij jouw selectie:</div>
+                            <div className="flex items-center gap-3 p-3 bg-background border border-border rounded-lg">
+                              <div className="w-12 h-12 bg-muted rounded" />
+                              <div className="flex-1">
+                                <div className="h-2 bg-muted rounded w-2/3 mb-2" />
+                                <div className="h-2 bg-muted rounded w-1/2" />
+                              </div>
+                              <span className="text-sm text-primary font-semibold">€19,99</span>
+                              <button className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg">
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "product-search" && (
+                        <div className="space-y-4">
+                          <div className="p-3 border-2 border-primary rounded-xl">
+                            <MessageSquare className="w-4 h-4 text-primary mb-2" />
+                            <span className="text-sm">Ik zoek een rode winterjas, maat M</span>
+                          </div>
+                          <div className="p-4 bg-muted/30 rounded-xl space-y-2">
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <Search className="w-4 h-4" />
+                              <span>Zoeken in 2.847 producten...</span>
+                            </div>
+                            <div className="text-sm font-semibold">Ik heb 3 perfecte opties gevonden! 🎯</div>
+                          </div>
+                          <div className="space-y-3">
+                            <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg">
+                              <div className="w-16 h-16 bg-primary/20 rounded" />
+                              <div className="flex-1">
+                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                <div className="h-3 bg-muted rounded w-1/2 mb-2" />
+                                <div className="flex items-center gap-2">
+                                  <Badge variant="secondary" className="text-xs bg-primary/20 text-primary border-0">Maat M</Badge>
+                                  <Badge variant="secondary" className="text-xs bg-green-500/20 text-green-600 border-0">Op voorraad</Badge>
+                                </div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-lg font-bold text-primary">€89,99</div>
+                                <div className="flex gap-0.5">
+                                  {[1,2,3,4,5].map(i => (
+                                    <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-3 p-3 border border-border rounded-lg">
+                              <div className="w-16 h-16 bg-muted rounded" />
+                              <div className="flex-1">
+                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                <div className="h-3 bg-muted rounded w-1/2" />
+                              </div>
+                              <span className="text-primary font-semibold">€79,99</span>
+                            </div>
+                            <div className="flex items-center gap-3 p-3 border border-border rounded-lg">
+                              <div className="w-16 h-16 bg-muted rounded" />
+                              <div className="flex-1">
+                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                <div className="h-3 bg-muted rounded w-1/2" />
+                              </div>
+                              <span className="text-primary font-semibold">€99,99</span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "upsell" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
+                            <TrendingUp className="w-5 h-5 text-primary" />
+                            <span className="text-sm">Super keuze! Wist je dat deze vaak samen worden gekocht? 🎁</span>
+                          </div>
+                          <div className="p-4 border-2 border-primary/30 rounded-lg space-y-3">
+                            <div className="flex items-center gap-3 p-3 bg-background rounded-lg">
+                              <div className="w-16 h-16 bg-muted rounded" />
+                              <div className="flex-1">
+                                <div className="h-2 bg-muted rounded w-3/4 mb-2" />
+                                <div className="h-2 bg-muted rounded w-1/2" />
+                              </div>
+                              <span className="text-primary font-semibold">€49,99</span>
+                            </div>
+                            <div className="p-3 bg-gradient-to-r from-purple-500/10 to-purple-500/5 border border-purple-500/20 rounded-lg">
+                              <div className="flex items-center justify-between mb-2">
+                                <Badge className="bg-primary text-primary-foreground">Premium</Badge>
+                                <span className="text-xs text-muted-foreground">+€20 voor betere kwaliteit</span>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <div className="w-16 h-16 bg-purple-500/20 rounded" />
+                                <div className="flex-1">
+                                  <div className="h-2 bg-muted rounded w-3/4 mb-2" />
+                                  <div className="h-2 bg-muted rounded w-1/2" />
+                                </div>
+                                <div>
+                                  <div className="text-xs text-muted-foreground line-through">€69,99</div>
+                                  <div className="text-primary font-semibold">€59,99</div>
+                                </div>
+                                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold">
+                                  Upgrade
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="p-4 border-2 border-primary rounded-lg bg-primary/5">
+                            <div className="flex justify-between items-center mb-3">
+                              <span className="font-semibold">Vaak samen gekocht</span>
+                              <Badge variant="secondary" className="bg-green-500/20 text-green-600">Bespaar €15</Badge>
+                            </div>
+                            <div className="flex gap-2 mb-3">
+                              <div className="flex-1 p-2 bg-background rounded border border-border">
+                                <div className="w-full aspect-square bg-muted rounded mb-2" />
+                                <div className="text-center text-xs">+</div>
+                              </div>
+                              <div className="flex-1 p-2 bg-background rounded border border-border">
+                                <div className="w-full aspect-square bg-muted rounded mb-2" />
+                                <div className="text-center text-xs">+</div>
+                              </div>
+                            </div>
+                            <div className="flex justify-between items-center pt-3 border-t border-border">
+                              <div>
+                                <div className="text-xs text-muted-foreground line-through">€99,97</div>
+                                <div className="text-xl font-bold text-primary">€84,97</div>
+                              </div>
+                              <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold">
+                                Voeg toe
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "lead-collection" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
+                            <Users className="w-5 h-5 text-primary" />
+                            <span className="text-sm">Wil je op de hoogte blijven van nieuwe collecties? 💌</span>
+                          </div>
+                          <div className="p-4 border border-border rounded-lg space-y-4">
+                            <div>
+                              <label className="text-sm font-medium mb-2 block">Email</label>
+                              <div className="h-10 bg-muted rounded flex items-center px-3">
+                                <div className="h-2 bg-muted-foreground/30 rounded w-32" />
+                              </div>
+                            </div>
+                            <div>
+                              <label className="text-sm font-medium mb-2 block">Wat zijn je interesses?</label>
+                              <div className="flex gap-2">
+                                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
+                                  Damesmode
+                                </button>
+                                <button className="px-4 py-2 border border-border rounded-full text-sm hover:bg-muted/50">
+                                  Herenmode
+                                </button>
+                                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
+                                  Accessoires
+                                </button>
+                              </div>
+                            </div>
+                            <button className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-semibold">
+                              Aanmelden
+                            </button>
+                          </div>
+                          <div className="p-4 bg-muted/30 rounded-lg">
+                            <div className="flex items-center gap-2 mb-3">
+                              <span className="text-sm font-semibold">Lead Kwaliteit</span>
+                              <TrendingUp className="w-4 h-4 text-green-500" />
+                            </div>
+                            <div className="grid grid-cols-3 gap-3">
+                              <div className="text-center">
+                                <div className="text-2xl font-bold text-primary">342</div>
+                                <div className="text-xs text-muted-foreground">Leads</div>
+                              </div>
+                              <div className="text-center">
+                                <div className="text-2xl font-bold text-primary">78%</div>
+                                <div className="text-xs text-muted-foreground">Kwaliteit</div>
+                              </div>
+                              <div className="text-center">
+                                <div className="text-2xl font-bold text-primary">23%</div>
+                                <div className="text-xs text-muted-foreground">Conversie</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "quick-replies" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
+                            <Zap className="w-5 h-5 text-primary" />
+                            <span className="text-sm">Hoe kan ik je helpen? Kies een optie:</span>
+                          </div>
+                          <div className="grid grid-cols-2 gap-3">
+                            <button className="p-4 border-2 border-primary bg-primary/5 rounded-xl text-left hover:bg-primary/10 transition-colors">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-2xl">📦</span>
+                                <span className="font-semibold text-sm">Track pakket</span>
+                              </div>
+                            </button>
+                            <button className="p-4 border border-border rounded-xl text-left hover:bg-muted/50 transition-colors">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-2xl">🔄</span>
+                                <span className="font-semibold text-sm">Retour starten</span>
+                              </div>
+                            </button>
+                            <button className="p-4 border border-border rounded-xl text-left hover:bg-muted/50 transition-colors">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-2xl">👕</span>
+                                <span className="font-semibold text-sm">Product zoeken</span>
+                              </div>
+                            </button>
+                            <button className="p-4 border border-border rounded-xl text-left hover:bg-muted/50 transition-colors">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-2xl">💬</span>
+                                <span className="font-semibold text-sm">Vraag stellen</span>
+                              </div>
+                            </button>
+                          </div>
+                          <div className="p-4 bg-muted/30 rounded-lg">
+                            <div className="text-sm text-muted-foreground mb-3">
+                              Voor welk product wil je de status checken?
+                            </div>
+                            <div className="flex gap-2">
+                              <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
+                                Bestelling #8473
+                              </button>
+                              <button className="px-4 py-2 border border-border rounded-full text-sm hover:bg-muted/50">
+                                Bestelling #8401
+                              </button>
+                              <button className="px-4 py-2 border border-border rounded-full text-sm hover:bg-muted/50">
+                                Anders
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "api" && (
+                        <div className="space-y-4">
+                          <div className="p-4 bg-foreground text-background rounded-xl space-y-3 font-mono text-xs">
+                            <div className="flex items-center gap-2 text-green-400">
+                              <Code className="w-4 h-4" />
+                              <span>API Documentation</span>
+                            </div>
+                            <div className="text-purple-300">POST /api/v1/chat</div>
+                            <div className="pl-2 text-muted">{'{'}</div>
+                            <div className="pl-4">
+                              <span className="text-blue-300">"message"</span>: <span className="text-green-300">"Wat is de status?"</span>,
+                            </div>
+                            <div className="pl-4">
+                              <span className="text-blue-300">"userId"</span>: <span className="text-green-300">"usr_123"</span>,
+                            </div>
+                            <div className="pl-4">
+                              <span className="text-blue-300">"context"</span>: {'{'}
+                            </div>
+                            <div className="pl-6">
+                              <span className="text-blue-300">"cartId"</span>: <span className="text-green-300">"cart_456"</span>,
+                            </div>
+                            <div className="pl-6">
+                              <span className="text-blue-300">"orderId"</span>: <span className="text-green-300">"ord_789"</span>
+                            </div>
+                            <div className="pl-4">{'}'}</div>
+                            <div className="pl-2">{'}'}</div>
+                            <div className="border-t border-muted-foreground/20 pt-2 mt-2">
+                              <div className="text-green-400">● 200 OK</div>
+                            </div>
+                            <div className="pl-2 text-muted">{'{'}</div>
+                            <div className="pl-4">
+                              <span className="text-blue-300">"response"</span>: <span className="text-green-300">"Je pakket..."</span>,
+                            </div>
+                            <div className="pl-4">
+                              <span className="text-blue-300">"buttons"</span>: [...]
+                            </div>
+                            <div className="pl-2">{'}'}</div>
+                          </div>
+                          <div className="grid grid-cols-3 gap-2">
+                            <div className="p-3 border border-border rounded-lg text-center">
+                              <div className="w-8 h-8 mx-auto mb-2 bg-gradient-to-br from-green-500 to-green-600 rounded flex items-center justify-center text-xl">
+                                🛍️
+                              </div>
+                              <div className="text-xs font-semibold">Shopify</div>
+                            </div>
+                            <div className="p-3 border border-border rounded-lg text-center">
+                              <div className="w-8 h-8 mx-auto mb-2 bg-gradient-to-br from-purple-500 to-purple-600 rounded flex items-center justify-center text-xl">
+                                💎
+                              </div>
+                              <div className="text-xs font-semibold">WooCommerce</div>
+                            </div>
+                            <div className="p-3 border border-border rounded-lg text-center">
+                              <div className="w-8 h-8 mx-auto mb-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded flex items-center justify-center text-xl">
+                                ⚡
+                              </div>
+                              <div className="text-xs font-semibold">Custom API</div>
+                            </div>
+                          </div>
+                          <div className="p-3 bg-green-500/10 border border-green-500/20 rounded-lg text-sm text-green-700 dark:text-green-400">
+                            <div className="flex items-center gap-2">
+                              <Zap className="w-4 h-4" />
+                              <span className="font-semibold">Webhook events voor realtime synchronisatie</span>
+                            </div>
                           </div>
                         </div>
                       )}
