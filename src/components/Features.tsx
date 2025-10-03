@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import productRecommendations from "@/assets/product-recommendations.png";
 
 const Features = () => {
   const features = [
@@ -28,6 +29,24 @@ const Features = () => {
             <p className="text-lg text-muted-foreground mb-8">
               Onze AI chatbots begrijpen exact wat je klanten nodig hebben en leiden ze moeiteloos naar de perfecte aankoop.
             </p>
+
+            {/* Product Recommendations Visual */}
+            <div className="mb-8 rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src={productRecommendations} 
+                alt="AI chatbot met perfecte productaanbevelingen - conversies +47%" 
+                className="w-full h-auto"
+              />
+            </div>
+
+            <div className="mb-8 p-6 bg-primary/5 rounded-xl border border-primary/10">
+              <h3 className="font-inter text-xl font-normal text-foreground mb-2">
+                🎯 Perfecte productvoorstellen
+              </h3>
+              <p className="text-muted-foreground">
+                Onze AI analyseert klantgedrag en voorkeuren om de meest relevante producten voor te stellen, resulterend in +47% hogere conversies.
+              </p>
+            </div>
 
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => (
