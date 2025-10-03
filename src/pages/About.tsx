@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Target, TrendingUp, Lightbulb, Zap, Heart } from "lucide-react";
+import samuelPhoto from "@/assets/samuel.png";
+import tomPhoto from "@/assets/tom.png";
 
 const About = () => {
   return (
@@ -28,9 +30,11 @@ const About = () => {
           {/* Samuel */}
           <div className="space-y-6">
             <div className="mx-auto h-48 w-48 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/5 p-1">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-background">
-                <span className="text-6xl font-bold text-primary">SM</span>
-              </div>
+              <img 
+                src={samuelPhoto} 
+                alt="Samuel Muyllaert" 
+                className="h-full w-full rounded-full object-cover"
+              />
             </div>
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Samuel Muyllaert</h3>
@@ -49,9 +53,11 @@ const About = () => {
           {/* Tom */}
           <div className="space-y-6">
             <div className="mx-auto h-48 w-48 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/5 p-1">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-background">
-                <span className="text-6xl font-bold text-primary">TM</span>
-              </div>
+              <img 
+                src={tomPhoto} 
+                alt="Tom Muyllaert" 
+                className="h-full w-full rounded-full object-cover"
+              />
             </div>
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Tom Muyllaert</h3>
