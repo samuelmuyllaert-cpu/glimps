@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    --gradient-blob: linear-gradient(135deg, #fbbf24 0%, #ec4899 25%, #a855f7 50%, #8b5cf6 75%, #6366f1 100%);
+    --gradient-blob: linear-gradient(135deg, #e6575e 0%, #f88a8f 50%, #e6575e 100%);
 
     --sidebar-background: 0 0% 98%;
 

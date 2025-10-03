@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden">
       {/* Gradient Blob Background */}
-      <div className="absolute bottom-0 left-1/2 h-[600px] w-[1200px] -translate-x-1/2 rounded-full bg-gradient-to-br from-pink-300/40 via-purple-400/50 to-blue-500/40 blur-3xl" />
+      <div className="absolute bottom-0 left-1/2 h-[600px] w-[1200px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#e6575e]/40 via-[#f88a8f]/50 to-[#e6575e]/40 blur-3xl" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 text-center">

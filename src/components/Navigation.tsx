@@ -9,8 +9,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src={logoIcon} alt="Supahub" className="h-8 w-8" />
-            <span className="text-xl font-bold">Supahub</span>
+            <img src={logoIcon} alt="glimps" className="h-8 w-8" />
+            <span className="text-xl font-bold">glimps</span>
           </div>
 
           {/* Navigation Links */}
