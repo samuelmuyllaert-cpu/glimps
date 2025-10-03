@@ -19,7 +19,7 @@ const Integrations = () => {
           <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary">
             Onze primaire integraties
           </p>
-          <h2 className="mb-4 font-inter text-4xl font-bold text-foreground md:text-5xl">
+          <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
             Maak productiviteit makkelijker
             <br />
             met{" "}

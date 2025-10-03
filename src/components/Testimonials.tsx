@@ -66,7 +66,7 @@ const Testimonials = () => {
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
             Getuigenissen
           </span>
-          <h2 className="mb-4 font-inter text-4xl font-bold text-foreground md:text-5xl">
+          <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
             Wall of Love 💜
           </h2>
           <p className="text-lg text-muted-foreground">
