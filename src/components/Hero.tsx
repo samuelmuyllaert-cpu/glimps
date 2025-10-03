@@ -27,7 +27,7 @@ const Hero = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+        <h1 className="mb-6 font-inter text-[32px] leading-[40px] tracking-[0.352px] text-[#101828] max-sm:text-[32px] max-sm:leading-[40px] max-md:text-[40px] max-md:leading-[48px] md:text-[48px] md:leading-[60px]">
           Central hub to collect
           <br />
           feedback & announce
