@@ -21,7 +21,7 @@ const Features = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="font-inter text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Verhoog je omzet met AI-powered conversaties
             </h2>
 

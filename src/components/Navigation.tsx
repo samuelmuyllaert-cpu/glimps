@@ -10,7 +10,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img src={logoIcon} alt="glimps" className="h-8 w-8" />
-            <span className="text-xl font-bold">glimps</span>
+            <span className="font-inter text-xl font-bold">glimps</span>
           </div>
 
           {/* Navigation Links */}

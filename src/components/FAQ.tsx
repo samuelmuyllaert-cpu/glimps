@@ -31,7 +31,7 @@ const FAQ = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
+          <h2 className="mb-4 font-inter text-4xl font-bold text-foreground md:text-5xl">
             Alles wat je moet weten
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -47,7 +47,7 @@ const FAQ = () => {
         <div className="mx-auto grid max-w-5xl gap-x-12 gap-y-10 md:grid-cols-2">
           {faqs.map((faq, index) => (
             <div key={index} className="space-y-3">
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="font-inter text-lg font-semibold text-foreground">
                 {faq.question}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

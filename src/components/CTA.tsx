@@ -15,7 +15,7 @@ const CTA = () => {
             Begin gratis met glimps
           </span>
           
-          <h2 className="mb-6 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="mb-6 font-inter text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
             Stop met omzet mislopen & begin
             <br />
             klanten te verrassen
