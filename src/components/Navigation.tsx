@@ -18,20 +18,19 @@ const Navigation = () => {
             <a href="/features" className="text-sm font-medium hover:text-primary">
               Features
             </a>
-            <a href="#demo" className="text-sm font-medium hover:text-primary">
+            <a href="/demo" className="text-sm font-medium hover:text-primary">
               Demo
             </a>
-            <a href="#pricing" className="text-sm font-medium hover:text-primary">
+            <a href="/pricing" className="text-sm font-medium hover:text-primary">
               Prijzen
             </a>
-            <a href="#changelog" className="text-sm font-medium hover:text-primary">
+            <a href="/changelog" className="text-sm font-medium hover:text-primary">
               Changelog
             </a>
-            <a href="#blog" className="text-sm font-medium hover:text-primary">
+            <a href="/blog" className="text-sm font-medium hover:text-primary">
               Blog
             </a>
-            <button className="text-sm font-medium hover:text-primary">+</button>
-            <a href="#login" className="text-sm font-medium hover:text-primary">
+            <a href="/login" className="text-sm font-medium hover:text-primary">
               Inloggen
             </a>
           </div>
