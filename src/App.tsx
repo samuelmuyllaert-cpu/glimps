@@ -15,6 +15,7 @@ import Career from "./pages/Career";
 import Login from "./pages/Login";
 import EcomAgents from "./pages/EcomAgents";
 import EcomReadiness from "./pages/EcomReadiness";
+import Partners from "./pages/Partners";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/ecom-agents" element={<EcomAgents />} />
           <Route path="/ecom-readiness" element={<EcomReadiness />} />
+          <Route path="/partners" element={<Partners />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
