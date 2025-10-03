@@ -3,30 +3,30 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Sarah Jansen",
       role: "E-commerce Manager",
       company: "FashionHub",
       avatar: "SJ",
       rating: 5,
-      text: "glimps transformed our customer support. Response times dropped from hours to seconds, and our conversion rate increased by 23%.",
+      text: "glimps heeft onze klantenservice getransformeerd. Reactietijden daalden van uren naar seconden, en onze conversieratio steeg met 23%.",
       color: "bg-purple-400",
     },
     {
-      name: "Michael Chen",
-      role: "Founder & CEO",
+      name: "Michael de Vries",
+      role: "Oprichter & CEO",
       company: "TechGear Store",
-      avatar: "MC",
+      avatar: "MV",
       rating: 5,
-      text: "The AI understands complex product questions better than I expected. It's like having a knowledgeable sales assistant working 24/7.",
+      text: "De AI begrijpt complexe productvragen beter dan ik verwachtte. Het is alsof je een deskundige verkoper hebt die 24/7 werkt.",
       color: "bg-blue-400",
     },
     {
-      name: "Emma Williams",
+      name: "Emma Willems",
       role: "Customer Success Lead",
       company: "BeautyBox",
       avatar: "EW",
       rating: 5,
-      text: "Our team now focuses on complex issues while glimps handles routine questions. Customer satisfaction scores have never been higher!",
+      text: "Ons team focust nu op complexe problemen terwijl glimps routinevragen afhandelt. Klanttevredenheid is nog nooit zo hoog geweest!",
       color: "bg-pink-400",
     },
     {
@@ -35,16 +35,16 @@ const Testimonials = () => {
       company: "HomeEssentials",
       avatar: "DR",
       rating: 5,
-      text: "The multilingual support is game-changing for our international expansion. glimps helps us serve customers in 12 countries seamlessly.",
+      text: "De meertalige ondersteuning is een gamechanger voor onze internationale expansie. glimps helpt ons klanten in 12 landen naadloos te bedienen.",
       color: "bg-green-400",
     },
     {
-      name: "Lisa Anderson",
+      name: "Lisa Andersson",
       role: "Marketing Director",
       company: "SportsPro",
       avatar: "LA",
       rating: 5,
-      text: "Not only does it answer questions, but the smart product recommendations have directly increased our average order value by 18%.",
+      text: "Het beantwoordt niet alleen vragen, maar de slimme productaanbevelingen hebben onze gemiddelde bestelwaarde met 18% verhoogd.",
       color: "bg-orange-400",
     },
     {
@@ -53,7 +53,7 @@ const Testimonials = () => {
       company: "GadgetWorld",
       avatar: "JT",
       rating: 5,
-      text: "Implementation was incredibly easy. Within hours, glimps was handling customer inquiries with impressive accuracy and natural conversation.",
+      text: "Implementatie was ongelooflijk eenvoudig. Binnen enkele uren behandelde glimps klantvragen met indrukwekkende nauwkeurigheid.",
       color: "bg-red-400",
     },
   ];
@@ -64,13 +64,13 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-            Testimonials
+            Getuigenissen
           </span>
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
             Wall of Love 💜
           </h2>
           <p className="text-lg text-muted-foreground">
-            See what e-commerce businesses are saying about glimps
+            Zie wat e-commerce bedrijven over glimps zeggen
           </p>
         </div>
 

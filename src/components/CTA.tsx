@@ -12,32 +12,32 @@ const CTA = () => {
       <div className="relative z-10 container mx-auto px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-            Get Started with glimps for free
+            Begin gratis met glimps
           </span>
           
           <h2 className="mb-6 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            Stop losing sales & start
+            Stop met omzet mislopen & begin
             <br />
-            delighting customers
+            klanten te verrassen
           </h2>
           
           <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-            Join hundreds of e-commerce businesses using AI to provide instant support,
-            answer questions 24/7, and boost conversions.
+            Sluit je aan bij honderden e-commerce bedrijven die AI gebruiken voor directe support,
+            24/7 vragen beantwoorden en conversies verhogen.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button variant="hero" size="lg" className="rounded-full">
-              Start free trial
+              Start gratis proefperiode
               <ArrowRight className="h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="rounded-full">
-              Schedule a demo
+              Plan een demo
             </Button>
           </div>
 
           <p className="mt-6 text-sm text-muted-foreground">
-            No credit card required • Free 14-day trial • Cancel anytime
+            Geen creditcard vereist • Gratis 14-daagse proefperiode • Altijd opzegbaar
           </p>
         </div>
       </div>

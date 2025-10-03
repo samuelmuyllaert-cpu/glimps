@@ -1,28 +1,28 @@
 const FAQ = () => {
   const faqs = [
     {
-      question: "What is glimps?",
-      answer: "glimps is an AI-powered chatbot platform specifically designed for e-commerce businesses. We help B2C companies automate customer support, answer product questions, and drive sales through intelligent conversations.",
+      question: "Wat is glimps?",
+      answer: "glimps is een AI-aangedreven chatbot platform specifiek ontworpen voor e-commerce bedrijven. We helpen B2C bedrijven om klantenservice te automatiseren, productvragen te beantwoorden en verkoop te stimuleren door intelligente gesprekken.",
     },
     {
-      question: "Is glimps free?",
-      answer: "Yes, glimps offers a free plan to get you started. Paid plans begin at €49/month with additional features and higher conversation limits.",
+      question: "Is glimps gratis?",
+      answer: "Ja, glimps biedt een gratis plan om je op weg te helpen. Betaalde plannen beginnen bij €49/maand met extra functies en hogere gespreklimieten.",
     },
     {
-      question: "How does glimps integrate with my store?",
-      answer: "glimps seamlessly integrates with major e-commerce platforms including Shopify, WooCommerce, Magento, and more. Setup takes just minutes with our easy-to-use plugins.",
+      question: "Hoe integreert glimps met mijn webshop?",
+      answer: "glimps integreert naadloos met grote e-commerce platforms waaronder Shopify, WooCommerce, Magento en meer. Setup duurt slechts enkele minuten met onze gebruiksvriendelijke plugins.",
     },
     {
-      question: "Can I customize the chatbot's responses?",
-      answer: "Absolutely! glimps offers extensive customization options. You can train the bot with your product data, brand voice, and specific business rules to ensure consistent customer experiences.",
+      question: "Kan ik de antwoorden van de chatbot aanpassen?",
+      answer: "Absoluut! glimps biedt uitgebreide aanpassingsmogelijkheden. Je kunt de bot trainen met je productgegevens, merkstem en specifieke bedrijfsregels om consistente klantervaringen te garanderen.",
     },
     {
-      question: "How does glimps handle multiple languages?",
-      answer: "glimps supports over 50 languages out of the box. The AI automatically detects the customer's language and responds accordingly, making it perfect for international businesses.",
+      question: "Hoe gaat glimps om met meerdere talen?",
+      answer: "glimps ondersteunt meer dan 50 talen out of the box. De AI detecteert automatisch de taal van de klant en reageert dienovereenkomstig, perfect voor internationale bedrijven.",
     },
     {
-      question: "What kind of support questions can glimps handle?",
-      answer: "glimps can handle a wide range of queries including product information, order tracking, returns and refunds, shipping details, size guides, and general customer support questions.",
+      question: "Welke support vragen kan glimps afhandelen?",
+      answer: "glimps kan een breed scala aan vragen afhandelen, waaronder productinformatie, ordertracking, retouren en terugbetalingen, verzenddetails, maattabellen en algemene klantenservice vragen.",
     },
   ];
 
@@ -32,12 +32,12 @@ const FAQ = () => {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
-            Everything you need to know
+            Alles wat je moet weten
           </h2>
           <p className="text-lg text-muted-foreground">
-            If you have anything else you want to ask,{" "}
+            Als je iets anders wilt vragen,{" "}
             <a href="#contact" className="text-primary underline-offset-4 hover:underline">
-              reach out to us
+              neem contact met ons op
             </a>
             .
           </p>
@@ -60,11 +60,11 @@ const FAQ = () => {
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
           <p className="text-sm text-muted-foreground">
-            Ready to transform your customer experience?{" "}
+            Klaar om je klantervaring te transformeren?{" "}
             <span className="font-semibold text-foreground">
-              glimps is built for you
+              glimps is voor jou gemaakt
             </span>
-            . Start automating support and boosting sales today.
+            . Begin vandaag nog met het automatiseren van support en het verhogen van verkoop.
           </p>
         </div>
       </div>

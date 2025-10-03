@@ -16,14 +16,14 @@ const Navigation = () => {
           {/* Navigation Links */}
           <div className="hidden items-center gap-8 md:flex">
             <button className="flex items-center gap-1 text-sm font-medium hover:text-primary">
-              Features
+              Mogelijkheden
               <ChevronDown className="h-4 w-4" />
             </button>
             <a href="#demo" className="text-sm font-medium hover:text-primary">
               Demo
             </a>
             <a href="#pricing" className="text-sm font-medium hover:text-primary">
-              Pricing
+              Prijzen
             </a>
             <a href="#changelog" className="text-sm font-medium hover:text-primary">
               Changelog
@@ -33,13 +33,13 @@ const Navigation = () => {
             </a>
             <button className="text-sm font-medium hover:text-primary">+</button>
             <a href="#login" className="text-sm font-medium hover:text-primary">
-              Login
+              Inloggen
             </a>
           </div>
 
           {/* CTA Button */}
           <Button variant="default" size="default" className="rounded-full">
-            Sign up for free
+            Gratis aanmelden
           </Button>
         </div>
       </div>

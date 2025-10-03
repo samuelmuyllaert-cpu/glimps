@@ -22,34 +22,34 @@ const Hero = () => {
         {/* Overline */}
         <div className="mb-6">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            AI-Powered Customer Support
+            AI-Aangedreven Klantenondersteuning
           </span>
         </div>
 
         {/* Main Heading */}
         <h1 className="mb-6 font-inter text-[32px] leading-[40px] tracking-[0.352px] text-foreground max-sm:text-[32px] max-sm:leading-[40px] max-md:text-[40px] max-md:leading-[48px] md:text-[48px] md:leading-[60px]">
-          Intelligent chatbots
+          Intelligente chatbots
           <br />
-          that boost your
+          die je e-commerce
           <br />
-          e-commerce sales
+          omzet verhogen
         </h1>
 
         {/* Subheading */}
         <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-          glimps delivers AI-powered chatbots that understand your customers,
+          glimps levert AI-aangedreven chatbots die je klanten begrijpen,
           <br />
-          answer questions instantly, and drive conversions 24/7.
+          vragen direct beantwoorden en conversies 24/7 stimuleren.
         </p>
 
         {/* CTA Buttons */}
         <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button variant="hero" size="lg" className="rounded-full">
             <Sparkles className="h-5 w-5" />
-            Get started for free
+            Gratis aan de slag
           </Button>
           <Button variant="outline" size="lg" className="rounded-full">
-            See glimps in action
+            Zie glimps in actie
           </Button>
         </div>
 
