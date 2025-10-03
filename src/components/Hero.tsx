@@ -22,34 +22,34 @@ const Hero = () => {
         {/* Overline */}
         <div className="mb-6">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Customer Feedback & Feature Request Tool
+            AI-Powered Customer Support
           </span>
         </div>
 
         {/* Main Heading */}
-        <h1 className="mb-6 font-inter text-[32px] leading-[40px] tracking-[0.352px] text-[#101828] max-sm:text-[32px] max-sm:leading-[40px] max-md:text-[40px] max-md:leading-[48px] md:text-[48px] md:leading-[60px]">
-          Central hub to collect
+        <h1 className="mb-6 font-inter text-[32px] leading-[40px] tracking-[0.352px] text-foreground max-sm:text-[32px] max-sm:leading-[40px] max-md:text-[40px] max-md:leading-[48px] md:text-[48px] md:leading-[60px]">
+          Intelligent chatbots
           <br />
-          feedback & announce
+          that boost your
           <br />
-          product updates
+          e-commerce sales
         </h1>
 
         {/* Subheading */}
         <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-          Supahub your all-in-one solution for customer feedback management
+          glimps delivers AI-powered chatbots that understand your customers,
           <br />
-          and feature request prioritization.
+          answer questions instantly, and drive conversions 24/7.
         </p>
 
         {/* CTA Buttons */}
         <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button variant="hero" size="lg" className="rounded-full">
             <Sparkles className="h-5 w-5" />
-            Sign up for free
+            Get started for free
           </Button>
           <Button variant="outline" size="lg" className="rounded-full">
-            See Supahub Demo
+            See glimps in action
           </Button>
         </div>
 
