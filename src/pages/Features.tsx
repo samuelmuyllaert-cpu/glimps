@@ -6,18 +6,6 @@ import { Badge } from "@/components/ui/badge";
 const Features = () => {
   const features = [
     {
-      icon: Mic,
-      badge: "SPRAAK INTERACTIE",
-      title: "Praat tegen de bot, krijg directe antwoorden",
-      description: "Klanten kunnen simpelweg tegen de bot praten via spraak. De bot transcribeert automatisch en geeft textuele antwoorden. Perfect voor hands-free winkelen en mobiele gebruikers.",
-      benefits: [
-        "Spraak-naar-tekst in realtime",
-        "Hoge nauwkeurigheid in Nederlands",
-        "Hands-free shopping ervaring"
-      ],
-      mockupType: "voice"
-    },
-    {
       icon: Bot,
       badge: "CHECKOUT BOT",
       title: "Begeleid klanten naar een succesvolle aankoop",
@@ -64,6 +52,18 @@ const Features = () => {
         "Automatische kortingen bij bundel aankoop"
       ],
       mockupType: "upsell"
+    },
+    {
+      icon: Mic,
+      badge: "SPRAAK INTERACTIE",
+      title: "Praat tegen de bot, krijg directe antwoorden",
+      description: "Klanten kunnen simpelweg tegen de bot praten via spraak. De bot transcribeert automatisch en geeft textuele antwoorden. Perfect voor hands-free winkelen en mobiele gebruikers.",
+      benefits: [
+        "Spraak-naar-tekst in realtime",
+        "Hoge nauwkeurigheid in Nederlands",
+        "Hands-free shopping ervaring"
+      ],
+      mockupType: "voice"
     },
     {
       icon: Package,
