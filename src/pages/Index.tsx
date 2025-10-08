@@ -5,6 +5,7 @@ import Integrations from "@/components/Integrations";
 import AIKnowledge from "@/components/AIKnowledge";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import Testimonials from "@/components/Testimonials";
+import HowItWorks from "@/components/HowItWorks";
 import Quote from "@/components/Quote";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -21,6 +22,7 @@ const Index = () => {
       <AIKnowledge />
       <ProductRecommendations />
       <Testimonials />
+      <HowItWorks />
       <Quote />
       <FAQ />
       <CTA />

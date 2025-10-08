@@ -16,6 +16,7 @@ import Login from "./pages/Login";
 import EcomAgents from "./pages/EcomAgents";
 import EcomReadiness from "./pages/EcomReadiness";
 import Partners from "./pages/Partners";
+import HowWeWork from "./pages/HowWeWork";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/ecom-agents" element={<EcomAgents />} />
           <Route path="/ecom-readiness" element={<EcomReadiness />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/hoe-we-werken" element={<HowWeWork />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
