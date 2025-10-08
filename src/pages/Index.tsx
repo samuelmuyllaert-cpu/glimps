@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import WhyDifferent from "@/components/WhyDifferent";
+import AIJourney from "@/components/AIJourney";
 import Integrations from "@/components/Integrations";
 import AIKnowledge from "@/components/AIKnowledge";
 import ProductRecommendations from "@/components/ProductRecommendations";
@@ -20,6 +21,7 @@ const Index = () => {
       <Hero />
       <Features />
       <WhyDifferent />
+      <AIJourney />
       <Integrations />
       <AIKnowledge />
       <ProductRecommendations />
