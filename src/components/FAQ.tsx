@@ -56,10 +56,10 @@ const FAQ = () => {
                   <div className="flex-1">
                     <h3 className="font-medium text-foreground">Support Team</h3>
                     <a 
-                      href="mailto:support@glimps.ai" 
+                      href="mailto:info@glimps.be" 
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
-                      support@glimps.ai
+                      info@glimps.be
                     </a>
                   </div>
                 </div>
