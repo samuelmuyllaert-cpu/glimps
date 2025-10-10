@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Shield, Lock, Award, Calculator, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import logoIcon from "@/assets/logo-icon.png";
+import glimpsLogoFooter from "@/assets/glimps-logo-footer.jpg";
 
 const Footer = () => {
   const [monthlyChats, setMonthlyChats] = useState("");
@@ -126,7 +127,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center">
-              <img src={logoIcon} alt="glimps" className="h-8" />
+              <img src={glimpsLogoFooter} alt="glimps" className="h-8" />
             </div>
             <p className="text-sm text-muted-foreground">
               De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.
