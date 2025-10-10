@@ -11,7 +11,8 @@ const Blog = () => {
       category: "Strategy",
       date: "12 jan 2025",
       readTime: "5 min",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      slug: "/blog/conversie-verhogen"
     },
     {
       title: "De toekomst van klantenservice: AI in 2025",
@@ -19,7 +20,8 @@ const Blog = () => {
       category: "Trends",
       date: "8 jan 2025",
       readTime: "7 min",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
+      slug: "/blog/toekomst-ai-2025"
     },
     {
       title: "Case study: Van 20% naar 67% conversie",
@@ -27,7 +29,8 @@ const Blog = () => {
       category: "Case Study",
       date: "5 jan 2025",
       readTime: "6 min",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      slug: "/blog/case-study-fashionhub"
     },
     {
       title: "Personalisatie: De sleutel tot hogere conversies",
@@ -35,7 +38,8 @@ const Blog = () => {
       category: "Product",
       date: "28 dec 2024",
       readTime: "4 min",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop",
+      slug: "/blog/personalisatie-conversies"
     },
     {
       title: "5 Fouten die je moet vermijden met chatbots",
@@ -43,7 +47,8 @@ const Blog = () => {
       category: "Tips",
       date: "20 dec 2024",
       readTime: "5 min",
-      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&h=400&fit=crop",
+      slug: "/blog/fouten-chatbots"
     },
     {
       title: "Integratie met Shopify: Complete gids",
@@ -51,7 +56,8 @@ const Blog = () => {
       category: "Tutorial",
       date: "15 dec 2024",
       readTime: "8 min",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop",
+      slug: "/blog/shopify-integratie"
     }
   ];
 
@@ -100,9 +106,10 @@ const Blog = () => {
           {/* Articles Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article, index) => (
-              <article 
+              <a
                 key={index}
-                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer"
+                href={article.slug}
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer block"
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden bg-muted">
@@ -144,7 +151,7 @@ const Blog = () => {
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
 

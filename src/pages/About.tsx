@@ -22,7 +22,7 @@ const About = () => {
             Wij boosten je business met onze AI-chatbot.
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            Glimps is opgericht door twee broers met een sterke marketingachtergrond die AI-chatbots zien als dé marketingtool voor meer omzet en betere klantenservice.
+            Glimps is opgericht door familie met een sterke marketingachtergrond die AI-chatbots zien als dé marketingtool voor meer omzet en betere klantenservice.
           </p>
         </div>
 

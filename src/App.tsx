@@ -20,6 +20,12 @@ import HowWeWork from "./pages/HowWeWork";
 import Consultancy from "./pages/Consultancy";
 import Integraties from "./pages/Integraties";
 import Contact from "./pages/Contact";
+import ConversieVerhogen from "./pages/blog/ConversieVerhogen";
+import ToekomstAI2025 from "./pages/blog/ToekomstAI2025";
+import CaseStudyFashionHub from "./pages/blog/CaseStudyFashionHub";
+import PersonalisatieConversies from "./pages/blog/PersonalisatieConversies";
+import FoutenChatbots from "./pages/blog/FoutenChatbots";
+import ShopifyIntegratie from "./pages/blog/ShopifyIntegratie";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +54,12 @@ const App = () => (
           <Route path="/consultancy" element={<Consultancy />} />
           <Route path="/integraties" element={<Integraties />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/conversie-verhogen" element={<ConversieVerhogen />} />
+          <Route path="/blog/toekomst-ai-2025" element={<ToekomstAI2025 />} />
+          <Route path="/blog/case-study-fashionhub" element={<CaseStudyFashionHub />} />
+          <Route path="/blog/personalisatie-conversies" element={<PersonalisatieConversies />} />
+          <Route path="/blog/fouten-chatbots" element={<FoutenChatbots />} />
+          <Route path="/blog/shopify-integratie" element={<ShopifyIntegratie />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

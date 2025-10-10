@@ -63,8 +63,8 @@ const HowWeWork = () => {
               {/* Left Content */}
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500 shadow-lg">
-                    <Search className="h-8 w-8 text-white" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
+                    <Search className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Stap 1/4</div>
@@ -218,8 +218,8 @@ const HowWeWork = () => {
               {/* Left Content */}
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-400 shadow-lg">
-                    <MessageSquare className="h-8 w-8 text-white" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-400 to-red-500 shadow-lg">
+                    <MessageSquare className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Stap 2/4</div>
@@ -329,8 +329,8 @@ const HowWeWork = () => {
               {/* Left Content */}
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-500 shadow-lg">
-                    <Settings className="h-8 w-8 text-white" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg">
+                    <Settings className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Stap 3/4</div>
@@ -462,8 +462,8 @@ const HowWeWork = () => {
               {/* Left Content */}
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500 shadow-lg">
-                    <Rocket className="h-8 w-8 text-white" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 shadow-lg">
+                    <Rocket className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Stap 4/4</div>

@@ -29,9 +29,6 @@ const Navigation = () => {
             <a href="/roi" className="text-sm font-medium hover:text-primary">
               ROI
             </a>
-            <a href="/changelog" className="text-sm font-medium hover:text-primary">
-              Changelog
-            </a>
             <a href="/blog" className="text-sm font-medium hover:text-primary">
               Blog
             </a>

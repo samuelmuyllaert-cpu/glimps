@@ -125,9 +125,8 @@ const Footer = () => {
         <div className="grid gap-12 md:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4 md:col-span-1">
-            <div className="flex items-center gap-2">
-              <img src={logoIcon} alt="glimps" className="h-8 w-8" />
-              <span className="font-inter text-xl font-normal">glimps</span>
+            <div className="flex items-center">
+              <img src={logoIcon} alt="glimps" className="h-8" />
             </div>
             <p className="text-sm text-muted-foreground">
               De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.
@@ -199,11 +198,6 @@ const Footer = () => {
                   Ecom Agents
                 </a>
               </li>
-              <li>
-                <a href="/changelog" className="text-muted-foreground hover:text-primary">
-                  Changelog
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -244,6 +238,11 @@ const Footer = () => {
               <li>
                 <a href="/contact" className="text-muted-foreground hover:text-primary">
                   Contact
+                </a>
+              </li>
+              <li>
+                <a href="/changelog" className="text-muted-foreground hover:text-primary">
+                  Changelog
                 </a>
               </li>
             </ul>
