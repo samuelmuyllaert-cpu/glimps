@@ -127,7 +127,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center">
-              <img src={glimpsLogoFooter} alt="glimps" className="h-8" />
+              <img src={glimpsLogoFooter} alt="glimps" className="h-16" />
             </div>
             <p className="text-sm text-muted-foreground">
               De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.
