@@ -3,6 +3,21 @@ import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import productSneakerBlue from "@/assets/product-sneaker-blue.png";
+import productJacketRed from "@/assets/product-jacket-red.png";
+import productTshirtBlack from "@/assets/product-tshirt-black.png";
+import productHoodieGray from "@/assets/product-hoodie-gray.png";
+import productBackpackBrown from "@/assets/product-backpack-brown.png";
+import productHeadphonesWhite from "@/assets/product-headphones-white.png";
+import productWatchSilver from "@/assets/product-watch-silver.png";
+import productJeansBlue from "@/assets/product-jeans-blue.png";
+import productCapGreen from "@/assets/product-cap-green.png";
+import productSunglassesPink from "@/assets/product-sunglasses-pink.png";
+import productSneakerYellow from "@/assets/product-sneaker-yellow.png";
+import productYogamatPurple from "@/assets/product-yogamat-purple.png";
+import productTotebagBeige from "@/assets/product-totebag-beige.png";
+import productWalletBlack from "@/assets/product-wallet-black.png";
+import productSneakerWhite from "@/assets/product-sneaker-white.png";
 
 const Features = () => {
   const features = [
@@ -264,9 +279,9 @@ const Features = () => {
                                 <p className="text-sm">Ik heb je vraag begrepen! 👍</p>
                                 <p className="text-sm">Laat me even de perfecte rode winterjas voor je zoeken in maat M...</p>
                                 
-                                <div className="flex items-center gap-3 p-3 border border-border rounded-lg bg-background">
-                                  <div className="w-16 h-16 bg-primary rounded" />
-                                  <div className="flex-1">
+                                 <div className="flex items-center gap-3 p-3 border border-border rounded-lg bg-background">
+                                   <img src={productJacketRed} alt="Winterjas" className="w-16 h-16 rounded object-cover" />
+                                   <div className="flex-1">
                                     <div className="font-semibold text-sm mb-1">Winterjas Classic</div>
                                     <div className="text-xs text-muted-foreground mb-1">Maat M</div>
                                     <div className="flex items-center gap-2">
@@ -413,24 +428,24 @@ const Features = () => {
                             <MessageSquare className="w-5 h-5 text-primary" />
                             <span className="text-sm">Wil je deze items bestellen?</span>
                           </div>
-                          <div className="space-y-3">
-                            <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-3 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-primary font-semibold">€49,99</span>
-                            </div>
-                            <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-3 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-primary font-semibold">€29,99</span>
-                            </div>
-                          </div>
+                           <div className="space-y-3">
+                             <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
+                               <img src={productSneakerBlue} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-3 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-primary font-semibold">€49,99</span>
+                             </div>
+                             <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
+                               <img src={productHoodieGray} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-3 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-primary font-semibold">€29,99</span>
+                             </div>
+                           </div>
                           <div className="pt-4 border-t border-border space-y-2">
                             <div className="flex justify-between text-sm">
                               <span>Subtotaal</span>
@@ -457,14 +472,14 @@ const Features = () => {
                             <Package className="w-5 h-5 text-primary" />
                             <span className="text-sm">Je pakket is onderweg! 📦</span>
                           </div>
-                          <div className="space-y-4 p-4">
-                            <div className="flex items-start gap-4">
-                              <div className="w-12 h-12 bg-muted rounded-lg" />
-                              <div className="flex-1 space-y-2">
-                                <div className="h-3 bg-muted rounded w-3/4" />
-                                <div className="h-3 bg-muted rounded w-1/2" />
-                              </div>
-                            </div>
+                           <div className="space-y-4 p-4">
+                             <div className="flex items-start gap-4">
+                               <img src={productBackpackBrown} alt="Product" className="w-12 h-12 rounded-lg object-cover" />
+                               <div className="flex-1 space-y-2">
+                                 <div className="h-3 bg-muted rounded w-3/4" />
+                                 <div className="h-3 bg-muted rounded w-1/2" />
+                               </div>
+                             </div>
                             <div className="relative space-y-4 pl-6 border-l-2 border-primary/30">
                               <div className="relative">
                                 <div className="absolute -left-[29px] w-4 h-4 rounded-full bg-primary" />
@@ -501,16 +516,16 @@ const Features = () => {
                             <RotateCcw className="w-5 h-5 text-primary" />
                             <span className="text-sm">Ik help je graag met je retour</span>
                           </div>
-                          <div className="p-4 border border-border rounded-lg space-y-4">
-                            <div className="text-sm font-semibold">Selecteer product</div>
-                            <div className="flex items-center gap-3 p-3 bg-primary/10 border border-primary/20 rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="text-xs text-primary">Maat: L • Kleur: Zwart</div>
-                              </div>
-                              <Check className="w-5 h-5 text-primary" />
-                            </div>
+                           <div className="p-4 border border-border rounded-lg space-y-4">
+                             <div className="text-sm font-semibold">Selecteer product</div>
+                             <div className="flex items-center gap-3 p-3 bg-primary/10 border border-primary/20 rounded-lg">
+                               <img src={productTshirtBlack} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="text-xs text-primary">Maat: L • Kleur: Zwart</div>
+                               </div>
+                               <Check className="w-5 h-5 text-primary" />
+                             </div>
                             <div className="text-sm font-semibold">Wat is de reden?</div>
                             <div className="grid grid-cols-2 gap-2">
                               <button className="p-3 border border-border rounded-lg text-sm hover:border-primary/50 transition-colors">
@@ -542,40 +557,40 @@ const Features = () => {
                             <ShoppingCart className="w-5 h-5 text-primary" />
                             <span className="text-sm">Perfect! Deze passen hier ook goed bij:</span>
                           </div>
-                          <div className="grid grid-cols-3 gap-3">
-                            <div className="p-3 border border-border rounded-lg space-y-2">
-                              <div className="w-full aspect-square bg-muted rounded" />
-                              <div className="h-2 bg-muted rounded w-3/4" />
-                              <div className="h-2 bg-muted rounded w-1/2" />
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm font-semibold text-primary">€39,99</span>
-                                <div className="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center text-primary text-xs">+</div>
-                              </div>
-                            </div>
-                            <div className="p-3 border-2 border-primary bg-primary/5 rounded-lg space-y-2 relative">
-                              <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-primary text-primary-foreground text-xs rounded-full">
-                                Populair
-                              </div>
-                              <div className="w-full aspect-square bg-muted rounded" />
-                              <div className="h-2 bg-muted rounded w-3/4" />
-                              <div className="h-2 bg-muted rounded w-1/2" />
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm font-semibold text-primary">€49,99</span>
-                                <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                                  <Check className="w-4 h-4 text-primary-foreground" />
-                                </div>
-                              </div>
-                            </div>
-                            <div className="p-3 border border-border rounded-lg space-y-2">
-                              <div className="w-full aspect-square bg-muted rounded" />
-                              <div className="h-2 bg-muted rounded w-3/4" />
-                              <div className="h-2 bg-muted rounded w-1/2" />
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm font-semibold text-primary">€29,99</span>
-                                <div className="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center text-primary text-xs">+</div>
-                              </div>
-                            </div>
-                          </div>
+                           <div className="grid grid-cols-3 gap-3">
+                             <div className="p-3 border border-border rounded-lg space-y-2">
+                               <img src={productCapGreen} alt="Product" className="w-full aspect-square rounded object-cover" />
+                               <div className="h-2 bg-muted rounded w-3/4" />
+                               <div className="h-2 bg-muted rounded w-1/2" />
+                               <div className="flex items-center justify-between">
+                                 <span className="text-sm font-semibold text-primary">€39,99</span>
+                                 <div className="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center text-primary text-xs">+</div>
+                               </div>
+                             </div>
+                             <div className="p-3 border-2 border-primary bg-primary/5 rounded-lg space-y-2 relative">
+                               <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-primary text-primary-foreground text-xs rounded-full">
+                                 Populair
+                               </div>
+                               <img src={productJeansBlue} alt="Product" className="w-full aspect-square rounded object-cover" />
+                               <div className="h-2 bg-muted rounded w-3/4" />
+                               <div className="h-2 bg-muted rounded w-1/2" />
+                               <div className="flex items-center justify-between">
+                                 <span className="text-sm font-semibold text-primary">€49,99</span>
+                                 <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                                   <Check className="w-4 h-4 text-primary-foreground" />
+                                 </div>
+                               </div>
+                             </div>
+                             <div className="p-3 border border-border rounded-lg space-y-2">
+                               <img src={productSunglassesPink} alt="Product" className="w-full aspect-square rounded object-cover" />
+                               <div className="h-2 bg-muted rounded w-3/4" />
+                               <div className="h-2 bg-muted rounded w-1/2" />
+                               <div className="flex items-center justify-between">
+                                 <span className="text-sm font-semibold text-primary">€29,99</span>
+                                 <div className="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center text-primary text-xs">+</div>
+                               </div>
+                             </div>
+                           </div>
                           <div className="flex gap-1 justify-center">
                             <div className="w-2 h-2 rounded-full bg-primary" />
                             <div className="w-2 h-2 rounded-full bg-muted" />
@@ -594,42 +609,42 @@ const Features = () => {
                             <ShoppingCart className="w-5 h-5 text-primary" />
                             <span className="text-sm">Ik zie dat je 2 items in je winkelmandje hebt 🛒</span>
                           </div>
-                          <div className="space-y-3 p-4 border border-border rounded-lg">
-                            <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-3 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-primary font-semibold">€49,99</span>
-                            </div>
-                            <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-3 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-primary font-semibold">€29,99</span>
-                            </div>
+                           <div className="space-y-3 p-4 border border-border rounded-lg">
+                             <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
+                               <img src={productSneakerYellow} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-3 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-primary font-semibold">€49,99</span>
+                             </div>
+                             <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
+                               <img src={productWatchSilver} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-3 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-primary font-semibold">€29,99</span>
+                             </div>
                             <div className="pt-3 border-t border-border flex justify-between items-center">
                               <span className="font-semibold">Totaal</span>
                               <span className="text-xl font-bold">€79,98</span>
                             </div>
                           </div>
-                          <div className="p-4 bg-muted/30 rounded-lg">
-                            <div className="text-sm font-semibold mb-3">Perfect bij jouw selectie:</div>
-                            <div className="flex items-center gap-3 p-3 bg-background border border-border rounded-lg">
-                              <div className="w-12 h-12 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-2 bg-muted rounded w-2/3 mb-2" />
-                                <div className="h-2 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-sm text-primary font-semibold">€19,99</span>
-                              <button className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg">
-                                +
-                              </button>
-                            </div>
-                          </div>
+                           <div className="p-4 bg-muted/30 rounded-lg">
+                             <div className="text-sm font-semibold mb-3">Perfect bij jouw selectie:</div>
+                             <div className="flex items-center gap-3 p-3 bg-background border border-border rounded-lg">
+                               <img src={productHeadphonesWhite} alt="Product" className="w-12 h-12 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-2 bg-muted rounded w-2/3 mb-2" />
+                                 <div className="h-2 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-sm text-primary font-semibold">€19,99</span>
+                               <button className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg">
+                                 +
+                               </button>
+                             </div>
+                           </div>
                         </div>
                       )}
 
@@ -646,43 +661,43 @@ const Features = () => {
                             </div>
                             <div className="text-sm font-semibold">Ik heb 3 perfecte opties gevonden! 🎯</div>
                           </div>
-                          <div className="space-y-3">
-                            <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg">
-                              <div className="w-16 h-16 bg-primary/20 rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-3 bg-muted rounded w-1/2 mb-2" />
-                                <div className="flex items-center gap-2">
-                                  <Badge variant="secondary" className="text-xs bg-primary/20 text-primary border-0">Maat M</Badge>
-                                  <Badge variant="secondary" className="text-xs bg-green-500/20 text-green-600 border-0">Op voorraad</Badge>
-                                </div>
-                              </div>
-                              <div className="text-right">
-                                <div className="text-lg font-bold text-primary">€89,99</div>
-                                <div className="flex gap-0.5">
-                                  {[1,2,3,4,5].map(i => (
-                                    <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="flex items-center gap-3 p-3 border border-border rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-3 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-primary font-semibold">€79,99</span>
-                            </div>
-                            <div className="flex items-center gap-3 p-3 border border-border rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-3 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-primary font-semibold">€99,99</span>
-                            </div>
-                          </div>
+                           <div className="space-y-3">
+                             <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg">
+                               <img src={productJacketRed} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-3 bg-muted rounded w-1/2 mb-2" />
+                                 <div className="flex items-center gap-2">
+                                   <Badge variant="secondary" className="text-xs bg-primary/20 text-primary border-0">Maat M</Badge>
+                                   <Badge variant="secondary" className="text-xs bg-green-500/20 text-green-600 border-0">Op voorraad</Badge>
+                                 </div>
+                               </div>
+                               <div className="text-right">
+                                 <div className="text-lg font-bold text-primary">€89,99</div>
+                                 <div className="flex gap-0.5">
+                                   {[1,2,3,4,5].map(i => (
+                                     <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                                   ))}
+                                 </div>
+                               </div>
+                             </div>
+                             <div className="flex items-center gap-3 p-3 border border-border rounded-lg">
+                               <img src={productTotebagBeige} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-3 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-primary font-semibold">€79,99</span>
+                             </div>
+                             <div className="flex items-center gap-3 p-3 border border-border rounded-lg">
+                               <img src={productWalletBlack} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-3 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-3 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-primary font-semibold">€99,99</span>
+                             </div>
+                           </div>
                         </div>
                       )}
 
@@ -692,51 +707,51 @@ const Features = () => {
                             <TrendingUp className="w-5 h-5 text-primary" />
                             <span className="text-sm">Super keuze! Wist je dat deze vaak samen worden gekocht? 🎁</span>
                           </div>
-                          <div className="p-4 border-2 border-primary/30 rounded-lg space-y-3">
-                            <div className="flex items-center gap-3 p-3 bg-background rounded-lg">
-                              <div className="w-16 h-16 bg-muted rounded" />
-                              <div className="flex-1">
-                                <div className="h-2 bg-muted rounded w-3/4 mb-2" />
-                                <div className="h-2 bg-muted rounded w-1/2" />
-                              </div>
-                              <span className="text-primary font-semibold">€49,99</span>
-                            </div>
-                            <div className="p-3 bg-gradient-to-r from-purple-500/10 to-purple-500/5 border border-purple-500/20 rounded-lg">
-                              <div className="flex items-center justify-between mb-2">
-                                <Badge className="bg-primary text-primary-foreground">Premium</Badge>
-                                <span className="text-xs text-muted-foreground">+€20 voor betere kwaliteit</span>
-                              </div>
-                              <div className="flex items-center gap-3">
-                                <div className="w-16 h-16 bg-purple-500/20 rounded" />
-                                <div className="flex-1">
-                                  <div className="h-2 bg-muted rounded w-3/4 mb-2" />
-                                  <div className="h-2 bg-muted rounded w-1/2" />
-                                </div>
-                                <div>
-                                  <div className="text-xs text-muted-foreground line-through">€69,99</div>
-                                  <div className="text-primary font-semibold">€59,99</div>
-                                </div>
-                                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold">
-                                  Upgrade
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="p-4 border-2 border-primary rounded-lg bg-primary/5">
-                            <div className="flex justify-between items-center mb-3">
-                              <span className="font-semibold">Vaak samen gekocht</span>
-                              <Badge variant="secondary" className="bg-green-500/20 text-green-600">Bespaar €15</Badge>
-                            </div>
-                            <div className="flex gap-2 mb-3">
-                              <div className="flex-1 p-2 bg-background rounded border border-border">
-                                <div className="w-full aspect-square bg-muted rounded mb-2" />
-                                <div className="text-center text-xs">+</div>
-                              </div>
-                              <div className="flex-1 p-2 bg-background rounded border border-border">
-                                <div className="w-full aspect-square bg-muted rounded mb-2" />
-                                <div className="text-center text-xs">+</div>
-                              </div>
-                            </div>
+                           <div className="p-4 border-2 border-primary/30 rounded-lg space-y-3">
+                             <div className="flex items-center gap-3 p-3 bg-background rounded-lg">
+                               <img src={productYogamatPurple} alt="Product" className="w-16 h-16 rounded object-cover" />
+                               <div className="flex-1">
+                                 <div className="h-2 bg-muted rounded w-3/4 mb-2" />
+                                 <div className="h-2 bg-muted rounded w-1/2" />
+                               </div>
+                               <span className="text-primary font-semibold">€49,99</span>
+                             </div>
+                             <div className="p-3 bg-gradient-to-r from-purple-500/10 to-purple-500/5 border border-purple-500/20 rounded-lg">
+                               <div className="flex items-center justify-between mb-2">
+                                 <Badge className="bg-primary text-primary-foreground">Premium</Badge>
+                                 <span className="text-xs text-muted-foreground">+€20 voor betere kwaliteit</span>
+                               </div>
+                               <div className="flex items-center gap-3">
+                                 <img src={productYogamatPurple} alt="Premium Product" className="w-16 h-16 rounded object-cover" />
+                                 <div className="flex-1">
+                                   <div className="h-2 bg-muted rounded w-3/4 mb-2" />
+                                   <div className="h-2 bg-muted rounded w-1/2" />
+                                 </div>
+                                 <div>
+                                   <div className="text-xs text-muted-foreground line-through">€69,99</div>
+                                   <div className="text-primary font-semibold">€59,99</div>
+                                 </div>
+                                 <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold">
+                                   Upgrade
+                                 </button>
+                               </div>
+                             </div>
+                           </div>
+                           <div className="p-4 border-2 border-primary rounded-lg bg-primary/5">
+                             <div className="flex justify-between items-center mb-3">
+                               <span className="font-semibold">Vaak samen gekocht</span>
+                               <Badge variant="secondary" className="bg-green-500/20 text-green-600">Bespaar €15</Badge>
+                             </div>
+                             <div className="flex gap-2 mb-3">
+                               <div className="flex-1 p-2 bg-background rounded border border-border">
+                                 <img src={productSneakerWhite} alt="Product" className="w-full aspect-square rounded object-cover mb-2" />
+                                 <div className="text-center text-xs">+</div>
+                               </div>
+                               <div className="flex-1 p-2 bg-background rounded border border-border">
+                                 <img src={productHeadphonesWhite} alt="Product" className="w-full aspect-square rounded object-cover mb-2" />
+                                 <div className="text-center text-xs">+</div>
+                               </div>
+                             </div>
                             <div className="flex justify-between items-center pt-3 border-t border-border">
                               <div>
                                 <div className="text-xs text-muted-foreground line-through">€99,97</div>
