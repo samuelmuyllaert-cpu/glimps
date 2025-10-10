@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { Lock } from "lucide-react";
 
 const EcomAgents = () => {
@@ -29,6 +30,7 @@ const EcomAgents = () => {
           </div>
         </div>
       </div>
+      <ChatWidget />
       <Footer />
     </div>
   );

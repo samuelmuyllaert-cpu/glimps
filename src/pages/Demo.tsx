@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { useState } from "react";
 import { Send } from "lucide-react";
 
@@ -132,6 +133,7 @@ const Demo = () => {
           </div>
         </div>
       </section>
+      <ChatWidget />
       <Footer />
     </div>
   );

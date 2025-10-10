@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -1027,6 +1028,7 @@ const Features = () => {
           </div>
         </div>
       </section>
+      <ChatWidget />
       <Footer />
     </div>
   );

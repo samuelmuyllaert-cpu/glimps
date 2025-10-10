@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 const Blog = () => {
@@ -168,6 +169,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
+      <ChatWidget />
       <Footer />
     </div>
   );

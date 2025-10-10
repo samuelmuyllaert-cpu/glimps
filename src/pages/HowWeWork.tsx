@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { Bot, Search, Settings, TrendingUp } from "lucide-react";
 
 const HowWeWork = () => {
@@ -104,6 +105,7 @@ const HowWeWork = () => {
         </div>
       </section>
 
+      <ChatWidget />
       <Footer />
     </div>
   );
