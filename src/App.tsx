@@ -18,6 +18,7 @@ import EcomReadiness from "./pages/EcomReadiness";
 import Partners from "./pages/Partners";
 import HowWeWork from "./pages/HowWeWork";
 import Consultancy from "./pages/Consultancy";
+import Integraties from "./pages/Integraties";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/partners" element={<Partners />} />
           <Route path="/hoe-we-werken" element={<HowWeWork />} />
           <Route path="/consultancy" element={<Consultancy />} />
+          <Route path="/integraties" element={<Integraties />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

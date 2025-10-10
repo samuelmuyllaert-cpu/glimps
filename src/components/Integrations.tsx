@@ -53,9 +53,15 @@ const Integrations = () => {
 
         {/* Bottom text */}
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-6">
             En nog veel meer integraties beschikbaar
           </p>
+          <a 
+            href="/integraties" 
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all hover:gap-3"
+          >
+            Bekijk alle integraties →
+          </a>
         </div>
       </div>
     </section>

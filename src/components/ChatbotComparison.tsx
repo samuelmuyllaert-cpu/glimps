@@ -53,6 +53,7 @@ const ChatbotComparison = () => {
     setSelectedBot(bot);
     setMessages([]);
     setCurrentMessageIndex(0);
+    setIsPlaying(false);
     
     if (bot === "faq") {
       setMessages(faqMessages);
@@ -133,10 +134,6 @@ const ChatbotComparison = () => {
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Maandelijkse kost</span>
-                    <span className="font-bold text-red-500">€3.000+</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Reactietijd</span>
                     <span className="font-semibold">2-24u</span>
                   </div>
@@ -179,10 +176,6 @@ const ChatbotComparison = () => {
                 <p className="text-sm text-[#FF8C42] mb-6 font-medium">Alleen basis antwoorden - geen productkennis</p>
                 
                 <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Maandelijkse kost</span>
-                    <span className="font-bold text-[#FF8C42]">€200-500</span>
-                  </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Conversie impact</span>
                     <span className="font-semibold text-red-500">-18% 📉</span>
@@ -227,10 +220,6 @@ const ChatbotComparison = () => {
                 <p className="text-sm text-primary mb-6 font-medium">Customer Service + Marketing AI Platform</p>
                 
                 <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Maandelijkse investering</span>
-                    <span className="font-bold text-green-500">€500/mnd</span>
-                  </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Conversie boost</span>
                     <span className="font-semibold text-green-500">+43% 📈</span>
@@ -335,7 +324,7 @@ const ChatbotComparison = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 p-6 border-t border-border">
+              <div className="grid grid-cols-2 gap-4 p-6 border-t border-border">
                 <div className="text-center">
                   <div className="text-2xl font-bold mb-1">2-5min</div>
                   <div className="text-sm text-muted-foreground">Reactietijd</div>
@@ -343,10 +332,6 @@ const ChatbotComparison = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-red-500 mb-1">-18%</div>
                   <div className="text-sm text-muted-foreground">Conversie impact</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-1">€200/mnd</div>
-                  <div className="text-sm text-muted-foreground">Verspilling</div>
                 </div>
               </div>
             </div>
@@ -412,7 +397,7 @@ const ChatbotComparison = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 p-6 border-t border-border">
+              <div className="grid grid-cols-2 gap-4 p-6 border-t border-border">
                 <div className="text-center">
                   <div className="text-2xl font-bold mb-1">0.08s</div>
                   <div className="text-sm text-muted-foreground">Reactietijd</div>
@@ -420,10 +405,6 @@ const ChatbotComparison = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-500 mb-1">+43%</div>
                   <div className="text-sm text-muted-foreground">Conversie impact</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-1">€500/mnd</div>
-                  <div className="text-sm text-muted-foreground">ROI +237%</div>
                 </div>
               </div>
             </div>

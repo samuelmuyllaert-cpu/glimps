@@ -175,6 +175,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/integraties" className="text-muted-foreground hover:text-primary">
+                  Integraties
+                </a>
+              </li>
+              <li>
                 <a href="/demo" className="text-muted-foreground hover:text-primary">
                   Demo
                 </a>
