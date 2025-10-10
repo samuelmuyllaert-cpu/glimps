@@ -375,7 +375,7 @@ const Consultancy = () => {
           <Card className="overflow-hidden p-0">
             <div 
               className="calendly-inline-widget" 
-              data-url="https://calendly.com/samuel-muyllaert/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=e6575e&primary_color=ffffff" 
+              data-url="https://calendly.com/samuel-muyllaert/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=e6575e&text_color=ffffff&primary_color=1a1a1a" 
               style={{ minWidth: '320px', height: '700px' }}
             ></div>
           </Card>

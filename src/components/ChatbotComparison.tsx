@@ -118,7 +118,7 @@ const ChatbotComparison = () => {
 
         {/* Content Area */}
         <div className="max-w-6xl mx-auto">
-          {selectedBot === null && (
+          {(selectedBot === null || selectedBot === "none") && (
             <div className="grid md:grid-cols-3 gap-6">
               {/* Geen Bot Card */}
               <div className="bg-card border border-border rounded-2xl p-6 relative">

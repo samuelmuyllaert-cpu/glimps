@@ -237,7 +237,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary">
+                <a href="/contact" className="text-muted-foreground hover:text-primary">
                   Contact
                 </a>
               </li>
