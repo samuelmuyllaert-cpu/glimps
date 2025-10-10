@@ -82,6 +82,45 @@ const About = () => {
             </Button>
           </div>
         </div>
+
+        {/* Developers Network */}
+        <div className="mx-auto mt-24 max-w-4xl">
+          <div className="rounded-2xl border border-border bg-card p-8 text-center">
+            <h3 className="mb-4 text-2xl font-bold">Ons Ontwikkelaarsnetwerk</h3>
+            <p className="mx-auto mb-8 max-w-2xl text-muted-foreground">
+              Achter Glimps staat een sterk netwerk van getalenteerde developers die onze ideeën helpen vertalen naar software en bijdragen aan het succes van ons platform.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                LB
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                MV
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                AD
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                JS
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                KR
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                TH
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                EP
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                NB
+              </div>
+            </div>
+            <p className="mt-6 text-sm text-muted-foreground">
+              Samen vormen we een team dat technologie en marketing perfect combineert.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Vision Section */}
