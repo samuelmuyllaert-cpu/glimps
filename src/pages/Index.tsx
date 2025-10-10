@@ -12,6 +12,7 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import ChatWidget from "@/components/ChatWidget";
 import Footer from "@/components/Footer";
+import ChatbotComparison from "@/components/ChatbotComparison";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Features />
+      <ChatbotComparison />
       <WhyDifferent />
       <Integrations />
       <AIJourney />
