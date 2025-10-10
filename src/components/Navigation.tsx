@@ -17,6 +17,9 @@ const Navigation = () => {
             <a href="/features" className="text-sm font-medium hover:text-primary">
               Features
             </a>
+            <a href="/how-we-work" className="text-sm font-medium hover:text-primary">
+              Hoe we werken
+            </a>
             <a href="/demo" className="text-sm font-medium hover:text-primary">
               Demo
             </a>
