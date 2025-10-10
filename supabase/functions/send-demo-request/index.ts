@@ -1,7 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+// Removed npm Resend import; using direct REST API call instead
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -29,12 +28,19 @@ const handler = async (req: Request): Promise<Response> => {
     const { name, email, company, phone, message }: DemoRequest = await req.json();
     console.log("Processing demo request for:", email);
 
-    const emailResponse = await resend.emails.send({
-      from: "Glimps Demo <onboarding@resend.dev>",
-      to: ["info@glimps.be"],
-      replyTo: email,
-      subject: `Nieuwe demo aanvraag van ${name} - ${company}`,
-      html: `
+    // Send email via Resend REST API
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "Glimps Demo <onboarding@resend.dev>",
+        to: ["info@glimps.be"],
+        reply_to: email,
+        subject: `Nieuwe demo aanvraag van ${name} - ${company}`,
+        html: `
         <h2>Nieuwe demo aanvraag</h2>
         <p><strong>Naam:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
@@ -44,7 +50,16 @@ const handler = async (req: Request): Promise<Response> => {
         <hr>
         <p style="color: #666; font-size: 12px;">Verzonden via Glimps demo aanvraag formulier</p>
       `,
+      }),
     });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error("Resend API error:", res.status, errText);
+      throw new Error(`Resend API error: ${res.status}`);
+    }
+
+    const emailResponse = await res.json();
 
     console.log("Email sent successfully:", emailResponse);
 
