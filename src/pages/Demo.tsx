@@ -62,8 +62,24 @@ const Demo = () => {
     try {
       const validated = demoFormSchema.parse(formData);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Call edge function to send email
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-demo-request`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `${validated.firstName} ${validated.lastName}`,
+          email: validated.email,
+          company: validated.company,
+          phone: validated.phone || "Niet opgegeven",
+          message: validated.message || "Geen bericht opgegeven",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Kon email niet verzenden");
+      }
 
       toast({
         title: "Demo aanvraag verzonden! 🎉",
@@ -93,6 +109,12 @@ const Demo = () => {
         toast({
           title: "Vul alle verplichte velden in",
           description: "Controleer het formulier en probeer opnieuw.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Er is iets misgegaan",
+          description: "Probeer het later opnieuw of neem direct contact met ons op.",
           variant: "destructive",
         });
       }
