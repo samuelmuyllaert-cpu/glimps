@@ -26,6 +26,12 @@ import CaseStudyFashionHub from "./pages/blog/CaseStudyFashionHub";
 import PersonalisatieConversies from "./pages/blog/PersonalisatieConversies";
 import FoutenChatbots from "./pages/blog/FoutenChatbots";
 import ShopifyIntegratie from "./pages/blog/ShopifyIntegratie";
+import FashionDesign from "./pages/industries/FashionDesign";
+import BeautyCosmetica from "./pages/industries/BeautyCosmetica";
+import Electronics from "./pages/industries/Electronics";
+import MeubelsInterieur from "./pages/industries/MeubelsInterieur";
+import SportkledingFitness from "./pages/industries/SportkledingFitness";
+import TuinBuitenleven from "./pages/industries/TuinBuitenleven";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,6 +66,12 @@ const App = () => (
           <Route path="/blog/personalisatie-conversies" element={<PersonalisatieConversies />} />
           <Route path="/blog/fouten-chatbots" element={<FoutenChatbots />} />
           <Route path="/blog/shopify-integratie" element={<ShopifyIntegratie />} />
+          <Route path="/industries/fashion-design" element={<FashionDesign />} />
+          <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
+          <Route path="/industries/electronics" element={<Electronics />} />
+          <Route path="/industries/meubels-interieur" element={<MeubelsInterieur />} />
+          <Route path="/industries/sportkleding-fitness" element={<SportkledingFitness />} />
+          <Route path="/industries/tuin-buitenleven" element={<TuinBuitenleven />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

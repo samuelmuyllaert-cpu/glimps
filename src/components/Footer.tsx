@@ -123,7 +123,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-5">
           {/* Company Info */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center">
@@ -244,6 +244,43 @@ const Footer = () => {
               <li>
                 <a href="/changelog" className="text-muted-foreground hover:text-primary">
                   Changelog
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Industries Links */}
+          <div className="space-y-4">
+            <h4 className="font-semibold">Industrieën</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a href="/industries/fashion-design" className="text-muted-foreground hover:text-primary">
+                  Fashion & Design
+                </a>
+              </li>
+              <li>
+                <a href="/industries/beauty-cosmetica" className="text-muted-foreground hover:text-primary">
+                  Beauty & Cosmetica
+                </a>
+              </li>
+              <li>
+                <a href="/industries/electronics" className="text-muted-foreground hover:text-primary">
+                  Electronics & Technology
+                </a>
+              </li>
+              <li>
+                <a href="/industries/meubels-interieur" className="text-muted-foreground hover:text-primary">
+                  Meubels & Interieur
+                </a>
+              </li>
+              <li>
+                <a href="/industries/sportkleding-fitness" className="text-muted-foreground hover:text-primary">
+                  Sportkleding & Fitness
+                </a>
+              </li>
+              <li>
+                <a href="/industries/tuin-buitenleven" className="text-muted-foreground hover:text-primary">
+                  Tuin en Buitenleven
                 </a>
               </li>
             </ul>
