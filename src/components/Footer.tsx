@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Shield, Lock, Award, Calculator, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import logoIcon from "@/assets/logo-icon.png";
-import glimpsLogoFooter from "@/assets/glimps-logo-footer.jpg";
+import glimpsLogoFooter from "@/assets/glimps-logo-new.png";
 import { toast } from "sonner";
 
 const Footer = () => {
