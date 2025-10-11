@@ -5,6 +5,7 @@ import { Shield, Lock, Award, Calculator, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import logoIcon from "@/assets/logo-icon.png";
 import glimpsLogoFooter from "@/assets/glimps-logo-footer.jpg";
+import { toast } from "sonner";
 
 const Footer = () => {
   const [monthlyChats, setMonthlyChats] = useState("");
@@ -12,6 +13,8 @@ const Footer = () => {
   const [averageOrder, setAverageOrder] = useState("");
   const [showResult, setShowResult] = useState(false);
   const [roi, setRoi] = useState({ monthly: 0, yearly: 0, investment: 99 });
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [submittingNewsletter, setSubmittingNewsletter] = useState(false);
 
   const calculateROI = () => {
     const chats = parseInt(monthlyChats) || 0;
@@ -30,6 +33,39 @@ const Footer = () => {
       investment: investment
     });
     setShowResult(true);
+  };
+
+  const handleNewsletterSignup = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!newsletterEmail.trim()) {
+      toast.error("Vul een geldig e-mailadres in");
+      return;
+    }
+
+    setSubmittingNewsletter(true);
+    
+    try {
+      const response = await fetch("https://hook.eu2.make.com/9ag2uhlgs336u7dc4fuinlrikixrmmjr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: newsletterEmail }),
+      });
+
+      if (response.ok) {
+        toast.success("Je bent ingeschreven voor de nieuwsbrief!");
+        setNewsletterEmail("");
+      } else {
+        toast.error("Er ging iets mis. Probeer het opnieuw.");
+      }
+    } catch (error) {
+      console.error("Newsletter signup error:", error);
+      toast.error("Er ging iets mis. Probeer het opnieuw.");
+    } finally {
+      setSubmittingNewsletter(false);
+    }
   };
 
   return (
@@ -321,16 +357,24 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground mb-4">
               Ontvang de nieuwste updates, tips en AI-insights direct in je inbox
             </p>
-            <div className="flex gap-2">
+            <form onSubmit={handleNewsletterSignup} className="flex gap-2">
               <Input
                 type="email"
                 placeholder="je@email.nl"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                disabled={submittingNewsletter}
                 className="bg-background"
               />
-              <Button variant="default" className="rounded-full">
-                Abonneer
+              <Button 
+                type="submit"
+                variant="default" 
+                className="rounded-full"
+                disabled={submittingNewsletter}
+              >
+                {submittingNewsletter ? "Bezig..." : "Abonneer"}
               </Button>
-            </div>
+            </form>
           </div>
         </div>
 

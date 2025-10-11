@@ -2,8 +2,45 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Blog = () => {
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleNewsletterSignup = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      toast.error("Vul een geldig e-mailadres in");
+      return;
+    }
+
+    setSubmitting(true);
+    
+    try {
+      const response = await fetch("https://hook.eu2.make.com/9ag2uhlgs336u7dc4fuinlrikixrmmjr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        toast.success("Je bent ingeschreven voor de nieuwsbrief!");
+        setEmail("");
+      } else {
+        toast.error("Er ging iets mis. Probeer het opnieuw.");
+      }
+    } catch (error) {
+      console.error("Newsletter signup error:", error);
+      toast.error("Er ging iets mis. Probeer het opnieuw.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
   const articles = [
     {
       title: "7 Manieren om conversie te verhogen met AI chatbots",
@@ -163,16 +200,23 @@ const Blog = () => {
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Schrijf je in voor onze nieuwsbrief en ontvang wekelijks de beste tips en inzichten over AI klantenservice.
             </p>
-            <div className="flex gap-2 max-w-md mx-auto">
+            <form onSubmit={handleNewsletterSignup} className="flex gap-2 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="je@email.nl"
-                className="flex-1 px-6 py-4 bg-background border border-border rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={submitting}
+                className="flex-1 px-6 py-4 bg-background border border-border rounded-full focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
               />
-              <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold transition-colors">
-                Inschrijven
+              <button 
+                type="submit"
+                disabled={submitting}
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold transition-colors disabled:opacity-50"
+              >
+                {submitting ? "Bezig..." : "Inschrijven"}
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </section>
