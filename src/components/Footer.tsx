@@ -314,6 +314,26 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Newsletter Signup */}
+        <div className="mt-12 border-t border-border/50 pt-12">
+          <div className="max-w-md mx-auto text-center">
+            <h4 className="font-semibold text-lg mb-2">Blijf op de hoogte</h4>
+            <p className="text-sm text-muted-foreground mb-4">
+              Ontvang de nieuwste updates, tips en AI-insights direct in je inbox
+            </p>
+            <div className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="je@email.nl"
+                className="bg-background"
+              />
+              <Button variant="default" className="rounded-full">
+                Abonneer
+              </Button>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
           <p className="text-sm text-muted-foreground">

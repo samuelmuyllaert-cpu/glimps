@@ -1,9 +1,31 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
-import { Sparkles, Zap, Bug, Calendar } from "lucide-react";
+import { Sparkles, Zap, Bug, Calendar, Lightbulb, ThumbsUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { useState } from "react";
 
 const Changelog = () => {
+  const [featureRequest, setFeatureRequest] = useState("");
+  const [featureTitle, setFeatureTitle] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleFeatureRequest = async () => {
+    if (!featureTitle.trim() || !featureRequest.trim()) return;
+    
+    setSubmitting(true);
+    // Here you would send to your backend/database
+    setTimeout(() => {
+      setFeatureTitle("");
+      setFeatureRequest("");
+      setSubmitting(false);
+      alert("Feature request ingediend! Dankjewel voor je feedback.");
+    }, 1000);
+  };
+
   const updates = [
     {
       date: "15 januari 2025",
@@ -149,23 +171,96 @@ const Changelog = () => {
             ))}
           </div>
 
-          {/* Subscribe CTA */}
-          <div className="mt-16 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-3xl p-8 text-center">
-            <h3 className="font-inter text-2xl font-semibold mb-3">
-              Blijf op de hoogte
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Ontvang een email bij belangrijke updates en nieuwe features
-            </p>
-            <div className="flex gap-2 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="je@email.nl"
-                className="flex-1 px-4 py-3 bg-background border border-border rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-colors">
-                Abonneer
-              </button>
+          {/* Product Roadmap */}
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+                <span className="text-sm font-semibold text-primary flex items-center gap-2">
+                  <Lightbulb className="h-4 w-4" /> Product Roadmap
+                </span>
+              </div>
+              <h2 className="font-inter text-3xl md:text-4xl font-semibold mb-3">
+                Help ons de toekomst te bepalen
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Welke feature zou jouw e-commerce ervaring verbeteren? Deel je idee en stem op bestaande voorstellen.
+              </p>
+            </div>
+
+            <Card className="p-6 md:p-8 bg-gradient-to-br from-card to-background">
+              <div className="space-y-4">
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Feature titel</label>
+                  <Input
+                    placeholder="bijv. WhatsApp integratie"
+                    value={featureTitle}
+                    onChange={(e) => setFeatureTitle(e.target.value)}
+                    className="bg-background"
+                  />
+                </div>
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Beschrijving</label>
+                  <Textarea
+                    placeholder="Beschrijf je feature idee..."
+                    value={featureRequest}
+                    onChange={(e) => setFeatureRequest(e.target.value)}
+                    className="bg-background min-h-[120px]"
+                  />
+                </div>
+                <Button 
+                  onClick={handleFeatureRequest}
+                  disabled={submitting || !featureTitle.trim() || !featureRequest.trim()}
+                  className="w-full rounded-full"
+                  size="lg"
+                >
+                  <Sparkles className="mr-2 h-4 w-4" />
+                  {submitting ? "Versturen..." : "Feature aanvragen"}
+                </Button>
+              </div>
+            </Card>
+
+            {/* Popular Requests */}
+            <div className="mt-8 space-y-4">
+              <h3 className="font-semibold text-lg mb-4">Populaire verzoeken</h3>
+              
+              <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h4 className="font-semibold mb-1">Instagram Shopping Integratie</h4>
+                    <p className="text-sm text-muted-foreground">Direct producten verkopen via Instagram DM's</p>
+                  </div>
+                  <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                    <ThumbsUp className="h-4 w-4" />
+                    <span className="font-semibold">47</span>
+                  </Button>
+                </div>
+              </Card>
+
+              <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h4 className="font-semibold mb-1">Voice Assistant Support</h4>
+                    <p className="text-sm text-muted-foreground">Klanten kunnen vragen stellen via spraak</p>
+                  </div>
+                  <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                    <ThumbsUp className="h-4 w-4" />
+                    <span className="font-semibold">32</span>
+                  </Button>
+                </div>
+              </Card>
+
+              <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h4 className="font-semibold mb-1">Advanced Analytics Dashboard</h4>
+                    <p className="text-sm text-muted-foreground">Diepere inzichten in klantgedrag en conversies</p>
+                  </div>
+                  <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                    <ThumbsUp className="h-4 w-4" />
+                    <span className="font-semibold">28</span>
+                  </Button>
+                </div>
+              </Card>
             </div>
           </div>
         </div>

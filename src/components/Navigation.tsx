@@ -41,8 +41,8 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <Button variant="default" size="default" className="rounded-full">
-            Gratis aanmelden
+          <Button asChild variant="default" size="default" className="rounded-full">
+            <a href="/demo">Demo aanvragen</a>
           </Button>
         </div>
       </div>
