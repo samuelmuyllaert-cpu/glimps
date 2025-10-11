@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Target, Users, TrendingUp, Lightbulb, Shield } from "lucide-react";
 import { useEffect } from "react";
@@ -23,6 +24,11 @@ const Consultancy = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Consultancy - Glimps AI | Expert advies voor e-commerce automatisering"
+        description="Professioneel advies over AI chatbots en klantenservice automatisering. Jarenlange ervaring in e-commerce en customer service."
+        path="/consultancy"
+      />
       <Navigation />
 
       {/* Hero Section */}

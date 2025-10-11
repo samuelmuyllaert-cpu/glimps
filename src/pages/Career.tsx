@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +10,11 @@ import { MapPin, Clock, Briefcase, Heart, Code, Zap, Users, TrendingUp } from "l
 const Career = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Vacatures - Glimps AI | Word deel van ons team"
+        description="Werk mee aan de toekomst van e-commerce. Ontdek onze open vacatures en sluit je aan bij het Glimps AI team."
+        path="/career"
+      />
       <Navigation />
 
       {/* Hero Section */}

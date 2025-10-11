@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -150,6 +151,11 @@ const ROI = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="ROI Calculator - Glimps AI | Bereken je Return on Investment"
+        description="Bereken direct wat een AI chatbot jou oplevert. Zie hoeveel tijd en geld je bespaart en hoeveel extra omzet je genereert met Glimps."
+        path="/roi"
+      />
       <Navigation />
       
       <div className="container mx-auto px-6 py-16">

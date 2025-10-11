@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { useEffect } from "react";
@@ -23,6 +24,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact - Glimps AI | Neem contact op voor een gratis gesprek"
+        description="Heb je vragen over Glimps AI? Plan een gratis gesprek, stuur een email of bel ons. We helpen je graag verder."
+        path="/contact"
+      />
       <Navigation />
 
       {/* Hero Section */}

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Search, MessageSquare, Settings, Rocket, Database, BarChart3, FileText, Target, Zap, TrendingUp, CheckCircle2, ChevronRight, AlertCircle } from "lucide-react";
@@ -16,6 +17,11 @@ const HowWeWork = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Hoe We Werken - Glimps AI | Van implementatie tot resultaat"
+        description="Ontdek ons bewezen 4-stappen proces: screening, analyse, implementatie en live. Van chaos naar controle met Glimps AI chatbot."
+        path="/how-we-work"
+      />
       <Navigation />
       
       {/* Hero Section */}

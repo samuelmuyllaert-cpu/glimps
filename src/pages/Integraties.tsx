@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -192,6 +193,11 @@ const Integraties = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Integraties - Glimps AI | 50+ Koppelingen met je tools"
+        description="Koppel Glimps naadloos met Shopify, WooCommerce, SendCloud, WhatsApp en 50+ andere tools. Plug & play setup binnen 5 minuten."
+        path="/integraties"
+      />
       <Navigation />
       
       {/* Hero Section */}

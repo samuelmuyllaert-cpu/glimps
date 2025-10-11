@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -40,6 +41,11 @@ const Partners = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Partner Programma - Glimps AI | Word reseller en verdien"
+        description="Verdien aantrekkelijke commissies door Glimps AI te verkopen. 30% recurrente commissie, dedicated support en marketing materialen."
+        path="/partners"
+      />
       <Navigation />
 
       {/* Hero Section */}

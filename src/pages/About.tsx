@@ -6,8 +6,15 @@ import { Card } from "@/components/ui/card";
 import { Target, TrendingUp, Lightbulb, Zap, Heart } from "lucide-react";
 import samuelPhoto from "@/assets/samuel.png";
 import tomPhoto from "@/assets/tom.png";
+import SEO from "@/components/SEO";
+
 const About = () => {
   return <div className="min-h-screen bg-background">
+      <SEO 
+        title="Over Ons - Glimps AI | Marketing-gedreven AI Chatbot"
+        description="Ontmoet de oprichters van Glimps AI. Twee broers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice."
+        path="/about"
+      />
       <Navigation />
 
       {/* Hero Section */}

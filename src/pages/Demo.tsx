@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -153,6 +154,11 @@ const Demo = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Plan een Demo - Glimps AI | Zie hoe we jouw business transformeren"
+        description="Plan een persoonlijke demo van 30 minuten en ontdek hoe Glimps AI jouw klantenservice automatiseert en conversies verhoogt. Gratis en vrijblijvend."
+        path="/demo"
+      />
       <Navigation />
 
       {/* Hero Section */}

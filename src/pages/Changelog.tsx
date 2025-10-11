@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Sparkles, Zap, Bug, Calendar, Lightbulb, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -125,6 +126,11 @@ const Changelog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Changelog - Glimps AI | Nieuwste Features & Updates"
+        description="Blijf op de hoogte van alle nieuwe features, verbeteringen en updates van Glimps AI. We werken continu aan betere functionaliteit."
+        path="/changelog"
+      />
       <Navigation />
       
       <section className="py-20 px-6">

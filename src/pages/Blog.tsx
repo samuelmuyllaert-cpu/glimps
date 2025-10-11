@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -102,6 +103,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Blog - Glimps AI | Tips & Strategieën voor E-commerce"
+        description="Lees onze nieuwste artikelen over AI chatbots, conversie optimalisatie en e-commerce strategieën. Tips van experts voor meer omzet."
+        path="/blog"
+      />
       <Navigation />
       
       <section className="py-20 px-6">

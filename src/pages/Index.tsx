@@ -13,10 +13,16 @@ import CTA from "@/components/CTA";
 import ChatWidget from "@/components/ChatWidget";
 import Footer from "@/components/Footer";
 import ChatbotComparison from "@/components/ChatbotComparison";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Glimps - AI Chatbot voor E-commerce | Verhoog Conversie"
+        description="Slimme AI chatbot die je webshop bezoekers begeleidt naar de perfecte producten. Verhoog conversie met persoonlijke aanbevelingen 24/7."
+        path="/"
+      />
       <Navigation />
       <Hero />
       <Features />

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SEO from "@/components/SEO";
 import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import productSneakerBlue from "@/assets/product-sneaker-blue.png";
@@ -181,6 +182,11 @@ const Features = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background">
+      <SEO 
+        title="Functies - Glimps AI Chatbot | Complete E-commerce Oplossing"
+        description="Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer. Complete AI chatbot voor e-commerce."
+        path="/features"
+      />
       <Navigation />
       
       <section className="py-20 px-6">
