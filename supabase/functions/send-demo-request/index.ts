@@ -63,6 +63,33 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Email sent successfully:", emailResponse);
 
+    // Send webhook notification
+    try {
+      const webhookRes = await fetch("https://hook.eu2.make.com/en55sim9m2dl0w91tg1qdwgxrwl9ifws", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          phone,
+          message: message || "",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      if (!webhookRes.ok) {
+        console.error("Webhook error:", webhookRes.status, await webhookRes.text());
+      } else {
+        console.log("Webhook sent successfully");
+      }
+    } catch (webhookError: any) {
+      console.error("Error sending webhook:", webhookError);
+      // Don't fail the whole request if webhook fails
+    }
+
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: {
