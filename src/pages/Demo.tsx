@@ -62,23 +62,28 @@ const Demo = () => {
     try {
       const validated = demoFormSchema.parse(formData);
       
-      // Call edge function to send email
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-demo-request`, {
+      // Send directly to webhook
+      const response = await fetch("https://hook.eu2.make.com/en55sim9m2dl0w91tg1qdwgxrwl9ifws", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          firstName: validated.firstName,
+          lastName: validated.lastName,
           name: `${validated.firstName} ${validated.lastName}`,
           email: validated.email,
           company: validated.company,
-          phone: validated.phone || "Niet opgegeven",
-          message: validated.message || "Geen bericht opgegeven",
+          phone: validated.phone || "",
+          website: validated.website || "",
+          employees: validated.employees,
+          message: validated.message || "",
+          timestamp: new Date().toISOString(),
         }),
       });
 
       if (!response.ok) {
-        throw new Error("Kon email niet verzenden");
+        throw new Error("Kon demo aanvraag niet verzenden");
       }
 
       toast({
