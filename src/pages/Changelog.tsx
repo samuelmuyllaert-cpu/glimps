@@ -12,6 +12,18 @@ const Changelog = () => {
   const [featureRequest, setFeatureRequest] = useState("");
   const [featureTitle, setFeatureTitle] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [votes, setVotes] = useState({
+    instagram: 47,
+    voice: 32,
+    analytics: 28
+  });
+
+  const handleVote = (feature: keyof typeof votes) => {
+    setVotes(prev => ({
+      ...prev,
+      [feature]: prev[feature] + 1
+    }));
+  };
 
   const handleFeatureRequest = async () => {
     if (!featureTitle.trim() || !featureRequest.trim()) return;
@@ -223,41 +235,56 @@ const Changelog = () => {
             <div className="mt-8 space-y-4">
               <h3 className="font-semibold text-lg mb-4">Populaire verzoeken</h3>
               
-              <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
+              <Card className="p-4 hover:shadow-md transition-shadow">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h4 className="font-semibold mb-1">Instagram Shopping Integratie</h4>
                     <p className="text-sm text-muted-foreground">Direct producten verkopen via Instagram DM's</p>
                   </div>
-                  <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="flex items-center gap-2 hover:bg-primary/10"
+                    onClick={() => handleVote('instagram')}
+                  >
                     <ThumbsUp className="h-4 w-4" />
-                    <span className="font-semibold">47</span>
+                    <span className="font-semibold">{votes.instagram}</span>
                   </Button>
                 </div>
               </Card>
 
-              <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
+              <Card className="p-4 hover:shadow-md transition-shadow">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h4 className="font-semibold mb-1">Voice Assistant Support</h4>
                     <p className="text-sm text-muted-foreground">Klanten kunnen vragen stellen via spraak</p>
                   </div>
-                  <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="flex items-center gap-2 hover:bg-primary/10"
+                    onClick={() => handleVote('voice')}
+                  >
                     <ThumbsUp className="h-4 w-4" />
-                    <span className="font-semibold">32</span>
+                    <span className="font-semibold">{votes.voice}</span>
                   </Button>
                 </div>
               </Card>
 
-              <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
+              <Card className="p-4 hover:shadow-md transition-shadow">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h4 className="font-semibold mb-1">Advanced Analytics Dashboard</h4>
                     <p className="text-sm text-muted-foreground">Diepere inzichten in klantgedrag en conversies</p>
                   </div>
-                  <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="flex items-center gap-2 hover:bg-primary/10"
+                    onClick={() => handleVote('analytics')}
+                  >
                     <ThumbsUp className="h-4 w-4" />
-                    <span className="font-semibold">28</span>
+                    <span className="font-semibold">{votes.analytics}</span>
                   </Button>
                 </div>
               </Card>
