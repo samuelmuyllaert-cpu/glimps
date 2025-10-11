@@ -2,6 +2,7 @@ import bpostLogo from "@/assets/bpost-logo.png";
 import odooLogo from "@/assets/odoo-logo.png";
 import postnlLogo from "@/assets/postnl-logo.png";
 import sendcloudLogo from "@/assets/sendcloud-logo.png";
+import prestashopLogo from "@/assets/prestashop-logo.png";
 
 const Integrations = () => {
   const integrations = [
@@ -10,7 +11,7 @@ const Integrations = () => {
     { name: "WooCommerce", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg" },
     { name: "WhatsApp", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" },
     { name: "Odoo", logo: odooLogo },
-    { name: "Supabase", logo: "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" },
+    { name: "PrestaShop", logo: prestashopLogo },
     { name: "Slack", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
     { name: "Magento", logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Magento_Logo.svg" },
     { name: "bpost", logo: bpostLogo },

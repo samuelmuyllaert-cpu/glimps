@@ -123,9 +123,9 @@ const Integraties = () => {
           status: "Live"
         },
         { 
-          name: "Supabase", 
-          logo: "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png",
-          description: "Real-time database en backend services",
+          name: "PrestaShop", 
+          logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/PrestaShop_Logo.png",
+          description: "E-commerce platform integratie",
           status: "Live"
         },
         { 
