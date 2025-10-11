@@ -28,6 +28,7 @@ const SEO = ({ title, description, path = '' }: SEOProps) => {
       
       {/* Favicon */}
       <link rel="icon" type="image/png" href="/favicon.png" />
+      <link rel="apple-touch-icon" href="/favicon.png" />
     </Helmet>
   );
 };
