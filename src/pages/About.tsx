@@ -6,10 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Target, TrendingUp, Lightbulb, Zap, Heart } from "lucide-react";
 import samuelPhoto from "@/assets/samuel.png";
 import tomPhoto from "@/assets/tom.png";
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
@@ -22,7 +20,7 @@ const About = () => {
             Wij boosten je business met onze AI-chatbot.
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            Glimps is opgericht door familie met een sterke marketingachtergrond die AI-chatbots zien als dé marketingtool voor meer omzet en betere klantenservice.
+            Glimps is opgericht door twee broers met een sterke marketingachtergrond die AI-chatbots zien als dé marketingtool voor meer omzet en betere klantenservice.
           </p>
         </div>
 
@@ -31,11 +29,7 @@ const About = () => {
           {/* Samuel */}
           <div className="space-y-6">
             <div className="mx-auto h-48 w-48 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/5 p-1">
-              <img 
-                src={samuelPhoto} 
-                alt="Samuel Muyllaert" 
-                className="h-full w-full rounded-full object-cover"
-              />
+              <img src={samuelPhoto} alt="Samuel Muyllaert" className="h-full w-full rounded-full object-cover" />
             </div>
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Samuel Muyllaert</h3>
@@ -46,11 +40,7 @@ const About = () => {
             <p className="text-muted-foreground">
               Gepassioneerd door AI-technologieën en workflows om herhaalde taken om te zetten in automatiseringen.
             </p>
-            <Button 
-              variant="default" 
-              className="rounded-full"
-              onClick={() => window.open('https://www.linkedin.com/in/samuel-muyllaert-17311823a/', '_blank')}
-            >
+            <Button variant="default" className="rounded-full" onClick={() => window.open('https://www.linkedin.com/in/samuel-muyllaert-17311823a/', '_blank')}>
               LinkedIn profiel
             </Button>
           </div>
@@ -58,11 +48,7 @@ const About = () => {
           {/* Tom */}
           <div className="space-y-6">
             <div className="mx-auto h-48 w-48 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/5 p-1">
-              <img 
-                src={tomPhoto} 
-                alt="Tom Muyllaert" 
-                className="h-full w-full rounded-full object-cover"
-              />
+              <img src={tomPhoto} alt="Tom Muyllaert" className="h-full w-full rounded-full object-cover" />
             </div>
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Tom Muyllaert</h3>
@@ -73,11 +59,7 @@ const About = () => {
             <p className="text-muted-foreground">
               Digital Business Professional met +15 ervaring in digital sales en marketing.
             </p>
-            <Button 
-              variant="default" 
-              className="rounded-full"
-              onClick={() => window.open('https://www.linkedin.com/in/tmuyllaert/', '_blank')}
-            >
+            <Button variant="default" className="rounded-full" onClick={() => window.open('https://www.linkedin.com/in/tmuyllaert/', '_blank')}>
               LinkedIn profiel
             </Button>
           </div>
@@ -106,9 +88,7 @@ const About = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                 KR
               </div>
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
-                TH
-              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">BS</div>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                 EP
               </div>
@@ -268,8 +248,6 @@ const About = () => {
       </section>
       <ChatWidget />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
