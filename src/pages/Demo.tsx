@@ -135,7 +135,7 @@ const Demo = () => {
     },
     {
       question: "Moet ik iets voorbereiden?",
-      answer: "Ja we doen eerst een screening en dan pas kijken we of het waardevol is en daar vragen we ook basic vragen die ons helpen bij de opzet"
+      answer: "Nee, dat hoeft niet. We beginnen met een korte screening om te bekijken of het waardevol is om verder te gaan. Tijdens die screening stellen we een paar basisvragen die ons helpen bij de opzet."
     },
     {
       question: "Is de demo echt gratis?",
