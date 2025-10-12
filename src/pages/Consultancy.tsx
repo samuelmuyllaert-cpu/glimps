@@ -27,9 +27,6 @@ const Consultancy = () => {
         title="Consultancy - Glimps AI | Expert advies voor e-commerce automatisering"
         description="Professioneel advies over AI chatbots en klantenservice automatisering. Jarenlange ervaring in e-commerce en customer service."
         path="/consultancy"
-        canonical="https://glimps.be/consultancy"
-        keywords="consultancy, e-commerce advies, AI chatbot advies, automatisering consultant, expert advies"
-        type="website"
       />
       <Navigation />
 

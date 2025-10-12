@@ -44,9 +44,6 @@ const Partners = () => {
         title="Partner Programma - Glimps AI | Word reseller en verdien"
         description="Verdien aantrekkelijke commissies door Glimps AI te verkopen. 30% recurrente commissie, dedicated support en marketing materialen."
         path="/partners"
-        canonical="https://glimps.be/partners"
-        keywords="partner programma, reseller, affiliate, commissie, samenwerking, white-label"
-        type="website"
       />
       <Navigation />
 

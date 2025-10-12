@@ -1,7 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
-import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -9,25 +7,6 @@ import { Card } from "@/components/ui/card";
 const ShopifyIntegratie = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Integratie met Shopify: Complete gids - Glimps Blog"
-        description="Stap voor stap uitleg hoe je Glimps integreert met je Shopify webshop in minder dan 10 minuten. Complete tutorial met screenshots."
-        path="/blog/shopify-integratie"
-        canonical="https://glimps.be/blog/shopify-integratie"
-        type="article"
-        publishedTime="2024-12-15T10:00:00Z"
-        author="Glimps Team"
-        keywords="Shopify integratie, Shopify chatbot, tutorial, implementatie guide, Shopify app"
-      />
-      <StructuredData 
-        type="blog" 
-        data={{
-          headline: "Integratie met Shopify: Complete gids",
-          author: "Glimps Team",
-          datePublished: "2024-12-15T10:00:00Z",
-          image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=600&fit=crop"
-        }} 
-      />
       <Navigation />
       
       <article className="py-20 px-6">

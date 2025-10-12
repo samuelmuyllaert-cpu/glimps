@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 import { Lock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -43,14 +42,6 @@ const EcomAgents = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Ecom Agents - Glimps AI | Binnenkort beschikbaar"
-        description="Ecom Agents komt binnenkort beschikbaar. Vraag early access aan en krijg als eerste toegang tot deze geavanceerde functionaliteit."
-        path="/ecom-agents"
-        canonical="https://glimps.be/ecom-agents"
-        keywords="ecom agents, early access, geavanceerde features, AI agents, e-commerce automatisering"
-        type="website"
-      />
       <Navigation />
       <div className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-4xl">

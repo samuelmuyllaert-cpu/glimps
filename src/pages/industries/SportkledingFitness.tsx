@@ -1,20 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Dumbbell } from "lucide-react";
 
 const SportkledingFitness = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="AI-Chatbots voor Sport & Fitness - Glimps AI"
-        description="Boost je sportwebshop met AI die atleten helpt de perfecte gear te vinden voor hun sport en niveau. Perfect voor sportwebshops."
-        path="/industries/sportkleding-fitness"
-        canonical="https://glimps.be/industries/sportkleding-fitness"
-        keywords="sport chatbot, fitness AI, sportkleding advies, performance gear, sportwebshop, training gear"
-        type="website"
-      />
       <Navigation />
       
       {/* Hero Section */}

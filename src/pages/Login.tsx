@@ -1,20 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 import { Mail } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 
 const Login = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Inloggen - Glimps AI | Toegang tot je account"
-        description="Log in op je Glimps AI account om je chatbot te beheren en statistieken te bekijken."
-        path="/login"
-        canonical="https://glimps.be/login"
-        keywords="inloggen, login, account toegang, Glimps dashboard"
-        type="website"
-      />
       <Navigation />
       
       <section className="py-20 px-6">

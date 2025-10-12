@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -225,14 +224,6 @@ const EcomReadiness = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Ecom Readiness Quiz - Glimps AI | Ben je klaar voor AI?"
-        description="Ontdek in 2 minuten of een AI chatbot perfect is voor jouw webshop. Krijg een persoonlijke readiness score en ROI schatting."
-        path="/ecom-readiness"
-        canonical="https://glimps.be/ecom-readiness"
-        keywords="readiness quiz, AI chatbot quiz, e-commerce quiz, ROI calculator, chatbot assessment"
-        type="website"
-      />
       <Navigation />
 
       <div className="container mx-auto px-6 py-16">

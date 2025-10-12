@@ -1,7 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
-import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -9,25 +7,6 @@ import { Card } from "@/components/ui/card";
 const CaseStudyFashionHub = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Case study: Van 20% naar 67% conversie - Glimps Blog"
-        description="Hoe webshop FashionHub hun checkout conversie meer dan verdriedubbelde met Glimps AI chatbot. Concrete resultaten en bewezen strategieën."
-        path="/blog/case-study-fashionhub"
-        canonical="https://glimps.be/blog/case-study-fashionhub"
-        type="article"
-        publishedTime="2025-01-05T10:00:00Z"
-        author="Glimps Team"
-        keywords="case study, conversie verhoging, fashion webshop, AI chatbot resultaten, FashionHub"
-      />
-      <StructuredData 
-        type="blog" 
-        data={{
-          headline: "Case study: Van 20% naar 67% conversie",
-          author: "Glimps Team",
-          datePublished: "2025-01-05T10:00:00Z",
-          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop"
-        }} 
-      />
       <Navigation />
       
       <article className="py-20 px-6">

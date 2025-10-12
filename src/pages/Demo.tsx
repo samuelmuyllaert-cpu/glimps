@@ -157,9 +157,6 @@ const Demo = () => {
         title="Plan een Demo - Glimps AI | Zie hoe we jouw business transformeren"
         description="Plan een persoonlijke demo van 30 minuten en ontdek hoe Glimps AI jouw klantenservice automatiseert en conversies verhoogt. Gratis en vrijblijvend."
         path="/demo"
-        canonical="https://glimps.be/demo"
-        keywords="demo plannen, Glimps AI demo, chatbot demo, gratis demo, persoonlijke demo"
-        type="website"
       />
       <Navigation />
 
