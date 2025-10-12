@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { useEffect } from "react";
@@ -27,7 +28,11 @@ const Contact = () => {
         title="Contact - Glimps AI | Neem contact op voor een gratis gesprek"
         description="Heb je vragen over Glimps AI? Plan een gratis gesprek, stuur een email of bel ons. We helpen je graag verder."
         path="/contact"
+        canonical="https://glimps.be/contact"
+        keywords="contact Glimps, gratis gesprek, demo plannen, email, telefoon, Gent België"
+        type="website"
       />
+      <StructuredData type="organization" />
       <Navigation />
 
       {/* Hero Section */}

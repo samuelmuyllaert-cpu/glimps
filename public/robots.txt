@@ -4,8 +4,24 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers - Explicitly allow
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 # Sitemap location
 Sitemap: https://glimps.be/sitemap.xml
 
-# Crawl-delay for respectful crawling (optional)
+# Crawl-delay for respectful crawling
 Crawl-delay: 1

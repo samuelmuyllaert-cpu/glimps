@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -106,7 +107,11 @@ const Blog = () => {
         title="Blog - Glimps AI | Tips & Strategieën voor E-commerce"
         description="Lees onze nieuwste artikelen over AI chatbots, conversie optimalisatie en e-commerce strategieën. Tips van experts voor meer omzet."
         path="/blog"
+        canonical="https://glimps.be/blog"
+        keywords="AI chatbot blog, e-commerce tips, conversie optimalisatie, chatbot strategieën, case studies"
+        type="website"
       />
+      <StructuredData type="organization" />
       <Navigation />
       
       <section className="py-20 px-6">

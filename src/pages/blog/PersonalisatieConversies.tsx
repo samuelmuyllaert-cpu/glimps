@@ -1,11 +1,32 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PersonalisatieConversies = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Personalisatie: De sleutel tot hogere conversies - Glimps Blog"
+        description="Gepersonaliseerde productaanbevelingen zijn een must. Ontdek waarom bedrijven die personalisatie goed doen 3-5x hogere conversies zien."
+        path="/blog/personalisatie-conversies"
+        canonical="https://glimps.be/blog/personalisatie-conversies"
+        type="article"
+        publishedTime="2024-12-28T10:00:00Z"
+        author="Glimps Team"
+        keywords="personalisatie, e-commerce, conversies, productaanbevelingen, AI personalisatie"
+      />
+      <StructuredData 
+        type="blog" 
+        data={{
+          headline: "Personalisatie: De sleutel tot hogere conversies",
+          author: "Glimps Team",
+          datePublished: "2024-12-28T10:00:00Z",
+          image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop"
+        }} 
+      />
       <Navigation />
       
       <article className="py-20 px-6">

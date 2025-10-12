@@ -13,6 +13,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import ChatbotComparison from "@/components/ChatbotComparison";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const Index = () => {
   return (
@@ -21,7 +22,13 @@ const Index = () => {
         title="Glimps - AI Chatbot voor E-commerce | Verhoog Conversie"
         description="Slimme AI chatbot die je webshop bezoekers begeleidt naar de perfecte producten. Verhoog conversie met persoonlijke aanbevelingen 24/7."
         path="/"
+        canonical="https://glimps.be/"
+        keywords="AI chatbot, e-commerce, webshop, conversie verhogen, klantenservice, productaanbevelingen, online verkoop, België"
+        type="website"
       />
+      <StructuredData type="organization" />
+      <StructuredData type="website" />
+      <StructuredData type="software" />
       <Navigation />
       <Hero />
       <Features />

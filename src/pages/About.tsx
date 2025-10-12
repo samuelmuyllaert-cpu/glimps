@@ -6,6 +6,7 @@ import { Target, TrendingUp, Lightbulb, Zap, Heart } from "lucide-react";
 import samuelPhoto from "@/assets/samuel.png";
 import tomPhoto from "@/assets/tom.png";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const About = () => {
   return <div className="min-h-screen bg-background">
@@ -13,7 +14,11 @@ const About = () => {
         title="Over Ons - Glimps AI | Marketing-gedreven AI Chatbot"
         description="Ontmoet de oprichters van Glimps AI. Twee broers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice."
         path="/about"
+        canonical="https://glimps.be/about"
+        keywords="over glimps, oprichters, Samuel Muyllaert, Tom Muyllaert, AI chatbot team, marketing achtergrond"
+        type="website"
       />
+      <StructuredData type="organization" />
       <Navigation />
 
       {/* Hero Section */}

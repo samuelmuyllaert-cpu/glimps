@@ -1,11 +1,32 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ConversieVerhogen = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="7 Manieren om conversie te verhogen met AI chatbots - Glimps Blog"
+        description="Ontdek hoe e-commerce bedrijven hun omzet met 47% verhogen door slimme chatbot strategieën in te zetten. Praktische tips en bewezen methoden."
+        path="/blog/conversie-verhogen"
+        canonical="https://glimps.be/blog/conversie-verhogen"
+        type="article"
+        publishedTime="2025-01-12T10:00:00Z"
+        author="Glimps Team"
+        keywords="conversie verhogen, AI chatbot, e-commerce, omzet verhogen, chatbot strategieën"
+      />
+      <StructuredData 
+        type="blog" 
+        data={{
+          headline: "7 Manieren om conversie te verhogen met AI chatbots",
+          author: "Glimps Team",
+          datePublished: "2025-01-12T10:00:00Z",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop"
+        }} 
+      />
       <Navigation />
       
       {/* Hero Section */}

@@ -1,11 +1,32 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ToekomstAI2025 = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="De toekomst van klantenservice: AI in 2025 - Glimps Blog"
+        description="2025 markeert een keerpunt in klantenservice. Ontdek waarom bedrijven die nu investeren in AI chatbots een voorsprong nemen op de concurrentie."
+        path="/blog/toekomst-ai-2025"
+        canonical="https://glimps.be/blog/toekomst-ai-2025"
+        type="article"
+        publishedTime="2025-01-08T10:00:00Z"
+        author="Glimps Team"
+        keywords="AI klantenservice, toekomst AI, chatbot trends 2025, AI revolutie, personalisatie"
+      />
+      <StructuredData 
+        type="blog" 
+        data={{
+          headline: "De toekomst van klantenservice: AI in 2025",
+          author: "Glimps Team",
+          datePublished: "2025-01-08T10:00:00Z",
+          image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop"
+        }} 
+      />
       <Navigation />
       
       <article className="py-20 px-6">
