@@ -26,10 +26,11 @@ const SEO = ({
   image
 }: SEOProps) => {
   const siteUrl = 'https://glimps.be';
-  const fullUrl = `${siteUrl}${path}`;
-  const canonicalUrl = canonical || fullUrl;
+  const stripTrailingSlash = (url: string) => url.replace(/\/+$/, '');
+  const fullUrl = stripTrailingSlash(`${siteUrl}${path}`);
+  const canonicalUrl = stripTrailingSlash(canonical || fullUrl);
   const ogImage = image || `${siteUrl}/favicon.png`;
-
+  
   return (
     <Helmet>
       <html lang="nl" />
