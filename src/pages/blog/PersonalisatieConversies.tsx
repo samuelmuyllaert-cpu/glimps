@@ -12,7 +12,7 @@ const PersonalisatieConversies = () => {
         title="Personalisatie: De sleutel tot hogere conversies - Glimps Blog"
         description="Gepersonaliseerde productaanbevelingen zijn een must. Ontdek waarom bedrijven die personalisatie goed doen 3-5x hogere conversies zien."
         path="/blog/personalisatie-conversies"
-        canonical="https://glimps.be/blog/personalisatie-conversies"
+        canonical="https://www.glimps.be/blog/personalisatie-conversies"
         type="article"
         publishedTime="2024-12-28T10:00:00Z"
         author="Glimps Team"

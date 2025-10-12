@@ -22,7 +22,7 @@ const Index = () => {
         title="Glimps - AI Chatbot voor E-commerce | Verhoog Conversie"
         description="Slimme AI chatbot die je webshop bezoekers begeleidt naar de perfecte producten. Verhoog conversie met persoonlijke aanbevelingen 24/7."
         path="/"
-        canonical="https://glimps.be"
+        canonical="https://www.glimps.be"
         keywords="AI chatbot, e-commerce, webshop, conversie verhogen, klantenservice, productaanbevelingen, online verkoop, België"
         type="website"
       />

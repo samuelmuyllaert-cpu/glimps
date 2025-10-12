@@ -28,7 +28,7 @@ const Contact = () => {
         title="Contact - Glimps AI | Neem contact op voor een gratis gesprek"
         description="Heb je vragen over Glimps AI? Plan een gratis gesprek, stuur een email of bel ons. We helpen je graag verder."
         path="/contact"
-        canonical="https://glimps.be/contact"
+        canonical="https://www.glimps.be/contact"
         keywords="contact Glimps, gratis gesprek, demo plannen, email, telefoon, Gent België"
         type="website"
       />

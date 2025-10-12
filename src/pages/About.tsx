@@ -14,7 +14,7 @@ const About = () => {
         title="Over Ons - Glimps AI | Marketing-gedreven AI Chatbot"
         description="Ontmoet de oprichters van Glimps AI. Twee broers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice."
         path="/about"
-        canonical="https://glimps.be/about"
+        canonical="https://www.glimps.be/about"
         keywords="over glimps, oprichters, Samuel Muyllaert, Tom Muyllaert, AI chatbot team, marketing achtergrond"
         type="website"
       />

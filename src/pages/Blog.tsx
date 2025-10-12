@@ -107,7 +107,7 @@ const Blog = () => {
         title="Blog - Glimps AI | Tips & Strategieën voor E-commerce"
         description="Lees onze nieuwste artikelen over AI chatbots, conversie optimalisatie en e-commerce strategieën. Tips van experts voor meer omzet."
         path="/blog"
-        canonical="https://glimps.be/blog"
+        canonical="https://www.glimps.be/blog"
         keywords="AI chatbot blog, e-commerce tips, conversie optimalisatie, chatbot strategieën, case studies"
         type="website"
       />

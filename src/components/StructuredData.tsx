@@ -26,7 +26,7 @@ interface StructuredDataProps {
 
 const StructuredData = ({ type, data }: StructuredDataProps) => {
   const generateSchema = () => {
-    const baseUrl = 'https://glimps.be';
+    const baseUrl = 'https://www.glimps.be';
     
     switch (type) {
       case 'organization':

@@ -186,7 +186,7 @@ const Features = () => {
         title="Functies - Glimps AI Chatbot | Complete E-commerce Oplossing"
         description="Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer. Complete AI chatbot voor e-commerce."
         path="/features"
-        canonical="https://glimps.be/features"
+        canonical="https://www.glimps.be/features"
         keywords="chatbot functies, checkout bot, pakket tracking, upselling, multilingual support, spraak interactie, AI features"
         type="website"
       />

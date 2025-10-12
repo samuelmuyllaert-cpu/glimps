@@ -25,7 +25,7 @@ const SEO = ({
   keywords,
   image
 }: SEOProps) => {
-  const siteUrl = 'https://glimps.be';
+  const siteUrl = 'https://www.glimps.be';
   const stripTrailingSlash = (url: string) => url.replace(/\/+$/, '');
   const fullUrl = stripTrailingSlash(`${siteUrl}${path}`);
   const canonicalUrl = stripTrailingSlash(canonical || fullUrl);

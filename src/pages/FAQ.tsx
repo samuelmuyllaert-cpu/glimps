@@ -34,7 +34,7 @@ const FAQ = () => {
         title="Veelgestelde Vragen - Glimps AI | Alle antwoorden op één plek"
         description="Vind antwoorden op veelgestelde vragen over Glimps AI chatbot. Van prijzen en integraties tot functies en implementatie."
         path="/faq"
-        canonical="https://glimps.be/faq"
+        canonical="https://www.glimps.be/faq"
         keywords="FAQ, veelgestelde vragen, Glimps AI, chatbot vragen, prijzen, implementatie"
         type="website"
       />

@@ -12,7 +12,7 @@ const ToekomstAI2025 = () => {
         title="De toekomst van klantenservice: AI in 2025 - Glimps Blog"
         description="2025 markeert een keerpunt in klantenservice. Ontdek waarom bedrijven die nu investeren in AI chatbots een voorsprong nemen op de concurrentie."
         path="/blog/toekomst-ai-2025"
-        canonical="https://glimps.be/blog/toekomst-ai-2025"
+        canonical="https://www.glimps.be/blog/toekomst-ai-2025"
         type="article"
         publishedTime="2025-01-08T10:00:00Z"
         author="Glimps Team"

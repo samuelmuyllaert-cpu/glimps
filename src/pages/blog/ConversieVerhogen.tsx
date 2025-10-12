@@ -12,7 +12,7 @@ const ConversieVerhogen = () => {
         title="7 Manieren om conversie te verhogen met AI chatbots - Glimps Blog"
         description="Ontdek hoe e-commerce bedrijven hun omzet met 47% verhogen door slimme chatbot strategieën in te zetten. Praktische tips en bewezen methoden."
         path="/blog/conversie-verhogen"
-        canonical="https://glimps.be/blog/conversie-verhogen"
+        canonical="https://www.glimps.be/blog/conversie-verhogen"
         type="article"
         publishedTime="2025-01-12T10:00:00Z"
         author="Glimps Team"
