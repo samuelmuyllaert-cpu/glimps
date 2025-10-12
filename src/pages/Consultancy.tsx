@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Target, Users, TrendingUp, Lightbulb, Shield } from "lucide-react";
@@ -397,7 +396,6 @@ const Consultancy = () => {
         </div>
       </section>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { Mail } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 
@@ -104,7 +103,6 @@ const Login = () => {
           </p>
         </div>
       </section>
-      <ChatWidget />
       <Footer />
     </div>
   );

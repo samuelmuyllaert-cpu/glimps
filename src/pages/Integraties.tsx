@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -331,7 +330,6 @@ const Integraties = () => {
         </div>
       </section>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

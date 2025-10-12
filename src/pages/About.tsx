@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Target, TrendingUp, Lightbulb, Zap, Heart } from "lucide-react";
@@ -253,7 +252,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      <ChatWidget />
       <Footer />
     </div>;
 };

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -577,7 +576,6 @@ const ROI = () => {
         </div>
       </div>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Flower } from "lucide-react";
 
@@ -113,7 +112,6 @@ const TuinBuitenleven = () => {
         </div>
       </section>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -105,7 +104,6 @@ const ToekomstAI2025 = () => {
         </div>
       </article>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

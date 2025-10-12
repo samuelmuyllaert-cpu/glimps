@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
@@ -143,7 +142,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

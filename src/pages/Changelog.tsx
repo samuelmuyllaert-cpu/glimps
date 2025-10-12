@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
 import { Sparkles, Zap, Bug, Calendar, Lightbulb, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -298,7 +297,6 @@ const Changelog = () => {
           </div>
         </div>
       </section>
-      <ChatWidget />
       <Footer />
     </div>
   );

@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import FAQComponent from "@/components/FAQ";
 import SEO from "@/components/SEO";
 
@@ -14,7 +13,6 @@ const FAQ = () => {
       />
       <Navigation />
       <FAQComponent />
-      <ChatWidget />
       <Footer />
     </div>
   );

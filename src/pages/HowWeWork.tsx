@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -594,7 +593,6 @@ const HowWeWork = () => {
         </div>
       </section>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

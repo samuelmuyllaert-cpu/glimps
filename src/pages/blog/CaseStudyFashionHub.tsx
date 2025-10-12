@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { Calendar, Clock, ArrowLeft, Share2, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -161,7 +160,6 @@ const CaseStudyFashionHub = () => {
         </div>
       </article>
 
-      <ChatWidget />
       <Footer />
     </div>
   );

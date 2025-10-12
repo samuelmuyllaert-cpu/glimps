@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -369,7 +368,6 @@ const EcomReadiness = () => {
         )}
       </div>
 
-      <ChatWidget />
       <Footer />
     </div>
   );
