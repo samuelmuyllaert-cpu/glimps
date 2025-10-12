@@ -44,12 +44,14 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button variant="hero" size="lg" className="rounded-full">
-            <Sparkles className="h-5 w-5" />
-            Gratis aan de slag
+          <Button asChild variant="hero" size="lg" className="rounded-full">
+            <a href="/demo">
+              <Sparkles className="h-5 w-5" />
+              Gratis aan de slag
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="rounded-full">
-            Zie glimps in actie
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <a href="/demo">Zie glimps in actie</a>
           </Button>
         </div>
 
