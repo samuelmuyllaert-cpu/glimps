@@ -104,4 +104,13 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-inter;
   }
+  
+  html, body {
+    @apply overflow-x-hidden;
+    max-width: 100vw;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
 }
