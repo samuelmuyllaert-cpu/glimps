@@ -1,11 +1,20 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Cpu } from "lucide-react";
 
 const Electronics = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="AI-Chatbots voor Electronics - Glimps AI"
+        description="Help klanten de juiste tech keuze maken met AI die specificaties, compatibiliteit en features begrijpt. Perfect voor electronics webshops."
+        path="/industries/electronics"
+        canonical="https://glimps.be/industries/electronics"
+        keywords="electronics chatbot, tech webshop, specificaties, compatibiliteit check, product vergelijkingen"
+        type="website"
+      />
       <Navigation />
       
       {/* Hero Section */}

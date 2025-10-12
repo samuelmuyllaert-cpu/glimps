@@ -129,6 +129,9 @@ const Changelog = () => {
         title="Changelog - Glimps AI | Nieuwste Features & Updates"
         description="Blijf op de hoogte van alle nieuwe features, verbeteringen en updates van Glimps AI. We werken continu aan betere functionaliteit."
         path="/changelog"
+        canonical="https://glimps.be/changelog"
+        keywords="changelog, product updates, nieuwe features, Glimps updates, release notes"
+        type="website"
       />
       <Navigation />
       

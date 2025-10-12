@@ -1,11 +1,20 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Home } from "lucide-react";
 
 const MeubelsInterieur = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="AI-Chatbots voor Meubels & Interieur - Glimps AI"
+        description="Help klanten hun perfecte interieur samen te stellen met AI die stijl, afmetingen en combinaties begrijpt. Perfect voor meubelwebshops."
+        path="/industries/meubels-interieur"
+        canonical="https://glimps.be/industries/meubels-interieur"
+        keywords="meubel chatbot, interieuradvies, stijl combinaties, afmetingen, meubelwebshop, interieur AI"
+        type="website"
+      />
       <Navigation />
       
       {/* Hero Section */}

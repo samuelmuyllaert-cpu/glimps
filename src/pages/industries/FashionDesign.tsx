@@ -1,11 +1,20 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, TrendingUp } from "lucide-react";
 
 const FashionDesign = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="AI-Chatbots voor Fashion & Design - Glimps AI"
+        description="Verhoog je fashion sales met intelligente style adviseurs die 24/7 persoonlijke outfit aanbevelingen geven. Perfect voor fashion webshops."
+        path="/industries/fashion-design"
+        canonical="https://glimps.be/industries/fashion-design"
+        keywords="fashion chatbot, style advies, outfit aanbevelingen, fashion webshop, maatadvies, kledingstijlen"
+        type="website"
+      />
       <Navigation />
       
       {/* Hero Section */}

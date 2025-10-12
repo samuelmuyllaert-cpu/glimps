@@ -20,6 +20,9 @@ const HowWeWork = () => {
         title="Hoe We Werken - Glimps AI | Van implementatie tot resultaat"
         description="Ontdek ons bewezen 4-stappen proces: screening, analyse, implementatie en live. Van chaos naar controle met Glimps AI chatbot."
         path="/how-we-work"
+        canonical="https://glimps.be/how-we-work"
+        keywords="implementatie proces, hoe het werkt, onboarding, AI chatbot implementatie, 4-stappen plan"
+        type="website"
       />
       <Navigation />
       

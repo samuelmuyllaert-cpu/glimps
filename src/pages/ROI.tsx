@@ -154,6 +154,9 @@ const ROI = () => {
         title="ROI Calculator - Glimps AI | Bereken je Return on Investment"
         description="Bereken direct wat een AI chatbot jou oplevert. Zie hoeveel tijd en geld je bespaart en hoeveel extra omzet je genereert met Glimps."
         path="/roi"
+        canonical="https://glimps.be/roi"
+        keywords="ROI calculator, return on investment, kostenbesparingen, AI ROI, chatbot ROI"
+        type="website"
       />
       <Navigation />
       

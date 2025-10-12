@@ -196,6 +196,9 @@ const Integraties = () => {
         title="Integraties - Glimps AI | 50+ Koppelingen met je tools"
         description="Koppel Glimps naadloos met Shopify, WooCommerce, SendCloud, WhatsApp en 50+ andere tools. Plug & play setup binnen 5 minuten."
         path="/integraties"
+        canonical="https://glimps.be/integraties"
+        keywords="integraties, Shopify, WooCommerce, SendCloud, API koppelingen, e-commerce integraties"
+        type="website"
       />
       <Navigation />
       

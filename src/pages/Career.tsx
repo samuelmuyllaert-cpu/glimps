@@ -13,6 +13,9 @@ const Career = () => {
         title="Vacatures - Glimps AI | Word deel van ons team"
         description="Werk mee aan de toekomst van e-commerce. Ontdek onze open vacatures en sluit je aan bij het Glimps AI team."
         path="/career"
+        canonical="https://glimps.be/career"
+        keywords="vacatures, werken bij Glimps, AI developer, e-commerce jobs, startup vacatures"
+        type="website"
       />
       <Navigation />
 
