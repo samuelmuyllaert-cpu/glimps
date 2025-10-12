@@ -327,22 +327,22 @@ const Footer = () => {
             <h4 className="font-semibold">Juridisch</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary">
+                <a href="/legal" className="text-muted-foreground hover:text-primary">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary">
+                <a href="/legal" className="text-muted-foreground hover:text-primary">
                   Algemene Voorwaarden
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary">
+                <a href="/legal" className="text-muted-foreground hover:text-primary">
                   Cookie Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary">
+                <a href="/legal" className="text-muted-foreground hover:text-primary">
                   GDPR
                 </a>
               </li>
@@ -360,7 +360,7 @@ const Footer = () => {
             <form onSubmit={handleNewsletterSignup} className="flex gap-2">
               <Input
                 type="email"
-                placeholder="je@email.nl"
+                placeholder="je@email.be"
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 disabled={submittingNewsletter}

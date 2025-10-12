@@ -213,7 +213,7 @@ const Blog = () => {
             <form onSubmit={handleNewsletterSignup} className="flex gap-2 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="je@email.nl"
+                placeholder="je@email.be"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={submitting}

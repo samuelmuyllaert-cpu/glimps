@@ -57,7 +57,7 @@ const questions: Question[] = [
     id: "international",
     question: "Verkoop je internationaal?",
     options: [
-      { value: "no", label: "Nee, alleen Nederland", points: 20 },
+      { value: "no", label: "Nee, alleen België", points: 20 },
       { value: "benelux", label: "Ja, Benelux", points: 60 },
       { value: "europe", label: "Ja, Europa", points: 80 },
       { value: "worldwide", label: "Ja, wereldwijd", points: 100 },
@@ -345,10 +345,12 @@ const EcomReadiness = () => {
                   Ontdek precies hoe een AI chatbot werkt voor jouw webshop. We laten je live zien
                   wat mogelijk is en berekenen samen je exacte ROI.
                 </p>
-                <Button size="lg" className="rounded-full px-12">
-                  Plan Gratis Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <a href="/demo">
+                  <Button size="lg" className="rounded-full px-12">
+                    Plan Gratis Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
               </div>
 
               <div className="text-center">

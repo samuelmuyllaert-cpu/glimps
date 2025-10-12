@@ -32,6 +32,7 @@ import Electronics from "./pages/industries/Electronics";
 import MeubelsInterieur from "./pages/industries/MeubelsInterieur";
 import SportkledingFitness from "./pages/industries/SportkledingFitness";
 import TuinBuitenleven from "./pages/industries/TuinBuitenleven";
+import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -72,6 +73,7 @@ const App = () => (
           <Route path="/industries/meubels-interieur" element={<MeubelsInterieur />} />
           <Route path="/industries/sportkleding-fitness" element={<SportkledingFitness />} />
           <Route path="/industries/tuin-buitenleven" element={<TuinBuitenleven />} />
+          <Route path="/legal" element={<Legal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -167,10 +167,6 @@ const Partners = () => {
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">White-label mogelijkheden</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
                   <span className="text-sm">Sales decks en case studies</span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -336,10 +332,6 @@ const Partners = () => {
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <span className="text-sm">Kwartaal performance bonus</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">White-label opties</span>
-                </li>
               </ul>
             </Card>
           </div>
@@ -444,7 +436,7 @@ const Partners = () => {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="jan@agency.nl"
+                      placeholder="jan@agency.be"
                     />
                   </div>
 
@@ -456,7 +448,7 @@ const Partners = () => {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+31 6 12345678"
+                      placeholder="+32 123 45 67 89"
                     />
                   </div>
                 </div>

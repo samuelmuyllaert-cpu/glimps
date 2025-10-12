@@ -162,32 +162,6 @@ const Integraties = () => {
         },
       ]
     },
-    {
-      title: "Betalingen",
-      icon: Zap,
-      color: "text-yellow-500",
-      bgColor: "bg-yellow-500/10",
-      integrations: [
-        { 
-          name: "Stripe", 
-          logo: "https://images.ctfassets.net/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg",
-          description: "Online betalingen en transacties",
-          status: "Live"
-        },
-        { 
-          name: "Mollie", 
-          logo: "https://www.mollie.com/external/icons/payment-methods/ideal.svg",
-          description: "Nederlandse betalingsprovider",
-          status: "Live"
-        },
-        { 
-          name: "PayPal", 
-          logo: "https://www.paypalobjects.com/webstatic/icon/pp258.png",
-          description: "Wereldwijde online betalingen",
-          status: "Live"
-        },
-      ]
-    },
   ];
 
   return (

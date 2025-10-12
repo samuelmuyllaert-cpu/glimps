@@ -54,7 +54,7 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="container mx-auto px-6 py-12">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 md:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-3">
             <Card className="p-6 text-center">
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Mail className="h-7 w-7 text-primary" />
@@ -67,21 +67,11 @@ const Contact = () => {
 
             <Card className="p-6 text-center">
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-                <Phone className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="mb-2 font-bold">Telefoon</h3>
-              <a href="tel:+32123456789" className="text-sm text-muted-foreground hover:text-primary">
-                +32 (0)1 23 45 67 89
-              </a>
-            </Card>
-
-            <Card className="p-6 text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <MapPin className="h-7 w-7 text-primary" />
               </div>
               <h3 className="mb-2 font-bold">Locatie</h3>
               <p className="text-sm text-muted-foreground">
-                Gent, België
+                Brugge, België
               </p>
             </Card>
 

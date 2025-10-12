@@ -135,7 +135,7 @@ const Demo = () => {
     },
     {
       question: "Moet ik iets voorbereiden?",
-      answer: "Nee, je hoeft niets voor te bereiden. Het helpt wel als je alvast nadenkt over je grootste uitdagingen in klantenservice en welke vragen je vaak krijgt."
+      answer: "Ja we doen eerst een screening en dan pas kijken we of het waardevol is en daar vragen we ook basic vragen die ons helpen bij de opzet"
     },
     {
       question: "Is de demo echt gratis?",
@@ -236,19 +236,19 @@ const Demo = () => {
 
               {/* Why Choose Glimps */}
               <Card className="bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-white">
-                <h3 className="mb-6 text-xl font-bold">Waarom 100+ webshops voor Glimps kozen</h3>
+                <h3 className="mb-6 text-xl font-bold">Waarom andere webshops voor Glimps kozen</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
                       <TrendingUp className="h-5 w-5 text-white" />
                     </div>
-                    <span className="font-medium">+43% hogere conversie rate</span>
+                    <span className="font-medium">Hogere conversie rate</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
                       <MessageSquare className="h-5 w-5 text-white" />
                     </div>
-                    <span className="font-medium">89% vragen automatisch opgelost</span>
+                    <span className="font-medium">Terugkerende vragen automatisch opgelost</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
@@ -321,7 +321,7 @@ const Demo = () => {
                     <Input
                       id="email"
                       type="email"
-                      placeholder="jan@bedrijf.nl"
+                      placeholder="jan@bedrijf.be"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className={errors.email ? "border-destructive" : ""}
@@ -336,7 +336,7 @@ const Demo = () => {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+31 6 12345678"
+                      placeholder="+32 123 45 67 89"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -363,7 +363,7 @@ const Demo = () => {
                     <Input
                       id="website"
                       type="url"
-                      placeholder="https://jouwwebshop.nl"
+                      placeholder="https://jouwwebshop.be"
                       value={formData.website}
                       onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                     />
