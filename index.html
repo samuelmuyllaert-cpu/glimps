@@ -60,10 +60,18 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
-    <!-- Prerender.io Meta Tags -->
-    <meta name="fragment" content="!">
-    
     <div id="root"></div>
+    
+    <!-- Prerender.io: Signal when app is ready -->
+    <script>
+      window.prerenderReady = false;
+      window.addEventListener('load', function() {
+        // Give React time to hydrate
+        setTimeout(function() {
+          window.prerenderReady = true;
+        }, 1000);
+      });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,4 @@
+# Prerender.io configuration for crawlers
+/*
+  X-Robots-Tag: all
+  Cache-Control: public, max-age=0, must-revalidate
