@@ -51,7 +51,7 @@ const Hero = () => {
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full">
-            <a href="/demo">Zie glimps in actie</a>
+            <a href="/features">Zie glimps in actie</a>
           </Button>
         </div>
 
