@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Features from "./pages/Features";
 import Demo from "./pages/Demo";
@@ -42,42 +42,40 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/demo" element={<Demo />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/roi" element={<ROI />} />
-          <Route path="/changelog" element={<Changelog />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/ecom-agents" element={<EcomAgents />} />
-          <Route path="/ecom-readiness" element={<EcomReadiness />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/how-we-work" element={<HowWeWork />} />
-          <Route path="/consultancy" element={<Consultancy />} />
-          <Route path="/integraties" element={<Integraties />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog/conversie-verhogen" element={<ConversieVerhogen />} />
-          <Route path="/blog/toekomst-ai-2025" element={<ToekomstAI2025 />} />
-          <Route path="/blog/case-study-fashionhub" element={<CaseStudyFashionHub />} />
-          <Route path="/blog/personalisatie-conversies" element={<PersonalisatieConversies />} />
-          <Route path="/blog/fouten-chatbots" element={<FoutenChatbots />} />
-          <Route path="/blog/shopify-integratie" element={<ShopifyIntegratie />} />
-          <Route path="/industries/fashion-design" element={<FashionDesign />} />
-          <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
-          <Route path="/industries/electronics" element={<Electronics />} />
-          <Route path="/industries/meubels-interieur" element={<MeubelsInterieur />} />
-          <Route path="/industries/sportkleding-fitness" element={<SportkledingFitness />} />
-          <Route path="/industries/tuin-buitenleven" element={<TuinBuitenleven />} />
-          <Route path="/legal" element={<Legal />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/demo" element={<Demo />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/roi" element={<ROI />} />
+        <Route path="/changelog" element={<Changelog />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/ecom-agents" element={<EcomAgents />} />
+        <Route path="/ecom-readiness" element={<EcomReadiness />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/how-we-work" element={<HowWeWork />} />
+        <Route path="/consultancy" element={<Consultancy />} />
+        <Route path="/integraties" element={<Integraties />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog/conversie-verhogen" element={<ConversieVerhogen />} />
+        <Route path="/blog/toekomst-ai-2025" element={<ToekomstAI2025 />} />
+        <Route path="/blog/case-study-fashionhub" element={<CaseStudyFashionHub />} />
+        <Route path="/blog/personalisatie-conversies" element={<PersonalisatieConversies />} />
+        <Route path="/blog/fouten-chatbots" element={<FoutenChatbots />} />
+        <Route path="/blog/shopify-integratie" element={<ShopifyIntegratie />} />
+        <Route path="/industries/fashion-design" element={<FashionDesign />} />
+        <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
+        <Route path="/industries/electronics" element={<Electronics />} />
+        <Route path="/industries/meubels-interieur" element={<MeubelsInterieur />} />
+        <Route path="/industries/sportkleding-fitness" element={<SportkledingFitness />} />
+        <Route path="/industries/tuin-buitenleven" element={<TuinBuitenleven />} />
+        <Route path="/legal" element={<Legal />} />
+        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </TooltipProvider>
   </QueryClientProvider>
 );
