@@ -162,9 +162,9 @@ const Footer = () => {
         <div className="grid gap-12 md:grid-cols-5">
           {/* Company Info */}
           <div className="space-y-4 md:col-span-1">
-            <div className="flex items-center">
+            <a href="/" className="flex items-center">
               <img src={glimpsLogoFooter} alt="glimps" className="h-16" />
-            </div>
+            </a>
             <p className="text-sm text-muted-foreground">
               De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.
             </p>
