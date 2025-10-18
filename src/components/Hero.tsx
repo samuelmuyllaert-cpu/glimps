@@ -28,11 +28,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <h1 className="mb-6 font-inter font-normal text-[32px] leading-[40px] tracking-[0.352px] text-foreground max-sm:text-[32px] max-sm:leading-[40px] max-md:text-[40px] max-md:leading-[48px] md:text-[48px] md:leading-[60px]">
-          Intelligente chatbots
-          <br />
-          die je e-commerce
-          <br />
-          omzet verhogen
+          Intelligente chatbots voor e-commerce
         </h1>
 
         {/* Subheading */}
