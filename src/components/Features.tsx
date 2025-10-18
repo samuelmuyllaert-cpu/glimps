@@ -62,7 +62,7 @@ const Features = () => {
                 <div className="bg-gradient-to-br from-[#e6575e] to-[#d93a5f] rounded-2xl px-6 py-4 shadow-md max-w-md">
                   <p className="text-sm text-white/90 mb-1">AI Chatbot</p>
                   <p className="text-white">
-                    Je bestelling is onderweg! 📦 Het pakket is gisteren verzonden en arriveert morgen tussen 14:00-18:00. Je kunt je bestelling live volgen via de tracking link die ik zojuist per e-mail heb gestuurd.
+                    Je bestelling is onderweg! 📦 Het pakket is gisteren verzonden en arriveert morgen tussen 14:00-18:00.
                   </p>
                 </div>
               </div>
