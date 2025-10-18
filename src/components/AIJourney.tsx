@@ -245,7 +245,7 @@ const AIJourney = () => {
             ACHTER DE SCHERMEN
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Technisch maar toegankelijk
+            Van vraag naar antwoord in 80 milliseconden
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
             Van intentieherkenning tot personalisatie: bekijk het proces dat elke klantinteractie efficiënt en accuraat maakt.
