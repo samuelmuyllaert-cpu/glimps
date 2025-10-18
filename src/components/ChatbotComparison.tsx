@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Users, Store, Sparkles, X, AlertTriangle, Star } from "lucide-react";
+import { Users, Store, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 
@@ -73,7 +73,7 @@ const ChatbotComparison = () => {
             Welke klantenservice oplossing past bij jouw webshop?
           </h2>
           <p className="text-lg text-muted-foreground mt-6">
-            Zie het verschil in actie: dezelfde klantvraag, drie totaal verschillende resultaten
+            De juiste keuze hangt af van je grootte, verkeer en ambities. Ontdek welke aanpak bij jouw situatie past.
           </p>
         </div>
 
@@ -92,11 +92,10 @@ const ChatbotComparison = () => {
             variant={selectedBot === "faq" ? "default" : "outline"}
             size="lg"
             onClick={() => handleBotSelect("faq")}
-            className={`gap-2 ${selectedBot === "faq" ? "bg-[#FF8C42] hover:bg-[#FF8C42]/90 text-white" : "border-[#FF8C42]/30"}`}
+            className={`gap-2 ${selectedBot === "faq" ? "bg-muted-foreground hover:bg-muted-foreground/90 text-background" : ""}`}
           >
             <Store className="w-5 h-5" />
             Simpele FAQ Bot
-            <AlertTriangle className="w-4 h-4 text-[#FF8C42]" />
           </Button>
           <Button
             variant={selectedBot === "glimps" ? "default" : "outline"}
@@ -106,7 +105,6 @@ const ChatbotComparison = () => {
           >
             <Sparkles className="w-5 h-5" />
             Glimps AI
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
           </Button>
         </div>
 
@@ -114,151 +112,191 @@ const ChatbotComparison = () => {
         <div className="max-w-6xl mx-auto">
           {(selectedBot === null || selectedBot === "none") && (
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Geen Bot Card */}
+              {/* Alleen menselijk team Card */}
               <div className="bg-card border border-border rounded-2xl p-6 relative">
-                <div className="absolute top-4 right-4 flex items-center gap-2 text-xs text-red-500">
-                  <X className="w-4 h-4" />
-                  Verouderd
-                </div>
                 <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mb-4">
                   <Users className="w-8 h-8 text-muted-foreground" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Geen Bot</h3>
-                <p className="text-sm text-muted-foreground mb-6">Alleen menselijke customer service</p>
+                <h3 className="text-xl font-bold mb-2">Alleen menselijk team</h3>
+                <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Webshops met &lt;200 klantcontacten per maand</p>
                 
-                <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Reactietijd</span>
-                    <span className="font-semibold">2-24u</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Beschikbaarheid</span>
-                    <span className="font-semibold">9-17u</span>
+                <div className="mb-4">
+                  <p className="text-sm font-semibold mb-2">Wat het goed doet:</p>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Persoonlijk contact en empathie</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Complexe vragen direct goed beantwoord</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Geen implementatie nodig</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="border-t border-border pt-4 space-y-2">
-                  <div className="flex items-start gap-2 text-sm text-red-500">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span>Lange wachttijden</span>
+                <div className="mb-4">
+                  <p className="text-sm font-semibold mb-2">Beperkingen:</p>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Niet schaalbaar bij groei</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Beperkt tot kantooruren</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Hoge personeelskosten bij meer verkeer</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Team verdrinkt in repetitieve vragen</span>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2 text-sm text-red-500">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span>Geen 24/7 support</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-red-500">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span>Hoge personeelskosten</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-red-500">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span>Beperkte schaalbaarheid</span>
+                </div>
+
+                <div className="border-t border-border pt-4">
+                  <p className="text-xs font-semibold mb-2">Typisch resultaat:</p>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <div>Reactietijd: 2-24 uur</div>
+                    <div>Beschikbaarheid: 9-17u weekdagen</div>
                   </div>
                 </div>
               </div>
 
               {/* Simpele FAQ Bot Card */}
-              <div className="bg-card border-2 border-[#FF8C42]/30 rounded-2xl p-6 relative">
-                <div className="absolute top-4 right-4 flex items-center gap-2 text-xs text-[#FF8C42]">
-                  <AlertTriangle className="w-4 h-4" />
-                  Grootte verspilling
-                </div>
-                <div className="w-16 h-16 rounded-2xl bg-[#FF8C42]/10 flex items-center justify-center mb-4">
-                  <Store className="w-8 h-8 text-[#FF8C42]" />
+              <div className="bg-card border border-border rounded-2xl p-6 relative">
+                <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mb-4">
+                  <Store className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Simpele FAQ Bot</h3>
-                <p className="text-sm text-[#FF8C42] mb-6 font-medium">Alleen basis antwoorden - geen productkennis</p>
+                <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Webshops die alleen standaard FAQ's willen automatiseren</p>
                 
-                <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Conversie impact</span>
-                    <span className="font-semibold text-red-500">-18% 📉</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">ROI</span>
-                    <span className="font-semibold text-red-500">Negatief!</span>
+                <div className="mb-4">
+                  <p className="text-sm font-semibold mb-2">Wat het goed doet:</p>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Altijd beschikbaar (24/7)</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Beantwoordt basis vragen instant</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Goedkoper dan menselijk team</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="border-t border-border pt-4 space-y-2 bg-[#FF8C42]/5 -mx-6 -mb-6 px-6 py-4 rounded-b-2xl">
-                  <p className="text-xs font-semibold text-[#FF8C42] mb-2">Waarom het slecht is:</p>
-                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500" />
-                    <span>Kan alleen FAQ's - geen productkennis</span>
+                <div className="mb-4">
+                  <p className="text-sm font-semibold mb-2">Beperkingen:</p>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Geen toegang tot productdata/voorraad</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Kan niet helpen bij productkeuze</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Frustreert klanten met beperkte antwoorden</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Geen personalisatie mogelijk</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Leert niet bij</span>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500" />
-                    <span>Geen toegang tot voorraad/prijzen</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500" />
-                    <span>Frustreert klanten met beperkte antwoorden</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <X className="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500" />
-                    <span>Geen personalisatie mogelijk</span>
+                </div>
+
+                <div className="border-t border-border pt-4">
+                  <p className="text-xs font-semibold mb-2">Typisch resultaat:</p>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <div>30-40% van vragen automatisch opgelost</div>
+                    <div>Vaak frustratie bij klanten</div>
                   </div>
                 </div>
               </div>
 
               {/* Glimps AI Card */}
-              <div className="bg-card border-2 border-primary/30 rounded-2xl p-6 relative overflow-hidden">
-                <div className="absolute top-4 right-4 flex items-center gap-2 text-xs bg-primary text-white px-3 py-1 rounded-full">
-                  ⚡ De Winnaar
-                </div>
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 relative">
+              <div className="bg-card border border-border rounded-2xl p-6 relative">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
                   <Sparkles className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Glimps AI</h3>
-                <p className="text-sm text-primary mb-6 font-medium">Customer Service + Marketing AI Platform</p>
+                <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Groeiende e-commerce bedrijven (500+ klantcontacten/maand)</p>
                 
-                <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Conversie boost</span>
-                    <span className="font-semibold text-green-500">+43% 📈</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">ROI</span>
-                    <span className="font-semibold text-green-500">+237% 🚀</span>
+                <div className="mb-4">
+                  <p className="text-sm font-semibold mb-2">Wat het goed doet:</p>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Toegang tot live data (voorraad, prijzen, bestellingen)</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Helpt actief bij productkeuze</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Automatiseert 70-80% van vragen</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Leert continu en wordt slimmer</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm">
+                      <span className="text-foreground">✓</span>
+                      <span>Personalisatie op basis van gedrag</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="border-t border-border pt-4 space-y-2">
-                  <div className="flex items-start gap-2 text-sm text-green-600">
-                    <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-0.5 flex-shrink-0">
-                      <span className="text-white text-xs">✓</span>
+                <div className="mb-4">
+                  <p className="text-sm font-semibold mb-2">Beperkingen:</p>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Vereist gestructureerde productdata</span>
                     </div>
-                    <span>Diepgaande productkennis</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-green-600">
-                    <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-0.5 flex-shrink-0">
-                      <span className="text-white text-xs">✓</span>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Implementatie duurt 2-4 weken</span>
                     </div>
-                    <span>Live data toegang (voorraad, prijzen)</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-green-600">
-                    <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-0.5 flex-shrink-0">
-                      <span className="text-white text-xs">✓</span>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Niet geschikt voor &lt;200 contacten/maand</span>
                     </div>
-                    <span>Personalisatie op basis van gedrag</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-green-600">
-                    <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-0.5 flex-shrink-0">
-                      <span className="text-white text-xs">✓</span>
+                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span>•</span>
+                      <span>Complexe B2B vragen vragen nog menselijke input</span>
                     </div>
-                    <span>Actieve upsell & cross-sell</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm text-green-600">
-                    <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-0.5 flex-shrink-0">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span>Leert continu en wordt slimmer</span>
                   </div>
                 </div>
 
-                <Button className="w-full mt-6 bg-primary hover:bg-primary/90 text-white">
-                  Start vandaag →
+                <div className="border-t border-border pt-4 mb-4">
+                  <p className="text-xs font-semibold mb-2">Typisch resultaat:</p>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <div>15-20 uur per week bespaard</div>
+                    <div>70-80% automatisering rate</div>
+                    <div>24/7 beschikbaarheid</div>
+                  </div>
+                </div>
+
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white">
+                  Is Glimps geschikt voor jou? → Doe de check
                 </Button>
               </div>
             </div>
@@ -266,8 +304,8 @@ const ChatbotComparison = () => {
 
           {/* Chat Display for FAQ Bot */}
           {selectedBot === "faq" && (
-            <div className="bg-card border-2 border-[#FF8C42] rounded-3xl overflow-hidden">
-              <div className="bg-[#FF8C42] px-6 py-4 flex items-center justify-between">
+            <div className="bg-card border border-border rounded-3xl overflow-hidden">
+              <div className="bg-muted-foreground px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <Store className="w-5 h-5 text-white" />
@@ -292,7 +330,7 @@ const ChatbotComparison = () => {
                       className={`max-w-[80%] p-4 rounded-2xl ${
                         message.role === 'user' 
                           ? 'bg-foreground text-background' 
-                          : 'bg-card border border-[#FF8C42]/30'
+                          : 'bg-card border border-border'
                       }`}
                     >
                       <p className="text-sm leading-relaxed whitespace-pre-line">{message.content}</p>
@@ -305,27 +343,22 @@ const ChatbotComparison = () => {
               <div className="px-6 py-4 border-t border-border">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium">Klanttevredenheid</span>
-                  <span className="text-sm font-bold text-red-500">12%</span>
+                  <span className="text-sm font-bold">45%</span>
                 </div>
                 <div className="relative">
-                  <Progress value={12} className="h-2 bg-muted" />
-                  <div className="flex justify-between mt-2">
-                    <span className="text-red-500">☹️</span>
-                    <span className="text-orange-500">😐</span>
-                    <span className="text-green-500">😊</span>
-                  </div>
+                  <Progress value={45} className="h-2 bg-muted" />
                 </div>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 p-6 border-t border-border">
                 <div className="text-center">
-                  <div className="text-2xl font-bold mb-1">2-5min</div>
+                  <div className="text-2xl font-bold mb-1">Instant</div>
                   <div className="text-sm text-muted-foreground">Reactietijd</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-red-500 mb-1">-18%</div>
-                  <div className="text-sm text-muted-foreground">Conversie impact</div>
+                  <div className="text-2xl font-bold mb-1">24/7</div>
+                  <div className="text-sm text-muted-foreground">Beschikbaar</div>
                 </div>
               </div>
             </div>
@@ -378,15 +411,10 @@ const ChatbotComparison = () => {
               <div className="px-6 py-4 border-t border-border">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium">Klanttevredenheid</span>
-                  <span className="text-sm font-bold text-green-500">96%</span>
+                  <span className="text-sm font-bold">92%</span>
                 </div>
                 <div className="relative">
-                  <Progress value={96} className="h-2 bg-muted" />
-                  <div className="flex justify-between mt-2">
-                    <span className="text-red-500">☹️</span>
-                    <span className="text-orange-500">😐</span>
-                    <span className="text-green-500">😊</span>
-                  </div>
+                  <Progress value={92} className="h-2 bg-muted" />
                 </div>
               </div>
 
@@ -397,8 +425,8 @@ const ChatbotComparison = () => {
                   <div className="text-sm text-muted-foreground">Reactietijd</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-500 mb-1">+43%</div>
-                  <div className="text-sm text-muted-foreground">Conversie impact</div>
+                  <div className="text-2xl font-bold mb-1">70-80%</div>
+                  <div className="text-sm text-muted-foreground">Automatisering</div>
                 </div>
               </div>
             </div>
@@ -406,18 +434,15 @@ const ChatbotComparison = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center bg-foreground text-background rounded-3xl py-12 px-6">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            Stop met geld verspillen aan bots die niks doen
+        <div className="mt-16 text-center bg-muted/30 rounded-3xl py-12 px-6 border border-border">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Geen oplossing is perfect voor iedereen
           </h3>
-          <p className="text-lg mb-8">
-            Kies voor AI die{" "}
-            <span className="text-purple-400 font-semibold">begrijpt</span>,{" "}
-            <span className="text-blue-400 font-semibold">verkoopt</span> en{" "}
-            <span className="text-primary font-semibold">resultaat</span> levert.
+          <p className="text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
+            De juiste keuze hangt af van je grootte, je verkeer en je ambities. Twijfel je? Plan een vrijblijvend gesprek - we helpen je de beste oplossing kiezen, ook als dat niet Glimps is.
           </p>
-          <Button size="lg" variant="hero" className="bg-background text-foreground hover:bg-background/90">
-            Plan een gratis demo →
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+            Plan een vrijblijvend gesprek →
           </Button>
         </div>
       </div>
