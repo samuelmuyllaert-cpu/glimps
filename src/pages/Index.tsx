@@ -32,13 +32,13 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Features />
-      <ChatbotComparison />
       <WhyDifferent />
       <Integrations />
       <AIJourney />
       <AIKnowledge />
       <ProductFeatures />
       <HowItWorks />
+      <ChatbotComparison />
       <Quote />
       <FAQ />
       <CTA />
