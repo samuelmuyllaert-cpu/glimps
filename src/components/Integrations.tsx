@@ -19,18 +19,24 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-background py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-primary/5 via-purple-50/30 to-background py-24">
+      {/* Decorative gradient blobs */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/10 to-primary/10 rounded-full blur-3xl"></div>
+      
+      <div className="mx-auto max-w-6xl px-6 relative z-10">
         {/* Header */}
         <div className="mb-16 text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary">
-            Onze primaire integraties
-          </p>
+          <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-purple-500/20 border border-primary/20 mb-4">
+            <p className="text-sm font-semibold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+              ONZE PRIMAIRE INTEGRATIES
+            </p>
+          </div>
           <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
             Maak productiviteit makkelijker
             <br />
             met{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-purple-600 to-accent bg-clip-text text-transparent font-bold">
               50+ integraties
             </span>
           </h2>
@@ -41,7 +47,7 @@ const Integrations = () => {
           {integrations.map((integration, index) => (
             <div
               key={index}
-              className="group flex items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg"
+              className="group flex items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:bg-gradient-to-br hover:from-card hover:to-primary/5"
             >
               <img
                 src={integration.logo}
@@ -59,7 +65,7 @@ const Integrations = () => {
           </p>
           <a 
             href="/integraties" 
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all hover:gap-3"
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all hover:gap-3 hover:text-purple-600"
           >
             Bekijk alle integraties →
           </a>
