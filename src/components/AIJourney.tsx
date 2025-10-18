@@ -247,14 +247,9 @@ const AIJourney = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Van vraag naar antwoord in 80 milliseconden
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Van intentieherkenning tot personalisatie: bekijk het proces dat elke klantinteractie efficiënt en accuraat maakt.
           </p>
-          <div className="flex items-center justify-center gap-2 text-sm text-red-500">
-            <ArrowRight className="w-4 h-4" />
-            <span>Scroll naar rechts om de reis te volgen</span>
-            <ArrowRight className="w-4 h-4" />
-          </div>
         </div>
 
         {/* Journey Steps - Horizontal Scroll */}
@@ -301,6 +296,12 @@ const AIJourney = () => {
           </div>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
+
+        <div className="flex items-center justify-center gap-2 text-sm text-red-500 mt-6">
+          <ArrowRight className="w-4 h-4" />
+          <span>Scroll naar rechts om de reis te volgen</span>
+          <ArrowRight className="w-4 h-4" />
+        </div>
 
       </div>
     </section>
