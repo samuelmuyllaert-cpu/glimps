@@ -1,16 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
-
 const Features = () => {
-  const features = [
-    "Beantwoord product vragen instant",
-    "Persoonlijke aanbevelingen op basis van gedrag",
-    "Automatische order tracking updates",
-    "Verlaten winkelwagens terugwinnen",
-    "Upsell en cross-sell opportunities",
-  ];
-
-  return (
-    <section className="relative py-20 px-6">
+  const features = ["Beantwoord product vragen instant", "Persoonlijke aanbevelingen op basis van gedrag", "Automatische order tracking updates", "Verlaten winkelwagens terugwinnen", "Upsell en cross-sell opportunities"];
+  return <section className="relative py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
@@ -25,19 +16,15 @@ const Features = () => {
               AI klantenservice voor webshops
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-8">
-              Onze AI chatbots begrijpen exact wat je klanten nodig hebben en leiden ze moeiteloos naar de perfecte aankoop.
-            </p>
+            <p className="text-lg text-muted-foreground mb-8">Kwalitatieve service leveren vereist tijd en aandacht. Terwijl je team ordertracking vragen behandelt, blijven potentiële kopers zonder productadvies. Glimps combineert geautomatiseerde support met actieve aankoopbegeleiding.</p>
 
             <div className="space-y-4 mb-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {features.map((feature, index) => <div key={index} className="flex items-start gap-3">
                   <div className="flex-shrink-0">
                     <CheckCircle2 className="h-6 w-6 text-primary" />
                   </div>
                   <p className="text-foreground">{feature}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold transition-colors flex items-center gap-2">
@@ -78,8 +65,6 @@ const Features = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Features;
