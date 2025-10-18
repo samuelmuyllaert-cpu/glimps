@@ -70,13 +70,7 @@ const ChatbotComparison = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="font-inter text-4xl md:text-5xl font-bold mb-4">
-            Niet elke chatbot is de investering{" "}
-            <span className="relative">
-              waard
-              <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
-                <path d="M0 4C50 1 150 1 200 4" stroke="hsl(var(--primary))" strokeWidth="3" />
-              </svg>
-            </span>
+            Welke klantenservice oplossing past bij jouw webshop?
           </h2>
           <p className="text-lg text-muted-foreground mt-6">
             Zie het verschil in actie: dezelfde klantvraag, drie totaal verschillende resultaten
