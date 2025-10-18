@@ -37,9 +37,7 @@ const Hero = () => {
 
         {/* Subheading */}
         <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-          glimps levert AI-aangedreven chatbots die je klanten begrijpen,
-          <br />
-          vragen direct beantwoorden en conversies 24/7 stimuleren.
+          Vragen over producten, verzending en bestellingen worden automatisch beantwoord - ook buiten kantooruren.
         </p>
 
         {/* CTA Buttons */}
