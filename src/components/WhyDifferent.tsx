@@ -22,7 +22,7 @@ const WhyDifferent = () => {
       gradient: "from-amber-500 to-orange-500",
       glowColor: "rgba(245, 158, 11, 0.3)",
       title: "Betrouwbaar & Transparant",
-      description: "GDPR-compliant, Nederlands/Vlaams gehost, en altijd transparant over hoe AI werkt.",
+      description: "GDPR-compliant en altijd transparant over hoe AI werkt.",
     },
     {
       icon: Users,
