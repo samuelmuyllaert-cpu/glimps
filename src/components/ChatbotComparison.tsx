@@ -65,11 +65,20 @@ const ChatbotComparison = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-6 bg-gradient-to-br from-primary/5 via-background to-purple-50/30 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="font-inter text-4xl md:text-5xl font-bold mb-4">
+          <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-purple-500/20 border border-primary/20 mb-4">
+            <span className="text-sm font-semibold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+              VERGELIJK & KIES
+            </span>
+          </div>
+          <h2 className="font-inter text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
             Welke klantenservice oplossing past bij jouw webshop?
           </h2>
           <p className="text-lg text-muted-foreground mt-6">
@@ -113,9 +122,9 @@ const ChatbotComparison = () => {
           {(selectedBot === null || selectedBot === "none") && (
             <div className="grid md:grid-cols-3 gap-6">
               {/* Alleen menselijk team Card */}
-              <div className="bg-card border border-border rounded-2xl p-6 relative">
-                <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-muted-foreground" />
+              <div className="bg-card border border-border rounded-2xl p-6 relative hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-4">
+                  <Users className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Alleen menselijk team</h3>
                 <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Webshops met &lt;200 klantcontacten per maand</p>
@@ -170,9 +179,9 @@ const ChatbotComparison = () => {
               </div>
 
               {/* Simpele FAQ Bot Card */}
-              <div className="bg-card border border-border rounded-2xl p-6 relative">
-                <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mb-4">
-                  <Store className="w-8 h-8 text-muted-foreground" />
+              <div className="bg-card border border-border rounded-2xl p-6 relative hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center mb-4">
+                  <Store className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Simpele FAQ Bot</h3>
                 <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Webshops die alleen standaard FAQ's willen automatiseren</p>
@@ -231,9 +240,10 @@ const ChatbotComparison = () => {
               </div>
 
               {/* Glimps AI Card */}
-              <div className="bg-card border border-border rounded-2xl p-6 relative">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Sparkles className="w-8 h-8 text-primary" />
+              <div className="bg-card border-2 border-primary/30 rounded-2xl p-6 relative hover:shadow-xl hover:shadow-primary/20 transition-all hover:-translate-y-1">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center mb-4 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-purple-600 rounded-2xl opacity-10 animate-pulse"></div>
+                  <Sparkles className="w-8 h-8 text-primary relative z-10" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Glimps AI</h3>
                 <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Groeiende e-commerce bedrijven (500+ klantcontacten/maand)</p>
