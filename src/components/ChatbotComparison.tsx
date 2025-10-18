@@ -289,10 +289,6 @@ const ChatbotComparison = () => {
                       <span>•</span>
                       <span>Niet geschikt voor &lt;200 contacten/maand</span>
                     </div>
-                    <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span>•</span>
-                      <span>Complexe B2B vragen vragen nog menselijke input</span>
-                    </div>
                   </div>
                 </div>
 
