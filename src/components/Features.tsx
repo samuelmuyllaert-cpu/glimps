@@ -17,7 +17,7 @@ const Features = () => {
           <div>
             <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full">
               <span className="text-sm font-semibold text-primary flex items-center gap-2">
-                <span className="text-primary">⚡</span> Bewezen resultaten
+                <span className="text-primary">⚡</span> Wat Glimps automatiseert
               </span>
             </div>
 
