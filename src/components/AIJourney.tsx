@@ -245,11 +245,10 @@ const AIJourney = () => {
             ACHTER DE SCHERMEN
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Dit gebeurt er in 0.08 seconden<br />
-            wanneer een klant iets vraagt
+            Technisch maar toegankelijk
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-            Van vraag tot perfect antwoord. Bekijk de AI-magie die jouw klanten in realtime de beste ervaring geeft.
+            Van intentieherkenning tot personalisatie: bekijk het proces dat elke klantinteractie efficiënt en accuraat maakt.
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-red-500">
             <ArrowRight className="w-4 h-4" />
@@ -303,12 +302,6 @@ const AIJourney = () => {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
 
-        {/* Bottom tagline */}
-        <div className="text-center mt-12">
-          <p className="text-lg font-medium text-foreground">
-            🧠 Dit is geen chatbot. Dit is een digitale verkoper die denkt, leert en nooit slaapt.
-          </p>
-        </div>
       </div>
     </section>
   );
