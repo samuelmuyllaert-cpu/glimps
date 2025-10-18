@@ -22,7 +22,7 @@ const Features = () => {
             </div>
 
             <h2 className="font-inter text-4xl md:text-5xl font-normal mb-6 leading-tight">
-              Verhoog je omzet met AI-powered conversaties
+              AI klantenservice voor webshops
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8">
