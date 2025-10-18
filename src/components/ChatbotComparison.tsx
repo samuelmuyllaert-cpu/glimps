@@ -295,8 +295,8 @@ const ChatbotComparison = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                  Is Glimps geschikt voor jou? → Doe de check
+                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white">
+                  <a href="/features">Ontdek alle features →</a>
                 </Button>
               </div>
             </div>
