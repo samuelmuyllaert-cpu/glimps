@@ -15,17 +15,26 @@ const PersonalisatieConversies = () => {
         canonical="https://www.glimps.be/blog/personalisatie-conversies"
         type="article"
         publishedTime="2024-12-28T10:00:00Z"
-        author="Glimps Team"
+        author="Samuel Muyllaert"
         keywords="personalisatie, e-commerce, conversies, productaanbevelingen, AI personalisatie"
       />
       <StructuredData 
         type="blog" 
         data={{
           headline: "Personalisatie: De sleutel tot hogere conversies",
-          author: "Glimps Team",
-          datePublished: "2024-12-28T10:00:00Z",
-          image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop"
-        }} 
+          author: "Samuel Muyllaert",
+          datePublished: "2024-12-28",
+          dateModified: "2024-12-28",
+          image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop"
+        }}
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: "Personalisatie Conversies", url: "/blog/personalisatie-conversies" }
+        ]} 
       />
       <Navigation />
       

@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -7,6 +9,34 @@ import { Card } from "@/components/ui/card";
 const ShopifyIntegratie = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Integratie met Shopify: Complete gids - Glimps Blog"
+        description="Stap voor stap uitleg hoe je Glimps integreert met je Shopify webshop in minder dan 10 minuten. Complete tutorial met screenshots."
+        path="/blog/shopify-integratie"
+        canonical="https://www.glimps.be/blog/shopify-integratie"
+        type="article"
+        publishedTime="2024-12-15T10:00:00Z"
+        author="Samuel Muyllaert"
+        keywords="Shopify integratie, chatbot Shopify, Glimps Shopify, e-commerce integratie, tutorial"
+      />
+      <StructuredData 
+        type="blog" 
+        data={{
+          headline: "Integratie met Shopify: Complete gids",
+          author: "Samuel Muyllaert",
+          datePublished: "2024-12-15",
+          dateModified: "2024-12-15",
+          image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=630&fit=crop"
+        }}
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: "Shopify Integratie", url: "/blog/shopify-integratie" }
+        ]} 
+      />
       <Navigation />
       
       <article className="py-20 px-6">

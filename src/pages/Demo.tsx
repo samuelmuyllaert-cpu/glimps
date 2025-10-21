@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -157,6 +158,21 @@ const Demo = () => {
         title="Plan een Demo - Glimps AI | Zie hoe we jouw business transformeren"
         description="Plan een persoonlijke demo van 30 minuten en ontdek hoe Glimps AI jouw klantenservice automatiseert en conversies verhoogt. Gratis en vrijblijvend."
         path="/demo"
+      />
+      <StructuredData type="organization" />
+      <StructuredData 
+        type="service" 
+        data={{
+          name: "Glimps AI Demo",
+          description: "Persoonlijke demo van 30 minuten om te zien hoe Glimps AI jouw e-commerce business transformeert"
+        }} 
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Demo", url: "/demo" }
+        ]} 
       />
       <Navigation />
 

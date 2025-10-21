@@ -1,11 +1,41 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const FoutenChatbots = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="5 Fouten die je moet vermijden met chatbots - Glimps Blog"
+        description="Leer van anderen en voorkom deze veelgemaakte fouten bij het implementeren van AI chatbots. Praktische tips voor succesvolle implementatie."
+        path="/blog/fouten-chatbots"
+        canonical="https://www.glimps.be/blog/fouten-chatbots"
+        type="article"
+        publishedTime="2024-12-20T10:00:00Z"
+        author="Tom Muyllaert"
+        keywords="chatbot fouten, implementatie, AI chatbot tips, veelgemaakte fouten, chatbot best practices"
+      />
+      <StructuredData 
+        type="blog" 
+        data={{
+          headline: "5 Fouten die je moet vermijden met chatbots",
+          author: "Tom Muyllaert",
+          datePublished: "2024-12-20",
+          dateModified: "2024-12-20",
+          image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&h=630&fit=crop"
+        }}
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: "Fouten Chatbots", url: "/blog/fouten-chatbots" }
+        ]} 
+      />
       <Navigation />
       
       <article className="py-20 px-6">

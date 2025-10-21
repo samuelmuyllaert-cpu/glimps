@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, ArrowLeft, Share2, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -7,6 +9,34 @@ import { Card } from "@/components/ui/card";
 const CaseStudyFashionHub = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Case study: Van 20% naar 67% conversie - Glimps Blog"
+        description="Hoe webshop FashionHub hun checkout conversie meer dan verdriedubbelde met onze AI chatbot. Een praktische case study met resultaten."
+        path="/blog/case-study-fashionhub"
+        canonical="https://www.glimps.be/blog/case-study-fashionhub"
+        type="article"
+        publishedTime="2025-01-05T10:00:00Z"
+        author="Samuel Muyllaert"
+        keywords="case study, conversie, e-commerce succes, AI chatbot resultaten, FashionHub"
+      />
+      <StructuredData 
+        type="blog" 
+        data={{
+          headline: "Case study: Van 20% naar 67% conversie",
+          author: "Samuel Muyllaert",
+          datePublished: "2025-01-05",
+          dateModified: "2025-01-05",
+          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+        }}
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: "Case Study FashionHub", url: "/blog/case-study-fashionhub" }
+        ]} 
+      />
       <Navigation />
       
       <article className="py-20 px-6">

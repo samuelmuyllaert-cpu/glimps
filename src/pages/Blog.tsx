@@ -112,6 +112,21 @@ const Blog = () => {
         type="website"
       />
       <StructuredData type="organization" />
+      <StructuredData 
+        type="webpage" 
+        data={{
+          name: "Blog - Glimps AI",
+          description: "Tips, strategieën en case studies over AI chatbots en e-commerce",
+          url: "https://www.glimps.be/blog"
+        }} 
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" }
+        ]} 
+      />
       <Navigation />
       
       <section className="py-20 px-6">

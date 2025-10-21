@@ -33,6 +33,14 @@ const Contact = () => {
         type="website"
       />
       <StructuredData type="organization" />
+      <StructuredData type="contactpage" />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Contact", url: "/contact" }
+        ]} 
+      />
       <Navigation />
 
       {/* Hero Section */}

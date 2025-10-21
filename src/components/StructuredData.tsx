@@ -19,9 +19,20 @@ interface FAQItem {
   answer: string;
 }
 
+interface ServiceData {
+  name: string;
+  description: string;
+  provider?: string;
+}
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface StructuredDataProps {
-  type: 'organization' | 'website' | 'software' | 'blog' | 'faq';
-  data?: OrganizationData | BlogData | FAQItem[] | any;
+  type: 'organization' | 'website' | 'software' | 'blog' | 'faq' | 'service' | 'breadcrumb' | 'webpage' | 'aboutpage' | 'contactpage';
+  data?: OrganizationData | BlogData | FAQItem[] | ServiceData | BreadcrumbItem[] | any;
 }
 
 const StructuredData = ({ type, data }: StructuredDataProps) => {
@@ -141,6 +152,109 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
               "text": item.answer
             }
           }))
+        };
+
+      case 'service':
+        const serviceData = data as ServiceData;
+        return {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": serviceData.name,
+          "description": serviceData.description,
+          "provider": {
+            "@type": "Organization",
+            "name": serviceData.provider || "Glimps",
+            "url": baseUrl
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Belgium"
+          },
+          "serviceType": "AI Chatbot",
+          "category": "E-commerce Software"
+        };
+
+      case 'breadcrumb':
+        const breadcrumbs = data as BreadcrumbItem[];
+        return {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": breadcrumbs.map((item, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name,
+            "item": `${baseUrl}${item.url}`
+          }))
+        };
+
+      case 'webpage':
+        return {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": data?.name || "Glimps AI",
+          "description": data?.description || "AI Chatbot voor E-commerce",
+          "url": data?.url || baseUrl,
+          "inLanguage": "nl-BE",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Glimps",
+            "url": baseUrl
+          },
+          "about": {
+            "@type": "Thing",
+            "name": "AI Chatbot for E-commerce"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Glimps"
+          }
+        };
+
+      case 'aboutpage':
+        return {
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "Over Glimps AI",
+          "description": "Ontmoet het team achter Glimps AI - Marketing-gedreven AI chatbot voor e-commerce",
+          "url": `${baseUrl}/about`,
+          "inLanguage": "nl-BE",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Glimps",
+            "url": baseUrl,
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Samuel Muyllaert",
+                "jobTitle": "Co-Founder"
+              },
+              {
+                "@type": "Person",
+                "name": "Tom Muyllaert",
+                "jobTitle": "Co-Founder"
+              }
+            ]
+          }
+        };
+
+      case 'contactpage':
+        return {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Glimps AI",
+          "description": "Neem contact op met Glimps AI voor vragen of een demo",
+          "url": `${baseUrl}/contact`,
+          "inLanguage": "nl-BE",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Glimps",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "email": "info@glimps.be",
+              "availableLanguage": ["nl", "en"]
+            }
+          }
         };
 
       default:

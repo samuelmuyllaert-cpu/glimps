@@ -15,17 +15,26 @@ const ConversieVerhogen = () => {
         canonical="https://www.glimps.be/blog/conversie-verhogen"
         type="article"
         publishedTime="2025-01-12T10:00:00Z"
-        author="Glimps Team"
+        author="Tom Muyllaert"
         keywords="conversie verhogen, AI chatbot, e-commerce, omzet verhogen, chatbot strategieën"
       />
       <StructuredData 
         type="blog" 
         data={{
           headline: "7 Manieren om conversie te verhogen met AI chatbots",
-          author: "Glimps Team",
-          datePublished: "2025-01-12T10:00:00Z",
-          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop"
-        }} 
+          author: "Tom Muyllaert",
+          datePublished: "2025-01-12",
+          dateModified: "2025-01-12",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop"
+        }}
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: "Conversie Verhogen", url: "/blog/conversie-verhogen" }
+        ]} 
       />
       <Navigation />
       

@@ -15,17 +15,26 @@ const ToekomstAI2025 = () => {
         canonical="https://www.glimps.be/blog/toekomst-ai-2025"
         type="article"
         publishedTime="2025-01-08T10:00:00Z"
-        author="Glimps Team"
+        author="Tom Muyllaert"
         keywords="AI klantenservice, toekomst AI, chatbot trends 2025, AI revolutie, personalisatie"
       />
       <StructuredData 
         type="blog" 
         data={{
           headline: "De toekomst van klantenservice: AI in 2025",
-          author: "Glimps Team",
-          datePublished: "2025-01-08T10:00:00Z",
-          image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop"
-        }} 
+          author: "Tom Muyllaert",
+          datePublished: "2025-01-08",
+          dateModified: "2025-01-08",
+          image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop"
+        }}
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: "Toekomst AI 2025", url: "/blog/toekomst-ai-2025" }
+        ]} 
       />
       <Navigation />
       

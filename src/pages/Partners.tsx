@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -44,6 +45,21 @@ const Partners = () => {
         title="Partner Programma - Glimps AI | Word reseller en verdien"
         description="Verdien aantrekkelijke commissies door Glimps AI te verkopen. 30% recurrente commissie, dedicated support en marketing materialen."
         path="/partners"
+      />
+      <StructuredData type="organization" />
+      <StructuredData 
+        type="service" 
+        data={{
+          name: "Glimps Partner Programma",
+          description: "Verdien tot 40% recurrente commissie als Glimps reseller partner met dedicated support"
+        }} 
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Partners", url: "/partners" }
+        ]} 
       />
       <Navigation />
 

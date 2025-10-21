@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -154,6 +155,21 @@ const ROI = () => {
         title="ROI Calculator - Glimps AI | Bereken je Return on Investment"
         description="Bereken direct wat een AI chatbot jou oplevert. Zie hoeveel tijd en geld je bespaart en hoeveel extra omzet je genereert met Glimps."
         path="/roi"
+      />
+      <StructuredData type="organization" />
+      <StructuredData 
+        type="service" 
+        data={{
+          name: "Glimps ROI Calculator",
+          description: "Bereken de return on investment van een AI chatbot voor je e-commerce business"
+        }} 
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "ROI Calculator", url: "/roi" }
+        ]} 
       />
       <Navigation />
       

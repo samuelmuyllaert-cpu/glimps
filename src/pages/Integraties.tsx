@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -170,6 +171,21 @@ const Integraties = () => {
         title="Integraties - Glimps AI | 50+ Koppelingen met je tools"
         description="Koppel Glimps naadloos met Shopify, WooCommerce, SendCloud, WhatsApp en 50+ andere tools. Plug & play setup binnen 5 minuten."
         path="/integraties"
+      />
+      <StructuredData type="organization" />
+      <StructuredData 
+        type="service" 
+        data={{
+          name: "Glimps AI Integraties",
+          description: "50+ integraties met e-commerce platforms, verzending, CRM en marketing tools"
+        }} 
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Integraties", url: "/integraties" }
+        ]} 
       />
       <Navigation />
       

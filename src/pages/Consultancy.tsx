@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Target, Users, TrendingUp, Lightbulb, Shield } from "lucide-react";
 import { useEffect } from "react";
@@ -27,6 +28,21 @@ const Consultancy = () => {
         title="Consultancy - Glimps AI | Expert advies voor e-commerce automatisering"
         description="Professioneel advies over AI chatbots en klantenservice automatisering. Jarenlange ervaring in e-commerce en customer service."
         path="/consultancy"
+      />
+      <StructuredData type="organization" />
+      <StructuredData 
+        type="service" 
+        data={{
+          name: "Glimps Consultancy",
+          description: "Expert advies voor e-commerce automatisering en AI chatbot implementatie"
+        }} 
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Consultancy", url: "/consultancy" }
+        ]} 
       />
       <Navigation />
 

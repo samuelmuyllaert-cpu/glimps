@@ -19,6 +19,14 @@ const About = () => {
         type="website"
       />
       <StructuredData type="organization" />
+      <StructuredData type="aboutpage" />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Over Ons", url: "/about" }
+        ]} 
+      />
       <Navigation />
 
       {/* Hero Section */}

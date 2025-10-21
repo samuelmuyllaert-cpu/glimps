@@ -192,6 +192,21 @@ const Features = () => {
       />
       <StructuredData type="organization" />
       <StructuredData type="software" />
+      <StructuredData 
+        type="webpage" 
+        data={{
+          name: "Functies - Glimps AI Chatbot",
+          description: "Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer",
+          url: "https://www.glimps.be/features"
+        }} 
+      />
+      <StructuredData 
+        type="breadcrumb" 
+        data={[
+          { name: "Home", url: "/" },
+          { name: "Functies", url: "/features" }
+        ]} 
+      />
       <Navigation />
       
       <section className="py-20 px-6">
