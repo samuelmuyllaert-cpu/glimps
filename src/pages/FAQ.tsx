@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQComponent from "@/components/FAQ";
 import SEO from "@/components/SEO";
-import StructuredData from "@/components/StructuredData";
+import StructuredData, { baseOrganization } from "@/components/StructuredData";
 
 const FAQ = () => {
   const faqData = [
@@ -28,6 +28,52 @@ const FAQ = () => {
     }
   ];
 
+  const graphData = [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.glimps.be/faq",
+      "url": "https://www.glimps.be/faq",
+      "name": "Veelgestelde Vragen - Glimps AI",
+      "description": "Vind antwoorden op veelgestelde vragen over Glimps AI chatbot. Van prijzen en integraties tot functies en implementatie.",
+      "inLanguage": "nl-BE",
+      "isPartOf": {
+        "@id": "https://www.glimps.be#website"
+      },
+      "publisher": {
+        "@id": "https://www.glimps.be#organization"
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": faqData.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
+      }
+    },
+    baseOrganization,
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.glimps.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://www.glimps.be/faq"
+        }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -38,8 +84,7 @@ const FAQ = () => {
         keywords="FAQ, veelgestelde vragen, Glimps AI, chatbot vragen, prijzen, implementatie"
         type="website"
       />
-      <StructuredData type="organization" />
-      <StructuredData type="faq" data={faqData} />
+      <StructuredData type="graph" data={graphData} />
       <Navigation />
       <FAQComponent />
       <Footer />

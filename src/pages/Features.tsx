@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import StructuredData from "@/components/StructuredData";
+import StructuredData, { baseOrganization } from "@/components/StructuredData";
 import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import productSneakerBlue from "@/assets/product-sneaker-blue.png";
@@ -180,6 +180,61 @@ const Features = () => {
     }
   ];
 
+  const graphData = [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.glimps.be/features",
+      "url": "https://www.glimps.be/features",
+      "name": "Functies - Glimps AI Chatbot",
+      "description": "Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer. Complete AI chatbot voor e-commerce.",
+      "inLanguage": "nl-BE",
+      "isPartOf": {
+        "@id": "https://www.glimps.be#website"
+      },
+      "publisher": {
+        "@id": "https://www.glimps.be#organization"
+      },
+      "about": {
+        "@type": "Service",
+        "name": "Glimps AI Chatbot Features",
+        "description": "Complete feature set voor e-commerce AI chatbots",
+        "provider": {
+          "@id": "https://www.glimps.be#organization"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Chatbot Features",
+          "itemListElement": features.map(feature => ({
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": feature.title,
+              "description": feature.description
+            }
+          }))
+        }
+      }
+    },
+    baseOrganization,
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.glimps.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Functies",
+          "item": "https://www.glimps.be/features"
+        }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background">
       <SEO 
@@ -190,23 +245,7 @@ const Features = () => {
         keywords="chatbot functies, checkout bot, pakket tracking, upselling, multilingual support, spraak interactie, AI features"
         type="website"
       />
-      <StructuredData type="organization" />
-      <StructuredData type="software" />
-      <StructuredData 
-        type="webpage" 
-        data={{
-          name: "Functies - Glimps AI Chatbot",
-          description: "Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer",
-          url: "https://www.glimps.be/features"
-        }} 
-      />
-      <StructuredData 
-        type="breadcrumb" 
-        data={[
-          { name: "Home", url: "/" },
-          { name: "Functies", url: "/features" }
-        ]} 
-      />
+      <StructuredData type="graph" data={graphData} />
       <Navigation />
       
       <section className="py-20 px-6">

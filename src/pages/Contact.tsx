@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import StructuredData from "@/components/StructuredData";
+import StructuredData, { baseOrganization } from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { useEffect } from "react";
@@ -22,6 +22,41 @@ const Contact = () => {
     };
   }, []);
 
+  const graphData = [
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.glimps.be/contact",
+      "url": "https://www.glimps.be/contact",
+      "name": "Contact - Glimps AI",
+      "description": "Heb je vragen over Glimps AI? Plan een gratis gesprek, stuur een email of bel ons. We helpen je graag verder.",
+      "inLanguage": "nl-BE",
+      "isPartOf": {
+        "@id": "https://www.glimps.be#website"
+      },
+      "publisher": {
+        "@id": "https://www.glimps.be#organization"
+      }
+    },
+    baseOrganization,
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.glimps.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://www.glimps.be/contact"
+        }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -29,18 +64,10 @@ const Contact = () => {
         description="Heb je vragen over Glimps AI? Plan een gratis gesprek, stuur een email of bel ons. We helpen je graag verder."
         path="/contact"
         canonical="https://www.glimps.be/contact"
-        keywords="contact Glimps, gratis gesprek, demo plannen, email, telefoon, Gent België"
+        keywords="contact Glimps, gratis gesprek, demo plannen, email, telefoon, Brugge België"
         type="website"
       />
-      <StructuredData type="organization" />
-      <StructuredData type="contactpage" />
-      <StructuredData 
-        type="breadcrumb" 
-        data={[
-          { name: "Home", url: "/" },
-          { name: "Contact", url: "/contact" }
-        ]} 
-      />
+      <StructuredData type="graph" data={graphData} />
       <Navigation />
 
       {/* Hero Section */}

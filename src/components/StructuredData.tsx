@@ -23,6 +23,11 @@ interface ServiceData {
   name: string;
   description: string;
   provider?: string;
+  serviceType?: string[];
+  offers?: Array<{
+    name: string;
+    description: string;
+  }>;
 }
 
 interface BreadcrumbItem {
@@ -30,48 +35,77 @@ interface BreadcrumbItem {
   url: string;
 }
 
-interface StructuredDataProps {
-  type: 'organization' | 'website' | 'software' | 'blog' | 'faq' | 'service' | 'breadcrumb' | 'webpage' | 'aboutpage' | 'contactpage';
-  data?: OrganizationData | BlogData | FAQItem[] | ServiceData | BreadcrumbItem[] | any;
+interface ReviewData {
+  reviewBody: string;
+  author: string;
+  authorOrganization?: string;
+  ratingValue: string;
+  itemReviewed: string;
 }
+
+interface StructuredDataProps {
+  type: 'organization' | 'website' | 'software' | 'blog' | 'faq' | 'service' | 'breadcrumb' | 'webpage' | 'aboutpage' | 'contactpage' | 'graph' | 'review';
+  data?: OrganizationData | BlogData | FAQItem[] | ServiceData | BreadcrumbItem[] | ReviewData | any;
+}
+
+export const baseOrganization = {
+  "@type": "Organization",
+  "@id": "https://www.glimps.be#organization",
+  "name": "Glimps",
+  "url": "https://www.glimps.be",
+  "logo": "https://www.glimps.be/glimps-logo.png",
+  "email": "info@glimps.be",
+  "telephone": "+32 50 45 45 45",
+  "sameAs": [
+    "https://www.linkedin.com/company/glimps",
+    "https://www.facebook.com/glimps",
+    "https://www.instagram.com/glimps"
+  ],
+  "foundingDate": "2023",
+  "description": "Glimps is een Belgische AI chatbot specialist voor e-commerce. Wij helpen webshops hun conversie verhogen met slimme, persoonlijke productaanbevelingen en 24/7 klantenservice.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Smedenstraat 38",
+    "addressLocality": "Brugge",
+    "postalCode": "8000",
+    "addressCountry": "BE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+32 50 45 45 45",
+    "email": "info@glimps.be",
+    "contactType": "klantenservice",
+    "areaServed": "BE",
+    "availableLanguage": ["Dutch", "English", "French"]
+  },
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Samuel Muyllaert"
+    },
+    {
+      "@type": "Person",
+      "name": "Tom Muyllaert"
+    }
+  ]
+};
 
 const StructuredData = ({ type, data }: StructuredDataProps) => {
   const generateSchema = () => {
     const baseUrl = 'https://www.glimps.be';
     
     switch (type) {
+      case 'graph':
+        // For @graph structure, data should be the complete graph array
+        return {
+          "@context": "https://schema.org",
+          "@graph": data
+        };
+
       case 'organization':
         return {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Glimps",
-          "url": baseUrl,
-          "logo": `${baseUrl}/favicon.png`,
-          "description": "AI Chatbot voor E-commerce - Verhoog conversie met persoonlijke aanbevelingen 24/7",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Gent",
-            "addressCountry": "BE"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Service",
-            "email": "info@glimps.be",
-            "availableLanguage": ["nl", "en"]
-          },
-          "founder": [
-            {
-              "@type": "Person",
-              "name": "Samuel Muyllaert"
-            },
-            {
-              "@type": "Person",
-              "name": "Tom Muyllaert"
-            }
-          ],
-          "sameAs": [
-            "https://www.linkedin.com/company/glimps-ai"
-          ]
+          ...baseOrganization
         };
 
       case 'website':
@@ -162,16 +196,50 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "name": serviceData.name,
           "description": serviceData.description,
           "provider": {
-            "@type": "Organization",
-            "name": serviceData.provider || "Glimps",
-            "url": baseUrl
+            "@id": "https://www.glimps.be#organization"
           },
-          "areaServed": {
-            "@type": "Country",
-            "name": "Belgium"
+          "areaServed": "België",
+          "serviceType": serviceData.serviceType || ["AI Chatbot", "E-commerce Solutions", "Customer Service Automation"],
+          ...(serviceData.offers && {
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": serviceData.name,
+              "itemListElement": serviceData.offers.map(offer => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": offer.name,
+                  "description": offer.description
+                }
+              }))
+            }
+          })
+        };
+
+      case 'review':
+        const reviewData = data as ReviewData;
+        return {
+          "@context": "https://schema.org",
+          "@type": "Review",
+          "reviewBody": reviewData.reviewBody,
+          "author": {
+            "@type": "Person",
+            "name": reviewData.author,
+            ...(reviewData.authorOrganization && {
+              "affiliation": {
+                "@type": "Organization",
+                "name": reviewData.authorOrganization
+              }
+            })
           },
-          "serviceType": "AI Chatbot",
-          "category": "E-commerce Software"
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": reviewData.ratingValue,
+            "bestRating": "5"
+          },
+          "itemReviewed": {
+            "@id": reviewData.itemReviewed
+          }
         };
 
       case 'breadcrumb':

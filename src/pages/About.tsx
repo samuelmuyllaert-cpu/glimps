@@ -6,9 +6,47 @@ import { Target, TrendingUp, Lightbulb, Zap, Heart } from "lucide-react";
 import samuelPhoto from "@/assets/samuel.png";
 import tomPhoto from "@/assets/tom.png";
 import SEO from "@/components/SEO";
-import StructuredData from "@/components/StructuredData";
+import StructuredData, { baseOrganization } from "@/components/StructuredData";
 
 const About = () => {
+  const graphData = [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.glimps.be/about",
+      "url": "https://www.glimps.be/about",
+      "name": "Over Ons - Glimps AI",
+      "description": "Ontmoet de oprichters van Glimps AI. Twee broers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice.",
+      "inLanguage": "nl-BE",
+      "isPartOf": {
+        "@id": "https://www.glimps.be#website"
+      },
+      "publisher": {
+        "@id": "https://www.glimps.be#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.glimps.be#organization"
+      }
+    },
+    baseOrganization,
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.glimps.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Over Ons",
+          "item": "https://www.glimps.be/about"
+        }
+      ]
+    }
+  ];
+
   return <div className="min-h-screen bg-background">
       <SEO 
         title="Over Ons - Glimps AI | Marketing-gedreven AI Chatbot"
@@ -18,15 +56,7 @@ const About = () => {
         keywords="over glimps, oprichters, Samuel Muyllaert, Tom Muyllaert, AI chatbot team, marketing achtergrond"
         type="website"
       />
-      <StructuredData type="organization" />
-      <StructuredData type="aboutpage" />
-      <StructuredData 
-        type="breadcrumb" 
-        data={[
-          { name: "Home", url: "/" },
-          { name: "Over Ons", url: "/about" }
-        ]} 
-      />
+      <StructuredData type="graph" data={graphData} />
       <Navigation />
 
       {/* Hero Section */}
