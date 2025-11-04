@@ -11,14 +11,15 @@ const HowWeWork = () => {
     { number: 1, label: "Screening", color: "bg-blue-500" },
     { number: 2, label: "Analyse", color: "bg-red-400" },
     { number: 3, label: "Implementatie", color: "bg-green-500" },
-    { number: 4, label: "Livegang", color: "bg-purple-500" }
+    { number: 4, label: "Livegang", color: "bg-purple-500" },
+    { number: 5, label: "Data Insights", color: "bg-orange-500" }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
         title="Hoe We Werken - Glimps AI | Van implementatie tot resultaat"
-        description="Ontdek ons bewezen 4-stappen proces: screening, analyse, implementatie en live. Van chaos naar controle met Glimps AI chatbot."
+        description="Ontdek ons bewezen 5-stappen proces: screening, analyse, implementatie, livegang en data insights. Van chaos naar controle met Glimps AI chatbot."
         path="/how-we-work"
       />
       <Navigation />
@@ -33,7 +34,7 @@ const HowWeWork = () => {
             
             <h1 className="mb-6 font-inter text-4xl font-normal leading-tight md:text-6xl lg:text-7xl">
               Van chaos naar controle.<br />
-              <span className="text-primary">In 4 stappen.</span>
+              <span className="text-primary">In 5 stappen.</span>
             </h1>
             
             <p className="mx-auto mb-16 max-w-2xl text-lg text-muted-foreground md:text-xl">
@@ -72,7 +73,7 @@ const HowWeWork = () => {
                     <Search className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">Stap 1/4</div>
+                    <div className="text-sm text-muted-foreground">Stap 1/5</div>
                     <Badge className="bg-blue-500 text-white">● Actief</Badge>
                   </div>
                 </div>
@@ -227,7 +228,7 @@ const HowWeWork = () => {
                     <MessageSquare className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">Stap 2/4</div>
+                    <div className="text-sm text-muted-foreground">Stap 2/5</div>
                     <Badge className="bg-red-400 text-white">● Actief</Badge>
                   </div>
                 </div>
@@ -338,7 +339,7 @@ const HowWeWork = () => {
                     <Settings className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">Stap 3/4</div>
+                    <div className="text-sm text-muted-foreground">Stap 3/5</div>
                     <Badge className="bg-green-500 text-white">● Actief</Badge>
                   </div>
                 </div>
@@ -471,7 +472,7 @@ const HowWeWork = () => {
                     <Rocket className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">Stap 4/4</div>
+                    <div className="text-sm text-muted-foreground">Stap 4/5</div>
                     <Badge className="bg-purple-500 text-white">● Actief</Badge>
                   </div>
                 </div>
@@ -509,6 +510,11 @@ const HowWeWork = () => {
                     </div>
                     <span className="text-base">Real-time analytics dashboard</span>
                   </div>
+                </div>
+
+                <div className="flex items-center gap-2 pt-4 text-sm text-muted-foreground">
+                  <ChevronRight className="h-4 w-4" />
+                  <span>Volgende: Data Insights</span>
                 </div>
               </div>
 
@@ -568,6 +574,156 @@ const HowWeWork = () => {
                   <div className="mt-6 flex items-center gap-2 rounded-lg bg-slate-800/50 p-4 text-sm">
                     <Target className="h-4 w-4 text-purple-400" />
                     <span className="text-slate-300">AI leert continu van nieuwe gesprekken</span>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Step 5: Data Insights */}
+      <section className="relative w-full overflow-hidden py-20 bg-gradient-to-b from-background via-orange-500/5 to-background">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-12 lg:grid-cols-2 items-start">
+              {/* Left Content */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg">
+                    <BarChart3 className="h-8 w-8 text-white" strokeWidth={2} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">Stap 5/5</div>
+                    <Badge className="bg-orange-500 text-white">● Actief</Badge>
+                  </div>
+                </div>
+
+                <h2 className="font-inter text-3xl font-normal md:text-5xl">
+                  Data Insights op basis van chathistoriek
+                </h2>
+
+                <p className="text-lg text-muted-foreground">
+                  Waardevolle inzichten uit elke conversatie
+                </p>
+
+                <Card className="border-l-4 border-l-orange-500 bg-orange-500/5 p-6">
+                  <p className="text-muted-foreground">
+                    Uit duizenden chatgesprekken halen we patronen en trends die jouw business verder helpen. Van productfeedback tot klantgedrag - alles wordt inzichtelijk.
+                  </p>
+                </Card>
+
+                <div className="space-y-4 pt-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
+                      <TrendingUp className="h-5 w-5 text-orange-500" />
+                    </div>
+                    <span className="text-base">Klantgedrag & trends analyse</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
+                      <Target className="h-5 w-5 text-orange-500" />
+                    </div>
+                    <span className="text-base">Productfeedback & verbeterpunten</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
+                      <BarChart3 className="h-5 w-5 text-orange-500" />
+                    </div>
+                    <span className="text-base">Conversie optimalisatie kansen</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Card */}
+              <div className="lg:sticky lg:top-24">
+                <Card className="overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-white shadow-2xl">
+                  <div className="mb-6 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500">
+                        <BarChart3 className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">Insights Dashboard</h3>
+                        <div className="text-sm text-slate-400">Laatste 30 dagen</div>
+                      </div>
+                    </div>
+                    <Badge className="bg-orange-500 text-white">● Live</Badge>
+                  </div>
+
+                  <div className="space-y-4">
+                    <Card className="border-slate-700 bg-slate-800/50 p-4">
+                      <div className="mb-3 flex items-center justify-between">
+                        <span className="text-sm text-slate-400">Meest gevraagde producten</span>
+                        <Badge variant="secondary" className="text-xs">Top 3</Badge>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-sm">
+                          <span>Sportschoenen</span>
+                          <span className="font-semibold">847 vragen</span>
+                        </div>
+                        <div className="flex items-center justify-between text-sm">
+                          <span>Yoga matten</span>
+                          <span className="font-semibold">623 vragen</span>
+                        </div>
+                        <div className="flex items-center justify-between text-sm">
+                          <span>Fitness trackers</span>
+                          <span className="font-semibold">512 vragen</span>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="border-slate-700 bg-slate-800/50 p-4">
+                      <div className="mb-3 text-sm text-slate-400">Klant sentiment</div>
+                      <div className="space-y-3">
+                        <div>
+                          <div className="mb-1 flex items-center justify-between text-sm">
+                            <span>Positief 😊</span>
+                            <span className="font-semibold">78%</span>
+                          </div>
+                          <div className="h-2 rounded-full bg-slate-700">
+                            <div className="h-2 rounded-full bg-green-500" style={{ width: '78%' }} />
+                          </div>
+                        </div>
+                        <div>
+                          <div className="mb-1 flex items-center justify-between text-sm">
+                            <span>Neutraal 😐</span>
+                            <span className="font-semibold">18%</span>
+                          </div>
+                          <div className="h-2 rounded-full bg-slate-700">
+                            <div className="h-2 rounded-full bg-yellow-500" style={{ width: '18%' }} />
+                          </div>
+                        </div>
+                        <div>
+                          <div className="mb-1 flex items-center justify-between text-sm">
+                            <span>Negatief 😟</span>
+                            <span className="font-semibold">4%</span>
+                          </div>
+                          <div className="h-2 rounded-full bg-slate-700">
+                            <div className="h-2 rounded-full bg-red-500" style={{ width: '4%' }} />
+                          </div>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="border-slate-700 bg-slate-800/50 p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-orange-500/20">
+                          <Target className="h-5 w-5 text-orange-400" />
+                        </div>
+                        <div>
+                          <div className="mb-1 font-semibold text-sm">Verbeterkans gedetecteerd</div>
+                          <div className="text-xs text-slate-400">
+                            45% van klanten vraagt naar maattabellen. Overweeg deze prominenter te plaatsen.
+                          </div>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-2 rounded-lg bg-slate-800/50 p-4 text-sm">
+                    <TrendingUp className="h-4 w-4 text-orange-400" />
+                    <span className="text-slate-300">Wekelijks nieuwe insights & aanbevelingen</span>
                   </div>
                 </Card>
               </div>
