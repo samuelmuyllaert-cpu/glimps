@@ -23,12 +23,14 @@ const Electronics = () => {
             Help klanten de juiste tech keuze maken met AI die specificaties, compatibiliteit en features begrijpt
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button variant="hero" size="lg" className="rounded-full">
-              <Sparkles className="h-5 w-5" />
-              Start gratis proefperiode
+            <Button asChild variant="hero" size="lg" className="rounded-full">
+              <a href="/demo">
+                <Sparkles className="h-5 w-5" />
+                Start gratis proefperiode
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full">
-              Plan een demo
+            <Button asChild variant="outline" size="lg" className="rounded-full">
+              <a href="/demo">Plan een demo</a>
             </Button>
           </div>
         </div>

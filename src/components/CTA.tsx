@@ -27,8 +27,8 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button variant="outline" size="lg" className="rounded-full">
-              Plan een demo
+            <Button asChild variant="outline" size="lg" className="rounded-full">
+              <a href="/demo">Plan een demo</a>
             </Button>
           </div>
         </div>
