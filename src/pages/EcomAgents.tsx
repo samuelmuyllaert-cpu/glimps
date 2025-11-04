@@ -1,45 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Lock, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { Lock } from "lucide-react";
 
 const EcomAgents = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Aanvraag verzonden!",
-        description: "We nemen zo snel mogelijk contact met je op over Ecom Agents.",
-      });
-      setFormData({ name: "", email: "", company: "", message: "" });
-      setIsSubmitting(false);
-    }, 1000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -60,78 +23,9 @@ const EcomAgents = () => {
                 Deze functionaliteit is momenteel enkel toegankelijk voor bestaande klanten.
               </p>
               <p className="mt-4 text-sm text-muted-foreground">
-                Vul het formulier hieronder in voor meer informatie over early access.
+                Neem contact op met <a href="mailto:info@glimps.be" className="font-semibold text-primary hover:underline">info@glimps.be</a> voor meer informatie over early access.
               </p>
             </div>
-          </div>
-
-          {/* Request Form */}
-          <div className="rounded-lg border border-border bg-card p-8">
-            <h2 className="mb-6 text-2xl font-bold">Vraag toegang aan</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="name">Naam *</Label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Jouw naam"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="email">E-mail *</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="jouw@email.com"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="company">Bedrijf</Label>
-                <Input
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Jouw bedrijfsnaam"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message">Bericht</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Vertel ons meer over je interesse in Ecom Agents..."
-                  rows={5}
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  "Verzenden..."
-                ) : (
-                  <>
-                    <Send className="mr-2 h-4 w-4" />
-                    Verstuur aanvraag
-                  </>
-                )}
-              </Button>
-            </form>
           </div>
         </div>
       </div>

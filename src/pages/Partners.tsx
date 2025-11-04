@@ -2,11 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Handshake,
   TrendingUp,
@@ -15,35 +11,18 @@ import {
   Zap,
   Award,
   Euro,
-  ArrowRight,
   CheckCircle2,
   Headphones,
   BookOpen,
   Rocket,
 } from "lucide-react";
-import { useState } from "react";
 
 const Partners = () => {
-  const [formData, setFormData] = useState({
-    company: "",
-    name: "",
-    email: "",
-    phone: "",
-    clients: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Partner aanmelding:", formData);
-    // TODO: Implement form submission
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Partner Programma - Glimps AI | Word reseller en verdien"
-        description="Verdien aantrekkelijke commissies door Glimps AI te verkopen. 30% recurrente commissie, dedicated support en marketing materialen."
+        title="Partner Programma - Glimps AI | Word partner"
+        description="Word partner van Glimps AI en help e-commerce bedrijven groeien met de beste AI chatbot oplossing. Dedicated support en marketing materialen."
         path="/partners"
       />
       <StructuredData type="organization" />
@@ -51,7 +30,7 @@ const Partners = () => {
         type="service" 
         data={{
           name: "Glimps Partner Programma",
-          description: "Verdien tot 40% recurrente commissie als Glimps reseller partner met dedicated support"
+          description: "Word partner van Glimps AI met dedicated support en marketing materialen"
         }} 
       />
       <StructuredData 
@@ -74,17 +53,8 @@ const Partners = () => {
               Word Glimps Partner
             </h1>
             <p className="mb-8 text-xl text-muted-foreground">
-              Verdien aantrekkelijke commissies door de beste AI chatbot oplossing aan jouw klanten te leveren
+              Help jouw klanten groeien met de beste AI chatbot oplossing voor e-commerce
             </p>
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button size="lg" className="rounded-full px-8">
-                Word Partner
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8">
-                Download Partner Kit
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -92,11 +62,7 @@ const Partners = () => {
       {/* Stats Section */}
       <section className="border-b py-16">
         <div className="container mx-auto px-6">
-          <div className="grid gap-8 md:grid-cols-4">
-            <div className="text-center">
-              <div className="mb-2 text-4xl font-bold text-primary">30%</div>
-              <p className="text-muted-foreground">Recurrente commissie</p>
-            </div>
+          <div className="grid gap-8 md:grid-cols-3">
             <div className="text-center">
               <div className="mb-2 text-4xl font-bold text-primary">500+</div>
               <p className="text-muted-foreground">Actieve klanten</p>
@@ -128,22 +94,22 @@ const Partners = () => {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Euro className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold">Aantrekkelijke Commissies</h3>
+              <h3 className="mb-3 text-2xl font-bold">Aantrekkelijke Voorwaarden</h3>
               <p className="mb-4 text-muted-foreground">
-                Verdien 30% recurrente commissie op alle klanten die je aanbrengt. Blijvende inkomsten maand na maand.
+                Als partner ontvang je aantrekkelijke voorwaarden voor elke klant die je aanbrengt. Neem contact op voor meer details.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">30% maandelijkse commissie</span>
+                  <span className="text-sm">Transparante afspraken</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Levenslange uitbetaling</span>
+                  <span className="text-sm">Langetermijn samenwerking</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Extra bonus bij 10+ klanten</span>
+                  <span className="text-sm">Flexibele afspraken mogelijk</span>
                 </li>
               </ul>
             </Card>
@@ -267,93 +233,6 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Commission Structure */}
-      <section className="border-y bg-gradient-to-br from-primary/5 to-background py-24">
-        <div className="container mx-auto px-6">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-bold">Commissie Structuur</h2>
-            <p className="text-xl text-muted-foreground">
-              Transparante en eerlijke verdeling
-            </p>
-          </div>
-
-          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
-            <Card className="relative overflow-hidden p-8">
-              <div className="mb-4">
-                <div className="text-sm font-medium text-muted-foreground">STARTER</div>
-                <div className="mb-2 text-4xl font-bold text-primary">30%</div>
-                <div className="text-sm text-muted-foreground">1-9 klanten</div>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Recurrente commissie</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Partner dashboard</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Marketing materialen</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="relative overflow-hidden border-2 border-primary p-8">
-              <div className="absolute right-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">
-                POPULAIR
-              </div>
-              <div className="mb-4">
-                <div className="text-sm font-medium text-muted-foreground">PROFESSIONAL</div>
-                <div className="mb-2 text-4xl font-bold text-primary">35%</div>
-                <div className="text-sm text-muted-foreground">10-24 klanten</div>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Alles van Starter +</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Lead sharing programma</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Priority support</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Co-marketing budget</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="relative overflow-hidden p-8">
-              <div className="mb-4">
-                <div className="text-sm font-medium text-muted-foreground">ENTERPRISE</div>
-                <div className="mb-2 text-4xl font-bold text-primary">40%</div>
-                <div className="text-sm text-muted-foreground">25+ klanten</div>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Alles van Professional +</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Dedicated partner manager</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-sm">Kwartaal performance bonus</span>
-                </li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* How It Works */}
       <section className="py-24">
         <div className="container mx-auto px-6">
@@ -399,9 +278,9 @@ const Partners = () => {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white mx-auto">
                 4
               </div>
-              <h3 className="mb-2 text-xl font-bold">Verdienen</h3>
+              <h3 className="mb-2 text-xl font-bold">Samenwerken</h3>
               <p className="text-sm text-muted-foreground">
-                Ontvang maandelijks je commissie automatisch
+                Bouw samen een succesvolle samenwerking op
               </p>
             </div>
           </div>
@@ -411,95 +290,21 @@ const Partners = () => {
       {/* Application Form */}
       <section className="border-t bg-gradient-to-br from-background to-primary/5 py-24">
         <div className="container mx-auto px-6">
-          <div className="mx-auto max-w-3xl">
-            <div className="mb-12 text-center">
-              <h2 className="mb-4 text-4xl font-bold">Word Vandaag Nog Partner</h2>
-              <p className="text-xl text-muted-foreground">
-                Vul het formulier in en we nemen binnen 24 uur contact met je op
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-12">
+              <h2 className="mb-4 text-4xl font-bold">Interesse om Partner te Worden?</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Neem contact op voor meer informatie over ons partnerprogramma en de mogelijkheden voor jouw organisatie.
               </p>
-            </div>
-
-            <Card className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Bedrijfsnaam *</Label>
-                    <Input
-                      id="company"
-                      required
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      placeholder="Jouw Agency BV"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Contactpersoon *</Label>
-                    <Input
-                      id="name"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Jan Jansen"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">E-mailadres *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="jan@agency.be"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Telefoonnummer *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+32 123 45 67 89"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="clients">Aantal actieve klanten</Label>
-                  <Input
-                    id="clients"
-                    value={formData.clients}
-                    onChange={(e) => setFormData({ ...formData, clients: e.target.value })}
-                    placeholder="bijv. 25"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">Waarom wil je partner worden?</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Vertel ons over je motivatie en doelstellingen..."
-                    className="min-h-32"
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full rounded-full">
-                  Partner Aanvraag Indienen
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-
-                <p className="text-center text-sm text-muted-foreground">
-                  We nemen binnen 24 uur contact met je op voor een kennismaking
+              <div className="rounded-lg border border-border bg-card p-8">
+                <p className="text-lg mb-4">
+                  Stuur een email naar <a href="mailto:info@glimps.be" className="font-semibold text-primary hover:underline">info@glimps.be</a>
                 </p>
-              </form>
-            </Card>
+                <p className="text-muted-foreground">
+                  We nemen binnen 24 uur contact met je op voor een vrijblijvend gesprek over de mogelijkheden.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
