@@ -1,39 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Shield, Lock, Award, Calculator, ArrowRight } from "lucide-react";
+import { Shield, Lock, Award, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import logoIcon from "@/assets/logo-icon.png";
 import glimpsLogoFooter from "@/assets/glimps-logo-new.png";
 import { toast } from "sonner";
 
 const Footer = () => {
-  const [monthlyChats, setMonthlyChats] = useState("");
-  const [conversionRate, setConversionRate] = useState("");
-  const [averageOrder, setAverageOrder] = useState("");
-  const [showResult, setShowResult] = useState(false);
-  const [roi, setRoi] = useState({ monthly: 0, yearly: 0, investment: 99 });
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [submittingNewsletter, setSubmittingNewsletter] = useState(false);
-
-  const calculateROI = () => {
-    const chats = parseInt(monthlyChats) || 0;
-    const conversion = parseFloat(conversionRate) || 0;
-    const order = parseFloat(averageOrder) || 0;
-
-    // Bereken extra omzet door chatbot (5% conversie verbetering)
-    const extraConversions = (chats * (conversion / 100) * 0.05);
-    const monthlyRevenue = extraConversions * order;
-    const yearlyRevenue = monthlyRevenue * 12;
-    const investment = 99; // Monthly cost
-
-    setRoi({
-      monthly: Math.round(monthlyRevenue),
-      yearly: Math.round(yearlyRevenue),
-      investment: investment
-    });
-    setShowResult(true);
-  };
 
   const handleNewsletterSignup = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,93 +46,6 @@ const Footer = () => {
 
   return (
     <footer className="border-t border-border/50 bg-background">
-      {/* ROI Calculator Lead Magnet */}
-      <div className="border-b border-border/50 bg-gradient-to-br from-primary/5 to-background py-16">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto max-w-4xl">
-            <Card className="overflow-hidden">
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 md:p-12">
-                <div className="mb-8 flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-white">
-                    <Calculator className="h-8 w-8" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold md:text-3xl">Bereken je ROI</h3>
-                    <p className="text-muted-foreground">
-                      Ontdek hoeveel een AI-chatbot jouw business kan opleveren
-                    </p>
-                  </div>
-                </div>
-
-                <div className="grid gap-6 md:grid-cols-3">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Maandelijkse chats</label>
-                    <Input
-                      type="number"
-                      placeholder="bijv. 1000"
-                      value={monthlyChats}
-                      onChange={(e) => setMonthlyChats(e.target.value)}
-                      className="bg-background"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Conversie rate (%)</label>
-                    <Input
-                      type="number"
-                      placeholder="bijv. 2.5"
-                      value={conversionRate}
-                      onChange={(e) => setConversionRate(e.target.value)}
-                      className="bg-background"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Gem. orderwaarde (€)</label>
-                    <Input
-                      type="number"
-                      placeholder="bijv. 75"
-                      value={averageOrder}
-                      onChange={(e) => setAverageOrder(e.target.value)}
-                      className="bg-background"
-                    />
-                  </div>
-                </div>
-
-                <Button
-                  onClick={calculateROI}
-                  className="mt-6 w-full rounded-full md:w-auto"
-                  size="lg"
-                >
-                  Bereken ROI
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-
-                {showResult && (
-                  <div className="mt-8 grid gap-4 rounded-2xl bg-background p-6 md:grid-cols-3">
-                    <div className="text-center">
-                      <p className="text-sm text-muted-foreground">Extra omzet / maand</p>
-                      <p className="text-3xl font-bold text-primary">€{roi.monthly.toLocaleString()}</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-sm text-muted-foreground">Extra omzet / jaar</p>
-                      <p className="text-3xl font-bold text-primary">€{roi.yearly.toLocaleString()}</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-sm text-muted-foreground">Investering / maand</p>
-                      <p className="text-3xl font-bold">€{roi.investment}</p>
-                    </div>
-                    <div className="col-span-full mt-4 text-center">
-                      <p className="text-sm text-muted-foreground">
-                        ROI: <span className="text-2xl font-bold text-green-600">{Math.round((roi.yearly / (roi.investment * 12)) * 100)}%</span> per jaar
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </Card>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid gap-12 md:grid-cols-5">
