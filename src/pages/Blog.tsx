@@ -44,6 +44,15 @@ const Blog = () => {
   };
   const articles = [
     {
+      title: "Amazon Rufus: De Cijfers Achter 's Werelds Slimste Shoppingbot",
+      excerpt: "Amazon Rufus groeide in twee jaar uit tot de meest gebruikte AI-bot in retail, met 250 miljoen gebruikers en $10 miljard extra omzet.",
+      category: "Case Study",
+      date: "15 jan 2025",
+      readTime: "6 min",
+      image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=400&fit=crop",
+      slug: "/blog/amazon-rufus"
+    },
+    {
       title: "7 Manieren om conversie te verhogen met AI chatbots",
       excerpt: "Ontdek hoe e-commerce bedrijven hun omzet met 47% verhogen door slimme chatbot strategieën in te zetten.",
       category: "Strategy",

@@ -26,6 +26,7 @@ import CaseStudyFashionHub from "./pages/blog/CaseStudyFashionHub";
 import PersonalisatieConversies from "./pages/blog/PersonalisatieConversies";
 import FoutenChatbots from "./pages/blog/FoutenChatbots";
 import ShopifyIntegratie from "./pages/blog/ShopifyIntegratie";
+import AmazonRufus from "./pages/blog/AmazonRufus";
 import FashionDesign from "./pages/industries/FashionDesign";
 import BeautyCosmetica from "./pages/industries/BeautyCosmetica";
 import Electronics from "./pages/industries/Electronics";
@@ -67,6 +68,7 @@ const App = () => (
           <Route path="/blog/personalisatie-conversies" element={<PersonalisatieConversies />} />
           <Route path="/blog/fouten-chatbots" element={<FoutenChatbots />} />
           <Route path="/blog/shopify-integratie" element={<ShopifyIntegratie />} />
+          <Route path="/blog/amazon-rufus" element={<AmazonRufus />} />
           <Route path="/industries/fashion-design" element={<FashionDesign />} />
           <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
           <Route path="/industries/electronics" element={<Electronics />} />
