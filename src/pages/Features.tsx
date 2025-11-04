@@ -1101,9 +1101,9 @@ const Features = () => {
               <p className="text-muted-foreground max-w-md">
                 Ontdek hoe onze AI-chatbot jouw e-commerce klantenservice naar een hoger niveau tilt.
               </p>
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-colors">
+              <a href="/contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-colors inline-block">
                 Gratis aanmelden
-              </button>
+              </a>
             </div>
           </div>
         </div>
