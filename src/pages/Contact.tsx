@@ -89,7 +89,7 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="container mx-auto px-6 py-12">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2">
             <Card className="p-6 text-center">
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Mail className="h-7 w-7 text-primary" />
@@ -107,16 +107,6 @@ const Contact = () => {
               <h3 className="mb-2 font-bold">Locatie</h3>
               <p className="text-sm text-muted-foreground">
                 Brugge, België
-              </p>
-            </Card>
-
-            <Card className="p-6 text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-                <MessageSquare className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="mb-2 font-bold">Live Chat</h3>
-              <p className="text-sm text-muted-foreground">
-                Gebruik de chat rechtsonder
               </p>
             </Card>
           </div>

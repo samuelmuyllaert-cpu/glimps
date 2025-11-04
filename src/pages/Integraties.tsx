@@ -103,64 +103,6 @@ const Integraties = () => {
           description: "CRM synchronisatie en lead management",
           status: "Binnenkort"
         },
-        { 
-          name: "Intercom", 
-          logo: "https://static.intercomassets.com/assets/favicon-v2/favicon-32x32-c9b2c4b03f17fa7fef46a8ad9e56cfb8.png",
-          description: "Customer messaging platform integratie",
-          status: "Binnenkort"
-        },
-      ]
-    },
-    {
-      title: "Analytics & Data",
-      icon: BarChart,
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10",
-      integrations: [
-        { 
-          name: "Google Analytics", 
-          logo: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg",
-          description: "Conversie tracking en gedragsanalyse",
-          status: "Live"
-        },
-        { 
-          name: "PrestaShop", 
-          logo: "https://upload.wikimedia.org/wikipedia/commons/7/79/PrestaShop_Logo.png",
-          description: "E-commerce platform integratie",
-          status: "Live"
-        },
-        { 
-          name: "Mixpanel", 
-          logo: "https://cdn.worldvectorlogo.com/logos/mixpanel-1.svg",
-          description: "Product analytics en user insights",
-          status: "Binnenkort"
-        },
-      ]
-    },
-    {
-      title: "Marketing & Email",
-      icon: Mail,
-      color: "text-pink-500",
-      bgColor: "bg-pink-500/10",
-      integrations: [
-        { 
-          name: "Mailchimp", 
-          logo: "https://eep.io/images/yzco4xsimv0y/1u3hha8lkEM2oOMe8gcuiY/7b3d6f85bf3f3bc834d4e7e8cfb03924/MC_Icon_MailChimp_Smile.png",
-          description: "Email marketing campagnes en nieuwsbrieven",
-          status: "Live"
-        },
-        { 
-          name: "Klaviyo", 
-          logo: "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_5e9e134e5f4f44c4ea4e4d3f26a42fdb/klaviyo.png",
-          description: "E-commerce email marketing automation",
-          status: "Binnenkort"
-        },
-        { 
-          name: "ActiveCampaign", 
-          logo: "https://www.activecampaign.com/site/icons/icon-96x96.png",
-          description: "Marketing automation en CRM",
-          status: "Binnenkort"
-        },
       ]
     },
   ];
@@ -223,7 +165,7 @@ const Integraties = () => {
               </div>
               <h3 className="mb-2 text-xl font-bold">Plug & Play Setup</h3>
               <p className="text-muted-foreground">
-                Meeste integraties werken binnen 5 minuten. Geen developers nodig.
+                Professionele setup en implementatie. We helpen je op weg.
               </p>
             </div>
             <div className="text-center">

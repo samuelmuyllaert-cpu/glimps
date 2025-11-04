@@ -658,15 +658,15 @@ const HowWeWork = () => {
                         <Badge variant="secondary" className="text-xs">Top 3</Badge>
                       </div>
                       <div className="space-y-2">
-                        <div className="flex items-center justify-between text-sm">
+                        <div className="flex items-center justify-between text-sm text-white">
                           <span>Sportschoenen</span>
                           <span className="font-semibold">847 vragen</span>
                         </div>
-                        <div className="flex items-center justify-between text-sm">
+                        <div className="flex items-center justify-between text-sm text-white">
                           <span>Yoga matten</span>
                           <span className="font-semibold">623 vragen</span>
                         </div>
-                        <div className="flex items-center justify-between text-sm">
+                        <div className="flex items-center justify-between text-sm text-white">
                           <span>Fitness trackers</span>
                           <span className="font-semibold">512 vragen</span>
                         </div>
