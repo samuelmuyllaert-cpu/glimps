@@ -27,18 +27,10 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button variant="hero" size="lg" className="rounded-full">
-              Start gratis proefperiode
-              <ArrowRight className="h-5 w-5" />
-            </Button>
             <Button variant="outline" size="lg" className="rounded-full">
               Plan een demo
             </Button>
           </div>
-
-          <p className="mt-6 text-sm text-muted-foreground">
-            Geen creditcard vereist • Gratis 14-daagse proefperiode • Altijd opzegbaar
-          </p>
         </div>
       </div>
     </section>

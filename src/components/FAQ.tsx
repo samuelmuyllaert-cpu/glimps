@@ -18,10 +18,6 @@ const FAQ = () => {
       answer: "Glimps biedt productaanbevelingen, ordertracking, retourverwerking, meertalige ondersteuning, naadloze integraties met populaire e-commerce platforms, en realtime analytics om je klantenservice te optimaliseren.",
     },
     {
-      question: "Is er een proefperiode beschikbaar?",
-      answer: "Ja, Glimps biedt een gratis plan om je op weg te helpen. Je kunt onze chatbot uitproberen zonder creditcard. Betaalde plannen beginnen bij €49/maand met extra functies en hogere gespreklimieten.",
-    },
-    {
       question: "Is Glimps geschikt voor bedrijven van verschillende groottes?",
       answer: "Absoluut! Glimps schaalt mee met jouw bedrijf. Of je nu een startende webshop bent of een gevestigde e-commerce speler, onze oplossing past zich aan jouw behoeften aan en groeit mee met je onderneming.",
     },

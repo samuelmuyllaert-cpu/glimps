@@ -63,10 +63,7 @@ const WhyDifferent = () => {
             Beter dan een supporttool.
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            We bouwen geen chatbots. We bouwen digitale experts die jouw klanten{" "}
-            <span className="text-primary font-medium">verrassen</span>, jouw team{" "}
-            <span className="text-primary font-medium">ontlasten</span>, en jouw{" "}
-            <span className="text-primary font-medium">verkoop</span> verhogen.
+            We bouwen geen chatbots.
           </p>
         </div>
 

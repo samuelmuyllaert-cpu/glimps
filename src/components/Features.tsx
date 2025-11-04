@@ -27,10 +27,10 @@ const Features = () => {
                 </div>)}
             </div>
 
-            <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold transition-colors flex items-center gap-2">
+            <a href="/features" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold transition-colors flex items-center gap-2">
               Ontdek de mogelijkheden
               <span>→</span>
-            </button>
+            </a>
           </div>
 
           {/* Right side - Chat Demo */}

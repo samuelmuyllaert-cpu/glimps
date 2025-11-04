@@ -447,8 +447,8 @@ const ChatbotComparison = () => {
           <p className="text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
             De juiste keuze hangt af van je grootte, je verkeer en je ambities. Twijfel je? Plan een vrijblijvend gesprek - we helpen je de beste oplossing kiezen, ook als dat niet Glimps is.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-            Plan een vrijblijvend gesprek →
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
+            <a href="/contact">Plan een vrijblijvend gesprek →</a>
           </Button>
         </div>
       </div>
