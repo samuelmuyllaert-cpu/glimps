@@ -83,7 +83,7 @@ const Footer = () => {
                   <Award className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium">Best in AI Tech</p>
+                  <p className="text-sm font-medium">Best in Tech</p>
                   <p className="text-xs text-muted-foreground">Nieuwste AI technologie</p>
                 </div>
               </div>
