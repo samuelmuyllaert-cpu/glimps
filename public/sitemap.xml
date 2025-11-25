@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://www.glimps.be</loc>
+    <loc>https://glimps.be</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,28 +10,28 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://www.glimps.be/features</loc>
+    <loc>https://glimps.be/features</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/demo</loc>
+    <loc>https://glimps.be/demo</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/roi</loc>
+    <loc>https://glimps.be/roi</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/integraties</loc>
+    <loc>https://glimps.be/integraties</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -39,50 +39,92 @@
   
   <!-- Company Pages -->
   <url>
-    <loc>https://www.glimps.be/about</loc>
+    <loc>https://glimps.be/about</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/contact</loc>
+    <loc>https://glimps.be/contact</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/how-we-work</loc>
+    <loc>https://glimps.be/how-we-work</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/consultancy</loc>
+    <loc>https://glimps.be/consultancy</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://glimps.be/partners</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://glimps.be/career</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://glimps.be/login</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://glimps.be/ecom-agents</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://glimps.be/ecom-readiness</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://glimps.be/legal</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <!-- Resources -->
   <url>
-    <loc>https://www.glimps.be/blog</loc>
+    <loc>https://glimps.be/blog</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/faq</loc>
+    <loc>https://glimps.be/faq</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/changelog</loc>
+    <loc>https://glimps.be/changelog</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -90,102 +132,94 @@
   
   <!-- Blog Articles -->
   <url>
-    <loc>https://www.glimps.be/blog/conversie-verhogen</loc>
+    <loc>https://glimps.be/blog/conversie-verhogen</loc>
     <lastmod>2025-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/blog/toekomst-ai-2025</loc>
+    <loc>https://glimps.be/blog/toekomst-ai-2025</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/blog/case-study-fashionhub</loc>
+    <loc>https://glimps.be/blog/case-study-fashionhub</loc>
     <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/blog/personalisatie-conversies</loc>
+    <loc>https://glimps.be/blog/personalisatie-conversies</loc>
     <lastmod>2024-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/blog/fouten-chatbots</loc>
+    <loc>https://glimps.be/blog/fouten-chatbots</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/blog/shopify-integratie</loc>
+    <loc>https://glimps.be/blog/shopify-integratie</loc>
     <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://glimps.be/blog/amazon-rufus</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Industry Pages -->
   <url>
-    <loc>https://www.glimps.be/industries/fashion-design</loc>
+    <loc>https://glimps.be/industries/fashion-design</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/industries/beauty-cosmetica</loc>
+    <loc>https://glimps.be/industries/beauty-cosmetica</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/industries/electronics</loc>
+    <loc>https://glimps.be/industries/electronics</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/industries/meubels-interieur</loc>
+    <loc>https://glimps.be/industries/meubels-interieur</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/industries/sportkleding-fitness</loc>
+    <loc>https://glimps.be/industries/sportkleding-fitness</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://www.glimps.be/industries/tuin-buitenleven</loc>
+    <loc>https://glimps.be/industries/tuin-buitenleven</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  
-  <!-- Additional Pages -->
-  <url>
-    <loc>https://www.glimps.be/partners</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.glimps.be/career</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
