@@ -6,18 +6,12 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const toAbsolute = (p) => path.resolve(__dirname, p)
 
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
-const { render } = await import('./dist/server/entry-server.js')
-
-const routesToPrerender = fs
-  .readdirSync(toAbsolute('src/pages'))
-  .map((file) => {
-    const name = file.replace(/\.tsx$/, '').toLowerCase()
-    return name === 'index' ? `/` : `/${name}`
-  })
 
 ;(async () => {
+  const { render } = await import('./dist/server/entry-server.js')
+
   for (const url of routesToPrerender) {
-    const appHtml = render(url);
+    const appHtml = render(url)
     const html = template.replace(`<!--app-html-->`, appHtml)
 
     const filePath = `dist${url === '/' ? '/index' : url}.html`
@@ -25,3 +19,4 @@ const routesToPrerender = fs
     console.log('pre-rendered:', filePath)
   }
 })()
+
