@@ -1,11 +1,27 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Flower } from "lucide-react";
 
 const TuinBuitenleven = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Chatbot voor Tuin & Buitenleven Webshops - Glimps AI"
+        description="Help klanten hun droompluin creëren met AI die planten, seizoenen en tuinonderhoud begrijpt. Automatiseer tuinadvies voor je tuincentrum of webshop."
+        path="/industries/tuin-buitenleven"
+        keywords="AI chatbot tuin, tuincentrum webshop automatisering, plantenadvies, seizoensaanbevelingen, tuinonderhoud, tuin e-commerce"
+      />
+      <StructuredData
+        type="webpage"
+        data={{
+          name: "AI Chatbot voor Tuin & Buitenleven - Glimps AI",
+          description: "Intelligente chatbots voor tuincentra met persoonlijk tuinadvies en plantsuggesties",
+          url: "https://www.glimps.be/industries/tuin-buitenleven"
+        }}
+      />
       <Navigation />
       
       {/* Hero Section */}

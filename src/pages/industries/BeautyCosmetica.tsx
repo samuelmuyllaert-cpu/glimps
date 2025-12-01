@@ -1,11 +1,27 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Heart } from "lucide-react";
 
 const BeautyCosmetica = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Chatbot voor Beauty & Cosmetica Webshops - Glimps AI"
+        description="Persoonlijk beauty advies met AI die huidtypes, ingrediënten en producten begrijpt. Automatiseer productaanbevelingen voor je cosmetica webshop met slimme chatbots."
+        path="/industries/beauty-cosmetica"
+        keywords="AI chatbot beauty, cosmetica webshop automatisering, huidtype advies, beauty product aanbevelingen, skincare chatbot, cosmetica e-commerce"
+      />
+      <StructuredData
+        type="webpage"
+        data={{
+          name: "AI Chatbot voor Beauty & Cosmetica - Glimps AI",
+          description: "Intelligente chatbots voor beauty webshops met persoonlijk huidtype advies en product aanbevelingen",
+          url: "https://www.glimps.be/industries/beauty-cosmetica"
+        }}
+      />
       <Navigation />
       
       {/* Hero Section */}

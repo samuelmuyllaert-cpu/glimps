@@ -1,11 +1,27 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Dumbbell } from "lucide-react";
 
 const SportkledingFitness = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Chatbot voor Sportkleding & Fitness Webshops - Glimps AI"
+        description="Boost je sportwebshop met AI die atleten helpt de perfecte gear te vinden voor hun sport en niveau. Automatiseer sportadvies en productaanbevelingen."
+        path="/industries/sportkleding-fitness"
+        keywords="AI chatbot sport, fitness webshop automatisering, sportkleding advies, gear aanbevelingen, fitness producten, sport e-commerce"
+      />
+      <StructuredData
+        type="webpage"
+        data={{
+          name: "AI Chatbot voor Sportkleding & Fitness - Glimps AI",
+          description: "Intelligente chatbots voor sport webshops met gepersonaliseerd sportadvies en gear aanbevelingen",
+          url: "https://www.glimps.be/industries/sportkleding-fitness"
+        }}
+      />
       <Navigation />
       
       {/* Hero Section */}

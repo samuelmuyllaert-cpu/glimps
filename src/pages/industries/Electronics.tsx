@@ -1,11 +1,27 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles, Cpu } from "lucide-react";
 
 const Electronics = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Chatbot voor Electronics & Technology Webshops - Glimps AI"
+        description="Help klanten de juiste tech keuze maken met AI die specificaties, compatibiliteit en features begrijpt. Slimme productadviseur voor elektronicawinkels."
+        path="/industries/electronics"
+        keywords="AI chatbot electronics, technologie webshop automatisering, product specificaties, compatibiliteit checker, tech aanbevelingen, elektronica e-commerce"
+      />
+      <StructuredData
+        type="webpage"
+        data={{
+          name: "AI Chatbot voor Electronics & Technology - Glimps AI",
+          description: "Intelligente chatbots voor electronics webshops met technische productadviezen en compatibiliteit checks",
+          url: "https://www.glimps.be/industries/electronics"
+        }}
+      />
       <Navigation />
       
       {/* Hero Section */}
