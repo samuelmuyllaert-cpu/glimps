@@ -35,5 +35,8 @@ export default defineConfig(async ({ mode }) => {
         external: mode === 'production' ? [] : undefined,
       },
     },
+    ssr: {
+      noExternal: ['react-helmet-async'],
+    },
   };
 });
