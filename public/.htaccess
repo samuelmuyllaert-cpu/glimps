@@ -1,18 +1,31 @@
+# Redirect www to non-www
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
+  # Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
   # Don't rewrite files or directories
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/index\.html$
 
   # Rewrite everything else to index.html to allow html5 state links
-  RewriteRule . /index.html [L]
+  RewriteRule ^ /index.html [L]
 </IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Custom error pages
+ErrorDocument 404 /index.html
+ErrorDocument 500 /index.html
 
 # Enable GZIP compression
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
 # Browser caching
@@ -23,8 +36,17 @@
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType application/pdf "access plus 1 month"
   ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
 </IfModule>
