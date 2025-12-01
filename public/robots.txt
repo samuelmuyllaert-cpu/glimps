@@ -3,6 +3,9 @@
 
 User-agent: *
 Allow: /
+Disallow: /login
+Disallow: /api/
+Disallow: /*.json$
 
 # AI Crawlers - Explicitly allow
 User-agent: GPTBot
@@ -20,8 +23,24 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# Sitemap location
-Sitemap: https://glimps.be/sitemap.xml
+User-agent: Googlebot
+Allow: /
+Disallow: /login
 
-# Crawl-delay for respectful crawling
+User-agent: Bingbot
+Allow: /
+Disallow: /login
+
+# Sitemap location
+Sitemap: https://www.glimps.be/sitemap.xml
+
+# Crawl-delay for respectful crawling (not for Googlebot)
+User-agent: *
 Crawl-delay: 1
+
+# No crawl delay for major search engines
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0

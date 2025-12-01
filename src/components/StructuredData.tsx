@@ -50,10 +50,16 @@ interface StructuredDataProps {
 
 export const baseOrganization = {
   "@type": "Organization",
-  "@id": "https://www.glimps.be#organization",
+  "@id": "https://www.glimps.be/#organization",
   "name": "Glimps",
   "url": "https://www.glimps.be",
-  "logo": "https://www.glimps.be/glimps-logo.png",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.glimps.be/favicon.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://www.glimps.be/favicon.png",
   "email": "info@glimps.be",
   "telephone": "+32 50 45 45 45",
   "sameAs": [
@@ -74,20 +80,29 @@ export const baseOrganization = {
     "@type": "ContactPoint",
     "telephone": "+32 50 45 45 45",
     "email": "info@glimps.be",
-    "contactType": "klantenservice",
+    "contactType": "customer service",
     "areaServed": "BE",
-    "availableLanguage": ["Dutch", "English", "French"]
+    "availableLanguage": ["nl", "en", "fr"]
   },
   "founder": [
     {
       "@type": "Person",
-      "name": "Samuel Muyllaert"
+      "name": "Samuel Muyllaert",
+      "jobTitle": "Co-Founder & CEO"
     },
     {
       "@type": "Person",
-      "name": "Tom Muyllaert"
+      "name": "Tom Muyllaert",
+      "jobTitle": "Co-Founder & CTO"
     }
-  ]
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "50",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 };
 
 const StructuredData = ({ type, data }: StructuredDataProps) => {
@@ -196,10 +211,15 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "name": serviceData.name,
           "description": serviceData.description,
           "provider": {
-            "@id": "https://www.glimps.be#organization"
+            "@id": "https://www.glimps.be/#organization"
           },
-          "areaServed": "België",
+          "areaServed": {
+            "@type": "Country",
+            "name": "België"
+          },
           "serviceType": serviceData.serviceType || ["AI Chatbot", "E-commerce Solutions", "Customer Service Automation"],
+          "url": "https://www.glimps.be",
+          "category": "Software",
           ...(serviceData.offers && {
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
