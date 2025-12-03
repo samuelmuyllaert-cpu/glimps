@@ -44,6 +44,9 @@ const routesToPrerender = [
 ];
 
 (async () => {
+  let successCount = 0;
+  let errorCount = 0;
+
   for (const url of routesToPrerender) {
     try {
       const { html: appHtml, helmetContext } = render(url);
@@ -66,8 +69,16 @@ const routesToPrerender = [
 
       fs.writeFileSync(toAbsolute(filePath), html);
       console.log('Pre-rendered:', url);
+      successCount++;
     } catch (error) {
-      console.error(`Error pre-rendering ${url}:`, error);
+      console.error(`Error pre-rendering ${url}:`, error.message);
+      errorCount++;
     }
+  }
+
+  console.log(`\nPrerender complete: ${successCount} success, ${errorCount} errors`);
+
+  if (errorCount > 0) {
+    process.exit(1);
   }
 })();
