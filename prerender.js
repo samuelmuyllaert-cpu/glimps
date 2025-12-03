@@ -56,7 +56,7 @@ const routesToPrerender = [
 
       const filePath = url === '/'
         ? 'dist/index.html'
-        : `dist${url}/index.html`;
+        : `dist${url}.html`;
 
       const dir = path.dirname(toAbsolute(filePath));
 
