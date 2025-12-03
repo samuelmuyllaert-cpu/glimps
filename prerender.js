@@ -55,7 +55,7 @@ const routesToPrerender = [
 
       let html = template
         .replace('<!--app-html-->', appHtml)
-        .replace('<head>', `<head>${helmet ? helmet.title.toString() + helmet.meta.toString() + helmet.link.toString() : ''}`);
+        .replace('<head>', `<head>${helmet ? helmet.title.toString() + helmet.meta.toString() + helmet.link.toString() + helmet.script.toString() : ''}`);
 
       const filePath = url === '/'
         ? 'dist/index.html'

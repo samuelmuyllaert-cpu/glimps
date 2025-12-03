@@ -93,6 +93,12 @@ const SEO = ({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
 
+      {/* Geo Targeting */}
+      <meta name="geo.region" content="BE" />
+      <meta name="geo.placename" content="België" />
+      <meta name="geo.position" content="50.8503;4.3517" />
+      <meta name="ICBM" content="50.8503, 4.3517" />
+
       {/* Additional Meta */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content="#ffffff" />
