@@ -7,6 +7,12 @@
   RewriteCond %{HTTP_HOST} ^glimps\.be$ [NC]
   RewriteRule ^(.*)$ https://www.glimps.be/$1 [R=301,L]
 
+  # Remove trailing slash (except for root)
+  RewriteCond %{REQUEST_URI} !^/$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} (.*)/$
+  RewriteRule ^(.*)/$ https://www.glimps.be/$1 [R=301,L]
+
   # Don't rewrite files or directories
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
