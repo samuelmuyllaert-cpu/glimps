@@ -37,9 +37,9 @@ const Hero = () => {
 
         {/* Subheading */}
         <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-          Vragen over producten, verzending en bestellingen
+          Onze intelligente chatbots beantwoorden vragen over producten, verzending en bestellingen
           <br />
-          worden automatisch beantwoord - ook buiten kantooruren.
+          automatisch - ook buiten kantooruren. Verhoog je conversie met AI.
         </p>
 
         {/* CTA Buttons */}

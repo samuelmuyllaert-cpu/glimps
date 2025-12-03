@@ -21,8 +21,8 @@ const Index = () => {
       "@type": "WebPage",
       "@id": "https://www.glimps.be/",
       "url": "https://www.glimps.be/",
-      "name": "Glimps - AI Chatbot voor E-commerce | Verhoog Conversie",
-      "description": "Slimme AI chatbot die je webshop bezoekers begeleidt naar de perfecte producten. Verhoog conversie met persoonlijke aanbevelingen 24/7.",
+      "name": "Intelligente chatbots voor e-commerce | Glimps - Verhoog Conversie met AI",
+      "description": "Intelligente chatbots voor e-commerce die je webshop bezoekers 24/7 begeleiden. Automatische klantenservice, productaanbevelingen en meer conversie.",
       "inLanguage": "nl-BE",
       "isPartOf": {
         "@id": "https://www.glimps.be#website"
@@ -34,8 +34,8 @@ const Index = () => {
       "about": [
         {
           "@type": "Service",
-          "name": "AI Chatbot voor E-commerce",
-          "description": "Glimps biedt AI-gedreven chatbot oplossingen die webshop bezoekers helpen de perfecte producten te vinden en conversie verhogen met persoonlijke aanbevelingen 24/7.",
+          "name": "Intelligente chatbots voor e-commerce",
+          "description": "Glimps biedt intelligente chatbots voor e-commerce die webshop bezoekers helpen de perfecte producten te vinden en conversie verhogen met persoonlijke aanbevelingen 24/7.",
           "areaServed": "België",
           "provider": {
             "@id": "https://www.glimps.be#organization"
@@ -145,9 +145,9 @@ const Index = () => {
     {
       "@type": "WebSite",
       "@id": "https://www.glimps.be#website",
-      "name": "Glimps - AI Chatbot voor E-commerce",
+      "name": "Glimps - Intelligente chatbots voor e-commerce",
       "url": "https://www.glimps.be",
-      "description": "Slimme AI chatbot die je webshop bezoekers begeleidt naar de perfecte producten. Verhoog conversie met persoonlijke aanbevelingen 24/7.",
+      "description": "Intelligente chatbots voor e-commerce die je webshop bezoekers 24/7 begeleiden. Automatische klantenservice, productaanbevelingen en meer conversie.",
       "publisher": {
         "@id": "https://www.glimps.be#organization"
       },
@@ -155,10 +155,10 @@ const Index = () => {
     },
     {
       "@type": "SoftwareApplication",
-      "name": "Glimps AI Chatbot",
+      "name": "Glimps - Intelligente chatbots voor e-commerce",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "description": "AI-gedreven chatbot voor e-commerce die bezoekers helpt de perfecte producten te vinden en conversie verhoogt met persoonlijke aanbevelingen en automatische klantenservice.",
+      "description": "Intelligente chatbots voor e-commerce die bezoekers helpen de perfecte producten te vinden en conversie verhoogt met persoonlijke aanbevelingen en automatische klantenservice 24/7.",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -209,12 +209,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Glimps - AI Chatbot voor E-commerce | Verhoog Conversie"
-        description="Slimme AI chatbot die je webshop bezoekers begeleidt naar de perfecte producten. Verhoog conversie met persoonlijke aanbevelingen 24/7."
+      <SEO
+        title="Intelligente chatbots voor e-commerce | Glimps - Verhoog Conversie met AI"
+        description="Intelligente chatbots voor e-commerce die je webshop bezoekers 24/7 begeleiden. Automatische klantenservice, productaanbevelingen en meer conversie. Start gratis."
         path="/"
         canonical="https://www.glimps.be"
-        keywords="AI chatbot, e-commerce, webshop, conversie verhogen, klantenservice, productaanbevelingen, online verkoop, België"
+        keywords="intelligente chatbots voor e-commerce, chatbot e-commerce, AI chatbot webshop, e-commerce chatbot België, intelligente chatbots, conversie verhogen, automatische klantenservice, productaanbevelingen, webshop automatisering"
         type="website"
       />
       <StructuredData type="graph" data={graphData} />

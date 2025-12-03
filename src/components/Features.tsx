@@ -13,10 +13,10 @@ const Features = () => {
             </div>
 
             <h2 className="font-inter text-4xl md:text-5xl font-normal mb-6 leading-tight">
-              AI klantenservice voor webshops
+              Waarom intelligente chatbots essentieel zijn voor e-commerce
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-8">Kwalitatieve service leveren vereist tijd en aandacht. Terwijl je team ordertracking vragen behandelt, blijven potentiële kopers zonder productadvies. Glimps combineert geautomatiseerde support met actieve aankoopbegeleiding.</p>
+            <p className="text-lg text-muted-foreground mb-8">Kwalitatieve service leveren vereist tijd en aandacht. Terwijl je team ordertracking vragen behandelt, blijven potentiële kopers zonder productadvies. Onze intelligente chatbots combineren geautomatiseerde support met actieve aankoopbegeleiding.</p>
 
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => <div key={index} className="flex items-start gap-3">
