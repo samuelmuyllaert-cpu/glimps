@@ -21,8 +21,8 @@ const Index = () => {
       "@type": "WebPage",
       "@id": "https://www.glimps.be/",
       "url": "https://www.glimps.be/",
-      "name": "Intelligente chatbots voor e-commerce | Glimps - Verhoog Conversie met AI",
-      "description": "Intelligente chatbots voor e-commerce die je webshop bezoekers 24/7 begeleiden. Automatische klantenservice, productaanbevelingen en meer conversie.",
+      "name": "Intelligente chatbots voor e-commerce | Glimps",
+      "description": "AI chatbots voor je webshop. Begeleid bezoekers 24/7, verhoog conversie en automatiseer klantenservice met intelligente AI.",
       "inLanguage": "nl-BE",
       "isPartOf": {
         "@id": "https://www.glimps.be#website"
@@ -147,7 +147,7 @@ const Index = () => {
       "@id": "https://www.glimps.be#website",
       "name": "Glimps - Intelligente chatbots voor e-commerce",
       "url": "https://www.glimps.be",
-      "description": "Intelligente chatbots voor e-commerce die je webshop bezoekers 24/7 begeleiden. Automatische klantenservice, productaanbevelingen en meer conversie.",
+      "description": "AI chatbots voor je webshop. Begeleid bezoekers 24/7, verhoog conversie en automatiseer klantenservice met intelligente AI.",
       "publisher": {
         "@id": "https://www.glimps.be#organization"
       },
@@ -210,11 +210,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Intelligente chatbots voor e-commerce | Glimps - Verhoog Conversie met AI"
-        description="Intelligente chatbots voor e-commerce die je webshop bezoekers 24/7 begeleiden. Automatische klantenservice, productaanbevelingen en meer conversie. Start gratis."
+        title="Intelligente chatbots voor e-commerce | Glimps"
+        description="AI chatbots voor je webshop. Begeleid bezoekers 24/7, verhoog conversie en automatiseer klantenservice met intelligente AI."
         path="/"
         canonical="https://www.glimps.be"
-        keywords="intelligente chatbots voor e-commerce, chatbot e-commerce, AI chatbot webshop, e-commerce chatbot België, intelligente chatbots, conversie verhogen, automatische klantenservice, productaanbevelingen, webshop automatisering"
+        keywords="intelligente chatbots voor e-commerce, chatbot e-commerce, AI chatbot webshop, e-commerce chatbot België"
         type="website"
       />
       <StructuredData type="graph" data={graphData} />
