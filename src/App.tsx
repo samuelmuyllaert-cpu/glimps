@@ -27,6 +27,10 @@ import PersonalisatieConversies from "./pages/blog/PersonalisatieConversies";
 import FoutenChatbots from "./pages/blog/FoutenChatbots";
 import ShopifyIntegratie from "./pages/blog/ShopifyIntegratie";
 import AmazonRufus from "./pages/blog/AmazonRufus";
+import AIChatbotsImplementeren from "./pages/blog/AIChatbotsImplementeren";
+import AIChatbotsVsKlantenservice from "./pages/blog/AIChatbotsVsKlantenservice";
+import ROIAIChatbots from "./pages/blog/ROIAIChatbots";
+import AIChatbotsAutomatiseren from "./pages/blog/AIChatbotsAutomatiseren";
 import FashionDesign from "./pages/industries/FashionDesign";
 import BeautyCosmetica from "./pages/industries/BeautyCosmetica";
 import Electronics from "./pages/industries/Electronics";
@@ -68,6 +72,10 @@ const App = () => (
         <Route path="/blog/fouten-chatbots" element={<FoutenChatbots />} />
         <Route path="/blog/shopify-integratie" element={<ShopifyIntegratie />} />
         <Route path="/blog/amazon-rufus" element={<AmazonRufus />} />
+        <Route path="/blog/ai-chatbots-implementeren" element={<AIChatbotsImplementeren />} />
+        <Route path="/blog/ai-chatbots-vs-klantenservice" element={<AIChatbotsVsKlantenservice />} />
+        <Route path="/blog/roi-ai-chatbots" element={<ROIAIChatbots />} />
+        <Route path="/blog/ai-chatbots-automatiseren" element={<AIChatbotsAutomatiseren />} />
         <Route path="/industries/fashion-design" element={<FashionDesign />} />
         <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
         <Route path="/industries/electronics" element={<Electronics />} />

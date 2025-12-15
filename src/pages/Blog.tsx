@@ -44,6 +44,42 @@ const Blog = () => {
   };
   const articles = [
     {
+      title: "10 Processen die AI Chatbots Automatiseren in E-commerce",
+      excerpt: "Ontdek welke repetitieve e-commerce processen AI chatbots volledig automatiseren. Van orderstatus tot productadvies - AI chatbots doen het voor je.",
+      category: "Use Cases",
+      date: "19 jan 2025",
+      readTime: "11 min",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
+      slug: "/blog/ai-chatbots-automatiseren"
+    },
+    {
+      title: "ROI van AI Chatbots: Concrete Cijfers en Berekeningen",
+      excerpt: "Bereken de ROI van AI chatbots voor jouw webshop. Concrete cijfers, cases en rekenmodellen tonen hoe snel AI chatbots zichzelf terugverdienen.",
+      category: "Business Case",
+      date: "18 jan 2025",
+      readTime: "10 min",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      slug: "/blog/roi-ai-chatbots"
+    },
+    {
+      title: "AI Chatbots vs Traditionele Klantenservice: Het Verschil",
+      excerpt: "Ontdek de verschillen tussen AI chatbots en traditionele klantenservice. Concrete vergelijking op snelheid, kosten, schaalbaarheid en klanttevredenheid.",
+      category: "Vergelijking",
+      date: "17 jan 2025",
+      readTime: "9 min",
+      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop",
+      slug: "/blog/ai-chatbots-vs-klantenservice"
+    },
+    {
+      title: "AI Chatbots Implementeren: Complete Gids 2025",
+      excerpt: "Complete stappenplan voor het implementeren van AI chatbots in je webshop. Van voorbereiding tot lancering, alles wat je moet weten over AI chatbots.",
+      category: "Tutorial",
+      date: "16 jan 2025",
+      readTime: "8 min",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      slug: "/blog/ai-chatbots-implementeren"
+    },
+    {
       title: "Amazon Rufus: De Cijfers Achter 's Werelds Slimste Shoppingbot",
       excerpt: "Amazon Rufus groeide in twee jaar uit tot de meest gebruikte AI-bot in retail, met 250 miljoen gebruikers en $10 miljard extra omzet.",
       category: "Case Study",
@@ -108,7 +144,7 @@ const Blog = () => {
     }
   ];
 
-  const categories = ["Alle", "Strategy", "Trends", "Case Study", "Product", "Tips", "Tutorial"];
+  const categories = ["Alle", "Tutorial", "Business Case", "Vergelijking", "Use Cases", "Strategy", "Trends", "Case Study", "Product", "Tips"];
 
   return (
     <div className="min-h-screen bg-background">
