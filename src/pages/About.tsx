@@ -15,7 +15,7 @@ const About = () => {
       "@id": "https://www.glimps.be/about",
       "url": "https://www.glimps.be/about",
       "name": "Over Ons - Glimps AI",
-      "description": "Ontmoet de oprichters van Glimps AI. Twee broers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice.",
+      "description": "Ontmoet de oprichters van Glimps AI. Twee ondernemers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice.",
       "inLanguage": "nl-BE",
       "isPartOf": {
         "@id": "https://www.glimps.be#website"
@@ -50,7 +50,7 @@ const About = () => {
   return <div className="min-h-screen bg-background">
       <SEO 
         title="Over Ons - Glimps AI | Marketing-gedreven AI Chatbot"
-        description="Ontmoet de oprichters van Glimps AI. Twee broers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice."
+        description="Ontmoet de oprichters van Glimps AI. Twee ondernemers met sterke marketingachtergrond die AI-chatbots zien als dé tool voor meer omzet en betere klantenservice."
         path="/about"
         canonical="https://www.glimps.be/about"
         keywords="over glimps, oprichters, Samuel Muyllaert, Tom Muyllaert, AI chatbot team, marketing achtergrond"
@@ -69,7 +69,7 @@ const About = () => {
             Wij boosten je business met onze AI-chatbot.
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            Glimps is opgericht door twee broers met een sterke marketingachtergrond die AI-chatbots zien als dé marketingtool voor meer omzet en betere klantenservice.
+            Glimps is opgericht door twee ondernemers met een sterke marketingachtergrond, die AI-chatbots zien als dé marketingtool voor meer omzet en betere klantenservice.
           </p>
         </div>
 
