@@ -53,6 +53,11 @@ const Hero = () => {
           </Button>
         </div>
 
+        {/* Glimps H2 for SEO */}
+        <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+          Glimps - Jouw AI assistent voor e-commerce
+        </h2>
+
       </div>
     </div>
   );
