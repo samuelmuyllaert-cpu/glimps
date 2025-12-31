@@ -32,8 +32,8 @@ const ProSportLights = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Welkom Pro Sport Lights - Glimps AI Testomgeving"
-        description="Test de Glimps AI chatbot voor Pro Sport Lights - Fietshelmen met verlichting en fietsverlichting"
+        title="Welkom bij Pro Sport Lights"
+        description="Welkom bij Pro Sport Lights - We helpen je graag met vragen over fietshelmen met verlichting en fietsverlichting"
         path="/prosportlights"
       />
       <Navigation />
@@ -41,20 +41,14 @@ const ProSportLights = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-6 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            <div className="flex items-center gap-2">
-              <Lightbulb className="h-4 w-4" />
-              Testomgeving Pro Sport Lights
-            </div>
-          </div>
-          <h1 className="mb-6 font-inter text-4xl font-bold leading-tight md:text-6xl">
-            Welkom bij je persoonlijke<br />
-            <span className="text-primary">AI Fietsverlichting Assistent</span>
+          <h1 className="mb-6 font-inter text-4xl font-bold leading-tight md:text-6xl md:leading-tight">
+            Welkom<br />
+            <span className="text-primary">Pro Sport Lights</span><br />
+            Bij je persoonlijke ai assistent
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            Je Glimps AI chatbot staat klaar om te helpen met vragen over fietshelmen met verlichting,
-            USB-oplaadbare fietsverlichting en fietsaccessoires. Test de AI assistent en ervaar hoe je
-            klanten straks 24/7 professioneel geholpen worden.
+            We zijn er om je te helpen! Heb je vragen over onze fietshelmen met verlichting,
+            USB-oplaadbare verlichtingssets of andere producten? Stel gerust je vraag via de chat.
           </p>
         </div>
       </section>
@@ -67,9 +61,9 @@ const ProSportLights = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <MessageSquare className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold">Direct Productadvies</h3>
+              <h3 className="mb-2 font-semibold">Altijd voor je klaar</h3>
               <p className="text-sm text-muted-foreground">
-                Krijg onmiddellijk antwoord over fietshelmen, verlichting en accessoires
+                Stel al je vragen over onze producten wanneer het jou uitkomt
               </p>
             </Card>
 
@@ -77,9 +71,9 @@ const ProSportLights = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Clock className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold">24/7 Beschikbaar</h3>
+              <h3 className="mb-2 font-semibold">Dag en nacht</h3>
               <p className="text-sm text-muted-foreground">
-                Ook buiten kantooruren kan je klanten geholpen worden
+                Ook buiten kantooruren staan we voor je klaar om te helpen
               </p>
             </Card>
 
@@ -87,9 +81,9 @@ const ProSportLights = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Shield className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold">Belgische Service</h3>
+              <h3 className="mb-2 font-semibold">Snelle levering</h3>
               <p className="text-sm text-muted-foreground">
-                Snelle levering in België en Europa, bestelling voor 16:00 = volgende werkdag
+                Bestelling voor 16:00 = volgende werkdag bij je thuis in België en Europa
               </p>
             </Card>
           </div>
@@ -103,22 +97,22 @@ const ProSportLights = () => {
             <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
               <Sparkles className="h-7 w-7 text-primary" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold">Aan de slag</h2>
+            <h2 className="mb-4 text-3xl font-bold">Hoe kunnen we je helpen?</h2>
             <p className="text-muted-foreground">
-              Klik op de chat-widget rechtsonder om te beginnen met testen
+              Klik rechtsonder op de chat en stel je vraag
             </p>
           </div>
 
           <Card className="p-8 md:p-12">
-            <h3 className="mb-8 text-xl font-semibold">Wat kun je vragen?</h3>
+            <h3 className="mb-8 text-xl font-semibold">Bijvoorbeeld</h3>
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                 <div>
-                  <p className="mb-1 font-medium">Fietshelmen met verlichting</p>
+                  <p className="mb-1 font-medium">Welke helm past bij mij?</p>
                   <p className="text-sm text-muted-foreground">
-                    "Welke helm heeft de sterkste LED-verlichting?"
+                    "Ik zoek een helm met verlichting voor in de stad"
                   </p>
                 </div>
               </div>
@@ -126,9 +120,9 @@ const ProSportLights = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                 <div>
-                  <p className="mb-1 font-medium">USB-oplaadbare verlichting</p>
+                  <p className="mb-1 font-medium">Hoe sterk is de verlichting?</p>
                   <p className="text-sm text-muted-foreground">
-                    "Hoeveel lumen heeft de 1300/120 lumen verlichtingsset?"
+                    "Hoeveel lumen hebben jullie fietslichten?"
                   </p>
                 </div>
               </div>
@@ -136,9 +130,9 @@ const ProSportLights = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                 <div>
-                  <p className="mb-1 font-medium">Speedpedelec helmen</p>
+                  <p className="mb-1 font-medium">Voor speedpedelec</p>
                   <p className="text-sm text-muted-foreground">
-                    "Hebben jullie helmen voor speedpedelecs met vizier?"
+                    "Is er een helm geschikt voor mijn speedpedelec?"
                   </p>
                 </div>
               </div>
@@ -146,9 +140,9 @@ const ProSportLights = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                 <div>
-                  <p className="mb-1 font-medium">Kinderhelmen</p>
+                  <p className="mb-1 font-medium">Voor de kinderen</p>
                   <p className="text-sm text-muted-foreground">
-                    "Welke helm is geschikt voor mijn kind van 8 jaar?"
+                    "Welke maat heeft mijn kind van 8 jaar nodig?"
                   </p>
                 </div>
               </div>
@@ -156,9 +150,9 @@ const ProSportLights = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                 <div>
-                  <p className="mb-1 font-medium">Prijzen & Levertijd</p>
+                  <p className="mb-1 font-medium">Prijs en levering</p>
                   <p className="text-sm text-muted-foreground">
-                    "Wat kost een premium helm en wanneer wordt het geleverd?"
+                    "Wanneer kan ik mijn bestelling ontvangen?"
                   </p>
                 </div>
               </div>
@@ -166,9 +160,9 @@ const ProSportLights = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                 <div>
-                  <p className="mb-1 font-medium">Garantie & Service</p>
+                  <p className="mb-1 font-medium">Onderhoud en garantie</p>
                   <p className="text-sm text-muted-foreground">
-                    "Hoe wissel ik het vizier van mijn helm?"
+                    "Kan ik onderdelen vervangen?"
                   </p>
                 </div>
               </div>
@@ -182,8 +176,8 @@ const ProSportLights = () => {
         <div className="mx-auto max-w-5xl">
           <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-8 md:p-12">
             <div className="mb-6 text-center">
-              <h2 className="mb-4 text-3xl font-bold">Over Pro Sport Lights</h2>
-              <p className="text-muted-foreground">Belgische pionier in fietsverlichting sinds 2018</p>
+              <h2 className="mb-4 text-3xl font-bold">Wie zijn wij?</h2>
+              <p className="text-muted-foreground">Sinds 2018 jouw partner voor veilig fietsen</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -191,9 +185,9 @@ const ProSportLights = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <p className="font-medium">Eerste in België</p>
+                    <p className="font-medium">Belgisch bedrijf</p>
                     <p className="text-sm text-muted-foreground">
-                      Eerste Belgische aanbieder van fietshelmen met ingebouwde verlichting
+                      Pionier in fietshelmen met ingebouwde verlichting in België
                     </p>
                   </div>
                 </div>
@@ -201,9 +195,9 @@ const ProSportLights = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <p className="font-medium">Breed assortiment</p>
+                    <p className="font-medium">Voor iedereen</p>
                     <p className="text-sm text-muted-foreground">
-                      Van €19,99 kinderhelmen tot €99,99 premium speedpedelec modellen
+                      Van kinderhelmen vanaf €19,99 tot premium speedpedelec modellen
                     </p>
                   </div>
                 </div>
@@ -211,9 +205,9 @@ const ProSportLights = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <p className="font-medium">Snelle levering</p>
+                    <p className="font-medium">Snel geleverd</p>
                     <p className="text-sm text-muted-foreground">
-                      Bestelling voor 16:00 = volgende werkdag in België en Europa
+                      Bestel voor 16:00, morgen in huis
                     </p>
                   </div>
                 </div>
@@ -223,9 +217,9 @@ const ProSportLights = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <p className="font-medium">Hoge klanttevredenheid</p>
+                    <p className="font-medium">325+ tevreden klanten</p>
                     <p className="text-sm text-muted-foreground">
-                      4,9 sterren gemiddelde met 325+ Google reviews
+                      Gemiddeld 4,9 sterren op Google
                     </p>
                   </div>
                 </div>
@@ -233,9 +227,9 @@ const ProSportLights = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <p className="font-medium">Betrouwbare partner</p>
+                    <p className="font-medium">Vertrouwd door NMBS</p>
                     <p className="text-sm text-muted-foreground">
-                      Samenwerking met NMBS voor fietsstallingen
+                      Partner voor fietsstallingen
                     </p>
                   </div>
                 </div>
@@ -243,9 +237,9 @@ const ProSportLights = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <p className="font-medium">Complete service</p>
+                    <p className="font-medium">Persoonlijke hulp</p>
                     <p className="text-sm text-muted-foreground">
-                      Blogs, video's en uitstekende klantenondersteuning
+                      Met tips, video's en goede service
                     </p>
                   </div>
                 </div>
@@ -260,11 +254,11 @@ const ProSportLights = () => {
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-6 text-4xl font-bold">
-              Klaar om te testen?
+              Heb je nog vragen?
             </h2>
             <p className="mb-8 text-lg text-muted-foreground">
-              Klik rechtsonder op de chat-widget en stel je eerste vraag aan je AI assistent.<br />
-              Ontdek hoe de chatbot klanten helpt bij het vinden van de perfecte fietshelm of verlichting.
+              Chat met ons rechtsonder voor al je vragen over onze producten, levering of andere zaken.<br />
+              We helpen je graag verder!
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
@@ -273,16 +267,9 @@ const ProSportLights = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white transition-all hover:bg-primary/90"
               >
-                Bezoek Pro Sport Lights →
+                Bezoek onze webshop →
               </a>
             </div>
-            <p className="mt-8 text-sm text-muted-foreground">
-              Dit is een testomgeving van Glimps AI voor Pro Sport Lights.<br />
-              Feedback? Neem contact op met{" "}
-              <a href="mailto:info@glimps.be" className="text-primary hover:underline">
-                info@glimps.be
-              </a>
-            </p>
           </div>
         </div>
       </section>
