@@ -18,7 +18,6 @@ const ProSportLights = () => {
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
     script.setAttribute('data-widget', 'cmjtqwg4i1wel2uh16muurbv6');
-    script.async = true;
     document.body.appendChild(script);
 
     return () => {
