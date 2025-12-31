@@ -81,9 +81,9 @@ const ProSportLights = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Shield className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold">Snelle levering</h3>
+              <h3 className="mb-2 font-semibold">GDPR conform</h3>
               <p className="text-sm text-muted-foreground">
-                Bestelling voor 16:00 = volgende werkdag bij je thuis in België en Europa
+                Glimps is GDPR conform en respecteert jouw privacy
               </p>
             </Card>
           </div>
@@ -97,7 +97,7 @@ const ProSportLights = () => {
             <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
               <Sparkles className="h-7 w-7 text-primary" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold">Hoe kunnen we je helpen?</h2>
+            <h2 className="mb-4 text-3xl font-bold">Hoe de bot klanten helpt</h2>
             <p className="text-muted-foreground">
               Klik rechtsonder op de chat en stel je vraag
             </p>
@@ -168,31 +168,6 @@ const ProSportLights = () => {
               </div>
             </div>
           </Card>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="border-t bg-muted/30 py-20">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 text-4xl font-bold">
-              Heb je nog vragen?
-            </h2>
-            <p className="mb-8 text-lg text-muted-foreground">
-              Chat met ons rechtsonder voor al je vragen over onze producten, levering of andere zaken.<br />
-              We helpen je graag verder!
-            </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="https://www.prosportlights.be"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white transition-all hover:bg-primary/90"
-              >
-                Bezoek onze webshop →
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
