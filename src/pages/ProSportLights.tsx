@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -13,21 +12,6 @@ import {
 } from "lucide-react";
 
 const ProSportLights = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.id = 'chatbotkit-widget';
-    script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmjtqwg4i1wel2uh16muurbv6');
-    document.body.appendChild(script);
-
-    return () => {
-      const existingScript = document.getElementById('chatbotkit-widget');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
       <SEO
