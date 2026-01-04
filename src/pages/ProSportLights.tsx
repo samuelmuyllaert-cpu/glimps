@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -12,6 +13,20 @@ import {
 } from "lucide-react";
 
 const ProSportLights = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://widgets.glimps.group/integrations/widget/v2.js?widget=cmjtqwg4i1wel2uh16muurbv6';
+    document.body.appendChild(script);
+
+    return () => {
+      const existingScript = document.querySelector('script[src*="widgets.glimps.group"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
