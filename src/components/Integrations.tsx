@@ -3,12 +3,13 @@ import odooLogo from "@/assets/odoo-logo.png";
 import postnlLogo from "@/assets/postnl-logo.png";
 import sendcloudLogo from "@/assets/sendcloud-logo.png";
 import prestashopLogo from "@/assets/prestashop-logo.png";
+import woocommerceLogo from "@/assets/woocommerce-logo.png";
 
 const Integrations = () => {
   const integrations = [
     { name: "Shopify", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" },
     { name: "SendCloud", logo: sendcloudLogo },
-    { name: "WooCommerce", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg" },
+    { name: "WooCommerce", logo: woocommerceLogo },
     { name: "WhatsApp", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" },
     { name: "Odoo", logo: odooLogo },
     { name: "PrestaShop", logo: prestashopLogo },
