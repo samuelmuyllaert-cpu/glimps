@@ -3,7 +3,7 @@ import odooLogo from "@/assets/odoo-logo.png";
 import postnlLogo from "@/assets/postnl-logo.png";
 import sendcloudLogo from "@/assets/sendcloud-logo.png";
 import prestashopLogo from "@/assets/prestashop-logo.png";
-import woocommerceLogo from "@/assets/woocommerce-logo.png";
+import woocommerceLogo from "@/assets/woocommerce-logo.svg";
 
 const Integrations = () => {
   const integrations = [
