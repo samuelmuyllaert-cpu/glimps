@@ -11,7 +11,6 @@ const Navigation = () => {
     { href: "/features", label: "Features" },
     { href: "/how-we-work", label: "Hoe we werken" },
     { href: "/faq", label: "FAQ" },
-    { href: "/roi", label: "ROI" },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "Over Ons" },
     { href: "/contact", label: "Contact" },
