@@ -44,6 +44,60 @@ const Blog = () => {
   };
   const articles = [
     {
+      title: "Cart Abandonment Reduceren Met AI Chatbots: Van 69% naar 23%",
+      excerpt: "AI chatbots reduceren cart abandonment met 66%. Ontdek de exacte strategie waarmee webshops €8.000-12.000 per maand aan verloren omzet terugwinnen.",
+      category: "Strategy",
+      date: "25 jan 2025",
+      readTime: "12 min",
+      image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=400&fit=crop",
+      slug: "/blog/cart-abandonment-reduceren-chatbot"
+    },
+    {
+      title: "Hoe Chatbots Verkoop Boosten: +67% Conversie in E-commerce",
+      excerpt: "AI chatbots verhogen webshop conversie met gemiddeld 67%. Ontdek de 9 manieren waarop chatbots je verkoop direct boosten met concrete cijfers en strategieën.",
+      category: "Strategy",
+      date: "24 jan 2025",
+      readTime: "14 min",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      slug: "/blog/chatbots-boosten-verkoop"
+    },
+    {
+      title: "Conversational Commerce Trends 2025: De Toekomst van Online Shopping",
+      excerpt: "Conversational commerce groeit 300% in 2025. Ontdek de 8 trends die e-commerce transformeren: van AI shopping assistants tot voice commerce.",
+      category: "Trends",
+      date: "23 jan 2025",
+      readTime: "13 min",
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=400&fit=crop",
+      slug: "/blog/conversational-commerce-trends"
+    },
+    {
+      title: "Personalisatie met AI: 47% Hogere Conversie in E-commerce",
+      excerpt: "Ontdek hoe AI-gedreven personalisatie je webshop conversie met 47% verhoogt. Van product aanbevelingen tot dynamic pricing - complete gids voor 2025.",
+      category: "Strategy",
+      date: "22 jan 2025",
+      readTime: "11 min",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      slug: "/blog/personalisatie-ai-ecommerce"
+    },
+    {
+      title: "AI Chatbots vs Live Chat: Welke Kies Je in 2025?",
+      excerpt: "AI chatbots of live chat? Complete vergelijking op kosten, snelheid, schaalbaarheid en klanttevredenheid. Ontdek welke oplossing het beste past bij jouw webshop.",
+      category: "Vergelijking",
+      date: "21 jan 2025",
+      readTime: "10 min",
+      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=400&fit=crop",
+      slug: "/blog/chatbots-vs-live-chat"
+    },
+    {
+      title: "Toekomst AI in E-commerce 2026: Wat Komt Er Aan?",
+      excerpt: "De AI revolutie in e-commerce versnelt in 2026. Ontdek de 7 belangrijkste trends die je webshop transformeren en hoe je er nu op voorbereid kunt zijn.",
+      category: "Trends",
+      date: "20 jan 2025",
+      readTime: "12 min",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400&fit=crop",
+      slug: "/blog/toekomst-ai-ecommerce-2026"
+    },
+    {
       title: "10 Processen die AI Chatbots Automatiseren in E-commerce",
       excerpt: "Ontdek welke repetitieve e-commerce processen AI chatbots volledig automatiseren. Van orderstatus tot productadvies - AI chatbots doen het voor je.",
       category: "Use Cases",
