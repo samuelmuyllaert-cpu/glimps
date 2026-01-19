@@ -50,7 +50,8 @@ const routesToPrerender = [
   '/industries/meubels-interieur',
   '/industries/sportkleding-fitness',
   '/industries/tuin-buitenleven',
-  '/legal'
+  '/legal',
+  '/3dprintingwinkel'
 ];
 
 (async () => {
