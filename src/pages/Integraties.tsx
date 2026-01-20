@@ -27,28 +27,52 @@ const Integraties = () => {
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
       integrations: [
-        { 
-          name: "Shopify", 
+        {
+          name: "Shopify",
           logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg",
           description: "Automatische sync van producten, voorraad en klantgegevens",
           status: "Live"
         },
-        { 
-          name: "WooCommerce", 
+        {
+          name: "WooCommerce",
           logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg",
           description: "Volledige integratie met WordPress en WooCommerce stores",
           status: "Live"
         },
-        { 
-          name: "Magento", 
+        {
+          name: "Magento",
           logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Magento_Logo.svg",
           description: "Enterprise e-commerce platform integratie",
           status: "Live"
         },
-        { 
-          name: "Odoo", 
+        {
+          name: "Odoo",
           logo: odooLogo,
           description: "Complete ERP en e-commerce suite integratie",
+          status: "Live"
+        },
+        {
+          name: "Lightspeed",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Lightspeed_Logo.svg",
+          description: "POS en e-commerce platform voor retail en horeca",
+          status: "Live"
+        },
+        {
+          name: "PrestaShop",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Prestashop_logo.svg",
+          description: "Open source e-commerce oplossing integratie",
+          status: "Live"
+        },
+        {
+          name: "Wix",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wix.com_website_logo.svg",
+          description: "Wix webshop platform integratie",
+          status: "Live"
+        },
+        {
+          name: "WordPress",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
+          description: "WordPress website en blog integratie",
           status: "Live"
         },
       ]
