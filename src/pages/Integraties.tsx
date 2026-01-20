@@ -19,6 +19,15 @@ import bpostLogo from "@/assets/bpost-logo.png";
 import odooLogo from "@/assets/odoo-logo.png";
 import postnlLogo from "@/assets/postnl-logo.png";
 import sendcloudLogo from "@/assets/sendcloud-logo.png";
+import myparcelLogo from "@/assets/myparcel-logo.svg";
+import picqerLogo from "@/assets/picqer-logo.svg";
+import fulfillmentLogo from "@/assets/fulfillment-logo.svg";
+import hubspotLogo from "@/assets/hubspot-logo.png";
+import makeLogo from "@/assets/make-logo.svg";
+import zapierLogo from "@/assets/zapier-logo.svg";
+import n8nLogo from "@/assets/n8n-logo.svg";
+import apiLogo from "@/assets/api-logo.svg";
+import webhookLogo from "@/assets/webhook-logo.svg";
 
 const Integraties = () => {
   const integrationCategories = [
@@ -116,19 +125,19 @@ const Integraties = () => {
         },
         {
           name: "MyParcel",
-          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1489559011/rwsccqgzjlcfqmx4ywzi.png",
+          logo: myparcelLogo,
           description: "Multi-carrier verzendplatform voor webshops",
           status: "Live"
         },
         {
           name: "Picqer",
-          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1491300506/tz9rlokfmlbhcvqz7a8n.png",
+          logo: picqerLogo,
           description: "Magazijn- en voorraadbeheer systeem",
           status: "Live"
         },
         {
           name: "Fulfillment Centers",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Eo_circle_orange_white_letter-f.svg/240px-Eo_circle_orange_white_letter-f.svg.png",
+          logo: fulfillmentLogo,
           description: "Koppeling met externe fulfillment en logistieke partners",
           status: "Live"
         },
@@ -190,7 +199,7 @@ const Integraties = () => {
         },
         {
           name: "HubSpot",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/HubSpot_Logo.svg/320px-HubSpot_Logo.svg.png",
+          logo: hubspotLogo,
           description: "CRM synchronisatie en lead management",
           status: "Binnenkort"
         },
@@ -204,31 +213,31 @@ const Integraties = () => {
       integrations: [
         {
           name: "Make (Integromat)",
-          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/lsrngz7tgupk7kmaaiuj",
+          logo: makeLogo,
           description: "Geavanceerde workflow automatisering en integraties",
           status: "Live"
         },
         {
           name: "Zapier",
-          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1500230015/yyfagcgul4fdb7pgjrvs.png",
+          logo: zapierLogo,
           description: "Automatiseer taken tussen je favoriete apps",
           status: "Live"
         },
         {
           name: "n8n",
-          logo: "https://avatars.githubusercontent.com/u/45487711?s=200&v=4",
+          logo: n8nLogo,
           description: "Open-source workflow automatisering platform",
           status: "Live"
         },
         {
           name: "REST API",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Eo_circle_blue_white_letter-a.svg/240px-Eo_circle_blue_white_letter-a.svg.png",
+          logo: apiLogo,
           description: "Volledige RESTful API voor custom integraties",
           status: "Live"
         },
         {
           name: "Webhooks",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eo_circle_green_white_letter-w.svg/240px-Eo_circle_green_white_letter-w.svg.png",
+          logo: webhookLogo,
           description: "Real-time event notificaties via webhooks",
           status: "Live"
         },
