@@ -83,22 +83,52 @@ const Integraties = () => {
       color: "text-orange-500",
       bgColor: "bg-orange-500/10",
       integrations: [
-        { 
-          name: "SendCloud", 
+        {
+          name: "SendCloud",
           logo: sendcloudLogo,
           description: "Track & trace, verzendlabels en automatische updates",
           status: "Live"
         },
-        { 
-          name: "bpost", 
+        {
+          name: "bpost",
           logo: bpostLogo,
           description: "Belgische postsysteem integratie voor tracking",
           status: "Live"
         },
-        { 
-          name: "PostNL", 
+        {
+          name: "PostNL",
           logo: postnlLogo,
           description: "Nederlandse post tracking en verzending",
+          status: "Live"
+        },
+        {
+          name: "DHL",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/a/ac/DHL_Logo.svg",
+          description: "Internationale verzending en tracking via DHL",
+          status: "Live"
+        },
+        {
+          name: "GLS",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/1/12/GLS_Logo.svg",
+          description: "Europese pakketbezorging en tracking",
+          status: "Live"
+        },
+        {
+          name: "MyParcel",
+          logo: "https://cdn.myparcel.nl/img/logo.svg",
+          description: "Multi-carrier verzendplatform voor webshops",
+          status: "Live"
+        },
+        {
+          name: "Picqer",
+          logo: "https://picqer.com/nl/app/themes/picqer/images/picqer-logo.svg",
+          description: "Magazijn- en voorraadbeheer systeem",
+          status: "Live"
+        },
+        {
+          name: "Fulfillment Centers",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Warehouse_icon.svg",
+          description: "Koppeling met externe fulfillment en logistieke partners",
           status: "Live"
         },
       ]
