@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="#DF0067" rx="4"/>
+  <circle cx="30" cy="40" r="18" fill="white"/>
+  <path d="M30 28 L30 52 M22 40 L38 40" stroke="#DF0067" stroke-width="4" stroke-linecap="round"/>
+  <text x="55" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="white">PrestaShop</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="#0C6EFC" rx="4"/>
+  <path d="M55 25 L45 55 L40 25 L30 25 L35 55 L25 25 L15 25 L28 60 L38 60 L43 40 L48 60 L58 60 L71 25 L61 25 L55 45 L49 25 L55 25 Z" fill="white"/>
+  <text x="85" y="55" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">ix</text>
+</svg>
