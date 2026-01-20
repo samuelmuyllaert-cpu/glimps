@@ -281,6 +281,111 @@ const Features = () => {
             </h1>
           </div>
 
+          {/* Vision Diagram */}
+          <div className="mb-32 max-w-5xl mx-auto">
+            <div className="relative">
+              {/* Top Layer - Wauw Experience */}
+              <div className="relative z-10 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-2 border-primary/30 rounded-3xl p-8 md:p-12 mb-6">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 shadow-lg flex-shrink-0">
+                    <Star className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-2">Wauw-Experience Laag</h3>
+                    <p className="text-muted-foreground">Gepersonaliseerde shopping journey die klanten verrast</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-background/80 backdrop-blur border border-border rounded-xl p-5 hover:border-primary/40 transition-all group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <ShoppingCart className="w-5 h-5 text-primary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Product Carousels</h4>
+                    <p className="text-sm text-muted-foreground">Visuele product ontdekking met swipeable carrousels</p>
+                  </div>
+
+                  <div className="bg-background/80 backdrop-blur border border-border rounded-xl p-5 hover:border-primary/40 transition-all group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <TrendingUp className="w-5 h-5 text-primary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Slimme Upsells</h4>
+                    <p className="text-sm text-muted-foreground">AI-gedreven product aanbevelingen op het juiste moment</p>
+                  </div>
+
+                  <div className="bg-background/80 backdrop-blur border border-border rounded-xl p-5 hover:border-primary/40 transition-all group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <Zap className="w-5 h-5 text-primary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Checkout Interventie</h4>
+                    <p className="text-sm text-muted-foreground">Real-time hulp wanneer klanten twijfelen</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Arrow Connector */}
+              <div className="flex justify-center -my-3 relative z-20">
+                <div className="bg-background border-2 border-border rounded-full p-3 shadow-lg">
+                  <div className="text-2xl">↓</div>
+                </div>
+              </div>
+
+              {/* Bottom Layer - Foundation */}
+              <div className="relative bg-gradient-to-br from-muted/50 to-muted/20 border-2 border-border rounded-3xl p-8 md:p-12 mt-6">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-muted-foreground/80 to-muted-foreground/60 shadow-lg flex-shrink-0">
+                    <Layers className="w-6 h-6 text-background" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-2">Fundament Laag</h3>
+                    <p className="text-muted-foreground">Solide customer service basis voor elke e-commerce</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-background/80 backdrop-blur border border-border rounded-xl p-5 hover:border-muted-foreground/40 transition-all group">
+                    <div className="w-10 h-10 rounded-lg bg-muted-foreground/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <MessageSquare className="w-5 h-5 text-muted-foreground" />
+                    </div>
+                    <h4 className="font-semibold mb-2">FAQ Beantwoorden</h4>
+                    <p className="text-sm text-muted-foreground">Direct antwoord op veelgestelde vragen 24/7</p>
+                  </div>
+
+                  <div className="bg-background/80 backdrop-blur border border-border rounded-xl p-5 hover:border-muted-foreground/40 transition-all group">
+                    <div className="w-10 h-10 rounded-lg bg-muted-foreground/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <Package className="w-5 h-5 text-muted-foreground" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Pakket Tracking</h4>
+                    <p className="text-sm text-muted-foreground">Real-time verzendstatus ophalen en delen</p>
+                  </div>
+
+                  <div className="bg-background/80 backdrop-blur border border-border rounded-xl p-5 hover:border-muted-foreground/40 transition-all group">
+                    <div className="w-10 h-10 rounded-lg bg-muted-foreground/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <RotateCcw className="w-5 h-5 text-muted-foreground" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Retour Afhandeling</h4>
+                    <p className="text-sm text-muted-foreground">Automatisch retourproces initiëren en begeleiden</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Side Label */}
+              <div className="absolute -left-8 top-1/2 -translate-y-1/2 -rotate-90 hidden lg:block">
+                <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                  <span>Glimps Visie</span>
+                  <div className="w-12 h-px bg-border"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Description */}
+            <div className="mt-8 text-center">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Glimps combineert een <span className="font-semibold text-foreground">solide customer service basis</span> met een <span className="font-semibold text-primary">premium shopping experience</span>. Zo krijg je niet alleen efficiënte service, maar ook een echte e-commerce ervaring die klanten laat terugkomen.
+              </p>
+            </div>
+          </div>
+
           {/* Features */}
           <div className="space-y-32">
             {features.map((feature, index) => (
