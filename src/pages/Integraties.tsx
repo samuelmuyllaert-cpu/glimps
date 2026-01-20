@@ -85,20 +85,56 @@ const Integraties = () => {
       color: "text-green-500",
       bgColor: "bg-green-500/10",
       integrations: [
-        { 
-          name: "WhatsApp Business", 
+        {
+          name: "WhatsApp Business",
           logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
           description: "Directe WhatsApp communicatie met klanten",
           status: "Live"
         },
-        { 
-          name: "Slack", 
+        {
+          name: "Instagram",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
+          description: "Beantwoord DM's en comments automatisch via Instagram",
+          status: "Live"
+        },
+        {
+          name: "Messenger",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg",
+          description: "Facebook Messenger integratie voor klantenservice",
+          status: "Live"
+        },
+        {
+          name: "Telegram",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
+          description: "Telegram bot integratie voor klantcommunicatie",
+          status: "Live"
+        },
+        {
+          name: "Twilio",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg",
+          description: "SMS en voice communicatie via Twilio platform",
+          status: "Live"
+        },
+        {
+          name: "Email",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg",
+          description: "Automatische email afhandeling en responses",
+          status: "Live"
+        },
+        {
+          name: "Zendesk",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zendesk_logo.svg",
+          description: "Customer support ticket systeem integratie",
+          status: "Live"
+        },
+        {
+          name: "Slack",
           logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
           description: "Team notificaties en interne communicatie",
           status: "Live"
         },
-        { 
-          name: "HubSpot", 
+        {
+          name: "HubSpot",
           logo: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png",
           description: "CRM synchronisatie en lead management",
           status: "Binnenkort"
