@@ -18,7 +18,7 @@ const PrintingWinkel = () => {
     script.id = "";
     script.type = 'text/javascript';
     script.charset = "";
-    script.src = 'https://widgets.glimps.group/integrations/widget/v2.js?widget=cmkllztwb2srnygfq9k2ap0ot';
+    script.src = 'https://widgets.glimps.group/integrations/widget/v2.js?widget=cmklndrqs2v9vygfq4vu66wci';
     document.body.appendChild(script);
 
     return () => {
