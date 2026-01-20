@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData, { baseOrganization } from "@/components/StructuredData";
-import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe } from "lucide-react";
+import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe, Layout } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import productSneakerBlue from "@/assets/product-sneaker-blue.png";
 import productJacketRed from "@/assets/product-jacket-red.png";
@@ -57,6 +57,18 @@ const Features = () => {
         "Realtime synchronisatie met productcatalogus"
       ],
       mockupType: "product-search"
+    },
+    {
+      icon: Layout,
+      badge: "PRODUCT CAROUSEL",
+      title: "Toon producten in een visueel aantrekkelijke carousel",
+      description: "De chatbot presenteert producten in een prachtige carousel weergave met heldere productkaarten. Klanten zien direct productafbeeldingen, specificaties en kunnen door meerdere opties scrollen - perfect voor productoverzichten en vergelijkingen.",
+      benefits: [
+        "Visueel aantrekkelijke productkaarten met afbeeldingen",
+        "Horizontaal scrollbare carousel voor meerdere producten",
+        "Directe call-to-action buttons per product"
+      ],
+      mockupType: "product-carousel"
     },
     {
       icon: TrendingUp,
@@ -763,6 +775,121 @@ const Features = () => {
                                <span className="text-primary font-semibold">€99,99</span>
                              </div>
                            </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "product-carousel" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-primary/10 rounded-xl">
+                            <Layout className="w-5 h-5 text-primary" />
+                            <span className="text-sm font-medium">Ik heb een selectie producten voor je gevonden:</span>
+                          </div>
+
+                          <div className="relative">
+                            <div className="overflow-x-auto pb-4 scrollbar-hide">
+                              <div className="flex gap-4 min-w-max px-1">
+                                <div className="w-64 bg-background border-2 border-border rounded-xl overflow-hidden hover:border-primary/50 transition-colors">
+                                  <div className="bg-muted/30 p-4 flex items-center justify-center">
+                                    <img src={productSneakerBlue} alt="Product 1" className="w-full h-40 object-contain" />
+                                  </div>
+                                  <div className="p-4 space-y-3">
+                                    <div className="flex items-center justify-between">
+                                      <Badge className="bg-primary/20 text-primary hover:bg-primary/20">15% korting</Badge>
+                                      <div className="flex items-center gap-1">
+                                        {[1,2,3,4,5].map(i => (
+                                          <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                                        ))}
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <h4 className="font-semibold text-base mb-1">Classic Sneakers</h4>
+                                      <p className="text-xs text-muted-foreground line-clamp-2">
+                                        Comfortabele sneakers met premium materiaal en moderne uitstraling
+                                      </p>
+                                    </div>
+                                    <div className="flex items-center justify-between pt-2 border-t border-border">
+                                      <div className="text-lg font-bold text-primary">€89,99</div>
+                                      <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">
+                                        Bekijk product
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="w-64 bg-background border-2 border-border rounded-xl overflow-hidden hover:border-primary/50 transition-colors">
+                                  <div className="bg-muted/30 p-4 flex items-center justify-center">
+                                    <img src={productJacketRed} alt="Product 2" className="w-full h-40 object-contain" />
+                                  </div>
+                                  <div className="p-4 space-y-3">
+                                    <div className="flex items-center justify-between">
+                                      <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/20">Op voorraad</Badge>
+                                      <div className="flex items-center gap-1">
+                                        {[1,2,3,4].map(i => (
+                                          <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                                        ))}
+                                        <Star className="w-3 h-3 text-muted-foreground" />
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <h4 className="font-semibold text-base mb-1">Winterjas Premium</h4>
+                                      <p className="text-xs text-muted-foreground line-clamp-2">
+                                        Warme winterjas met waterafstotende stof, perfect voor koude dagen
+                                      </p>
+                                    </div>
+                                    <div className="flex items-center justify-between pt-2 border-t border-border">
+                                      <div className="text-lg font-bold text-primary">€149,99</div>
+                                      <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">
+                                        Bekijk product
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="w-64 bg-background border-2 border-primary/50 rounded-xl overflow-hidden relative">
+                                  <div className="absolute top-2 right-2 z-10">
+                                    <Badge className="bg-primary text-primary-foreground">Populair</Badge>
+                                  </div>
+                                  <div className="bg-muted/30 p-4 flex items-center justify-center">
+                                    <img src={productHeadphonesWhite} alt="Product 3" className="w-full h-40 object-contain" />
+                                  </div>
+                                  <div className="p-4 space-y-3">
+                                    <div className="flex items-center justify-between">
+                                      <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/20">Op voorraad</Badge>
+                                      <div className="flex items-center gap-1">
+                                        {[1,2,3,4,5].map(i => (
+                                          <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                                        ))}
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <h4 className="font-semibold text-base mb-1">Wireless Headphones</h4>
+                                      <p className="text-xs text-muted-foreground line-clamp-2">
+                                        Premium geluidskwaliteit met noise cancelling en 30 uur batterij
+                                      </p>
+                                    </div>
+                                    <div className="flex items-center justify-between pt-2 border-t border-border">
+                                      <div className="text-lg font-bold text-primary">€129,99</div>
+                                      <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">
+                                        Bekijk product
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center justify-center gap-2 mt-3">
+                              <div className="w-2 h-2 rounded-full bg-primary" />
+                              <div className="w-2 h-2 rounded-full bg-muted" />
+                              <div className="w-2 h-2 rounded-full bg-muted" />
+                            </div>
+                          </div>
+
+                          <div className="p-4 bg-muted/30 rounded-xl">
+                            <p className="text-sm text-muted-foreground">
+                              Wil je meer weten over een specifiek product of heb je een vraag voor een bepaald budget?
+                            </p>
+                          </div>
                         </div>
                       )}
 
