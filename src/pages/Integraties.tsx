@@ -116,19 +116,19 @@ const Integraties = () => {
         },
         {
           name: "MyParcel",
-          logo: "https://cdn.myparcel.nl/img/logo.svg",
+          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1489559011/rwsccqgzjlcfqmx4ywzi.png",
           description: "Multi-carrier verzendplatform voor webshops",
           status: "Live"
         },
         {
           name: "Picqer",
-          logo: "https://picqer.com/nl/app/themes/picqer/images/picqer-logo.svg",
+          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1491300506/tz9rlokfmlbhcvqz7a8n.png",
           description: "Magazijn- en voorraadbeheer systeem",
           status: "Live"
         },
         {
           name: "Fulfillment Centers",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Warehouse_icon.svg",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Eo_circle_orange_white_letter-f.svg/240px-Eo_circle_orange_white_letter-f.svg.png",
           description: "Koppeling met externe fulfillment en logistieke partners",
           status: "Live"
         },
@@ -190,7 +190,7 @@ const Integraties = () => {
         },
         {
           name: "HubSpot",
-          logo: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/HubSpot_Logo.svg/320px-HubSpot_Logo.svg.png",
           description: "CRM synchronisatie en lead management",
           status: "Binnenkort"
         },
@@ -204,31 +204,31 @@ const Integraties = () => {
       integrations: [
         {
           name: "Make (Integromat)",
-          logo: "https://www.make.com/en/assets/brand/make-logo.svg",
+          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/lsrngz7tgupk7kmaaiuj",
           description: "Geavanceerde workflow automatisering en integraties",
           status: "Live"
         },
         {
           name: "Zapier",
-          logo: "https://cdn.zapier.com/zapier/images/logos/zapier-logo.png",
+          logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1500230015/yyfagcgul4fdb7pgjrvs.png",
           description: "Automatiseer taken tussen je favoriete apps",
           status: "Live"
         },
         {
           name: "n8n",
-          logo: "https://n8n.io/favicon.svg",
+          logo: "https://avatars.githubusercontent.com/u/45487711?s=200&v=4",
           description: "Open-source workflow automatisering platform",
           status: "Live"
         },
         {
           name: "REST API",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/HTTP_logo.svg",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Eo_circle_blue_white_letter-a.svg/240px-Eo_circle_blue_white_letter-a.svg.png",
           description: "Volledige RESTful API voor custom integraties",
           status: "Live"
         },
         {
           name: "Webhooks",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Webhook_logo.svg",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eo_circle_green_white_letter-w.svg/240px-Eo_circle_green_white_letter-w.svg.png",
           description: "Real-time event notificaties via webhooks",
           status: "Live"
         },
