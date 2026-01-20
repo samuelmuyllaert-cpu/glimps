@@ -2,8 +2,16 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData, { baseOrganization } from "@/components/StructuredData";
-import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe } from "lucide-react";
+import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import productSneakerBlue from "@/assets/product-sneaker-blue.png";
 import productJacketRed from "@/assets/product-jacket-red.png";
 import productTshirtBlack from "@/assets/product-tshirt-black.png";
@@ -1090,6 +1098,202 @@ const Features = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Product Carousel Section */}
+          <div className="mt-32">
+            <div className="text-center mb-12">
+              <h2 className="font-inter text-3xl md:text-5xl font-normal mb-4 leading-tight">
+                Ontdek onze <span className="text-primary">product collectie</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Bekijk een selectie van producten waarmee onze AI chatbot je klanten kan helpen
+              </p>
+            </div>
+
+            <div className="max-w-6xl mx-auto px-12">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-4">
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productSneakerBlue}
+                          alt="Sneaker Blue"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Premium Sneakers</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Comfortabele sportschoenen voor dagelijks gebruik</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€89,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productJacketRed}
+                          alt="Jacket Red"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Winterjas Classic</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Warme winterjas voor koude dagen</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€129,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productHoodieGray}
+                          alt="Hoodie Gray"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Hoodie Comfort</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Zachte hoodie voor casual looks</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€49,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productBackpackBrown}
+                          alt="Backpack Brown"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Rugzak Vintage</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Stijlvolle rugzak voor onderweg</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€79,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productHeadphonesWhite}
+                          alt="Headphones White"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Koptelefoon Pro</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Premium geluidskwaliteit met noise cancelling</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€199,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productWatchSilver}
+                          alt="Watch Silver"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Smartwatch Elite</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Stijlvolle smartwatch met alle functies</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€249,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productSunglassesPink}
+                          alt="Sunglasses Pink"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Zonnebril Fashion</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Trendy zonnebril met UV-bescherming</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€39,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                      <div className="aspect-square overflow-hidden bg-muted/30">
+                        <img
+                          src={productYogamatPurple}
+                          alt="Yogamat Purple"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">Yogamat Premium</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Extra dikke yogamat voor optimaal comfort</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-primary">€59,99</span>
+                          <Badge className="bg-green-500/20 text-green-600 hover:bg-green-500/30">Op voorraad</Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
+            </div>
+
+            <div className="text-center mt-12">
+              <a
+                href="/demo"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors group"
+              >
+                Bekijk hoe de chatbot helpt met deze producten
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </div>
 
           {/* CTA Section */}
