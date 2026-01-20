@@ -4,15 +4,16 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  ShoppingCart, 
-  Package, 
-  MessageSquare, 
-  Mail, 
-  BarChart, 
+import {
+  ShoppingCart,
+  Package,
+  MessageSquare,
+  Mail,
+  BarChart,
   Users,
   Zap,
-  CheckCircle2
+  CheckCircle2,
+  Workflow
 } from "lucide-react";
 import bpostLogo from "@/assets/bpost-logo.png";
 import odooLogo from "@/assets/odoo-logo.png";
@@ -192,6 +193,44 @@ const Integraties = () => {
           logo: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png",
           description: "CRM synchronisatie en lead management",
           status: "Binnenkort"
+        },
+      ]
+    },
+    {
+      title: "Automations & API",
+      icon: Workflow,
+      color: "text-violet-500",
+      bgColor: "bg-violet-500/10",
+      integrations: [
+        {
+          name: "Make (Integromat)",
+          logo: "https://www.make.com/en/assets/brand/make-logo.svg",
+          description: "Geavanceerde workflow automatisering en integraties",
+          status: "Live"
+        },
+        {
+          name: "Zapier",
+          logo: "https://cdn.zapier.com/zapier/images/logos/zapier-logo.png",
+          description: "Automatiseer taken tussen je favoriete apps",
+          status: "Live"
+        },
+        {
+          name: "n8n",
+          logo: "https://n8n.io/favicon.svg",
+          description: "Open-source workflow automatisering platform",
+          status: "Live"
+        },
+        {
+          name: "REST API",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/HTTP_logo.svg",
+          description: "Volledige RESTful API voor custom integraties",
+          status: "Live"
+        },
+        {
+          name: "Webhooks",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Webhook_logo.svg",
+          description: "Real-time event notificaties via webhooks",
+          status: "Live"
         },
       ]
     },
