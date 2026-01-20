@@ -47,6 +47,18 @@ const Features = () => {
       mockupType: "cart-context"
     },
     {
+      icon: RefreshCw,
+      badge: "WINKELMANDJE RECOVERY",
+      title: "Win verlaten winkelmandjes automatisch terug",
+      description: "De chatbot neemt proactief contact op met klanten die hun winkelmandje hebben verlaten. Met gepersonaliseerde berichten, exclusieve kortingen en handige herinneringen verhoog je je conversie met gemiddeld 35%.",
+      benefits: [
+        "Automatische herinneringen op het juiste moment",
+        "Gepersonaliseerde kortingscodes voor verlaten mandjes",
+        "Identificeer en los bezwaren op via conversatie"
+      ],
+      mockupType: "cart-recovery"
+    },
+    {
       icon: Search,
       badge: "SLIMME PRODUCT ZOEKER",
       title: "AI zoekt automatisch de perfecte producten",
@@ -722,6 +734,96 @@ const Features = () => {
                                </button>
                              </div>
                            </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "cart-recovery" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg text-xs text-muted-foreground">
+                            <span>2 uur geleden verlaten</span>
+                            <span className="flex items-center gap-1">
+                              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                              Automatisch geactiveerd
+                            </span>
+                          </div>
+
+                          <div className="p-4 bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl space-y-3">
+                            <div className="flex items-start gap-3">
+                              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                <Bot className="w-5 h-5 text-primary" />
+                              </div>
+                              <div className="flex-1 space-y-2">
+                                <p className="text-sm font-semibold">Hé! Ik zag dat je deze items hebt achtergelaten 👀</p>
+                                <p className="text-sm text-muted-foreground">
+                                  Misschien was je even afgeleid? Geen probleem! Je items wachten nog steeds op je.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="space-y-3 p-4 bg-background border border-border rounded-xl">
+                            <div className="text-sm font-semibold mb-2">Je verlaten items:</div>
+                            <div className="flex items-center gap-3 p-3 bg-muted/20 rounded-lg">
+                              <img src={productHoodieGray} alt="Product" className="w-14 h-14 rounded object-cover" />
+                              <div className="flex-1">
+                                <div className="text-sm font-semibold mb-1">Premium Hoodie</div>
+                                <div className="text-xs text-muted-foreground">Maat: L • Kleur: Grijs</div>
+                              </div>
+                              <span className="text-primary font-bold">€59,99</span>
+                            </div>
+                            <div className="flex items-center gap-3 p-3 bg-muted/20 rounded-lg">
+                              <img src={productTshirtBlack} alt="Product" className="w-14 h-14 rounded object-cover" />
+                              <div className="flex-1">
+                                <div className="text-sm font-semibold mb-1">Classic T-shirt</div>
+                                <div className="text-xs text-muted-foreground">Maat: M • Kleur: Zwart</div>
+                              </div>
+                              <span className="text-primary font-bold">€24,99</span>
+                            </div>
+                          </div>
+
+                          <div className="p-4 bg-gradient-to-r from-green-500/10 to-green-500/5 border border-green-500/30 rounded-xl">
+                            <div className="flex items-center gap-3 mb-3">
+                              <div className="text-2xl">🎁</div>
+                              <div className="flex-1">
+                                <div className="text-sm font-semibold text-green-700 dark:text-green-400 mb-1">
+                                  Exclusieve korting voor jou!
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  Gebruik code COMEBACK10 voor 10% korting op je bestelling
+                                </div>
+                              </div>
+                            </div>
+                            <div className="flex items-center justify-center gap-2 p-3 bg-background border-2 border-dashed border-green-500/40 rounded-lg">
+                              <span className="font-mono font-bold text-lg text-green-600">COMEBACK10</span>
+                              <button className="text-xs bg-green-500/20 text-green-600 px-3 py-1 rounded hover:bg-green-500/30 transition-colors">
+                                Kopiëren
+                              </button>
+                            </div>
+                          </div>
+
+                          <div className="space-y-2">
+                            <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
+                              <span className="text-sm">Subtotaal</span>
+                              <span className="font-semibold">€84,98</span>
+                            </div>
+                            <div className="flex items-center justify-between p-3 bg-green-500/10 rounded-lg">
+                              <span className="text-sm text-green-600 font-medium">Korting (10%)</span>
+                              <span className="font-semibold text-green-600">-€8,50</span>
+                            </div>
+                            <div className="flex items-center justify-between p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                              <span className="font-bold">Nieuw totaal</span>
+                              <span className="text-xl font-bold text-primary">€76,48</span>
+                            </div>
+                          </div>
+
+                          <button className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-semibold text-base hover:bg-primary/90 transition-colors shadow-lg">
+                            Afrekenen met korting 🎉
+                          </button>
+
+                          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground p-3 bg-muted/30 rounded-lg">
+                            <span>⏰</span>
+                            <span>Deze korting is 24 uur geldig</span>
+                          </div>
                         </div>
                       )}
 
