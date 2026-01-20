@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData, { baseOrganization } from "@/components/StructuredData";
-import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe, Layout } from "lucide-react";
+import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe, Layout, AlertCircle, ChevronRight, Send } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import productSneakerBlue from "@/assets/product-sneaker-blue.png";
 import productJacketRed from "@/assets/product-jacket-red.png";
@@ -48,13 +48,13 @@ const Features = () => {
     },
     {
       icon: RefreshCw,
-      badge: "WINKELMANDJE RECOVERY",
-      title: "Win verlaten winkelmandjes automatisch terug",
-      description: "De chatbot neemt proactief contact op met klanten die hun winkelmandje hebben verlaten. Met gepersonaliseerde berichten, exclusieve kortingen en handige herinneringen verhoog je je conversie met gemiddeld 35%.",
+      badge: "CHECKOUT INTERVENTIE",
+      title: "Grijp direct in wanneer klanten de checkout verlaten",
+      description: "De chatbot detecteert wanneer een klant de checkout pagina verlaat en springt automatisch open om te helpen. Geen korting nodig - gewoon het juiste hulp op het juiste moment. Los bezwaren op, beantwoord vragen en begeleid klanten alsnog naar een succesvolle aankoop.",
       benefits: [
-        "Automatische herinneringen op het juiste moment",
-        "Gepersonaliseerde kortingscodes voor verlaten mandjes",
-        "Identificeer en los bezwaren op via conversatie"
+        "Real-time detectie van checkout-verlating",
+        "Proactieve hulp voordat de klant echt weg is",
+        "Identificeer én los bezwaren direct op"
       ],
       mockupType: "cart-recovery"
     },
@@ -739,90 +739,101 @@ const Features = () => {
 
                       {feature.mockupType === "cart-recovery" && (
                         <div className="space-y-4">
-                          <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg text-xs text-muted-foreground">
-                            <span>2 uur geleden verlaten</span>
+                          <div className="flex items-center justify-between p-3 bg-orange-500/10 border border-orange-500/30 rounded-lg text-xs">
+                            <span className="flex items-center gap-2 text-orange-600 dark:text-orange-400 font-medium">
+                              <AlertCircle className="w-4 h-4" />
+                              Klant verlaat checkout pagina
+                            </span>
                             <span className="flex items-center gap-1">
-                              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                              Automatisch geactiveerd
+                              <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                              Live detectie
                             </span>
                           </div>
 
-                          <div className="p-4 bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl space-y-3">
-                            <div className="flex items-start gap-3">
-                              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                <Bot className="w-5 h-5 text-primary" />
-                              </div>
-                              <div className="flex-1 space-y-2">
-                                <p className="text-sm font-semibold">Hé! Ik zag dat je deze items hebt achtergelaten 👀</p>
-                                <p className="text-sm text-muted-foreground">
-                                  Misschien was je even afgeleid? Geen probleem! Je items wachten nog steeds op je.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
+                          <div className="relative border-2 border-primary rounded-2xl bg-gradient-to-br from-background to-muted/30 shadow-2xl overflow-hidden">
+                            <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-primary/5 to-transparent" />
 
-                          <div className="space-y-3 p-4 bg-background border border-border rounded-xl">
-                            <div className="text-sm font-semibold mb-2">Je verlaten items:</div>
-                            <div className="flex items-center gap-3 p-3 bg-muted/20 rounded-lg">
-                              <img src={productHoodieGray} alt="Product" className="w-14 h-14 rounded object-cover" />
-                              <div className="flex-1">
-                                <div className="text-sm font-semibold mb-1">Premium Hoodie</div>
-                                <div className="text-xs text-muted-foreground">Maat: L • Kleur: Grijs</div>
-                              </div>
-                              <span className="text-primary font-bold">€59,99</span>
-                            </div>
-                            <div className="flex items-center gap-3 p-3 bg-muted/20 rounded-lg">
-                              <img src={productTshirtBlack} alt="Product" className="w-14 h-14 rounded object-cover" />
-                              <div className="flex-1">
-                                <div className="text-sm font-semibold mb-1">Classic T-shirt</div>
-                                <div className="text-xs text-muted-foreground">Maat: M • Kleur: Zwart</div>
-                              </div>
-                              <span className="text-primary font-bold">€24,99</span>
-                            </div>
-                          </div>
-
-                          <div className="p-4 bg-gradient-to-r from-green-500/10 to-green-500/5 border border-green-500/30 rounded-xl">
-                            <div className="flex items-center gap-3 mb-3">
-                              <div className="text-2xl">🎁</div>
-                              <div className="flex-1">
-                                <div className="text-sm font-semibold text-green-700 dark:text-green-400 mb-1">
-                                  Exclusieve korting voor jou!
+                            <div className="relative p-6 space-y-4">
+                              <div className="flex items-center gap-3 pb-4 border-b border-border">
+                                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                                  <Bot className="w-6 h-6 text-primary-foreground" />
                                 </div>
-                                <div className="text-xs text-muted-foreground">
-                                  Gebruik code COMEBACK10 voor 10% korting op je bestelling
+                                <div>
+                                  <div className="font-semibold text-sm">Glimps Shopping Assistent</div>
+                                  <div className="text-xs text-green-600 flex items-center gap-1">
+                                    <div className="w-2 h-2 rounded-full bg-green-500" />
+                                    Online nu
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                            <div className="flex items-center justify-center gap-2 p-3 bg-background border-2 border-dashed border-green-500/40 rounded-lg">
-                              <span className="font-mono font-bold text-lg text-green-600">COMEBACK10</span>
-                              <button className="text-xs bg-green-500/20 text-green-600 px-3 py-1 rounded hover:bg-green-500/30 transition-colors">
-                                Kopiëren
-                              </button>
+
+                              <div className="space-y-3">
+                                <div className="flex gap-3">
+                                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                    <Bot className="w-4 h-4 text-primary" />
+                                  </div>
+                                  <div className="flex-1 space-y-2">
+                                    <div className="bg-primary/10 border border-primary/20 rounded-2xl rounded-tl-sm p-4">
+                                      <p className="text-sm font-semibold mb-2">Hey! Ik zie dat je op het punt staat om te vertrekken 👋</p>
+                                      <p className="text-sm text-muted-foreground">
+                                        Is er iets waar ik je mee kan helpen? Ik sta klaar om al je vragen te beantwoorden!
+                                      </p>
+                                    </div>
+                                    <div className="text-xs text-muted-foreground px-2">Zojuist</div>
+                                  </div>
+                                </div>
+
+                                <div className="space-y-2 p-4 bg-muted/30 rounded-xl">
+                                  <div className="text-xs font-semibold text-muted-foreground mb-3">Je winkelmandje (2 items):</div>
+                                  <div className="flex items-center gap-3 p-2 bg-background rounded-lg">
+                                    <img src={productHoodieGray} alt="Product" className="w-12 h-12 rounded object-cover" />
+                                    <div className="flex-1 min-w-0">
+                                      <div className="text-xs font-medium truncate">Premium Hoodie</div>
+                                      <div className="text-xs text-muted-foreground">Maat L • €59,99</div>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center gap-3 p-2 bg-background rounded-lg">
+                                    <img src={productTshirtBlack} alt="Product" className="w-12 h-12 rounded object-cover" />
+                                    <div className="flex-1 min-w-0">
+                                      <div className="text-xs font-medium truncate">Classic T-shirt</div>
+                                      <div className="text-xs text-muted-foreground">Maat M • €24,99</div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="bg-muted/20 rounded-xl p-3 space-y-2">
+                                  <div className="text-xs font-semibold mb-2">Veelgestelde vragen:</div>
+                                  <button className="w-full text-left text-xs bg-background hover:bg-muted/50 border border-border rounded-lg p-3 transition-colors flex items-center justify-between group">
+                                    <span>Wat zijn de verzendkosten?</span>
+                                    <ChevronRight className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  </button>
+                                  <button className="w-full text-left text-xs bg-background hover:bg-muted/50 border border-border rounded-lg p-3 transition-colors flex items-center justify-between group">
+                                    <span>Kan ik dit ook retourneren?</span>
+                                    <ChevronRight className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  </button>
+                                  <button className="w-full text-left text-xs bg-background hover:bg-muted/50 border border-border rounded-lg p-3 transition-colors flex items-center justify-between group">
+                                    <span>Wanneer wordt dit geleverd?</span>
+                                    <ChevronRight className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                                  </button>
+                                </div>
+
+                                <div className="flex gap-2 pt-2">
+                                  <input
+                                    type="text"
+                                    placeholder="Stel je vraag..."
+                                    className="flex-1 text-sm px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary"
+                                  />
+                                  <button className="px-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors">
+                                    <Send className="w-4 h-4" />
+                                  </button>
+                                </div>
+                              </div>
                             </div>
                           </div>
 
-                          <div className="space-y-2">
-                            <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                              <span className="text-sm">Subtotaal</span>
-                              <span className="font-semibold">€84,98</span>
-                            </div>
-                            <div className="flex items-center justify-between p-3 bg-green-500/10 rounded-lg">
-                              <span className="text-sm text-green-600 font-medium">Korting (10%)</span>
-                              <span className="font-semibold text-green-600">-€8,50</span>
-                            </div>
-                            <div className="flex items-center justify-between p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                              <span className="font-bold">Nieuw totaal</span>
-                              <span className="text-xl font-bold text-primary">€76,48</span>
-                            </div>
-                          </div>
-
-                          <button className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-semibold text-base hover:bg-primary/90 transition-colors shadow-lg">
-                            Afrekenen met korting 🎉
-                          </button>
-
-                          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground p-3 bg-muted/30 rounded-lg">
-                            <span>⏰</span>
-                            <span>Deze korting is 24 uur geldig</span>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground p-3 bg-primary/5 border border-primary/20 rounded-lg">
+                            <Zap className="w-4 h-4 text-primary" />
+                            <span>Bot springt automatisch open wanneer checkout-verlating wordt gedetecteerd</span>
                           </div>
                         </div>
                       )}
