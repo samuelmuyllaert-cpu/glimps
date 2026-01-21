@@ -51,7 +51,9 @@ const routesToPrerender = [
   '/industries/sportkleding-fitness',
   '/industries/tuin-buitenleven',
   '/legal',
-  '/3dprintingwinkel'
+  '/prosportlights',
+  '/3dprintingwinkel',
+  '/lensonline'
 ];
 
 (async () => {

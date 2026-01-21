@@ -46,6 +46,7 @@ import TuinBuitenleven from "./pages/industries/TuinBuitenleven";
 import Legal from "./pages/Legal";
 import ProSportLights from "./pages/ProSportLights";
 import PrintingWinkel from "./pages/PrintingWinkel";
+import LensOnline from "./pages/LensOnline";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -99,6 +100,7 @@ const App = () => (
         <Route path="/legal" element={<Legal />} />
         <Route path="/prosportlights" element={<ProSportLights />} />
         <Route path="/3dprintingwinkel" element={<PrintingWinkel />} />
+        <Route path="/lensonline" element={<LensOnline />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
