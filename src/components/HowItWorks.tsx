@@ -1,29 +1,10 @@
 import { Link } from "react-router-dom";
 import { Bot } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HowItWorks = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Screening van jouw business",
-      description: "We werken enkel samen met merken die écht klaar zijn voor AI. We screenen je webshop, je data en je systemen om te bepalen waar de grootste winst ligt.",
-    },
-    {
-      number: "02",
-      title: "Analyse van klantvragen",
-      description: "We onderzoeken 80% van de meest gestelde vragen — dat is de basis voor maximale automatisering.",
-    },
-    {
-      number: "03",
-      title: "Implementatie & training",
-      description: "Glimps wordt gevoed met jouw productdata, beleid en tone of voice — zodat hij klinkt als jouw merk.",
-    },
-    {
-      number: "04",
-      title: "Livegang & optimalisatie",
-      description: "Na goedkeuring gaat jouw bot live. Vanaf dan verbeteren we continu op basis van echte data.",
-    },
-  ];
+  const { language, t } = useLanguage();
+  const steps: Array<{number: string, title: string, description: string}> = t('howItWorks.steps') as any;
 
   return (
     <section className="relative w-full overflow-hidden bg-background py-20">
@@ -31,17 +12,17 @@ const HowItWorks = () => {
         <div className="mx-auto max-w-6xl">
           {/* Section Header */}
           <div className="mb-16 text-center">
-            <Link 
-              to="/hoe-we-werken"
+            <Link
+              to={language === 'fr' ? '/fr/comment-nous-travaillons' : '/how-we-work'}
               className="inline-block text-sm font-medium text-primary hover:underline mb-4"
             >
-              Hoe het werkt
+              {t('howItWorks.badge')}
             </Link>
             <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
-              Werk slimmer
+              {t('howItWorks.title')}
             </h2>
             <p className="text-4xl font-normal text-foreground md:text-5xl">
-              met directe toegang voor elke klant.
+              {t('howItWorks.subtitle')}
             </p>
           </div>
 

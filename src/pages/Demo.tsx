@@ -28,20 +28,22 @@ import {
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-
-const demoFormSchema = z.object({
-  firstName: z.string().trim().min(1, "Voornaam is verplicht").max(100),
-  lastName: z.string().trim().min(1, "Achternaam is verplicht").max(100),
-  email: z.string().trim().email("Ongeldig e-mailadres").max(255),
-  phone: z.string().trim().optional(),
-  company: z.string().trim().min(1, "Bedrijfsnaam is verplicht").max(200),
-  website: z.string().trim().optional(),
-  employees: z.string().min(1, "Selecteer aantal medewerkers"),
-  message: z.string().trim().max(1000).optional()
-});
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Demo = () => {
+  const { language, t } = useLanguage();
   const { toast } = useToast();
+
+  const demoFormSchema = z.object({
+    firstName: z.string().trim().min(1, language === 'fr' ? "Le prénom est obligatoire" : "Voornaam is verplicht").max(100),
+    lastName: z.string().trim().min(1, language === 'fr' ? "Le nom est obligatoire" : "Achternaam is verplicht").max(100),
+    email: z.string().trim().email(language === 'fr' ? "Adresse e-mail invalide" : "Ongeldig e-mailadres").max(255),
+    phone: z.string().trim().optional(),
+    company: z.string().trim().min(1, language === 'fr' ? "Le nom de l'entreprise est obligatoire" : "Bedrijfsnaam is verplicht").max(200),
+    website: z.string().trim().optional(),
+    employees: z.string().min(1, language === 'fr' ? "Sélectionnez le nombre d'employés" : "Selecteer aantal medewerkers"),
+    message: z.string().trim().max(1000).optional()
+  });
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -84,12 +86,12 @@ const Demo = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Kon demo aanvraag niet verzenden");
+        throw new Error("Could not send demo request");
       }
 
       toast({
-        title: "Demo aanvraag verzonden! 🎉",
-        description: "We nemen binnen 24 uur contact met je op om een geschikte tijd in te plannen.",
+        title: t('demo.toastSuccess'),
+        description: t('demo.toastSuccessDesc'),
       });
 
       // Reset form
@@ -113,14 +115,14 @@ const Demo = () => {
         });
         setErrors(newErrors);
         toast({
-          title: "Vul alle verplichte velden in",
-          description: "Controleer het formulier en probeer opnieuw.",
+          title: t('demo.toastValidation'),
+          description: t('demo.toastValidationDesc'),
           variant: "destructive",
         });
       } else {
         toast({
-          title: "Er is iets misgegaan",
-          description: "Probeer het later opnieuw of neem direct contact met ons op.",
+          title: t('demo.toastError'),
+          description: t('demo.toastErrorDesc'),
           variant: "destructive",
         });
       }
@@ -129,28 +131,7 @@ const Demo = () => {
     }
   };
 
-  const faqs = [
-    {
-      question: "Hoe lang duurt de demo?",
-      answer: "De demo duurt ongeveer 30 minuten. We nemen de tijd om jouw specifieke situatie te begrijpen en te laten zien hoe Glimps precies kan helpen."
-    },
-    {
-      question: "Moet ik iets voorbereiden?",
-      answer: "Nee, dat hoeft niet. We beginnen met een korte screening om te bekijken of het waardevol is om verder te gaan. Tijdens die screening stellen we een paar basisvragen die ons helpen bij de opzet."
-    },
-    {
-      question: "Is de demo echt gratis?",
-      answer: "Ja, de demo is volledig gratis en vrijblijvend. Er zitten geen verborgen kosten aan vast en we vragen geen creditcardgegevens."
-    },
-    {
-      question: "Kan ik de demo ook online volgen?",
-      answer: "Ja! We doen alle demo's via videobellen (Google Meet of Teams), zodat je gemakkelijk vanaf kantoor of thuis kunt deelnemen."
-    },
-    {
-      question: "Wat als Glimps niet bij mijn bedrijf past?",
-      answer: "Geen probleem! We zijn eerlijk over of we een goede match zijn. Als Glimps niet de beste oplossing voor jouw situatie is, zeggen we dat gewoon."
-    }
-  ];
+  const faqs: Array<{q: string, a: string}> = t('demo.faqs') as any;
 
   return (
     <div className="min-h-screen bg-background">
@@ -180,12 +161,15 @@ const Demo = () => {
       <section className="container mx-auto px-6 py-20">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="mb-6 font-inter text-4xl font-normal leading-tight md:text-6xl">
-            Zie hoe Glimps jouw<br />
-            <span className="text-primary">business transformeert</span>
+            {t('demo.title').split('\n').map((line, i) => (
+              <span key={i}>
+                {i === 0 ? line : <span className="text-primary">{line}</span>}
+                {i < t('demo.title').split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            Plan een persoonlijke demo en ontdek hoe onze AI-chatbot jouw klantenservice 
-            automatiseert, conversies verhoogt en klanten bij maakt.
+            {t('demo.subtitle')}
           </p>
         </div>
       </section>
@@ -198,86 +182,44 @@ const Demo = () => {
             <div className="space-y-8">
               {/* What to Expect */}
               <div>
-                <h2 className="mb-8 text-3xl font-bold">Wat je kunt verwachten</h2>
+                <h2 className="mb-8 text-3xl font-bold">{t('demo.whatToExpect')}</h2>
                 <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                      <Calendar className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="mb-2 font-semibold">30 minuten persoonlijke aandacht</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Een-op-een sessie met een Glimps expert die jouw specifieke use case begrijpt
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                      <Video className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="mb-2 font-semibold">Live demo op jouw data</h3>
-                      <p className="text-sm text-muted-foreground">
-                        We tonen hoe Glimps werkt met voorbeelden uit jouw branche en producten
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                      <TrendingUp className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="mb-2 font-semibold">ROI berekening voor jouw business</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Concrete cijfers over hoeveel tijd en geld je bespaart, en hoeveel extra omzet je genereert
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                      <Users className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="mb-2 font-semibold">Q&A en advies op maat</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Al je vragen beantwoord en directe feedback op jouw situatie
-                      </p>
-                    </div>
-                  </div>
+                  {(t('demo.expectItems') as any).map((item: {title: string, description: string}, index: number) => {
+                    const icons = [Calendar, Video, TrendingUp, Users];
+                    const Icon = icons[index];
+                    return (
+                      <div key={index} className="flex gap-4">
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                          <Icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="mb-2 font-semibold">{item.title}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
               {/* Why Choose Glimps */}
               <Card className="bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-white">
-                <h3 className="mb-6 text-xl font-bold">Waarom andere webshops voor Glimps kozen</h3>
+                <h3 className="mb-6 text-xl font-bold">{t('demo.whyChoose')}</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                      <TrendingUp className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="font-medium">Hogere conversie rate</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                      <MessageSquare className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="font-medium">Terugkerende vragen automatisch opgelost</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                      <Shield className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="font-medium">Volledig GDPR-compliant</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                      <Zap className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="font-medium">Live binnen 2 weken</span>
-                  </div>
+                  {(t('demo.benefits') as any).map((benefit: string, index: number) => {
+                    const icons = [TrendingUp, MessageSquare, Shield, Zap];
+                    const Icon = icons[index];
+                    return (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
+                          <Icon className="h-5 w-5 text-white" />
+                        </div>
+                        <span className="font-medium">{benefit}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </Card>
             </div>
@@ -290,8 +232,8 @@ const Demo = () => {
                     <MessageSquare className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Plan je demo</h3>
-                    <p className="text-sm text-muted-foreground">Binnen 24 uur reactie</p>
+                    <h3 className="text-xl font-bold">{t('demo.formTitle')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('demo.formSubtitle')}</p>
                   </div>
                 </div>
 
@@ -299,11 +241,11 @@ const Demo = () => {
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">
-                        Voornaam <span className="text-destructive">*</span>
+                        {t('demo.firstName')} <span className="text-destructive">*</span>
                       </Label>
                       <Input
                         id="firstName"
-                        placeholder="Jan"
+                        placeholder={language === 'fr' ? 'Jean' : 'Jan'}
                         value={formData.firstName}
                         onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                         className={errors.firstName ? "border-destructive" : ""}
@@ -315,11 +257,11 @@ const Demo = () => {
 
                     <div className="space-y-2">
                       <Label htmlFor="lastName">
-                        Achternaam <span className="text-destructive">*</span>
+                        {t('demo.lastName')} <span className="text-destructive">*</span>
                       </Label>
                       <Input
                         id="lastName"
-                        placeholder="Jansen"
+                        placeholder={language === 'fr' ? 'Dupont' : 'Jansen'}
                         value={formData.lastName}
                         onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                         className={errors.lastName ? "border-destructive" : ""}
@@ -332,12 +274,12 @@ const Demo = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="email">
-                      E-mailadres <span className="text-destructive">*</span>
+                      {t('demo.email')} <span className="text-destructive">*</span>
                     </Label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="jan@bedrijf.be"
+                      placeholder={language === 'fr' ? 'jean@entreprise.be' : 'jan@bedrijf.be'}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className={errors.email ? "border-destructive" : ""}
@@ -348,7 +290,7 @@ const Demo = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Telefoonnummer</Label>
+                    <Label htmlFor="phone">{t('demo.phone')}</Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -360,11 +302,11 @@ const Demo = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="company">
-                      Bedrijfsnaam <span className="text-destructive">*</span>
+                      {t('demo.company')} <span className="text-destructive">*</span>
                     </Label>
                     <Input
                       id="company"
-                      placeholder="Jouw Webshop B.V."
+                      placeholder={language === 'fr' ? 'Votre Boutique S.A.' : 'Jouw Webshop B.V.'}
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className={errors.company ? "border-destructive" : ""}
@@ -375,11 +317,11 @@ const Demo = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="website">Website URL</Label>
+                    <Label htmlFor="website">{t('demo.website')}</Label>
                     <Input
                       id="website"
                       type="url"
-                      placeholder="https://jouwwebshop.be"
+                      placeholder={language === 'fr' ? 'https://votreboutique.be' : 'https://jouwwebshop.be'}
                       value={formData.website}
                       onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                     />
@@ -387,21 +329,21 @@ const Demo = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="employees">
-                      Aantal medewerkers <span className="text-destructive">*</span>
+                      {t('demo.employees')} <span className="text-destructive">*</span>
                     </Label>
                     <Select
                       value={formData.employees}
                       onValueChange={(value) => setFormData({ ...formData, employees: value })}
                     >
                       <SelectTrigger className={errors.employees ? "border-destructive" : ""}>
-                        <SelectValue placeholder="Selecteer..." />
+                        <SelectValue placeholder={language === 'fr' ? 'Sélectionner...' : 'Selecteer...'} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="1-5">1-5 medewerkers</SelectItem>
-                        <SelectItem value="6-10">6-10 medewerkers</SelectItem>
-                        <SelectItem value="11-50">11-50 medewerkers</SelectItem>
-                        <SelectItem value="51-200">51-200 medewerkers</SelectItem>
-                        <SelectItem value="200+">200+ medewerkers</SelectItem>
+                        <SelectItem value="1-5">{(t('demo.employeeOptions') as any)['1-5']}</SelectItem>
+                        <SelectItem value="6-10">{(t('demo.employeeOptions') as any)['6-10']}</SelectItem>
+                        <SelectItem value="11-50">{(t('demo.employeeOptions') as any)['11-50']}</SelectItem>
+                        <SelectItem value="51-200">{(t('demo.employeeOptions') as any)['51-200']}</SelectItem>
+                        <SelectItem value="200+">{(t('demo.employeeOptions') as any)['200+']}</SelectItem>
                       </SelectContent>
                     </Select>
                     {errors.employees && (
@@ -410,10 +352,10 @@ const Demo = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Vertel ons over je uitdaging (optioneel)</Label>
+                    <Label htmlFor="message">{t('demo.message')}</Label>
                     <Textarea
                       id="message"
-                      placeholder="Waar loop je tegenaan met klantenservice? Wat zijn je grootste uitdagingen?"
+                      placeholder={language === 'fr' ? 'Quels sont vos défis avec le service client ?' : 'Waar loop je tegenaan met klantenservice? Wat zijn je grootste uitdagingen?'}
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -421,21 +363,21 @@ const Demo = () => {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
+                  <Button
+                    type="submit"
+                    size="lg"
                     className="w-full"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Verzenden..." : "Plan mijn demo →"}
+                    {isSubmitting ? t('demo.submitting') : t('demo.submit')}
                   </Button>
 
                   <p className="text-center text-xs text-muted-foreground">
-                    Door dit formulier in te vullen ga je akkoord met onze{" "}
+                    {t('demo.privacyText')}{" "}
                     <a href="#" className="text-primary hover:underline">
-                      privacyverklaring
+                      {t('demo.privacyLink')}
                     </a>
-                    . We respecteren je privacy en spammen nooit.
+                    . {t('demo.privacyNote')}
                   </p>
                 </form>
               </Card>
@@ -448,12 +390,12 @@ const Demo = () => {
       <section className="border-t bg-muted/30 py-20">
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-12 text-center text-3xl font-bold">Veelgestelde vragen</h2>
+            <h2 className="mb-12 text-center text-3xl font-bold">{t('demo.faqTitle')}</h2>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <Card key={index} className="p-6">
-                  <h3 className="mb-3 font-semibold">{faq.question}</h3>
-                  <p className="text-sm text-muted-foreground">{faq.answer}</p>
+                  <h3 className="mb-3 font-semibold">{faq.q}</h3>
+                  <p className="text-sm text-muted-foreground">{faq.a}</p>
                 </Card>
               ))}
             </div>
@@ -465,31 +407,35 @@ const Demo = () => {
       <section className="container mx-auto px-6 py-20">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 text-4xl font-bold">
-            Klaar om tijd te<br />
-            <span className="text-primary">besparen en te groeien?</span>
+            {t('demo.finalCta').split('\n').map((line, i) => (
+              <span key={i}>
+                {i === 0 ? line : <span className="text-primary">{line}</span>}
+                {i < t('demo.finalCta').split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h2>
           <p className="mb-12 text-lg text-muted-foreground">
-            Plan vandaag nog je persoonlijke demo en ontdek hoe Glimps jouw business kan transformeren.
+            {t('demo.finalSubtitle')}
           </p>
-          
+
           <div className="flex flex-wrap items-center justify-center gap-8">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Clock className="h-6 w-6 text-primary" />
               </div>
-              <span className="font-medium">30 minuten</span>
+              <span className="font-medium">{t('demo.timeLabel')}</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Video className="h-6 w-6 text-primary" />
               </div>
-              <span className="font-medium">Online</span>
+              <span className="font-medium">{t('demo.onlineLabel')}</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <CheckCircle2 className="h-6 w-6 text-primary" />
               </div>
-              <span className="font-medium">Gratis</span>
+              <span className="font-medium">{t('demo.freeLabel')}</span>
             </div>
           </div>
         </div>

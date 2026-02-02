@@ -1,62 +1,15 @@
 import { Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Sarah Jansen",
-      role: "E-commerce Manager",
-      company: "FashionHub",
-      avatar: "SJ",
-      rating: 5,
-      text: "glimps heeft onze klantenservice getransformeerd. Reactietijden daalden van uren naar seconden, en onze conversieratio steeg met 23%.",
-      color: "bg-purple-400",
-    },
-    {
-      name: "Michael de Vries",
-      role: "Oprichter & CEO",
-      company: "TechGear Store",
-      avatar: "MV",
-      rating: 5,
-      text: "De AI begrijpt complexe productvragen beter dan ik verwachtte. Het is alsof je een deskundige verkoper hebt die 24/7 werkt.",
-      color: "bg-blue-400",
-    },
-    {
-      name: "Emma Willems",
-      role: "Customer Success Lead",
-      company: "BeautyBox",
-      avatar: "EW",
-      rating: 5,
-      text: "Ons team focust nu op complexe problemen terwijl glimps routinevragen afhandelt. Klanttevredenheid is nog nooit zo hoog geweest!",
-      color: "bg-pink-400",
-    },
-    {
-      name: "David Rodriguez",
-      role: "Operations Director",
-      company: "HomeEssentials",
-      avatar: "DR",
-      rating: 5,
-      text: "De meertalige ondersteuning is een gamechanger voor onze internationale expansie. glimps helpt ons klanten in 12 landen naadloos te bedienen.",
-      color: "bg-green-400",
-    },
-    {
-      name: "Lisa Andersson",
-      role: "Marketing Director",
-      company: "SportsPro",
-      avatar: "LA",
-      rating: 5,
-      text: "Het beantwoordt niet alleen vragen, maar de slimme productaanbevelingen hebben onze gemiddelde bestelwaarde met 18% verhoogd.",
-      color: "bg-orange-400",
-    },
-    {
-      name: "James Thompson",
-      role: "Co-founder",
-      company: "GadgetWorld",
-      avatar: "JT",
-      rating: 5,
-      text: "Implementatie was ongelooflijk eenvoudig. Binnen enkele uren behandelde glimps klantvragen met indrukwekkende nauwkeurigheid.",
-      color: "bg-red-400",
-    },
-  ];
+  const { language, t } = useLanguage();
+  const testimonials: Array<{name: string, role: string, company: string, text: string}> = t('testimonials.items') as any;
+
+  const avatarColors = ["bg-purple-400", "bg-blue-400", "bg-pink-400", "bg-green-400", "bg-orange-400", "bg-red-400"];
+
+  const getInitials = (name: string) => {
+    return name.split(' ').map(n => n[0]).join('');
+  };
 
   return (
     <section className="relative w-full overflow-hidden bg-background py-20">
@@ -64,13 +17,13 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-            Getuigenissen
+            {t('testimonials.badge')}
           </span>
           <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
-            Wall of Love 💜
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Zie wat e-commerce bedrijven over glimps zeggen
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -83,7 +36,7 @@ const Testimonials = () => {
             >
               {/* Rating */}
               <div className="mb-4 flex gap-1">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
                     className="h-4 w-4 fill-yellow-400 text-yellow-400"
@@ -99,9 +52,9 @@ const Testimonials = () => {
               {/* Author Info */}
               <div className="flex items-center gap-3">
                 <div
-                  className={`flex h-12 w-12 items-center justify-center rounded-full ${testimonial.color} text-sm font-semibold text-white`}
+                  className={`flex h-12 w-12 items-center justify-center rounded-full ${avatarColors[index % avatarColors.length]} text-sm font-semibold text-white`}
                 >
-                  {testimonial.avatar}
+                  {getInitials(testimonial.name)}
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">
