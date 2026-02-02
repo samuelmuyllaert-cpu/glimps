@@ -14,8 +14,10 @@ import Footer from "@/components/Footer";
 import ChatbotComparison from "@/components/ChatbotComparison";
 import SEO from "@/components/SEO";
 import StructuredData, { baseOrganization } from "@/components/StructuredData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { language, t } = useLanguage();
   const graphData = [
     {
       "@type": "WebPage",
@@ -210,12 +212,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Intelligente chatbots voor e-commerce | Glimps"
-        description="AI chatbots voor je webshop. Begeleid bezoekers 24/7, verhoog conversie en automatiseer klantenservice met intelligente AI."
-        path="/"
-        canonical="https://www.glimps.be"
-        keywords="intelligente chatbots voor e-commerce, chatbot e-commerce, AI chatbot webshop, e-commerce chatbot België"
+        title={t('seo.home.title')}
+        description={t('seo.home.description')}
+        path={language === 'fr' ? '/fr' : '/'}
+        canonical={language === 'fr' ? 'https://www.glimps.be/fr' : 'https://www.glimps.be'}
+        keywords={language === 'fr' ? 'chatbots intelligents e-commerce, chatbot e-commerce, chatbot IA boutique en ligne, chatbot e-commerce Belgique' : 'intelligente chatbots voor e-commerce, chatbot e-commerce, AI chatbot webshop, e-commerce chatbot België'}
         type="website"
+        language={language}
       />
       <StructuredData type="graph" data={graphData} />
       <Navigation />

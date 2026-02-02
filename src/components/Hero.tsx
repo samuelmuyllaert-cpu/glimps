@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
-  // Mock customer avatars using initials
+  const { language, t } = useLanguage();
+
   const customers = [
     { name: "User 1", bg: "bg-orange-400" },
     { name: "User 2", bg: "bg-red-400" },
@@ -22,34 +24,42 @@ const Hero = () => {
         {/* Overline */}
         <div className="mb-6">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            AI-Aangedreven Klantenondersteuning
+            {t('hero.overline')}
           </span>
         </div>
 
         {/* Main Heading */}
         <h1 className="mb-6 font-inter font-normal text-[32px] leading-[40px] tracking-[0.352px] text-foreground max-sm:text-[32px] max-sm:leading-[40px] max-md:text-[40px] max-md:leading-[48px] md:text-[48px] md:leading-[60px]">
-          Intelligente <br />
-          chatbots voor <br />
-          e-commerce
+          {t('hero.title').split('\n').map((line, i) => (
+            <span key={i}>
+              {line}
+              {i < t('hero.title').split('\n').length - 1 && <br />}
+            </span>
+          ))}
         </h1>
 
         {/* Subheading */}
         <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-          Onze intelligente chatbots beantwoorden vragen over producten, verzending en bestellingen
-          <br />
-          automatisch - ook buiten kantooruren. Verhoog je conversie met AI.
+          {t('hero.description').split('\n').map((line, i) => (
+            <span key={i}>
+              {line}
+              {i < t('hero.description').split('\n').length - 1 && <br />}
+            </span>
+          ))}
         </p>
 
         {/* CTA Buttons */}
         <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button asChild variant="hero" size="lg" className="rounded-full">
-            <a href="/demo">
+            <a href={language === 'fr' ? '/fr/demo' : '/demo'}>
               <Sparkles className="h-5 w-5" />
-              Gratis aan de slag
+              {t('hero.cta')}
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full">
-            <a href="/features">Zie glimps in actie</a>
+            <a href={language === 'fr' ? '/fr/fonctionnalites' : '/features'}>
+              {t('hero.ctaSecondary')}
+            </a>
           </Button>
         </div>
 

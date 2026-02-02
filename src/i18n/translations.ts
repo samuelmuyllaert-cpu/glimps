@@ -9,11 +9,33 @@ export const translations = {
       login: 'Inloggen'
     },
     hero: {
-      title: 'De AI Chatbot voor',
-      subtitle: 'E-commerce',
-      description: 'Verhoog je conversie met 24/7 gepersonaliseerde productaanbevelingen en klantenservice',
-      cta: 'Gratis Demo',
-      ctaSecondary: 'Bekijk Features'
+      overline: 'AI-Aangedreven Klantenondersteuning',
+      title: 'Intelligente\nchatbots voor\ne-commerce',
+      description: 'Onze intelligente chatbots beantwoorden vragen over producten, verzending en bestellingen\nautomatisch - ook buiten kantooruren. Verhoog je conversie met AI.',
+      cta: 'Gratis aan de slag',
+      ctaSecondary: 'Zie glimps in actie'
+    },
+    seo: {
+      home: {
+        title: 'Intelligente chatbots voor e-commerce | Glimps',
+        description: 'AI chatbots voor je webshop. Begeleid bezoekers 24/7, verhoog conversie en automatiseer klantenservice met intelligente AI.'
+      },
+      features: {
+        title: 'Features - Glimps AI Chatbot',
+        description: 'Ontdek alle features van Glimps AI: 24/7 beschikbaarheid, intelligente productaanbevelingen en naadloze integraties.'
+      },
+      demo: {
+        title: 'Demo aanvragen - Glimps',
+        description: 'Vraag een gratis demo aan en ontdek hoe Glimps AI jouw e-commerce conversie verhoogt.'
+      },
+      about: {
+        title: 'Over Ons - Glimps',
+        description: 'Leer meer over Glimps en ons team. We bouwen intelligente AI-chatbots voor e-commerce.'
+      },
+      contact: {
+        title: 'Contact - Glimps',
+        description: 'Neem contact met ons op. We helpen je graag met jouw vragen over Glimps AI.'
+      }
     },
     features: {
       title: 'Waarom Glimps AI?',
@@ -49,11 +71,33 @@ export const translations = {
       login: 'Connexion'
     },
     hero: {
-      title: 'Le Chatbot IA pour',
-      subtitle: 'E-commerce',
-      description: 'Augmentez votre conversion avec des recommandations de produits personnalisées et un service client 24/7',
-      cta: 'Démo Gratuite',
-      ctaSecondary: 'Voir les Fonctionnalités'
+      overline: 'Support Client Propulsé par IA',
+      title: 'Chatbots intelligents\npour l\'e-commerce',
+      description: 'Nos chatbots intelligents répondent automatiquement aux questions sur les produits, la livraison et les commandes\n- même en dehors des heures de bureau. Augmentez votre conversion avec l\'IA.',
+      cta: 'Commencer gratuitement',
+      ctaSecondary: 'Voir glimps en action'
+    },
+    seo: {
+      home: {
+        title: 'Chatbots intelligents pour l\'e-commerce | Glimps',
+        description: 'Chatbots IA pour votre boutique en ligne. Guidez les visiteurs 24/7, augmentez la conversion et automatisez le service client avec l\'IA intelligente.'
+      },
+      features: {
+        title: 'Fonctionnalités - Glimps AI Chatbot',
+        description: 'Découvrez toutes les fonctionnalités de Glimps AI : disponibilité 24/7, recommandations de produits intelligentes et intégrations transparentes.'
+      },
+      demo: {
+        title: 'Demander une démo - Glimps',
+        description: 'Demandez une démo gratuite et découvrez comment Glimps AI augmente votre conversion e-commerce.'
+      },
+      about: {
+        title: 'À propos - Glimps',
+        description: 'En savoir plus sur Glimps et notre équipe. Nous développons des chatbots IA intelligents pour l\'e-commerce.'
+      },
+      contact: {
+        title: 'Contact - Glimps',
+        description: 'Contactez-nous. Nous sommes heureux de répondre à vos questions sur Glimps AI.'
+      }
     },
     features: {
       title: 'Pourquoi Glimps AI?',

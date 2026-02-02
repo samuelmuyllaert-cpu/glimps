@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Printer,
   CheckCircle2,
@@ -13,6 +14,8 @@ import {
 } from "lucide-react";
 
 const PrintingWinkel = () => {
+  const { language } = useLanguage();
+
   useEffect(() => {
     const script = document.createElement('script');
     script.id = "";
@@ -29,12 +32,47 @@ const PrintingWinkel = () => {
     };
   }, []);
 
+  const content = language === 'fr' ? {
+    title: "Bienvenue",
+    subtitle: "3D Printing Winkel",
+    heading: "À votre assistant IA personnel",
+    description: "Nous sommes là pour vous aider ! Vous avez des questions sur nos imprimantes 3D, nos filaments, notre résine ou d'autres produits d'impression 3D ? N'hésitez pas à poser votre question via le chat.",
+    feature1Title: "Toujours disponible",
+    feature1Desc: "Posez toutes vos questions sur nos produits quand cela vous convient",
+    feature2Title: "Jour et nuit",
+    feature2Desc: "Nous sommes également là pour vous aider en dehors des heures de bureau",
+    feature3Title: "Conforme RGPD",
+    feature3Desc: "Glimps est conforme au RGPD et respecte votre vie privée",
+    howItWorksTitle: "Comment le bot aide les clients",
+    howItWorksDesc: "Cliquez sur le chat en bas à droite et posez votre question",
+    examplesTitle: "Par exemple",
+    seoTitle: "Bienvenue chez 3D Printing Winkel",
+    seoDescription: "Bienvenue chez 3D Printing Winkel - Nous sommes heureux de vous aider avec vos questions sur les imprimantes 3D, les filaments et les accessoires d'impression 3D"
+  } : {
+    title: "Welkom",
+    subtitle: "3D Printing Winkel",
+    heading: "Bij je persoonlijke AI assistent",
+    description: "We zijn er om je te helpen! Heb je vragen over onze 3D printers, filamenten, resin of andere 3D printing producten? Stel gerust je vraag via de chat.",
+    feature1Title: "Altijd voor je klaar",
+    feature1Desc: "Stel al je vragen over onze producten wanneer het jou uitkomt",
+    feature2Title: "Dag en nacht",
+    feature2Desc: "Ook buiten kantooruren staan we voor je klaar om te helpen",
+    feature3Title: "GDPR conform",
+    feature3Desc: "Glimps is GDPR conform en respecteert jouw privacy",
+    howItWorksTitle: "Hoe de bot klanten helpt",
+    howItWorksDesc: "Klik rechtsonder op de chat en stel je vraag",
+    examplesTitle: "Bijvoorbeeld",
+    seoTitle: "Welkom bij 3D Printing Winkel",
+    seoDescription: "Welkom bij 3D Printing Winkel - We helpen je graag met vragen over 3D printers, filamenten en 3D printing accessoires"
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Welkom bij 3D Printing Winkel"
-        description="Welkom bij 3D Printing Winkel - We helpen je graag met vragen over 3D printers, filamenten en 3D printing accessoires"
-        path="/3dprintingwinkel"
+        title={content.seoTitle}
+        description={content.seoDescription}
+        path={language === 'fr' ? '/fr/3dprintingwinkel' : '/3dprintingwinkel'}
+        language={language}
       />
       <Navigation />
 
@@ -42,13 +80,12 @@ const PrintingWinkel = () => {
       <section className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="mb-6 font-inter text-4xl font-bold leading-tight md:text-6xl md:leading-tight">
-            Welkom<br />
-            <span className="text-primary">3D Printing Winkel</span><br />
-            Bij je persoonlijke ai assistent
+            {content.title}<br />
+            <span className="text-primary">{content.subtitle}</span><br />
+            {content.heading}
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            We zijn er om je te helpen! Heb je vragen over onze 3D printers,
-            filamenten, resin of andere 3D printing producten? Stel gerust je vraag via de chat.
+            {content.description}
           </p>
         </div>
       </section>
@@ -61,9 +98,9 @@ const PrintingWinkel = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <MessageSquare className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold">Altijd voor je klaar</h3>
+              <h3 className="mb-2 font-semibold">{content.feature1Title}</h3>
               <p className="text-sm text-muted-foreground">
-                Stel al je vragen over 3D printing wanneer het jou uitkomt
+                {content.feature1Desc}
               </p>
             </Card>
 
@@ -71,9 +108,9 @@ const PrintingWinkel = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Clock className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold">Dag en nacht</h3>
+              <h3 className="mb-2 font-semibold">{content.feature2Title}</h3>
               <p className="text-sm text-muted-foreground">
-                Ook buiten kantooruren staan we voor je klaar om te helpen
+                {content.feature2Desc}
               </p>
             </Card>
 
@@ -81,9 +118,9 @@ const PrintingWinkel = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Shield className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold">GDPR conform</h3>
+              <h3 className="mb-2 font-semibold">{content.feature3Title}</h3>
               <p className="text-sm text-muted-foreground">
-                Glimps is GDPR conform en respecteert jouw privacy
+                {content.feature3Desc}
               </p>
             </Card>
           </div>
@@ -97,14 +134,14 @@ const PrintingWinkel = () => {
             <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
               <Sparkles className="h-7 w-7 text-primary" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold">Hoe de bot klanten helpt</h2>
+            <h2 className="mb-4 text-3xl font-bold">{content.howItWorksTitle}</h2>
             <p className="text-muted-foreground">
-              Klik rechtsonder op de chat en stel je vraag
+              {content.howItWorksDesc}
             </p>
           </div>
 
           <Card className="p-8 md:p-12">
-            <h3 className="mb-8 text-xl font-semibold">Bijvoorbeeld</h3>
+            <h3 className="mb-8 text-xl font-semibold">{content.examplesTitle}</h3>
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="flex items-start gap-4">
