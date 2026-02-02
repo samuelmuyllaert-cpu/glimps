@@ -1,13 +1,28 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import glimpsLogo from "@/assets/glimps-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
-  const navLinks = [
+  const navLinks = language === 'fr' ? [
+    { href: "/fr/fonctionnalites", label: "Fonctionnalités" },
+    { href: "/fr/comment-nous-travaillons", label: "Comment nous travaillons" },
+    { href: "/fr/faq", label: "FAQ" },
+    { href: "/fr/blog", label: "Blog" },
+    { href: "/fr/a-propos", label: "À propos" },
+    { href: "/fr/contact", label: "Contact" },
+  ] : [
     { href: "/features", label: "Features" },
     { href: "/how-we-work", label: "Hoe we werken" },
     { href: "/faq", label: "FAQ" },
@@ -21,7 +36,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center shrink-0">
+          <a href={language === 'fr' ? '/fr' : '/'} className="flex items-center shrink-0">
             <img src={glimpsLogo} alt="glimps" className="h-8 sm:h-10" />
           </a>
 
@@ -38,10 +53,27 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:block">
+          {/* Desktop CTA Button and Language Switcher */}
+          <div className="hidden md:flex items-center gap-3">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon" className="rounded-full">
+                  <Globe className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setLanguage('nl')}>
+                  <span className="mr-2">🇳🇱</span> Nederlands
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('fr')}>
+                  <span className="mr-2">🇫🇷</span> Français
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button asChild variant="default" size="default" className="rounded-full">
-              <a href="/demo">Demo aanvragen</a>
+              <a href={language === 'fr' ? '/fr/demo' : '/demo'}>
+                {language === 'fr' ? 'Demander une démo' : 'Demo aanvragen'}
+              </a>
             </Button>
           </div>
 
@@ -64,8 +96,34 @@ const Navigation = () => {
                     {link.label}
                   </a>
                 ))}
-                <Button asChild variant="default" size="lg" className="rounded-full mt-4">
-                  <a href="/demo">Demo aanvragen</a>
+                <div className="flex gap-2 mt-4">
+                  <Button
+                    variant={language === 'nl' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => {
+                      setLanguage('nl');
+                      setIsOpen(false);
+                    }}
+                    className="flex-1"
+                  >
+                    🇳🇱 NL
+                  </Button>
+                  <Button
+                    variant={language === 'fr' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => {
+                      setLanguage('fr');
+                      setIsOpen(false);
+                    }}
+                    className="flex-1"
+                  >
+                    🇫🇷 FR
+                  </Button>
+                </div>
+                <Button asChild variant="default" size="lg" className="rounded-full">
+                  <a href={language === 'fr' ? '/fr/demo' : '/demo'}>
+                    {language === 'fr' ? 'Demander une démo' : 'Demo aanvragen'}
+                  </a>
                 </Button>
               </div>
             </SheetContent>

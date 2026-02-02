@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import Features from "./pages/Features";
 import Demo from "./pages/Demo";
@@ -56,7 +57,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Routes>
+      <LanguageProvider>
+        <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/features" element={<Features />} />
         <Route path="/demo" element={<Demo />} />
@@ -101,9 +103,55 @@ const App = () => (
         <Route path="/prosportlights" element={<ProSportLights />} />
         <Route path="/3dprintingwinkel" element={<PrintingWinkel />} />
         <Route path="/lensonline" element={<LensOnline />} />
+        {/* French Routes */}
+        <Route path="/fr" element={<Index />} />
+        <Route path="/fr/fonctionnalites" element={<Features />} />
+        <Route path="/fr/demo" element={<Demo />} />
+        <Route path="/fr/faq" element={<FAQ />} />
+        <Route path="/fr/roi" element={<ROI />} />
+        <Route path="/fr/changelog" element={<Changelog />} />
+        <Route path="/fr/blog" element={<Blog />} />
+        <Route path="/fr/a-propos" element={<About />} />
+        <Route path="/fr/carrieres" element={<Career />} />
+        <Route path="/fr/connexion" element={<Login />} />
+        <Route path="/fr/agents-ecom" element={<EcomAgents />} />
+        <Route path="/fr/pret-ecom" element={<EcomReadiness />} />
+        <Route path="/fr/partenaires" element={<Partners />} />
+        <Route path="/fr/comment-nous-travaillons" element={<HowWeWork />} />
+        <Route path="/fr/consultance" element={<Consultancy />} />
+        <Route path="/fr/integrations" element={<Integraties />} />
+        <Route path="/fr/contact" element={<Contact />} />
+        <Route path="/fr/blog/augmenter-conversion" element={<ConversieVerhogen />} />
+        <Route path="/fr/blog/avenir-ia-2025" element={<ToekomstAI2025 />} />
+        <Route path="/fr/blog/etude-cas-fashionhub" element={<CaseStudyFashionHub />} />
+        <Route path="/fr/blog/personnalisation-conversions" element={<PersonalisatieConversies />} />
+        <Route path="/fr/blog/erreurs-chatbots" element={<FoutenChatbots />} />
+        <Route path="/fr/blog/integration-shopify" element={<ShopifyIntegratie />} />
+        <Route path="/fr/blog/amazon-rufus" element={<AmazonRufus />} />
+        <Route path="/fr/blog/implementer-chatbots-ia" element={<AIChatbotsImplementeren />} />
+        <Route path="/fr/blog/chatbots-ia-vs-service-client" element={<AIChatbotsVsKlantenservice />} />
+        <Route path="/fr/blog/roi-chatbots-ia" element={<ROIAIChatbots />} />
+        <Route path="/fr/blog/automatiser-chatbots-ia" element={<AIChatbotsAutomatiseren />} />
+        <Route path="/fr/blog/avenir-ia-ecommerce-2026" element={<ToekomstAI2026 />} />
+        <Route path="/fr/blog/chatbots-vs-chat-en-direct" element={<ChatbotsVsLiveChat />} />
+        <Route path="/fr/blog/personnalisation-ia-ecommerce" element={<PersonalisatieAI />} />
+        <Route path="/fr/blog/tendances-commerce-conversationnel" element={<ConversationalCommerce />} />
+        <Route path="/fr/blog/chatbots-booster-ventes" element={<ChatbotsBoostenVerkoop />} />
+        <Route path="/fr/blog/reduire-abandon-panier-chatbot" element={<CartAbandonmentReduceren />} />
+        <Route path="/fr/industries/mode-design" element={<FashionDesign />} />
+        <Route path="/fr/industries/beaute-cosmetique" element={<BeautyCosmetica />} />
+        <Route path="/fr/industries/electronique" element={<Electronics />} />
+        <Route path="/fr/industries/meubles-interieur" element={<MeubelsInterieur />} />
+        <Route path="/fr/industries/vetements-sport-fitness" element={<SportkledingFitness />} />
+        <Route path="/fr/industries/jardin-exterieur" element={<TuinBuitenleven />} />
+        <Route path="/fr/legal" element={<Legal />} />
+        <Route path="/fr/prosportlights" element={<ProSportLights />} />
+        <Route path="/fr/3dprintingwinkel" element={<PrintingWinkel />} />
+        <Route path="/fr/lensonline" element={<LensOnline />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
-      </Routes>
+        </Routes>
+      </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

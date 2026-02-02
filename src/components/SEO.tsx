@@ -12,6 +12,7 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   noindex?: boolean;
+  language?: 'nl' | 'fr';
 }
 
 const SEO = ({
@@ -25,7 +26,8 @@ const SEO = ({
   author,
   keywords,
   image,
-  noindex = false
+  noindex = false,
+  language = 'nl'
 }: SEOProps) => {
   const siteUrl = 'https://www.glimps.be';
   const stripTrailingSlash = (url: string) => url.replace(/\/+$/, '');
@@ -33,13 +35,21 @@ const SEO = ({
   const canonicalUrl = stripTrailingSlash(canonical || fullUrl);
   const ogImage = image || `${siteUrl}/favicon.png`;
 
+  const nlPath = path.replace(/^\/fr/, '') || '/';
+  const frPath = path.startsWith('/fr') ? path : `/fr${path}`;
+  const nlUrl = stripTrailingSlash(`${siteUrl}${nlPath}`);
+  const frUrl = stripTrailingSlash(`${siteUrl}${frPath}`);
+
   const robotsContent = noindex
     ? 'noindex, nofollow'
     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
+  const locale = language === 'fr' ? 'fr_BE' : 'nl_BE';
+  const langAttribute = language === 'fr' ? 'fr' : 'nl';
+
   return (
     <Helmet>
-      <html lang="nl" />
+      <html lang={langAttribute} />
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -49,9 +59,11 @@ const SEO = ({
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Alternate hreflang */}
-      <link rel="alternate" hrefLang="nl-BE" href={fullUrl} />
-      <link rel="alternate" hrefLang="nl" href={fullUrl} />
-      <link rel="alternate" hrefLang="x-default" href={fullUrl} />
+      <link rel="alternate" hrefLang="nl-BE" href={nlUrl} />
+      <link rel="alternate" hrefLang="nl" href={nlUrl} />
+      <link rel="alternate" hrefLang="fr-BE" href={frUrl} />
+      <link rel="alternate" hrefLang="fr" href={frUrl} />
+      <link rel="alternate" hrefLang="x-default" href={nlUrl} />
 
       {/* Robots */}
       <meta name="robots" content={robotsContent} />
@@ -68,7 +80,8 @@ const SEO = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="Glimps" />
-      <meta property="og:locale" content="nl_BE" />
+      <meta property="og:locale" content={locale} />
+      <meta property="og:locale:alternate" content={language === 'fr' ? 'nl_BE' : 'fr_BE'} />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {author && <meta property="article:author" content={author} />}
