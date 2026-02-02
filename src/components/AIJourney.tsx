@@ -23,7 +23,7 @@ const AIJourney = () => {
     {
       icon: MessageCircle,
       iconBg: "#FF6A6A",
-      title: "Klant stelt vraag",
+      title: language === 'fr' ? "Le client pose une question" : "Klant stelt vraag",
       time: "0.00s",
       content: (
         <div className="space-y-3">
@@ -33,11 +33,11 @@ const AIJourney = () => {
             </div>
             <div>
               <div className="font-medium text-sm">Emma</div>
-              <div className="text-xs text-muted-foreground">Jonge klant</div>
+              <div className="text-xs text-muted-foreground">{language === 'fr' ? "Jeune client" : "Jonge klant"}</div>
             </div>
           </div>
           <div className="bg-muted/50 rounded-lg p-3 text-sm">
-            "Rode sneakers maat 42"
+            {language === 'fr' ? '"Baskets rouges taille 42"' : '"Rode sneakers maat 42"'}
           </div>
         </div>
       ),
@@ -45,7 +45,7 @@ const AIJourney = () => {
     {
       icon: ShoppingCart,
       iconBg: "#FF6A6A",
-      title: "Bekijkt winkelmandje",
+      title: language === 'fr' ? "Consulte le panier" : "Bekijkt winkelmandje",
       time: "0.01s",
       content: (
         <div className="space-y-2">
@@ -65,7 +65,7 @@ const AIJourney = () => {
           </div>
           <div className="text-xs text-red-500 flex items-center gap-1">
             <Sparkles className="w-3 h-3" />
-            Nike voorkeur gedetecteerd
+            {language === 'fr' ? 'Préférence Nike détectée' : 'Nike voorkeur gedetecteerd'}
           </div>
         </div>
       ),
@@ -73,36 +73,39 @@ const AIJourney = () => {
     {
       icon: Brain,
       iconBg: "#8B5CF6",
-      title: "AI begrijpt context",
+      title: language === 'fr' ? "L'IA comprend le contexte" : "AI begrijpt context",
       time: "0.015s",
       content: (
         <div className="space-y-3">
           <div className="text-xs text-muted-foreground">
-            De AI analyseert intentie, gedrag en context om het perfecte antwoord te vormen.
+            {language === 'fr'
+              ? "L'IA analyse l'intention, le comportement et le contexte pour former la réponse parfaite."
+              : "De AI analyseert intentie, gedrag en context om het perfecte antwoord te vormen."
+            }
           </div>
           <div className="flex justify-between gap-2">
             <div className="flex flex-col items-center gap-1">
               <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
                 <Eye className="w-5 h-5 text-purple-600" />
               </div>
-              <div className="text-xs">Intentie</div>
+              <div className="text-xs">{language === 'fr' ? 'Intention' : 'Intentie'}</div>
             </div>
             <div className="flex flex-col items-center gap-1">
               <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
                 <User className="w-5 h-5 text-purple-600" />
               </div>
-              <div className="text-xs">Profiel</div>
+              <div className="text-xs">{language === 'fr' ? 'Profil' : 'Profiel'}</div>
             </div>
             <div className="flex flex-col items-center gap-1">
               <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
                 <TrendingUp className="w-5 h-5 text-purple-600" />
               </div>
-              <div className="text-xs">Gedrag</div>
+              <div className="text-xs">{language === 'fr' ? 'Comportement' : 'Gedrag'}</div>
             </div>
           </div>
           <div className="text-xs text-purple-600 flex items-center gap-1">
             <Sparkles className="w-3 h-3" />
-            Context volledig begrepen
+            {language === 'fr' ? 'Contexte entièrement compris' : 'Context volledig begrepen'}
           </div>
         </div>
       ),
@@ -110,12 +113,15 @@ const AIJourney = () => {
     {
       icon: Zap,
       iconBg: "#3B82F6",
-      title: "Past tone aan",
+      title: language === 'fr' ? "Adapte le ton" : "Past tone aan",
       time: "0.025s",
       content: (
         <div className="space-y-3">
           <div className="text-xs text-muted-foreground">
-            Herkent wie er spreekt en past toon automatisch aan.
+            {language === 'fr'
+              ? "Reconnaît qui parle et adapte automatiquement le ton."
+              : "Herkent wie er spreekt en past toon automatisch aan."
+            }
           </div>
           <div className="flex gap-2">
             <div className="flex-1 bg-muted/30 rounded p-2 text-xs opacity-50">
@@ -141,19 +147,22 @@ const AIJourney = () => {
     {
       icon: Target,
       iconBg: "#22C55E",
-      title: "Genereert aanbeveling",
+      title: language === 'fr' ? "Génère des recommandations" : "Genereert aanbeveling",
       time: "0.055s",
       content: (
         <div className="space-y-2">
           <div className="text-xs text-muted-foreground mb-2">
-            Combineert verkoopdata + klantprofiel + gedrag
+            {language === 'fr'
+              ? "Combine données de vente + profil client + comportement"
+              : "Combineert verkoopdata + klantprofiel + gedrag"
+            }
           </div>
           <div className="grid grid-cols-2 gap-2 text-[10px]">
             <div className="flex items-center gap-1 text-green-600">
-              • Winkelmandje
+              • {language === 'fr' ? 'Panier' : 'Winkelmandje'}
             </div>
             <div className="flex items-center gap-1 text-green-600">
-              • Voorraad
+              • {language === 'fr' ? 'Stock' : 'Voorraad'}
             </div>
             <div className="flex items-center gap-1 text-green-600">
               • Reviews ⭐ 4.8+

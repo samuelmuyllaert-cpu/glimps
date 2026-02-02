@@ -134,54 +134,67 @@ const ChatbotComparison = () => {
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-4">
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Alleen menselijk team</h3>
-                <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Webshops met &lt;200 klantcontacten per maand</p>
-                
+                <h3 className="text-xl font-bold mb-2">
+                  {language === 'fr' ? 'Équipe humaine uniquement' : 'Alleen menselijk team'}
+                </h3>
+                <p className="text-sm text-primary font-medium mb-4">
+                  {language === 'fr'
+                    ? 'Convient pour : Boutiques en ligne avec <200 contacts clients par mois'
+                    : 'Geschikt voor: Webshops met <200 klantcontacten per maand'
+                  }
+                </p>
+
                 <div className="mb-4">
-                  <p className="text-sm font-semibold mb-2">Wat het goed doet:</p>
+                  <p className="text-sm font-semibold mb-2">
+                    {language === 'fr' ? 'Ce qui fonctionne bien :' : 'Wat het goed doet:'}
+                  </p>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Persoonlijk contact en empathie</span>
+                      <span>{language === 'fr' ? 'Contact personnel et empathie' : 'Persoonlijk contact en empathie'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Complexe vragen direct goed beantwoord</span>
+                      <span>{language === 'fr' ? 'Questions complexes bien répondues directement' : 'Complexe vragen direct goed beantwoord'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Geen implementatie nodig</span>
+                      <span>{language === 'fr' ? 'Aucune implémentation nécessaire' : 'Geen implementatie nodig'}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <p className="text-sm font-semibold mb-2">Beperkingen:</p>
+                  <p className="text-sm font-semibold mb-2">
+                    {language === 'fr' ? 'Limitations :' : 'Beperkingen:'}
+                  </p>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Niet schaalbaar bij groei</span>
+                      <span>{language === 'fr' ? 'Non évolutif en cas de croissance' : 'Niet schaalbaar bij groei'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Beperkt tot kantooruren</span>
+                      <span>{language === 'fr' ? 'Limité aux heures de bureau' : 'Beperkt tot kantooruren'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Hoge personeelskosten bij meer verkeer</span>
+                      <span>{language === 'fr' ? 'Coûts de personnel élevés avec plus de trafic' : 'Hoge personeelskosten bij meer verkeer'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Team verdrinkt in repetitieve vragen</span>
+                      <span>{language === 'fr' ? 'L\'équipe se noie dans les questions répétitives' : 'Team verdrinkt in repetitieve vragen'}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="border-t border-border pt-4">
-                  <p className="text-xs font-semibold mb-2">Typisch resultaat:</p>
+                  <p className="text-xs font-semibold mb-2">
+                    {language === 'fr' ? 'Résultat typique :' : 'Typisch resultaat:'}
+                  </p>
                   <div className="space-y-1 text-sm text-muted-foreground">
-                    <div>Reactietijd: 2-24 uur</div>
-                    <div>Beschikbaarheid: 9-17u weekdagen</div>
+                    <div>{language === 'fr' ? 'Temps de réponse : 2-24 heures' : 'Reactietijd: 2-24 uur'}</div>
+                    <div>{language === 'fr' ? 'Disponibilité : 9h-17h en semaine' : 'Beschikbaarheid: 9-17u weekdagen'}</div>
                   </div>
                 </div>
               </div>
@@ -191,58 +204,71 @@ const ChatbotComparison = () => {
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center mb-4">
                   <Store className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Simpele FAQ Bot</h3>
-                <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Webshops die alleen standaard FAQ's willen automatiseren</p>
-                
+                <h3 className="text-xl font-bold mb-2">
+                  {language === 'fr' ? 'Bot FAQ Simple' : 'Simpele FAQ Bot'}
+                </h3>
+                <p className="text-sm text-primary font-medium mb-4">
+                  {language === 'fr'
+                    ? 'Convient pour : Boutiques en ligne qui veulent uniquement automatiser les FAQ standards'
+                    : 'Geschikt voor: Webshops die alleen standaard FAQ\'s willen automatiseren'
+                  }
+                </p>
+
                 <div className="mb-4">
-                  <p className="text-sm font-semibold mb-2">Wat het goed doet:</p>
+                  <p className="text-sm font-semibold mb-2">
+                    {language === 'fr' ? 'Ce qui fonctionne bien :' : 'Wat het goed doet:'}
+                  </p>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Altijd beschikbaar (24/7)</span>
+                      <span>{language === 'fr' ? 'Toujours disponible (24/7)' : 'Altijd beschikbaar (24/7)'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Beantwoordt basis vragen instant</span>
+                      <span>{language === 'fr' ? 'Répond instantanément aux questions de base' : 'Beantwoordt basis vragen instant'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Goedkoper dan menselijk team</span>
+                      <span>{language === 'fr' ? 'Moins cher qu\'une équipe humaine' : 'Goedkoper dan menselijk team'}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <p className="text-sm font-semibold mb-2">Beperkingen:</p>
+                  <p className="text-sm font-semibold mb-2">
+                    {language === 'fr' ? 'Limitations :' : 'Beperkingen:'}
+                  </p>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Geen toegang tot productdata/voorraad</span>
+                      <span>{language === 'fr' ? 'Aucun accès aux données produits/stock' : 'Geen toegang tot productdata/voorraad'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Kan niet helpen bij productkeuze</span>
+                      <span>{language === 'fr' ? 'Ne peut pas aider au choix des produits' : 'Kan niet helpen bij productkeuze'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Frustreert klanten met beperkte antwoorden</span>
+                      <span>{language === 'fr' ? 'Frustre les clients avec des réponses limitées' : 'Frustreert klanten met beperkte antwoorden'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Geen personalisatie mogelijk</span>
+                      <span>{language === 'fr' ? 'Aucune personnalisation possible' : 'Geen personalisatie mogelijk'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Leert niet bij</span>
+                      <span>{language === 'fr' ? 'N\'apprend pas' : 'Leert niet bij'}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="border-t border-border pt-4">
-                  <p className="text-xs font-semibold mb-2">Typisch resultaat:</p>
+                  <p className="text-xs font-semibold mb-2">
+                    {language === 'fr' ? 'Résultat typique :' : 'Typisch resultaat:'}
+                  </p>
                   <div className="space-y-1 text-sm text-muted-foreground">
-                    <div>30-40% van vragen automatisch opgelost</div>
-                    <div>Vaak frustratie bij klanten</div>
+                    <div>{language === 'fr' ? '30-40% des questions résolues automatiquement' : '30-40% van vragen automatisch opgelost'}</div>
+                    <div>{language === 'fr' ? 'Souvent de la frustration chez les clients' : 'Vaak frustratie bij klanten'}</div>
                   </div>
                 </div>
               </div>
@@ -254,63 +280,76 @@ const ChatbotComparison = () => {
                   <Sparkles className="w-8 h-8 text-primary relative z-10" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Glimps AI</h3>
-                <p className="text-sm text-primary font-medium mb-4">Geschikt voor: Groeiende e-commerce bedrijven (500+ klantcontacten/maand)</p>
-                
+                <p className="text-sm text-primary font-medium mb-4">
+                  {language === 'fr'
+                    ? 'Convient pour : Entreprises e-commerce en croissance (500+ contacts clients/mois)'
+                    : 'Geschikt voor: Groeiende e-commerce bedrijven (500+ klantcontacten/maand)'
+                  }
+                </p>
+
                 <div className="mb-4">
-                  <p className="text-sm font-semibold mb-2">Wat het goed doet:</p>
+                  <p className="text-sm font-semibold mb-2">
+                    {language === 'fr' ? 'Ce qui fonctionne bien :' : 'Wat het goed doet:'}
+                  </p>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Toegang tot live data (voorraad, prijzen, bestellingen)</span>
+                      <span>{language === 'fr' ? 'Accès aux données en temps réel (stock, prix, commandes)' : 'Toegang tot live data (voorraad, prijzen, bestellingen)'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Helpt actief bij productkeuze</span>
+                      <span>{language === 'fr' ? 'Aide activement au choix des produits' : 'Helpt actief bij productkeuze'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Automatiseert 70-80% van vragen</span>
+                      <span>{language === 'fr' ? 'Automatise 70-80% des questions' : 'Automatiseert 70-80% van vragen'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Leert continu en wordt slimmer</span>
+                      <span>{language === 'fr' ? 'Apprend continuellement et devient plus intelligent' : 'Leert continu en wordt slimmer'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-foreground">✓</span>
-                      <span>Personalisatie op basis van gedrag</span>
+                      <span>{language === 'fr' ? 'Personnalisation basée sur le comportement' : 'Personalisatie op basis van gedrag'}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <p className="text-sm font-semibold mb-2">Beperkingen:</p>
+                  <p className="text-sm font-semibold mb-2">
+                    {language === 'fr' ? 'Limitations :' : 'Beperkingen:'}
+                  </p>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Vereist gestructureerde productdata</span>
+                      <span>{language === 'fr' ? 'Nécessite des données produits structurées' : 'Vereist gestructureerde productdata'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Implementatie duurt 2-4 weken</span>
+                      <span>{language === 'fr' ? 'L\'implémentation prend 2-4 semaines' : 'Implementatie duurt 2-4 weken'}</span>
                     </div>
                     <div className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span>•</span>
-                      <span>Niet geschikt voor &lt;200 contacten/maand</span>
+                      <span>{language === 'fr' ? 'Non adapté pour <200 contacts/mois' : 'Niet geschikt voor <200 contacten/maand'}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="border-t border-border pt-4 mb-4">
-                  <p className="text-xs font-semibold mb-2">Typisch resultaat:</p>
+                  <p className="text-xs font-semibold mb-2">
+                    {language === 'fr' ? 'Résultat typique :' : 'Typisch resultaat:'}
+                  </p>
                   <div className="space-y-1 text-sm text-muted-foreground">
-                    <div>15-20 uur per week bespaard</div>
-                    <div>70-80% automatisering rate</div>
-                    <div>24/7 beschikbaarheid</div>
+                    <div>{language === 'fr' ? '15-20 heures économisées par semaine' : '15-20 uur per week bespaard'}</div>
+                    <div>{language === 'fr' ? '70-80% taux d\'automatisation' : '70-80% automatisering rate'}</div>
+                    <div>{language === 'fr' ? 'Disponibilité 24/7' : '24/7 beschikbaarheid'}</div>
                   </div>
                 </div>
 
                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white">
-                  <a href="/features">Ontdek alle features →</a>
+                  <a href={language === 'fr' ? '/fr/fonctionnalites' : '/features'}>
+                    {language === 'fr' ? 'Découvrir toutes les fonctionnalités →' : 'Ontdek alle features →'}
+                  </a>
                 </Button>
               </div>
             </div>
