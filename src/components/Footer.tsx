@@ -6,8 +6,10 @@ import { useState } from "react";
 import logoIcon from "@/assets/logo-icon.png";
 import glimpsLogoFooter from "@/assets/glimps-logo-new.png";
 import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { language, t } = useLanguage();
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [submittingNewsletter, setSubmittingNewsletter] = useState(false);
 

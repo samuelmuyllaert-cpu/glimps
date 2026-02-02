@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CTA = () => {
+  const { language, t } = useLanguage();
+
   return (
     <section className="relative w-full overflow-hidden py-20">
       {/* Gradient Background */}
@@ -12,23 +15,25 @@ const CTA = () => {
       <div className="relative z-10 container mx-auto px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-            Begin gratis met glimps
+            {t('cta.overline')}
           </span>
-          
+
           <h2 className="mb-6 font-inter text-4xl font-normal text-foreground md:text-5xl lg:text-6xl">
-            Stop met omzet mislopen & begin
-            <br />
-            klanten te verrassen
+            {t('cta.title').split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < t('cta.title').split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h2>
-          
+
           <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-            Sluit je aan bij honderden e-commerce bedrijven die AI gebruiken voor directe support,
-            24/7 vragen beantwoorden en conversies verhogen.
+            {t('cta.description')}
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild variant="outline" size="lg" className="rounded-full">
-              <a href="/demo">Plan een demo</a>
+              <a href={language === 'fr' ? '/fr/demo' : '/demo'}>{t('cta.button')}</a>
             </Button>
           </div>
         </div>
