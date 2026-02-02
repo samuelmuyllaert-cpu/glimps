@@ -57,9 +57,12 @@ const Footer = () => {
               <img src={glimpsLogoFooter} alt="glimps" className="h-16" />
             </a>
             <p className="text-sm text-muted-foreground">
-              De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.
+              {language === 'fr'
+                ? 'Le chatbot IA le plus intelligent pour l\'e-commerce. Boostez votre chiffre d\'affaires avec un service client automatisé.'
+                : 'De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.'
+              }
             </p>
-            
+
             {/* Trust Badges */}
             <div className="space-y-3 pt-4">
               <div className="flex items-center gap-3">
@@ -68,7 +71,9 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium">GDPR Compliant</p>
-                  <p className="text-xs text-muted-foreground">100% EU regelgeving</p>
+                  <p className="text-xs text-muted-foreground">
+                    {language === 'fr' ? '100% réglementation UE' : '100% EU regelgeving'}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -77,7 +82,9 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Privacy First</p>
-                  <p className="text-xs text-muted-foreground">Jouw data is veilig</p>
+                  <p className="text-xs text-muted-foreground">
+                    {language === 'fr' ? 'Vos données sont sécurisées' : 'Jouw data is veilig'}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -86,7 +93,9 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Best in Tech</p>
-                  <p className="text-xs text-muted-foreground">Nieuwste AI technologie</p>
+                  <p className="text-xs text-muted-foreground">
+                    {language === 'fr' ? 'Dernière technologie IA' : 'Nieuwste AI technologie'}
+                  </p>
                 </div>
               </div>
             </div>
@@ -94,31 +103,31 @@ const Footer = () => {
 
           {/* Product Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Product</h4>
+            <h4 className="font-semibold">{language === 'fr' ? 'Produit' : 'Product'}</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="/features" className="text-muted-foreground hover:text-primary">
-                  Features
+                <a href={language === 'fr' ? '/fr/fonctionnalites' : '/features'} className="text-muted-foreground hover:text-primary">
+                  {language === 'fr' ? 'Fonctionnalités' : 'Features'}
                 </a>
               </li>
               <li>
-                <a href="/integraties" className="text-muted-foreground hover:text-primary">
-                  Integraties
+                <a href={language === 'fr' ? '/fr/integrations' : '/integraties'} className="text-muted-foreground hover:text-primary">
+                  {language === 'fr' ? 'Intégrations' : 'Integraties'}
                 </a>
               </li>
               <li>
-                <a href="/demo" className="text-muted-foreground hover:text-primary">
+                <a href={language === 'fr' ? '/fr/demo' : '/demo'} className="text-muted-foreground hover:text-primary">
                   Demo
                 </a>
               </li>
               <li>
-                <a href="/ecom-readiness" className="text-muted-foreground hover:text-primary">
-                  Readiness Quiz
+                <a href={language === 'fr' ? '/fr/pret-ecom' : '/ecom-readiness'} className="text-muted-foreground hover:text-primary">
+                  {language === 'fr' ? 'Quiz de préparation' : 'Readiness Quiz'}
                 </a>
               </li>
               <li>
-                <a href="/ecom-agents" className="text-muted-foreground hover:text-primary">
-                  Ecom Agents
+                <a href={language === 'fr' ? '/fr/agents-ecom' : '/ecom-agents'} className="text-muted-foreground hover:text-primary">
+                  {language === 'fr' ? 'Agents E-com' : 'Ecom Agents'}
                 </a>
               </li>
             </ul>
@@ -126,25 +135,25 @@ const Footer = () => {
 
           {/* Company Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Bedrijf</h4>
+            <h4 className="font-semibold">{language === 'fr' ? 'Entreprise' : 'Bedrijf'}</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="/about" className="text-muted-foreground hover:text-primary">
-                  Over Ons
+                <a href={language === 'fr' ? '/fr/a-propos' : '/about'} className="text-muted-foreground hover:text-primary">
+                  {language === 'fr' ? 'À propos' : 'Over Ons'}
                 </a>
               </li>
               <li>
-                <a href="/how-we-work" className="text-muted-foreground hover:text-primary">
-                  Hoe we werken
+                <a href={language === 'fr' ? '/fr/comment-nous-travaillons' : '/how-we-work'} className="text-muted-foreground hover:text-primary">
+                  {language === 'fr' ? 'Comment nous travaillons' : 'Hoe we werken'}
                 </a>
               </li>
               <li>
-                <a href="/partners" className="text-muted-foreground hover:text-primary">
-                  Partners
+                <a href={language === 'fr' ? '/fr/partenaires' : '/partners'} className="text-muted-foreground hover:text-primary">
+                  {language === 'fr' ? 'Partenaires' : 'Partners'}
                 </a>
               </li>
               <li>
-                <a href="/blog" className="text-muted-foreground hover:text-primary">
+                <a href={language === 'fr' ? '/fr/blog' : '/blog'} className="text-muted-foreground hover:text-primary">
                   Blog
                 </a>
               </li>

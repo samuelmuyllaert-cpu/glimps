@@ -1,20 +1,27 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
 import { BarChart3, Zap, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProductFeatures = () => {
+  const { language } = useLanguage();
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-wider text-primary mb-4">
-            PRODUCT FEATURES
+            {language === 'fr' ? 'FONCTIONNALITÉS PRODUIT' : 'PRODUCT FEATURES'}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Ontketen de kracht van automatisering
+            {language === 'fr' ? 'Libérez la puissance de l\'automatisation' : 'Ontketen de kracht van automatisering'}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Boost je <span className="text-primary">e-commerce</span> excellentie
+            {language === 'fr' ? (
+              <>Boostez votre excellence <span className="text-primary">e-commerce</span></>
+            ) : (
+              <>Boost je <span className="text-primary">e-commerce</span> excellentie</>
+            )}
           </p>
         </div>
 
@@ -22,15 +29,15 @@ const ProductFeatures = () => {
           <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
             <TabsTrigger value="analytics" className="flex items-center gap-2">
               <BarChart3 className="w-4 h-4" />
-              AI Analytics
+              {language === 'fr' ? 'Analytics IA' : 'AI Analytics'}
             </TabsTrigger>
             <TabsTrigger value="automation" className="flex items-center gap-2">
               <Zap className="w-4 h-4" />
-              Automatisering
+              {language === 'fr' ? 'Automatisation' : 'Automatisering'}
             </TabsTrigger>
             <TabsTrigger value="personalization" className="flex items-center gap-2">
               <Users className="w-4 h-4" />
-              Personalisatie
+              {language === 'fr' ? 'Personnalisation' : 'Personalisatie'}
             </TabsTrigger>
           </TabsList>
 
@@ -39,22 +46,31 @@ const ProductFeatures = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-3xl font-bold mb-4">
-                    Versterk je merk en bereik klanten op een ongekende manier met Glimps
+                    {language === 'fr'
+                      ? 'Renforcez votre marque et atteignez les clients de manière inédite avec Glimps'
+                      : 'Versterk je merk en bereik klanten op een ongekende manier met Glimps'
+                    }
                   </h3>
                   <p className="text-muted-foreground">
-                    Klaar om je klantenservice te transformeren? Registreer voor een demo en begin
-                    aan je reis naar geautomatiseerde excellentie. Je succesverhaal begint hier.
+                    {language === 'fr'
+                      ? 'Prêt à transformer votre service client ? Inscrivez-vous pour une démo et commencez votre parcours vers l\'excellence automatisée. Votre success story commence ici.'
+                      : 'Klaar om je klantenservice te transformeren? Registreer voor een demo en begin aan je reis naar geautomatiseerde excellentie. Je succesverhaal begint hier.'
+                    }
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <div className="text-5xl font-bold mb-2">92%</div>
-                    <p className="text-muted-foreground">Toename in conversie</p>
+                    <p className="text-muted-foreground">
+                      {language === 'fr' ? 'Augmentation de la conversion' : 'Toename in conversie'}
+                    </p>
                   </div>
                   <div>
                     <div className="text-5xl font-bold mb-2">3.8x</div>
-                    <p className="text-muted-foreground">Meer verkoop</p>
+                    <p className="text-muted-foreground">
+                      {language === 'fr' ? 'Plus de ventes' : 'Meer verkoop'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -142,22 +158,31 @@ const ProductFeatures = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-3xl font-bold mb-4">
-                    Automatiseer je workflows en bespaar tijd
+                    {language === 'fr'
+                      ? 'Automatisez vos workflows et gagnez du temps'
+                      : 'Automatiseer je workflows en bespaar tijd'
+                    }
                   </h3>
                   <p className="text-muted-foreground">
-                    Laat je AI-agent repetitieve taken automatisch uitvoeren en focus op wat echt
-                    belangrijk is voor je bedrijf. Verhoog efficiëntie en productiviteit.
+                    {language === 'fr'
+                      ? 'Laissez votre agent IA exécuter automatiquement les tâches répétitives et concentrez-vous sur ce qui compte vraiment pour votre entreprise. Augmentez l\'efficacité et la productivité.'
+                      : 'Laat je AI-agent repetitieve taken automatisch uitvoeren en focus op wat echt belangrijk is voor je bedrijf. Verhoog efficiëntie en productiviteit.'
+                    }
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <div className="text-5xl font-bold mb-2">85%</div>
-                    <p className="text-muted-foreground">Minder handmatig werk</p>
+                    <p className="text-muted-foreground">
+                      {language === 'fr' ? 'Moins de travail manuel' : 'Minder handmatig werk'}
+                    </p>
                   </div>
                   <div>
                     <div className="text-5xl font-bold mb-2">24/7</div>
-                    <p className="text-muted-foreground">Altijd beschikbaar</p>
+                    <p className="text-muted-foreground">
+                      {language === 'fr' ? 'Toujours disponible' : 'Altijd beschikbaar'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -183,22 +208,31 @@ const ProductFeatures = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-3xl font-bold mb-4">
-                    Persoonlijke ervaringen die converteren
+                    {language === 'fr'
+                      ? 'Expériences personnalisées qui convertissent'
+                      : 'Persoonlijke ervaringen die converteren'
+                    }
                   </h3>
                   <p className="text-muted-foreground">
-                    Bied elke klant een unieke, gepersonaliseerde ervaring op basis van hun
-                    gedrag en voorkeuren. Verhoog engagement en loyaliteit.
+                    {language === 'fr'
+                      ? 'Offrez à chaque client une expérience unique et personnalisée basée sur son comportement et ses préférences. Augmentez l\'engagement et la fidélité.'
+                      : 'Bied elke klant een unieke, gepersonaliseerde ervaring op basis van hun gedrag en voorkeuren. Verhoog engagement en loyaliteit.'
+                    }
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <div className="text-5xl font-bold mb-2">4.5x</div>
-                    <p className="text-muted-foreground">Hogere engagement</p>
+                    <p className="text-muted-foreground">
+                      {language === 'fr' ? 'Engagement supérieur' : 'Hogere engagement'}
+                    </p>
                   </div>
                   <div>
                     <div className="text-5xl font-bold mb-2">76%</div>
-                    <p className="text-muted-foreground">Meer herhaalaankopen</p>
+                    <p className="text-muted-foreground">
+                      {language === 'fr' ? 'Plus d\'achats répétés' : 'Meer herhaalaankopen'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -208,9 +242,14 @@ const ProductFeatures = () => {
                   <div className="flex items-center justify-center h-64">
                     <div className="text-center">
                       <Users className="w-24 h-24 mx-auto mb-4 text-primary" />
-                      <p className="text-xl font-semibold">Personalisatie Engine</p>
+                      <p className="text-xl font-semibold">
+                        {language === 'fr' ? 'Moteur de Personnalisation' : 'Personalisatie Engine'}
+                      </p>
                       <p className="text-muted-foreground mt-2">
-                        Maatwerk voor elke individuele klant
+                        {language === 'fr'
+                          ? 'Sur mesure pour chaque client individuel'
+                          : 'Maatwerk voor elke individuele klant'
+                        }
                       </p>
                     </div>
                   </div>

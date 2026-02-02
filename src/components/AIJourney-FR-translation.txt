@@ -1,0 +1,35 @@
+Deze file is alleen om Franse vertalingen bij te houden:
+
+"ACHTER DE SCHERMEN" => "DANS LES COULISSES"
+"Van vraag naar antwoord in 80 milliseconden" => "De la question à la réponse en 80 millisecondes"
+"Van intentieherkenning tot personalisatie: bekijk het proces dat elke klantinteractie efficiënt en accuraat maakt." => "De la reconnaissance d'intention à la personnalisation : découvrez le processus qui rend chaque interaction client efficace et précise."
+"Scroll naar rechts om de reis te volgen" => "Faites défiler vers la droite pour suivre le parcours"
+
+Steps:
+"Klant stelt vraag" => "Le client pose une question"
+"Jonge klant" => "Jeune client"
+"Rode sneakers maat 42" => "Baskets rouges taille 42"
+
+"Bekijkt winkelmandje" => "Consulte le panier"
+"Nike voorkeur gedetecteerd" => "Préférence Nike détectée"
+
+"AI begrijpt context" => "L'IA comprend le contexte"
+"De AI analyseert intentie, gedrag en context om het perfecte antwoord te vormen." => "L'IA analyse l'intention, le comportement et le contexte pour former la réponse parfaite."
+"Intentie" => "Intention"
+"Profiel" => "Profil"
+"Gedrag" => "Comportement"
+"Context volledig begrepen" => "Contexte entièrement compris"
+
+"Past tone aan" => "Adapte le ton"
+"Herkent wie er spreekt en past toon automatisch aan." => "Reconnaît qui parle et adapte automatiquement le ton."
+"Goedendag! Graag help ik u verder..." => "Bonjour ! Je serais ravi de vous aider..."
+"Hey! 👋 Perfect, ik heb..." => "Hey! 👋 Parfait, j'ai..."
+
+"Genereert aanbeveling" => "Génère des recommandations"
+"Combineert verkoopdata + klantprofiel + gedrag" => "Combine données de vente + profil client + comportement"
+"Winkelmandje" => "Panier"
+"Voorraad" => "Stock"
+
+"Perfect antwoord" => "Réponse parfaite"
+"5x sneller dan menselijke reactie (100-150ms)" => "5x plus rapide qu'une réaction humaine (100-150ms)"
+"Hey! 👋 Ik heb 23 rode sneakers in maat 42. Op basis van je Nike voorkeur:" => "Hey! 👋 J'ai 23 baskets rouges en taille 42. Basé sur votre préférence Nike :"

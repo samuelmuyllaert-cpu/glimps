@@ -15,8 +15,10 @@ import {
   Star,
   Sparkles,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AIJourney = () => {
+  const { language } = useLanguage();
   const journeySteps = [
     {
       icon: MessageCircle,
@@ -242,13 +244,19 @@ const AIJourney = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <Badge variant="outline" className="mb-6 text-red-500 border-red-200 bg-white">
-            ACHTER DE SCHERMEN
+            {language === 'fr' ? 'DANS LES COULISSES' : 'ACHTER DE SCHERMEN'}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Van vraag naar antwoord in 80 milliseconden
+            {language === 'fr'
+              ? 'De la question à la réponse en 80 millisecondes'
+              : 'Van vraag naar antwoord in 80 milliseconden'
+            }
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Van intentieherkenning tot personalisatie: bekijk het proces dat elke klantinteractie efficiënt en accuraat maakt.
+            {language === 'fr'
+              ? 'De la reconnaissance d\'intention à la personnalisation : découvrez le processus qui rend chaque interaction client efficace et précise.'
+              : 'Van intentieherkenning tot personalisatie: bekijk het proces dat elke klantinteractie efficiënt en accuraat maakt.'
+            }
           </p>
         </div>
 
@@ -299,7 +307,12 @@ const AIJourney = () => {
 
         <div className="flex items-center justify-center gap-2 text-sm text-red-500 mt-6">
           <ArrowRight className="w-4 h-4" />
-          <span>Scroll naar rechts om de reis te volgen</span>
+          <span>
+            {language === 'fr'
+              ? 'Faites défiler vers la droite pour suivre le parcours'
+              : 'Scroll naar rechts om de reis te volgen'
+            }
+          </span>
           <ArrowRight className="w-4 h-4" />
         </div>
 

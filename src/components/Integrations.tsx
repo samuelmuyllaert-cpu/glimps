@@ -4,8 +4,10 @@ import postnlLogo from "@/assets/postnl-logo.png";
 import sendcloudLogo from "@/assets/sendcloud-logo.png";
 import prestashopLogo from "@/assets/prestashop-logo.png";
 import woocommerceLogo from "@/assets/woocommerce-logo.svg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Integrations = () => {
+  const { language } = useLanguage();
   const integrations = [
     { name: "Shopify", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" },
     { name: "SendCloud", logo: sendcloudLogo },
@@ -30,15 +32,15 @@ const Integrations = () => {
         <div className="mb-16 text-center">
           <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-purple-500/20 border border-primary/20 mb-4">
             <p className="text-sm font-semibold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-              ONZE PRIMAIRE INTEGRATIES
+              {language === 'fr' ? 'NOS INTÉGRATIONS PRINCIPALES' : 'ONZE PRIMAIRE INTEGRATIES'}
             </p>
           </div>
           <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
-            Maak productiviteit makkelijker
+            {language === 'fr' ? 'Facilitez la productivité' : 'Maak productiviteit makkelijker'}
             <br />
-            met{" "}
+            {language === 'fr' ? 'avec ' : 'met '}
             <span className="bg-gradient-to-r from-primary via-purple-600 to-accent bg-clip-text text-transparent font-bold">
-              50+ integraties
+              {language === 'fr' ? '50+ intégrations' : '50+ integraties'}
             </span>
           </h2>
         </div>
@@ -62,13 +64,13 @@ const Integrations = () => {
         {/* Bottom text */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-6">
-            En nog veel meer integraties beschikbaar
+            {language === 'fr' ? 'Et bien plus d\'intégrations disponibles' : 'En nog veel meer integraties beschikbaar'}
           </p>
-          <a 
-            href="/integraties" 
+          <a
+            href={language === 'fr' ? '/fr/integrations' : '/integraties'}
             className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all hover:gap-3 hover:text-purple-600"
           >
-            Bekijk alle integraties →
+            {language === 'fr' ? 'Voir toutes les intégrations →' : 'Bekijk alle integraties →'}
           </a>
         </div>
       </div>

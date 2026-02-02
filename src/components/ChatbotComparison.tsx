@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Users, Store, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type BotType = "none" | "faq" | "glimps";
 
@@ -12,6 +13,7 @@ interface Message {
 }
 
 const ChatbotComparison = () => {
+  const { language } = useLanguage();
   const [selectedBot, setSelectedBot] = useState<BotType | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
@@ -75,14 +77,20 @@ const ChatbotComparison = () => {
         <div className="text-center mb-12">
           <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-purple-500/20 border border-primary/20 mb-4">
             <span className="text-sm font-semibold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-              VERGELIJK & KIES
+              {language === 'fr' ? 'COMPARER & CHOISIR' : 'VERGELIJK & KIES'}
             </span>
           </div>
           <h2 className="font-inter text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Welke klantenservice oplossing past bij jouw webshop?
+            {language === 'fr'
+              ? 'Quelle solution de service client correspond à votre boutique en ligne ?'
+              : 'Welke klantenservice oplossing past bij jouw webshop?'
+            }
           </h2>
           <p className="text-lg text-muted-foreground mt-6">
-            De juiste keuze hangt af van je grootte, verkeer en ambities. Ontdek welke aanpak bij jouw situatie past.
+            {language === 'fr'
+              ? 'Le bon choix dépend de votre taille, votre trafic et vos ambitions. Découvrez quelle approche convient à votre situation.'
+              : 'De juiste keuze hangt af van je grootte, verkeer en ambities. Ontdek welke aanpak bij jouw situatie past.'
+            }
           </p>
         </div>
 
@@ -95,7 +103,7 @@ const ChatbotComparison = () => {
             className={`gap-2 ${selectedBot === "none" ? "bg-foreground text-background" : ""}`}
           >
             <Users className="w-5 h-5" />
-            Geen Bot
+            {language === 'fr' ? 'Aucun Bot' : 'Geen Bot'}
           </Button>
           <Button
             variant={selectedBot === "faq" ? "default" : "outline"}
@@ -104,7 +112,7 @@ const ChatbotComparison = () => {
             className={`gap-2 ${selectedBot === "faq" ? "bg-muted-foreground hover:bg-muted-foreground/90 text-background" : ""}`}
           >
             <Store className="w-5 h-5" />
-            Simpele FAQ Bot
+            {language === 'fr' ? 'Bot FAQ Simple' : 'Simpele FAQ Bot'}
           </Button>
           <Button
             variant={selectedBot === "glimps" ? "default" : "outline"}
@@ -442,13 +450,21 @@ const ChatbotComparison = () => {
         {/* Bottom CTA */}
         <div className="mt-16 text-center bg-muted/30 rounded-3xl py-12 px-6 border border-border">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Geen oplossing is perfect voor iedereen
+            {language === 'fr'
+              ? 'Aucune solution n\'est parfaite pour tout le monde'
+              : 'Geen oplossing is perfect voor iedereen'
+            }
           </h3>
           <p className="text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
-            De juiste keuze hangt af van je grootte, je verkeer en je ambities. Twijfel je? Plan een vrijblijvend gesprek - we helpen je de beste oplossing kiezen, ook als dat niet Glimps is.
+            {language === 'fr'
+              ? 'Le bon choix dépend de votre taille, votre trafic et vos ambitions. Vous hésitez ? Planifiez une conversation sans engagement - nous vous aidons à choisir la meilleure solution, même si ce n\'est pas Glimps.'
+              : 'De juiste keuze hangt af van je grootte, je verkeer en je ambities. Twijfel je? Plan een vrijblijvend gesprek - we helpen je de beste oplossing kiezen, ook als dat niet Glimps is.'
+            }
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
-            <a href="/contact">Plan een vrijblijvend gesprek →</a>
+            <a href={language === 'fr' ? '/fr/contact' : '/contact'}>
+              {language === 'fr' ? 'Planifier une conversation sans engagement →' : 'Plan een vrijblijvend gesprek →'}
+            </a>
           </Button>
         </div>
       </div>
