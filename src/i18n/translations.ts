@@ -258,6 +258,159 @@ export const translations = {
         description: 'Neem contact met ons op. We helpen je graag met jouw vragen over Glimps AI.'
       }
     },
+    whyDifferent: {
+      badge: 'Hoe het werkt',
+      title1: 'Slimmer dan een chatbot.',
+      title2: 'Beter dan een supporttool.',
+      subtitle: 'We bouwen geen chatbots.',
+      features: [
+        {
+          title: 'Strategische AI',
+          description: 'Niet zomaar een chatbot. Een systeem dat denkt, leert en verbetert met elk gesprek.'
+        },
+        {
+          title: 'Gebouwd voor Groei',
+          description: 'Gebouwd voor schaalbare e-commerce. Van 100 tot 100.000 gesprekken per maand.'
+        },
+        {
+          title: 'Betrouwbaar & Transparant',
+          description: 'GDPR-compliant en altijd transparant over hoe AI werkt.'
+        },
+        {
+          title: 'Naadloze Samenwerking',
+          description: 'Glimps werkt naadloos samen met jouw support team. Escalatie wanneer nodig.'
+        },
+        {
+          title: 'Conversie-Focus',
+          description: 'Elk antwoord is geoptimaliseerd om twijfel weg te nemen en aankoop te stimuleren.'
+        },
+        {
+          title: 'Klanttevredenheid',
+          description: '95% tevredenheid door snelle, accurate en menselijke antwoorden.'
+        }
+      ]
+    },
+    integrations: {
+      badge: 'Integraties',
+      title: 'Werkt met jouw favoriete tools',
+      subtitle: 'Naadloze integratie met de platforms die je al gebruikt',
+      platforms: 'E-commerce platforms',
+      shipping: 'Verzending & fulfillment',
+      automation: 'Automatisering',
+      viewAll: 'Bekijk alle integraties'
+    },
+    aiJourney: {
+      badge: 'AI-gestuurde klantreis',
+      title: 'Van eerste klik tot aankoop',
+      subtitle: 'Glimps begeleidt klanten door elke stap van hun koopreis',
+      steps: [
+        {
+          title: 'Ontdekking',
+          description: 'Klant bezoekt je webshop op zoek naar een product'
+        },
+        {
+          title: 'Hulp nodig',
+          description: 'Vragen over maat, kleur, specificaties of beschikbaarheid'
+        },
+        {
+          title: 'AI Assistant',
+          description: 'Glimps geeft direct antwoord en helpt met productadvies'
+        },
+        {
+          title: 'Conversie',
+          description: 'Klant maakt een geïnformeerde aankoop met vertrouwen'
+        }
+      ]
+    },
+    aiKnowledge: {
+      badge: 'Slimme AI',
+      title: 'Leert van jouw business',
+      subtitle: 'Onze AI wordt steeds slimmer door te leren van jouw producten, beleid en klantinteracties',
+      features: [
+        {
+          title: 'Productkennis',
+          description: 'Begrijpt je complete catalogus, specs en voorraad'
+        },
+        {
+          title: 'Beleid & Regels',
+          description: 'Kent je verzend-, retour- en garantievoorwaarden'
+        },
+        {
+          title: 'Tone of Voice',
+          description: 'Past zich aan je merkidentiteit en communicatiestijl'
+        },
+        {
+          title: 'Continu leren',
+          description: 'Wordt slimmer met elke klantinteractie'
+        }
+      ]
+    },
+    productFeatures: {
+      badge: 'Features',
+      title: 'Alles wat je nodig hebt',
+      subtitle: 'Krachtige features die echt impact maken',
+      features: [
+        {
+          title: '24/7 Beschikbaar',
+          description: 'Altijd online om klanten te helpen, ook buiten kantooruren'
+        },
+        {
+          title: 'Meertalig',
+          description: 'Communiceert in meerdere talen met internationale klanten'
+        },
+        {
+          title: 'Real-time Data',
+          description: 'Toegang tot live voorraad, prijzen en orderstatussen'
+        },
+        {
+          title: 'Smart Routing',
+          description: 'Escaleert complexe vragen naar je support team'
+        },
+        {
+          title: 'Analytics Dashboard',
+          description: 'Inzicht in gesprekken, conversies en prestaties'
+        },
+        {
+          title: 'A/B Testing',
+          description: 'Test verschillende antwoorden om conversie te optimaliseren'
+        }
+      ]
+    },
+    chatbotComparison: {
+      badge: 'Vergelijking',
+      title: 'Waarom Glimps?',
+      subtitle: 'Zie het verschil tussen traditionele chatbots en Glimps',
+      traditional: 'Traditionele Chatbots',
+      glimps: 'Glimps AI',
+      features: [
+        {
+          traditional: 'Vaste antwoorden en scripts',
+          glimps: 'Contextbewuste AI-gesprekken'
+        },
+        {
+          traditional: 'Beperkte productkennis',
+          glimps: 'Volledige catalogus integratie'
+        },
+        {
+          traditional: 'Kan niet leren of verbeteren',
+          glimps: 'Leert continu van interacties'
+        },
+        {
+          traditional: 'Generieke antwoorden',
+          glimps: 'Gepersonaliseerde aanbevelingen'
+        },
+        {
+          traditional: 'Moeilijke setup',
+          glimps: 'Plug-and-play integratie'
+        }
+      ]
+    },
+    quote: {
+      text: 'Dankzij Glimps kunnen onze klanten veel sneller de perfecte producten vinden. Onze conversie is met 40% gestegen en we besparen uren aan klantenservice.',
+      author: 'Lisa Van den Berg',
+      role: 'E-commerce Manager',
+      company: 'Fashion Hub'
+    },
     common: {
       readMore: 'Lees meer',
       learnMore: 'Meer informatie',
@@ -523,6 +676,159 @@ export const translations = {
         title: 'Contact - Glimps',
         description: 'Contactez-nous. Nous sommes heureux de répondre à vos questions sur Glimps AI.'
       }
+    },
+    whyDifferent: {
+      badge: 'Comment ça marche',
+      title1: 'Plus intelligent qu\'un chatbot.',
+      title2: 'Meilleur qu\'un outil de support.',
+      subtitle: 'Nous ne construisons pas de chatbots.',
+      features: [
+        {
+          title: 'IA Stratégique',
+          description: 'Pas un simple chatbot. Un système qui pense, apprend et s\'améliore avec chaque conversation.'
+        },
+        {
+          title: 'Conçu pour la Croissance',
+          description: 'Conçu pour l\'e-commerce évolutif. De 100 à 100 000 conversations par mois.'
+        },
+        {
+          title: 'Fiable & Transparent',
+          description: 'Conforme RGPD et toujours transparent sur le fonctionnement de l\'IA.'
+        },
+        {
+          title: 'Collaboration Fluide',
+          description: 'Glimps collabore parfaitement avec votre équipe support. Escalade si nécessaire.'
+        },
+        {
+          title: 'Focus Conversion',
+          description: 'Chaque réponse est optimisée pour éliminer les doutes et stimuler l\'achat.'
+        },
+        {
+          title: 'Satisfaction Client',
+          description: '95% de satisfaction grâce à des réponses rapides, précises et humaines.'
+        }
+      ]
+    },
+    integrations: {
+      badge: 'Intégrations',
+      title: 'Fonctionne avec vos outils préférés',
+      subtitle: 'Intégration transparente avec les plateformes que vous utilisez déjà',
+      platforms: 'Plateformes e-commerce',
+      shipping: 'Expédition & fulfillment',
+      automation: 'Automatisation',
+      viewAll: 'Voir toutes les intégrations'
+    },
+    aiJourney: {
+      badge: 'Parcours client piloté par IA',
+      title: 'Du premier clic à l\'achat',
+      subtitle: 'Glimps guide les clients à chaque étape de leur parcours d\'achat',
+      steps: [
+        {
+          title: 'Découverte',
+          description: 'Le client visite votre boutique à la recherche d\'un produit'
+        },
+        {
+          title: 'Besoin d\'aide',
+          description: 'Questions sur la taille, la couleur, les spécifications ou la disponibilité'
+        },
+        {
+          title: 'Assistant IA',
+          description: 'Glimps répond immédiatement et aide avec des conseils produits'
+        },
+        {
+          title: 'Conversion',
+          description: 'Le client effectue un achat éclairé en toute confiance'
+        }
+      ]
+    },
+    aiKnowledge: {
+      badge: 'IA Intelligente',
+      title: 'Apprend de votre business',
+      subtitle: 'Notre IA devient de plus en plus intelligente en apprenant de vos produits, politiques et interactions clients',
+      features: [
+        {
+          title: 'Connaissance Produit',
+          description: 'Comprend votre catalogue complet, specs et stock'
+        },
+        {
+          title: 'Politiques & Règles',
+          description: 'Connaît vos conditions d\'expédition, retour et garantie'
+        },
+        {
+          title: 'Ton de Voix',
+          description: 'S\'adapte à votre identité de marque et style de communication'
+        },
+        {
+          title: 'Apprentissage Continu',
+          description: 'Devient plus intelligent avec chaque interaction client'
+        }
+      ]
+    },
+    productFeatures: {
+      badge: 'Fonctionnalités',
+      title: 'Tout ce dont vous avez besoin',
+      subtitle: 'Des fonctionnalités puissantes qui ont un impact réel',
+      features: [
+        {
+          title: 'Disponible 24/7',
+          description: 'Toujours en ligne pour aider les clients, même en dehors des heures de bureau'
+        },
+        {
+          title: 'Multilingue',
+          description: 'Communique dans plusieurs langues avec les clients internationaux'
+        },
+        {
+          title: 'Données en Temps Réel',
+          description: 'Accès au stock en direct, prix et statuts de commande'
+        },
+        {
+          title: 'Routage Intelligent',
+          description: 'Escalade les questions complexes vers votre équipe support'
+        },
+        {
+          title: 'Tableau de Bord Analytics',
+          description: 'Aperçu des conversations, conversions et performances'
+        },
+        {
+          title: 'Tests A/B',
+          description: 'Testez différentes réponses pour optimiser la conversion'
+        }
+      ]
+    },
+    chatbotComparison: {
+      badge: 'Comparaison',
+      title: 'Pourquoi Glimps?',
+      subtitle: 'Voyez la différence entre les chatbots traditionnels et Glimps',
+      traditional: 'Chatbots Traditionnels',
+      glimps: 'Glimps AI',
+      features: [
+        {
+          traditional: 'Réponses et scripts fixes',
+          glimps: 'Conversations IA contextuelles'
+        },
+        {
+          traditional: 'Connaissance produit limitée',
+          glimps: 'Intégration catalogue complète'
+        },
+        {
+          traditional: 'Ne peut pas apprendre ou s\'améliorer',
+          glimps: 'Apprend continuellement des interactions'
+        },
+        {
+          traditional: 'Réponses génériques',
+          glimps: 'Recommandations personnalisées'
+        },
+        {
+          traditional: 'Configuration difficile',
+          glimps: 'Intégration plug-and-play'
+        }
+      ]
+    },
+    quote: {
+      text: 'Grâce à Glimps, nos clients peuvent trouver les produits parfaits beaucoup plus rapidement. Notre conversion a augmenté de 40% et nous économisons des heures de service client.',
+      author: 'Lisa Van den Berg',
+      role: 'E-commerce Manager',
+      company: 'Fashion Hub'
     },
     common: {
       readMore: 'En savoir plus',

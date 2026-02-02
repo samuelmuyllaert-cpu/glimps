@@ -1,51 +1,35 @@
 import { Sparkles, TrendingUp, Shield, Users, Target, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WhyDifferent = () => {
-  const features = [
-    {
-      icon: Sparkles,
-      gradient: "from-pink-500 to-rose-500",
-      glowColor: "rgba(236, 72, 153, 0.3)",
-      title: "Strategische AI",
-      description: "Niet zomaar een chatbot. Een systeem dat denkt, leert en verbetert met elk gesprek.",
-    },
-    {
-      icon: TrendingUp,
-      gradient: "from-blue-500 to-cyan-500",
-      glowColor: "rgba(59, 130, 246, 0.3)",
-      title: "Gebouwd voor Groei",
-      description: "Gebouwd voor schaalbare e-commerce. Van 100 tot 100.000 gesprekken per maand.",
-    },
-    {
-      icon: Shield,
-      gradient: "from-amber-500 to-orange-500",
-      glowColor: "rgba(245, 158, 11, 0.3)",
-      title: "Betrouwbaar & Transparant",
-      description: "GDPR-compliant en altijd transparant over hoe AI werkt.",
-    },
-    {
-      icon: Users,
-      gradient: "from-purple-500 to-pink-500",
-      glowColor: "rgba(168, 85, 247, 0.3)",
-      title: "Naadloze Samenwerking",
-      description: "Glimps werkt naadloos samen met jouw support team. Escalatie wanneer nodig.",
-    },
-    {
-      icon: Target,
-      gradient: "from-emerald-500 to-teal-500",
-      glowColor: "rgba(16, 185, 129, 0.3)",
-      title: "Conversie-Focus",
-      description: "Elk antwoord is geoptimaliseerd om twijfel weg te nemen en aankoop te stimuleren.",
-    },
-    {
-      icon: Heart,
-      gradient: "from-rose-500 to-red-500",
-      glowColor: "rgba(244, 63, 94, 0.3)",
-      title: "Klanttevredenheid",
-      description: "95% tevredenheid door snelle, accurate en menselijke antwoorden.",
-    },
+  const { t } = useLanguage();
+  const featuresData: Array<{title: string, description: string}> = t('whyDifferent.features') as any;
+
+  const icons = [Sparkles, TrendingUp, Shield, Users, Target, Heart];
+  const gradients = [
+    "from-pink-500 to-rose-500",
+    "from-blue-500 to-cyan-500",
+    "from-amber-500 to-orange-500",
+    "from-purple-500 to-pink-500",
+    "from-emerald-500 to-teal-500",
+    "from-rose-500 to-red-500"
   ];
+  const glowColors = [
+    "rgba(236, 72, 153, 0.3)",
+    "rgba(59, 130, 246, 0.3)",
+    "rgba(245, 158, 11, 0.3)",
+    "rgba(168, 85, 247, 0.3)",
+    "rgba(16, 185, 129, 0.3)",
+    "rgba(244, 63, 94, 0.3)"
+  ];
+
+  const features = featuresData.map((feature, index) => ({
+    ...feature,
+    icon: icons[index],
+    gradient: gradients[index],
+    glowColor: glowColors[index]
+  }));
 
   return (
     <section className="relative w-full overflow-hidden bg-background py-24">
@@ -54,16 +38,16 @@ const WhyDifferent = () => {
         <div className="mb-16 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-pink-50 px-4 py-2 text-sm font-medium text-pink-600">
             <Sparkles className="h-4 w-4" />
-            Hoe het werkt
+            {t('whyDifferent.badge')}
           </div>
           <h2 className="mb-6 font-inter text-4xl font-normal text-foreground md:text-5xl lg:text-6xl">
-            Slimmer dan een chatbot.
+            {t('whyDifferent.title1')}
           </h2>
           <h2 className="mb-6 font-inter text-4xl font-normal text-foreground md:text-5xl lg:text-6xl">
-            Beter dan een supporttool.
+            {t('whyDifferent.title2')}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            We bouwen geen chatbots.
+            {t('whyDifferent.subtitle')}
           </p>
         </div>
 
