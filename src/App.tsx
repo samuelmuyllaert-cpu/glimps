@@ -46,7 +46,6 @@ import SportkledingFitness from "./pages/industries/SportkledingFitness";
 import TuinBuitenleven from "./pages/industries/TuinBuitenleven";
 import Legal from "./pages/Legal";
 import ProSportLights from "./pages/ProSportLights";
-import PrintingWinkel from "./pages/PrintingWinkel";
 import LensOnline from "./pages/LensOnline";
 import NotFound from "./pages/NotFound";
 
@@ -101,7 +100,6 @@ const App = () => (
         <Route path="/industries/tuin-buitenleven" element={<TuinBuitenleven />} />
         <Route path="/legal" element={<Legal />} />
         <Route path="/prosportlights" element={<ProSportLights />} />
-        <Route path="/3dprintingwinkel" element={<PrintingWinkel />} />
         <Route path="/lensonline" element={<LensOnline />} />
         {/* French Routes */}
         <Route path="/fr" element={<Index />} />
@@ -146,7 +144,6 @@ const App = () => (
         <Route path="/fr/industries/jardin-exterieur" element={<TuinBuitenleven />} />
         <Route path="/fr/legal" element={<Legal />} />
         <Route path="/fr/prosportlights" element={<ProSportLights />} />
-        <Route path="/fr/3dprintingwinkel" element={<PrintingWinkel />} />
         <Route path="/fr/lensonline" element={<LensOnline />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

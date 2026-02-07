@@ -52,7 +52,6 @@ const routesToPrerender = [
   '/industries/tuin-buitenleven',
   '/legal',
   '/prosportlights',
-  '/3dprintingwinkel',
   '/lensonline',
   '/fr',
   '/fr/fonctionnalites',
@@ -96,7 +95,6 @@ const routesToPrerender = [
   '/fr/industries/jardin-exterieur',
   '/fr/legal',
   '/fr/prosportlights',
-  '/fr/3dprintingwinkel',
   '/fr/lensonline'
 ];
 
