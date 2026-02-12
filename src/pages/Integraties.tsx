@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   ShoppingCart,
   Package,
@@ -30,9 +31,11 @@ import apiLogo from "@/assets/api-logo.svg";
 import webhookLogo from "@/assets/webhook-logo.svg";
 
 const Integraties = () => {
+  const { language } = useLanguage();
+
   const integrationCategories = [
     {
-      title: "E-commerce Platforms",
+      title: language === 'fr' ? "Plateformes E-commerce" : "E-commerce Platforms",
       icon: ShoppingCart,
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
@@ -40,55 +43,71 @@ const Integraties = () => {
         {
           name: "Shopify",
           logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg",
-          description: "Automatische sync van producten, voorraad en klantgegevens",
+          description: language === 'fr'
+            ? "Synchronisation automatique des produits, stock et données clients"
+            : "Automatische sync van producten, voorraad en klantgegevens",
           status: "Live"
         },
         {
           name: "WooCommerce",
           logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg",
-          description: "Volledige integratie met WordPress en WooCommerce stores",
+          description: language === 'fr'
+            ? "Intégration complète avec WordPress et boutiques WooCommerce"
+            : "Volledige integratie met WordPress en WooCommerce stores",
           status: "Live"
         },
         {
           name: "Magento",
           logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Magento_Logo.svg",
-          description: "Enterprise e-commerce platform integratie",
+          description: language === 'fr'
+            ? "Intégration de plateforme e-commerce entreprise"
+            : "Enterprise e-commerce platform integratie",
           status: "Live"
         },
         {
           name: "Odoo",
           logo: odooLogo,
-          description: "Complete ERP en e-commerce suite integratie",
+          description: language === 'fr'
+            ? "Intégration complète ERP et suite e-commerce"
+            : "Complete ERP en e-commerce suite integratie",
           status: "Live"
         },
         {
           name: "Lightspeed",
           logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Lightspeed_Logo.svg",
-          description: "POS en e-commerce platform voor retail en horeca",
+          description: language === 'fr'
+            ? "Plateforme POS et e-commerce pour retail et horeca"
+            : "POS en e-commerce platform voor retail en horeca",
           status: "Live"
         },
         {
           name: "PrestaShop",
           logo: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Prestashop_logo.svg",
-          description: "Open source e-commerce oplossing integratie",
+          description: language === 'fr'
+            ? "Intégration de solution e-commerce open source"
+            : "Open source e-commerce oplossing integratie",
           status: "Live"
         },
         {
           name: "Wix",
           logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wix.com_website_logo.svg",
-          description: "Wix webshop platform integratie",
+          description: language === 'fr'
+            ? "Intégration plateforme boutique en ligne Wix"
+            : "Wix webshop platform integratie",
           status: "Live"
         },
         {
           name: "WordPress",
           logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
-          description: "WordPress website en blog integratie",
+          description: language === 'fr'
+            ? "Intégration site web et blog WordPress"
+            : "WordPress website en blog integratie",
           status: "Live"
         },
       ]
     },
     {
-      title: "Verzending & Logistiek",
+      title: language === 'fr' ? "Expédition & Logistique" : "Verzending & Logistiek",
       icon: Package,
       color: "text-orange-500",
       bgColor: "bg-orange-500/10",
@@ -96,49 +115,65 @@ const Integraties = () => {
         {
           name: "SendCloud",
           logo: sendcloudLogo,
-          description: "Track & trace, verzendlabels en automatische updates",
+          description: language === 'fr'
+            ? "Track & trace, étiquettes d'expédition et mises à jour automatiques"
+            : "Track & trace, verzendlabels en automatische updates",
           status: "Live"
         },
         {
           name: "bpost",
           logo: bpostLogo,
-          description: "Belgische postsysteem integratie voor tracking",
+          description: language === 'fr'
+            ? "Intégration du système postal belge pour le suivi"
+            : "Belgische postsysteem integratie voor tracking",
           status: "Live"
         },
         {
           name: "PostNL",
           logo: postnlLogo,
-          description: "Nederlandse post tracking en verzending",
+          description: language === 'fr'
+            ? "Suivi et expédition de la poste néerlandaise"
+            : "Nederlandse post tracking en verzending",
           status: "Live"
         },
         {
           name: "DHL",
           logo: "https://upload.wikimedia.org/wikipedia/commons/a/ac/DHL_Logo.svg",
-          description: "Internationale verzending en tracking via DHL",
+          description: language === 'fr'
+            ? "Expédition et suivi international via DHL"
+            : "Internationale verzending en tracking via DHL",
           status: "Live"
         },
         {
           name: "GLS",
           logo: "https://upload.wikimedia.org/wikipedia/commons/1/12/GLS_Logo.svg",
-          description: "Europese pakketbezorging en tracking",
+          description: language === 'fr'
+            ? "Livraison de colis européen et suivi"
+            : "Europese pakketbezorging en tracking",
           status: "Live"
         },
         {
           name: "MyParcel",
           logo: myparcelLogo,
-          description: "Multi-carrier verzendplatform voor webshops",
+          description: language === 'fr'
+            ? "Plateforme d'expédition multi-transporteurs pour boutiques en ligne"
+            : "Multi-carrier verzendplatform voor webshops",
           status: "Live"
         },
         {
           name: "Picqer",
           logo: picqerLogo,
-          description: "Magazijn- en voorraadbeheer systeem",
+          description: language === 'fr'
+            ? "Système de gestion d'entrepôt et de stock"
+            : "Magazijn- en voorraadbeheer systeem",
           status: "Live"
         },
         {
           name: "Fulfillment Centers",
           logo: fulfillmentLogo,
-          description: "Koppeling met externe fulfillment en logistieke partners",
+          description: language === 'fr'
+            ? "Connexion avec partenaires externes de fulfillment et logistique"
+            : "Koppeling met externe fulfillment en logistieke partners",
           status: "Live"
         },
       ]
@@ -152,56 +187,74 @@ const Integraties = () => {
         {
           name: "WhatsApp Business",
           logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
-          description: "Directe WhatsApp communicatie met klanten",
+          description: language === 'fr'
+            ? "Communication directe WhatsApp avec les clients"
+            : "Directe WhatsApp communicatie met klanten",
           status: "Live"
         },
         {
           name: "Instagram",
           logo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
-          description: "Beantwoord DM's en comments automatisch via Instagram",
+          description: language === 'fr'
+            ? "Répondez automatiquement aux DM et commentaires via Instagram"
+            : "Beantwoord DM's en comments automatisch via Instagram",
           status: "Live"
         },
         {
           name: "Messenger",
           logo: "https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg",
-          description: "Facebook Messenger integratie voor klantenservice",
+          description: language === 'fr'
+            ? "Intégration Facebook Messenger pour service client"
+            : "Facebook Messenger integratie voor klantenservice",
           status: "Live"
         },
         {
           name: "Telegram",
           logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
-          description: "Telegram bot integratie voor klantcommunicatie",
+          description: language === 'fr'
+            ? "Intégration bot Telegram pour communication client"
+            : "Telegram bot integratie voor klantcommunicatie",
           status: "Live"
         },
         {
           name: "Twilio",
           logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg",
-          description: "SMS en voice communicatie via Twilio platform",
+          description: language === 'fr'
+            ? "Communication SMS et vocale via plateforme Twilio"
+            : "SMS en voice communicatie via Twilio platform",
           status: "Live"
         },
         {
           name: "Email",
           logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg",
-          description: "Automatische email afhandeling en responses",
+          description: language === 'fr'
+            ? "Gestion automatique des emails et réponses"
+            : "Automatische email afhandeling en responses",
           status: "Live"
         },
         {
           name: "Zendesk",
           logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zendesk_logo.svg",
-          description: "Customer support ticket systeem integratie",
+          description: language === 'fr'
+            ? "Intégration système de tickets support client"
+            : "Customer support ticket systeem integratie",
           status: "Live"
         },
         {
           name: "Slack",
           logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
-          description: "Team notificaties en interne communicatie",
+          description: language === 'fr'
+            ? "Notifications d'équipe et communication interne"
+            : "Team notificaties en interne communicatie",
           status: "Live"
         },
         {
           name: "HubSpot",
           logo: hubspotLogo,
-          description: "CRM synchronisatie en lead management",
-          status: "Binnenkort"
+          description: language === 'fr'
+            ? "Synchronisation CRM et gestion des leads"
+            : "CRM synchronisatie en lead management",
+          status: language === 'fr' ? "Bientôt" : "Binnenkort"
         },
       ]
     },
@@ -214,31 +267,41 @@ const Integraties = () => {
         {
           name: "Make (Integromat)",
           logo: makeLogo,
-          description: "Geavanceerde workflow automatisering en integraties",
+          description: language === 'fr'
+            ? "Automatisation de workflow avancée et intégrations"
+            : "Geavanceerde workflow automatisering en integraties",
           status: "Live"
         },
         {
           name: "Zapier",
           logo: zapierLogo,
-          description: "Automatiseer taken tussen je favoriete apps",
+          description: language === 'fr'
+            ? "Automatisez les tâches entre vos applications préférées"
+            : "Automatiseer taken tussen je favoriete apps",
           status: "Live"
         },
         {
           name: "n8n",
           logo: n8nLogo,
-          description: "Open-source workflow automatisering platform",
+          description: language === 'fr'
+            ? "Plateforme d'automatisation de workflow open-source"
+            : "Open-source workflow automatisering platform",
           status: "Live"
         },
         {
           name: "REST API",
           logo: apiLogo,
-          description: "Volledige RESTful API voor custom integraties",
+          description: language === 'fr'
+            ? "API RESTful complète pour intégrations personnalisées"
+            : "Volledige RESTful API voor custom integraties",
           status: "Live"
         },
         {
           name: "Webhooks",
           logo: webhookLogo,
-          description: "Real-time event notificaties via webhooks",
+          description: language === 'fr'
+            ? "Notifications d'événements en temps réel via webhooks"
+            : "Real-time event notificaties via webhooks",
           status: "Live"
         },
       ]
@@ -247,25 +310,31 @@ const Integraties = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Integraties - Glimps AI | 50+ Koppelingen met je tools"
-        description="Koppel Glimps naadloos met Shopify, WooCommerce, SendCloud, WhatsApp en 50+ andere tools. Plug & play setup binnen 5 minuten."
-        path="/integraties"
+      <SEO
+        title={language === 'fr'
+          ? "Intégrations - Glimps AI | 50+ Connexions avec vos outils"
+          : "Integraties - Glimps AI | 50+ Koppelingen met je tools"}
+        description={language === 'fr'
+          ? "Connectez Glimps de manière transparente avec Shopify, WooCommerce, SendCloud, WhatsApp et 50+ autres outils. Configuration plug & play en 5 minutes."
+          : "Koppel Glimps naadloos met Shopify, WooCommerce, SendCloud, WhatsApp en 50+ andere tools. Plug & play setup binnen 5 minuten."}
+        path={language === 'fr' ? "/fr/integrations" : "/integraties"}
       />
       <StructuredData type="organization" />
-      <StructuredData 
-        type="service" 
+      <StructuredData
+        type="service"
         data={{
-          name: "Glimps AI Integraties",
-          description: "50+ integraties met e-commerce platforms, verzending, CRM en marketing tools"
-        }} 
+          name: language === 'fr' ? "Intégrations Glimps AI" : "Glimps AI Integraties",
+          description: language === 'fr'
+            ? "50+ intégrations avec plateformes e-commerce, expédition, CRM et outils marketing"
+            : "50+ integraties met e-commerce platforms, verzending, CRM en marketing tools"
+        }}
       />
-      <StructuredData 
-        type="breadcrumb" 
+      <StructuredData
+        type="breadcrumb"
         data={[
-          { name: "Home", url: "/" },
-          { name: "Integraties", url: "/integraties" }
-        ]} 
+          { name: "Home", url: language === 'fr' ? "/fr" : "/" },
+          { name: language === 'fr' ? "Intégrations" : "Integraties", url: language === 'fr' ? "/fr/integrations" : "/integraties" }
+        ]}
       />
       <Navigation />
       
@@ -275,17 +344,31 @@ const Integraties = () => {
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-flex items-center justify-center rounded-full bg-primary/10 px-4 py-2">
               <Zap className="mr-2 h-5 w-5 text-primary" />
-              <span className="text-sm font-semibold text-primary">50+ Integraties</span>
+              <span className="text-sm font-semibold text-primary">
+                {language === 'fr' ? "50+ Intégrations" : "50+ Integraties"}
+              </span>
             </div>
             <h1 className="mb-6 text-5xl font-bold md:text-6xl">
-              Naadloos verbonden met <br />
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                jouw favoriete tools
-              </span>
+              {language === 'fr' ? (
+                <>
+                  Connecté de manière transparente avec <br />
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    vos outils préférés
+                  </span>
+                </>
+              ) : (
+                <>
+                  Naadloos verbonden met <br />
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    jouw favoriete tools
+                  </span>
+                </>
+              )}
             </h1>
             <p className="mb-8 text-xl text-muted-foreground">
-              Glimps AI integreert moeiteloos met alle platforms die jij al gebruikt. 
-              Geen gedoe, gewoon werken.
+              {language === 'fr'
+                ? "Glimps AI s'intègre sans effort avec toutes les plateformes que vous utilisez déjà. Pas de tracas, juste du travail."
+                : "Glimps AI integreert moeiteloos met alle platforms die jij al gebruikt. Geen gedoe, gewoon werken."}
             </p>
           </div>
         </div>
@@ -301,9 +384,13 @@ const Integraties = () => {
                   <CheckCircle2 className="h-7 w-7 text-green-500" />
                 </div>
               </div>
-              <h3 className="mb-2 text-xl font-bold">Plug & Play Setup</h3>
+              <h3 className="mb-2 text-xl font-bold">
+                {language === 'fr' ? "Configuration Plug & Play" : "Plug & Play Setup"}
+              </h3>
               <p className="text-muted-foreground">
-                Professionele setup en implementatie. We helpen je op weg.
+                {language === 'fr'
+                  ? "Configuration et implémentation professionnelle. Nous vous aidons à démarrer."
+                  : "Professionele setup en implementatie. We helpen je op weg."}
               </p>
             </div>
             <div className="text-center">
@@ -312,9 +399,13 @@ const Integraties = () => {
                   <Zap className="h-7 w-7 text-blue-500" />
                 </div>
               </div>
-              <h3 className="mb-2 text-xl font-bold">Real-time Sync</h3>
+              <h3 className="mb-2 text-xl font-bold">
+                {language === 'fr' ? "Synchronisation en Temps Réel" : "Real-time Sync"}
+              </h3>
               <p className="text-muted-foreground">
-                Alle data wordt direct gesynchroniseerd. Altijd up-to-date.
+                {language === 'fr'
+                  ? "Toutes les données sont synchronisées directement. Toujours à jour."
+                  : "Alle data wordt direct gesynchroniseerd. Altijd up-to-date."}
               </p>
             </div>
             <div className="text-center">
@@ -323,9 +414,13 @@ const Integraties = () => {
                   <Users className="h-7 w-7 text-purple-500" />
                 </div>
               </div>
-              <h3 className="mb-2 text-xl font-bold">Custom Integraties</h3>
+              <h3 className="mb-2 text-xl font-bold">
+                {language === 'fr' ? "Intégrations Personnalisées" : "Custom Integraties"}
+              </h3>
               <p className="text-muted-foreground">
-                Mis je een integratie? We bouwen custom API koppelingen.
+                {language === 'fr'
+                  ? "Il vous manque une intégration ? Nous créons des connexions API personnalisées."
+                  : "Mis je een integratie? We bouwen custom API koppelingen."}
               </p>
             </div>
           </div>
@@ -385,16 +480,18 @@ const Integraties = () => {
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-4xl font-bold">
-              Mis je een integratie?
+              {language === 'fr' ? "Il vous manque une intégration ?" : "Mis je een integratie?"}
             </h2>
             <p className="mb-8 text-xl text-muted-foreground">
-              We bouwen graag custom koppelingen met jouw systemen. Neem contact op en we kijken wat mogelijk is.
+              {language === 'fr'
+                ? "Nous créons volontiers des connexions personnalisées avec vos systèmes. Contactez-nous et nous verrons ce qui est possible."
+                : "We bouwen graag custom koppelingen met jouw systemen. Neem contact op en we kijken wat mogelijk is."}
             </p>
             <a
-              href="/consultancy"
+              href={language === 'fr' ? "/fr/consultance" : "/consultancy"}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-primary/90 hover:gap-3"
             >
-              Bespreek jouw integratie →
+              {language === 'fr' ? "Discutez de votre intégration →" : "Bespreek jouw integratie →"}
             </a>
           </div>
         </div>
