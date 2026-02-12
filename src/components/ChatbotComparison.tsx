@@ -19,7 +19,13 @@ const ChatbotComparison = () => {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const faqMessages: Message[] = [
+  const faqMessages: Message[] = language === 'fr' ? [
+    { role: "user", content: "Je cherche des baskets Nike rouges en taille 42, en avez-vous en stock ?", delay: 500 },
+    { role: "assistant", content: "Bonjour ! Je suis un chatbot. Je peux vous aider avec des questions générales.", delay: 1500 },
+    { role: "user", content: "Oui mais avez-vous des baskets Nike rouges taille 42 ?", delay: 1000 },
+    { role: "assistant", content: "Désolé, je ne comprends pas votre question. Essayez l'une de ces options : 1) Heures d'ouverture 2) Politique de retour 3) Frais de livraison", delay: 1500 },
+    { role: "user", content: "😤 (quitte le site)", delay: 800 }
+  ] : [
     { role: "user", content: "Ik zoek rode Nike sneakers in maat 42, heb je die op voorraad?", delay: 500 },
     { role: "assistant", content: "Hoi! Ik ben een chatbot. Ik kan je helpen met algemene vragen.", delay: 1500 },
     { role: "user", content: "Ja maar heb je rode Nike sneakers maat 42?", delay: 1000 },
@@ -27,7 +33,13 @@ const ChatbotComparison = () => {
     { role: "user", content: "😤 (verlaat website)", delay: 800 }
   ];
 
-  const glimpsMessages: Message[] = [
+  const glimpsMessages: Message[] = language === 'fr' ? [
+    { role: "user", content: "Je cherche des baskets Nike rouges en taille 42, en avez-vous en stock ?", delay: 500 },
+    { role: "assistant", content: "Hey! 👋 Je vois que vous cherchez des baskets Nike rouges en taille 42. J'ai 23 options pour vous !", delay: 1000 },
+    { role: "assistant", content: "Basé sur votre préférence Nike précédente, je recommande celles-ci :\n\n🔥 Nike Air Max 1 Rouge - €129,95 (⭐4.8, en stock)\n🔥 Nike Dunk Low University Red - €139,95 (⭐4.9, 2 restants)", delay: 2000 },
+    { role: "user", content: "Parfait ! Quel est le délai de livraison ?", delay: 1000 },
+    { role: "assistant", content: "Commandé avant 22h00 = livré demain ! 📦 Livraison gratuite au-dessus de €50. Voulez-vous les ajouter à votre panier ? 😊", delay: 1200 }
+  ] : [
     { role: "user", content: "Ik zoek rode Nike sneakers in maat 42, heb je die op voorraad?", delay: 500 },
     { role: "assistant", content: "Hey! 👋 Ik zie dat je rode Nike sneakers in maat 42 zoekt. Ik heb 23 opties voor je!", delay: 1000 },
     { role: "assistant", content: "Op basis van je eerdere Nike voorkeur raad ik deze aan:\n\n🔥 Nike Air Max 1 Rood - €129,95 (⭐4.8, op voorraad)\n🔥 Nike Dunk Low University Red - €139,95 (⭐4.9, 2 stuks over)", delay: 2000 },
@@ -395,7 +407,9 @@ const ChatbotComparison = () => {
               {/* Satisfaction Bar */}
               <div className="px-6 py-4 border-t border-border">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium">Klanttevredenheid</span>
+                  <span className="text-sm font-medium">
+                    {language === 'fr' ? 'Satisfaction client' : 'Klanttevredenheid'}
+                  </span>
                   <span className="text-sm font-bold">45%</span>
                 </div>
                 <div className="relative">
@@ -407,11 +421,15 @@ const ChatbotComparison = () => {
               <div className="grid grid-cols-2 gap-4 p-6 border-t border-border">
                 <div className="text-center">
                   <div className="text-2xl font-bold mb-1">Instant</div>
-                  <div className="text-sm text-muted-foreground">Reactietijd</div>
+                  <div className="text-sm text-muted-foreground">
+                    {language === 'fr' ? 'Temps de réponse' : 'Reactietijd'}
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold mb-1">24/7</div>
-                  <div className="text-sm text-muted-foreground">Beschikbaar</div>
+                  <div className="text-sm text-muted-foreground">
+                    {language === 'fr' ? 'Disponible' : 'Beschikbaar'}
+                  </div>
                 </div>
               </div>
             </div>
@@ -452,7 +470,7 @@ const ChatbotComparison = () => {
                       {index === messages.length - 1 && message.role === "assistant" && (
                         <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
                           <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                          Antwoord in 0.08s
+                          {language === 'fr' ? 'Réponse en 0.08s' : 'Antwoord in 0.08s'}
                         </p>
                       )}
                     </div>
@@ -463,7 +481,9 @@ const ChatbotComparison = () => {
               {/* Satisfaction Bar */}
               <div className="px-6 py-4 border-t border-border">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium">Klanttevredenheid</span>
+                  <span className="text-sm font-medium">
+                    {language === 'fr' ? 'Satisfaction client' : 'Klanttevredenheid'}
+                  </span>
                   <span className="text-sm font-bold">92%</span>
                 </div>
                 <div className="relative">
@@ -475,11 +495,15 @@ const ChatbotComparison = () => {
               <div className="grid grid-cols-2 gap-4 p-6 border-t border-border">
                 <div className="text-center">
                   <div className="text-2xl font-bold mb-1">0.08s</div>
-                  <div className="text-sm text-muted-foreground">Reactietijd</div>
+                  <div className="text-sm text-muted-foreground">
+                    {language === 'fr' ? 'Temps de réponse' : 'Reactietijd'}
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold mb-1">70-80%</div>
-                  <div className="text-sm text-muted-foreground">Automatisering</div>
+                  <div className="text-sm text-muted-foreground">
+                    {language === 'fr' ? 'Automatisation' : 'Automatisering'}
+                  </div>
                 </div>
               </div>
             </div>

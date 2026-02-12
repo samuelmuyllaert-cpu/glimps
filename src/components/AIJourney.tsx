@@ -129,16 +129,20 @@ const AIJourney = () => {
                 <div className="w-4 h-4 bg-gray-400 rounded-full"></div>
                 <span className="text-[10px]">B2B</span>
               </div>
-              <div className="text-[10px]">"Goedendag! Graag help ik u verder..."</div>
+              <div className="text-[10px]">
+                {language === 'fr' ? '"Bonjour ! Je serais ravi de vous aider..."' : '"Goedendag! Graag help ik u verder..."'}
+              </div>
             </div>
             <div className="flex-1 bg-blue-50 rounded p-2 text-xs border-2 border-blue-500">
               <div className="flex items-center gap-1 mb-1">
                 <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center text-white text-[8px]">
                   E
                 </div>
-                <span className="text-[10px] font-medium">Emma (Actief)</span>
+                <span className="text-[10px] font-medium">{language === 'fr' ? 'Emma (Active)' : 'Emma (Actief)'}</span>
               </div>
-              <div className="text-[10px]">"Hey! 👋 Perfect, ik heb..."</div>
+              <div className="text-[10px]">
+                {language === 'fr' ? '"Hey! 👋 Parfait, j\'ai..."' : '"Hey! 👋 Perfect, ik heb..."'}
+              </div>
             </div>
           </div>
         </div>
@@ -197,12 +201,12 @@ const AIJourney = () => {
     {
       icon: Check,
       iconBg: "#22C55E",
-      title: "Perfect antwoord",
+      title: language === 'fr' ? "Réponse parfaite" : "Perfect antwoord",
       time: "⚡ 80ms",
       content: (
         <div className="space-y-2">
           <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-2 text-[10px] text-yellow-900">
-            ⚡ 5x sneller dan menselijke reactie (100-150ms)
+            {language === 'fr' ? '⚡ 5x plus rapide qu\'une réaction humaine (100-150ms)' : '⚡ 5x sneller dan menselijke reactie (100-150ms)'}
           </div>
           <div className="bg-muted/30 rounded-lg p-2 space-y-2">
             <div className="flex items-center gap-2">
@@ -212,7 +216,11 @@ const AIJourney = () => {
               <span className="text-[10px] font-medium">Glimps AI</span>
             </div>
             <div className="text-[11px]">
-              Hey! 👋 Ik heb <span className="font-semibold">23 rode sneakers</span> in maat 42. Op basis van je Nike voorkeur:
+              {language === 'fr' ? (
+                <>Hey! 👋 J'ai <span className="font-semibold">23 baskets rouges</span> en taille 42. Basé sur votre préférence Nike :</>
+              ) : (
+                <>Hey! 👋 Ik heb <span className="font-semibold">23 rode sneakers</span> in maat 42. Op basis van je Nike voorkeur:</>
+              )}
             </div>
             <div className="grid grid-cols-2 gap-2">
               <div className="bg-background rounded p-2">
