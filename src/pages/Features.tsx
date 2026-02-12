@@ -408,10 +408,12 @@ const Features = () => {
                                 <Mic className="w-4 h-4 text-primary" />
                               </div>
                               <div className="flex-1">
-                                <div className="text-xs text-muted-foreground mb-2">Aan het luisteren...</div>
+                                <div className="text-xs text-muted-foreground mb-2">
+                                  {language === 'fr' ? 'À l\'écoute...' : 'Aan het luisteren...'}
+                                </div>
                                 <div className="flex items-center gap-1 mb-2">
                                   {[...Array(20)].map((_, i) => (
-                                    <div 
+                                    <div
                                       key={i}
                                       className="w-1 bg-primary rounded-full animate-pulse"
                                       style={{
@@ -422,7 +424,9 @@ const Features = () => {
                                   ))}
                                 </div>
                                 <p className="text-sm italic text-muted-foreground">
-                                  "Ik zoek een rode winterjas in maat M"
+                                  {language === 'fr'
+                                    ? '"Je cherche une veste d\'hiver rouge en taille M"'
+                                    : '"Ik zoek een rode winterjas in maat M"'}
                                 </p>
                               </div>
                             </div>
@@ -432,17 +436,27 @@ const Features = () => {
                             <div className="flex items-start gap-3">
                               <Bot className="w-5 h-5 text-primary mt-0.5" />
                               <div className="flex-1 space-y-3">
-                                <p className="text-sm">Ik heb je vraag begrepen! 👍</p>
-                                <p className="text-sm">Laat me even de perfecte rode winterjas voor je zoeken in maat M...</p>
-                                
+                                <p className="text-sm">
+                                  {language === 'fr' ? 'J\'ai compris votre question ! 👍' : 'Ik heb je vraag begrepen! 👍'}
+                                </p>
+                                <p className="text-sm">
+                                  {language === 'fr'
+                                    ? 'Laissez-moi chercher la veste d\'hiver rouge parfaite pour vous en taille M...'
+                                    : 'Laat me even de perfecte rode winterjas voor je zoeken in maat M...'}
+                                </p>
+
                                  <div className="flex items-center gap-3 p-3 border border-border rounded-lg bg-background">
                                    <img src={productJacketRed} alt="Winterjas" className="w-16 h-16 rounded object-cover" />
                                    <div className="flex-1">
                                     <div className="font-semibold text-sm mb-1">Winterjas Classic</div>
-                                    <div className="text-xs text-muted-foreground mb-1">Maat M</div>
+                                    <div className="text-xs text-muted-foreground mb-1">
+                                      {language === 'fr' ? 'Taille M' : 'Maat M'}
+                                    </div>
                                     <div className="flex items-center gap-2">
                                       <span className="text-primary font-bold">€89,99</span>
-                                      <span className="text-xs bg-green-500/20 text-green-600 px-2 py-0.5 rounded">Op voorraad</span>
+                                      <span className="text-xs bg-green-500/20 text-green-600 px-2 py-0.5 rounded">
+                                        {language === 'fr' ? 'En stock' : 'Op voorraad'}
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -452,7 +466,11 @@ const Features = () => {
 
                           <div className="flex items-center justify-center gap-2 p-3 bg-muted/30 rounded-lg">
                             <Mic className="w-4 h-4 text-muted-foreground" />
-                            <span className="text-xs text-muted-foreground">💡 Tip: Klik op de microfoon om te spreken</span>
+                            <span className="text-xs text-muted-foreground">
+                              {language === 'fr'
+                                ? '💡 Astuce : Cliquez sur le microphone pour parler'
+                                : '💡 Tip: Klik op de microfoon om te spreken'}
+                            </span>
                           </div>
                         </div>
                       )}
@@ -462,9 +480,13 @@ const Features = () => {
                           <div className="flex items-center justify-between p-4 bg-primary/10 rounded-xl mb-4">
                             <div className="flex items-center gap-2">
                               <Globe className="w-5 h-5 text-primary" />
-                              <span className="text-sm font-medium">Multilingual Chat</span>
+                              <span className="text-sm font-medium">
+                                {language === 'fr' ? 'Chat Multilingue' : 'Multilingual Chat'}
+                              </span>
                             </div>
-                            <span className="text-xs bg-green-500/20 text-green-600 px-3 py-1 rounded-full font-medium">Auto-detect ON</span>
+                            <span className="text-xs bg-green-500/20 text-green-600 px-3 py-1 rounded-full font-medium">
+                              {language === 'fr' ? 'Détection auto ON' : 'Auto-detect ON'}
+                            </span>
                           </div>
 
                           <div className="space-y-3">
@@ -474,7 +496,9 @@ const Features = () => {
                                 <div className="text-xl">🇳🇱</div>
                                 <div className="flex-1">
                                   <p className="text-sm mb-1">Hallo! Hoe kan ik je helpen?</p>
-                                  <p className="text-xs text-muted-foreground">Nederlands gedetecteerd</p>
+                                  <p className="text-xs text-muted-foreground">
+                                    {language === 'fr' ? 'Néerlandais détecté' : 'Nederlands gedetecteerd'}
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -485,7 +509,9 @@ const Features = () => {
                                 <div className="text-xl">🇬🇧</div>
                                 <div className="flex-1">
                                   <p className="text-sm mb-1">Hello! How can I help you today?</p>
-                                  <p className="text-xs text-muted-foreground">English detected</p>
+                                  <p className="text-xs text-muted-foreground">
+                                    {language === 'fr' ? 'Anglais détecté' : 'English detected'}
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -496,7 +522,9 @@ const Features = () => {
                                 <div className="text-xl">🇩🇪</div>
                                 <div className="flex-1">
                                   <p className="text-sm mb-1">Hallo! Wie kann ich Ihnen helfen?</p>
-                                  <p className="text-xs text-muted-foreground">Deutsch erkannt</p>
+                                  <p className="text-xs text-muted-foreground">
+                                    {language === 'fr' ? 'Allemand détecté' : 'Deutsch erkannt'}
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -518,7 +546,9 @@ const Features = () => {
                                 <div className="text-xl">🇪🇸</div>
                                 <div className="flex-1">
                                   <p className="text-sm mb-1">¡Hola! ¿Cómo puedo ayudarte?</p>
-                                  <p className="text-xs text-muted-foreground">Español detectado</p>
+                                  <p className="text-xs text-muted-foreground">
+                                    {language === 'fr' ? 'Espagnol détecté' : 'Español detectado'}
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -528,11 +558,15 @@ const Features = () => {
                           <div className="grid grid-cols-2 gap-3 mt-4 p-4 bg-green-500/10 rounded-xl">
                             <div className="text-center">
                               <div className="text-2xl font-bold text-primary mb-1">🌍 50+</div>
-                              <div className="text-xs text-muted-foreground">Ondersteunde talen</div>
+                              <div className="text-xs text-muted-foreground">
+                                {language === 'fr' ? 'Langues supportées' : 'Ondersteunde talen'}
+                              </div>
                             </div>
                             <div className="text-center">
                               <div className="text-2xl font-bold text-primary mb-1">⚡ &lt;1s</div>
-                              <div className="text-xs text-muted-foreground">Detectietijd</div>
+                              <div className="text-xs text-muted-foreground">
+                                {language === 'fr' ? 'Temps de détection' : 'Detectietijd'}
+                              </div>
                             </div>
                           </div>
 
@@ -582,7 +616,9 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <MessageSquare className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Wil je deze items bestellen?</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Voulez-vous commander ces articles ?' : 'Wil je deze items bestellen?'}
+                            </span>
                           </div>
                            <div className="space-y-3">
                              <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
@@ -604,20 +640,20 @@ const Features = () => {
                            </div>
                           <div className="pt-4 border-t border-border space-y-2">
                             <div className="flex justify-between text-sm">
-                              <span>Subtotaal</span>
+                              <span>{language === 'fr' ? 'Sous-total' : 'Subtotaal'}</span>
                               <span>€79,98</span>
                             </div>
                             <div className="flex justify-between text-sm">
-                              <span>Verzending</span>
-                              <span className="text-green-500">Gratis</span>
+                              <span>{language === 'fr' ? 'Livraison' : 'Verzending'}</span>
+                              <span className="text-green-500">{language === 'fr' ? 'Gratuit' : 'Gratis'}</span>
                             </div>
                             <div className="flex justify-between font-semibold text-lg pt-2">
-                              <span>Totaal</span>
+                              <span>{language === 'fr' ? 'Total' : 'Totaal'}</span>
                               <span>€79,98</span>
                             </div>
                           </div>
                           <button className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                            Naar checkout
+                            {language === 'fr' ? 'Passer au paiement' : 'Naar checkout'}
                           </button>
                         </div>
                       )}
@@ -626,7 +662,9 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <Package className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Je pakket is onderweg! 📦</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Votre colis est en route ! 📦' : 'Je pakket is onderweg! 📦'}
+                            </span>
                           </div>
                            <div className="space-y-4 p-4">
                              <div className="flex items-start gap-4">
@@ -640,27 +678,39 @@ const Features = () => {
                               <div className="relative">
                                 <div className="absolute -left-[29px] w-4 h-4 rounded-full bg-primary" />
                                 <div>
-                                  <div className="font-semibold">Bestelling ontvangen</div>
-                                  <div className="text-sm text-muted-foreground">Ma 14:23</div>
+                                  <div className="font-semibold">
+                                    {language === 'fr' ? 'Commande reçue' : 'Bestelling ontvangen'}
+                                  </div>
+                                  <div className="text-sm text-muted-foreground">
+                                    {language === 'fr' ? 'Lun 14:23' : 'Ma 14:23'}
+                                  </div>
                                 </div>
                               </div>
                               <div className="relative">
                                 <div className="absolute -left-[29px] w-4 h-4 rounded-full bg-primary" />
                                 <div>
-                                  <div className="font-semibold">In sorteercentrum</div>
-                                  <div className="text-sm text-muted-foreground">Di 08:15</div>
+                                  <div className="font-semibold">
+                                    {language === 'fr' ? 'Au centre de tri' : 'In sorteercentrum'}
+                                  </div>
+                                  <div className="text-sm text-muted-foreground">
+                                    {language === 'fr' ? 'Mar 08:15' : 'Di 08:15'}
+                                  </div>
                                 </div>
                               </div>
                               <div className="relative">
                                 <div className="absolute -left-[29px] w-4 h-4 rounded-full border-2 border-border bg-background" />
                                 <div>
-                                  <div className="text-muted-foreground">Onderweg naar jou</div>
-                                  <div className="text-sm text-muted-foreground">Verwacht: Wo voor 18:00</div>
+                                  <div className="text-muted-foreground">
+                                    {language === 'fr' ? 'En route vers vous' : 'Onderweg naar jou'}
+                                  </div>
+                                  <div className="text-sm text-muted-foreground">
+                                    {language === 'fr' ? 'Prévu : Mer avant 18:00' : 'Verwacht: Wo voor 18:00'}
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <div className="p-3 bg-primary/10 rounded-lg text-sm text-primary">
-                              📍 Bezorging morgen voor 18:00
+                              {language === 'fr' ? '📍 Livraison demain avant 18:00' : '📍 Bezorging morgen voor 18:00'}
                             </div>
                           </div>
                         </div>
@@ -670,39 +720,49 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <RotateCcw className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Ik help je graag met je retour</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? "Je vous aide volontiers avec votre retour" : "Ik help je graag met je retour"}
+                            </span>
                           </div>
                            <div className="p-4 border border-border rounded-lg space-y-4">
-                             <div className="text-sm font-semibold">Selecteer product</div>
+                             <div className="text-sm font-semibold">
+                               {language === 'fr' ? 'Sélectionnez le produit' : 'Selecteer product'}
+                             </div>
                              <div className="flex items-center gap-3 p-3 bg-primary/10 border border-primary/20 rounded-lg">
                                <img src={productTshirtBlack} alt="Product" className="w-16 h-16 rounded object-cover" />
                                <div className="flex-1">
                                  <div className="h-3 bg-muted rounded w-3/4 mb-2" />
-                                 <div className="text-xs text-primary">Maat: L • Kleur: Zwart</div>
+                                 <div className="text-xs text-primary">
+                                   {language === 'fr' ? 'Taille: L • Couleur: Noir' : 'Maat: L • Kleur: Zwart'}
+                                 </div>
                                </div>
                                <Check className="w-5 h-5 text-primary" />
                              </div>
-                            <div className="text-sm font-semibold">Wat is de reden?</div>
+                            <div className="text-sm font-semibold">
+                              {language === 'fr' ? 'Quelle est la raison ?' : 'Wat is de reden?'}
+                            </div>
                             <div className="grid grid-cols-2 gap-2">
                               <button className="p-3 border border-border rounded-lg text-sm hover:border-primary/50 transition-colors">
-                                🔧 Verkeerde maat
+                                {language === 'fr' ? '🔧 Mauvaise taille' : '🔧 Verkeerde maat'}
                               </button>
                               <button className="p-3 bg-primary text-primary-foreground rounded-lg text-sm font-semibold">
-                                ❌ Verkeerde kleur
+                                {language === 'fr' ? '❌ Mauvaise couleur' : '❌ Verkeerde kleur'}
                               </button>
                               <button className="p-3 border border-border rounded-lg text-sm hover:border-primary/50 transition-colors">
-                                ⚠️ Defect
+                                {language === 'fr' ? '⚠️ Défectueux' : '⚠️ Defect'}
                               </button>
                               <button className="p-3 border border-border rounded-lg text-sm hover:border-primary/50 transition-colors">
-                                📦 Anders
+                                {language === 'fr' ? '📦 Autre' : '📦 Anders'}
                               </button>
                             </div>
                             <button className="w-full bg-foreground text-background py-3 rounded-lg font-semibold hover:bg-foreground/90 transition-colors">
-                              Retourlabel maken
+                              {language === 'fr' ? "Créer l'étiquette de retour" : 'Retourlabel maken'}
                             </button>
                           </div>
                           <div className="p-3 bg-blue-500/10 rounded-lg text-sm text-blue-600">
-                            💡 Je ontvangt het retourlabel per email binnen 5 minuten
+                            {language === 'fr'
+                              ? "💡 Vous recevrez l'étiquette de retour par email dans 5 minutes"
+                              : '💡 Je ontvangt het retourlabel per email binnen 5 minuten'}
                           </div>
                         </div>
                       )}
@@ -711,7 +771,9 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <ShoppingCart className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Perfect! Deze passen hier ook goed bij:</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Parfait ! Ceux-ci vont aussi bien avec :' : 'Perfect! Deze passen hier ook goed bij:'}
+                            </span>
                           </div>
                            <div className="grid grid-cols-3 gap-3">
                              <div className="p-3 border border-border rounded-lg space-y-2">
@@ -725,7 +787,7 @@ const Features = () => {
                              </div>
                              <div className="p-3 border-2 border-primary bg-primary/5 rounded-lg space-y-2 relative">
                                <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-primary text-primary-foreground text-xs rounded-full">
-                                 Populair
+                                 {language === 'fr' ? 'Populaire' : 'Populair'}
                                </div>
                                <img src={productJeansBlue} alt="Product" className="w-full aspect-square rounded object-cover" />
                                <div className="h-2 bg-muted rounded w-3/4" />
@@ -754,7 +816,7 @@ const Features = () => {
                             <div className="w-2 h-2 rounded-full bg-muted" />
                           </div>
                           <div className="p-3 bg-primary/10 rounded-lg text-sm text-primary">
-                            🎁 Bestel 2 producten en krijg 10% korting
+                            {language === 'fr' ? '🎁 Commandez 2 produits et obtenez 10% de réduction' : '🎁 Bestel 2 producten en krijg 10% korting'}
                           </div>
                         </div>
                       )}
@@ -763,7 +825,9 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <ShoppingCart className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Ik zie dat je 2 items in je winkelmandje hebt 🛒</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Je vois que vous avez 2 articles dans votre panier 🛒' : 'Ik zie dat je 2 items in je winkelmandje hebt 🛒'}
+                            </span>
                           </div>
                            <div className="space-y-3 p-4 border border-border rounded-lg">
                              <div className="flex items-center gap-4 p-3 bg-muted/30 rounded-lg">
@@ -783,12 +847,14 @@ const Features = () => {
                                <span className="text-primary font-semibold">€29,99</span>
                              </div>
                             <div className="pt-3 border-t border-border flex justify-between items-center">
-                              <span className="font-semibold">Totaal</span>
+                              <span className="font-semibold">{language === 'fr' ? 'Total' : 'Totaal'}</span>
                               <span className="text-xl font-bold">€79,98</span>
                             </div>
                           </div>
                            <div className="p-4 bg-muted/30 rounded-lg">
-                             <div className="text-sm font-semibold mb-3">Perfect bij jouw selectie:</div>
+                             <div className="text-sm font-semibold mb-3">
+                               {language === 'fr' ? 'Parfait avec votre sélection :' : 'Perfect bij jouw selectie:'}
+                             </div>
                              <div className="flex items-center gap-3 p-3 bg-background border border-border rounded-lg">
                                <img src={productHeadphonesWhite} alt="Product" className="w-12 h-12 rounded object-cover" />
                                <div className="flex-1">
@@ -809,11 +875,11 @@ const Features = () => {
                           <div className="flex items-center justify-between p-3 bg-orange-500/10 border border-orange-500/30 rounded-lg text-xs">
                             <span className="flex items-center gap-2 text-orange-600 dark:text-orange-400 font-medium">
                               <AlertCircle className="w-4 h-4" />
-                              Klant verlaat checkout pagina
+                              {language === 'fr' ? 'Client quitte la page de paiement' : 'Klant verlaat checkout pagina'}
                             </span>
                             <span className="flex items-center gap-1">
                               <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-                              Live detectie
+                              {language === 'fr' ? 'Détection en direct' : 'Live detectie'}
                             </span>
                           </div>
 
@@ -826,10 +892,12 @@ const Features = () => {
                                   <Bot className="w-6 h-6 text-primary-foreground" />
                                 </div>
                                 <div>
-                                  <div className="font-semibold text-sm">Glimps Shopping Assistent</div>
+                                  <div className="font-semibold text-sm">
+                                    {language === 'fr' ? 'Assistant Shopping Glimps' : 'Glimps Shopping Assistent'}
+                                  </div>
                                   <div className="text-xs text-green-600 flex items-center gap-1">
                                     <div className="w-2 h-2 rounded-full bg-green-500" />
-                                    Online nu
+                                    {language === 'fr' ? 'En ligne maintenant' : 'Online nu'}
                                   </div>
                                 </div>
                               </div>
@@ -841,45 +909,59 @@ const Features = () => {
                                   </div>
                                   <div className="flex-1 space-y-2">
                                     <div className="bg-primary/10 border border-primary/20 rounded-2xl rounded-tl-sm p-4">
-                                      <p className="text-sm font-semibold mb-2">Hey! Ik zie dat je op het punt staat om te vertrekken 👋</p>
+                                      <p className="text-sm font-semibold mb-2">
+                                        {language === 'fr' ? 'Hey ! Je vois que vous êtes sur le point de partir 👋' : 'Hey! Ik zie dat je op het punt staat om te vertrekken 👋'}
+                                      </p>
                                       <p className="text-sm text-muted-foreground">
-                                        Is er iets waar ik je mee kan helpen? Ik sta klaar om al je vragen te beantwoorden!
+                                        {language === 'fr'
+                                          ? 'Y a-t-il quelque chose avec quoi je peux vous aider ? Je suis prêt à répondre à toutes vos questions !'
+                                          : 'Is er iets waar ik je mee kan helpen? Ik sta klaar om al je vragen te beantwoorden!'}
                                       </p>
                                     </div>
-                                    <div className="text-xs text-muted-foreground px-2">Zojuist</div>
+                                    <div className="text-xs text-muted-foreground px-2">
+                                      {language === 'fr' ? 'À l\'instant' : 'Zojuist'}
+                                    </div>
                                   </div>
                                 </div>
 
                                 <div className="space-y-2 p-4 bg-muted/30 rounded-xl">
-                                  <div className="text-xs font-semibold text-muted-foreground mb-3">Je winkelmandje (2 items):</div>
+                                  <div className="text-xs font-semibold text-muted-foreground mb-3">
+                                    {language === 'fr' ? 'Votre panier (2 articles) :' : 'Je winkelmandje (2 items):'}
+                                  </div>
                                   <div className="flex items-center gap-3 p-2 bg-background rounded-lg">
                                     <img src={productHoodieGray} alt="Product" className="w-12 h-12 rounded object-cover" />
                                     <div className="flex-1 min-w-0">
                                       <div className="text-xs font-medium truncate">Premium Hoodie</div>
-                                      <div className="text-xs text-muted-foreground">Maat L • €59,99</div>
+                                      <div className="text-xs text-muted-foreground">
+                                        {language === 'fr' ? 'Taille L • €59,99' : 'Maat L • €59,99'}
+                                      </div>
                                     </div>
                                   </div>
                                   <div className="flex items-center gap-3 p-2 bg-background rounded-lg">
                                     <img src={productTshirtBlack} alt="Product" className="w-12 h-12 rounded object-cover" />
                                     <div className="flex-1 min-w-0">
                                       <div className="text-xs font-medium truncate">Classic T-shirt</div>
-                                      <div className="text-xs text-muted-foreground">Maat M • €24,99</div>
+                                      <div className="text-xs text-muted-foreground">
+                                        {language === 'fr' ? 'Taille M • €24,99' : 'Maat M • €24,99'}
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
 
                                 <div className="bg-muted/20 rounded-xl p-3 space-y-2">
-                                  <div className="text-xs font-semibold mb-2">Veelgestelde vragen:</div>
+                                  <div className="text-xs font-semibold mb-2">
+                                    {language === 'fr' ? 'Questions fréquentes :' : 'Veelgestelde vragen:'}
+                                  </div>
                                   <button className="w-full text-left text-xs bg-background hover:bg-muted/50 border border-border rounded-lg p-3 transition-colors flex items-center justify-between group">
-                                    <span>Wat zijn de verzendkosten?</span>
+                                    <span>{language === 'fr' ? 'Quels sont les frais de livraison ?' : 'Wat zijn de verzendkosten?'}</span>
                                     <ChevronRight className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
                                   </button>
                                   <button className="w-full text-left text-xs bg-background hover:bg-muted/50 border border-border rounded-lg p-3 transition-colors flex items-center justify-between group">
-                                    <span>Kan ik dit ook retourneren?</span>
+                                    <span>{language === 'fr' ? 'Puis-je aussi le retourner ?' : 'Kan ik dit ook retourneren?'}</span>
                                     <ChevronRight className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
                                   </button>
                                   <button className="w-full text-left text-xs bg-background hover:bg-muted/50 border border-border rounded-lg p-3 transition-colors flex items-center justify-between group">
-                                    <span>Wanneer wordt dit geleverd?</span>
+                                    <span>{language === 'fr' ? 'Quand sera-t-il livré ?' : 'Wanneer wordt dit geleverd?'}</span>
                                     <ChevronRight className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
                                   </button>
                                 </div>
@@ -887,7 +969,7 @@ const Features = () => {
                                 <div className="flex gap-2 pt-2">
                                   <input
                                     type="text"
-                                    placeholder="Stel je vraag..."
+                                    placeholder={language === 'fr' ? 'Posez votre question...' : 'Stel je vraag...'}
                                     className="flex-1 text-sm px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary"
                                   />
                                   <button className="px-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors">
@@ -900,7 +982,11 @@ const Features = () => {
 
                           <div className="flex items-center gap-2 text-xs text-muted-foreground p-3 bg-primary/5 border border-primary/20 rounded-lg">
                             <Zap className="w-4 h-4 text-primary" />
-                            <span>Bot springt automatisch open wanneer checkout-verlating wordt gedetecteerd</span>
+                            <span>
+                              {language === 'fr'
+                                ? 'Le bot s\'ouvre automatiquement lorsqu\'un abandon de paiement est détecté'
+                                : 'Bot springt automatisch open wanneer checkout-verlating wordt gedetecteerd'}
+                            </span>
                           </div>
                         </div>
                       )}
@@ -909,14 +995,18 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="p-3 border-2 border-primary rounded-xl">
                             <MessageSquare className="w-4 h-4 text-primary mb-2" />
-                            <span className="text-sm">Ik zoek een rode winterjas, maat M</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Je cherche une veste d\'hiver rouge, taille M' : 'Ik zoek een rode winterjas, maat M'}
+                            </span>
                           </div>
                           <div className="p-4 bg-muted/30 rounded-xl space-y-2">
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
                               <Search className="w-4 h-4" />
-                              <span>Zoeken in 2.847 producten...</span>
+                              <span>{language === 'fr' ? 'Recherche dans 2.847 produits...' : 'Zoeken in 2.847 producten...'}</span>
                             </div>
-                            <div className="text-sm font-semibold">Ik heb 3 perfecte opties gevonden! 🎯</div>
+                            <div className="text-sm font-semibold">
+                              {language === 'fr' ? 'J\'ai trouvé 3 options parfaites ! 🎯' : 'Ik heb 3 perfecte opties gevonden! 🎯'}
+                            </div>
                           </div>
                            <div className="space-y-3">
                              <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg">
@@ -925,8 +1015,12 @@ const Features = () => {
                                  <div className="h-3 bg-muted rounded w-3/4 mb-2" />
                                  <div className="h-3 bg-muted rounded w-1/2 mb-2" />
                                  <div className="flex items-center gap-2">
-                                   <Badge variant="secondary" className="text-xs bg-primary/20 text-primary border-0">Maat M</Badge>
-                                   <Badge variant="secondary" className="text-xs bg-green-500/20 text-green-600 border-0">Op voorraad</Badge>
+                                   <Badge variant="secondary" className="text-xs bg-primary/20 text-primary border-0">
+                                     {language === 'fr' ? 'Taille M' : 'Maat M'}
+                                   </Badge>
+                                   <Badge variant="secondary" className="text-xs bg-green-500/20 text-green-600 border-0">
+                                     {language === 'fr' ? 'En stock' : 'Op voorraad'}
+                                   </Badge>
                                  </div>
                                </div>
                                <div className="text-right">
@@ -962,7 +1056,9 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-primary/10 rounded-xl">
                             <Layout className="w-5 h-5 text-primary" />
-                            <span className="text-sm font-medium">Ik heb een selectie producten voor je gevonden:</span>
+                            <span className="text-sm font-medium">
+                              {language === 'fr' ? 'J\'ai trouvé une sélection de produits pour vous :' : 'Ik heb een selectie producten voor je gevonden:'}
+                            </span>
                           </div>
 
                           <div className="relative">
@@ -974,7 +1070,9 @@ const Features = () => {
                                   </div>
                                   <div className="p-4 space-y-3">
                                     <div className="flex items-center justify-between">
-                                      <Badge className="bg-primary/20 text-primary hover:bg-primary/20">15% korting</Badge>
+                                      <Badge className="bg-primary/20 text-primary hover:bg-primary/20">
+                                        {language === 'fr' ? '15% de réduction' : '15% korting'}
+                                      </Badge>
                                       <div className="flex items-center gap-1">
                                         {[1,2,3,4,5].map(i => (
                                           <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
@@ -984,13 +1082,15 @@ const Features = () => {
                                     <div>
                                       <h4 className="font-semibold text-base mb-1">Classic Sneakers</h4>
                                       <p className="text-xs text-muted-foreground line-clamp-2">
-                                        Comfortabele sneakers met premium materiaal en moderne uitstraling
+                                        {language === 'fr'
+                                          ? 'Sneakers confortables avec matériaux premium et look moderne'
+                                          : 'Comfortabele sneakers met premium materiaal en moderne uitstraling'}
                                       </p>
                                     </div>
                                     <div className="flex items-center justify-between pt-2 border-t border-border">
                                       <div className="text-lg font-bold text-primary">€89,99</div>
                                       <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">
-                                        Bekijk product
+                                        {language === 'fr' ? 'Voir le produit' : 'Bekijk product'}
                                       </button>
                                     </div>
                                   </div>
@@ -1077,7 +1177,9 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <TrendingUp className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Super keuze! Wist je dat deze vaak samen worden gekocht? 🎁</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Super choix ! Saviez-vous que ceux-ci sont souvent achetés ensemble ? 🎁' : 'Super keuze! Wist je dat deze vaak samen worden gekocht? 🎁'}
+                            </span>
                           </div>
                            <div className="p-4 border-2 border-primary/30 rounded-lg space-y-3">
                              <div className="flex items-center gap-3 p-3 bg-background rounded-lg">
@@ -1091,7 +1193,9 @@ const Features = () => {
                              <div className="p-3 bg-gradient-to-r from-purple-500/10 to-purple-500/5 border border-purple-500/20 rounded-lg">
                                <div className="flex items-center justify-between mb-2">
                                  <Badge className="bg-primary text-primary-foreground">Premium</Badge>
-                                 <span className="text-xs text-muted-foreground">+€20 voor betere kwaliteit</span>
+                                 <span className="text-xs text-muted-foreground">
+                                   {language === 'fr' ? '+€20 pour une meilleure qualité' : '+€20 voor betere kwaliteit'}
+                                 </span>
                                </div>
                                <div className="flex items-center gap-3">
                                  <img src={productYogamatPurple} alt="Premium Product" className="w-16 h-16 rounded object-cover" />
@@ -1104,15 +1208,19 @@ const Features = () => {
                                    <div className="text-primary font-semibold">€59,99</div>
                                  </div>
                                  <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold">
-                                   Upgrade
+                                   {language === 'fr' ? 'Améliorer' : 'Upgrade'}
                                  </button>
                                </div>
                              </div>
                            </div>
                            <div className="p-4 border-2 border-primary rounded-lg bg-primary/5">
                              <div className="flex justify-between items-center mb-3">
-                               <span className="font-semibold">Vaak samen gekocht</span>
-                               <Badge variant="secondary" className="bg-green-500/20 text-green-600">Bespaar €15</Badge>
+                               <span className="font-semibold">
+                                 {language === 'fr' ? 'Souvent achetés ensemble' : 'Vaak samen gekocht'}
+                               </span>
+                               <Badge variant="secondary" className="bg-green-500/20 text-green-600">
+                                 {language === 'fr' ? 'Économisez €15' : 'Bespaar €15'}
+                               </Badge>
                              </div>
                              <div className="flex gap-2 mb-3">
                                <div className="flex-1 p-2 bg-background rounded border border-border">
@@ -1130,7 +1238,7 @@ const Features = () => {
                                 <div className="text-xl font-bold text-primary">€84,97</div>
                               </div>
                               <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold">
-                                Voeg toe
+                                {language === 'fr' ? 'Ajouter' : 'Voeg toe'}
                               </button>
                             </div>
                           </div>
@@ -1141,7 +1249,9 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <Users className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Wil je op de hoogte blijven van nieuwe collecties? 💌</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Voulez-vous rester informé des nouvelles collections ? 💌' : 'Wil je op de hoogte blijven van nieuwe collecties? 💌'}
+                            </span>
                           </div>
                           <div className="p-4 border border-border rounded-lg space-y-4">
                             <div>
@@ -1151,26 +1261,30 @@ const Features = () => {
                               </div>
                             </div>
                             <div>
-                              <label className="text-sm font-medium mb-2 block">Wat zijn je interesses?</label>
+                              <label className="text-sm font-medium mb-2 block">
+                                {language === 'fr' ? 'Quels sont vos intérêts ?' : 'Wat zijn je interesses?'}
+                              </label>
                               <div className="flex gap-2">
                                 <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
-                                  Damesmode
+                                  {language === 'fr' ? 'Mode femme' : 'Damesmode'}
                                 </button>
                                 <button className="px-4 py-2 border border-border rounded-full text-sm hover:bg-muted/50">
-                                  Herenmode
+                                  {language === 'fr' ? 'Mode homme' : 'Herenmode'}
                                 </button>
                                 <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
-                                  Accessoires
+                                  {language === 'fr' ? 'Accessoires' : 'Accessoires'}
                                 </button>
                               </div>
                             </div>
                             <button className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-semibold">
-                              Aanmelden
+                              {language === 'fr' ? 'S\'inscrire' : 'Aanmelden'}
                             </button>
                           </div>
                           <div className="p-4 bg-muted/30 rounded-lg">
                             <div className="flex items-center gap-2 mb-3">
-                              <span className="text-sm font-semibold">Lead Kwaliteit</span>
+                              <span className="text-sm font-semibold">
+                                {language === 'fr' ? 'Qualité des leads' : 'Lead Kwaliteit'}
+                              </span>
                               <TrendingUp className="w-4 h-4 text-green-500" />
                             </div>
                             <div className="grid grid-cols-3 gap-3">
@@ -1180,11 +1294,15 @@ const Features = () => {
                               </div>
                               <div className="text-center">
                                 <div className="text-2xl font-bold text-primary">78%</div>
-                                <div className="text-xs text-muted-foreground">Kwaliteit</div>
+                                <div className="text-xs text-muted-foreground">
+                                  {language === 'fr' ? 'Qualité' : 'Kwaliteit'}
+                                </div>
                               </div>
                               <div className="text-center">
                                 <div className="text-2xl font-bold text-primary">23%</div>
-                                <div className="text-xs text-muted-foreground">Conversie</div>
+                                <div className="text-xs text-muted-foreground">
+                                  {language === 'fr' ? 'Conversion' : 'Conversie'}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1195,47 +1313,57 @@ const Features = () => {
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <Zap className="w-5 h-5 text-primary" />
-                            <span className="text-sm">Hoe kan ik je helpen? Kies een optie:</span>
+                            <span className="text-sm">
+                              {language === 'fr' ? 'Comment puis-je vous aider ? Choisissez une option :' : 'Hoe kan ik je helpen? Kies een optie:'}
+                            </span>
                           </div>
                           <div className="grid grid-cols-2 gap-3">
                             <button className="p-4 border-2 border-primary bg-primary/5 rounded-xl text-left hover:bg-primary/10 transition-colors">
                               <div className="flex items-center gap-2 mb-1">
                                 <span className="text-2xl">📦</span>
-                                <span className="font-semibold text-sm">Track pakket</span>
+                                <span className="font-semibold text-sm">
+                                  {language === 'fr' ? 'Suivre le colis' : 'Track pakket'}
+                                </span>
                               </div>
                             </button>
                             <button className="p-4 border border-border rounded-xl text-left hover:bg-muted/50 transition-colors">
                               <div className="flex items-center gap-2 mb-1">
                                 <span className="text-2xl">🔄</span>
-                                <span className="font-semibold text-sm">Retour starten</span>
+                                <span className="font-semibold text-sm">
+                                  {language === 'fr' ? 'Démarrer un retour' : 'Retour starten'}
+                                </span>
                               </div>
                             </button>
                             <button className="p-4 border border-border rounded-xl text-left hover:bg-muted/50 transition-colors">
                               <div className="flex items-center gap-2 mb-1">
                                 <span className="text-2xl">👕</span>
-                                <span className="font-semibold text-sm">Product zoeken</span>
+                                <span className="font-semibold text-sm">
+                                  {language === 'fr' ? 'Rechercher un produit' : 'Product zoeken'}
+                                </span>
                               </div>
                             </button>
                             <button className="p-4 border border-border rounded-xl text-left hover:bg-muted/50 transition-colors">
                               <div className="flex items-center gap-2 mb-1">
                                 <span className="text-2xl">💬</span>
-                                <span className="font-semibold text-sm">Vraag stellen</span>
+                                <span className="font-semibold text-sm">
+                                  {language === 'fr' ? 'Poser une question' : 'Vraag stellen'}
+                                </span>
                               </div>
                             </button>
                           </div>
                           <div className="p-4 bg-muted/30 rounded-lg">
                             <div className="text-sm text-muted-foreground mb-3">
-                              Voor welk product wil je de status checken?
+                              {language === 'fr' ? 'Pour quel produit voulez-vous vérifier le statut ?' : 'Voor welk product wil je de status checken?'}
                             </div>
                             <div className="flex gap-2">
                               <button className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
-                                Bestelling #8473
+                                {language === 'fr' ? 'Commande #8473' : 'Bestelling #8473'}
                               </button>
                               <button className="px-4 py-2 border border-border rounded-full text-sm hover:bg-muted/50">
-                                Bestelling #8401
+                                {language === 'fr' ? 'Commande #8401' : 'Bestelling #8401'}
                               </button>
                               <button className="px-4 py-2 border border-border rounded-full text-sm hover:bg-muted/50">
-                                Anders
+                                {language === 'fr' ? 'Autre' : 'Anders'}
                               </button>
                             </div>
                           </div>
@@ -1312,23 +1440,25 @@ const Features = () => {
                       {feature.mockupType === "insights" && (
                         <div className="space-y-4">
                           <div className="flex items-center justify-between mb-4">
-                            <h3 className="font-semibold">Dashboard Inzichten</h3>
+                            <h3 className="font-semibold">
+                              {language === 'fr' ? 'Insights du tableau de bord' : 'Dashboard Inzichten'}
+                            </h3>
                             <select className="text-sm border border-border rounded px-3 py-1">
-                              <option>Laatste 7 dagen</option>
+                              <option>{language === 'fr' ? 'Derniers 7 jours' : 'Laatste 7 dagen'}</option>
                             </select>
                           </div>
                           <div className="grid grid-cols-2 gap-3">
                             <div className="p-4 border border-border rounded-lg">
                               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                                 <MessageSquare className="w-4 h-4" />
-                                Conversaties
+                                {language === 'fr' ? 'Conversations' : 'Conversaties'}
                               </div>
                               <div className="text-2xl font-bold">2,847</div>
                               <div className="text-sm text-green-500">↗ +23%</div>
                             </div>
                             <div className="p-4 bg-primary/5 border border-primary/20 rounded-lg">
                               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                                📊 Tevredenheid
+                                📊 {language === 'fr' ? 'Satisfaction' : 'Tevredenheid'}
                               </div>
                               <div className="text-2xl font-bold">89%</div>
                               <div className="text-sm text-green-500">↗ +5%</div>
@@ -1341,29 +1471,37 @@ const Features = () => {
                               </div>
                               <div>
                                 <div className="flex items-center gap-2 mb-1">
-                                  <span className="font-semibold">AI Inzicht</span>
-                                  <Badge variant="secondary" className="text-xs">Nieuw</Badge>
+                                  <span className="font-semibold">
+                                    {language === 'fr' ? 'Insight IA' : 'AI Inzicht'}
+                                  </span>
+                                  <Badge variant="secondary" className="text-xs">
+                                    {language === 'fr' ? 'Nouveau' : 'Nieuw'}
+                                  </Badge>
                                 </div>
                                 <p className="text-sm text-muted-foreground">
-                                  Veel klanten vragen naar verzendkosten. Overweeg gratis verzending vanaf €50 om conversie te verhogen.
+                                  {language === 'fr'
+                                    ? 'De nombreux clients posent des questions sur les frais de livraison. Envisagez la livraison gratuite à partir de €50 pour augmenter la conversion.'
+                                    : 'Veel klanten vragen naar verzendkosten. Overweeg gratis verzending vanaf €50 om conversie te verhogen.'}
                                 </p>
                               </div>
                             </div>
                             <div className="flex gap-2">
                               <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">
-                                Implementeer
+                                {language === 'fr' ? 'Implémenter' : 'Implementeer'}
                               </button>
                               <button className="px-4 py-2 border border-border rounded-lg text-sm hover:bg-muted/50 transition-colors">
-                                Meer info
+                                {language === 'fr' ? 'Plus d\'info' : 'Meer info'}
                               </button>
                             </div>
                           </div>
                           <div className="p-4 border border-border rounded-lg">
-                            <div className="text-sm font-semibold mb-3">Top vragen deze week</div>
+                            <div className="text-sm font-semibold mb-3">
+                              {language === 'fr' ? 'Questions principales cette semaine' : 'Top vragen deze week'}
+                            </div>
                             <div className="space-y-3">
                               <div>
                                 <div className="flex justify-between text-sm mb-1">
-                                  <span>Verzendkosten</span>
+                                  <span>{language === 'fr' ? 'Frais de livraison' : 'Verzendkosten'}</span>
                                   <span className="font-semibold">287x</span>
                                 </div>
                                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
@@ -1372,7 +1510,7 @@ const Features = () => {
                               </div>
                               <div>
                                 <div className="flex justify-between text-sm mb-1">
-                                  <span>Retourbeleid</span>
+                                  <span>{language === 'fr' ? 'Politique de retour' : 'Retourbeleid'}</span>
                                   <span className="font-semibold">183x</span>
                                 </div>
                                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
@@ -1381,7 +1519,7 @@ const Features = () => {
                               </div>
                               <div>
                                 <div className="flex justify-between text-sm mb-1">
-                                  <span>Levertijd</span>
+                                  <span>{language === 'fr' ? 'Délai de livraison' : 'Levertijd'}</span>
                                   <span className="font-semibold">156x</span>
                                 </div>
                                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
