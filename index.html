@@ -60,6 +60,52 @@
         }, 1000);
       });
     </script>
+
+    <!-- Glimps Widget -->
+    <script id="" text="" charset="" type="text/javascript"
+            src="https://widgets.glimps.group/integrations/widget/v2.js?widget=cmlprbvqe000c04l19v9ernxt"></script>
+
+    <!-- Automatisch openen vanaf features pagina -->
+    <script>
+        (function() {
+            const referrer = document.referrer;
+
+            // Check of bezoeker van features pagina komt
+            if (referrer.includes('https://www.glimps.be/features')) {
+
+                // Functie om widget te openen
+                function openWidget() {
+                    // Zoek widget button en simuleer klik
+                    const widgetButton = document.querySelector('button[class*="widget"]') ||
+                                       document.querySelector('div[class*="widget"]') ||
+                                       document.querySelector('iframe[src*="glimps"]');
+
+                    if (widgetButton && widgetButton.click) {
+                        widgetButton.click();
+                        return true;
+                    }
+
+                    // Alternatief: zoek via iframe
+                    const iframe = document.querySelector('iframe');
+                    if (iframe) {
+                        const parent = iframe.parentElement;
+                        if (parent && parent.click) {
+                            parent.click();
+                            return true;
+                        }
+                    }
+
+                    return false;
+                }
+
+                // Probeer meerdere keren (widget heeft tijd nodig om te laden)
+                setTimeout(openWidget, 1000);
+                setTimeout(openWidget, 2000);
+                setTimeout(openWidget, 3000);
+            }
+        })();
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
