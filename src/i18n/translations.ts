@@ -642,6 +642,146 @@ export const translations = {
         description: 'Ontdek precies hoe een AI chatbot werkt voor jouw webshop. We laten je live zien wat mogelijk is en berekenen samen je exacte ROI.',
         button: 'Plan Gratis Demo'
       }
+    },
+    industries: {
+      fashion: {
+        badge: 'Fashion & Design',
+        title: 'AI-Chatbots voor Fashion & Design',
+        subtitle: 'Verhoog je fashion sales met intelligente style adviseurs die 24/7 persoonlijke outfit aanbevelingen geven',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor fashion webshops',
+        benefits: {
+          advice: { title: 'Persoonlijke Style Advies', desc: 'AI begrijpt kledingstijl, maten en voorkeuren om perfecte outfits samen te stellen' },
+          conversion: { title: 'Hogere Conversies', desc: 'Beantwoord vragen over materialen, pasvorm en verzorging direct, zonder wachttijd' },
+          collections: { title: 'Seizoenscollecties', desc: 'Automatisch up-to-date met nieuwe collecties en trends via je productcatalogus' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor fashion',
+        useCases: [
+          'Maatadvies geven op basis van kledingstuktype',
+          'Complete outfits samenstellen met matching items',
+          'Vragen over stofsamenstelling en onderhoud beantwoorden',
+          'Klanten helpen bij het vinden van specifieke stijlen',
+          'Retourvragen direct afhandelen met tracking info'
+        ],
+        ctaTitle: 'Klaar om je fashion sales te boosten?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw fashion webshop naar het volgende niveau tilt',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      beauty: {
+        badge: 'Beauty & Cosmetica',
+        title: 'AI-Chatbots voor Beauty & Cosmetica',
+        subtitle: 'Geef elke klant persoonlijk beauty advies met AI die huidtypes, ingrediënten en producten begrijpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor beauty webshops',
+        benefits: {
+          advice: { title: 'Persoonlijk Huidadvies', desc: 'AI analyseert huidtype, concerns en geeft gepersonaliseerde productaanbevelingen' },
+          ingredients: { title: 'Ingrediënten Kennis', desc: 'Beantwoord vragen over ingrediënten, allergenen en geschiktheid voor specifieke huidtypes' },
+          routines: { title: 'Beauty Routines', desc: 'Stel complete skincare routines samen met de juiste volgorde en combinaties' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor beauty',
+        useCases: [
+          'Huidtype bepalen en passende producten adviseren',
+          'Vragen over ingrediënten en allergenen beantwoorden',
+          'Complete skincare routines samenstellen',
+          'Kleuradvies voor make-up producten geven',
+          'Productvergelijkingen maken op basis van behoeften'
+        ],
+        ctaTitle: 'Klaar voor meer beauty conversies?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw beauty webshop transformeert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      electronics: {
+        badge: 'Electronics & Consumer Technology',
+        title: 'AI-Chatbots voor Electronics',
+        subtitle: 'Help klanten de juiste tech keuze maken met AI die specificaties, compatibiliteit en features begrijpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor electronics webshops',
+        benefits: {
+          specs: { title: 'Technische Specs', desc: 'AI begrijpt complexe specificaties en legt deze uit in begrijpelijke taal' },
+          compatibility: { title: 'Compatibiliteit Check', desc: 'Controleer automatisch of producten met elkaar werken en welke accessoires nodig zijn' },
+          comparison: { title: 'Product Vergelijkingen', desc: 'Vergelijk specs en features van verschillende modellen om klanten te helpen kiezen' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor electronics',
+        useCases: [
+          'Technische specificaties uitleggen in begrijpelijke taal',
+          'Compatibiliteit tussen producten controleren',
+          'Producten vergelijken op basis van features en prijs',
+          'Setup instructies en troubleshooting bieden',
+          'Garantie en retourvragen direct beantwoorden'
+        ],
+        ctaTitle: 'Klaar voor meer tech sales?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw electronics webshop boosted',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      furniture: {
+        badge: 'Meubels & Interieur',
+        title: 'AI-Chatbots voor Meubels & Interieur',
+        subtitle: 'Help klanten hun perfecte interieur samen te stellen met AI die stijl, afmetingen en combinaties begrijpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor meubel webshops',
+        benefits: {
+          style: { title: 'Stijl & Interieuradvies', desc: 'AI begrijpt interieurstijlen en helpt klanten meubels te vinden die perfect bij elkaar passen' },
+          dimensions: { title: 'Afmetingen & Ruimte', desc: 'Help klanten controleren of meubels passen in hun ruimte en adviseer over ideale afmetingen' },
+          sets: { title: 'Complete Sets', desc: 'Stel complete meubelsets samen die qua stijl en kleur perfect matchen' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor meubels',
+        useCases: [
+          'Adviseer over stijlcombinaties en kleurenschema\'s',
+          'Help met het bepalen van de juiste afmetingen',
+          'Beantwoord vragen over materialen en onderhoud',
+          'Stel complete kamersets samen',
+          'Geef levertijd en bezorginformatie per product'
+        ],
+        ctaTitle: 'Klaar voor meer interieur sales?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw meubelwebshop naar een hoger niveau tilt',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      sports: {
+        badge: 'Sportkleding & Fitness',
+        title: 'AI-Chatbots voor Sport & Fitness',
+        subtitle: 'Boost je sportwebshop met AI die atleten helpt de perfecte gear te vinden voor hun sport en niveau',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor sport webshops',
+        benefits: {
+          specific: { title: 'Sport-specifiek Advies', desc: 'AI begrijpt verschillende sporten en kan gear adviseren per discipline en niveau' },
+          fit: { title: 'Pasvorm & Performance', desc: 'Help klanten vinden welke pasvorm en materialen het beste werken voor hun activiteit' },
+          outfits: { title: 'Complete Outfits', desc: 'Stel complete sportoutfits samen met matching items voor elke activiteit' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor sport',
+        useCases: [
+          'Adviseer sportkleding per discipline (hardlopen, fitness, yoga, etc.)',
+          'Help bij maatkeuze voor optimale performance',
+          'Beantwoord vragen over materialen en technologie',
+          'Geef onderhoudstips voor sportkleding en gear',
+          'Adviseer over seizoensgebonden producten'
+        ],
+        ctaTitle: 'Klaar voor meer sport sales?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw sportwebshop naar het podium brengt',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      garden: {
+        badge: 'Tuin en Buitenleven',
+        title: 'AI-Chatbots voor Tuin & Buitenleven',
+        subtitle: 'Help klanten hun droompluin creëren met AI die planten, seizoenen en tuinonderhoud begrijpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor tuin webshops',
+        benefits: {
+          plants: { title: 'Plant & Seizoenadvies', desc: 'AI kent plantensoorten, seizoenen en groeiomstandigheden om perfect advies te geven' },
+          design: { title: 'Tuininrichting', desc: 'Help klanten hun tuin inrichten met passende meubels, decoratie en planten' },
+          maintenance: { title: 'Onderhoudstips', desc: 'Geef klanten direct advies over onderhoud, water geven en bemesting' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor tuin',
+        useCases: [
+          'Adviseer planten op basis van seizoen en groeiplaats',
+          'Help bij het kiezen van tuinmeubels en decoratie',
+          'Beantwoord vragen over plantverzorging en onderhoud',
+          'Geef tips voor het creëren van tuinstijlen',
+          'Adviseer over gereedschap en benodigdheden'
+        ],
+        ctaTitle: 'Klaar om je tuin business te laten groeien?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw tuinwebshop bloeiend maakt',
+        ctaButton: 'Start je gratis proefperiode'
+      }
     }
   },
   fr: {
@@ -1476,6 +1616,146 @@ export const translations = {
         submit: 'Demander une fonctionnalité',
         submitting: 'Envoi en cours...',
         popular: 'Demandes populaires'
+      }
+    },
+    industries: {
+      fashion: {
+        badge: 'Mode & Design',
+        title: 'Chatbots IA pour Mode & Design',
+        subtitle: 'Augmentez vos ventes de mode avec des conseillers de style intelligents qui donnent des recommandations de tenues personnalisées 24/7',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques de mode',
+        benefits: {
+          advice: { title: 'Conseils de Style Personnalisés', desc: 'L\'IA comprend le style vestimentaire, les tailles et les préférences pour composer des tenues parfaites' },
+          conversion: { title: 'Conversions Plus Élevées', desc: 'Répondez aux questions sur les matériaux, la coupe et l\'entretien directement, sans temps d\'attente' },
+          collections: { title: 'Collections Saisonnières', desc: 'Automatiquement à jour avec les nouvelles collections et tendances via votre catalogue produits' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour la mode',
+        useCases: [
+          'Donner des conseils de taille en fonction du type de vêtement',
+          'Composer des tenues complètes avec des articles assortis',
+          'Répondre aux questions sur la composition et l\'entretien des tissus',
+          'Aider les clients à trouver des styles spécifiques',
+          'Traiter directement les questions de retour avec les infos de suivi'
+        ],
+        ctaTitle: 'Prêt à booster vos ventes de mode ?',
+        ctaSubtitle: 'Découvrez comment glimps élève votre boutique de mode au niveau supérieur',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      beauty: {
+        badge: 'Beauté & Cosmétiques',
+        title: 'Chatbots IA pour Beauté & Cosmétiques',
+        subtitle: 'Donnez à chaque client des conseils beauté personnalisés avec une IA qui comprend les types de peau, les ingrédients et les produits',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques de beauté',
+        benefits: {
+          advice: { title: 'Conseils de Peau Personnalisés', desc: 'L\'IA analyse le type de peau, les préoccupations et donne des recommandations de produits personnalisées' },
+          ingredients: { title: 'Connaissance des Ingrédients', desc: 'Répondez aux questions sur les ingrédients, les allergènes et l\'adéquation pour des types de peau spécifiques' },
+          routines: { title: 'Routines Beauté', desc: 'Composez des routines de soins de la peau complètes avec le bon ordre et les bonnes combinaisons' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour la beauté',
+        useCases: [
+          'Déterminer le type de peau et conseiller des produits adaptés',
+          'Répondre aux questions sur les ingrédients et les allergènes',
+          'Composer des routines de soins de la peau complètes',
+          'Donner des conseils de couleur pour les produits de maquillage',
+          'Faire des comparaisons de produits basées sur les besoins'
+        ],
+        ctaTitle: 'Prêt pour plus de conversions beauté ?',
+        ctaSubtitle: 'Découvrez comment glimps transforme votre boutique de beauté',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      electronics: {
+        badge: 'Électronique & Technologie Grand Public',
+        title: 'Chatbots IA pour Électronique',
+        subtitle: 'Aidez les clients à faire le bon choix technologique avec une IA qui comprend les spécifications, la compatibilité et les fonctionnalités',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques d\'électronique',
+        benefits: {
+          specs: { title: 'Spécifications Techniques', desc: 'L\'IA comprend les spécifications complexes et les explique dans un langage compréhensible' },
+          compatibility: { title: 'Vérification de Compatibilité', desc: 'Vérifiez automatiquement si les produits fonctionnent ensemble et quels accessoires sont nécessaires' },
+          comparison: { title: 'Comparaisons de Produits', desc: 'Comparez les spécifications et fonctionnalités de différents modèles pour aider les clients à choisir' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour l\'électronique',
+        useCases: [
+          'Expliquer les spécifications techniques dans un langage compréhensible',
+          'Vérifier la compatibilité entre produits',
+          'Comparer les produits en fonction des fonctionnalités et du prix',
+          'Fournir des instructions de configuration et de dépannage',
+          'Répondre directement aux questions de garantie et de retour'
+        ],
+        ctaTitle: 'Prêt pour plus de ventes tech ?',
+        ctaSubtitle: 'Découvrez comment glimps booste votre boutique d\'électronique',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      furniture: {
+        badge: 'Meubles & Intérieur',
+        title: 'Chatbots IA pour Meubles & Intérieur',
+        subtitle: 'Aidez les clients à composer leur intérieur parfait avec une IA qui comprend le style, les dimensions et les combinaisons',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les magasins de meubles',
+        benefits: {
+          style: { title: 'Style & Conseils d\'Intérieur', desc: 'L\'IA comprend les styles d\'intérieur et aide les clients à trouver des meubles qui s\'accordent parfaitement' },
+          dimensions: { title: 'Dimensions & Espace', desc: 'Aidez les clients à vérifier si les meubles s\'adaptent à leur espace et conseillez sur les dimensions idéales' },
+          sets: { title: 'Ensembles Complets', desc: 'Composez des ensembles de meubles complets qui correspondent parfaitement en style et couleur' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les meubles',
+        useCases: [
+          'Conseiller sur les combinaisons de styles et les schémas de couleurs',
+          'Aider à déterminer les bonnes dimensions',
+          'Répondre aux questions sur les matériaux et l\'entretien',
+          'Composer des ensembles de pièces complets',
+          'Donner des délais de livraison et des informations de livraison par produit'
+        ],
+        ctaTitle: 'Prêt pour plus de ventes d\'intérieur ?',
+        ctaSubtitle: 'Découvrez comment glimps élève votre magasin de meubles à un niveau supérieur',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      sports: {
+        badge: 'Vêtements de Sport & Fitness',
+        title: 'Chatbots IA pour Sport & Fitness',
+        subtitle: 'Boostez votre boutique de sport avec une IA qui aide les athlètes à trouver l\'équipement parfait pour leur sport et leur niveau',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques de sport',
+        benefits: {
+          specific: { title: 'Conseils Spécifiques au Sport', desc: 'L\'IA comprend différents sports et peut conseiller l\'équipement par discipline et niveau' },
+          fit: { title: 'Ajustement & Performance', desc: 'Aidez les clients à trouver quelle coupe et quels matériaux fonctionnent le mieux pour leur activité' },
+          outfits: { title: 'Tenues Complètes', desc: 'Composez des tenues de sport complètes avec des articles assortis pour chaque activité' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour le sport',
+        useCases: [
+          'Conseiller des vêtements de sport par discipline (course, fitness, yoga, etc.)',
+          'Aider au choix de la taille pour une performance optimale',
+          'Répondre aux questions sur les matériaux et la technologie',
+          'Donner des conseils d\'entretien pour les vêtements et équipements de sport',
+          'Conseiller sur les produits saisonniers'
+        ],
+        ctaTitle: 'Prêt pour plus de ventes sportives ?',
+        ctaSubtitle: 'Découvrez comment glimps amène votre boutique de sport sur le podium',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      garden: {
+        badge: 'Jardin et Vie en Plein Air',
+        title: 'Chatbots IA pour Jardin & Vie en Plein Air',
+        subtitle: 'Aidez les clients à créer leur jardin de rêve avec une IA qui comprend les plantes, les saisons et l\'entretien du jardin',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques de jardin',
+        benefits: {
+          plants: { title: 'Conseils Plantes & Saisons', desc: 'L\'IA connaît les espèces de plantes, les saisons et les conditions de croissance pour donner des conseils parfaits' },
+          design: { title: 'Aménagement de Jardin', desc: 'Aidez les clients à aménager leur jardin avec des meubles, décorations et plantes adaptés' },
+          maintenance: { title: 'Conseils d\'Entretien', desc: 'Donnez directement aux clients des conseils sur l\'entretien, l\'arrosage et la fertilisation' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour le jardin',
+        useCases: [
+          'Conseiller des plantes en fonction de la saison et de l\'emplacement',
+          'Aider à choisir les meubles et décorations de jardin',
+          'Répondre aux questions sur les soins et l\'entretien des plantes',
+          'Donner des conseils pour créer des styles de jardin',
+          'Conseiller sur les outils et fournitures'
+        ],
+        ctaTitle: 'Prêt à faire croître votre business jardin ?',
+        ctaSubtitle: 'Découvrez comment glimps fait fleurir votre boutique de jardin',
+        ctaButton: 'Commencez votre essai gratuit'
       }
     }
   }
