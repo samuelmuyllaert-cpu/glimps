@@ -15,14 +15,18 @@ const Footer = () => {
 
   const handleNewsletterSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!newsletterEmail.trim()) {
-      toast.error("Vul een geldig e-mailadres in");
+      toast.error(
+        language === 'fr'
+          ? "Veuillez entrer une adresse e-mail valide"
+          : "Vul een geldig e-mailadres in"
+      );
       return;
     }
 
     setSubmittingNewsletter(true);
-    
+
     try {
       const response = await fetch("https://hook.eu2.make.com/9ag2uhlgs336u7dc4fuinlrikixrmmjr", {
         method: "POST",
@@ -33,14 +37,26 @@ const Footer = () => {
       });
 
       if (response.ok) {
-        toast.success("Je bent ingeschreven voor de nieuwsbrief!");
+        toast.success(
+          language === 'fr'
+            ? "Vous êtes inscrit à la newsletter !"
+            : "Je bent ingeschreven voor de nieuwsbrief!"
+        );
         setNewsletterEmail("");
       } else {
-        toast.error("Er ging iets mis. Probeer het opnieuw.");
+        toast.error(
+          language === 'fr'
+            ? "Une erreur s'est produite. Veuillez réessayer."
+            : "Er ging iets mis. Probeer het opnieuw."
+        );
       }
     } catch (error) {
       console.error("Newsletter signup error:", error);
-      toast.error("Er ging iets mis. Probeer het opnieuw.");
+      toast.error(
+        language === 'fr'
+          ? "Une erreur s'est produite. Veuillez réessayer."
+          : "Er ging iets mis. Probeer het opnieuw."
+      );
     } finally {
       setSubmittingNewsletter(false);
     }
@@ -239,25 +255,39 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Juridisch</h4>
+            <h4 className="font-semibold">
+              {language === 'fr' ? 'Juridique' : 'Juridisch'}
+            </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="/legal" className="text-muted-foreground hover:text-primary">
-                  Privacy Policy
+                <a
+                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy'}
                 </a>
               </li>
               <li>
-                <a href="/legal" className="text-muted-foreground hover:text-primary">
-                  Algemene Voorwaarden
+                <a
+                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Conditions Générales' : 'Algemene Voorwaarden'}
                 </a>
               </li>
               <li>
-                <a href="/legal" className="text-muted-foreground hover:text-primary">
-                  Cookie Policy
+                <a
+                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Politique des Cookies' : 'Cookie Policy'}
                 </a>
               </li>
               <li>
-                <a href="/legal" className="text-muted-foreground hover:text-primary">
+                <a
+                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  className="text-muted-foreground hover:text-primary"
+                >
                   GDPR
                 </a>
               </li>
@@ -268,26 +298,34 @@ const Footer = () => {
         {/* Newsletter Signup */}
         <div className="mt-12 border-t border-border/50 pt-12">
           <div className="max-w-md mx-auto text-center">
-            <h4 className="font-semibold text-lg mb-2">Blijf op de hoogte</h4>
+            <h4 className="font-semibold text-lg mb-2">
+              {language === 'fr' ? 'Restez informé' : 'Blijf op de hoogte'}
+            </h4>
             <p className="text-sm text-muted-foreground mb-4">
-              Ontvang de nieuwste updates, tips en AI-insights direct in je inbox
+              {language === 'fr'
+                ? 'Recevez les dernières mises à jour, conseils et insights IA directement dans votre boîte mail'
+                : 'Ontvang de nieuwste updates, tips en AI-insights direct in je inbox'
+              }
             </p>
             <form onSubmit={handleNewsletterSignup} className="flex gap-2">
               <Input
                 type="email"
-                placeholder="je@email.be"
+                placeholder={language === 'fr' ? 'vous@email.be' : 'je@email.be'}
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 disabled={submittingNewsletter}
                 className="bg-background"
               />
-              <Button 
+              <Button
                 type="submit"
-                variant="default" 
+                variant="default"
                 className="rounded-full"
                 disabled={submittingNewsletter}
               >
-                {submittingNewsletter ? "Bezig..." : "Abonneer"}
+                {submittingNewsletter
+                  ? (language === 'fr' ? "En cours..." : "Bezig...")
+                  : (language === 'fr' ? "S'abonner" : "Abonneer")
+                }
               </Button>
             </form>
           </div>
@@ -296,7 +334,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Glimps. Alle rechten voorbehouden.
+            © {new Date().getFullYear()} Glimps. {language === 'fr' ? 'Tous droits réservés.' : 'Alle rechten voorbehouden.'}
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-muted-foreground hover:text-primary">
