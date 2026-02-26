@@ -439,7 +439,16 @@ export const translations = {
           'Identificatie van grootste kansen',
           'Business readiness assessment'
         ],
-        next: 'Volgende: Analyse van klantvragen'
+        next: 'Volgende: Analyse van klantvragen',
+        card: {
+          title: 'Business Scan',
+          approved: 'Goedgekeurd ✓',
+          dataQuality: 'Productdata kwaliteit',
+          dataStructure: 'Data structuur',
+          apiAvailability: 'API beschikbaarheid',
+          contentCompleteness: 'Content volledigheid',
+          readinessScore: 'AI Readiness Score'
+        }
       },
       step2: {
         title: 'Analyse van klantvragen',
@@ -450,7 +459,21 @@ export const translations = {
           'AI-training op jouw klantgedrag',
           'FAQ en beleid mapping'
         ],
-        next: 'Volgende: Implementatie & training'
+        next: 'Volgende: Implementatie & training',
+        card: {
+          title: 'Meest gestelde vragen',
+          coverage: 'coverage',
+          timesAsked: 'keer gevraagd',
+          questions: [
+            'Waar is mijn pakket?',
+            'Wat zijn de verzendkosten?',
+            'Kan ik dit retourneren?',
+            'Is dit product beschikbaar?',
+            'Welke maat moet ik hebben?'
+          ],
+          trainingComplete: 'AI Training Complete',
+          conversationsAnalyzed: 'gesprekken geanalyseerd'
+        }
       },
       step3: {
         title: 'Implementatie & training',
@@ -461,7 +484,18 @@ export const translations = {
           'Productdata integratie',
           'API koppelingen'
         ],
-        next: 'Volgende: Livegang & optimalisatie'
+        next: 'Volgende: Livegang & optimalisatie',
+        card: {
+          title: 'Implementatie Status',
+          inProgress: '● In Progress',
+          productIntegration: 'Productdata integratie',
+          toneTraining: 'Tone-of-voice training',
+          apiConnections: 'API koppelingen',
+          testingQA: 'Testing & QA',
+          products: 'Producten',
+          categories: 'Categorieën',
+          apis: 'API\'s'
+        }
       },
       step4: {
         title: 'Livegang & optimalisatie',
@@ -472,7 +506,17 @@ export const translations = {
           'Automatisch leren & verbeteren',
           'Real-time analytics dashboard'
         ],
-        next: 'Volgende: Data Insights'
+        next: 'Volgende: Data Insights',
+        card: {
+          title: 'Live Performance',
+          period: 'Laatste 30 dagen',
+          live: '● Live',
+          conversations: 'Gesprekken',
+          resolvedWithoutHelp: 'Opgelost zonder hulp',
+          vsPreviousMonth: 'vs vorige maand',
+          conversionRate: 'Conversie rate',
+          aiLearning: 'AI leert continu van nieuwe gesprekken'
+        }
       },
       step5: {
         title: 'Data Insights op basis van chathistoriek',
@@ -482,7 +526,23 @@ export const translations = {
           'Klantgedrag & trends analyse',
           'Productfeedback & verbeterpunten',
           'Conversie optimalisatie kansen'
-        ]
+        ],
+        card: {
+          title: 'Insights Dashboard',
+          period: 'Laatste 30 dagen',
+          live: '● Live',
+          topProducts: 'Meest gevraagde producten',
+          top3: 'Top 3',
+          questions: 'vragen',
+          productNames: ['Sportschoenen', 'Yoga matten', 'Fitness trackers'],
+          sentiment: 'Klant sentiment',
+          positive: 'Positief 😊',
+          neutral: 'Neutraal 😐',
+          negative: 'Negatief 😟',
+          improvement: 'Verbeterkans gedetecteerd',
+          improvementText: '45% van klanten vraagt naar maattabellen. Overweeg deze prominenter te plaatsen.',
+          weeklyInsights: 'Wekelijks nieuwe insights & aanbevelingen'
+        }
       },
       cta: {
         title: 'Klaar om te starten?',
@@ -931,7 +991,16 @@ export const translations = {
           'Identification des plus grandes opportunités',
           'Évaluation de la maturité business'
         ],
-        next: 'Suivant : Analyse des questions clients'
+        next: 'Suivant : Analyse des questions clients',
+        card: {
+          title: 'Analyse Business',
+          approved: 'Approuvé ✓',
+          dataQuality: 'Qualité des données produits',
+          dataStructure: 'Structure des données',
+          apiAvailability: 'Disponibilité API',
+          contentCompleteness: 'Complétude du contenu',
+          readinessScore: 'Score de maturité IA'
+        }
       },
       step2: {
         title: 'Analyse des questions clients',
@@ -942,7 +1011,21 @@ export const translations = {
           'Formation IA sur votre comportement client',
           'Mapping FAQ et politiques'
         ],
-        next: 'Suivant : Implémentation & formation'
+        next: 'Suivant : Implémentation & formation',
+        card: {
+          title: 'Questions les plus fréquentes',
+          coverage: 'couverture',
+          timesAsked: 'fois demandé',
+          questions: [
+            'Où est mon colis ?',
+            'Quels sont les frais de livraison ?',
+            'Puis-je retourner ceci ?',
+            'Ce produit est-il disponible ?',
+            'Quelle taille dois-je prendre ?'
+          ],
+          trainingComplete: 'Formation IA terminée',
+          conversationsAnalyzed: 'conversations analysées'
+        }
       },
       step3: {
         title: 'Implémentation & formation',
@@ -953,7 +1036,18 @@ export const translations = {
           'Intégration des données produits',
           'Connexions API'
         ],
-        next: 'Suivant : Mise en ligne & optimisation'
+        next: 'Suivant : Mise en ligne & optimisation',
+        card: {
+          title: 'Statut d\'implémentation',
+          inProgress: '● En cours',
+          productIntegration: 'Intégration données produits',
+          toneTraining: 'Formation ton de voix',
+          apiConnections: 'Connexions API',
+          testingQA: 'Tests & QA',
+          products: 'Produits',
+          categories: 'Catégories',
+          apis: 'API\'s'
+        }
       },
       step4: {
         title: 'Mise en ligne & optimisation',
@@ -964,7 +1058,17 @@ export const translations = {
           'Apprentissage & amélioration automatiques',
           'Tableau de bord analytics en temps réel'
         ],
-        next: 'Suivant : Insights Données'
+        next: 'Suivant : Insights Données',
+        card: {
+          title: 'Performance en direct',
+          period: '30 derniers jours',
+          live: '● En ligne',
+          conversations: 'Conversations',
+          resolvedWithoutHelp: 'Résolu sans aide',
+          vsPreviousMonth: 'vs mois précédent',
+          conversionRate: 'Taux de conversion',
+          aiLearning: 'L\'IA apprend en continu des nouvelles conversations'
+        }
       },
       step5: {
         title: 'Insights Données basés sur l\'historique des chats',
@@ -974,7 +1078,23 @@ export const translations = {
           'Analyse du comportement client & tendances',
           'Feedback produit & points d\'amélioration',
           'Opportunités d\'optimisation de conversion'
-        ]
+        ],
+        card: {
+          title: 'Tableau de bord Insights',
+          period: '30 derniers jours',
+          live: '● En ligne',
+          topProducts: 'Produits les plus demandés',
+          top3: 'Top 3',
+          questions: 'questions',
+          productNames: ['Chaussures de sport', 'Tapis de yoga', 'Trackers fitness'],
+          sentiment: 'Sentiment client',
+          positive: 'Positif 😊',
+          neutral: 'Neutre 😐',
+          negative: 'Négatif 😟',
+          improvement: 'Opportunité d\'amélioration détectée',
+          improvementText: '45% des clients demandent des guides de tailles. Envisagez de les rendre plus visibles.',
+          weeklyInsights: 'Nouveaux insights & recommandations chaque semaine'
+        }
       },
       cta: {
         title: 'Prêt à commencer ?',
