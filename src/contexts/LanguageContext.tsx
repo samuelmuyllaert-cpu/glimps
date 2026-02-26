@@ -27,7 +27,10 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [language, setLanguageState] = useState<Language>('nl');
+
+  // Initialize language based on current path (works for SSR)
+  const initialLang = location.pathname.startsWith('/fr') ? 'fr' : 'nl';
+  const [language, setLanguageState] = useState<Language>(initialLang);
 
   useEffect(() => {
     const pathLang = location.pathname.startsWith('/fr') ? 'fr' : 'nl';

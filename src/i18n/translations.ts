@@ -624,6 +624,24 @@ export const translations = {
         description: 'Heb je snel een antwoord nodig? Bekijk onze FAQ pagina voor antwoorden op de meest gestelde vragen.',
         button: 'Bekijk FAQ →'
       }
+    },
+    ecomReadiness: {
+      title: 'Chatbot Readiness Quiz',
+      subtitle: 'Ontdek in 2 minuten of een AI chatbot perfect is voor jouw webshop',
+      submitButton: 'Bekijk Mijn Readiness Score',
+      submitNote: 'Beantwoord alle vragen om je score te zien',
+      retakeQuiz: 'Quiz opnieuw doen',
+      resultsTitle: 'Je Chatbot Readiness Score',
+      whatYouMiss: 'Wat je nu mist',
+      quickWins: 'Quick Wins met AI Chatbot',
+      estimatedRoi: 'Geschatte ROI voor jouw situatie',
+      perYear: 'per jaar',
+      roiNote: 'Gebaseerd op je antwoorden: kostenbesparing + omzetstijging door betere conversie',
+      nextStep: {
+        title: 'Volgende stap: Persoonlijke Demo',
+        description: 'Ontdek precies hoe een AI chatbot werkt voor jouw webshop. We laten je live zien wat mogelijk is en berekenen samen je exacte ROI.',
+        button: 'Plan Gratis Demo'
+      }
     }
   },
   fr: {
@@ -1250,6 +1268,24 @@ export const translations = {
         title: 'Questions Fréquemment Posées',
         description: 'Besoin d\'une réponse rapide ? Consultez notre page FAQ pour des réponses aux questions les plus fréquentes.',
         button: 'Voir la FAQ →'
+      }
+    },
+    ecomReadiness: {
+      title: 'Quiz de Préparation Chatbot',
+      subtitle: 'Découvrez en 2 minutes si un chatbot IA est parfait pour votre boutique en ligne',
+      submitButton: 'Voir Mon Score de Préparation',
+      submitNote: 'Répondez à toutes les questions pour voir votre score',
+      retakeQuiz: 'Refaire le quiz',
+      resultsTitle: 'Votre Score de Préparation Chatbot',
+      whatYouMiss: 'Ce qui vous manque actuellement',
+      quickWins: 'Gains Rapides avec Chatbot IA',
+      estimatedRoi: 'ROI Estimé pour votre situation',
+      perYear: 'par an',
+      roiNote: 'Basé sur vos réponses : économies de coûts + augmentation du chiffre d\'affaires grâce à une meilleure conversion',
+      nextStep: {
+        title: 'Prochaine étape : Démo Personnalisée',
+        description: 'Découvrez exactement comment un chatbot IA fonctionne pour votre boutique en ligne. Nous vous montrons en direct ce qui est possible et calculons ensemble votre ROI exact.',
+        button: 'Planifier une Démo Gratuite'
       }
     }
   }
