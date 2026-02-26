@@ -416,6 +416,79 @@ export const translations = {
       learnMore: 'Meer informatie',
       getStarted: 'Aan de slag',
       contactUs: 'Neem contact op'
+    },
+    howWeWork: {
+      badge: '💡 HOE WE SAMENWERKEN',
+      title: 'Van chaos naar controle.',
+      titleHighlight: 'In 5 stappen.',
+      description: 'Geen standaard chatbot. Geen generieke antwoorden. Alleen een AI die jouw business begrijpt, jouw klanten helpt en écht resultaat levert.',
+      processSteps: [
+        { label: 'Screening' },
+        { label: 'Analyse' },
+        { label: 'Implementatie' },
+        { label: 'Livegang' },
+        { label: 'Data Insights' }
+      ],
+      step1: {
+        title: 'Screening van jouw business',
+        subtitle: 'We werken enkel samen met merken die écht klaar zijn voor AI.',
+        description: 'We screenen je webshop, je data en je systemen om te bepalen waar de grootste winst ligt.',
+        warning: 'Let op: We kijken kritisch of we een fit zijn. Kan zijn dat we geen match maken — dat bespaart beide partijen tijd en frustratie.',
+        features: [
+          'Analyse van productdata & structuur',
+          'Identificatie van grootste kansen',
+          'Business readiness assessment'
+        ],
+        next: 'Volgende: Analyse van klantvragen'
+      },
+      step2: {
+        title: 'Analyse van klantvragen',
+        subtitle: 'We onderzoeken 80% van de meest gestelde vragen',
+        description: 'Dat is de basis voor maximale automatisering. We analyseren echte klantvragen uit jouw inbox, helpdesk en chat om de AI optimaal te trainen.',
+        features: [
+          '80% meest voorkomende vragen',
+          'AI-training op jouw klantgedrag',
+          'FAQ en beleid mapping'
+        ],
+        next: 'Volgende: Implementatie & training'
+      },
+      step3: {
+        title: 'Implementatie & training',
+        subtitle: 'Glimps wordt gevoed met jouw productdata, beleid en tone of voice',
+        description: 'Zodat hij klinkt als jouw merk. Elke reactie voelt authentiek, elke aanbeveling is relevant.',
+        features: [
+          'Tone of voice matching',
+          'Productdata integratie',
+          'API koppelingen'
+        ],
+        next: 'Volgende: Livegang & optimalisatie'
+      },
+      step4: {
+        title: 'Livegang & optimalisatie',
+        subtitle: 'Na goedkeuring gaat jouw bot live.',
+        description: 'Vanaf dan verbeteren we continu op basis van echte gesprekken. Nieuwe producten? Nieuwe vragen? De bot leert automatisch bij.',
+        features: [
+          'Continue performance optimalisatie',
+          'Automatisch leren & verbeteren',
+          'Real-time analytics dashboard'
+        ],
+        next: 'Volgende: Data Insights'
+      },
+      step5: {
+        title: 'Data Insights op basis van chathistoriek',
+        subtitle: 'Waardevolle inzichten uit elke conversatie',
+        description: 'Uit duizenden chatgesprekken halen we patronen en trends die jouw business verder helpen. Van productfeedback tot klantgedrag - alles wordt inzichtelijk.',
+        features: [
+          'Klantgedrag & trends analyse',
+          'Productfeedback & verbeterpunten',
+          'Conversie optimalisatie kansen'
+        ]
+      },
+      cta: {
+        title: 'Klaar om te starten?',
+        description: 'Laten we samen kijken hoe Glimps jouw klantenservice kan transformeren.',
+        button: 'Plan een gratis screening'
+      }
     }
   },
   fr: {
@@ -835,6 +908,79 @@ export const translations = {
       learnMore: 'Plus d\'informations',
       getStarted: 'Commencer',
       contactUs: 'Nous contacter'
+    },
+    howWeWork: {
+      badge: '💡 COMMENT NOUS COLLABORONS',
+      title: 'Du chaos au contrôle.',
+      titleHighlight: 'En 5 étapes.',
+      description: 'Pas de chatbot standard. Pas de réponses génériques. Seulement une IA qui comprend votre business, aide vos clients et délivre de vrais résultats.',
+      processSteps: [
+        { label: 'Évaluation' },
+        { label: 'Analyse' },
+        { label: 'Implémentation' },
+        { label: 'Mise en ligne' },
+        { label: 'Insights Données' }
+      ],
+      step1: {
+        title: 'Évaluation de votre business',
+        subtitle: 'Nous travaillons uniquement avec des marques vraiment prêtes pour l\'IA.',
+        description: 'Nous évaluons votre boutique en ligne, vos données et vos systèmes pour déterminer où se trouve le plus grand potentiel.',
+        warning: 'Attention : Nous évaluons de manière critique si nous sommes compatibles. Il se peut que nous ne soyons pas compatibles — cela économise du temps et de la frustration pour les deux parties.',
+        features: [
+          'Analyse des données produits & structure',
+          'Identification des plus grandes opportunités',
+          'Évaluation de la maturité business'
+        ],
+        next: 'Suivant : Analyse des questions clients'
+      },
+      step2: {
+        title: 'Analyse des questions clients',
+        subtitle: 'Nous examinons 80% des questions les plus fréquentes',
+        description: 'C\'est la base pour une automatisation maximale. Nous analysons les vraies questions clients de votre boîte mail, helpdesk et chat pour entraîner l\'IA de manière optimale.',
+        features: [
+          '80% des questions les plus fréquentes',
+          'Formation IA sur votre comportement client',
+          'Mapping FAQ et politiques'
+        ],
+        next: 'Suivant : Implémentation & formation'
+      },
+      step3: {
+        title: 'Implémentation & formation',
+        subtitle: 'Glimps est alimenté avec vos données produits, politiques et ton de voix',
+        description: 'Pour qu\'il sonne comme votre marque. Chaque réponse est authentique, chaque recommandation est pertinente.',
+        features: [
+          'Adaptation du ton de voix',
+          'Intégration des données produits',
+          'Connexions API'
+        ],
+        next: 'Suivant : Mise en ligne & optimisation'
+      },
+      step4: {
+        title: 'Mise en ligne & optimisation',
+        subtitle: 'Après validation, votre bot est mis en ligne.',
+        description: 'Dès lors, nous améliorons continuellement sur la base de conversations réelles. Nouveaux produits ? Nouvelles questions ? Le bot apprend automatiquement.',
+        features: [
+          'Optimisation continue des performances',
+          'Apprentissage & amélioration automatiques',
+          'Tableau de bord analytics en temps réel'
+        ],
+        next: 'Suivant : Insights Données'
+      },
+      step5: {
+        title: 'Insights Données basés sur l\'historique des chats',
+        subtitle: 'Insights précieux de chaque conversation',
+        description: 'À partir de milliers de conversations, nous extrayons des modèles et tendances qui aident votre business. Du feedback produit au comportement client - tout devient visible.',
+        features: [
+          'Analyse du comportement client & tendances',
+          'Feedback produit & points d\'amélioration',
+          'Opportunités d\'optimisation de conversion'
+        ]
+      },
+      cta: {
+        title: 'Prêt à commencer ?',
+        description: 'Voyons ensemble comment Glimps peut transformer votre service client.',
+        button: 'Planifier une évaluation gratuite'
+      }
     }
   }
 };

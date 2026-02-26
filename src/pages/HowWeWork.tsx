@@ -5,21 +5,24 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Search, MessageSquare, Settings, Rocket, Database, BarChart3, FileText, Target, Zap, TrendingUp, CheckCircle2, ChevronRight, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HowWeWork = () => {
+  const { t } = useLanguage();
+
   const processSteps = [
-    { number: 1, label: "Screening", color: "bg-blue-500" },
-    { number: 2, label: "Analyse", color: "bg-red-400" },
-    { number: 3, label: "Implementatie", color: "bg-green-500" },
-    { number: 4, label: "Livegang", color: "bg-purple-500" },
-    { number: 5, label: "Data Insights", color: "bg-orange-500" }
+    { number: 1, label: t('howWeWork.processSteps.0.label'), color: "bg-blue-500" },
+    { number: 2, label: t('howWeWork.processSteps.1.label'), color: "bg-red-400" },
+    { number: 3, label: t('howWeWork.processSteps.2.label'), color: "bg-green-500" },
+    { number: 4, label: t('howWeWork.processSteps.3.label'), color: "bg-purple-500" },
+    { number: 5, label: t('howWeWork.processSteps.4.label'), color: "bg-orange-500" }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Hoe We Werken - Glimps AI | Van implementatie tot resultaat"
-        description="Ontdek ons bewezen 5-stappen proces: screening, analyse, implementatie, livegang en data insights. Van chaos naar controle met Glimps AI chatbot."
+      <SEO
+        title={t('howWeWork.title') + ' - Glimps AI'}
+        description={t('howWeWork.description')}
         path="/how-we-work"
       />
       <Navigation />
@@ -29,16 +32,16 @@ const HowWeWork = () => {
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-5xl text-center">
             <Badge variant="outline" className="mb-8 border-primary/30 bg-primary/10 px-6 py-2">
-              <span className="text-primary">💡 HOE WE SAMENWERKEN</span>
+              <span className="text-primary">{t('howWeWork.badge')}</span>
             </Badge>
-            
+
             <h1 className="mb-6 font-inter text-4xl font-normal leading-tight md:text-6xl lg:text-7xl">
-              Van chaos naar controle.<br />
-              <span className="text-primary">In 5 stappen.</span>
+              {t('howWeWork.title')}<br />
+              <span className="text-primary">{t('howWeWork.titleHighlight')}</span>
             </h1>
-            
+
             <p className="mx-auto mb-16 max-w-2xl text-lg text-muted-foreground md:text-xl">
-              Geen standaard chatbot. Geen generieke antwoorden. Alleen een AI die jouw business begrijpt, jouw klanten helpt en écht resultaat levert.
+              {t('howWeWork.description')}
             </p>
 
             {/* Process Steps Indicator */}
@@ -79,16 +82,16 @@ const HowWeWork = () => {
                 </div>
 
                 <h2 className="font-inter text-3xl font-normal md:text-5xl">
-                  Screening van jouw business
+                  {t('howWeWork.step1.title')}
                 </h2>
 
                 <p className="text-lg text-muted-foreground">
-                  We werken enkel samen met merken die écht klaar zijn voor AI.
+                  {t('howWeWork.step1.subtitle')}
                 </p>
 
                 <Card className="border-l-4 border-l-blue-500 bg-blue-500/5 p-6">
                   <p className="text-muted-foreground">
-                    We screenen je webshop, je data en je systemen om te bepalen waar de grootste winst ligt.
+                    {t('howWeWork.step1.description')}
                   </p>
                 </Card>
 
@@ -96,7 +99,7 @@ const HowWeWork = () => {
                   <div className="flex gap-3">
                     <AlertCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
                     <p className="text-sm">
-                      <span className="font-semibold">Let op:</span> We kijken kritisch of we een fit zijn. Kan zijn dat we geen match maken — dat bespaart beide partijen tijd en frustratie.
+                      {t('howWeWork.step1.warning')}
                     </p>
                   </div>
                 </Card>
@@ -106,25 +109,25 @@ const HowWeWork = () => {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10">
                       <Database className="h-5 w-5 text-blue-500" />
                     </div>
-                    <span className="text-base">Analyse van productdata & structuur</span>
+                    <span className="text-base">{t('howWeWork.step1.features.0')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10">
                       <BarChart3 className="h-5 w-5 text-blue-500" />
                     </div>
-                    <span className="text-base">Identificatie van grootste kansen</span>
+                    <span className="text-base">{t('howWeWork.step1.features.1')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10">
                       <Target className="h-5 w-5 text-blue-500" />
                     </div>
-                    <span className="text-base">Business readiness assessment</span>
+                    <span className="text-base">{t('howWeWork.step1.features.2')}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 pt-4 text-sm text-muted-foreground">
                   <ChevronRight className="h-4 w-4" />
-                  <span>Volgende: Analyse van klantvragen</span>
+                  <span>{t('howWeWork.step1.next')}</span>
                 </div>
               </div>
 
@@ -234,16 +237,16 @@ const HowWeWork = () => {
                 </div>
 
                 <h2 className="font-inter text-3xl font-normal md:text-5xl">
-                  Analyse van klantvragen
+                  {t('howWeWork.step2.title')}
                 </h2>
 
                 <p className="text-lg text-muted-foreground">
-                  We onderzoeken 80% van de meest gestelde vragen
+                  {t('howWeWork.step2.subtitle')}
                 </p>
 
                 <Card className="border-l-4 border-l-red-400 bg-red-400/5 p-6">
                   <p className="text-muted-foreground">
-                    Dat is de basis voor maximale automatisering. We analyseren echte klantvragen uit jouw inbox, helpdesk en chat om de AI optimaal te trainen.
+                    {t('howWeWork.step2.description')}
                   </p>
                 </Card>
 
@@ -252,25 +255,25 @@ const HowWeWork = () => {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-400/10">
                       <MessageSquare className="h-5 w-5 text-red-400" />
                     </div>
-                    <span className="text-base">80% meest voorkomende vragen</span>
+                    <span className="text-base">{t('howWeWork.step2.features.0')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-400/10">
                       <Target className="h-5 w-5 text-red-400" />
                     </div>
-                    <span className="text-base">AI-training op jouw klantgedrag</span>
+                    <span className="text-base">{t('howWeWork.step2.features.1')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-400/10">
                       <FileText className="h-5 w-5 text-red-400" />
                     </div>
-                    <span className="text-base">FAQ en beleid mapping</span>
+                    <span className="text-base">{t('howWeWork.step2.features.2')}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 pt-4 text-sm text-muted-foreground">
                   <ChevronRight className="h-4 w-4" />
-                  <span>Volgende: Implementatie & training</span>
+                  <span>{t('howWeWork.step2.next')}</span>
                 </div>
               </div>
 
@@ -345,16 +348,16 @@ const HowWeWork = () => {
                 </div>
 
                 <h2 className="font-inter text-3xl font-normal md:text-5xl">
-                  Implementatie & training
+                  {t('howWeWork.step3.title')}
                 </h2>
 
                 <p className="text-lg text-muted-foreground">
-                  Glimps wordt gevoed met jouw productdata, beleid en tone of voice
+                  {t('howWeWork.step3.subtitle')}
                 </p>
 
                 <Card className="border-l-4 border-l-green-500 bg-green-500/5 p-6">
                   <p className="text-muted-foreground">
-                    Zodat hij klinkt als jouw merk. Elke reactie voelt authentiek, elke aanbeveling is relevant.
+                    {t('howWeWork.step3.description')}
                   </p>
                 </Card>
 
@@ -363,25 +366,25 @@ const HowWeWork = () => {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10">
                       <Zap className="h-5 w-5 text-green-500" />
                     </div>
-                    <span className="text-base">Tone of voice matching</span>
+                    <span className="text-base">{t('howWeWork.step3.features.0')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10">
                       <Database className="h-5 w-5 text-green-500" />
                     </div>
-                    <span className="text-base">Productdata integratie</span>
+                    <span className="text-base">{t('howWeWork.step3.features.1')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10">
                       <Zap className="h-5 w-5 text-green-500" />
                     </div>
-                    <span className="text-base">API koppelingen</span>
+                    <span className="text-base">{t('howWeWork.step3.features.2')}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 pt-4 text-sm text-muted-foreground">
                   <ChevronRight className="h-4 w-4" />
-                  <span>Volgende: Livegang & optimalisatie</span>
+                  <span>{t('howWeWork.step3.next')}</span>
                 </div>
               </div>
 
@@ -478,16 +481,16 @@ const HowWeWork = () => {
                 </div>
 
                 <h2 className="font-inter text-3xl font-normal md:text-5xl">
-                  Livegang & optimalisatie
+                  {t('howWeWork.step4.title')}
                 </h2>
 
                 <p className="text-lg text-muted-foreground">
-                  Na goedkeuring gaat jouw bot live.
+                  {t('howWeWork.step4.subtitle')}
                 </p>
 
                 <Card className="border-l-4 border-l-purple-500 bg-purple-500/5 p-6">
                   <p className="text-muted-foreground">
-                    Vanaf dan verbeteren we continu op basis van echte gesprekken. Nieuwe producten? Nieuwe vragen? De bot leert automatisch bij.
+                    {t('howWeWork.step4.description')}
                   </p>
                 </Card>
 
@@ -496,25 +499,25 @@ const HowWeWork = () => {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
                       <TrendingUp className="h-5 w-5 text-purple-500" />
                     </div>
-                    <span className="text-base">Continue performance optimalisatie</span>
+                    <span className="text-base">{t('howWeWork.step4.features.0')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
                       <Target className="h-5 w-5 text-purple-500" />
                     </div>
-                    <span className="text-base">Automatisch leren & verbeteren</span>
+                    <span className="text-base">{t('howWeWork.step4.features.1')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
                       <BarChart3 className="h-5 w-5 text-purple-500" />
                     </div>
-                    <span className="text-base">Real-time analytics dashboard</span>
+                    <span className="text-base">{t('howWeWork.step4.features.2')}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 pt-4 text-sm text-muted-foreground">
                   <ChevronRight className="h-4 w-4" />
-                  <span>Volgende: Data Insights</span>
+                  <span>{t('howWeWork.step4.next')}</span>
                 </div>
               </div>
 
@@ -600,16 +603,16 @@ const HowWeWork = () => {
                 </div>
 
                 <h2 className="font-inter text-3xl font-normal md:text-5xl">
-                  Data Insights op basis van chathistoriek
+                  {t('howWeWork.step5.title')}
                 </h2>
 
                 <p className="text-lg text-muted-foreground">
-                  Waardevolle inzichten uit elke conversatie
+                  {t('howWeWork.step5.subtitle')}
                 </p>
 
                 <Card className="border-l-4 border-l-orange-500 bg-orange-500/5 p-6">
                   <p className="text-muted-foreground">
-                    Uit duizenden chatgesprekken halen we patronen en trends die jouw business verder helpen. Van productfeedback tot klantgedrag - alles wordt inzichtelijk.
+                    {t('howWeWork.step5.description')}
                   </p>
                 </Card>
 
@@ -618,19 +621,19 @@ const HowWeWork = () => {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
                       <TrendingUp className="h-5 w-5 text-orange-500" />
                     </div>
-                    <span className="text-base">Klantgedrag & trends analyse</span>
+                    <span className="text-base">{t('howWeWork.step5.features.0')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
                       <Target className="h-5 w-5 text-orange-500" />
                     </div>
-                    <span className="text-base">Productfeedback & verbeterpunten</span>
+                    <span className="text-base">{t('howWeWork.step5.features.1')}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
                       <BarChart3 className="h-5 w-5 text-orange-500" />
                     </div>
-                    <span className="text-base">Conversie optimalisatie kansen</span>
+                    <span className="text-base">{t('howWeWork.step5.features.2')}</span>
                   </div>
                 </div>
               </div>
@@ -737,13 +740,13 @@ const HowWeWork = () => {
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 font-inter text-3xl font-normal md:text-5xl">
-              Klaar om te starten?
+              {t('howWeWork.cta.title')}
             </h2>
             <p className="mb-8 text-lg text-muted-foreground">
-              Laten we samen kijken hoe Glimps jouw klantenservice kan transformeren.
+              {t('howWeWork.cta.description')}
             </p>
             <Button size="lg" className="text-lg" asChild>
-              <a href="/contact">Plan een gratis screening</a>
+              <a href="/contact">{t('howWeWork.cta.button')}</a>
             </Button>
           </div>
         </div>
