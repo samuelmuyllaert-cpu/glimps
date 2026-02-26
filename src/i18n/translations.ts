@@ -606,6 +606,24 @@ export const translations = {
           description: 'Betere en snellere service leidt tot meer aankopen en loyaliteit, wat resulteert in meer omzet.'
         }
       }
+    },
+    contact: {
+      badge: 'Neem Contact Op',
+      title: 'Laten we Kennismaken',
+      subtitle: 'Heb je vragen over Glimps AI? Wil je weten of we de juiste oplossing zijn voor jouw business? Plan een gratis gesprek in of neem direct contact op.',
+      email: 'Email',
+      location: 'Locatie',
+      locationValue: 'Brugge, België',
+      planMeeting: {
+        title: 'Plan een Gratis Gesprek',
+        description: 'Kies een moment dat voor jou werkt. We nemen alle tijd om je vragen te beantwoorden en te kijken hoe Glimps AI jouw business kan helpen groeien.',
+        or: 'Of stuur ons direct een email op'
+      },
+      faq: {
+        title: 'Veelgestelde Vragen',
+        description: 'Heb je snel een antwoord nodig? Bekijk onze FAQ pagina voor antwoorden op de meest gestelde vragen.',
+        button: 'Bekijk FAQ →'
+      }
     }
   },
   fr: {
@@ -1214,6 +1232,24 @@ export const translations = {
           title: 'Fidélité Client',
           description: 'Un meilleur et plus rapide service conduit à plus d\'achats et de fidélité, ce qui se traduit par plus de chiffre d\'affaires.'
         }
+      }
+    },
+    contact: {
+      badge: 'Contactez-nous',
+      title: 'Faisons Connaissance',
+      subtitle: 'Vous avez des questions sur Glimps AI ? Vous voulez savoir si nous sommes la bonne solution pour votre business ? Planifiez un appel gratuit ou contactez-nous directement.',
+      email: 'Email',
+      location: 'Localisation',
+      locationValue: 'Bruges, Belgique',
+      planMeeting: {
+        title: 'Planifiez un Appel Gratuit',
+        description: 'Choisissez un moment qui vous convient. Nous prenons tout le temps nécessaire pour répondre à vos questions et voir comment Glimps AI peut aider votre business à grandir.',
+        or: 'Ou envoyez-nous directement un email à'
+      },
+      faq: {
+        title: 'Questions Fréquemment Posées',
+        description: 'Besoin d\'une réponse rapide ? Consultez notre page FAQ pour des réponses aux questions les plus fréquentes.',
+        button: 'Voir la FAQ →'
       }
     }
   }

@@ -5,8 +5,10 @@ import StructuredData, { baseOrganization } from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   useEffect(() => {
     // Load Calendly widget script
     const script = document.createElement('script');
@@ -74,14 +76,13 @@ const Contact = () => {
       <section className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-6 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            Neem Contact Op
+            {t('contact.badge')}
           </div>
           <h1 className="mb-6 font-inter text-4xl font-bold leading-tight md:text-6xl">
-            Laten we Kennismaken
+            {t('contact.title')}
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            Heb je vragen over Glimps AI? Wil je weten of we de juiste oplossing zijn voor jouw business? 
-            Plan een gratis gesprek in of neem direct contact op.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -94,7 +95,7 @@ const Contact = () => {
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Mail className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-2 font-bold">Email</h3>
+              <h3 className="mb-2 font-bold">{t('contact.email')}</h3>
               <a href="mailto:info@glimps.be" className="text-sm text-muted-foreground hover:text-primary">
                 info@glimps.be
               </a>
@@ -104,9 +105,9 @@ const Contact = () => {
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <MapPin className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-2 font-bold">Locatie</h3>
+              <h3 className="mb-2 font-bold">{t('contact.location')}</h3>
               <p className="text-sm text-muted-foreground">
-                Brugge, België
+                {t('contact.locationValue')}
               </p>
             </Card>
           </div>
@@ -117,10 +118,9 @@ const Contact = () => {
       <section className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-6 text-4xl font-bold">Plan een Gratis Gesprek</h2>
+            <h2 className="mb-6 text-4xl font-bold">{t('contact.planMeeting.title')}</h2>
             <p className="text-lg text-muted-foreground">
-              Kies een moment dat voor jou werkt. We nemen alle tijd om je vragen te beantwoorden 
-              en te kijken hoe Glimps AI jouw business kan helpen groeien.
+              {t('contact.planMeeting.description')}
             </p>
           </div>
 
@@ -135,7 +135,7 @@ const Contact = () => {
 
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              Of stuur ons direct een email op{" "}
+              {t('contact.planMeeting.or')}{" "}
               <a href="mailto:info@glimps.be" className="font-medium text-primary hover:underline">
                 info@glimps.be
               </a>
@@ -148,15 +148,15 @@ const Contact = () => {
       <section className="border-t bg-muted/30 py-16">
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-4xl text-center">
-            <h3 className="mb-6 text-2xl font-bold">Veelgestelde Vragen</h3>
+            <h3 className="mb-6 text-2xl font-bold">{t('contact.faq.title')}</h3>
             <p className="mb-8 text-muted-foreground">
-              Heb je snel een antwoord nodig? Bekijk onze FAQ pagina voor antwoorden op de meest gestelde vragen.
+              {t('contact.faq.description')}
             </p>
-            <a 
-              href="/faq" 
+            <a
+              href="/faq"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white transition-all hover:bg-primary/90"
             >
-              Bekijk FAQ →
+              {t('contact.faq.button')}
             </a>
           </div>
         </div>
