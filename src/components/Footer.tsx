@@ -182,36 +182,56 @@ const Footer = () => {
 
           {/* Industries Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Industrieën</h4>
+            <h4 className="font-semibold">
+              {language === 'fr' ? 'Secteurs' : 'Industrieën'}
+            </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="/industries/fashion-design" className="text-muted-foreground hover:text-primary">
-                  Fashion & Design
+                <a
+                  href={language === 'fr' ? '/fr/industries/mode-design' : '/industries/fashion-design'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Mode & Design' : 'Fashion & Design'}
                 </a>
               </li>
               <li>
-                <a href="/industries/beauty-cosmetica" className="text-muted-foreground hover:text-primary">
-                  Beauty & Cosmetica
+                <a
+                  href={language === 'fr' ? '/fr/industries/beaute-cosmetique' : '/industries/beauty-cosmetica'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Beauté & Cosmétiques' : 'Beauty & Cosmetica'}
                 </a>
               </li>
               <li>
-                <a href="/industries/electronics" className="text-muted-foreground hover:text-primary">
-                  Electronics & Technology
+                <a
+                  href={language === 'fr' ? '/fr/industries/electronique' : '/industries/electronics'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Électronique & Technologie' : 'Electronics & Technology'}
                 </a>
               </li>
               <li>
-                <a href="/industries/meubels-interieur" className="text-muted-foreground hover:text-primary">
-                  Meubels & Interieur
+                <a
+                  href={language === 'fr' ? '/fr/industries/meubles-interieur' : '/industries/meubels-interieur'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Meubles & Intérieur' : 'Meubels & Interieur'}
                 </a>
               </li>
               <li>
-                <a href="/industries/sportkleding-fitness" className="text-muted-foreground hover:text-primary">
-                  Sportkleding & Fitness
+                <a
+                  href={language === 'fr' ? '/fr/industries/vetements-sport-fitness' : '/industries/sportkleding-fitness'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Vêtements de Sport & Fitness' : 'Sportkleding & Fitness'}
                 </a>
               </li>
               <li>
-                <a href="/industries/tuin-buitenleven" className="text-muted-foreground hover:text-primary">
-                  Tuin en Buitenleven
+                <a
+                  href={language === 'fr' ? '/fr/industries/jardin-exterieur' : '/industries/tuin-buitenleven'}
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {language === 'fr' ? 'Jardin et Vie en Plein Air' : 'Tuin en Buitenleven'}
                 </a>
               </li>
             </ul>
