@@ -549,6 +549,63 @@ export const translations = {
         description: 'Laten we samen kijken hoe Glimps jouw klantenservice kan transformeren.',
         button: 'Plan een gratis screening'
       }
+    },
+    about: {
+      tagline: 'Leer ons kennen',
+      title: 'Wij boosten je business met onze AI-chatbot.',
+      subtitle: 'Glimps is opgericht door twee ondernemers met een sterke marketingachtergrond, die AI-chatbots zien als dé marketingtool voor meer omzet en betere klantenservice.',
+      cofounder: 'CO-FOUNDER',
+      samuel: {
+        description: 'Gepassioneerd door AI-technologieën en workflows om herhaalde taken om te zetten in automatiseringen.'
+      },
+      tom: {
+        description: 'Digital Business Professional met +15 ervaring in digital sales en marketing.'
+      },
+      linkedinProfile: 'LinkedIn profiel',
+      developersNetwork: {
+        title: 'Ons Ontwikkelaarsnetwerk',
+        description: 'Achter Glimps staat een sterk netwerk van getalenteerde developers die onze ideeën helpen vertalen naar software en bijdragen aan het succes van ons platform.',
+        teamWork: 'Samen vormen we een team dat technologie en marketing perfect combineert.'
+      },
+      vision: {
+        title: 'Onze Visie',
+        paragraph1: 'Tom Muyllaert & Samuel Muyllaert hebben beiden een sterke achtergrond in marketing en zien een AI-chatbot door een marketingbril.',
+        paragraph2: 'Onze visie kan je altijd terugleiden naar de uitkomst: meer omzet. Het is eerst en vooral de bedoeling om de basis benodigdheden van een chatbot te kunnen voorzien omtrent klantenservice: bestellingen opvragen, FAQ beantwoorden, service bieden doorheen de gehele klantreis.',
+        paragraph3: 'Maar met beiden een achtergrond in marketing zien we een AI-chatbot meer als een marketingtool met als doel meer omzet, maar in eerste instantie customer service automatiseren.'
+      },
+      approach: {
+        title: 'Onze Aanpak',
+        marketing: {
+          title: 'Marketing-gedreven',
+          description: 'Iedereen kan een bot maken door pagina\'s op te laden en een bot hierop te laten antwoorden, maar onze visie is om door middel van bepaalde marketingstrategieën ervoor te zorgen dat de bot een marketingtool is.',
+          items: [
+            'Productvoorstelling & showcasing',
+            'Conversational commerce',
+            'Upsell & cross-selling strategieën',
+            'Marketing insights & data-analyse'
+          ]
+        },
+        collaboration: {
+          title: 'Slimme Samenwerking',
+          paragraph1: 'We doen beroep op IT-leveranciers zodat wij ons kunnen focussen op de uitwerking zelf. Dit stelt ons in staat om echt te excelleren in wat ons onderscheidt: marketingstrategieën implementeren in AI-chatbots.',
+          paragraph2: 'We maken gebruik van geavanceerde insights voor marketing, zoals het analyseren van chathistoriek om te ontdekken welke producten vaak samen worden gevraagd, en dit automatisch toe te voegen aan de suggesties.'
+        }
+      },
+      principles: {
+        title: 'Onze Kernprincipes',
+        automation: {
+          title: 'Automatisering',
+          description: 'Customer service automatiseren zodat bedrijven zich kunnen focussen op groei en strategie.'
+        },
+        revenue: {
+          title: 'Meer Omzet',
+          description: 'Door slimme marketing automations en strategieën genereren we meetbare groei voor e-commerce bedrijven.'
+        },
+        loyalty: {
+          title: 'Klantloyaliteit',
+          description: 'Betere en snellere service leidt tot meer aankopen en loyaliteit, wat resulteert in meer omzet.'
+        }
+      }
     }
   },
   fr: {
@@ -1100,6 +1157,63 @@ export const translations = {
         title: 'Prêt à commencer ?',
         description: 'Voyons ensemble comment Glimps peut transformer votre service client.',
         button: 'Planifier une évaluation gratuite'
+      }
+    },
+    about: {
+      tagline: 'Faites notre connaissance',
+      title: 'Nous boostons votre business avec notre chatbot IA.',
+      subtitle: 'Glimps a été fondé par deux entrepreneurs avec une solide expérience en marketing, qui voient les chatbots IA comme l\'outil marketing pour plus de chiffre d\'affaires et un meilleur service client.',
+      cofounder: 'CO-FONDATEUR',
+      samuel: {
+        description: 'Passionné par les technologies IA et les workflows pour transformer les tâches répétitives en automatisations.'
+      },
+      tom: {
+        description: 'Professionnel du Business Digital avec +15 ans d\'expérience en ventes et marketing digital.'
+      },
+      linkedinProfile: 'Profil LinkedIn',
+      developersNetwork: {
+        title: 'Notre Réseau de Développeurs',
+        description: 'Derrière Glimps se trouve un solide réseau de développeurs talentueux qui nous aident à traduire nos idées en logiciels et contribuent au succès de notre plateforme.',
+        teamWork: 'Ensemble, nous formons une équipe qui combine parfaitement technologie et marketing.'
+      },
+      vision: {
+        title: 'Notre Vision',
+        paragraph1: 'Tom Muyllaert & Samuel Muyllaert ont tous deux une solide expérience en marketing et voient un chatbot IA à travers un prisme marketing.',
+        paragraph2: 'Notre vision peut toujours être ramenée au résultat : plus de chiffre d\'affaires. Il s\'agit avant tout de pouvoir répondre aux besoins de base d\'un chatbot en matière de service client : consulter les commandes, répondre aux FAQ, fournir un service tout au long du parcours client.',
+        paragraph3: 'Mais avec tous deux une expérience en marketing, nous voyons un chatbot IA davantage comme un outil marketing visant à générer plus de chiffre d\'affaires, mais en automatisant d\'abord le service client.'
+      },
+      approach: {
+        title: 'Notre Approche',
+        marketing: {
+          title: 'Axé Marketing',
+          description: 'N\'importe qui peut créer un bot en chargeant des pages et en laissant un bot y répondre, mais notre vision est d\'utiliser certaines stratégies marketing pour faire du bot un outil marketing.',
+          items: [
+            'Présentation & mise en valeur des produits',
+            'Commerce conversationnel',
+            'Stratégies d\'upsell & cross-selling',
+            'Insights marketing & analyse de données'
+          ]
+        },
+        collaboration: {
+          title: 'Collaboration Intelligente',
+          paragraph1: 'Nous faisons appel à des fournisseurs IT pour que nous puissions nous concentrer sur l\'élaboration elle-même. Cela nous permet d\'exceller vraiment dans ce qui nous distingue : implémenter des stratégies marketing dans les chatbots IA.',
+          paragraph2: 'Nous utilisons des insights avancés pour le marketing, comme l\'analyse de l\'historique des chats pour découvrir quels produits sont souvent demandés ensemble, et les ajouter automatiquement aux suggestions.'
+        }
+      },
+      principles: {
+        title: 'Nos Principes Fondamentaux',
+        automation: {
+          title: 'Automatisation',
+          description: 'Automatiser le service client pour que les entreprises puissent se concentrer sur la croissance et la stratégie.'
+        },
+        revenue: {
+          title: 'Plus de Chiffre d\'Affaires',
+          description: 'Grâce à des automatisations marketing intelligentes et des stratégies, nous générons une croissance mesurable pour les entreprises e-commerce.'
+        },
+        loyalty: {
+          title: 'Fidélité Client',
+          description: 'Un meilleur et plus rapide service conduit à plus d\'achats et de fidélité, ce qui se traduit par plus de chiffre d\'affaires.'
+        }
       }
     }
   }
