@@ -16,29 +16,38 @@ import {
   BookOpen,
   Rocket,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Partners = () => {
+  const { language, t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Partner Programma - Glimps AI | Word partner"
-        description="Word partner van Glimps AI en help e-commerce bedrijven groeien met de beste AI chatbot oplossing. Dedicated support en marketing materialen."
-        path="/partners"
+      <SEO
+        title={language === 'fr'
+          ? "Programme Partenaires - Glimps AI | Devenez partenaire"
+          : "Partner Programma - Glimps AI | Word partner"}
+        description={language === 'fr'
+          ? "Devenez partenaire de Glimps AI et aidez les entreprises e-commerce à grandir avec la meilleure solution de chatbot IA. Support dédié et matériel marketing."
+          : "Word partner van Glimps AI en help e-commerce bedrijven groeien met de beste AI chatbot oplossing. Dedicated support en marketing materialen."}
+        path={language === 'fr' ? "/fr/partenaires" : "/partners"}
       />
       <StructuredData type="organization" />
-      <StructuredData 
-        type="service" 
+      <StructuredData
+        type="service"
         data={{
-          name: "Glimps Partner Programma",
-          description: "Word partner van Glimps AI met dedicated support en marketing materialen"
-        }} 
+          name: language === 'fr' ? "Programme Partenaires Glimps" : "Glimps Partner Programma",
+          description: language === 'fr'
+            ? "Devenez partenaire de Glimps AI avec support dédié et matériel marketing"
+            : "Word partner van Glimps AI met dedicated support en marketing materialen"
+        }}
       />
-      <StructuredData 
-        type="breadcrumb" 
+      <StructuredData
+        type="breadcrumb"
         data={[
-          { name: "Home", url: "/" },
-          { name: "Partners", url: "/partners" }
-        ]} 
+          { name: "Home", url: language === 'fr' ? "/fr" : "/" },
+          { name: language === 'fr' ? "Partenaires" : "Partners", url: language === 'fr' ? "/fr/partenaires" : "/partners" }
+        ]}
       />
       <Navigation />
 
@@ -50,10 +59,10 @@ const Partners = () => {
               <Handshake className="h-12 w-12 text-primary" />
             </div>
             <h1 className="mb-6 text-5xl font-bold md:text-6xl">
-              Word Glimps Partner
+              {t('partners.hero.title')}
             </h1>
             <p className="mb-8 text-xl text-muted-foreground">
-              Help jouw klanten groeien met de beste AI chatbot oplossing voor e-commerce
+              {t('partners.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -65,15 +74,15 @@ const Partners = () => {
           <div className="grid gap-8 md:grid-cols-3">
             <div className="text-center">
               <div className="mb-2 text-4xl font-bold text-primary">500+</div>
-              <p className="text-muted-foreground">Actieve klanten</p>
+              <p className="text-muted-foreground">{t('partners.stats.customers')}</p>
             </div>
             <div className="text-center">
               <div className="mb-2 text-4xl font-bold text-primary">24/7</div>
-              <p className="text-muted-foreground">Partner support</p>
+              <p className="text-muted-foreground">{t('partners.stats.support')}</p>
             </div>
             <div className="text-center">
               <div className="mb-2 text-4xl font-bold text-primary">95%</div>
-              <p className="text-muted-foreground">Klanttevredenheid</p>
+              <p className="text-muted-foreground">{t('partners.stats.satisfaction')}</p>
             </div>
           </div>
         </div>
@@ -83,9 +92,9 @@ const Partners = () => {
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-bold">Waarom Glimps Partner worden?</h2>
+            <h2 className="mb-4 text-4xl font-bold">{t('partners.benefits.title')}</h2>
             <p className="text-xl text-muted-foreground">
-              Alles wat je nodig hebt om succesvol te zijn
+              {t('partners.benefits.subtitle')}
             </p>
           </div>
 
@@ -94,22 +103,22 @@ const Partners = () => {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Euro className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold">Aantrekkelijke Voorwaarden</h3>
+              <h3 className="mb-3 text-2xl font-bold">{t('partners.benefits.commission.title')}</h3>
               <p className="mb-4 text-muted-foreground">
-                Als partner ontvang je aantrekkelijke voorwaarden voor elke klant die je aanbrengt. Neem contact op voor meer details.
+                {t('partners.benefits.commission.description')}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Transparante afspraken</span>
+                  <span className="text-sm">{t('partners.benefits.commission.transparent')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Langetermijn samenwerking</span>
+                  <span className="text-sm">{t('partners.benefits.commission.longterm')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Flexibele afspraken mogelijk</span>
+                  <span className="text-sm">{t('partners.benefits.commission.flexible')}</span>
                 </li>
               </ul>
             </Card>
@@ -118,22 +127,22 @@ const Partners = () => {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Headphones className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold">Dedicated Support</h3>
+              <h3 className="mb-3 text-2xl font-bold">{t('partners.benefits.support.title')}</h3>
               <p className="mb-4 text-muted-foreground">
-                Een toegewijd partner manager die jou en je klanten ondersteunt bij elke stap.
+                {t('partners.benefits.support.description')}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Persoonlijke partner manager</span>
+                  <span className="text-sm">{t('partners.benefits.support.manager')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">24/7 technische support</span>
+                  <span className="text-sm">{t('partners.benefits.support.technical')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Partner slack community</span>
+                  <span className="text-sm">{t('partners.benefits.support.community')}</span>
                 </li>
               </ul>
             </Card>
@@ -142,18 +151,18 @@ const Partners = () => {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <BookOpen className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold">Marketing Materialen</h3>
+              <h3 className="mb-3 text-2xl font-bold">{t('partners.benefits.materials.title')}</h3>
               <p className="mb-4 text-muted-foreground">
-                Professionele sales en marketing tools om makkelijk klanten te winnen.
+                {t('partners.benefits.materials.description')}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Sales decks en case studies</span>
+                  <span className="text-sm">{t('partners.benefits.materials.decks')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Co-marketing campagnes</span>
+                  <span className="text-sm">{t('partners.benefits.materials.comarketing')}</span>
                 </li>
               </ul>
             </Card>
@@ -162,22 +171,22 @@ const Partners = () => {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Zap className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold">Snelle Onboarding</h3>
+              <h3 className="mb-3 text-2xl font-bold">{t('partners.benefits.onboarding.title')}</h3>
               <p className="mb-4 text-muted-foreground">
-                Begin binnen een week met verkopen dankzij ons gestroomlijnde proces.
+                {t('partners.benefits.onboarding.description')}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Partner training programma</span>
+                  <span className="text-sm">{t('partners.benefits.onboarding.training')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Certificering mogelijkheid</span>
+                  <span className="text-sm">{t('partners.benefits.onboarding.certification')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Partner dashboard toegang</span>
+                  <span className="text-sm">{t('partners.benefits.onboarding.dashboard')}</span>
                 </li>
               </ul>
             </Card>
@@ -186,22 +195,22 @@ const Partners = () => {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Target className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold">Lead Sharing</h3>
+              <h3 className="mb-3 text-2xl font-bold">{t('partners.benefits.leads.title')}</h3>
               <p className="mb-4 text-muted-foreground">
-                Krijg warme leads van ons die matchen met jouw doelgroep en expertise.
+                {t('partners.benefits.leads.description')}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Pre-qualified leads</span>
+                  <span className="text-sm">{t('partners.benefits.leads.qualified')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Geografische targeting</span>
+                  <span className="text-sm">{t('partners.benefits.leads.targeting')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Industry matching</span>
+                  <span className="text-sm">{t('partners.benefits.leads.matching')}</span>
                 </li>
               </ul>
             </Card>
@@ -210,22 +219,22 @@ const Partners = () => {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
                 <Rocket className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold">Groei Samen</h3>
+              <h3 className="mb-3 text-2xl font-bold">{t('partners.benefits.grow.title')}</h3>
               <p className="mb-4 text-muted-foreground">
-                Naarmate je meer klanten aanbrengt, stijgen je voordelen en commissies.
+                {t('partners.benefits.grow.description')}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Tier-based commissies</span>
+                  <span className="text-sm">{t('partners.benefits.grow.tiered')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Kwartaal performance bonus</span>
+                  <span className="text-sm">{t('partners.benefits.grow.bonus')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                  <span className="text-sm">Exclusieve partner events</span>
+                  <span className="text-sm">{t('partners.benefits.grow.events')}</span>
                 </li>
               </ul>
             </Card>
@@ -237,9 +246,9 @@ const Partners = () => {
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-bold">Hoe werkt het?</h2>
+            <h2 className="mb-4 text-4xl font-bold">{t('partners.howItWorks.title')}</h2>
             <p className="text-xl text-muted-foreground">
-              In 4 stappen partner worden
+              {t('partners.howItWorks.subtitle')}
             </p>
           </div>
 
@@ -248,9 +257,9 @@ const Partners = () => {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white mx-auto">
                 1
               </div>
-              <h3 className="mb-2 text-xl font-bold">Aanmelden</h3>
+              <h3 className="mb-2 text-xl font-bold">{t('partners.howItWorks.step1.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Vul het formulier in en vertel ons over je business
+                {t('partners.howItWorks.step1.description')}
               </p>
             </div>
 
@@ -258,9 +267,9 @@ const Partners = () => {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white mx-auto">
                 2
               </div>
-              <h3 className="mb-2 text-xl font-bold">Onboarding</h3>
+              <h3 className="mb-2 text-xl font-bold">{t('partners.howItWorks.step2.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Krijg toegang tot training, materialen en je dashboard
+                {t('partners.howItWorks.step2.description')}
               </p>
             </div>
 
@@ -268,9 +277,9 @@ const Partners = () => {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white mx-auto">
                 3
               </div>
-              <h3 className="mb-2 text-xl font-bold">Verkopen</h3>
+              <h3 className="mb-2 text-xl font-bold">{t('partners.howItWorks.step3.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Bied Glimps aan je klanten aan met onze support
+                {t('partners.howItWorks.step3.description')}
               </p>
             </div>
 
@@ -278,9 +287,9 @@ const Partners = () => {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white mx-auto">
                 4
               </div>
-              <h3 className="mb-2 text-xl font-bold">Samenwerken</h3>
+              <h3 className="mb-2 text-xl font-bold">{t('partners.howItWorks.step4.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Bouw samen een succesvolle samenwerking op
+                {t('partners.howItWorks.step4.description')}
               </p>
             </div>
           </div>
@@ -292,16 +301,16 @@ const Partners = () => {
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-12">
-              <h2 className="mb-4 text-4xl font-bold">Interesse om Partner te Worden?</h2>
+              <h2 className="mb-4 text-4xl font-bold">{t('partners.cta.title')}</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Neem contact op voor meer informatie over ons partnerprogramma en de mogelijkheden voor jouw organisatie.
+                {t('partners.cta.subtitle')}
               </p>
               <div className="rounded-lg border border-border bg-card p-8">
                 <p className="text-lg mb-4">
-                  Stuur een email naar <a href="mailto:info@glimps.be" className="font-semibold text-primary hover:underline">info@glimps.be</a>
+                  {t('partners.cta.email')} <a href="mailto:info@glimps.be" className="font-semibold text-primary hover:underline">info@glimps.be</a>
                 </p>
                 <p className="text-muted-foreground">
-                  We nemen binnen 24 uur contact met je op voor een vrijblijvend gesprek over de mogelijkheden.
+                  {t('partners.cta.response')}
                 </p>
               </div>
             </div>

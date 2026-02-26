@@ -1287,6 +1287,196 @@ export const translations = {
         description: 'Découvrez exactement comment un chatbot IA fonctionne pour votre boutique en ligne. Nous vous montrons en direct ce qui est possible et calculons ensemble votre ROI exact.',
         button: 'Planifier une Démo Gratuite'
       }
+    },
+    ecomAgents: {
+      title: 'Agents E-commerce',
+      subtitle: 'Bientôt disponible pour le grand public',
+      description: 'Cette fonctionnalité est actuellement accessible uniquement aux clients existants.',
+      contact: 'Contactez',
+      forInfo: 'pour plus d\'informations sur l\'accès anticipé.'
+    },
+    partners: {
+      hero: {
+        badge: 'Programme Partenaires',
+        title: 'Devenez Partenaire Glimps',
+        subtitle: 'Aidez vos clients à grandir avec la meilleure solution de chatbot IA pour le e-commerce'
+      },
+      stats: {
+        customers: 'Clients actifs',
+        support: 'Support partenaire',
+        satisfaction: 'Satisfaction client'
+      },
+      benefits: {
+        title: 'Pourquoi devenir Partenaire Glimps ?',
+        subtitle: 'Tout ce dont vous avez besoin pour réussir',
+        commission: {
+          title: 'Conditions Attractives',
+          description: 'En tant que partenaire, vous recevez des conditions attractives pour chaque client que vous apportez. Contactez-nous pour plus de détails.',
+          transparent: 'Accords transparents',
+          longterm: 'Collaboration à long terme',
+          flexible: 'Accords flexibles possibles'
+        },
+        support: {
+          title: 'Support Dédié',
+          description: 'Un gestionnaire de partenaires dédié qui vous soutient, vous et vos clients, à chaque étape.',
+          manager: 'Gestionnaire de partenaires personnel',
+          technical: 'Support technique 24/7',
+          community: 'Communauté Slack des partenaires'
+        },
+        materials: {
+          title: 'Matériel Marketing',
+          description: 'Outils de vente et marketing professionnels pour gagner facilement des clients.',
+          decks: 'Présentations de vente et études de cas',
+          comarketing: 'Campagnes de co-marketing'
+        },
+        onboarding: {
+          title: 'Intégration Rapide',
+          description: 'Commencez à vendre en une semaine grâce à notre processus rationalisé.',
+          training: 'Programme de formation partenaire',
+          certification: 'Possibilité de certification',
+          dashboard: 'Accès au tableau de bord partenaire'
+        },
+        leads: {
+          title: 'Partage de Prospects',
+          description: 'Recevez des prospects qualifiés qui correspondent à votre public cible et à votre expertise.',
+          qualified: 'Prospects pré-qualifiés',
+          targeting: 'Ciblage géographique',
+          matching: 'Correspondance sectorielle'
+        },
+        grow: {
+          title: 'Croissance Ensemble',
+          description: 'À mesure que vous apportez plus de clients, vos avantages et commissions augmentent.',
+          tiered: 'Commissions par paliers',
+          bonus: 'Bonus de performance trimestriel',
+          events: 'Événements partenaires exclusifs'
+        }
+      },
+      howItWorks: {
+        title: 'Comment ça marche ?',
+        subtitle: 'Devenir partenaire en 4 étapes',
+        step1: { title: 'Inscription', description: 'Remplissez le formulaire et parlez-nous de votre entreprise' },
+        step2: { title: 'Intégration', description: 'Accédez à la formation, au matériel et à votre tableau de bord' },
+        step3: { title: 'Vendre', description: 'Proposez Glimps à vos clients avec notre support' },
+        step4: { title: 'Collaborer', description: 'Construisez ensemble une collaboration réussie' }
+      },
+      cta: {
+        title: 'Intéressé à Devenir Partenaire ?',
+        subtitle: 'Contactez-nous pour plus d\'informations sur notre programme de partenariat et les possibilités pour votre organisation.',
+        email: 'Envoyez un email à',
+        response: 'Nous vous contacterons dans les 24 heures pour un entretien sans engagement sur les possibilités.'
+      }
+    },
+    career: {
+      badge: 'Nous recrutons',
+      hero: {
+        title: 'Rejoignez notre équipe',
+        subtitle: 'Chez Glimps, nous travaillons sur l\'avenir du service client e-commerce. Rejoignez notre équipe ambitieuse et aidez les boutiques en ligne à grandir grâce à la technologie IA.'
+      },
+      why: {
+        title: 'Pourquoi Glimps ?',
+        tech: { title: 'Technologie de Pointe', description: 'Travaillez avec les dernières technologies IA et d\'automatisation' },
+        team: { title: 'Petite Équipe', description: 'Impact direct sur le produit et la direction de l\'entreprise' },
+        growth: { title: 'Opportunités de Croissance', description: 'Apprenez et grandissez avec une startup en croissance rapide' },
+        flexibility: { title: 'Flexibilité', description: 'Travail à distance et horaires flexibles possibles' }
+      },
+      positions: {
+        title: 'Postes Ouverts',
+        developer: {
+          title: 'Développeur Polyvalent',
+          subtitle: 'Avec connaissance de l\'IA et des Automatisations',
+          fulltime: 'Temps plein',
+          remote: 'Télétravail / Hybride (Belgique)',
+          hours: '40 heures par semaine',
+          experience: '2+ ans d\'expérience',
+          about: 'À propos du poste',
+          description1: 'Nous recherchons un développeur polyvalent passionné pour nous aider à développer notre chatbot IA. Vous travaillerez sur le frontend et le backend, implémenterez des fonctionnalités IA et construirez des automatisations intelligentes qui aident nos clients à générer plus de revenus.',
+          description2: 'En tant que l\'un des premiers développeurs chez Glimps, vous aurez un impact direct sur le produit et la direction technique de l\'entreprise. Vous travaillerez en étroite collaboration avec les fondateurs et aurez beaucoup de liberté pour mettre en œuvre vos idées.',
+          responsibilities: 'Vos Tâches',
+          requirements: 'Ce que vous apportez',
+          required: 'Requis',
+          niceToHave: 'Un plus',
+          offer: 'Ce que nous offrons',
+          apply: { title: 'Ça ressemble à votre emploi de rêve ?', description: 'Envoyez-nous votre CV et lettre de motivation. Nous avons hâte de vous entendre !', button: 'Postuler Maintenant' }
+        }
+      },
+      process: {
+        title: 'Le Processus de Candidature',
+        step1: { title: 'Candidature', description: 'Envoyez votre CV et lettre de motivation' },
+        step2: { title: 'Entretien', description: 'Appel vidéo de 30 min avec les fondateurs' },
+        step3: { title: 'Défi Technique', description: 'Exercice pratique (rémunéré)' },
+        step4: { title: 'Offre', description: 'Bienvenue dans l\'équipe ! 🎉' }
+      }
+    },
+    consultancy: {
+      badge: 'Conseil & Expertise',
+      hero: {
+        title: 'Votre Partenaire en Automatisation E-commerce Intelligente',
+        subtitle: 'Chez Glimps, nous sommes plus qu\'une simple plateforme de chatbot IA. Avec des années d\'expérience en e-commerce et service client, nous vous aidons à choisir le meilleur système qui correspond parfaitement à votre entreprise.'
+      },
+      expertise: {
+        title: 'Pourquoi Glimps comme Conseiller ?',
+        experience: { title: 'Années d\'Expérience', description: 'Connaissance approfondie du secteur e-commerce et de l\'automatisation du service client. Nous comprenons les défis auxquels votre entreprise est confrontée.' },
+        honest: { title: 'Conseil Honnête', description: 'Nous vous conseillons objectivement si Glimps est le meilleur choix pour votre situation. Pas de vente sous pression, seulement une expertise honnête.' },
+        knowledge: { title: 'Connaissance Approfondie', description: 'Nous connaissons tous les grands outils et systèmes : Shopify, Odoo, Zendesk, solutions personnalisées et plus. Nous pouvons déterminer objectivement ce qui vous convient le mieux.' }
+      },
+      approach: {
+        title: 'Notre Approche',
+        subtitle: 'Un processus approfondi qui commence toujours par écouter votre situation unique',
+        step1: { title: 'Analyse Approfondie', description: 'Nous commençons par une analyse approfondie de votre situation actuelle : quels sont vos objectifs, quels points de douleur rencontrez-vous, quel est votre budget et quelles sont vos attentes de croissance ?' },
+        step2: { title: 'Analyse des Besoins', description: 'Nous identifions précisément ce dont votre entreprise a besoin : quelles intégrations sont cruciales, quelles fonctionnalités sont indispensables et où se trouvent les plus grandes opportunités de croissance ?' },
+        step3: { title: 'Conseil Sur Mesure', description: 'Sur la base de notre analyse, nous donnons un conseil honnête sur la solution qui convient le mieux. Cela peut être Glimps, mais aussi une alternative si cela correspond mieux à votre situation.' },
+        step4: { title: 'Feuille de Route d\'Implémentation', description: 'Nous établissons une feuille de route claire comprenant les options d\'intégration, les étapes de mise en œuvre, les possibilités de croissance et un calendrier réaliste.' },
+        step5: { title: 'Support Continu', description: 'Même après la mise en œuvre, nous continuons à vous soutenir avec des optimisations, de nouvelles fonctionnalités et des conseils stratégiques pour maximiser votre croissance.' }
+      },
+      systems: {
+        title: 'Systèmes et Outils que Nous Connaissons',
+        ecommerce: 'Plateformes E-commerce',
+        customer: 'Outils Service Client',
+        shipping: 'Expédition et Logistique',
+        marketing: 'Marketing et Analytique'
+      },
+      trust: {
+        title: 'Confiance et Croissance Durable',
+        description1: 'Notre objectif n\'est pas simplement de vendre. Nous voulons vous soutenir dans une croissance durable. C\'est pourquoi nous prenons le temps de comprendre votre situation et donnons des conseils honnêtes sur ce qui est le mieux pour votre entreprise.',
+        description2: 'Si Glimps n\'est pas la bonne solution, nous le dirons. Si nous sommes le match parfait, nous veillerons à ce que la mise en œuvre se déroule sans heurts et que vous obteniez un résultat maximal de notre collaboration.'
+      },
+      benefits: {
+        title: 'Qu\'est-ce que cela apporte ?',
+        insight: { title: 'Aperçu Objectif', description: 'Obtenez une image claire de la solution qui correspond le mieux à votre situation, sans pression de vente.' },
+        implementation: { title: 'Mise en Œuvre Plus Rapide', description: 'Grâce à notre expertise, vous pouvez commencer plus rapidement et voir des résultats plus tôt dans votre entreprise.' },
+        success: { title: 'Succès à Long Terme', description: 'Nous réfléchissons à l\'évolutivité et à la croissance, afin que votre solution grandisse avec votre entreprise.' }
+      },
+      cta: {
+        title: 'Planifiez une Consultation Gratuite',
+        subtitle: 'Regardons ensemble quelle est la prochaine étape la plus intelligente pour votre entreprise e-commerce. Aucune obligation, seulement des conseils honnêtes d\'experts qui comprennent votre entreprise.',
+        contact: 'Vous préférez un contact direct ? Envoyez-nous un email à'
+      }
+    },
+    changelog: {
+      badge: 'Mises à jour produit',
+      hero: {
+        title: 'Quoi de',
+        titleHighlight: 'neuf ?',
+        subtitle: 'Nous travaillons continuellement sur de nouvelles fonctionnalités et améliorations. Restez informé de toutes les mises à jour.'
+      },
+      types: {
+        new: 'Nouveau',
+        improvement: 'Amélioration',
+        bugfix: 'Correction de bug',
+        update: 'Mise à jour'
+      },
+      roadmap: {
+        badge: 'Feuille de Route Produit',
+        title: 'Aidez-nous à déterminer l\'avenir',
+        subtitle: 'Quelle fonctionnalité améliorerait votre expérience e-commerce ? Partagez votre idée et votez pour les propositions existantes.',
+        featureTitle: 'Titre de la fonctionnalité',
+        featureTitlePlaceholder: 'par ex. intégration WhatsApp',
+        description: 'Description',
+        descriptionPlaceholder: 'Décrivez votre idée de fonctionnalité...',
+        submit: 'Demander une fonctionnalité',
+        submitting: 'Envoi en cours...',
+        popular: 'Demandes populaires'
+      }
     }
   }
 };
