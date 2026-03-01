@@ -47,6 +47,10 @@ import TuinBuitenleven from "./pages/industries/TuinBuitenleven";
 import Legal from "./pages/Legal";
 import ProSportLights from "./pages/ProSportLights";
 import LensOnline from "./pages/LensOnline";
+import ChatbotAgencyVlaanderen from "./pages/ChatbotAgencyVlaanderen";
+import AIAgencyBelgieChatbots from "./pages/AIAgencyBelgieChatbots";
+import AIChatbotBureauBelgie from "./pages/AIChatbotBureauBelgie";
+import ChatbotBouwBedrijfVlaanderen from "./pages/ChatbotBouwBedrijfVlaanderen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -101,6 +105,10 @@ const App = () => (
         <Route path="/legal" element={<Legal />} />
         <Route path="/prosportlights" element={<ProSportLights />} />
         <Route path="/lensonline" element={<LensOnline />} />
+        <Route path="/chatbot-agency-vlaanderen-ecommerce" element={<ChatbotAgencyVlaanderen />} />
+        <Route path="/ai-agency-belgie-chatbots" element={<AIAgencyBelgieChatbots />} />
+        <Route path="/ai-chatbot-bureau-belgie-ecommerce" element={<AIChatbotBureauBelgie />} />
+        <Route path="/chatbot-bouw-bedrijf-vlaanderen-ecommerce" element={<ChatbotBouwBedrijfVlaanderen />} />
         {/* French Routes */}
         <Route path="/fr" element={<Index />} />
         <Route path="/fr/fonctionnalites" element={<Features />} />
