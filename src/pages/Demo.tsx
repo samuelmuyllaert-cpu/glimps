@@ -35,13 +35,33 @@ const Demo = () => {
   const { toast } = useToast();
 
   const demoFormSchema = z.object({
-    firstName: z.string().trim().min(1, language === 'fr' ? "Le prénom est obligatoire" : "Voornaam is verplicht").max(100),
-    lastName: z.string().trim().min(1, language === 'fr' ? "Le nom est obligatoire" : "Achternaam is verplicht").max(100),
-    email: z.string().trim().email(language === 'fr' ? "Adresse e-mail invalide" : "Ongeldig e-mailadres").max(255),
+    firstName: z.string().trim().min(1, language === 'en'
+          ? "First name is required"
+          : language === 'fr'
+          ? "Le prénom est obligatoire"
+          : "Voornaam is verplicht").max(100),
+    lastName: z.string().trim().min(1, language === 'en'
+          ? "Last name is required"
+          : language === 'fr'
+          ? "Le nom est obligatoire"
+          : "Achternaam is verplicht").max(100),
+    email: z.string().trim().email(language === 'en'
+          ? "Invalid email address"
+          : language === 'fr'
+          ? "Adresse e-mail invalide"
+          : "Ongeldig e-mailadres").max(255),
     phone: z.string().trim().optional(),
-    company: z.string().trim().min(1, language === 'fr' ? "Le nom de l'entreprise est obligatoire" : "Bedrijfsnaam is verplicht").max(200),
+    company: z.string().trim().min(1, language === 'en'
+          ? "Company name is required"
+          : language === 'fr'
+          ? "Le nom de l'entreprise est obligatoire"
+          : "Bedrijfsnaam is verplicht").max(200),
     website: z.string().trim().optional(),
-    employees: z.string().min(1, language === 'fr' ? "Sélectionnez le nombre d'employés" : "Selecteer aantal medewerkers"),
+    employees: z.string().min(1, language === 'en'
+          ? "Select number of employees"
+          : language === 'fr'
+          ? "Sélectionnez le nombre d'employés"
+          : "Selecteer aantal medewerkers"),
     message: z.string().trim().max(1000).optional()
   });
   const [formData, setFormData] = useState({

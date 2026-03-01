@@ -293,7 +293,11 @@ const EcomReadiness = () => {
         description={language === 'fr'
           ? "Découvrez en 2 minutes si votre boutique en ligne est prête pour l'automatisation par chatbot IA. Obtenez directement des informations sur votre potentiel ROI et des recommandations personnalisées pour plus de conversion."
           : "Ontdek in 2 minuten of jouw webshop klaar is voor AI-chatbot automatisering. Krijg direct inzicht in je ROI potentieel en personaliseerde aanbevelingen voor meer conversie."}
-        path={language === 'fr' ? "/fr/ecom-readiness" : "/ecom-readiness"}
+        path={language === 'en'
+          ? "/fr/ecom-readiness"
+          : language === 'fr'
+          ? "/fr/ecom-readiness"
+          : "/ecom-readiness"}
         keywords={language === 'fr'
           ? "préparation e-commerce, quiz chatbot, évaluation préparation IA, automatisation boutique en ligne, test conversion, calculateur ROI"
           : "e-commerce readiness, chatbot quiz, AI readiness assessment, webshop automatisering, conversie test, ROI calculator"}
@@ -301,11 +305,19 @@ const EcomReadiness = () => {
       <StructuredData
         type="webpage"
         data={{
-          name: language === 'fr' ? "Quiz de Préparation E-commerce - Glimps AI" : "E-commerce Readiness Quiz - Glimps AI",
+          name: language === 'en'
+          ? "Quiz de Preparation E-commerce - Glimps AI"
+          : language === 'fr'
+          ? "Quiz de Préparation E-commerce - Glimps AI"
+          : "E-commerce Readiness Quiz - Glimps AI",
           description: language === 'fr'
             ? "Testez si votre boutique en ligne est prête pour l'automatisation par chatbot IA et découvrez votre potentiel ROI"
             : "Test of jouw webshop klaar is voor AI-chatbot automatisering en ontdek je ROI potentieel",
-          url: language === 'fr' ? "https://www.glimps.be/fr/ecom-readiness" : "https://www.glimps.be/ecom-readiness"
+          url: language === 'en'
+          ? "https://www.glimps.be/fr/ecom-readiness"
+          : language === 'fr'
+          ? "https://www.glimps.be/fr/ecom-readiness"
+          : "https://www.glimps.be/ecom-readiness"
         }}
       />
       <Navigation />

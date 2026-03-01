@@ -17,7 +17,11 @@ const EcomAgents = () => {
         description={language === 'fr'
           ? "Découvrez Glimps Agents E-commerce : la prochaine génération d'automatisation IA pour le e-commerce. Bientôt disponible pour l'automatisation avancée des workflows et l'optimisation intelligente de la conversion."
           : "Ontdek Glimps Ecom Agents: de volgende generatie AI-automatisering voor e-commerce. Binnenkort beschikbaar voor geavanceerde workflow automation en intelligente conversie optimalisatie."}
-        path={language === 'fr' ? "/fr/agents-ecom" : "/ecom-agents"}
+        path={language === 'en'
+          ? "/fr/agents-ecom"
+          : language === 'fr'
+          ? "/fr/agents-ecom"
+          : "/ecom-agents"}
         keywords={language === 'fr'
           ? "agents ecommerce, automatisation e-commerce, agents IA, automatisation workflow, optimisation conversion, chatbot avancé"
           : "ecom agents, e-commerce automation, AI agents, workflow automation, conversie optimalisatie, advanced chatbot"}
@@ -25,11 +29,19 @@ const EcomAgents = () => {
       <StructuredData
         type="webpage"
         data={{
-          name: language === 'fr' ? "Agents E-commerce - Glimps AI" : "Ecom Agents - Glimps AI",
+          name: language === 'en'
+          ? "Agents E-commerce - Glimps AI"
+          : language === 'fr'
+          ? "Agents E-commerce - Glimps AI"
+          : "Ecom Agents - Glimps AI",
           description: language === 'fr'
             ? "Agents IA avancés pour l'automatisation e-commerce et l'optimisation des workflows"
             : "Geavanceerde AI agents voor e-commerce automatisering en workflow optimalisatie",
-          url: language === 'fr' ? "https://www.glimps.be/fr/agents-ecom" : "https://www.glimps.be/ecom-agents"
+          url: language === 'en'
+          ? "https://www.glimps.be/fr/agents-ecom"
+          : language === 'fr'
+          ? "https://www.glimps.be/fr/agents-ecom"
+          : "https://www.glimps.be/ecom-agents"
         }}
       />
       <Navigation />

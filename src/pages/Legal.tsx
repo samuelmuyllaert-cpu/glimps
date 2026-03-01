@@ -47,12 +47,20 @@ const Legal = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={language === 'fr' ? "Documents Juridiques - Glimps AI" : "Juridische Documenten - Glimps AI"}
+        title={language === 'en'
+          ? "Documents Juridiques - Glimps AI"
+          : language === 'fr'
+          ? "Documents Juridiques - Glimps AI"
+          : "Juridische Documenten - Glimps AI"}
         description={language === 'fr'
           ? "Politique de confidentialité, conditions générales et informations juridiques de Glimps AI."
           : "Privacy policy, algemene voorwaarden en juridische informatie van Glimps AI."
         }
-        path={language === 'fr' ? "/fr/legal" : "/legal"}
+        path={language === 'en'
+          ? "/fr/legal"
+          : language === 'fr'
+          ? "/fr/legal"
+          : "/legal"}
       />
       <Navigation />
 

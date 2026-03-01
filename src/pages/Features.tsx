@@ -26,9 +26,21 @@ const Features = () => {
   const features = [
     {
       icon: Bot,
-      badge: language === 'en' ? "CHECKOUT BOT" : language === 'fr' ? "BOT DE PAIEMENT" : "CHECKOUT BOT",
-      title: language === 'en' ? "Guide customers to a successful purchase" : language === 'fr' ? "Guidez les clients vers un achat réussi" : "Begeleid klanten naar een succesvolle aankoop",
-      description: language === 'en' ? "Our checkout bot helps customers through the order process with smart suggestions, direct product information and seamless handling. Increase your conversion by up to 40%." : language === 'fr' ? "Notre bot de paiement aide les clients tout au long du processus de commande avec des suggestions intelligentes, des informations produits directes et une gestion fluide. Augmentez votre conversion jusqu'à 40%." : "Onze checkout bot helpt klanten door het bestelproces met slimme suggesties, directe productinformatie en een naadloze afhandeling. Verhoog je conversie met tot 40%.",
+      badge: language === 'en' ? "CHECKOUT BOT" : language === 'en'
+          ? "BOT DE PAIEMENT"
+          : language === 'fr'
+          ? "BOT DE PAIEMENT"
+          : "CHECKOUT BOT",
+      title: language === 'en' ? "Guide customers to a successful purchase" : language === 'en'
+          ? "Guidez les clients vers un achat reussi"
+          : language === 'fr'
+          ? "Guidez les clients vers un achat réussi"
+          : "Begeleid klanten naar een succesvolle aankoop",
+      description: language === 'en' ? "Our checkout bot helps customers through the order process with smart suggestions, direct product information and seamless handling. Increase your conversion by up to 40%." : language === 'en'
+          ? "Notre bot de paiement aide les clients tout au long du processus de commande avec des suggestions intelligentes, des informations produits directes et une gestion fluide. Augmentez votre conversion jusqu'à 40%."
+          : language === 'fr'
+          ? "Notre bot de paiement aide les clients tout au long du processus de commande avec des suggestions intelligentes, des informations produits directes et une gestion fluide. Augmentez votre conversion jusqu'à 40%."
+          : "Onze checkout bot helpt klanten door het bestelproces met slimme suggesties, directe productinformatie en een naadloze afhandeling. Verhoog je conversie met tot 40%.",
       benefits: language === 'en' ? [
         "Place order directly via chat",
         "Automatic upselling and bundle suggestions",
@@ -46,9 +58,21 @@ const Features = () => {
     },
     {
       icon: ShoppingCart,
-      badge: language === 'en' ? "SHOPPING CART CONTEXT" : language === 'fr' ? "CONTEXTE DU PANIER" : "WINKELMANDJE CONTEXT",
-      title: language === 'en' ? "The bot knows exactly what's in the shopping cart" : language === 'fr' ? "Le bot sait exactement ce qui se trouve dans le panier" : "De bot weet precies wat er in het winkelmandje zit",
-      description: language === 'en' ? "Our chatbot has real-time access to the shopping cart content and can guide customers with targeted suggestions, discounts and product information based on their current selection." : language === 'fr' ? "Notre chatbot a un accès en temps réel au contenu du panier et peut guider les clients avec des suggestions ciblées, des réductions et des informations produits basées sur leur sélection actuelle." : "Onze chatbot heeft realtime toegang tot de winkelmandje inhoud en kan klanten begeleiden met gerichte suggesties, kortingen en productinformatie op basis van hun huidige selectie.",
+      badge: language === 'en' ? "SHOPPING CART CONTEXT" : language === 'en'
+          ? "CONTEXTE DU PANIER"
+          : language === 'fr'
+          ? "CONTEXTE DU PANIER"
+          : "WINKELMANDJE CONTEXT",
+      title: language === 'en' ? "The bot knows exactly what's in the shopping cart" : language === 'en'
+          ? "Le bot sait exactement ce qui se trouve dans le panier"
+          : language === 'fr'
+          ? "Le bot sait exactement ce qui se trouve dans le panier"
+          : "De bot weet precies wat er in het winkelmandje zit",
+      description: language === 'en' ? "Our chatbot has real-time access to the shopping cart content and can guide customers with targeted suggestions, discounts and product information based on their current selection." : language === 'en'
+          ? "Notre chatbot a un acces en temps reel au contenu du panier et peut guider les clients avec des suggestions ciblees, des reductions et des informations produits basees sur leur selection actuelle."
+          : language === 'fr'
+          ? "Notre chatbot a un accès en temps réel au contenu du panier et peut guider les clients avec des suggestions ciblées, des réductions et des informations produits basées sur leur sélection actuelle."
+          : "Onze chatbot heeft realtime toegang tot de winkelmandje inhoud en kan klanten begeleiden met gerichte suggesties, kortingen en productinformatie op basis van hun huidige selectie.",
       benefits: language === 'en' ? [
         "Real-time synchronization with shopping cart",
         "Smart suggestions based on cart content",
@@ -66,9 +90,21 @@ const Features = () => {
     },
     {
       icon: RefreshCw,
-      badge: language === 'en' ? "CHECKOUT INTERVENTION" : language === 'fr' ? "INTERVENTION PAIEMENT" : "CHECKOUT INTERVENTIE",
-      title: language === 'en' ? "Intervene directly when customers leave checkout" : language === 'fr' ? "Intervenez directement lorsque les clients quittent le paiement" : "Grijp direct in wanneer klanten de checkout verlaten",
-      description: language === 'en' ? "The chatbot detects when a customer leaves the checkout page and automatically opens to help. No discount needed - just the right help at the right time. Resolve objections, answer questions and still guide customers to a successful purchase." : language === 'fr' ? "Le chatbot détecte quand un client quitte la page de paiement et s'ouvre automatiquement pour l'aider. Pas besoin de réduction - juste la bonne aide au bon moment. Résolvez les objections, répondez aux questions et guidez les clients vers un achat réussi." : "De chatbot detecteert wanneer een klant de checkout pagina verlaat en springt automatisch open om te helpen. Geen korting nodig - gewoon het juiste hulp op het juiste moment. Los bezwaren op, beantwoord vragen en begeleid klanten alsnog naar een succesvolle aankoop.",
+      badge: language === 'en' ? "CHECKOUT INTERVENTION" : language === 'en'
+          ? "INTERVENTION PAIEMENT"
+          : language === 'fr'
+          ? "INTERVENTION PAIEMENT"
+          : "CHECKOUT INTERVENTIE",
+      title: language === 'en' ? "Intervene directly when customers leave checkout" : language === 'en'
+          ? "Intervenez directement lorsque les clients quittent le paiement"
+          : language === 'fr'
+          ? "Intervenez directement lorsque les clients quittent le paiement"
+          : "Grijp direct in wanneer klanten de checkout verlaten",
+      description: language === 'en' ? "The chatbot detects when a customer leaves the checkout page and automatically opens to help. No discount needed - just the right help at the right time. Resolve objections, answer questions and still guide customers to a successful purchase." : language === 'en'
+          ? "Le chatbot detecte quand un client quitte la page de paiement et s'ouvre automatiquement pour l'aider. Pas besoin de reduction - juste la bonne aide au bon moment. Resolvez les objections, repondez aux questions et guidez les clients vers un achat reussi."
+          : language === 'fr'
+          ? "Le chatbot détecte quand un client quitte la page de paiement et s'ouvre automatiquement pour l'aider. Pas besoin de réduction - juste la bonne aide au bon moment. Résolvez les objections, répondez aux questions et guidez les clients vers un achat réussi."
+          : "De chatbot detecteert wanneer een klant de checkout pagina verlaat en springt automatisch open om te helpen. Geen korting nodig - gewoon het juiste hulp op het juiste moment. Los bezwaren op, beantwoord vragen en begeleid klanten alsnog naar een succesvolle aankoop.",
       benefits: language === 'en' ? [
         "Real-time detection of checkout abandonment",
         "Proactive help before the customer really leaves",
@@ -86,9 +122,21 @@ const Features = () => {
     },
     {
       icon: Search,
-      badge: language === 'en' ? "SMART PRODUCT SEARCH" : language === 'fr' ? "RECHERCHE PRODUIT INTELLIGENTE" : "SLIMME PRODUCT ZOEKER",
-      title: language === 'en' ? "AI automatically searches for the perfect products" : language === 'fr' ? "L'IA recherche automatiquement les produits parfaits" : "AI zoekt automatisch de perfecte producten",
-      description: language === 'en' ? "The chatbot intelligently searches your complete product database and finds exactly what customers are looking for based on color, size, price, category and availability. Use natural language, no search filters needed." : language === 'fr' ? "Le chatbot parcourt intelligemment votre base de données produits complète et trouve exactement ce que les clients recherchent en fonction de la couleur, de la taille, du prix, de la catégorie et de la disponibilité. Utilisez le langage naturel, aucun filtre de recherche nécessaire." : "De chatbot doorzoekt intelligent je volledige productdatabase en vindt precies wat klanten zoeken op basis van kleur, maat, prijs, categorie en beschikbaarheid. Gebruik natuurlijke taal, geen zoekfilters nodig.",
+      badge: language === 'en' ? "SMART PRODUCT SEARCH" : language === 'en'
+          ? "RECHERCHE PRODUIT INTELLIGENTE"
+          : language === 'fr'
+          ? "RECHERCHE PRODUIT INTELLIGENTE"
+          : "SLIMME PRODUCT ZOEKER",
+      title: language === 'en' ? "AI automatically searches for the perfect products" : language === 'en'
+          ? "L'IA recherche automatiquement les produits parfaits"
+          : language === 'fr'
+          ? "L'IA recherche automatiquement les produits parfaits"
+          : "AI zoekt automatisch de perfecte producten",
+      description: language === 'en' ? "The chatbot intelligently searches your complete product database and finds exactly what customers are looking for based on color, size, price, category and availability. Use natural language, no search filters needed." : language === 'en'
+          ? "Le chatbot parcourt intelligemment votre base de donnees produits complete et trouve exactement ce que les clients recherchent en fonction de la couleur, de la taille, du prix, de la categorie et de la disponibilite. Utilisez le langage naturel, aucun filtre de recherche necessaire."
+          : language === 'fr'
+          ? "Le chatbot parcourt intelligemment votre base de données produits complète et trouve exactement ce que les clients recherchent en fonction de la couleur, de la taille, du prix, de la catégorie et de la disponibilité. Utilisez le langage naturel, aucun filtre de recherche nécessaire."
+          : "De chatbot doorzoekt intelligent je volledige productdatabase en vindt precies wat klanten zoeken op basis van kleur, maat, prijs, categorie en beschikbaarheid. Gebruik natuurlijke taal, geen zoekfilters nodig.",
       benefits: language === 'en' ? [
         "Semantic searches in natural language",
         "Filter by size, color, price and stock",
@@ -106,9 +154,21 @@ const Features = () => {
     },
     {
       icon: Layout,
-      badge: language === 'en' ? "PRODUCT CAROUSEL" : language === 'fr' ? "CARROUSEL PRODUITS" : "PRODUCT CAROUSEL",
-      title: language === 'en' ? "Display products in a visually attractive carousel" : language === 'fr' ? "Affichez les produits dans un carrousel visuellement attrayant" : "Toon producten in een visueel aantrekkelijke carousel",
-      description: language === 'en' ? "The chatbot presents products in a beautiful carousel display with clear product cards. Customers immediately see product images, specifications and can scroll through multiple options - perfect for product overviews and comparisons." : language === 'fr' ? "Le chatbot présente les produits dans un magnifique carrousel avec des cartes produits claires. Les clients voient immédiatement les images des produits, les spécifications et peuvent faire défiler plusieurs options - parfait pour les aperçus et comparaisons de produits." : "De chatbot presenteert producten in een prachtige carousel weergave met heldere productkaarten. Klanten zien direct productafbeeldingen, specificaties en kunnen door meerdere opties scrollen - perfect voor productoverzichten en vergelijkingen.",
+      badge: language === 'en' ? "PRODUCT CAROUSEL" : language === 'en'
+          ? "CARROUSEL PRODUITS"
+          : language === 'fr'
+          ? "CARROUSEL PRODUITS"
+          : "PRODUCT CAROUSEL",
+      title: language === 'en' ? "Display products in a visually attractive carousel" : language === 'en'
+          ? "Affichez les produits dans un carrousel visuellement attrayant"
+          : language === 'fr'
+          ? "Affichez les produits dans un carrousel visuellement attrayant"
+          : "Toon producten in een visueel aantrekkelijke carousel",
+      description: language === 'en' ? "The chatbot presents products in a beautiful carousel display with clear product cards. Customers immediately see product images, specifications and can scroll through multiple options - perfect for product overviews and comparisons." : language === 'en'
+          ? "Le chatbot presente les produits dans un magnifique carrousel avec des cartes produits claires. Les clients voient immediatement les images des produits, les specifications et peuvent faire defiler plusieurs options - parfait pour les aperçus et comparaisons de produits."
+          : language === 'fr'
+          ? "Le chatbot présente les produits dans un magnifique carrousel avec des cartes produits claires. Les clients voient immédiatement les images des produits, les spécifications et peuvent faire défiler plusieurs options - parfait pour les aperçus et comparaisons de produits."
+          : "De chatbot presenteert producten in een prachtige carousel weergave met heldere productkaarten. Klanten zien direct productafbeeldingen, specificaties en kunnen door meerdere opties scrollen - perfect voor productoverzichten en vergelijkingen.",
       benefits: language === 'en' ? [
         "Visually attractive product cards with images",
         "Horizontally scrollable carousel for multiple products",
@@ -126,9 +186,21 @@ const Features = () => {
     },
     {
       icon: TrendingUp,
-      badge: language === 'en' ? "UPSELL & CROSS-SELL" : language === 'fr' ? "VENTE INCITATIVE ET CROISÉE" : "UPSELL & CROSS-SELL",
-      title: language === 'en' ? "Increase your average order value by 40%" : language === 'fr' ? "Augmentez votre valeur moyenne de commande de 40%" : "Verhoog je gemiddelde orderwaarde met 40%",
-      description: language === 'en' ? "Our AI recognizes the perfect moment to suggest additional products. From bundles to premium variants - always relevant and never intrusive." : language === 'fr' ? "Notre IA reconnaît le moment parfait pour suggérer des produits supplémentaires. Des bundles aux variantes premium - toujours pertinent et jamais intrusif." : "Onze AI herkent het perfecte moment om aanvullende producten voor te stellen. Van bundels tot premium varianten - altijd relevant en nooit opdringerig.",
+      badge: language === 'en' ? "UPSELL & CROSS-SELL" : language === 'en'
+          ? "VENTE INCITATIVE ET CROISÉE"
+          : language === 'fr'
+          ? "VENTE INCITATIVE ET CROISÉE"
+          : "UPSELL & CROSS-SELL",
+      title: language === 'en' ? "Increase your average order value by 40%" : language === 'en'
+          ? "Augmentez votre valeur moyenne de commande de 40%"
+          : language === 'fr'
+          ? "Augmentez votre valeur moyenne de commande de 40%"
+          : "Verhoog je gemiddelde orderwaarde met 40%",
+      description: language === 'en' ? "Our AI recognizes the perfect moment to suggest additional products. From bundles to premium variants - always relevant and never intrusive." : language === 'en'
+          ? "Notre IA reconnaît le moment parfait pour suggerer des produits supplementaires. Des bundles aux variantes premium - toujours pertinent et jamais intrusif."
+          : language === 'fr'
+          ? "Notre IA reconnaît le moment parfait pour suggérer des produits supplémentaires. Des bundles aux variantes premium - toujours pertinent et jamais intrusif."
+          : "Onze AI herkent het perfecte moment om aanvullende producten voor te stellen. Van bundels tot premium varianten - altijd relevant en nooit opdringerig.",
       benefits: language === 'en' ? [
         "Smart product bundles and combinations",
         "Premium variant suggestions at the right moment",
@@ -146,9 +218,21 @@ const Features = () => {
     },
     {
       icon: Mic,
-      badge: language === 'en' ? "VOICE INTERACTION" : language === 'fr' ? "INTERACTION VOCALE" : "SPRAAK INTERACTIE",
-      title: language === 'en' ? "Talk to the bot, get direct answers" : language === 'fr' ? "Parlez au bot, obtenez des réponses directes" : "Praat tegen de bot, krijg directe antwoorden",
-      description: language === 'en' ? "Customers can simply talk to the bot via voice. The bot automatically transcribes and gives text responses. Perfect for hands-free shopping and mobile users." : language === 'fr' ? "Les clients peuvent simplement parler au bot via la voix. Le bot transcrit automatiquement et donne des réponses textuelles. Parfait pour le shopping mains libres et les utilisateurs mobiles." : "Klanten kunnen simpelweg tegen de bot praten via spraak. De bot transcribeert automatisch en geeft textuele antwoorden. Perfect voor hands-free winkelen en mobiele gebruikers.",
+      badge: language === 'en' ? "VOICE INTERACTION" : language === 'en'
+          ? "INTERACTION VOCALE"
+          : language === 'fr'
+          ? "INTERACTION VOCALE"
+          : "SPRAAK INTERACTIE",
+      title: language === 'en' ? "Talk to the bot, get direct answers" : language === 'en'
+          ? "Parlez au bot, obtenez des reponses directes"
+          : language === 'fr'
+          ? "Parlez au bot, obtenez des réponses directes"
+          : "Praat tegen de bot, krijg directe antwoorden",
+      description: language === 'en' ? "Customers can simply talk to the bot via voice. The bot automatically transcribes and gives text responses. Perfect for hands-free shopping and mobile users." : language === 'en'
+          ? "Les clients peuvent simplement parler au bot via la voix. Le bot transcrit automatiquement et donne des reponses textuelles. Parfait pour le shopping mains libres et les utilisateurs mobiles."
+          : language === 'fr'
+          ? "Les clients peuvent simplement parler au bot via la voix. Le bot transcrit automatiquement et donne des réponses textuelles. Parfait pour le shopping mains libres et les utilisateurs mobiles."
+          : "Klanten kunnen simpelweg tegen de bot praten via spraak. De bot transcribeert automatisch en geeft textuele antwoorden. Perfect voor hands-free winkelen en mobiele gebruikers.",
       benefits: language === 'en' ? [
         "Voice-to-text in real-time",
         "High accuracy in English",
@@ -166,9 +250,21 @@ const Features = () => {
     },
     {
       icon: Globe,
-      badge: language === 'en' ? "MULTILINGUAL SUPPORT" : language === 'fr' ? "SUPPORT MULTILINGUE" : "MULTILINGUAL SUPPORT",
-      title: language === 'en' ? "Communicate globally in 50+ languages" : language === 'fr' ? "Communiquez mondialement dans plus de 50 langues" : "Communiceer wereldwijd in 50+ talen",
-      description: language === 'en' ? "The chatbot automatically detects your customer's language and responds in the same language. Perfect for international webshops serving customers worldwide - without extra configuration." : language === 'fr' ? "Le chatbot détecte automatiquement la langue de votre client et répond dans la même langue. Parfait pour les boutiques internationales qui servent des clients du monde entier - sans configuration supplémentaire." : "De chatbot detecteert automatisch de taal van je klant en antwoordt in diezelfde taal. Perfect voor internationale webshops die klanten over de hele wereld bedienen - zonder extra configuratie.",
+      badge: language === 'en' ? "MULTILINGUAL SUPPORT" : language === 'en'
+          ? "SUPPORT MULTILINGUE"
+          : language === 'fr'
+          ? "SUPPORT MULTILINGUE"
+          : "MULTILINGUAL SUPPORT",
+      title: language === 'en' ? "Communicate globally in 50+ languages" : language === 'en'
+          ? "Communiquez mondialement dans plus de 50 langues"
+          : language === 'fr'
+          ? "Communiquez mondialement dans plus de 50 langues"
+          : "Communiceer wereldwijd in 50+ talen",
+      description: language === 'en' ? "The chatbot automatically detects your customer's language and responds in the same language. Perfect for international webshops serving customers worldwide - without extra configuration." : language === 'en'
+          ? "Le chatbot detecte automatiquement la langue de votre client et repond dans la même langue. Parfait pour les boutiques internationales qui servent des clients du monde entier - sans configuration supplementaire."
+          : language === 'fr'
+          ? "Le chatbot détecte automatiquement la langue de votre client et répond dans la même langue. Parfait pour les boutiques internationales qui servent des clients du monde entier - sans configuration supplémentaire."
+          : "De chatbot detecteert automatisch de taal van je klant en antwoordt in diezelfde taal. Perfect voor internationale webshops die klanten over de hele wereld bedienen - zonder extra configuratie.",
       benefits: language === 'en' ? [
         "Automatic language detection - 50+ languages supported",
         "Natural conversations in every language with contextual understanding",
@@ -186,9 +282,21 @@ const Features = () => {
     },
     {
       icon: Package,
-      badge: language === 'en' ? "PACKAGE TRACKING" : language === 'fr' ? "SUIVI DE COLIS" : "PAKKET TRACKING",
-      title: language === 'en' ? "Live tracking information directly in the chat" : language === 'fr' ? "Informations de suivi en direct dans le chat" : "Live tracking informatie direct in de chat",
-      description: language === 'en' ? "Customers can easily request their package status and receive real-time updates. Reduce support tickets by 70%." : language === 'fr' ? "Les clients peuvent facilement demander l'état de leur colis et recevoir des mises à jour en temps réel. Réduisez les tickets de support de 70%." : "Klanten kunnen eenvoudig hun pakket status opvragen en realtime updates ontvangen. Verminder support tickets met 70%.",
+      badge: language === 'en' ? "PACKAGE TRACKING" : language === 'en'
+          ? "SUIVI DE COLIS"
+          : language === 'fr'
+          ? "SUIVI DE COLIS"
+          : "PAKKET TRACKING",
+      title: language === 'en' ? "Live tracking information directly in the chat" : language === 'en'
+          ? "Informations de suivi en direct dans le chat"
+          : language === 'fr'
+          ? "Informations de suivi en direct dans le chat"
+          : "Live tracking informatie direct in de chat",
+      description: language === 'en' ? "Customers can easily request their package status and receive real-time updates. Reduce support tickets by 70%." : language === 'en'
+          ? "Les clients peuvent facilement demander l'etat de leur colis et recevoir des mises à jour en temps reel. Reduisez les tickets de support de 70%."
+          : language === 'fr'
+          ? "Les clients peuvent facilement demander l'état de leur colis et recevoir des mises à jour en temps réel. Réduisez les tickets de support de 70%."
+          : "Klanten kunnen eenvoudig hun pakket status opvragen en realtime updates ontvangen. Verminder support tickets met 70%.",
       benefits: language === 'en' ? [
         "Integration with all major carriers",
         "Proactive updates on delays",
@@ -206,9 +314,21 @@ const Features = () => {
     },
     {
       icon: RotateCcw,
-      badge: language === 'en' ? "RETURN HANDLING" : language === 'fr' ? "GESTION DES RETOURS" : "RETOUR AFHANDELING",
-      title: language === 'en' ? "Make returns simple for you and your customers" : language === 'fr' ? "Rendez les retours simples pour vous et vos clients" : "Maak retouren simpel voor jou en je klanten",
-      description: language === 'en' ? "Automate the complete return process with smart questionnaires, direct label generation and automatic updates. Increase customer satisfaction and reduce workload." : language === 'fr' ? "Automatisez le processus de retour complet avec des questionnaires intelligents, génération directe d'étiquettes et mises à jour automatiques. Augmentez la satisfaction client et réduisez la charge de travail." : "Automatiseer het complete retourproces met slimme vragenlijsten, directe label generatie en automatische updates. Verhoog klanttevredenheid en reduceer werkdruk.",
+      badge: language === 'en' ? "RETURN HANDLING" : language === 'en'
+          ? "GESTION DES RETOURS"
+          : language === 'fr'
+          ? "GESTION DES RETOURS"
+          : "RETOUR AFHANDELING",
+      title: language === 'en' ? "Make returns simple for you and your customers" : language === 'en'
+          ? "Rendez les retours simples pour vous et vos clients"
+          : language === 'fr'
+          ? "Rendez les retours simples pour vous et vos clients"
+          : "Maak retouren simpel voor jou en je klanten",
+      description: language === 'en' ? "Automate the complete return process with smart questionnaires, direct label generation and automatic updates. Increase customer satisfaction and reduce workload." : language === 'en'
+          ? "Automatisez le processus de retour complet avec des questionnaires intelligents, generation directe d'etiquettes et mises à jour automatiques. Augmentez la satisfaction client et reduisez la charge de travail."
+          : language === 'fr'
+          ? "Automatisez le processus de retour complet avec des questionnaires intelligents, génération directe d'étiquettes et mises à jour automatiques. Augmentez la satisfaction client et réduisez la charge de travail."
+          : "Automatiseer het complete retourproces met slimme vragenlijsten, directe label generatie en automatische updates. Verhoog klanttevredenheid en reduceer werkdruk.",
       benefits: language === 'en' ? [
         "Automatic return label generation",
         "Smart question flow for return reason",
@@ -226,9 +346,21 @@ const Features = () => {
     },
     {
       icon: Users,
-      badge: language === 'en' ? "LEAD COLLECTION" : language === 'fr' ? "COLLECTE DE LEADS" : "LEAD VERZAMELING",
-      title: language === 'en' ? "Collect quality leads during conversations" : language === 'fr' ? "Collectez des leads de qualité pendant les conversations" : "Verzamel kwaliteitsvolle leads tijdens gesprekken",
-      description: language === 'en' ? "Turn every conversation into an opportunity to collect leads. The bot naturally asks for contact details and preferences, without being intrusive." : language === 'fr' ? "Transformez chaque conversation en opportunité de collecter des leads. Le bot demande naturellement les coordonnées et les préférences, sans être intrusif." : "Maak van elke conversatie een kans om leads te verzamelen. De bot vraagt op natuurlijke wijze naar contactgegevens en voorkeuren, zonder opdringerig te zijn.",
+      badge: language === 'en' ? "LEAD COLLECTION" : language === 'en'
+          ? "COLLECTE DE LEADS"
+          : language === 'fr'
+          ? "COLLECTE DE LEADS"
+          : "LEAD VERZAMELING",
+      title: language === 'en' ? "Collect quality leads during conversations" : language === 'en'
+          ? "Collectez des leads de qualite pendant les conversations"
+          : language === 'fr'
+          ? "Collectez des leads de qualité pendant les conversations"
+          : "Verzamel kwaliteitsvolle leads tijdens gesprekken",
+      description: language === 'en' ? "Turn every conversation into an opportunity to collect leads. The bot naturally asks for contact details and preferences, without being intrusive." : language === 'en'
+          ? "Transformez chaque conversation en opportunite de collecter des leads. Le bot demande naturellement les coordonnees et les preferences, sans être intrusif."
+          : language === 'fr'
+          ? "Transformez chaque conversation en opportunité de collecter des leads. Le bot demande naturellement les coordonnées et les préférences, sans être intrusif."
+          : "Maak van elke conversatie een kans om leads te verzamelen. De bot vraagt op natuurlijke wijze naar contactgegevens en voorkeuren, zonder opdringerig te zijn.",
       benefits: language === 'en' ? [
         "Natural question flow for contact details",
         "Automatic segmentation based on interest",
@@ -246,9 +378,21 @@ const Features = () => {
     },
     {
       icon: Zap,
-      badge: language === 'en' ? "QUICK REPLY BUTTONS" : language === 'fr' ? "BOUTONS DE RÉPONSE RAPIDE" : "QUICK REPLY BUTTONS",
-      title: language === 'en' ? "Quick interaction with one-click answers" : language === 'fr' ? "Interaction rapide avec réponses en un clic" : "Snelle interactie met één klik antwoorden",
-      description: language === 'en' ? "Make it easy for customers with visual buttons and quick answers. No typing needed - just click and continue. Perfect for mobile users." : language === 'fr' ? "Facilitez la vie de vos clients avec des boutons visuels et des réponses rapides. Pas besoin de taper - juste cliquer et continuer. Parfait pour les utilisateurs mobiles." : "Maak het makkelijk voor klanten met visuele knoppen en snelle antwoorden. Geen typen nodig - gewoon klikken en doorgaan. Perfect voor mobiele gebruikers.",
+      badge: language === 'en' ? "QUICK REPLY BUTTONS" : language === 'en'
+          ? "BOUTONS DE RÉPONSE RAPIDE"
+          : language === 'fr'
+          ? "BOUTONS DE RÉPONSE RAPIDE"
+          : "QUICK REPLY BUTTONS",
+      title: language === 'en' ? "Quick interaction with one-click answers" : language === 'en'
+          ? "Interaction rapide avec reponses en un clic"
+          : language === 'fr'
+          ? "Interaction rapide avec réponses en un clic"
+          : "Snelle interactie met één klik antwoorden",
+      description: language === 'en' ? "Make it easy for customers with visual buttons and quick answers. No typing needed - just click and continue. Perfect for mobile users." : language === 'en'
+          ? "Facilitez la vie de vos clients avec des boutons visuels et des reponses rapides. Pas besoin de taper - juste cliquer et continuer. Parfait pour les utilisateurs mobiles."
+          : language === 'fr'
+          ? "Facilitez la vie de vos clients avec des boutons visuels et des réponses rapides. Pas besoin de taper - juste cliquer et continuer. Parfait pour les utilisateurs mobiles."
+          : "Maak het makkelijk voor klanten met visuele knoppen en snelle antwoorden. Geen typen nodig - gewoon klikken en doorgaan. Perfect voor mobiele gebruikers.",
       benefits: language === 'en' ? [
         "Contextual buttons based on situation",
         "Visual buttons with emojis and icons",
@@ -266,9 +410,21 @@ const Features = () => {
     },
     {
       icon: Code,
-      badge: language === 'en' ? "API & INTEGRATIONS" : language === 'fr' ? "API & INTÉGRATIONS" : "API & INTEGRATIES",
-      title: language === 'en' ? "Connect with all your existing systems" : language === 'fr' ? "Connectez-vous à tous vos systèmes existants" : "Koppel met al je bestaande systemen",
-      description: language === 'en' ? "Seamless integration with your e-commerce platform, CRM, helpdesk and more. Use our REST API or ready-made connectors for popular platforms." : language === 'fr' ? "Intégration transparente avec votre plateforme e-commerce, CRM, helpdesk et plus. Utilisez notre API REST ou des connecteurs prêts à l'emploi pour les plateformes populaires." : "Naadloze integratie met je e-commerce platform, CRM, helpdesk en meer. Gebruik onze REST API of kant-en-klare connectoren voor populaire platforms.",
+      badge: language === 'en' ? "API & INTEGRATIONS" : language === 'en'
+          ? "API & INTÉGRATIONS"
+          : language === 'fr'
+          ? "API & INTÉGRATIONS"
+          : "API & INTEGRATIES",
+      title: language === 'en' ? "Connect with all your existing systems" : language === 'en'
+          ? "Connectez-vous à tous vos systemes existants"
+          : language === 'fr'
+          ? "Connectez-vous à tous vos systèmes existants"
+          : "Koppel met al je bestaande systemen",
+      description: language === 'en' ? "Seamless integration with your e-commerce platform, CRM, helpdesk and more. Use our REST API or ready-made connectors for popular platforms." : language === 'en'
+          ? "Integration transparente avec votre plateforme e-commerce, CRM, helpdesk et plus. Utilisez notre API REST ou des connecteurs prêts à l'emploi pour les plateformes populaires."
+          : language === 'fr'
+          ? "Intégration transparente avec votre plateforme e-commerce, CRM, helpdesk et plus. Utilisez notre API REST ou des connecteurs prêts à l'emploi pour les plateformes populaires."
+          : "Naadloze integratie met je e-commerce platform, CRM, helpdesk en meer. Gebruik onze REST API of kant-en-klare connectoren voor populaire platforms.",
       benefits: language === 'en' ? [
         "RESTful API with comprehensive documentation",
         "Native integrations with Shopify, WooCommerce",
@@ -286,9 +442,21 @@ const Features = () => {
     },
     {
       icon: MessageSquare,
-      badge: language === 'en' ? "CONVERSATIONAL FLOWS" : language === 'fr' ? "FLUX CONVERSATIONNELS" : "CONVERSATIONAL FLOWS",
-      title: language === 'en' ? "Intelligent conversation flows that adapt" : language === 'fr' ? "Flux de conversation intelligents qui s'adaptent" : "Intelligente gespreksflows die zich aanpassen",
-      description: language === 'en' ? "Our AI adapts to the needs of every customer. From simple questions to complex product advice - always the right flow." : language === 'fr' ? "Notre IA s'adapte aux besoins de chaque client. Des questions simples aux conseils produits complexes - toujours le bon flux." : "Onze AI past zich aan aan de behoeften van elke klant. Van simpele vragen tot complexe productadvies - altijd de juiste flow.",
+      badge: language === 'en' ? "CONVERSATIONAL FLOWS" : language === 'en'
+          ? "FLUX CONVERSATIONNELS"
+          : language === 'fr'
+          ? "FLUX CONVERSATIONNELS"
+          : "CONVERSATIONAL FLOWS",
+      title: language === 'en' ? "Intelligent conversation flows that adapt" : language === 'en'
+          ? "Flux de conversation intelligents qui s'adaptent"
+          : language === 'fr'
+          ? "Flux de conversation intelligents qui s'adaptent"
+          : "Intelligente gespreksflows die zich aanpassen",
+      description: language === 'en' ? "Our AI adapts to the needs of every customer. From simple questions to complex product advice - always the right flow." : language === 'en'
+          ? "Notre IA s'adapte aux besoins de chaque client. Des questions simples aux conseils produits complexes - toujours le bon flux."
+          : language === 'fr'
+          ? "Notre IA s'adapte aux besoins de chaque client. Des questions simples aux conseils produits complexes - toujours le bon flux."
+          : "Onze AI past zich aan aan de behoeften van elke klant. Van simpele vragen tot complexe productadvies - altijd de juiste flow.",
       benefits: language === 'en' ? [
         "Dynamic flows based on context",
         "Multi-turn conversations with memory",
@@ -306,9 +474,21 @@ const Features = () => {
     },
     {
       icon: Inbox,
-      badge: language === 'en' ? "AI INBOX & INSIGHTS" : language === 'fr' ? "BOÎTE DE RÉCEPTION IA & INSIGHTS" : "AI INBOX & INZICHTEN",
-      title: language === 'en' ? "Get deep insights with AI-powered analytics" : language === 'fr' ? "Obtenez des insights approfondis avec des analyses alimentées par l'IA" : "Krijg diepgaande inzichten met AI-powered analytics",
-      description: language === 'en' ? "Our AI analyzes all conversations and gives you actionable insights to improve your service. Ask questions to the AI agent about trends and customer behavior." : language === 'fr' ? "Notre IA analyse toutes les conversations et vous donne des insights actionnables pour améliorer votre service. Posez des questions à l'agent IA sur les tendances et le comportement des clients." : "Onze AI analyseert alle conversaties en geeft je actionable insights om je service te verbeteren. Stel vragen aan de AI agent over trends en klantgedrag.",
+      badge: language === 'en' ? "AI INBOX & INSIGHTS" : language === 'en'
+          ? "BOÎTE DE RÉCEPTION IA & INSIGHTS"
+          : language === 'fr'
+          ? "BOÎTE DE RÉCEPTION IA & INSIGHTS"
+          : "AI INBOX & INZICHTEN",
+      title: language === 'en' ? "Get deep insights with AI-powered analytics" : language === 'en'
+          ? "Obtenez des insights approfondis avec des analyses alimentees par l'IA"
+          : language === 'fr'
+          ? "Obtenez des insights approfondis avec des analyses alimentées par l'IA"
+          : "Krijg diepgaande inzichten met AI-powered analytics",
+      description: language === 'en' ? "Our AI analyzes all conversations and gives you actionable insights to improve your service. Ask questions to the AI agent about trends and customer behavior." : language === 'en'
+          ? "Notre IA analyse toutes les conversations et vous donne des insights actionnables pour ameliorer votre service. Posez des questions à l'agent IA sur les tendances et le comportement des clients."
+          : language === 'fr'
+          ? "Notre IA analyse toutes les conversations et vous donne des insights actionnables pour améliorer votre service. Posez des questions à l'agent IA sur les tendances et le comportement des clients."
+          : "Onze AI analyseert alle conversaties en geeft je actionable insights om je service te verbeteren. Stel vragen aan de AI agent over trends en klantgedrag.",
       benefits: language === 'en' ? [
         "Real-time dashboard with KPIs",
         "AI-generated improvement points",
@@ -329,11 +509,31 @@ const Features = () => {
   const graphData = [
     {
       "@type": "WebPage",
-      "@id": language === 'en' ? "https://www.glimps.be/en/features" : language === 'fr' ? "https://www.glimps.be/fr/fonctionnalites" : "https://www.glimps.be/features",
-      "url": language === 'en' ? "https://www.glimps.be/en/features" : language === 'fr' ? "https://www.glimps.be/fr/fonctionnalites" : "https://www.glimps.be/features",
-      "name": language === 'en' ? "Features - Glimps AI Chatbot" : language === 'fr' ? "Fonctionnalités - Glimps AI Chatbot" : "Functies - Glimps AI Chatbot",
-      "description": language === 'en' ? "Discover all features of Glimps: checkout bot, package tracking, upselling, multilingual support and more. Complete AI chatbot for e-commerce." : language === 'fr' ? "Découvrez toutes les fonctionnalités de Glimps : bot de paiement, suivi de colis, upselling, support multilingue et plus. Chatbot IA complet pour l'e-commerce." : "Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer. Complete AI chatbot voor e-commerce.",
-      "inLanguage": language === 'en' ? "en-US" : language === 'fr' ? "fr-BE" : "nl-BE",
+      "@id": language === 'en' ? "https://www.glimps.be/en/features" : language === 'en'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : language === 'fr'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : "https://www.glimps.be/features",
+      "url": language === 'en' ? "https://www.glimps.be/en/features" : language === 'en'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : language === 'fr'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : "https://www.glimps.be/features",
+      "name": language === 'en' ? "Features - Glimps AI Chatbot" : language === 'en'
+          ? "Fonctionnalites - Glimps AI Chatbot"
+          : language === 'fr'
+          ? "Fonctionnalités - Glimps AI Chatbot"
+          : "Functies - Glimps AI Chatbot",
+      "description": language === 'en' ? "Discover all features of Glimps: checkout bot, package tracking, upselling, multilingual support and more. Complete AI chatbot for e-commerce." : language === 'en'
+          ? "Decouvrez toutes les fonctionnalites de Glimps : bot de paiement, suivi de colis, upselling, support multilingue et plus. Chatbot IA complet pour l'e-commerce."
+          : language === 'fr'
+          ? "Découvrez toutes les fonctionnalités de Glimps : bot de paiement, suivi de colis, upselling, support multilingue et plus. Chatbot IA complet pour l'e-commerce."
+          : "Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer. Complete AI chatbot voor e-commerce.",
+      "inLanguage": language === 'en' ? "en-US" : language === 'en'
+          ? "fr-BE"
+          : language === 'fr'
+          ? "fr-BE"
+          : "nl-BE",
       "isPartOf": {
         "@id": "https://www.glimps.be#website"
       },
@@ -369,13 +569,25 @@ const Features = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": language === 'en' ? "https://www.glimps.be/en" : language === 'fr' ? "https://www.glimps.be/fr" : "https://www.glimps.be/"
+          "item": language === 'en' ? "https://www.glimps.be/en" : language === 'en'
+          ? "https://www.glimps.be/fr"
+          : language === 'fr'
+          ? "https://www.glimps.be/fr"
+          : "https://www.glimps.be/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": language === 'en' ? "Features" : language === 'fr' ? "Fonctionnalités" : "Functies",
-          "item": language === 'en' ? "https://www.glimps.be/en/features" : language === 'fr' ? "https://www.glimps.be/fr/fonctionnalites" : "https://www.glimps.be/features"
+          "name": language === 'en' ? "Features" : language === 'en'
+          ? "Fonctionnalites"
+          : language === 'fr'
+          ? "Fonctionnalités"
+          : "Functies",
+          "item": language === 'en' ? "https://www.glimps.be/en/features" : language === 'en'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : language === 'fr'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : "https://www.glimps.be/features"
         }
       ]
     }
@@ -384,11 +596,31 @@ const Features = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background">
       <SEO
-        title={language === 'en' ? "Features - Glimps AI Chatbot | Complete E-commerce Solution" : language === 'fr' ? "Fonctionnalités - Glimps AI Chatbot | Solution E-commerce Complète" : "Functies - Glimps AI Chatbot | Complete E-commerce Oplossing"}
-        description={language === 'en' ? "Discover all features of Glimps: checkout bot, package tracking, upselling, multilingual support and more. Complete AI chatbot for e-commerce." : language === 'fr' ? "Découvrez toutes les fonctionnalités de Glimps : bot de paiement, suivi de colis, upselling, support multilingue et plus. Chatbot IA complet pour l'e-commerce." : "Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer. Complete AI chatbot voor e-commerce."}
-        path={language === 'en' ? "/en/features" : language === 'fr' ? "/fr/fonctionnalites" : "/features"}
-        canonical={language === 'en' ? "https://www.glimps.be/en/features" : language === 'fr' ? "https://www.glimps.be/fr/fonctionnalites" : "https://www.glimps.be/features"}
-        keywords={language === 'en' ? "chatbot features, checkout bot, package tracking, upselling, multilingual support, voice interaction, AI features" : language === 'fr' ? "fonctionnalités chatbot, bot de paiement, suivi de colis, upselling, support multilingue, interaction vocale, fonctionnalités IA" : "chatbot functies, checkout bot, pakket tracking, upselling, multilingual support, spraak interactie, AI features"}
+        title={language === 'en' ? "Features - Glimps AI Chatbot | Complete E-commerce Solution" : language === 'en'
+          ? "Fonctionnalites - Glimps AI Chatbot | Solution E-commerce Complete"
+          : language === 'fr'
+          ? "Fonctionnalités - Glimps AI Chatbot | Solution E-commerce Complète"
+          : "Functies - Glimps AI Chatbot | Complete E-commerce Oplossing"}
+        description={language === 'en' ? "Discover all features of Glimps: checkout bot, package tracking, upselling, multilingual support and more. Complete AI chatbot for e-commerce." : language === 'en'
+          ? "Decouvrez toutes les fonctionnalites de Glimps : bot de paiement, suivi de colis, upselling, support multilingue et plus. Chatbot IA complet pour l'e-commerce."
+          : language === 'fr'
+          ? "Découvrez toutes les fonctionnalités de Glimps : bot de paiement, suivi de colis, upselling, support multilingue et plus. Chatbot IA complet pour l'e-commerce."
+          : "Ontdek alle functies van Glimps: checkout bot, pakket tracking, upselling, multilingual support en meer. Complete AI chatbot voor e-commerce."}
+        path={language === 'en' ? "/en/features" : language === 'en'
+          ? "/fr/fonctionnalites"
+          : language === 'fr'
+          ? "/fr/fonctionnalites"
+          : "/features"}
+        canonical={language === 'en' ? "https://www.glimps.be/en/features" : language === 'en'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : language === 'fr'
+          ? "https://www.glimps.be/fr/fonctionnalites"
+          : "https://www.glimps.be/features"}
+        keywords={language === 'en' ? "chatbot features, checkout bot, package tracking, upselling, multilingual support, voice interaction, AI features" : language === 'en'
+          ? "fonctionnalites chatbot, bot de paiement, suivi de colis, upselling, support multilingue, interaction vocale, fonctionnalites IA"
+          : language === 'fr'
+          ? "fonctionnalités chatbot, bot de paiement, suivi de colis, upselling, support multilingue, interaction vocale, fonctionnalités IA"
+          : "chatbot functies, checkout bot, pakket tracking, upselling, multilingual support, spraak interactie, AI features"}
         type="website"
       />
       <StructuredData type="graph" data={graphData} />
@@ -789,7 +1021,11 @@ const Features = () => {
                           <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                             <RotateCcw className="w-5 h-5 text-primary" />
                             <span className="text-sm">
-                              {language === 'en' ? "I'm happy to help you with your return" : language === 'fr' ? "Je vous aide volontiers avec votre retour" : "Ik help je graag met je retour"}
+                              {language === 'en' ? "I'm happy to help you with your return" : language === 'en'
+          ? "Je vous aide volontiers avec votre retour"
+          : language === 'fr'
+          ? "Je vous aide volontiers avec votre retour"
+          : "Ik help je graag met je retour"}
                             </span>
                           </div>
                            <div className="p-4 border border-border rounded-lg space-y-4">
@@ -1619,7 +1855,11 @@ const Features = () => {
           <div className="mt-32 text-center">
             <div className="inline-flex flex-col items-center gap-4 p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
               <h3 className="font-inter text-2xl font-semibold">
-                {language === 'en' ? "Ready to get started?" : language === 'fr' ? "Prêt à commencer ?" : "Klaar om te beginnen?"}
+                {language === 'en' ? "Ready to get started?" : language === 'en'
+          ? "Prêt à commencer ?"
+          : language === 'fr'
+          ? "Prêt à commencer ?"
+          : "Klaar om te beginnen?"}
               </h3>
               <p className="text-muted-foreground max-w-md">
                 {language === 'en'
@@ -1629,8 +1869,16 @@ const Features = () => {
                   : "Ontdek hoe onze AI-chatbot jouw e-commerce klantenservice naar een hoger niveau tilt."
                 }
               </p>
-              <a href={language === 'en' ? "/en/contact" : language === 'fr' ? "/fr/contact" : "/contact"} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-colors inline-block">
-                {language === 'en' ? "Sign up for free" : language === 'fr' ? "S'inscrire gratuitement" : "Gratis aanmelden"}
+              <a href={language === 'en' ? "/en/contact" : language === 'en'
+          ? "/fr/contact"
+          : language === 'fr'
+          ? "/fr/contact"
+          : "/contact"} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-colors inline-block">
+                {language === 'en' ? "Sign up for free" : language === 'en'
+          ? "S'inscrire gratuitement"
+          : language === 'fr'
+          ? "S'inscrire gratuitement"
+          : "Gratis aanmelden"}
               </a>
             </div>
           </div>

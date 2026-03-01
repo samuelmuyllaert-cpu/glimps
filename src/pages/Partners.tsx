@@ -24,20 +24,26 @@ const Partners = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={language === 'fr'
+        title={language === 'en'
+          ? "Partner Program - Glimps AI | Become a partner"
+          : language === 'fr'
           ? "Programme Partenaires - Glimps AI | Devenez partenaire"
           : "Partner Programma - Glimps AI | Word partner"}
-        description={language === 'fr'
+        description={language === 'en'
+          ? "Become a Glimps AI partner and help e-commerce businesses grow with the best AI chatbot solution. Dedicated support and marketing materials."
+          : language === 'fr'
           ? "Devenez partenaire de Glimps AI et aidez les entreprises e-commerce à grandir avec la meilleure solution de chatbot IA. Support dédié et matériel marketing."
           : "Word partner van Glimps AI en help e-commerce bedrijven groeien met de beste AI chatbot oplossing. Dedicated support en marketing materialen."}
-        path={language === 'fr' ? "/fr/partenaires" : "/partners"}
+        path={language === 'en' ? "/en/partners" : language === 'fr' ? "/fr/partenaires" : "/partners"}
       />
       <StructuredData type="organization" />
       <StructuredData
         type="service"
         data={{
-          name: language === 'fr' ? "Programme Partenaires Glimps" : "Glimps Partner Programma",
-          description: language === 'fr'
+          name: language === 'en' ? "Glimps Partner Program" : language === 'fr' ? "Programme Partenaires Glimps" : "Glimps Partner Programma",
+          description: language === 'en'
+            ? "Become a Glimps AI partner with dedicated support and marketing materials"
+            : language === 'fr'
             ? "Devenez partenaire de Glimps AI avec support dédié et matériel marketing"
             : "Word partner van Glimps AI met dedicated support en marketing materialen"
         }}
@@ -45,8 +51,8 @@ const Partners = () => {
       <StructuredData
         type="breadcrumb"
         data={[
-          { name: "Home", url: language === 'fr' ? "/fr" : "/" },
-          { name: language === 'fr' ? "Partenaires" : "Partners", url: language === 'fr' ? "/fr/partenaires" : "/partners" }
+          { name: "Home", url: language === 'en' ? "/en" : language === 'fr' ? "/fr" : "/" },
+          { name: language === 'en' ? "Partners" : language === 'fr' ? "Partenaires" : "Partners", url: language === 'en' ? "/en/partners" : language === 'fr' ? "/fr/partenaires" : "/partners" }
         ]}
       />
       <Navigation />

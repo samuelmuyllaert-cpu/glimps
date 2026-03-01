@@ -2542,7 +2542,119 @@ export const translations = {
         ctaSubtitle: 'Discover how glimps makes your garden webshop flourish',
         ctaButton: 'Start your free trial'
       }
-    }
+    },
+    career: {
+      badge: 'We are hiring',
+      hero: {
+        title: 'Join our team',
+        subtitle: 'At Glimps, we work on the future of e-commerce customer service. Join our ambitious team and help online stores grow through AI technology.'
+      },
+      why: {
+        title: 'Why Glimps?',
+        tech: { title: 'Cutting-Edge Technology', description: 'Work with the latest AI and automation technologies' },
+        team: { title: 'Small Team', description: 'Direct impact on the product and company direction' },
+        growth: { title: 'Growth Opportunities', description: 'Learn and grow with a fast-growing startup' },
+        flexibility: { title: 'Flexibility', description: 'Remote work and flexible hours possible' }
+      },
+      positions: {
+        title: 'Open Positions',
+        developer: {
+          title: 'Full-Stack Developer',
+          subtitle: 'With knowledge of AI and Automations',
+          fulltime: 'Full-time',
+          remote: 'Remote / Hybrid (Belgium)',
+          hours: '40 hours per week',
+          experience: '2+ years experience',
+          about: 'About the position',
+          description1: 'We are looking for a passionate full-stack developer to help us build our AI chatbot. You will work on frontend and backend, implement AI features, and build intelligent automations that help our clients generate more revenue.',
+          description2: 'As one of the first developers at Glimps, you will have direct impact on the product and technical direction of the company. You will work closely with the founders and have plenty of freedom to implement your ideas.',
+          responsibilities: 'Your Tasks',
+          requirements: 'What you bring',
+          required: 'Required',
+          niceToHave: 'Nice to have',
+          offer: 'What we offer',
+          apply: { title: 'Sounds like your dream job?', description: 'Send us your CV and cover letter. We look forward to hearing from you!', button: 'Apply Now' }
+        }
+      },
+      process: {
+        title: 'The Application Process',
+        step1: { title: 'Application', description: 'Send your CV and cover letter' },
+        step2: { title: 'Interview', description: '30 min video call with the founders' },
+        step3: { title: 'Technical Challenge', description: 'Practical exercise (paid)' },
+        step4: { title: 'Offer', description: 'Welcome to the team! 🎉' }
+      }
+    },
+    consultancy: {
+      badge: 'Consulting & Expertise',
+      hero: {
+        title: 'Your Partner in Smart E-commerce Automation',
+        subtitle: 'At Glimps, we are more than just an AI chatbot platform. With years of experience in e-commerce and customer service, we help you choose the best system that perfectly fits your business.'
+      },
+      expertise: {
+        title: 'Why Glimps as Consultant?',
+        experience: { title: 'Years of Experience', description: 'Deep knowledge of the e-commerce sector and customer service automation. We understand the challenges your business faces.' },
+        honest: { title: 'Honest Advice', description: 'We advise you objectively whether Glimps is the best choice for your situation. No pressure selling, only honest expertise.' },
+        knowledge: { title: 'Deep Knowledge', description: 'We know all major tools and systems: Shopify, Odoo, Zendesk, custom solutions and more. We can objectively determine what fits you best.' }
+      },
+      approach: {
+        title: 'Our Approach',
+        subtitle: 'A thorough process that always starts with listening to your unique situation',
+        step1: { title: 'In-Depth Analysis', description: 'We start with a thorough analysis of your current situation: what are your goals, what pain points do you encounter, what is your budget, and what are your growth expectations?' },
+        step2: { title: 'Needs Analysis', description: 'We identify precisely what your business needs: which integrations are crucial, which features are essential, and where the biggest growth opportunities lie?' },
+        step3: { title: 'Tailored Advice', description: 'Based on our analysis, we give honest advice on which solution fits best. This may be Glimps, but also an alternative if that better suits your situation.' },
+        step4: { title: 'Implementation Roadmap', description: 'We create a clear roadmap including integration options, implementation steps, growth possibilities, and a realistic timeline.' },
+        step5: { title: 'Ongoing Support', description: 'Even after implementation, we continue to support you with optimizations, new features, and strategic advice to maximize your growth.' }
+      },
+      systems: {
+        title: 'Systems and Tools We Know',
+        ecommerce: 'E-commerce Platforms',
+        customer: 'Customer Service Tools',
+        shipping: 'Shipping and Logistics',
+        marketing: 'Marketing and Analytics'
+      },
+      trust: {
+        title: 'Trust and Sustainable Growth',
+        description1: 'Our goal is not simply to sell. We want to support you in sustainable growth. That is why we take the time to understand your situation and give honest advice on what is best for your business.',
+        description2: 'If Glimps is not the right solution, we will say so. If we are the perfect match, we will ensure that implementation runs smoothly and that you get maximum results from our collaboration.'
+      },
+      benefits: {
+        title: 'What does this bring?',
+        insight: { title: 'Objective Insight', description: 'Get a clear picture of which solution best fits your situation, without sales pressure.' },
+        implementation: { title: 'Faster Implementation', description: 'Thanks to our expertise, you can start faster and see results earlier in your business.' },
+        success: { title: 'Long-Term Success', description: 'We think about scalability and growth, so your solution grows with your business.' }
+      },
+      cta: {
+        title: 'Schedule a Free Consultation',
+        subtitle: 'Let\'s look together at what the smartest next step is for your e-commerce business. No obligation, only honest advice from experts who understand your business.',
+        contact: 'Prefer direct contact? Send us an email at'
+      }
+    },
+    changelog: {
+      badge: 'Product updates',
+      hero: {
+        title: 'What\'s',
+        titleHighlight: 'new?',
+        subtitle: 'We continuously work on new features and improvements. Stay informed about all updates.'
+      },
+      types: {
+        new: 'New',
+        improvement: 'Improvement',
+        bugfix: 'Bug fix',
+        update: 'Update'
+      },
+      roadmap: {
+        badge: 'Product Roadmap',
+        title: 'Help us determine the future',
+        subtitle: 'Which feature would improve your e-commerce experience? Share your idea and vote for existing suggestions.',
+        featureTitle: 'Feature title',
+        featureTitlePlaceholder: 'e.g. WhatsApp integration',
+        description: 'Description',
+        descriptionPlaceholder: 'Describe your feature idea...',
+        submit: 'Request feature',
+        submitting: 'Submitting...',
+        popular: 'Popular requests'
+      }
+    },
   }
 };
 

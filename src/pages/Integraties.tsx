@@ -35,7 +35,11 @@ const Integraties = () => {
 
   const integrationCategories = [
     {
-      title: language === 'fr' ? "Plateformes E-commerce" : "E-commerce Platforms",
+      title: language === 'en'
+          ? "Plateformes E-commerce"
+          : language === 'fr'
+          ? "Plateformes E-commerce"
+          : "E-commerce Platforms",
       icon: ShoppingCart,
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
@@ -107,7 +111,11 @@ const Integraties = () => {
       ]
     },
     {
-      title: language === 'fr' ? "Expédition & Logistique" : "Verzending & Logistiek",
+      title: language === 'en'
+          ? "Expedition & Logistique"
+          : language === 'fr'
+          ? "Expédition & Logistique"
+          : "Verzending & Logistiek",
       icon: Package,
       color: "text-orange-500",
       bgColor: "bg-orange-500/10",
@@ -254,7 +262,11 @@ const Integraties = () => {
           description: language === 'fr'
             ? "Synchronisation CRM et gestion des leads"
             : "CRM synchronisatie en lead management",
-          status: language === 'fr' ? "Bientôt" : "Binnenkort"
+          status: language === 'en'
+          ? "Bientôt"
+          : language === 'fr'
+          ? "Bientôt"
+          : "Binnenkort"
         },
       ]
     },
@@ -317,13 +329,21 @@ const Integraties = () => {
         description={language === 'fr'
           ? "Connectez Glimps de manière transparente avec Shopify, WooCommerce, SendCloud, WhatsApp et 50+ autres outils. Configuration plug & play en 5 minutes."
           : "Koppel Glimps naadloos met Shopify, WooCommerce, SendCloud, WhatsApp en 50+ andere tools. Plug & play setup binnen 5 minuten."}
-        path={language === 'fr' ? "/fr/integrations" : "/integraties"}
+        path={language === 'en'
+          ? "/fr/integrations"
+          : language === 'fr'
+          ? "/fr/integrations"
+          : "/integraties"}
       />
       <StructuredData type="organization" />
       <StructuredData
         type="service"
         data={{
-          name: language === 'fr' ? "Intégrations Glimps AI" : "Glimps AI Integraties",
+          name: language === 'en'
+          ? "Integrations Glimps AI"
+          : language === 'fr'
+          ? "Intégrations Glimps AI"
+          : "Glimps AI Integraties",
           description: language === 'fr'
             ? "50+ intégrations avec plateformes e-commerce, expédition, CRM et outils marketing"
             : "50+ integraties met e-commerce platforms, verzending, CRM en marketing tools"
@@ -332,8 +352,20 @@ const Integraties = () => {
       <StructuredData
         type="breadcrumb"
         data={[
-          { name: "Home", url: language === 'fr' ? "/fr" : "/" },
-          { name: language === 'fr' ? "Intégrations" : "Integraties", url: language === 'fr' ? "/fr/integrations" : "/integraties" }
+          { name: "Home", url: language === 'en'
+          ? "/fr"
+          : language === 'fr'
+          ? "/fr"
+          : "/" },
+          { name: language === 'en'
+          ? "Integrations"
+          : language === 'fr'
+          ? "Intégrations"
+          : "Integraties", url: language === 'en'
+          ? "/fr/integrations"
+          : language === 'fr'
+          ? "/fr/integrations"
+          : "/integraties" }
         ]}
       />
       <Navigation />
@@ -345,7 +377,11 @@ const Integraties = () => {
             <div className="mb-6 inline-flex items-center justify-center rounded-full bg-primary/10 px-4 py-2">
               <Zap className="mr-2 h-5 w-5 text-primary" />
               <span className="text-sm font-semibold text-primary">
-                {language === 'fr' ? "50+ Intégrations" : "50+ Integraties"}
+                {language === 'en'
+          ? "50+ Integrations"
+          : language === 'fr'
+          ? "50+ Intégrations"
+          : "50+ Integraties"}
               </span>
             </div>
             <h1 className="mb-6 text-5xl font-bold md:text-6xl">
@@ -385,7 +421,11 @@ const Integraties = () => {
                 </div>
               </div>
               <h3 className="mb-2 text-xl font-bold">
-                {language === 'fr' ? "Configuration Plug & Play" : "Plug & Play Setup"}
+                {language === 'en'
+          ? "Configuration Plug & Play"
+          : language === 'fr'
+          ? "Configuration Plug & Play"
+          : "Plug & Play Setup"}
               </h3>
               <p className="text-muted-foreground">
                 {language === 'fr'
@@ -400,7 +440,11 @@ const Integraties = () => {
                 </div>
               </div>
               <h3 className="mb-2 text-xl font-bold">
-                {language === 'fr' ? "Synchronisation en Temps Réel" : "Real-time Sync"}
+                {language === 'en'
+          ? "Synchronisation en Temps Reel"
+          : language === 'fr'
+          ? "Synchronisation en Temps Réel"
+          : "Real-time Sync"}
               </h3>
               <p className="text-muted-foreground">
                 {language === 'fr'
@@ -415,7 +459,11 @@ const Integraties = () => {
                 </div>
               </div>
               <h3 className="mb-2 text-xl font-bold">
-                {language === 'fr' ? "Intégrations Personnalisées" : "Custom Integraties"}
+                {language === 'en'
+          ? "Integrations Personnalisees"
+          : language === 'fr'
+          ? "Intégrations Personnalisées"
+          : "Custom Integraties"}
               </h3>
               <p className="text-muted-foreground">
                 {language === 'fr'
@@ -480,7 +528,11 @@ const Integraties = () => {
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-4xl font-bold">
-              {language === 'fr' ? "Il vous manque une intégration ?" : "Mis je een integratie?"}
+              {language === 'en'
+          ? "Il vous manque une integration ?"
+          : language === 'fr'
+          ? "Il vous manque une intégration ?"
+          : "Mis je een integratie?"}
             </h2>
             <p className="mb-8 text-xl text-muted-foreground">
               {language === 'fr'
@@ -488,10 +540,18 @@ const Integraties = () => {
                 : "We bouwen graag custom koppelingen met jouw systemen. Neem contact op en we kijken wat mogelijk is."}
             </p>
             <a
-              href={language === 'fr' ? "/fr/consultance" : "/consultancy"}
+              href={language === 'en'
+          ? "/fr/consultance"
+          : language === 'fr'
+          ? "/fr/consultance"
+          : "/consultancy"}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-primary/90 hover:gap-3"
             >
-              {language === 'fr' ? "Discutez de votre intégration →" : "Bespreek jouw integratie →"}
+              {language === 'en'
+          ? "Discutez de votre integration →"
+          : language === 'fr'
+          ? "Discutez de votre intégration →"
+          : "Bespreek jouw integratie →"}
             </a>
           </div>
         </div>
