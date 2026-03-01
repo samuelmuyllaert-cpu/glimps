@@ -23,7 +23,7 @@ const AIJourney = () => {
     {
       icon: MessageCircle,
       iconBg: "#FF6A6A",
-      title: language === 'fr' ? "Le client pose une question" : "Klant stelt vraag",
+      title: language === 'en' ? "Customer asks question" : language === 'fr' ? "Le client pose une question" : "Klant stelt vraag",
       time: "0.00s",
       content: (
         <div className="space-y-3">
@@ -33,11 +33,11 @@ const AIJourney = () => {
             </div>
             <div>
               <div className="font-medium text-sm">Emma</div>
-              <div className="text-xs text-muted-foreground">{language === 'fr' ? "Jeune client" : "Jonge klant"}</div>
+              <div className="text-xs text-muted-foreground">{language === 'en' ? "Young customer" : language === 'fr' ? "Jeune client" : "Jonge klant"}</div>
             </div>
           </div>
           <div className="bg-muted/50 rounded-lg p-3 text-sm">
-            {language === 'fr' ? '"Baskets rouges taille 42"' : '"Rode sneakers maat 42"'}
+            {language === 'en' ? '"Red sneakers size 42"' : language === 'fr' ? '"Baskets rouges taille 42"' : '"Rode sneakers maat 42"'}
           </div>
         </div>
       ),
@@ -45,7 +45,7 @@ const AIJourney = () => {
     {
       icon: ShoppingCart,
       iconBg: "#FF6A6A",
-      title: language === 'fr' ? "Consulte le panier" : "Bekijkt winkelmandje",
+      title: language === 'en' ? "Views shopping cart" : language === 'fr' ? "Consulte le panier" : "Bekijkt winkelmandje",
       time: "0.01s",
       content: (
         <div className="space-y-2">
@@ -65,7 +65,7 @@ const AIJourney = () => {
           </div>
           <div className="text-xs text-red-500 flex items-center gap-1">
             <Sparkles className="w-3 h-3" />
-            {language === 'fr' ? 'Préférence Nike détectée' : 'Nike voorkeur gedetecteerd'}
+            {language === 'en' ? 'Nike preference detected' : language === 'fr' ? 'Préférence Nike détectée' : 'Nike voorkeur gedetecteerd'}
           </div>
         </div>
       ),
@@ -73,12 +73,14 @@ const AIJourney = () => {
     {
       icon: Brain,
       iconBg: "#8B5CF6",
-      title: language === 'fr' ? "L'IA comprend le contexte" : "AI begrijpt context",
+      title: language === 'en' ? "AI understands context" : language === 'fr' ? "L'IA comprend le contexte" : "AI begrijpt context",
       time: "0.015s",
       content: (
         <div className="space-y-3">
           <div className="text-xs text-muted-foreground">
-            {language === 'fr'
+            {language === 'en'
+              ? "The AI analyzes intention, behavior, and context to form the perfect answer."
+              : language === 'fr'
               ? "L'IA analyse l'intention, le comportement et le contexte pour former la réponse parfaite."
               : "De AI analyseert intentie, gedrag en context om het perfecte antwoord te vormen."
             }
@@ -88,24 +90,24 @@ const AIJourney = () => {
               <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
                 <Eye className="w-5 h-5 text-purple-600" />
               </div>
-              <div className="text-xs">{language === 'fr' ? 'Intention' : 'Intentie'}</div>
+              <div className="text-xs">{language === 'en' ? 'Intent' : language === 'fr' ? 'Intention' : 'Intentie'}</div>
             </div>
             <div className="flex flex-col items-center gap-1">
               <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
                 <User className="w-5 h-5 text-purple-600" />
               </div>
-              <div className="text-xs">{language === 'fr' ? 'Profil' : 'Profiel'}</div>
+              <div className="text-xs">{language === 'en' ? 'Profile' : language === 'fr' ? 'Profil' : 'Profiel'}</div>
             </div>
             <div className="flex flex-col items-center gap-1">
               <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
                 <TrendingUp className="w-5 h-5 text-purple-600" />
               </div>
-              <div className="text-xs">{language === 'fr' ? 'Comportement' : 'Gedrag'}</div>
+              <div className="text-xs">{language === 'en' ? 'Behavior' : language === 'fr' ? 'Comportement' : 'Gedrag'}</div>
             </div>
           </div>
           <div className="text-xs text-purple-600 flex items-center gap-1">
             <Sparkles className="w-3 h-3" />
-            {language === 'fr' ? 'Contexte entièrement compris' : 'Context volledig begrepen'}
+            {language === 'en' ? 'Context fully understood' : language === 'fr' ? 'Contexte entièrement compris' : 'Context volledig begrepen'}
           </div>
         </div>
       ),
@@ -113,12 +115,14 @@ const AIJourney = () => {
     {
       icon: Zap,
       iconBg: "#3B82F6",
-      title: language === 'fr' ? "Adapte le ton" : "Past tone aan",
+      title: language === 'en' ? "Adjusts tone" : language === 'fr' ? "Adapte le ton" : "Past tone aan",
       time: "0.025s",
       content: (
         <div className="space-y-3">
           <div className="text-xs text-muted-foreground">
-            {language === 'fr'
+            {language === 'en'
+              ? "Recognizes who's speaking and automatically adjusts the tone."
+              : language === 'fr'
               ? "Reconnaît qui parle et adapte automatiquement le ton."
               : "Herkent wie er spreekt en past toon automatisch aan."
             }
@@ -130,7 +134,7 @@ const AIJourney = () => {
                 <span className="text-[10px]">B2B</span>
               </div>
               <div className="text-[10px]">
-                {language === 'fr' ? '"Bonjour ! Je serais ravi de vous aider..."' : '"Goedendag! Graag help ik u verder..."'}
+                {language === 'en' ? '"Good day! I would be happy to help you..."' : language === 'fr' ? '"Bonjour ! Je serais ravi de vous aider..."' : '"Goedendag! Graag help ik u verder..."'}
               </div>
             </div>
             <div className="flex-1 bg-blue-50 rounded p-2 text-xs border-2 border-blue-500">
@@ -138,10 +142,10 @@ const AIJourney = () => {
                 <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center text-white text-[8px]">
                   E
                 </div>
-                <span className="text-[10px] font-medium">{language === 'fr' ? 'Emma (Active)' : 'Emma (Actief)'}</span>
+                <span className="text-[10px] font-medium">{language === 'en' ? 'Emma (Active)' : language === 'fr' ? 'Emma (Active)' : 'Emma (Actief)'}</span>
               </div>
               <div className="text-[10px]">
-                {language === 'fr' ? '"Hey! 👋 Parfait, j\'ai..."' : '"Hey! 👋 Perfect, ik heb..."'}
+                {language === 'en' ? '"Hey! 👋 Perfect, I have..."' : language === 'fr' ? '"Hey! 👋 Parfait, j\'ai..."' : '"Hey! 👋 Perfect, ik heb..."'}
               </div>
             </div>
           </div>
@@ -151,28 +155,30 @@ const AIJourney = () => {
     {
       icon: Target,
       iconBg: "#22C55E",
-      title: language === 'fr' ? "Génère des recommandations" : "Genereert aanbeveling",
+      title: language === 'en' ? "Generates recommendation" : language === 'fr' ? "Génère des recommandations" : "Genereert aanbeveling",
       time: "0.055s",
       content: (
         <div className="space-y-2">
           <div className="text-xs text-muted-foreground mb-2">
-            {language === 'fr'
+            {language === 'en'
+              ? "Combines sales data + customer profile + behavior"
+              : language === 'fr'
               ? "Combine données de vente + profil client + comportement"
               : "Combineert verkoopdata + klantprofiel + gedrag"
             }
           </div>
           <div className="grid grid-cols-2 gap-2 text-[10px]">
             <div className="flex items-center gap-1 text-green-600">
-              • {language === 'fr' ? 'Panier' : 'Winkelmandje'}
+              • {language === 'en' ? 'Cart' : language === 'fr' ? 'Panier' : 'Winkelmandje'}
             </div>
             <div className="flex items-center gap-1 text-green-600">
-              • {language === 'fr' ? 'Stock' : 'Voorraad'}
+              • {language === 'en' ? 'Stock' : language === 'fr' ? 'Stock' : 'Voorraad'}
             </div>
             <div className="flex items-center gap-1 text-green-600">
               • Reviews ⭐ 4.8+
             </div>
             <div className="flex items-center gap-1 text-green-600">
-              • Conversie
+              • {language === 'en' ? 'Conversion' : language === 'fr' ? 'Conversion' : 'Conversie'}
             </div>
           </div>
           <div className="grid grid-cols-3 gap-1 mt-2">
@@ -201,12 +207,12 @@ const AIJourney = () => {
     {
       icon: Check,
       iconBg: "#22C55E",
-      title: language === 'fr' ? "Réponse parfaite" : "Perfect antwoord",
+      title: language === 'en' ? "Perfect answer" : language === 'fr' ? "Réponse parfaite" : "Perfect antwoord",
       time: "⚡ 80ms",
       content: (
         <div className="space-y-2">
           <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-2 text-[10px] text-yellow-900">
-            {language === 'fr' ? '⚡ 5x plus rapide qu\'une réaction humaine (100-150ms)' : '⚡ 5x sneller dan menselijke reactie (100-150ms)'}
+            {language === 'en' ? '⚡ 5x faster than human response (100-150ms)' : language === 'fr' ? '⚡ 5x plus rapide qu\'une réaction humaine (100-150ms)' : '⚡ 5x sneller dan menselijke reactie (100-150ms)'}
           </div>
           <div className="bg-muted/30 rounded-lg p-2 space-y-2">
             <div className="flex items-center gap-2">
@@ -216,7 +222,9 @@ const AIJourney = () => {
               <span className="text-[10px] font-medium">Glimps AI</span>
             </div>
             <div className="text-[11px]">
-              {language === 'fr' ? (
+              {language === 'en' ? (
+                <>Hey! 👋 I have <span className="font-semibold">23 red sneakers</span> in size 42. Based on your Nike preference:</>
+              ) : language === 'fr' ? (
                 <>Hey! 👋 J'ai <span className="font-semibold">23 baskets rouges</span> en taille 42. Basé sur votre préférence Nike :</>
               ) : (
                 <>Hey! 👋 Ik heb <span className="font-semibold">23 rode sneakers</span> in maat 42. Op basis van je Nike voorkeur:</>
@@ -261,16 +269,20 @@ const AIJourney = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <Badge variant="outline" className="mb-6 text-red-500 border-red-200 bg-white">
-            {language === 'fr' ? 'DANS LES COULISSES' : 'ACHTER DE SCHERMEN'}
+            {language === 'en' ? 'BEHIND THE SCENES' : language === 'fr' ? 'DANS LES COULISSES' : 'ACHTER DE SCHERMEN'}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            {language === 'fr'
+            {language === 'en'
+              ? 'From question to answer in 80 milliseconds'
+              : language === 'fr'
               ? 'De la question à la réponse en 80 millisecondes'
               : 'Van vraag naar antwoord in 80 milliseconden'
             }
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {language === 'fr'
+            {language === 'en'
+              ? 'From intent recognition to personalization: see the process that makes every customer interaction efficient and accurate.'
+              : language === 'fr'
               ? 'De la reconnaissance d\'intention à la personnalisation : découvrez le processus qui rend chaque interaction client efficace et précise.'
               : 'Van intentieherkenning tot personalisatie: bekijk het proces dat elke klantinteractie efficiënt en accuraat maakt.'
             }
@@ -325,7 +337,9 @@ const AIJourney = () => {
         <div className="flex items-center justify-center gap-2 text-sm text-red-500 mt-6">
           <ArrowRight className="w-4 h-4" />
           <span>
-            {language === 'fr'
+            {language === 'en'
+              ? 'Scroll right to follow the journey'
+              : language === 'fr'
               ? 'Faites défiler vers la droite pour suivre le parcours'
               : 'Scroll naar rechts om de reis te volgen'
             }

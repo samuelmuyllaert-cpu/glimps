@@ -32,15 +32,15 @@ const Integrations = () => {
         <div className="mb-16 text-center">
           <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-purple-500/20 border border-primary/20 mb-4">
             <p className="text-sm font-semibold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-              {language === 'fr' ? 'NOS INTÉGRATIONS PRINCIPALES' : 'ONZE PRIMAIRE INTEGRATIES'}
+              {language === 'en' ? 'OUR PRIMARY INTEGRATIONS' : language === 'fr' ? 'NOS INTÉGRATIONS PRINCIPALES' : 'ONZE PRIMAIRE INTEGRATIES'}
             </p>
           </div>
           <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
-            {language === 'fr' ? 'Facilitez la productivité' : 'Maak productiviteit makkelijker'}
+            {language === 'en' ? 'Make productivity easier' : language === 'fr' ? 'Facilitez la productivité' : 'Maak productiviteit makkelijker'}
             <br />
-            {language === 'fr' ? 'avec ' : 'met '}
+            {language === 'en' ? 'with ' : language === 'fr' ? 'avec ' : 'met '}
             <span className="bg-gradient-to-r from-primary via-purple-600 to-accent bg-clip-text text-transparent font-bold">
-              {language === 'fr' ? '50+ intégrations' : '50+ integraties'}
+              {language === 'en' ? '50+ integrations' : language === 'fr' ? '50+ intégrations' : '50+ integraties'}
             </span>
           </h2>
         </div>
@@ -64,13 +64,13 @@ const Integrations = () => {
         {/* Bottom text */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-6">
-            {language === 'fr' ? 'Et bien plus d\'intégrations disponibles' : 'En nog veel meer integraties beschikbaar'}
+            {language === 'en' ? 'And many more integrations available' : language === 'fr' ? 'Et bien plus d\'intégrations disponibles' : 'En nog veel meer integraties beschikbaar'}
           </p>
           <a
-            href={language === 'fr' ? '/fr/integrations' : '/integraties'}
+            href={language === 'en' ? '/en/integrations' : language === 'fr' ? '/fr/integrations' : '/integraties'}
             className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all hover:gap-3 hover:text-purple-600"
           >
-            {language === 'fr' ? 'Voir toutes les intégrations →' : 'Bekijk alle integraties →'}
+            {language === 'en' ? 'View all integrations →' : language === 'fr' ? 'Voir toutes les intégrations →' : 'Bekijk alle integraties →'}
           </a>
         </div>
       </div>

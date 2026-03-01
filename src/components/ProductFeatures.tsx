@@ -11,13 +11,15 @@ const ProductFeatures = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-wider text-primary mb-4">
-            {language === 'fr' ? 'FONCTIONNALITÉS PRODUIT' : 'PRODUCT FEATURES'}
+            {language === 'en' ? 'PRODUCT FEATURES' : language === 'fr' ? 'FONCTIONNALITÉS PRODUIT' : 'PRODUCT FEATURES'}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            {language === 'fr' ? 'Libérez la puissance de l\'automatisation' : 'Ontketen de kracht van automatisering'}
+            {language === 'en' ? 'Unleash the power of automation' : language === 'fr' ? 'Libérez la puissance de l\'automatisation' : 'Ontketen de kracht van automatisering'}
           </h2>
           <p className="text-xl text-muted-foreground">
-            {language === 'fr' ? (
+            {language === 'en' ? (
+              <>Boost your <span className="text-primary">e-commerce</span> excellence</>
+            ) : language === 'fr' ? (
               <>Boostez votre excellence <span className="text-primary">e-commerce</span></>
             ) : (
               <>Boost je <span className="text-primary">e-commerce</span> excellentie</>
@@ -29,15 +31,15 @@ const ProductFeatures = () => {
           <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
             <TabsTrigger value="analytics" className="flex items-center gap-2">
               <BarChart3 className="w-4 h-4" />
-              {language === 'fr' ? 'Analytics IA' : 'AI Analytics'}
+              {language === 'en' ? 'AI Analytics' : language === 'fr' ? 'Analytics IA' : 'AI Analytics'}
             </TabsTrigger>
             <TabsTrigger value="automation" className="flex items-center gap-2">
               <Zap className="w-4 h-4" />
-              {language === 'fr' ? 'Automatisation' : 'Automatisering'}
+              {language === 'en' ? 'Automation' : language === 'fr' ? 'Automatisation' : 'Automatisering'}
             </TabsTrigger>
             <TabsTrigger value="personalization" className="flex items-center gap-2">
               <Users className="w-4 h-4" />
-              {language === 'fr' ? 'Personnalisation' : 'Personalisatie'}
+              {language === 'en' ? 'Personalization' : language === 'fr' ? 'Personnalisation' : 'Personalisatie'}
             </TabsTrigger>
           </TabsList>
 
@@ -46,13 +48,17 @@ const ProductFeatures = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-3xl font-bold mb-4">
-                    {language === 'fr'
+                    {language === 'en'
+                      ? 'Strengthen your brand and reach customers in an unprecedented way with Glimps'
+                      : language === 'fr'
                       ? 'Renforcez votre marque et atteignez les clients de manière inédite avec Glimps'
                       : 'Versterk je merk en bereik klanten op een ongekende manier met Glimps'
                     }
                   </h3>
                   <p className="text-muted-foreground">
-                    {language === 'fr'
+                    {language === 'en'
+                      ? 'Ready to transform your customer service? Register for a demo and begin your journey to automated excellence. Your success story starts here.'
+                      : language === 'fr'
                       ? 'Prêt à transformer votre service client ? Inscrivez-vous pour une démo et commencez votre parcours vers l\'excellence automatisée. Votre success story commence ici.'
                       : 'Klaar om je klantenservice te transformeren? Registreer voor een demo en begin aan je reis naar geautomatiseerde excellentie. Je succesverhaal begint hier.'
                     }
@@ -63,13 +69,13 @@ const ProductFeatures = () => {
                   <div>
                     <div className="text-5xl font-bold mb-2">92%</div>
                     <p className="text-muted-foreground">
-                      {language === 'fr' ? 'Augmentation de la conversion' : 'Toename in conversie'}
+                      {language === 'en' ? 'Increase in conversion' : language === 'fr' ? 'Augmentation de la conversion' : 'Toename in conversie'}
                     </p>
                   </div>
                   <div>
                     <div className="text-5xl font-bold mb-2">3.8x</div>
                     <p className="text-muted-foreground">
-                      {language === 'fr' ? 'Plus de ventes' : 'Meer verkoop'}
+                      {language === 'en' ? 'More sales' : language === 'fr' ? 'Plus de ventes' : 'Meer verkoop'}
                     </p>
                   </div>
                 </div>
@@ -158,13 +164,17 @@ const ProductFeatures = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-3xl font-bold mb-4">
-                    {language === 'fr'
+                    {language === 'en'
+                      ? 'Automate your workflows and save time'
+                      : language === 'fr'
                       ? 'Automatisez vos workflows et gagnez du temps'
                       : 'Automatiseer je workflows en bespaar tijd'
                     }
                   </h3>
                   <p className="text-muted-foreground">
-                    {language === 'fr'
+                    {language === 'en'
+                      ? 'Let your AI agent automatically execute repetitive tasks and focus on what really matters for your business. Increase efficiency and productivity.'
+                      : language === 'fr'
                       ? 'Laissez votre agent IA exécuter automatiquement les tâches répétitives et concentrez-vous sur ce qui compte vraiment pour votre entreprise. Augmentez l\'efficacité et la productivité.'
                       : 'Laat je AI-agent repetitieve taken automatisch uitvoeren en focus op wat echt belangrijk is voor je bedrijf. Verhoog efficiëntie en productiviteit.'
                     }
@@ -175,13 +185,13 @@ const ProductFeatures = () => {
                   <div>
                     <div className="text-5xl font-bold mb-2">85%</div>
                     <p className="text-muted-foreground">
-                      {language === 'fr' ? 'Moins de travail manuel' : 'Minder handmatig werk'}
+                      {language === 'en' ? 'Less manual work' : language === 'fr' ? 'Moins de travail manuel' : 'Minder handmatig werk'}
                     </p>
                   </div>
                   <div>
                     <div className="text-5xl font-bold mb-2">24/7</div>
                     <p className="text-muted-foreground">
-                      {language === 'fr' ? 'Toujours disponible' : 'Altijd beschikbaar'}
+                      {language === 'en' ? 'Always available' : language === 'fr' ? 'Toujours disponible' : 'Altijd beschikbaar'}
                     </p>
                   </div>
                 </div>
@@ -208,13 +218,17 @@ const ProductFeatures = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-3xl font-bold mb-4">
-                    {language === 'fr'
+                    {language === 'en'
+                      ? 'Personalized experiences that convert'
+                      : language === 'fr'
                       ? 'Expériences personnalisées qui convertissent'
                       : 'Persoonlijke ervaringen die converteren'
                     }
                   </h3>
                   <p className="text-muted-foreground">
-                    {language === 'fr'
+                    {language === 'en'
+                      ? 'Offer every customer a unique, personalized experience based on their behavior and preferences. Increase engagement and loyalty.'
+                      : language === 'fr'
                       ? 'Offrez à chaque client une expérience unique et personnalisée basée sur son comportement et ses préférences. Augmentez l\'engagement et la fidélité.'
                       : 'Bied elke klant een unieke, gepersonaliseerde ervaring op basis van hun gedrag en voorkeuren. Verhoog engagement en loyaliteit.'
                     }
@@ -225,13 +239,13 @@ const ProductFeatures = () => {
                   <div>
                     <div className="text-5xl font-bold mb-2">4.5x</div>
                     <p className="text-muted-foreground">
-                      {language === 'fr' ? 'Engagement supérieur' : 'Hogere engagement'}
+                      {language === 'en' ? 'Higher engagement' : language === 'fr' ? 'Engagement supérieur' : 'Hogere engagement'}
                     </p>
                   </div>
                   <div>
                     <div className="text-5xl font-bold mb-2">76%</div>
                     <p className="text-muted-foreground">
-                      {language === 'fr' ? 'Plus d\'achats répétés' : 'Meer herhaalaankopen'}
+                      {language === 'en' ? 'More repeat purchases' : language === 'fr' ? 'Plus d\'achats répétés' : 'Meer herhaalaankopen'}
                     </p>
                   </div>
                 </div>
@@ -243,10 +257,12 @@ const ProductFeatures = () => {
                     <div className="text-center">
                       <Users className="w-24 h-24 mx-auto mb-4 text-primary" />
                       <p className="text-xl font-semibold">
-                        {language === 'fr' ? 'Moteur de Personnalisation' : 'Personalisatie Engine'}
+                        {language === 'en' ? 'Personalization Engine' : language === 'fr' ? 'Moteur de Personnalisation' : 'Personalisatie Engine'}
                       </p>
                       <p className="text-muted-foreground mt-2">
-                        {language === 'fr'
+                        {language === 'en'
+                          ? 'Tailored for every individual customer'
+                          : language === 'fr'
                           ? 'Sur mesure pour chaque client individuel'
                           : 'Maatwerk voor elke individuele klant'
                         }
