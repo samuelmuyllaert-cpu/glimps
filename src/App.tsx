@@ -153,6 +153,50 @@ const App = () => (
         <Route path="/fr/legal" element={<Legal />} />
         <Route path="/fr/prosportlights" element={<ProSportLights />} />
         <Route path="/fr/lensonline" element={<LensOnline />} />
+        {/* English Routes */}
+        <Route path="/en" element={<Index />} />
+        <Route path="/en/features" element={<Features />} />
+        <Route path="/en/demo" element={<Demo />} />
+        <Route path="/en/faq" element={<FAQ />} />
+        <Route path="/en/roi" element={<ROI />} />
+        <Route path="/en/changelog" element={<Changelog />} />
+        <Route path="/en/blog" element={<Blog />} />
+        <Route path="/en/about" element={<About />} />
+        <Route path="/en/career" element={<Career />} />
+        <Route path="/en/login" element={<Login />} />
+        <Route path="/en/ecom-agents" element={<EcomAgents />} />
+        <Route path="/en/ecom-readiness" element={<EcomReadiness />} />
+        <Route path="/en/partners" element={<Partners />} />
+        <Route path="/en/how-we-work" element={<HowWeWork />} />
+        <Route path="/en/consultancy" element={<Consultancy />} />
+        <Route path="/en/integrations" element={<Integraties />} />
+        <Route path="/en/contact" element={<Contact />} />
+        <Route path="/en/blog/increase-conversion" element={<ConversieVerhogen />} />
+        <Route path="/en/blog/future-ai-2025" element={<ToekomstAI2025 />} />
+        <Route path="/en/blog/case-study-fashionhub" element={<CaseStudyFashionHub />} />
+        <Route path="/en/blog/personalization-conversions" element={<PersonalisatieConversies />} />
+        <Route path="/en/blog/chatbot-mistakes" element={<FoutenChatbots />} />
+        <Route path="/en/blog/shopify-integration" element={<ShopifyIntegratie />} />
+        <Route path="/en/blog/amazon-rufus" element={<AmazonRufus />} />
+        <Route path="/en/blog/implement-ai-chatbots" element={<AIChatbotsImplementeren />} />
+        <Route path="/en/blog/ai-chatbots-vs-customer-service" element={<AIChatbotsVsKlantenservice />} />
+        <Route path="/en/blog/roi-ai-chatbots" element={<ROIAIChatbots />} />
+        <Route path="/en/blog/automate-ai-chatbots" element={<AIChatbotsAutomatiseren />} />
+        <Route path="/en/blog/future-ai-ecommerce-2026" element={<ToekomstAI2026 />} />
+        <Route path="/en/blog/chatbots-vs-live-chat" element={<ChatbotsVsLiveChat />} />
+        <Route path="/en/blog/ai-personalization-ecommerce" element={<PersonalisatieAI />} />
+        <Route path="/en/blog/conversational-commerce-trends" element={<ConversationalCommerce />} />
+        <Route path="/en/blog/chatbots-boost-sales" element={<ChatbotsBoostenVerkoop />} />
+        <Route path="/en/blog/reduce-cart-abandonment-chatbot" element={<CartAbandonmentReduceren />} />
+        <Route path="/en/industries/fashion-design" element={<FashionDesign />} />
+        <Route path="/en/industries/beauty-cosmetics" element={<BeautyCosmetica />} />
+        <Route path="/en/industries/electronics" element={<Electronics />} />
+        <Route path="/en/industries/furniture-interior" element={<MeubelsInterieur />} />
+        <Route path="/en/industries/sportswear-fitness" element={<SportkledingFitness />} />
+        <Route path="/en/industries/garden-outdoor" element={<TuinBuitenleven />} />
+        <Route path="/en/legal" element={<Legal />} />
+        <Route path="/en/prosportlights" element={<ProSportLights />} />
+        <Route path="/en/lensonline" element={<LensOnline />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
         </Routes>

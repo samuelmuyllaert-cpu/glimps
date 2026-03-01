@@ -1758,6 +1758,791 @@ export const translations = {
         ctaButton: 'Commencez votre essai gratuit'
       }
     }
+  },
+  en: {
+    nav: {
+      features: 'Features',
+      demo: 'Demo',
+      pricing: 'Pricing',
+      blog: 'Blog',
+      contact: 'Contact',
+      login: 'Login'
+    },
+    hero: {
+      overline: 'AI-Powered Customer Support',
+      title: 'Intelligent chatbots\nfor\ne-commerce',
+      description: 'Our intelligent chatbots automatically answer questions about products, shipping, and orders - even outside business hours. Increase your conversion with AI.',
+      cta: 'Get started for free',
+      ctaSecondary: 'See glimps in action'
+    },
+    howItWorks: {
+      badge: 'How it works',
+      title: 'Work smarter',
+      subtitle: 'with direct access for every customer.',
+      steps: [
+        {
+          number: '01',
+          title: 'Screening your business',
+          description: 'We only work with brands that are truly ready for AI. We screen your webshop, data, and systems to determine where the biggest gains lie.'
+        },
+        {
+          number: '02',
+          title: 'Analysis of customer questions',
+          description: 'We examine 80% of the most frequently asked questions — that\'s the foundation for maximum automation.'
+        },
+        {
+          number: '03',
+          title: 'Implementation & training',
+          description: 'Glimps is fed with your product data, policies, and tone of voice — so it sounds like your brand.'
+        },
+        {
+          number: '04',
+          title: 'Go-live & optimization',
+          description: 'After approval, your bot goes live. From then on, we continuously improve based on real data.'
+        }
+      ]
+    },
+    testimonials: {
+      badge: 'Testimonials',
+      title: 'Wall of Love 💜',
+      subtitle: 'See what e-commerce businesses say about glimps',
+      items: [
+        {
+          name: 'Sarah Jansen',
+          role: 'E-commerce Manager',
+          company: 'FashionHub',
+          text: 'glimps has transformed our customer service. Response times dropped from hours to seconds, and our conversion rate increased by 23%.'
+        },
+        {
+          name: 'Michael de Vries',
+          role: 'Founder & CEO',
+          company: 'TechGear Store',
+          text: 'The AI understands complex product questions better than I expected. It\'s like having an expert salesperson who works 24/7.'
+        },
+        {
+          name: 'Emma Willems',
+          role: 'Customer Success Lead',
+          company: 'BeautyBox',
+          text: 'Our team now focuses on complex problems while glimps handles routine questions. Customer satisfaction has never been higher!'
+        },
+        {
+          name: 'David Rodriguez',
+          role: 'Operations Director',
+          company: 'HomeEssentials',
+          text: 'The multilingual support is a game changer for our international expansion. glimps helps us serve customers in 12 countries seamlessly.'
+        },
+        {
+          name: 'Lisa Andersson',
+          role: 'Marketing Director',
+          company: 'SportsPro',
+          text: 'It doesn\'t just answer questions, the smart product recommendations have increased our average order value by 18%.'
+        },
+        {
+          name: 'James Thompson',
+          role: 'Co-founder',
+          company: 'GadgetWorld',
+          text: 'Implementation was incredibly simple. Within hours, glimps was handling customer questions with impressive accuracy.'
+        }
+      ]
+    },
+    features: {
+      badge: 'What Glimps automates',
+      title: 'Why intelligent chatbots are essential for e-commerce',
+      description: 'Delivering quality service requires time and attention. While your team handles order tracking questions, potential buyers remain without product advice. Our intelligent chatbots combine automated support with active purchase guidance.',
+      list: [
+        'Answer product questions instantly',
+        'Personalized recommendations based on behavior',
+        'Automatic order tracking updates',
+        'Recover abandoned carts',
+        'Upsell and cross-sell opportunities'
+      ],
+      cta: 'Discover the possibilities',
+      chatCustomer: 'Customer',
+      chatBot: 'AI Chatbot',
+      chatMessage1: 'Where is my order? I have order number #12849',
+      chatReply1: 'Your order is on its way! 📦 The package was shipped yesterday and will arrive tomorrow between 2:00 PM - 6:00 PM.',
+      chatMessage2: 'Perfect! Thank you 😊'
+    },
+    cta: {
+      overline: 'Start free with glimps',
+      title: 'Stop missing sales & start\nsurprising customers',
+      description: 'Join hundreds of e-commerce businesses using AI for instant support, answering questions 24/7, and increasing conversions.',
+      button: 'Schedule a demo'
+    },
+    faq: {
+      title: 'Frequently asked questions',
+      subtitle: 'Everything you need to know',
+      items: [
+        {
+          q: 'How does Glimps work?',
+          a: 'Glimps is an AI chatbot that integrates seamlessly with your webshop. The chatbot automatically answers visitor questions, helps with product recommendations, and guides customers through the purchase process.'
+        },
+        {
+          q: 'Which platforms are supported?',
+          a: 'We support all major e-commerce platforms such as Shopify, WooCommerce, Magento, PrestaShop, and more. Custom webshops can also be easily integrated.'
+        },
+        {
+          q: 'Can I customize the chatbot?',
+          a: 'Yes, you can fully customize the chatbot to your brand. From colors and text to conversation flows and product recommendations.'
+        },
+        {
+          q: 'How long does implementation take?',
+          a: 'Basic implementation usually takes 1-2 days. For advanced features and customization, this can take 1-2 weeks.'
+        }
+      ]
+    },
+    demo: {
+      title: 'See how Glimps\ntransforms your business',
+      subtitle: 'Schedule a personalized demo and discover how our AI chatbot automates your customer service, increases conversions, and delights customers.',
+      whatToExpect: 'What to expect',
+      expectItems: [
+        {
+          title: '30 minutes of personal attention',
+          description: 'One-on-one session with a Glimps expert who understands your specific use case'
+        },
+        {
+          title: 'Live demo with your data',
+          description: 'We show how Glimps works with examples from your industry and products'
+        },
+        {
+          title: 'ROI calculation for your business',
+          description: 'Concrete figures on how much time and money you save, and how much additional revenue you generate'
+        },
+        {
+          title: 'Q&A and tailored advice',
+          description: 'All your questions answered and direct feedback on your situation'
+        }
+      ],
+      whyChoose: 'Why other webshops chose Glimps',
+      benefits: [
+        'Higher conversion rate',
+        'Recurring questions solved automatically',
+        'Fully GDPR compliant',
+        'Live within 2 weeks'
+      ],
+      formTitle: 'Schedule your demo',
+      formSubtitle: 'Response within 24 hours',
+      firstName: 'First name',
+      lastName: 'Last name',
+      email: 'Email address',
+      phone: 'Phone number',
+      company: 'Company name',
+      website: 'Website URL',
+      employees: 'Number of employees',
+      message: 'Tell us about your challenge (optional)',
+      required: 'required',
+      submit: 'Schedule my demo →',
+      submitting: 'Submitting...',
+      privacyText: 'By submitting this form you agree to our',
+      privacyLink: 'privacy policy',
+      privacyNote: 'We respect your privacy and never spam.',
+      employeeOptions: {
+        '1-5': '1-5 employees',
+        '6-10': '6-10 employees',
+        '11-50': '11-50 employees',
+        '51-200': '51-200 employees',
+        '200+': '200+ employees'
+      },
+      faqTitle: 'Frequently asked questions',
+      faqs: [
+        {
+          q: 'How long does the demo take?',
+          a: 'The demo takes approximately 30 minutes. We take the time to understand your specific situation and show how Glimps can help exactly.'
+        },
+        {
+          q: 'Do I need to prepare anything?',
+          a: 'No, you don\'t have to. We start with a short screening to see if it\'s valuable to proceed. During that screening, we ask a few basic questions that help us with the setup.'
+        },
+        {
+          q: 'Is the demo really free?',
+          a: 'Yes, the demo is completely free and non-binding. There are no hidden costs and we don\'t ask for credit card details.'
+        },
+        {
+          q: 'Can I attend the demo online?',
+          a: 'Yes! We do all demos via video call (Google Meet or Teams), so you can easily participate from the office or home.'
+        },
+        {
+          q: 'What if Glimps doesn\'t fit my business?',
+          a: 'No problem! We\'re honest about whether we\'re a good match. If Glimps isn\'t the best solution for your situation, we\'ll just tell you.'
+        }
+      ],
+      finalCta: 'Ready to save time\nand grow?',
+      finalSubtitle: 'Schedule your personalized demo today and discover how Glimps can transform your business.',
+      timeLabel: '30 minutes',
+      onlineLabel: 'Online',
+      freeLabel: 'Free',
+      toastSuccess: 'Demo request sent! 🎉',
+      toastSuccessDesc: 'We\'ll contact you within 24 hours to schedule a suitable time.',
+      toastError: 'Something went wrong',
+      toastErrorDesc: 'Please try again later or contact us directly.',
+      toastValidation: 'Fill in all required fields',
+      toastValidationDesc: 'Check the form and try again.'
+    },
+    footer: {
+      description: 'The smartest AI chatbot for e-commerce. Boost your revenue with automated customer service.',
+      product: 'Product',
+      company: 'Company',
+      resources: 'Resources',
+      legal: 'Legal',
+      allRightsReserved: 'All rights reserved',
+      gdprCompliant: 'GDPR Compliant',
+      gdprDesc: '100% EU regulations',
+      privacyFirst: 'Privacy First',
+      privacyDesc: 'Your data is safe',
+      bestInTech: 'Best in Tech',
+      techDesc: 'Latest AI technology',
+      newsletter: 'Newsletter',
+      newsletterDesc: 'Stay updated',
+      emailPlaceholder: 'Your email address',
+      subscribe: 'Subscribe'
+    },
+    seo: {
+      home: {
+        title: 'Intelligent Chatbots for E-commerce | Glimps',
+        description: 'AI chatbots for your webshop. Guide visitors 24/7, increase conversion, and automate customer service. Boost sales with smart AI.'
+      },
+      features: {
+        title: 'Features - Glimps AI Chatbot',
+        description: 'Discover all features of Glimps AI: 24/7 availability, intelligent product recommendations, and seamless integrations.'
+      },
+      demo: {
+        title: 'Request Demo - Glimps',
+        description: 'Request a free demo and discover how Glimps AI increases your e-commerce conversion.'
+      },
+      about: {
+        title: 'About Us - Glimps',
+        description: 'Learn more about Glimps and our team. We build intelligent AI chatbots for e-commerce.'
+      },
+      contact: {
+        title: 'Contact - Glimps',
+        description: 'Contact us. We\'re happy to help with your questions about Glimps AI.'
+      }
+    },
+    whyDifferent: {
+      badge: 'How it works',
+      title1: 'Smarter than a chatbot.',
+      title2: 'Better than a support tool.',
+      subtitle: 'We don\'t build chatbots.',
+      features: [
+        {
+          title: 'Strategic AI',
+          description: 'Not just a chatbot. A system that thinks, learns, and improves with every conversation.'
+        },
+        {
+          title: 'Built for Growth',
+          description: 'Built for scalable e-commerce. From 100 to 100,000 conversations per month.'
+        },
+        {
+          title: 'Reliable & Transparent',
+          description: 'GDPR compliant and always transparent about how AI works.'
+        },
+        {
+          title: 'Seamless Collaboration',
+          description: 'Glimps works seamlessly with your support team. Escalation when needed.'
+        },
+        {
+          title: 'Conversion Focus',
+          description: 'Every answer is optimized to remove doubt and stimulate purchase.'
+        },
+        {
+          title: 'Customer Satisfaction',
+          description: '95% satisfaction through fast, accurate, and human answers.'
+        }
+      ]
+    },
+    integrations: {
+      badge: 'Integrations',
+      title: 'Works with your favorite tools',
+      subtitle: 'Seamless integration with the platforms you already use',
+      platforms: 'E-commerce platforms',
+      shipping: 'Shipping & fulfillment',
+      automation: 'Automation',
+      viewAll: 'View all integrations'
+    },
+    aiJourney: {
+      badge: 'AI-driven customer journey',
+      title: 'From first click to purchase',
+      subtitle: 'Glimps guides customers through every step of their buying journey',
+      steps: [
+        {
+          title: 'Discovery',
+          description: 'Customer visits your webshop looking for a product'
+        },
+        {
+          title: 'Needs help',
+          description: 'Questions about size, color, specifications, or availability'
+        },
+        {
+          title: 'AI Assistant',
+          description: 'Glimps provides instant answers and helps with product advice'
+        },
+        {
+          title: 'Conversion',
+          description: 'Customer makes an informed purchase with confidence'
+        }
+      ]
+    },
+    aiKnowledge: {
+      badge: 'Smart AI',
+      title: 'Learns from your business',
+      subtitle: 'Our AI becomes smarter by learning from your products, policies, and customer interactions',
+      features: [
+        {
+          title: 'Product Knowledge',
+          description: 'Understands your complete catalog, specs, and inventory'
+        },
+        {
+          title: 'Policies & Rules',
+          description: 'Knows your shipping, return, and warranty conditions'
+        },
+        {
+          title: 'Tone of Voice',
+          description: 'Adapts to your brand identity and communication style'
+        },
+        {
+          title: 'Continuous Learning',
+          description: 'Gets smarter with every customer interaction'
+        }
+      ]
+    },
+    productFeatures: {
+      badge: 'Features',
+      title: 'Everything you need',
+      subtitle: 'Powerful features that truly make an impact',
+      features: [
+        {
+          title: '24/7 Available',
+          description: 'Always online to help customers, even outside business hours'
+        },
+        {
+          title: 'Multilingual',
+          description: 'Communicates in multiple languages with international customers'
+        },
+        {
+          title: 'Real-time Data',
+          description: 'Access to live inventory, prices, and order statuses'
+        },
+        {
+          title: 'Smart Routing',
+          description: 'Escalates complex questions to your support team'
+        },
+        {
+          title: 'Analytics Dashboard',
+          description: 'Insights into conversations, conversions, and performance'
+        },
+        {
+          title: 'A/B Testing',
+          description: 'Test different answers to optimize conversion'
+        }
+      ]
+    },
+    chatbotComparison: {
+      badge: 'Comparison',
+      title: 'Why Glimps?',
+      subtitle: 'See the difference between traditional chatbots and Glimps',
+      traditional: 'Traditional Chatbots',
+      glimps: 'Glimps AI',
+      features: [
+        {
+          traditional: 'Fixed answers and scripts',
+          glimps: 'Context-aware AI conversations'
+        },
+        {
+          traditional: 'Limited product knowledge',
+          glimps: 'Full catalog integration'
+        },
+        {
+          traditional: 'Cannot learn or improve',
+          glimps: 'Continuously learns from interactions'
+        },
+        {
+          traditional: 'Generic answers',
+          glimps: 'Personalized recommendations'
+        },
+        {
+          traditional: 'Difficult setup',
+          glimps: 'Plug-and-play integration'
+        }
+      ]
+    },
+    quote: {
+      text: 'Thanks to Glimps, our customers can find the perfect products much faster. Our conversion increased by 40% and we save hours on customer service.',
+      author: 'Lisa Van den Berg',
+      role: 'E-commerce Manager',
+      company: 'Fashion Hub'
+    },
+    common: {
+      readMore: 'Read more',
+      learnMore: 'Learn more',
+      getStarted: 'Get started',
+      contactUs: 'Contact us'
+    },
+    howWeWork: {
+      badge: '💡 HOW WE WORK',
+      title: 'From chaos to control.',
+      titleHighlight: 'In 5 steps.',
+      description: 'No standard chatbot. No generic answers. Only AI that understands your business, helps your customers, and delivers real results.',
+      processSteps: [
+        { label: 'Screening' },
+        { label: 'Analysis' },
+        { label: 'Implementation' },
+        { label: 'Go-live' },
+        { label: 'Data Insights' }
+      ],
+      step1: {
+        title: 'Screening your business',
+        subtitle: 'We only work with brands that are truly ready for AI.',
+        description: 'We screen your webshop, data, and systems to determine where the biggest gains lie.',
+        warning: 'Note: We look critically at whether we\'re a fit. It may be that we don\'t match — that saves both parties time and frustration.',
+        features: [
+          'Analysis of product data & structure',
+          'Identification of biggest opportunities',
+          'Business readiness assessment'
+        ],
+        next: 'Next: Analysis of customer questions',
+        card: {
+          title: 'Business Scan',
+          approved: 'Approved ✓',
+          dataQuality: 'Product data quality',
+          dataStructure: 'Data structure',
+          apiAvailability: 'API availability',
+          contentCompleteness: 'Content completeness',
+          readinessScore: 'AI Readiness Score'
+        }
+      },
+      step2: {
+        title: 'Analysis of customer questions',
+        subtitle: 'We examine 80% of the most frequently asked questions',
+        description: 'That\'s the foundation for maximum automation. We analyze real customer questions from your inbox, helpdesk, and chat to optimally train the AI.',
+        features: [
+          '80% most common questions',
+          'AI training on your customer behavior',
+          'FAQ and policy mapping'
+        ],
+        next: 'Next: Implementation & training',
+        card: {
+          title: 'Most asked questions',
+          coverage: 'coverage',
+          timesAsked: 'times asked',
+          questions: [
+            'Where is my package?',
+            'What are the shipping costs?',
+            'Can I return this?',
+            'Is this product available?',
+            'What size should I get?'
+          ],
+          trainingComplete: 'AI Training Complete',
+          conversationsAnalyzed: 'conversations analyzed'
+        }
+      },
+      step3: {
+        title: 'Implementation & training',
+        subtitle: 'Glimps is fed with your product data, policies, and tone of voice',
+        description: 'So it sounds like your brand. Every response feels authentic, every recommendation is relevant.',
+        features: [
+          'Tone of voice matching',
+          'Product data integration',
+          'API connections'
+        ],
+        next: 'Next: Go-live & optimization',
+        card: {
+          title: 'Implementation Status',
+          inProgress: '● In Progress',
+          productIntegration: 'Product data integration',
+          toneTraining: 'Tone-of-voice training',
+          apiConnections: 'API connections',
+          testingQA: 'Testing & QA',
+          products: 'Products',
+          categories: 'Categories',
+          apis: 'APIs'
+        }
+      },
+      step4: {
+        title: 'Go-live & optimization',
+        subtitle: 'After approval, your bot goes live.',
+        description: 'From then on, we continuously improve based on real conversations. New products? New questions? The bot learns automatically.',
+        features: [
+          'Continuous performance optimization',
+          'Automatic learning & improvement',
+          'Real-time analytics dashboard'
+        ],
+        next: 'Next: Data Insights',
+        card: {
+          title: 'Live Performance',
+          period: 'Last 30 days',
+          live: '● Live',
+          conversations: 'Conversations',
+          resolvedWithoutHelp: 'Resolved without help',
+          vsPreviousMonth: 'vs previous month',
+          conversionRate: 'Conversion rate',
+          aiLearning: 'AI continuously learns from new conversations'
+        }
+      },
+      step5: {
+        title: 'Data Insights based on chat history',
+        subtitle: 'Valuable insights from every conversation',
+        description: 'From thousands of chat conversations, we extract patterns and trends that help your business. From product feedback to customer behavior - everything becomes clear.',
+        features: [
+          'Customer behavior & trends analysis',
+          'Product feedback & improvement points',
+          'Conversion optimization opportunities'
+        ],
+        card: {
+          title: 'Insights Dashboard',
+          period: 'Last 30 days',
+          live: '● Live',
+          topProducts: 'Most requested products',
+          top3: 'Top 3',
+          questions: 'questions',
+          productNames: ['Sports shoes', 'Yoga mats', 'Fitness trackers'],
+          sentiment: 'Customer sentiment',
+          positive: 'Positive 😊',
+          neutral: 'Neutral 😐',
+          negative: 'Negative 😟',
+          improvement: 'Improvement opportunity detected',
+          improvementText: '45% of customers ask about size charts. Consider placing these more prominently.',
+          weeklyInsights: 'Weekly new insights & recommendations'
+        }
+      },
+      cta: {
+        title: 'Ready to get started?',
+        description: 'Let\'s explore together how Glimps can transform your customer service.',
+        button: 'Schedule a free screening'
+      }
+    },
+    about: {
+      tagline: 'Get to know us',
+      title: 'We boost your business with our AI chatbot.',
+      subtitle: 'Glimps was founded by two entrepreneurs with a strong marketing background, who see AI chatbots as the marketing tool for more revenue and better customer service.',
+      cofounder: 'CO-FOUNDER',
+      samuel: {
+        description: 'Passionate about AI technologies and workflows to turn repetitive tasks into automations.'
+      },
+      tom: {
+        description: 'Digital Business Professional with 15+ years of experience in digital sales and marketing.'
+      },
+      linkedinProfile: 'LinkedIn profile',
+      developersNetwork: {
+        title: 'Our Developer Network',
+        description: 'Behind Glimps stands a strong network of talented developers who help translate our ideas into software and contribute to the success of our platform.',
+        teamWork: 'Together we form a team that perfectly combines technology and marketing.'
+      },
+      vision: {
+        title: 'Our Vision',
+        paragraph1: 'Tom Muyllaert & Samuel Muyllaert both have a strong marketing background and view AI chatbots through a marketing lens.',
+        paragraph2: 'Our vision can always be traced back to the outcome: more revenue. First and foremost, it\'s about being able to provide the basic necessities of a chatbot regarding customer service: retrieving orders, answering FAQs, providing service throughout the entire customer journey.',
+        paragraph3: 'But with both having a marketing background, we see an AI chatbot more as a marketing tool with the goal of more revenue, but primarily to automate customer service.'
+      },
+      approach: {
+        title: 'Our Approach',
+        marketing: {
+          title: 'Marketing-driven',
+          description: 'Anyone can make a bot by loading pages and having a bot answer them, but our vision is to ensure through certain marketing strategies that the bot is a marketing tool.',
+          items: [
+            'Product presentation & showcasing',
+            'Conversational commerce',
+            'Upsell & cross-selling strategies',
+            'Marketing insights & data analysis'
+          ]
+        },
+        collaboration: {
+          title: 'Smart Collaboration',
+          paragraph1: 'We use IT suppliers so we can focus on the development itself. This allows us to truly excel in what sets us apart: implementing marketing strategies in AI chatbots.',
+          paragraph2: 'We use advanced insights for marketing, such as analyzing chat history to discover which products are often asked about together, and automatically adding this to suggestions.'
+        }
+      },
+      principles: {
+        title: 'Our Core Principles',
+        automation: {
+          title: 'Automation',
+          description: 'Automate customer service so businesses can focus on growth and strategy.'
+        },
+        revenue: {
+          title: 'More Revenue',
+          description: 'Through smart marketing automations and strategies, we generate measurable growth for e-commerce businesses.'
+        },
+        loyalty: {
+          title: 'Customer Loyalty',
+          description: 'Better and faster service leads to more purchases and loyalty, resulting in more revenue.'
+        }
+      }
+    },
+    contact: {
+      badge: 'Get in Touch',
+      title: 'Let\'s Connect',
+      subtitle: 'Have questions about Glimps AI? Want to know if we\'re the right solution for your business? Schedule a free consultation or contact us directly.',
+      email: 'Email',
+      location: 'Location',
+      locationValue: 'Bruges, Belgium',
+      planMeeting: {
+        title: 'Schedule a Free Consultation',
+        description: 'Choose a time that works for you. We\'ll take all the time to answer your questions and see how Glimps AI can help your business grow.',
+        or: 'Or send us an email directly at'
+      },
+      faq: {
+        title: 'Frequently Asked Questions',
+        description: 'Need a quick answer? Check our FAQ page for answers to the most common questions.',
+        button: 'View FAQ →'
+      }
+    },
+    ecomReadiness: {
+      title: 'Chatbot Readiness Quiz',
+      subtitle: 'Discover in 2 minutes if an AI chatbot is perfect for your webshop',
+      submitButton: 'See My Readiness Score',
+      submitNote: 'Answer all questions to see your score',
+      retakeQuiz: 'Retake quiz',
+      resultsTitle: 'Your Chatbot Readiness Score',
+      whatYouMiss: 'What you\'re missing now',
+      quickWins: 'Quick Wins with AI Chatbot',
+      estimatedRoi: 'Estimated ROI for your situation',
+      perYear: 'per year',
+      roiNote: 'Based on your answers: cost savings + revenue increase through better conversion',
+      nextStep: {
+        title: 'Next step: Personalized Demo',
+        description: 'Discover exactly how an AI chatbot works for your webshop. We\'ll show you live what\'s possible and calculate your exact ROI together.',
+        button: 'Schedule Free Demo'
+      }
+    },
+    industries: {
+      fashion: {
+        badge: 'Fashion & Design',
+        title: 'AI Chatbots for Fashion & Design',
+        subtitle: 'Increase your fashion sales with intelligent style advisors that provide 24/7 personalized outfit recommendations',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for fashion webshops',
+        benefits: {
+          advice: { title: 'Personalized Style Advice', desc: 'AI understands clothing styles, sizes, and preferences to create perfect outfits' },
+          conversion: { title: 'Higher Conversions', desc: 'Answer questions about materials, fit, and care instantly, without waiting' },
+          collections: { title: 'Seasonal Collections', desc: 'Automatically up-to-date with new collections and trends via your product catalog' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for fashion',
+        useCases: [
+          'Provide size advice based on garment type',
+          'Assemble complete outfits with matching items',
+          'Answer questions about fabric composition and care',
+          'Help customers find specific styles',
+          'Handle return questions directly with tracking info'
+        ],
+        ctaTitle: 'Ready to boost your fashion sales?',
+        ctaSubtitle: 'Discover how glimps takes your fashion webshop to the next level',
+        ctaButton: 'Start your free trial'
+      },
+      beauty: {
+        badge: 'Beauty & Cosmetics',
+        title: 'AI Chatbots for Beauty & Cosmetics',
+        subtitle: 'Give every customer personalized beauty advice with AI that understands skin types, ingredients, and products',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for beauty webshops',
+        benefits: {
+          advice: { title: 'Personalized Skin Advice', desc: 'AI analyzes skin type, concerns, and provides personalized product recommendations' },
+          ingredients: { title: 'Ingredient Knowledge', desc: 'Answer questions about ingredients, allergens, and suitability for specific skin types' },
+          routines: { title: 'Beauty Routines', desc: 'Assemble complete skincare routines with the right order and combinations' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for beauty',
+        useCases: [
+          'Determine skin type and advise suitable products',
+          'Answer questions about ingredients and allergens',
+          'Assemble complete skincare routines',
+          'Provide color advice for makeup products',
+          'Make product comparisons based on needs'
+        ],
+        ctaTitle: 'Ready for more beauty conversions?',
+        ctaSubtitle: 'Discover how glimps transforms your beauty webshop',
+        ctaButton: 'Start your free trial'
+      },
+      electronics: {
+        badge: 'Electronics & Consumer Technology',
+        title: 'AI Chatbots for Electronics',
+        subtitle: 'Help customers make the right tech choice with AI that understands specifications, compatibility, and features',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for electronics webshops',
+        benefits: {
+          specs: { title: 'Technical Specs', desc: 'AI understands complex specifications and explains them in understandable language' },
+          compatibility: { title: 'Compatibility Check', desc: 'Automatically check if products work together and which accessories are needed' },
+          comparison: { title: 'Product Comparisons', desc: 'Compare specs and features of different models to help customers choose' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for electronics',
+        useCases: [
+          'Explain technical specifications in understandable language',
+          'Check compatibility between products',
+          'Compare products based on features and price',
+          'Provide setup instructions and troubleshooting',
+          'Answer warranty and return questions directly'
+        ],
+        ctaTitle: 'Ready for more tech sales?',
+        ctaSubtitle: 'Discover how glimps boosts your electronics webshop',
+        ctaButton: 'Start your free trial'
+      },
+      furniture: {
+        badge: 'Furniture & Interior',
+        title: 'AI Chatbots for Furniture & Interior',
+        subtitle: 'Help customers create their perfect interior with AI that understands style, dimensions, and combinations',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for furniture webshops',
+        benefits: {
+          style: { title: 'Style & Interior Advice', desc: 'AI understands interior styles and helps customers find furniture that perfectly matches' },
+          dimensions: { title: 'Dimensions & Space', desc: 'Help customers check if furniture fits in their space and advise on ideal dimensions' },
+          sets: { title: 'Complete Sets', desc: 'Assemble complete furniture sets that perfectly match in style and color' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for furniture',
+        useCases: [
+          'Advise on style combinations and color schemes',
+          'Help determine the right dimensions',
+          'Answer questions about materials and maintenance',
+          'Assemble complete room sets',
+          'Provide delivery time and shipping information per product'
+        ],
+        ctaTitle: 'Ready for more interior sales?',
+        ctaSubtitle: 'Discover how glimps takes your furniture webshop to the next level',
+        ctaButton: 'Start your free trial'
+      },
+      sports: {
+        badge: 'Sportswear & Fitness',
+        title: 'AI Chatbots for Sports & Fitness',
+        subtitle: 'Boost your sports webshop with AI that helps athletes find the perfect gear for their sport and level',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for sports webshops',
+        benefits: {
+          specific: { title: 'Sport-specific Advice', desc: 'AI understands different sports and can advise gear per discipline and level' },
+          fit: { title: 'Fit & Performance', desc: 'Help customers find which fit and materials work best for their activity' },
+          outfits: { title: 'Complete Outfits', desc: 'Assemble complete sports outfits with matching items for every activity' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for sports',
+        useCases: [
+          'Advise sportswear per discipline (running, fitness, yoga, etc.)',
+          'Help with size selection for optimal performance',
+          'Answer questions about materials and technology',
+          'Provide care tips for sportswear and gear',
+          'Advise on seasonal products'
+        ],
+        ctaTitle: 'Ready for more sports sales?',
+        ctaSubtitle: 'Discover how glimps brings your sports webshop to the podium',
+        ctaButton: 'Start your free trial'
+      },
+      garden: {
+        badge: 'Garden and Outdoor Living',
+        title: 'AI Chatbots for Garden & Outdoor Living',
+        subtitle: 'Help customers create their dream garden with AI that understands plants, seasons, and garden maintenance',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for garden webshops',
+        benefits: {
+          plants: { title: 'Plant & Season Advice', desc: 'AI knows plant species, seasons, and growing conditions to provide perfect advice' },
+          design: { title: 'Garden Design', desc: 'Help customers design their garden with matching furniture, decoration, and plants' },
+          maintenance: { title: 'Maintenance Tips', desc: 'Give customers direct advice on maintenance, watering, and fertilization' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for garden',
+        useCases: [
+          'Advise plants based on season and growing location',
+          'Help choose garden furniture and decoration',
+          'Answer questions about plant care and maintenance',
+          'Provide tips for creating garden styles',
+          'Advise on tools and supplies'
+        ],
+        ctaTitle: 'Ready to grow your garden business?',
+        ctaSubtitle: 'Discover how glimps makes your garden webshop flourish',
+        ctaButton: 'Start your free trial'
+      }
+    }
   }
 };
 

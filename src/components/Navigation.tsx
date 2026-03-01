@@ -15,28 +15,45 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
 
-  const navLinks = language === 'fr' ? [
-    { href: "/fr/fonctionnalites", label: "Fonctionnalités" },
-    { href: "/fr/comment-nous-travaillons", label: "Comment nous travaillons" },
-    { href: "/fr/faq", label: "FAQ" },
-    { href: "/fr/blog", label: "Blog" },
-    { href: "/fr/a-propos", label: "À propos" },
-    { href: "/fr/contact", label: "Contact" },
-  ] : [
-    { href: "/features", label: "Features" },
-    { href: "/how-we-work", label: "Hoe we werken" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/blog", label: "Blog" },
-    { href: "/about", label: "Over Ons" },
-    { href: "/contact", label: "Contact" },
-  ];
+  const getNavLinks = () => {
+    if (language === 'fr') {
+      return [
+        { href: "/fr/fonctionnalites", label: "Fonctionnalités" },
+        { href: "/fr/comment-nous-travaillons", label: "Comment nous travaillons" },
+        { href: "/fr/faq", label: "FAQ" },
+        { href: "/fr/blog", label: "Blog" },
+        { href: "/fr/a-propos", label: "À propos" },
+        { href: "/fr/contact", label: "Contact" },
+      ];
+    } else if (language === 'en') {
+      return [
+        { href: "/en/features", label: "Features" },
+        { href: "/en/how-we-work", label: "How we work" },
+        { href: "/en/faq", label: "FAQ" },
+        { href: "/en/blog", label: "Blog" },
+        { href: "/en/about", label: "About" },
+        { href: "/en/contact", label: "Contact" },
+      ];
+    } else {
+      return [
+        { href: "/features", label: "Features" },
+        { href: "/how-we-work", label: "Hoe we werken" },
+        { href: "/faq", label: "FAQ" },
+        { href: "/blog", label: "Blog" },
+        { href: "/about", label: "Over Ons" },
+        { href: "/contact", label: "Contact" },
+      ];
+    }
+  };
+
+  const navLinks = getNavLinks();
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href={language === 'fr' ? '/fr' : '/'} className="flex items-center shrink-0">
+          <a href={language === 'fr' ? '/fr' : language === 'en' ? '/en' : '/'} className="flex items-center shrink-0">
             <img src={glimpsLogo} alt="glimps" className="h-8 sm:h-10" />
           </a>
 
@@ -68,11 +85,14 @@ const Navigation = () => {
                 <DropdownMenuItem onClick={() => setLanguage('fr')}>
                   <span className="mr-2">🇫🇷</span> Français
                 </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                  <span className="mr-2">🇬🇧</span> English
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Button asChild variant="default" size="default" className="rounded-full">
-              <a href={language === 'fr' ? '/fr/demo' : '/demo'}>
-                {language === 'fr' ? 'Demander une démo' : 'Demo aanvragen'}
+              <a href={language === 'fr' ? '/fr/demo' : language === 'en' ? '/en/demo' : '/demo'}>
+                {language === 'fr' ? 'Demander une démo' : language === 'en' ? 'Request demo' : 'Demo aanvragen'}
               </a>
             </Button>
           </div>
@@ -119,10 +139,21 @@ const Navigation = () => {
                   >
                     🇫🇷 FR
                   </Button>
+                  <Button
+                    variant={language === 'en' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => {
+                      setLanguage('en');
+                      setIsOpen(false);
+                    }}
+                    className="flex-1"
+                  >
+                    🇬🇧 EN
+                  </Button>
                 </div>
                 <Button asChild variant="default" size="lg" className="rounded-full">
-                  <a href={language === 'fr' ? '/fr/demo' : '/demo'}>
-                    {language === 'fr' ? 'Demander une démo' : 'Demo aanvragen'}
+                  <a href={language === 'fr' ? '/fr/demo' : language === 'en' ? '/en/demo' : '/demo'}>
+                    {language === 'fr' ? 'Demander une démo' : language === 'en' ? 'Request demo' : 'Demo aanvragen'}
                   </a>
                 </Button>
               </div>
