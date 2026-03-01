@@ -10,8 +10,8 @@ export const translations = {
     },
     hero: {
       overline: 'AI-Aangedreven Klantenondersteuning',
-      title: 'Intelligente\nchatbots voor\ne-commerce',
-      description: 'Onze intelligente chatbots beantwoorden vragen over producten, verzending en bestellingen\nautomatisch - ook buiten kantooruren. Verhoog je conversie met AI.',
+      title: 'Intelligente chatbots voor e-commerce',
+      description: 'Onze intelligente chatbots beantwoorden vragen over producten, verzending en bestellingen automatisch - ook buiten kantooruren. Verhoog je conversie met AI.',
       cta: 'Gratis aan de slag',
       ctaSecondary: 'Zie glimps in actie'
     },
@@ -238,8 +238,8 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Intelligente chatbots voor e-commerce | Glimps',
-        description: 'AI chatbots voor je webshop. Begeleid bezoekers 24/7, verhoog conversie en automatiseer klantenservice met intelligente AI.'
+        title: 'Intelligente Chatbots voor E-commerce | Glimps',
+        description: 'AI chatbots voor je webshop. Begeleid bezoekers 24/7, verhoog conversie en automatiseer klantenservice. Verhoog verkopen met slimme AI.'
       },
       features: {
         title: 'Features - Glimps AI Chatbot',
@@ -795,8 +795,8 @@ export const translations = {
     },
     hero: {
       overline: 'Support Client Propulsé par IA',
-      title: 'Chatbots intelligents\npour l\'e-commerce',
-      description: 'Nos chatbots intelligents répondent automatiquement aux questions sur les produits, la livraison et les commandes\n- même en dehors des heures de bureau. Augmentez votre conversion avec l\'IA.',
+      title: 'Chatbots intelligents pour l\'e-commerce',
+      description: 'Nos chatbots intelligents répondent automatiquement aux questions sur les produits, la livraison et les commandes - même en dehors des heures de bureau. Augmentez votre conversion avec l\'IA.',
       cta: 'Commencer gratuitement',
       ctaSecondary: 'Voir glimps en action'
     },
@@ -1023,8 +1023,8 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Chatbots intelligents pour l\'e-commerce | Glimps',
-        description: 'Chatbots IA pour votre boutique en ligne. Guidez les visiteurs 24/7, augmentez la conversion et automatisez le service client avec l\'IA intelligente.'
+        title: 'Chatbots Intelligents E-commerce | Glimps',
+        description: 'Chatbots IA pour boutiques en ligne. Guidez visiteurs 24/7, augmentez conversions et automatisez service. Boostez ventes avec IA.'
       },
       features: {
         title: 'Fonctionnalités - Glimps AI Chatbot',

@@ -86,8 +86,8 @@ const ChatbotBouwBedrijfVlaanderen = () => {
   return (
     <div className="min-h-screen bg-background" style={{ zoom: '0.8' }}>
       <SEO
-        title="Chatbot Bouw Bedrijf Vlaanderen E-commerce | Glimps - Expert Chatbot Ontwikkelaars"
-        description="Glimps is een ervaren chatbot bouw bedrijf in Vlaanderen voor e-commerce. Wij bouwen krachtige AI chatbots op maat voor jouw webshop. Van concept tot implementatie en onderhoud."
+        title="Chatbot Bouw Bedrijf Vlaanderen E-commerce"
+        description="Chatbot bouw bedrijf in Vlaanderen voor e-commerce. Wij bouwen krachtige AI chatbots op maat voor jouw webshop. Van concept tot implementatie."
         path="/chatbot-bouw-bedrijf-vlaanderen-ecommerce"
         canonical="https://www.glimps.be/chatbot-bouw-bedrijf-vlaanderen-ecommerce"
         keywords="chatbot bouw bedrijf Vlaanderen, chatbot bouw bedrijf Vlaanderen e-commerce, chatbot ontwikkeling Vlaanderen, chatbot bouwen Vlaanderen, AI chatbot developer Vlaanderen"

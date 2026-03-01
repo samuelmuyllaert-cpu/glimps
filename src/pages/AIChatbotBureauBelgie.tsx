@@ -86,8 +86,8 @@ const AIChatbotBureauBelgie = () => {
   return (
     <div className="min-h-screen bg-background" style={{ zoom: '0.8' }}>
       <SEO
-        title="AI Chatbot Bureau België E-commerce | Glimps - Specialist Webshop Chatbots"
-        description="Glimps is hét AI chatbot bureau in België voor e-commerce. Professionele chatbot oplossingen die conversie verhogen en klantenservice automatiseren. Expert ontwikkeling en implementatie."
+        title="AI Chatbot Bureau België E-commerce | Glimps"
+        description="AI chatbot bureau in België voor e-commerce. Professionele chatbots die conversie verhogen en service automatiseren. Expert ontwikkeling."
         path="/ai-chatbot-bureau-belgie-ecommerce"
         canonical="https://www.glimps.be/ai-chatbot-bureau-belgie-ecommerce"
         keywords="AI chatbot bureau België, AI chatbot bureau België e-commerce, chatbot ontwikkeling België, chatbot specialist België, conversational AI België, webshop chatbot bureau"
