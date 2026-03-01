@@ -210,7 +210,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{ zoom: '0.8' }}>
       <SEO
         title={t('seo.home.title')}
         description={t('seo.home.description')}
