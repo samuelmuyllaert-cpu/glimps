@@ -18,7 +18,9 @@ const Footer = () => {
 
     if (!newsletterEmail.trim()) {
       toast.error(
-        language === 'fr'
+        language === 'en'
+          ? "Please enter a valid email address"
+          : language === 'fr'
           ? "Veuillez entrer une adresse e-mail valide"
           : "Vul een geldig e-mailadres in"
       );
@@ -38,14 +40,18 @@ const Footer = () => {
 
       if (response.ok) {
         toast.success(
-          language === 'fr'
+          language === 'en'
+            ? "You're subscribed to the newsletter!"
+            : language === 'fr'
             ? "Vous êtes inscrit à la newsletter !"
             : "Je bent ingeschreven voor de nieuwsbrief!"
         );
         setNewsletterEmail("");
       } else {
         toast.error(
-          language === 'fr'
+          language === 'en'
+            ? "Something went wrong. Please try again."
+            : language === 'fr'
             ? "Une erreur s'est produite. Veuillez réessayer."
             : "Er ging iets mis. Probeer het opnieuw."
         );
@@ -53,7 +59,9 @@ const Footer = () => {
     } catch (error) {
       console.error("Newsletter signup error:", error);
       toast.error(
-        language === 'fr'
+        language === 'en'
+          ? "Something went wrong. Please try again."
+          : language === 'fr'
           ? "Une erreur s'est produite. Veuillez réessayer."
           : "Er ging iets mis. Probeer het opnieuw."
       );
@@ -73,7 +81,9 @@ const Footer = () => {
               <img src={glimpsLogoFooter} alt="glimps" className="h-16" />
             </a>
             <p className="text-sm text-muted-foreground">
-              {language === 'fr'
+              {language === 'en'
+                ? 'The smartest AI chatbot for e-commerce. Boost your revenue with automated customer service.'
+                : language === 'fr'
                 ? 'Le chatbot IA le plus intelligent pour l\'e-commerce. Boostez votre chiffre d\'affaires avec un service client automatisé.'
                 : 'De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.'
               }
@@ -88,7 +98,7 @@ const Footer = () => {
                 <div>
                   <p className="text-sm font-medium">GDPR Compliant</p>
                   <p className="text-xs text-muted-foreground">
-                    {language === 'fr' ? '100% réglementation UE' : '100% EU regelgeving'}
+                    {language === 'en' ? '100% EU regulation' : language === 'fr' ? '100% réglementation UE' : '100% EU regelgeving'}
                   </p>
                 </div>
               </div>
@@ -99,7 +109,7 @@ const Footer = () => {
                 <div>
                   <p className="text-sm font-medium">Privacy First</p>
                   <p className="text-xs text-muted-foreground">
-                    {language === 'fr' ? 'Vos données sont sécurisées' : 'Jouw data is veilig'}
+                    {language === 'en' ? 'Your data is secure' : language === 'fr' ? 'Vos données sont sécurisées' : 'Jouw data is veilig'}
                   </p>
                 </div>
               </div>
@@ -110,7 +120,7 @@ const Footer = () => {
                 <div>
                   <p className="text-sm font-medium">Best in Tech</p>
                   <p className="text-xs text-muted-foreground">
-                    {language === 'fr' ? 'Dernière technologie IA' : 'Nieuwste AI technologie'}
+                    {language === 'en' ? 'Latest AI technology' : language === 'fr' ? 'Dernière technologie IA' : 'Nieuwste AI technologie'}
                   </p>
                 </div>
               </div>
@@ -119,31 +129,31 @@ const Footer = () => {
 
           {/* Product Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold">{language === 'fr' ? 'Produit' : 'Product'}</h4>
+            <h4 className="font-semibold">{language === 'en' ? 'Product' : language === 'fr' ? 'Produit' : 'Product'}</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href={language === 'fr' ? '/fr/fonctionnalites' : '/features'} className="text-muted-foreground hover:text-primary">
-                  {language === 'fr' ? 'Fonctionnalités' : 'Features'}
+                <a href={language === 'en' ? '/en/features' : language === 'fr' ? '/fr/fonctionnalites' : '/features'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'Features' : language === 'fr' ? 'Fonctionnalités' : 'Features'}
                 </a>
               </li>
               <li>
-                <a href={language === 'fr' ? '/fr/integrations' : '/integraties'} className="text-muted-foreground hover:text-primary">
-                  {language === 'fr' ? 'Intégrations' : 'Integraties'}
+                <a href={language === 'en' ? '/en/integrations' : language === 'fr' ? '/fr/integrations' : '/integraties'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'Integrations' : language === 'fr' ? 'Intégrations' : 'Integraties'}
                 </a>
               </li>
               <li>
-                <a href={language === 'fr' ? '/fr/demo' : '/demo'} className="text-muted-foreground hover:text-primary">
+                <a href={language === 'en' ? '/en/demo' : language === 'fr' ? '/fr/demo' : '/demo'} className="text-muted-foreground hover:text-primary">
                   Demo
                 </a>
               </li>
               <li>
-                <a href={language === 'fr' ? '/fr/pret-ecom' : '/ecom-readiness'} className="text-muted-foreground hover:text-primary">
-                  {language === 'fr' ? 'Quiz de préparation' : 'Readiness Quiz'}
+                <a href={language === 'en' ? '/en/ecom-readiness' : language === 'fr' ? '/fr/pret-ecom' : '/ecom-readiness'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'Readiness Quiz' : language === 'fr' ? 'Quiz de préparation' : 'Readiness Quiz'}
                 </a>
               </li>
               <li>
-                <a href={language === 'fr' ? '/fr/agents-ecom' : '/ecom-agents'} className="text-muted-foreground hover:text-primary">
-                  {language === 'fr' ? 'Agents E-com' : 'Ecom Agents'}
+                <a href={language === 'en' ? '/en/ecom-agents' : language === 'fr' ? '/fr/agents-ecom' : '/ecom-agents'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'Ecom Agents' : language === 'fr' ? 'Agents E-com' : 'Ecom Agents'}
                 </a>
               </li>
             </ul>
@@ -151,45 +161,45 @@ const Footer = () => {
 
           {/* Company Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold">{language === 'fr' ? 'Entreprise' : 'Bedrijf'}</h4>
+            <h4 className="font-semibold">{language === 'en' ? 'Company' : language === 'fr' ? 'Entreprise' : 'Bedrijf'}</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href={language === 'fr' ? '/fr/a-propos' : '/about'} className="text-muted-foreground hover:text-primary">
-                  {language === 'fr' ? 'À propos' : 'Over Ons'}
+                <a href={language === 'en' ? '/en/about' : language === 'fr' ? '/fr/a-propos' : '/about'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'About Us' : language === 'fr' ? 'À propos' : 'Over Ons'}
                 </a>
               </li>
               <li>
-                <a href={language === 'fr' ? '/fr/comment-nous-travaillons' : '/how-we-work'} className="text-muted-foreground hover:text-primary">
-                  {language === 'fr' ? 'Comment nous travaillons' : 'Hoe we werken'}
+                <a href={language === 'en' ? '/en/how-we-work' : language === 'fr' ? '/fr/comment-nous-travaillons' : '/how-we-work'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'How we work' : language === 'fr' ? 'Comment nous travaillons' : 'Hoe we werken'}
                 </a>
               </li>
               <li>
-                <a href={language === 'fr' ? '/fr/partenaires' : '/partners'} className="text-muted-foreground hover:text-primary">
-                  {language === 'fr' ? 'Partenaires' : 'Partners'}
+                <a href={language === 'en' ? '/en/partners' : language === 'fr' ? '/fr/partenaires' : '/partners'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'Partners' : language === 'fr' ? 'Partenaires' : 'Partners'}
                 </a>
               </li>
               <li>
-                <a href={language === 'fr' ? '/fr/blog' : '/blog'} className="text-muted-foreground hover:text-primary">
+                <a href={language === 'en' ? '/en/blog' : language === 'fr' ? '/fr/blog' : '/blog'} className="text-muted-foreground hover:text-primary">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="/career" className="text-muted-foreground hover:text-primary">
-                  Carrière
+                <a href={language === 'en' ? '/en/career' : language === 'fr' ? '/fr/carrieres' : '/career'} className="text-muted-foreground hover:text-primary">
+                  {language === 'en' ? 'Career' : language === 'fr' ? 'Carrière' : 'Carrière'}
                 </a>
               </li>
               <li>
-                <a href="/consultancy" className="text-muted-foreground hover:text-primary">
+                <a href={language === 'en' ? '/en/consultancy' : language === 'fr' ? '/fr/consultance' : '/consultancy'} className="text-muted-foreground hover:text-primary">
                   Consultancy
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-muted-foreground hover:text-primary">
+                <a href={language === 'en' ? '/en/contact' : language === 'fr' ? '/fr/contact' : '/contact'} className="text-muted-foreground hover:text-primary">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="/changelog" className="text-muted-foreground hover:text-primary">
+                <a href={language === 'en' ? '/en/changelog' : language === 'fr' ? '/fr/changelog' : '/changelog'} className="text-muted-foreground hover:text-primary">
                   Changelog
                 </a>
               </li>
@@ -199,55 +209,55 @@ const Footer = () => {
           {/* Industries Links */}
           <div className="space-y-4">
             <h4 className="font-semibold">
-              {language === 'fr' ? 'Secteurs' : 'Industrieën'}
+              {language === 'en' ? 'Industries' : language === 'fr' ? 'Secteurs' : 'Industrieën'}
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/industries/mode-design' : '/industries/fashion-design'}
+                  href={language === 'en' ? '/en/industries/fashion-design' : language === 'fr' ? '/fr/industries/mode-design' : '/industries/fashion-design'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Mode & Design' : 'Fashion & Design'}
+                  {language === 'en' ? 'Fashion & Design' : language === 'fr' ? 'Mode & Design' : 'Fashion & Design'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/industries/beaute-cosmetique' : '/industries/beauty-cosmetica'}
+                  href={language === 'en' ? '/en/industries/beauty-cosmetics' : language === 'fr' ? '/fr/industries/beaute-cosmetique' : '/industries/beauty-cosmetica'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Beauté & Cosmétiques' : 'Beauty & Cosmetica'}
+                  {language === 'en' ? 'Beauty & Cosmetics' : language === 'fr' ? 'Beauté & Cosmétiques' : 'Beauty & Cosmetica'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/industries/electronique' : '/industries/electronics'}
+                  href={language === 'en' ? '/en/industries/electronics' : language === 'fr' ? '/fr/industries/electronique' : '/industries/electronics'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Électronique & Technologie' : 'Electronics & Technology'}
+                  {language === 'en' ? 'Electronics & Technology' : language === 'fr' ? 'Électronique & Technologie' : 'Electronics & Technology'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/industries/meubles-interieur' : '/industries/meubels-interieur'}
+                  href={language === 'en' ? '/en/industries/furniture-interior' : language === 'fr' ? '/fr/industries/meubles-interieur' : '/industries/meubels-interieur'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Meubles & Intérieur' : 'Meubels & Interieur'}
+                  {language === 'en' ? 'Furniture & Interior' : language === 'fr' ? 'Meubles & Intérieur' : 'Meubels & Interieur'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/industries/vetements-sport-fitness' : '/industries/sportkleding-fitness'}
+                  href={language === 'en' ? '/en/industries/sportswear-fitness' : language === 'fr' ? '/fr/industries/vetements-sport-fitness' : '/industries/sportkleding-fitness'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Vêtements de Sport & Fitness' : 'Sportkleding & Fitness'}
+                  {language === 'en' ? 'Sportswear & Fitness' : language === 'fr' ? 'Vêtements de Sport & Fitness' : 'Sportkleding & Fitness'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/industries/jardin-exterieur' : '/industries/tuin-buitenleven'}
+                  href={language === 'en' ? '/en/industries/garden-outdoor' : language === 'fr' ? '/fr/industries/jardin-exterieur' : '/industries/tuin-buitenleven'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Jardin et Vie en Plein Air' : 'Tuin en Buitenleven'}
+                  {language === 'en' ? 'Garden & Outdoor Living' : language === 'fr' ? 'Jardin et Vie en Plein Air' : 'Tuin en Buitenleven'}
                 </a>
               </li>
             </ul>
@@ -256,36 +266,36 @@ const Footer = () => {
           {/* Legal Links */}
           <div className="space-y-4">
             <h4 className="font-semibold">
-              {language === 'fr' ? 'Juridique' : 'Juridisch'}
+              {language === 'en' ? 'Legal' : language === 'fr' ? 'Juridique' : 'Juridisch'}
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy'}
+                  {language === 'en' ? 'Privacy Policy' : language === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Conditions Générales' : 'Algemene Voorwaarden'}
+                  {language === 'en' ? 'Terms & Conditions' : language === 'fr' ? 'Conditions Générales' : 'Algemene Voorwaarden'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {language === 'fr' ? 'Politique des Cookies' : 'Cookie Policy'}
+                  {language === 'en' ? 'Cookie Policy' : language === 'fr' ? 'Politique des Cookies' : 'Cookie Policy'}
                 </a>
               </li>
               <li>
                 <a
-                  href={language === 'fr' ? '/fr/legal' : '/legal'}
+                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
                   className="text-muted-foreground hover:text-primary"
                 >
                   GDPR
@@ -299,10 +309,12 @@ const Footer = () => {
         <div className="mt-12 border-t border-border/50 pt-12">
           <div className="max-w-md mx-auto text-center">
             <h4 className="font-semibold text-lg mb-2">
-              {language === 'fr' ? 'Restez informé' : 'Blijf op de hoogte'}
+              {language === 'en' ? 'Stay informed' : language === 'fr' ? 'Restez informé' : 'Blijf op de hoogte'}
             </h4>
             <p className="text-sm text-muted-foreground mb-4">
-              {language === 'fr'
+              {language === 'en'
+                ? 'Receive the latest updates, tips and AI insights directly in your inbox'
+                : language === 'fr'
                 ? 'Recevez les dernières mises à jour, conseils et insights IA directement dans votre boîte mail'
                 : 'Ontvang de nieuwste updates, tips en AI-insights direct in je inbox'
               }
@@ -310,7 +322,7 @@ const Footer = () => {
             <form onSubmit={handleNewsletterSignup} className="flex gap-2">
               <Input
                 type="email"
-                placeholder={language === 'fr' ? 'vous@email.be' : 'je@email.be'}
+                placeholder={language === 'en' ? 'you@email.com' : language === 'fr' ? 'vous@email.be' : 'je@email.be'}
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 disabled={submittingNewsletter}
@@ -323,8 +335,8 @@ const Footer = () => {
                 disabled={submittingNewsletter}
               >
                 {submittingNewsletter
-                  ? (language === 'fr' ? "En cours..." : "Bezig...")
-                  : (language === 'fr' ? "S'abonner" : "Abonneer")
+                  ? (language === 'en' ? "Submitting..." : language === 'fr' ? "En cours..." : "Bezig...")
+                  : (language === 'en' ? "Subscribe" : language === 'fr' ? "S'abonner" : "Abonneer")
                 }
               </Button>
             </form>
@@ -334,7 +346,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Glimps. {language === 'fr' ? 'Tous droits réservés.' : 'Alle rechten voorbehouden.'}
+            © {new Date().getFullYear()} Glimps. {language === 'en' ? 'All rights reserved.' : language === 'fr' ? 'Tous droits réservés.' : 'Alle rechten voorbehouden.'}
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-muted-foreground hover:text-primary">
