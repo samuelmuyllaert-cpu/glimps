@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       overline: 'AI-Aangedreven Klantenondersteuning',
-      title: 'Intelligente chatbots voor e-commerce',
+      title: 'Intelligente chatbots\nvoor\ne-commerce',
       description: 'Onze intelligente chatbots beantwoorden vragen over producten, verzending en bestellingen automatisch - ook buiten kantooruren. Verhoog je conversie met AI.',
       cta: 'Gratis aan de slag',
       ctaSecondary: 'Zie glimps in actie'
@@ -795,7 +795,7 @@ export const translations = {
     },
     hero: {
       overline: 'Support Client Propulsé par IA',
-      title: 'Chatbots intelligents pour l\'e-commerce',
+      title: 'Chatbots intelligents\npour\nl\'e-commerce',
       description: 'Nos chatbots intelligents répondent automatiquement aux questions sur les produits, la livraison et les commandes - même en dehors des heures de bureau. Augmentez votre conversion avec l\'IA.',
       cta: 'Commencer gratuitement',
       ctaSecondary: 'Voir glimps en action'
