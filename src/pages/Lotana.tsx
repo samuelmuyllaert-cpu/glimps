@@ -25,25 +25,25 @@ const Lotana = () => {
   }, []);
 
   const content = language === 'fr' ? {
-    title: "Bienvenue chez",
-    subtitle: "Lotana",
-    heading: "Votre assistant IA personnel pour jeux et puzzles",
-    description: "Nous sommes là pour vous aider ! Vous avez des questions sur nos jeux de société, puzzles, jouets éducatifs ou autres produits ? N'hésitez pas à poser votre question via le chat.",
+    title: "Testez votre",
+    subtitle: "Assistant IA Lotana",
+    heading: "Propulsé par Glimps",
+    description: "Testez librement votre nouveau chatbot IA ! Posez des questions sur les jeux de société, puzzles, jouets éducatifs et autres produits Lotana. Découvrez comment l'IA peut aider vos clients 24/7.",
     feature1Title: "Toujours disponible",
-    feature1Desc: "Posez toutes vos questions sur nos produits quand cela vous convient",
+    feature1Desc: "Vos clients peuvent poser leurs questions à tout moment",
     feature2Title: "Jour et nuit",
-    feature2Desc: "Nous sommes également là pour vous aider en dehors des heures de bureau",
+    feature2Desc: "Support automatique même en dehors des heures de bureau",
     feature3Title: "Conforme RGPD",
-    feature3Desc: "Glimps est conforme au RGPD et respecte votre vie privée",
-    feature4Title: "Livraison rapide",
-    feature4Desc: "Commandez avant 16h pour une expédition le jour même",
-    feature5Title: "Large choix",
-    feature5Desc: "Plus de 40 marques de jeux et puzzles de qualité",
-    feature6Title: "Conseils d'experts",
-    feature6Desc: "Obtenez des recommandations personnalisées pour chaque âge",
-    howItWorksTitle: "Comment le bot aide les clients",
-    howItWorksDesc: "Cliquez sur le chat en bas à droite et posez votre question",
-    examplesTitle: "Exemples de questions",
+    feature3Desc: "Toutes les conversations sont sécurisées et conformes au RGPD",
+    feature4Title: "Infos sur livraison",
+    feature4Desc: "Le bot connaît vos délais : commande avant 16h = envoi le jour même",
+    feature5Title: "Connaît votre gamme",
+    feature5Desc: "Formé sur vos 40+ marques de jeux et puzzels",
+    feature6Title: "Recommandations",
+    feature6Desc: "Conseils personnalisés basés sur l'âge et les intérêts",
+    howItWorksTitle: "Testez votre chatbot",
+    howItWorksDesc: "Cliquez sur le chat en bas à droite et testez n'importe quelle question",
+    examplesTitle: "Questions de test suggérées",
     example1Title: "Recommandations de jeux",
     example1Desc: "Quels jeux sont adaptés pour des enfants de 6 ans ?",
     example2Title: "Niveau de difficulté des puzzles",
@@ -56,28 +56,28 @@ const Lotana = () => {
     example5Desc: "Ce jeu est-il en stock et quand puis-je le recevoir ?",
     example6Title: "Cadeaux",
     example6Desc: "Quel puzzle convient comme cadeau pour un amateur de voyage ?",
-    seoTitle: "Bienvenue chez Lotana - Assistant IA pour jeux et puzzles",
-    seoDescription: "Bienvenue chez Lotana - Votre magasin en ligne pour jeux de société, puzzles et jouets éducatifs. Obtenez de l'aide instantanée via notre assistant IA"
+    seoTitle: "Testez votre Assistant IA Lotana - Propulsé par Glimps",
+    seoDescription: "Page de test pour l'assistant IA de Lotana. Découvrez comment le chatbot peut aider vos clients avec des questions sur les jeux et puzzles."
   } : {
-    title: "Welkom bij",
-    subtitle: "Lotana",
-    heading: "Je persoonlijke AI assistent voor spellen en puzzels",
-    description: "We zijn er om je te helpen! Heb je vragen over onze bordspellen, puzzels, educatief speelgoed of andere producten? Stel gerust je vraag via de chat.",
-    feature1Title: "Altijd voor je klaar",
-    feature1Desc: "Stel al je vragen over onze producten wanneer het jou uitkomt",
+    title: "Test je",
+    subtitle: "Lotana AI Assistent",
+    heading: "Mogelijk gemaakt door Glimps",
+    description: "Test vrijuit je nieuwe AI chatbot! Stel vragen over bordspellen, puzzels, educatief speelgoed en andere Lotana producten. Ontdek hoe AI je klanten 24/7 kan helpen.",
+    feature1Title: "Altijd beschikbaar",
+    feature1Desc: "Je klanten kunnen op elk moment hun vragen stellen",
     feature2Title: "Dag en nacht",
-    feature2Desc: "Ook buiten kantooruren staan we voor je klaar om te helpen",
+    feature2Desc: "Automatische support ook buiten kantooruren",
     feature3Title: "GDPR conform",
-    feature3Desc: "Glimps is GDPR conform en respecteert jouw privacy",
-    feature4Title: "Snelle levering",
-    feature4Desc: "Bestel voor 16u voor verzending dezelfde dag",
-    feature5Title: "Ruime keuze",
-    feature5Desc: "Meer dan 40 merken aan kwaliteitsspellen en puzzels",
-    feature6Title: "Deskundig advies",
-    feature6Desc: "Krijg persoonlijke aanbevelingen voor elke leeftijd",
-    howItWorksTitle: "Hoe de bot klanten helpt",
-    howItWorksDesc: "Klik rechtsonder op de chat en stel je vraag",
-    examplesTitle: "Voorbeeldvragen",
+    feature3Desc: "Alle gesprekken zijn beveiligd en GDPR-compliant",
+    feature4Title: "Leveringsinformatie",
+    feature4Desc: "De bot kent je levertijden: bestel voor 16u = verzending dezelfde dag",
+    feature5Title: "Kent je assortiment",
+    feature5Desc: "Getraind op je 40+ merken aan spellen en puzzels",
+    feature6Title: "Slimme aanbevelingen",
+    feature6Desc: "Persoonlijk advies op basis van leeftijd en interesses",
+    howItWorksTitle: "Test je chatbot",
+    howItWorksDesc: "Klik rechtsonder op de chat en test elke vraag die je wilt",
+    examplesTitle: "Gesuggereerde testvragen",
     example1Title: "Speladvies",
     example1Desc: "Welke spellen zijn geschikt voor kinderen van 6 jaar?",
     example2Title: "Puzzelmoeilijkheid",
@@ -90,8 +90,8 @@ const Lotana = () => {
     example5Desc: "Is dit spel op voorraad en wanneer kan ik het ontvangen?",
     example6Title: "Cadeautips",
     example6Desc: "Welke puzzel is geschikt als cadeau voor een reizenliefhebber?",
-    seoTitle: "Welkom bij Lotana - AI Assistent voor spellen en puzzels",
-    seoDescription: "Welkom bij Lotana - Jouw online winkel voor bordspellen, puzzels en educatief speelgoed. Krijg direct hulp via onze AI assistent"
+    seoTitle: "Test je Lotana AI Assistent - Mogelijk gemaakt door Glimps",
+    seoDescription: "Testpagina voor de Lotana AI assistent. Ontdek hoe de chatbot je klanten kan helpen met vragen over spellen en puzzels."
   };
 
   return (
@@ -274,19 +274,19 @@ const Lotana = () => {
 
       <section className="container mx-auto px-6 py-16">
         <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 p-8 text-center shadow-xl md:p-12">
-          <Puzzle className="mx-auto mb-6 h-16 w-16 text-primary" />
+          <Sparkles className="mx-auto mb-6 h-16 w-16 text-primary" />
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-            {language === 'fr' ? 'Prêt à découvrir votre prochain jeu favori ?' : 'Klaar om je volgende favoriete spel te ontdekken?'}
+            {language === 'fr' ? 'Testez toutes les possibilités' : 'Test alle mogelijkheden'}
           </h2>
           <p className="mb-6 text-lg text-muted-foreground">
             {language === 'fr'
-              ? 'Notre assistant IA est disponible 24h/24 et 7j/7 pour vous aider à trouver le jeu ou puzzle parfait pour chaque occasion.'
-              : 'Onze AI assistent is 24/7 beschikbaar om je te helpen het perfecte spel of puzzel te vinden voor elke gelegenheid.'}
+              ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA répond à vos clients.'
+              : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt.'}
           </p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm font-medium text-primary">
             {language === 'fr'
-              ? 'Cliquez simplement sur le bouton de chat en bas à droite pour commencer'
-              : 'Klik gewoon op de chat-knop rechtsonder om te starten'}
+              ? '🤖 Propulsé par Glimps - Votre partenaire pour l\'IA conversationnelle'
+              : '🤖 Mogelijk gemaakt door Glimps - Je partner voor conversationele AI'}
           </p>
         </div>
       </section>
