@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Puzzle, CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Sparkles, Package, Gift, Truck } from "lucide-react";
+import { Puzzle, CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Sparkles, Package, Gift, Truck, RefreshCw, Lightbulb, CircleAlert as AlertCircle } from "lucide-react";
 
 const Lotana = () => {
   const { language } = useLanguage();
@@ -41,6 +41,14 @@ const Lotana = () => {
     feature5Desc: "Formé sur vos 40+ marques de jeux et puzzels",
     feature6Title: "Recommandations",
     feature6Desc: "Conseils personnalisés basés sur l'âge et les intérêts",
+    testingTitle: "Comment tester de manière optimale",
+    testingDesc: "Suivez ces conseils pour une expérience de test optimale",
+    testingTip1Title: "Rafraîchir la conversation",
+    testingTip1Desc: "Pour éviter les limitations de tokens, rafraîchissez régulièrement le chat. La limite est de 30 questions par conversation.",
+    testingTip2Title: "Notez vos retours",
+    testingTip2Desc: "Écrivez tous les points d'amélioration ou questions mal comprises - nous les implémenterons dans la prochaine version.",
+    testingTip3Title: "Testez divers scénarios",
+    testingTip3Desc: "Essayez différents types de questions : produits, conseils, livraison, disponibilité, etc.",
     howItWorksTitle: "Testez votre chatbot",
     howItWorksDesc: "Cliquez sur le chat en bas à droite et testez n'importe quelle question",
     examplesTitle: "Questions de test suggérées",
@@ -75,6 +83,14 @@ const Lotana = () => {
     feature5Desc: "Getraind op je 40+ merken aan spellen en puzzels",
     feature6Title: "Slimme aanbevelingen",
     feature6Desc: "Persoonlijk advies op basis van leeftijd en interesses",
+    testingTitle: "Hoe optimaal testen",
+    testingDesc: "Volg deze tips voor een optimale testervaring",
+    testingTip1Title: "Ververs het gesprek regelmatig",
+    testingTip1Desc: "Om token-limiet te vermijden, ververs de chat af en toe. De limiet is 30 vragen per gesprek.",
+    testingTip2Title: "Noteer je feedback",
+    testingTip2Desc: "Schrijf alle verbeterpunten of slecht begrepen vragen op - we verwerken dit in de volgende versie.",
+    testingTip3Title: "Test verschillende scenario's",
+    testingTip3Desc: "Probeer allerlei types vragen: producten, advies, levering, voorraad, etc.",
     howItWorksTitle: "Test je chatbot",
     howItWorksDesc: "Klik rechtsonder op de chat en test elke vraag die je wilt",
     examplesTitle: "Gesuggereerde testvragen",
@@ -186,6 +202,52 @@ const Lotana = () => {
               <h3 className="mb-2 text-lg font-bold">{content.feature6Title}</h3>
               <p className="text-sm text-muted-foreground">
                 {content.feature6Desc}
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-6 py-16 bg-gradient-to-b from-primary/5 to-background">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-12 text-center">
+            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
+              <Lightbulb className="h-8 w-8 text-white" />
+            </div>
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">{content.testingTitle}</h2>
+            <p className="text-lg text-muted-foreground">
+              {content.testingDesc}
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3 mb-16">
+            <Card className="border-2 border-blue-200 bg-blue-50/50 p-6 shadow-lg">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
+                <RefreshCw className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-foreground">{content.testingTip1Title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {content.testingTip1Desc}
+              </p>
+            </Card>
+
+            <Card className="border-2 border-blue-200 bg-blue-50/50 p-6 shadow-lg">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
+                <AlertCircle className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-foreground">{content.testingTip2Title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {content.testingTip2Desc}
+              </p>
+            </Card>
+
+            <Card className="border-2 border-blue-200 bg-blue-50/50 p-6 shadow-lg">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
+                <MessageSquare className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-foreground">{content.testingTip3Title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {content.testingTip3Desc}
               </p>
             </Card>
           </div>
