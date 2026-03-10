@@ -120,32 +120,32 @@ const Lotana = () => {
       />
       <Navigation />
 
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-6 inline-flex items-center justify-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 shadow-lg">
-              <Puzzle className="h-10 w-10 text-primary" />
+          <div className="mb-4 sm:mb-6 inline-flex items-center justify-center">
+            <div className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 shadow-lg">
+              <Puzzle className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
             </div>
           </div>
-          <h1 className="mb-6 font-inter text-4xl font-bold leading-tight md:text-6xl md:leading-tight">
+          <h1 className="mb-4 sm:mb-6 font-inter text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
             {content.title}<br />
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               {content.subtitle}
             </span>
           </h1>
-          <p className="mb-4 text-2xl font-semibold text-foreground/90">
+          <p className="mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold text-foreground/90">
             {content.heading}
           </p>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto max-w-2xl px-4 text-base sm:text-lg text-muted-foreground">
             {content.description}
           </p>
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-12">
+      <section className="container mx-auto px-4 py-8 sm:px-6 sm:py-12">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card className="transform border-2 p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <Card className="transform border-2 p-4 sm:p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary/70 shadow-md">
                 <MessageSquare className="h-7 w-7 text-white" />
               </div>
@@ -208,45 +208,45 @@ const Lotana = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-16 bg-gradient-to-b from-primary/5 to-background">
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-12 text-center">
-            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
-              <Lightbulb className="h-8 w-8 text-white" />
+          <div className="mb-8 sm:mb-12 text-center">
+            <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
+              <Lightbulb className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">{content.testingTitle}</h2>
-            <p className="text-lg text-muted-foreground">
+            <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl font-bold">{content.testingTitle}</h2>
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
               {content.testingDesc}
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3 mb-16">
-            <Card className="border-2 border-blue-200 bg-blue-50/50 p-6 shadow-lg">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
-                <RefreshCw className="h-7 w-7 text-white" />
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-3 mb-12 sm:mb-16">
+            <Card className="border-2 border-blue-200 bg-blue-50/50 p-4 sm:p-6 shadow-lg">
+              <div className="mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
+                <RefreshCw className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </div>
-              <h3 className="mb-2 text-lg font-bold text-foreground">{content.testingTip1Title}</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="mb-2 text-base sm:text-lg font-bold text-foreground">{content.testingTip1Title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 {content.testingTip1Desc}
               </p>
             </Card>
 
-            <Card className="border-2 border-blue-200 bg-blue-50/50 p-6 shadow-lg">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
-                <AlertCircle className="h-7 w-7 text-white" />
+            <Card className="border-2 border-blue-200 bg-blue-50/50 p-4 sm:p-6 shadow-lg">
+              <div className="mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
+                <AlertCircle className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </div>
-              <h3 className="mb-2 text-lg font-bold text-foreground">{content.testingTip2Title}</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="mb-2 text-base sm:text-lg font-bold text-foreground">{content.testingTip2Title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 {content.testingTip2Desc}
               </p>
             </Card>
 
-            <Card className="border-2 border-blue-200 bg-blue-50/50 p-6 shadow-lg">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
-                <MessageSquare className="h-7 w-7 text-white" />
+            <Card className="border-2 border-blue-200 bg-blue-50/50 p-4 sm:p-6 shadow-lg">
+              <div className="mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
+                <MessageSquare className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </div>
-              <h3 className="mb-2 text-lg font-bold text-foreground">{content.testingTip3Title}</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="mb-2 text-base sm:text-lg font-bold text-foreground">{content.testingTip3Title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 {content.testingTip3Desc}
               </p>
             </Card>
@@ -254,22 +254,22 @@ const Lotana = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-12 text-center">
-            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-lg">
-              <Sparkles className="h-8 w-8 text-white" />
+          <div className="mb-8 sm:mb-12 text-center">
+            <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-lg">
+              <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">{content.howItWorksTitle}</h2>
-            <p className="text-lg text-muted-foreground">
+            <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl font-bold">{content.howItWorksTitle}</h2>
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
               {content.howItWorksDesc}
             </p>
           </div>
 
-          <Card className="border-2 p-8 shadow-2xl md:p-12">
-            <h3 className="mb-8 text-center text-2xl font-bold">{content.examplesTitle}</h3>
+          <Card className="border-2 p-6 shadow-2xl sm:p-8 md:p-12">
+            <h3 className="mb-6 sm:mb-8 text-center text-xl sm:text-2xl font-bold">{content.examplesTitle}</h3>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
               <div className="flex items-start gap-4 rounded-lg bg-primary/5 p-4 transition-all hover:bg-primary/10">
                 <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-primary" />
                 <div>
@@ -334,18 +334,18 @@ const Lotana = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-16">
-        <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 p-8 text-center shadow-xl md:p-12">
-          <Sparkles className="mx-auto mb-6 h-16 w-16 text-primary" />
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-4xl rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 p-6 text-center shadow-xl sm:p-8 md:p-12">
+          <Sparkles className="mx-auto mb-4 sm:mb-6 h-12 w-12 sm:h-16 sm:w-16 text-primary" />
+          <h2 className="mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl font-bold">
             {language === 'fr' ? 'Testez toutes les possibilités' : 'Test alle mogelijkheden'}
           </h2>
-          <p className="mb-6 text-lg text-muted-foreground">
+          <p className="mb-4 sm:mb-6 text-base sm:text-lg text-muted-foreground px-2">
             {language === 'fr'
               ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA répond à vos clients.'
               : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt.'}
           </p>
-          <p className="text-sm font-medium text-primary">
+          <p className="text-xs sm:text-sm font-medium text-primary">
             {language === 'fr'
               ? '🤖 Propulsé par Glimps - Votre partenaire pour l\'IA conversationnelle'
               : '🤖 Mogelijk gemaakt door Glimps - Je partner voor conversationele AI'}

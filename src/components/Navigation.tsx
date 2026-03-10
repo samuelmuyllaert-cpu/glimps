@@ -58,7 +58,7 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden items-center gap-6 lg:gap-8 md:flex">
+          <div className="hidden items-center gap-4 lg:gap-6 xl:gap-8 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -71,10 +71,10 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTA Button and Language Switcher */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon" className="rounded-full">
+                <Button variant="outline" size="icon" className="h-9 w-9 rounded-full lg:h-10 lg:w-10">
                   <Globe className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -90,7 +90,7 @@ const Navigation = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button asChild variant="default" size="default" className="rounded-full">
+            <Button asChild variant="default" size="default" className="rounded-full text-sm lg:text-base">
               <a href={language === 'fr' ? '/fr/demo' : language === 'en' ? '/en/demo' : '/demo'}>
                 {language === 'fr' ? 'Demander une démo' : language === 'en' ? 'Request demo' : 'Demo aanvragen'}
               </a>

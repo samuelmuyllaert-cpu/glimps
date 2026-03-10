@@ -17,19 +17,19 @@ const Hero = () => {
   return (
     <div className="relative min-h-[calc(100vh-80px)] w-full overflow-visible">
       {/* Gradient Blob Background */}
-      <div className="pointer-events-none absolute bottom-[-400px] left-1/2 h-[1200px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#e6575e]/30 via-[#f88a8f]/40 to-[#e6575e]/30 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-200px] left-1/2 h-[800px] w-[600px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#e6575e]/30 via-[#f88a8f]/40 to-[#e6575e]/30 blur-3xl sm:bottom-[-400px] sm:h-[1200px] sm:w-[1000px]" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 text-center">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 py-12 text-center sm:px-6 sm:py-20">
         {/* Overline */}
-        <div className="mb-6">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+        <div className="mb-4 sm:mb-6">
+          <span className="text-xs font-semibold uppercase tracking-wider text-primary sm:text-sm">
             {t('hero.overline')}
           </span>
         </div>
 
         {/* Main Heading */}
-        <h1 className="mb-6 font-inter font-normal text-[32px] leading-[40px] tracking-[0.352px] text-foreground max-sm:text-[32px] max-sm:leading-[40px] max-md:text-[40px] max-md:leading-[48px] md:text-[48px] md:leading-[60px]">
+        <h1 className="mb-4 font-inter font-normal text-[28px] leading-[36px] tracking-[0.352px] text-foreground sm:mb-6 sm:text-[40px] sm:leading-[48px] md:text-[48px] md:leading-[60px]">
           {t('hero.title').split('\n').map((line, i) => (
             <span key={i}>
               {line}
@@ -39,7 +39,7 @@ const Hero = () => {
         </h1>
 
         {/* Subheading */}
-        <p className="mb-10 text-lg text-muted-foreground md:text-xl">
+        <p className="mb-8 px-2 text-base text-muted-foreground sm:mb-10 sm:px-0 sm:text-lg md:text-xl">
           {t('hero.description').split('\n').map((line, i) => (
             <span key={i}>
               {line}
@@ -49,14 +49,14 @@ const Hero = () => {
         </p>
 
         {/* CTA Buttons */}
-        <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button asChild variant="hero" size="lg" className="rounded-full">
+        <div className="mb-12 flex flex-col items-center justify-center gap-3 px-4 sm:mb-16 sm:flex-row sm:gap-4 sm:px-0">
+          <Button asChild variant="hero" size="lg" className="w-full rounded-full sm:w-auto">
             <a href={language === 'fr' ? '/fr/demo' : '/demo'}>
               <Sparkles className="h-5 w-5" />
               {t('hero.cta')}
             </a>
           </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full">
+          <Button asChild variant="outline" size="lg" className="w-full rounded-full sm:w-auto">
             <a href={language === 'fr' ? '/fr/fonctionnalites' : '/features'}>
               {t('hero.ctaSecondary')}
             </a>

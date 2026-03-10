@@ -12,55 +12,55 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-background py-20">
-      <div className="container mx-auto px-6">
+    <section className="relative w-full overflow-hidden bg-background py-12 sm:py-16 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+        <div className="mb-10 sm:mb-12 lg:mb-16 text-center">
+          <span className="mb-3 sm:mb-4 inline-block text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary">
             {t('testimonials.badge')}
           </span>
-          <h2 className="mb-4 font-inter text-4xl font-normal text-foreground md:text-5xl">
+          <h2 className="mb-3 sm:mb-4 font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-foreground px-4">
             {t('testimonials.title')}
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4">
             {t('testimonials.subtitle')}
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-md"
+              className="flex flex-col rounded-xl sm:rounded-2xl border border-border bg-card p-4 sm:p-6 transition-all hover:border-primary/30 hover:shadow-md"
             >
               {/* Rating */}
-              <div className="mb-4 flex gap-1">
+              <div className="mb-3 sm:mb-4 flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                    className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400"
                   />
                 ))}
               </div>
 
               {/* Testimonial Text */}
-              <p className="mb-6 flex-1 text-muted-foreground leading-relaxed">
+              <p className="mb-4 sm:mb-6 flex-1 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 "{testimonial.text}"
               </p>
 
               {/* Author Info */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <div
-                  className={`flex h-12 w-12 items-center justify-center rounded-full ${avatarColors[index % avatarColors.length]} text-sm font-semibold text-white`}
+                  className={`flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full ${avatarColors[index % avatarColors.length]} text-xs sm:text-sm font-semibold text-white`}
                 >
                   {getInitials(testimonial.name)}
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">
+                  <div className="text-sm sm:text-base font-semibold text-foreground">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground">
                     {testimonial.role} @ {testimonial.company}
                   </div>
                 </div>
