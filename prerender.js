@@ -53,6 +53,8 @@ const routesToPrerender = [
   '/legal',
   '/prosportlights',
   '/lensonline',
+  '/lotana',
+  '/colpaert-online',
   '/chatbot-agency-vlaanderen-ecommerce',
   '/ai-agency-belgie-chatbots',
   '/ai-chatbot-bureau-belgie-ecommerce',
@@ -100,6 +102,8 @@ const routesToPrerender = [
   '/fr/legal',
   '/fr/prosportlights',
   '/fr/lensonline',
+  '/fr/lotana',
+  '/fr/colpaert-online',
   '/en',
   '/en/features',
   '/en/demo',
@@ -142,7 +146,9 @@ const routesToPrerender = [
   '/en/industries/garden-outdoor',
   '/en/legal',
   '/en/prosportlights',
-  '/en/lensonline'
+  '/en/lensonline',
+  '/en/lotana',
+  '/en/colpaert-online'
 ];
 
 (async () => {
