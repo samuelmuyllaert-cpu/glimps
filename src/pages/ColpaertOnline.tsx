@@ -13,7 +13,8 @@ const ColpaertOnline = () => {
     const script = document.createElement('script');
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'YOUR_WIDGET_ID_HERE');
+    script.setAttribute('data-widget', 'cmmqrg0o5002x04jpku8csk38');
+    script.setAttribute('data-position', 'bottom-left');
     document.body.appendChild(script);
 
     return () => {
@@ -50,7 +51,9 @@ const ColpaertOnline = () => {
     testingTip3Title: "Testez divers scénarios",
     testingTip3Desc: "Essayez différents types de questions : produits, installation, entretien, dépannage, etc.",
     howItWorksTitle: "Testez votre chatbot",
-    howItWorksDesc: "Cliquez sur le chat en bas à droite et testez n'importe quelle question",
+    howItWorksDesc: "Utilisez le chat ci-dessous ou cliquez sur le widget en bas à gauche",
+    chatTitle: "Chatbot en direct",
+    chatDesc: "Testez directement le chatbot ici",
     examplesTitle: "Questions de test suggérées",
     example1Title: "Choisir un poêle",
     example1Desc: "Quel poêle convient pour chauffer 80m² ?",
@@ -92,7 +95,9 @@ const ColpaertOnline = () => {
     testingTip3Title: "Test verschillende scenario's",
     testingTip3Desc: "Probeer allerlei types vragen: producten, installatie, onderhoud, troubleshooting, etc.",
     howItWorksTitle: "Test je chatbot",
-    howItWorksDesc: "Klik rechtsonder op de chat en test elke vraag die je wilt",
+    howItWorksDesc: "Gebruik de chat hieronder of klik op de widget linksonder",
+    chatTitle: "Live chatbot",
+    chatDesc: "Test de chatbot direct hier",
     examplesTitle: "Gesuggereerde testvragen",
     example1Title: "Kachel kiezen",
     example1Desc: "Welke kachel is geschikt voor het verwarmen van 80m²?",
@@ -331,6 +336,34 @@ const ColpaertOnline = () => {
               </div>
             </div>
           </Card>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-gradient-to-b from-background to-primary/5">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-8 sm:mb-12 text-center">
+            <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg">
+              <MessageSquare className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+            </div>
+            <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl font-bold">{content.chatTitle}</h2>
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
+              {content.chatDesc}
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="w-full max-w-[450px]">
+              <iframe
+                src="https://static.chatbotkit.com/integrations/widget/v2/cmmqrg0o5002x04jpku8csk38"
+                width="100%"
+                height="650"
+                frameBorder="0"
+                className="rounded-xl shadow-2xl"
+                allow="clipboard-write"
+                title="Colpaert Online AI Chatbot"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
