@@ -782,6 +782,88 @@ export const translations = {
         ctaSubtitle: 'Ontdek hoe glimps jouw tuinwebshop bloeiend maakt',
         ctaButton: 'Start je gratis proefperiode'
       }
+    },
+    partners: {
+      hero: {
+        title: 'Word Partner van Glimps',
+        subtitle: 'Groei samen met ons en help e-commerce bedrijven te transformeren met AI-gedreven klantenservice'
+      },
+      stats: {
+        customers: 'Tevreden klanten',
+        support: 'Partner support',
+        satisfaction: 'Klanttevredenheid'
+      },
+      benefits: {
+        title: 'Voordelen voor Partners',
+        subtitle: 'Alles wat je nodig hebt om succesvol te zijn',
+        commission: {
+          title: 'Aantrekkelijke Commissies',
+          description: 'Verdien competitieve commissies voor elke klant die je binnenhaalt',
+          transparent: 'Transparante commissiestructuur',
+          longterm: 'Terugkerende inkomsten',
+          flexible: 'Flexibele betalingsopties'
+        },
+        support: {
+          title: 'Dedicated Support',
+          description: 'Krijg toegang tot ons volledige partner supportteam',
+          manager: 'Persoonlijke partner manager',
+          technical: 'Technische ondersteuning',
+          community: 'Partner community'
+        },
+        materials: {
+          title: 'Marketing Materialen',
+          description: 'Professionele sales en marketing tools',
+          decks: 'Sales decks en presentaties',
+          comarketing: 'Co-marketing mogelijkheden'
+        },
+        onboarding: {
+          title: 'Snelle Onboarding',
+          description: 'Kom snel aan de slag met onze training',
+          training: 'Uitgebreide productraining',
+          certification: 'Partner certificering',
+          dashboard: 'Partner dashboard toegang'
+        },
+        leads: {
+          title: 'Lead Sharing',
+          description: 'Ontvang gekwalificeerde leads van ons',
+          qualified: 'Gekwalificeerde leads',
+          targeting: 'Gerichte lead targeting',
+          matching: 'Lead matching op expertise'
+        },
+        grow: {
+          title: 'Groei Samen',
+          description: 'Ontwikkel je business met ons',
+          tiered: 'Tiered partner programma',
+          bonus: 'Performance bonussen',
+          events: 'Exclusieve partner events'
+        }
+      },
+      howItWorks: {
+        title: 'Hoe het Werkt',
+        subtitle: 'In 4 eenvoudige stappen partner worden',
+        step1: {
+          title: 'Aanmelden',
+          description: 'Vul het aanmeldformulier in en vertel ons over je business'
+        },
+        step2: {
+          title: 'Evaluatie',
+          description: 'We evalueren je aanmelding en plannen een kennismakingsgesprek'
+        },
+        step3: {
+          title: 'Onboarding',
+          description: 'Doorloop onze training en krijg toegang tot alle tools'
+        },
+        step4: {
+          title: 'Start Verkopen',
+          description: 'Begin met het aanbrengen van klanten en verdien commissies'
+        }
+      },
+      cta: {
+        title: 'Klaar om Partner te Worden?',
+        subtitle: 'Neem contact met ons op om te beginnen',
+        email: 'Stuur een email naar',
+        response: 'We nemen binnen 24 uur contact met je op'
+      }
     }
   },
   fr: {
@@ -1590,6 +1672,88 @@ export const translations = {
         title: 'Planifiez une Consultation Gratuite',
         subtitle: 'Regardons ensemble quelle est la prochaine étape la plus intelligente pour votre entreprise e-commerce. Aucune obligation, seulement des conseils honnêtes d\'experts qui comprennent votre entreprise.',
         contact: 'Vous préférez un contact direct ? Envoyez-nous un email à'
+      }
+    },
+    partners: {
+      hero: {
+        title: 'Devenez Partenaire de Glimps',
+        subtitle: 'Grandissez avec nous et aidez les entreprises e-commerce à se transformer avec le service client alimenté par l\'IA'
+      },
+      stats: {
+        customers: 'Clients satisfaits',
+        support: 'Support partenaire',
+        satisfaction: 'Satisfaction client'
+      },
+      benefits: {
+        title: 'Avantages pour les Partenaires',
+        subtitle: 'Tout ce dont vous avez besoin pour réussir',
+        commission: {
+          title: 'Commissions Attractives',
+          description: 'Gagnez des commissions compétitives pour chaque client que vous apportez',
+          transparent: 'Structure de commission transparente',
+          longterm: 'Revenus récurrents',
+          flexible: 'Options de paiement flexibles'
+        },
+        support: {
+          title: 'Support Dédié',
+          description: 'Accédez à notre équipe complète de support partenaire',
+          manager: 'Gestionnaire de partenaire personnel',
+          technical: 'Support technique',
+          community: 'Communauté de partenaires'
+        },
+        materials: {
+          title: 'Matériel Marketing',
+          description: 'Outils de vente et de marketing professionnels',
+          decks: 'Présentations de vente',
+          comarketing: 'Opportunités de co-marketing'
+        },
+        onboarding: {
+          title: 'Intégration Rapide',
+          description: 'Démarrez rapidement avec notre formation',
+          training: 'Formation produit complète',
+          certification: 'Certification partenaire',
+          dashboard: 'Accès au tableau de bord partenaire'
+        },
+        leads: {
+          title: 'Partage de Leads',
+          description: 'Recevez des leads qualifiés de notre part',
+          qualified: 'Leads qualifiés',
+          targeting: 'Ciblage de leads ciblé',
+          matching: 'Correspondance de leads basée sur l\'expertise'
+        },
+        grow: {
+          title: 'Grandissez Ensemble',
+          description: 'Développez votre entreprise avec nous',
+          tiered: 'Programme partenaire à niveaux',
+          bonus: 'Bonus de performance',
+          events: 'Événements partenaires exclusifs'
+        }
+      },
+      howItWorks: {
+        title: 'Comment Ça Marche',
+        subtitle: 'Devenez partenaire en 4 étapes simples',
+        step1: {
+          title: 'Inscription',
+          description: 'Remplissez le formulaire d\'inscription et parlez-nous de votre entreprise'
+        },
+        step2: {
+          title: 'Évaluation',
+          description: 'Nous évaluons votre demande et planifions une rencontre de connaissance'
+        },
+        step3: {
+          title: 'Intégration',
+          description: 'Suivez notre formation et accédez à tous les outils'
+        },
+        step4: {
+          title: 'Commencez à Vendre',
+          description: 'Commencez à apporter des clients et gagnez des commissions'
+        }
+      },
+      cta: {
+        title: 'Prêt à Devenir Partenaire ?',
+        subtitle: 'Contactez-nous pour commencer',
+        email: 'Envoyez un email à',
+        response: 'Nous vous contacterons dans les 24 heures'
       }
     },
     changelog: {
@@ -2627,6 +2791,88 @@ export const translations = {
         title: 'Schedule a Free Consultation',
         subtitle: 'Let\'s look together at what the smartest next step is for your e-commerce business. No obligation, only honest advice from experts who understand your business.',
         contact: 'Prefer direct contact? Send us an email at'
+      }
+    },
+    partners: {
+      hero: {
+        title: 'Become a Glimps Partner',
+        subtitle: 'Grow with us and help e-commerce businesses transform with AI-powered customer service'
+      },
+      stats: {
+        customers: 'Satisfied customers',
+        support: 'Partner support',
+        satisfaction: 'Customer satisfaction'
+      },
+      benefits: {
+        title: 'Partner Benefits',
+        subtitle: 'Everything you need to succeed',
+        commission: {
+          title: 'Attractive Commissions',
+          description: 'Earn competitive commissions for every client you bring in',
+          transparent: 'Transparent commission structure',
+          longterm: 'Recurring revenue',
+          flexible: 'Flexible payment options'
+        },
+        support: {
+          title: 'Dedicated Support',
+          description: 'Get access to our full partner support team',
+          manager: 'Personal partner manager',
+          technical: 'Technical support',
+          community: 'Partner community'
+        },
+        materials: {
+          title: 'Marketing Materials',
+          description: 'Professional sales and marketing tools',
+          decks: 'Sales decks and presentations',
+          comarketing: 'Co-marketing opportunities'
+        },
+        onboarding: {
+          title: 'Fast Onboarding',
+          description: 'Get started quickly with our training',
+          training: 'Comprehensive product training',
+          certification: 'Partner certification',
+          dashboard: 'Partner dashboard access'
+        },
+        leads: {
+          title: 'Lead Sharing',
+          description: 'Receive qualified leads from us',
+          qualified: 'Qualified leads',
+          targeting: 'Targeted lead targeting',
+          matching: 'Lead matching based on expertise'
+        },
+        grow: {
+          title: 'Grow Together',
+          description: 'Develop your business with us',
+          tiered: 'Tiered partner program',
+          bonus: 'Performance bonuses',
+          events: 'Exclusive partner events'
+        }
+      },
+      howItWorks: {
+        title: 'How It Works',
+        subtitle: 'Become a partner in 4 simple steps',
+        step1: {
+          title: 'Sign Up',
+          description: 'Fill in the application form and tell us about your business'
+        },
+        step2: {
+          title: 'Evaluation',
+          description: 'We evaluate your application and schedule an introduction call'
+        },
+        step3: {
+          title: 'Onboarding',
+          description: 'Complete our training and get access to all tools'
+        },
+        step4: {
+          title: 'Start Selling',
+          description: 'Start bringing in clients and earn commissions'
+        }
+      },
+      cta: {
+        title: 'Ready to Become a Partner?',
+        subtitle: 'Contact us to get started',
+        email: 'Send an email to',
+        response: 'We will contact you within 24 hours'
       }
     },
     changelog: {
