@@ -27,21 +27,21 @@ const ColpaertOnline = () => {
 
   const content = language === 'fr' ? {
     title: "Testez votre",
-    subtitle: "Assistant IA Colpaert Online",
+    subtitle: "Assistant IA Colpaert",
     heading: "Propulsé par Glimps",
-    description: "Testez librement votre nouveau chatbot IA ! Posez des questions sur les poêles à bois, poêles à pellets, accessoires et l'entretien. Découvrez comment l'IA peut aider vos clients 24/7 avec des conseils d'experts.",
+    description: "Testez librement votre nouveau chatbot IA ! Posez des questions sur les fours céramiques, matériaux, techniques et entretien. Découvrez comment l'IA peut aider vos clients 24/7 avec des conseils d'experts sur la céramique et la poterie.",
     feature1Title: "Toujours disponible",
     feature1Desc: "Vos clients peuvent poser leurs questions à tout moment",
     feature2Title: "Jour et nuit",
     feature2Desc: "Support automatique même en dehors des heures de bureau",
     feature3Title: "Conforme RGPD",
     feature3Desc: "Toutes les conversations sont sécurisées et conformes au RGPD",
-    feature4Title: "Infos sur livraison",
-    feature4Desc: "Le bot connaît vos délais et options de livraison",
-    feature5Title: "Expert en poêles",
-    feature5Desc: "Formé spécifiquement sur votre gamme de poêles à bois et à pellets",
-    feature6Title: "Conseils techniques",
-    feature6Desc: "Aide à l'entretien, au nettoyage et au dépannage",
+    feature4Title: "Conseils fours",
+    feature4Desc: "Le bot connaît votre gamme de fours céramiques et peut conseiller",
+    feature5Title: "Expert céramique",
+    feature5Desc: "Formé spécifiquement sur les argiles, glaçures, pigments et techniques céramiques",
+    feature6Title: "Support technique",
+    feature6Desc: "Aide avec les fours, cuisson, émaillage et résolution de problèmes",
     testingTitle: "Comment tester de manière optimale",
     testingDesc: "Suivez ces conseils pour une expérience de test optimale",
     testingTip1Title: "Rafraîchir la conversation",
@@ -55,37 +55,37 @@ const ColpaertOnline = () => {
     chatTitle: "Chatbot en direct",
     chatDesc: "Testez directement le chatbot ici",
     examplesTitle: "Questions de test suggérées",
-    example1Title: "Choisir un poêle",
-    example1Desc: "Quel poêle convient pour chauffer 80m² ?",
-    example2Title: "Poêles à pellets vs bois",
-    example2Desc: "Quelle est la différence entre un poêle à bois et un poêle à pellets ?",
-    example3Title: "Entretien",
-    example3Desc: "Comment dois-je nettoyer mon poêle à pellets ?",
-    example4Title: "Installation",
-    example4Desc: "Ai-je besoin d'un conduit de cheminée pour installer un poêle ?",
-    example5Title: "Consommation",
-    example5Desc: "Combien de pellets un poêle consomme-t-il par jour ?",
-    example6Title: "Accessoires",
-    example6Desc: "De quels accessoires ai-je besoin pour mon poêle à bois ?",
-    seoTitle: "Testez votre Assistant IA Colpaert Online - Propulsé par Glimps",
-    seoDescription: "Page de test pour l'assistant IA de Colpaert Online. Découvrez comment le chatbot peut aider vos clients avec des questions sur les poêles."
+    example1Title: "Choisir un four",
+    example1Desc: "Quel four céramique convient pour un atelier amateur ?",
+    example2Title: "Types d'argile",
+    example2Desc: "Quelle est la différence entre l'argile de poterie et la porcelaine ?",
+    example3Title: "Glaçures",
+    example3Desc: "Comment appliquer correctement les glaçures céramiques ?",
+    example4Title: "Cuisson",
+    example4Desc: "Quelle température dois-je utiliser pour cuire la faïence ?",
+    example5Title: "Cours et formations",
+    example5Desc: "Quels cours de céramique proposez-vous ?",
+    example6Title: "Outils nécessaires",
+    example6Desc: "De quels outils ai-je besoin pour commencer le tournage ?",
+    seoTitle: "Testez votre Assistant IA Colpaert - Propulsé par Glimps",
+    seoDescription: "Page de test pour l'assistant IA de Colpaert. Découvrez comment le chatbot peut aider vos clients avec des questions sur la céramique et les fours."
   } : {
     title: "Test je",
-    subtitle: "Colpaert Online AI Assistent",
+    subtitle: "Colpaert AI Assistent",
     heading: "Mogelijk gemaakt door Glimps",
-    description: "Test vrijuit je nieuwe AI chatbot! Stel vragen over houtkachels, pelletkachels, accessoires en onderhoud. Ontdek hoe AI je klanten 24/7 kan helpen met expertadvies.",
+    description: "Test vrijuit je nieuwe AI chatbot! Stel vragen over keramiekovens, materialen, technieken en onderhoud. Ontdek hoe AI je klanten 24/7 kan helpen met expertadvies over keramiek en pottenbakken.",
     feature1Title: "Altijd beschikbaar",
     feature1Desc: "Je klanten kunnen op elk moment hun vragen stellen",
     feature2Title: "Dag en nacht",
     feature2Desc: "Automatische support ook buiten kantooruren",
     feature3Title: "GDPR conform",
     feature3Desc: "Alle gesprekken zijn beveiligd en GDPR-compliant",
-    feature4Title: "Leveringsinformatie",
-    feature4Desc: "De bot kent je levertijden en leveringsopties",
-    feature5Title: "Kachel expert",
-    feature5Desc: "Specifiek getraind op jouw assortiment houtkachels en pelletkachels",
-    feature6Title: "Technisch advies",
-    feature6Desc: "Hulp bij onderhoud, schoonmaken en probleemoplossing",
+    feature4Title: "Oven advies",
+    feature4Desc: "De bot kent jouw assortiment keramiekovens en kan adviseren",
+    feature5Title: "Keramiek expert",
+    feature5Desc: "Specifiek getraind op kleisoorten, glazuren, pigmenten en keramiektechnieken",
+    feature6Title: "Technische ondersteuning",
+    feature6Desc: "Hulp bij ovens, bakken, glazuren en probleemoplossing",
     testingTitle: "Hoe optimaal testen",
     testingDesc: "Volg deze tips voor een optimale testervaring",
     testingTip1Title: "Ververs het gesprek regelmatig",
@@ -99,20 +99,20 @@ const ColpaertOnline = () => {
     chatTitle: "Live chatbot",
     chatDesc: "Test de chatbot direct hier",
     examplesTitle: "Gesuggereerde testvragen",
-    example1Title: "Kachel kiezen",
-    example1Desc: "Welke kachel is geschikt voor het verwarmen van 80m²?",
-    example2Title: "Pellet vs hout",
-    example2Desc: "Wat is het verschil tussen een houtkachel en een pelletkachel?",
-    example3Title: "Onderhoud",
-    example3Desc: "Hoe moet ik mijn pelletkachel schoonmaken?",
-    example4Title: "Installatie",
-    example4Desc: "Heb ik een rookkanaal nodig om een kachel te installeren?",
-    example5Title: "Verbruik",
-    example5Desc: "Hoeveel pellets verbruikt een kachel per dag?",
-    example6Title: "Accessoires",
-    example6Desc: "Welke accessoires heb ik nodig voor mijn houtkachel?",
-    seoTitle: "Test je Colpaert Online AI Assistent - Mogelijk gemaakt door Glimps",
-    seoDescription: "Testpagina voor de Colpaert Online AI assistent. Ontdek hoe de chatbot je klanten kan helpen met vragen over kachels."
+    example1Title: "Oven kiezen",
+    example1Desc: "Welke keramiekoven is geschikt voor een hobbywerkplaats?",
+    example2Title: "Kleisoorten",
+    example2Desc: "Wat is het verschil tussen draaiklei en porselein?",
+    example3Title: "Glazuren",
+    example3Desc: "Hoe breng ik keramiekglazuren correct aan?",
+    example4Title: "Bakken",
+    example4Desc: "Welke temperatuur moet ik gebruiken voor het bakken van aardewerk?",
+    example5Title: "Cursussen",
+    example5Desc: "Welke keramiekcursussen bieden jullie aan?",
+    example6Title: "Benodigdheden",
+    example6Desc: "Welke gereedschappen heb ik nodig om te beginnen met draaien?",
+    seoTitle: "Test je Colpaert AI Assistent - Mogelijk gemaakt door Glimps",
+    seoDescription: "Testpagina voor de Colpaert AI assistent. Ontdek hoe de chatbot je klanten kan helpen met vragen over keramiek en ovens."
   };
 
   return (
@@ -375,13 +375,13 @@ const ColpaertOnline = () => {
           </h2>
           <p className="mb-4 sm:mb-6 text-base sm:text-lg text-muted-foreground px-2">
             {language === 'fr'
-              ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA répond à vos clients sur les poêles et le chauffage.'
-              : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt met kachels en verwarming.'}
+              ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA répond à vos clients sur la céramique, les fours et les techniques.'
+              : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt met keramiek, ovens en technieken.'}
           </p>
           <p className="text-xs sm:text-sm font-medium text-orange-700">
             {language === 'fr'
-              ? '🔥 Propulsé par Glimps - Votre partenaire pour l\'IA conversationnelle'
-              : '🔥 Mogelijk gemaakt door Glimps - Je partner voor conversationele AI'}
+              ? 'Propulsé par Glimps - Votre partenaire pour l\'IA conversationnelle'
+              : 'Mogelijk gemaakt door Glimps - Je partner voor conversationele AI'}
           </p>
         </div>
       </section>
