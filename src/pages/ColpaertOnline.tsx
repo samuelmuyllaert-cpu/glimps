@@ -351,18 +351,16 @@ const ColpaertOnline = () => {
             </p>
           </div>
 
-          <div className="flex justify-center">
-            <div className="w-full max-w-[450px]">
-              <iframe
-                src="https://static.chatbotkit.com/integrations/widget/v2/cmmqrg0o5002x04jpku8csk38"
-                width="100%"
-                height="650"
-                frameBorder="0"
-                className="rounded-xl shadow-2xl"
-                allow="clipboard-write"
-                title="Colpaert Online AI Chatbot"
-              />
-            </div>
+          <div className="flex justify-center items-center py-10">
+            <iframe
+              src="https://static.chatbotkit.com/integrations/widget/cmmqrg0o5002x04jpku8csk38/frame"
+              width="700"
+              height="600"
+              frameBorder="0"
+              className="rounded-xl shadow-2xl"
+              allow="microphone"
+              title="Colpaert AI Chatbot"
+            />
           </div>
         </div>
       </section>
