@@ -14,7 +14,7 @@ const AbsoluteTeamsport = () => {
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
     script.setAttribute('data-widget', 'cmmqw23pb000d04jjyw219odz');
-    script.setAttribute('data-position', 'bottom-left');
+    script.setAttribute('data-position', 'bottom-right');
     document.body.appendChild(script);
 
     return () => {
@@ -51,7 +51,7 @@ const AbsoluteTeamsport = () => {
     testingTip3Title: "Testez divers scénarios",
     testingTip3Desc: "Essayez différents types de questions : produits, conseils, commandes d'équipe, disponibilité, etc.",
     howItWorksTitle: "Testez votre chatbot",
-    howItWorksDesc: "Utilisez le chat ci-dessous ou cliquez sur le widget en bas à gauche",
+    howItWorksDesc: "Utilisez le chat ci-dessous ou cliquez sur le widget en bas à droite",
     chatTitle: "Chatbot en direct",
     chatDesc: "Testez directement le chatbot ici",
     examplesTitle: "Questions de test suggérées",
@@ -95,7 +95,7 @@ const AbsoluteTeamsport = () => {
     testingTip3Title: "Test verschillende scenario's",
     testingTip3Desc: "Probeer allerlei types vragen: producten, advies, teambestellingen, beschikbaarheid, etc.",
     howItWorksTitle: "Test je chatbot",
-    howItWorksDesc: "Gebruik de chat hieronder of klik op de widget linksonder",
+    howItWorksDesc: "Gebruik de chat hieronder of klik op de widget rechtsonder",
     chatTitle: "Live chatbot",
     chatDesc: "Test de chatbot direct hier",
     examplesTitle: "Gesuggereerde testvragen",

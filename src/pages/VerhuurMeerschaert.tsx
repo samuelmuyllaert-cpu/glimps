@@ -14,7 +14,7 @@ const VerhuurMeerschaert = () => {
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
     script.setAttribute('data-widget', 'cmmjoimyq000n04l4i4r8tsls');
-    script.setAttribute('data-position', 'bottom-left');
+    script.setAttribute('data-position', 'bottom-right');
     document.body.appendChild(script);
 
     return () => {
@@ -51,7 +51,7 @@ const VerhuurMeerschaert = () => {
     testingTip3Title: "Testez divers scénarios",
     testingTip3Desc: "Essayez différents types de questions : véhicules, tarifs, réservations, accessoires, etc.",
     howItWorksTitle: "Testez votre chatbot",
-    howItWorksDesc: "Utilisez le chat ci-dessous ou cliquez sur le widget en bas à gauche",
+    howItWorksDesc: "Utilisez le chat ci-dessous ou cliquez sur le widget en bas à droite",
     chatTitle: "Chatbot en direct",
     chatDesc: "Testez directement le chatbot ici",
     examplesTitle: "Questions de test suggérées",
@@ -95,7 +95,7 @@ const VerhuurMeerschaert = () => {
     testingTip3Title: "Test verschillende scenario's",
     testingTip3Desc: "Probeer allerlei types vragen: voertuigen, prijzen, reservaties, accessoires, etc.",
     howItWorksTitle: "Test je chatbot",
-    howItWorksDesc: "Gebruik de chat hieronder of klik op de widget linksonder",
+    howItWorksDesc: "Gebruik de chat hieronder of klik op de widget rechtsonder",
     chatTitle: "Live chatbot",
     chatDesc: "Test de chatbot direct hier",
     examplesTitle: "Gesuggereerde testvragen",
