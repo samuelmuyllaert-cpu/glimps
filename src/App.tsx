@@ -50,6 +50,7 @@ import LensOnline from "./pages/LensOnline";
 import Lotana from "./pages/Lotana";
 import ColpaertOnline from "./pages/ColpaertOnline";
 import VerhuurMeerschaert from "./pages/VerhuurMeerschaert";
+import AbsoluteTeamsport from "./pages/AbsoluteTeamsport";
 import ChatbotAgencyVlaanderen from "./pages/ChatbotAgencyVlaanderen";
 import AIAgencyBelgieChatbots from "./pages/AIAgencyBelgieChatbots";
 import AIChatbotBureauBelgie from "./pages/AIChatbotBureauBelgie";
@@ -111,6 +112,7 @@ const App = () => (
         <Route path="/lotana" element={<Lotana />} />
         <Route path="/colpaert-online" element={<ColpaertOnline />} />
         <Route path="/verhuur-meerschaert" element={<VerhuurMeerschaert />} />
+        <Route path="/absolute-teamsport" element={<AbsoluteTeamsport />} />
         <Route path="/chatbot-agency-vlaanderen-ecommerce" element={<ChatbotAgencyVlaanderen />} />
         <Route path="/ai-agency-belgie-chatbots" element={<AIAgencyBelgieChatbots />} />
         <Route path="/ai-chatbot-bureau-belgie-ecommerce" element={<AIChatbotBureauBelgie />} />
@@ -162,6 +164,7 @@ const App = () => (
         <Route path="/fr/lotana" element={<Lotana />} />
         <Route path="/fr/colpaert-online" element={<ColpaertOnline />} />
         <Route path="/fr/verhuur-meerschaert" element={<VerhuurMeerschaert />} />
+        <Route path="/fr/absolute-teamsport" element={<AbsoluteTeamsport />} />
         {/* English Routes */}
         <Route path="/en" element={<Index />} />
         <Route path="/en/features" element={<Features />} />
@@ -209,6 +212,7 @@ const App = () => (
         <Route path="/en/lotana" element={<Lotana />} />
         <Route path="/en/colpaert-online" element={<ColpaertOnline />} />
         <Route path="/en/verhuur-meerschaert" element={<VerhuurMeerschaert />} />
+        <Route path="/en/absolute-teamsport" element={<AbsoluteTeamsport />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
         </Routes>

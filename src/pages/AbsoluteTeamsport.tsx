@@ -4,16 +4,16 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Car, CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Sparkles, MapPin, Users, Truck, Calendar, Wrench, Zap } from "lucide-react";
+import { CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Sparkles, Wrench, Zap, ShoppingBag, Users, Package, CircleAlert as AlertCircle, Trophy } from "lucide-react";
 
-const VerhuurMeerschaert = () => {
+const AbsoluteTeamsport = () => {
   const { language } = useLanguage();
 
   useEffect(() => {
     const script = document.createElement('script');
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmmjoimyq000n04l4i4r8tsls');
+    script.setAttribute('data-widget', 'cmmqw23pb000d04jjyw219odz');
     script.setAttribute('data-position', 'bottom-left');
     document.body.appendChild(script);
 
@@ -27,21 +27,21 @@ const VerhuurMeerschaert = () => {
 
   const content = language === 'fr' ? {
     title: "Testez votre",
-    subtitle: "Assistant IA Autoverhuur Meerschaert",
+    subtitle: "Assistant IA Absolute Teamsport",
     heading: "Propulsé par Glimps",
-    description: "Testez librement votre nouveau chatbot IA ! Posez des questions sur la location de véhicules, tarifs, disponibilité et services. Découvrez comment l'IA peut aider vos clients 24/7 avec des informations sur votre flotte de plus de 400 véhicules.",
+    description: "Testez librement votre nouveau chatbot IA ! Posez des questions sur les chaussures de football, équipements sportifs, vêtements d'équipe et services. Découvrez comment l'IA peut aider vos clients 24/7 avec des conseils d'experts sur le matériel de football.",
     feature1Title: "Toujours disponible",
-    feature1Desc: "Vos clients peuvent réserver et s'informer à tout moment",
+    feature1Desc: "Vos clients peuvent poser leurs questions à tout moment",
     feature2Title: "24/7 Support",
     feature2Desc: "Assistance automatique même en dehors des heures d'ouverture",
     feature3Title: "Conforme RGPD",
     feature3Desc: "Toutes les conversations sont sécurisées et conformes au RGPD",
-    feature4Title: "Info disponibilité",
-    feature4Desc: "Le bot connaît votre flotte et peut informer sur la disponibilité",
-    feature5Title: "Expert location",
-    feature5Desc: "Formé sur votre gamme complète de voitures, minibus et camionnettes",
-    feature6Title: "Conseils pratiques",
-    feature6Desc: "Aide pour choisir le bon véhicule et les accessoires nécessaires",
+    feature4Title: "Expert équipement",
+    feature4Desc: "Le bot connaît votre gamme complète de chaussures, vêtements et accessoires",
+    feature5Title: "Spécialiste teamwear",
+    feature5Desc: "Formé sur les uniformes d'équipe, impression et gestion des stocks pour clubs",
+    feature6Title: "Conseils personnalisés",
+    feature6Desc: "Aide pour choisir les bonnes chaussures et l'équipement adapté au niveau de jeu",
     testingTitle: "Comment tester de manière optimale",
     testingDesc: "Suivez ces conseils pour une expérience de test optimale",
     testingTip1Title: "Rafraîchir la conversation",
@@ -49,43 +49,43 @@ const VerhuurMeerschaert = () => {
     testingTip2Title: "Notez vos retours",
     testingTip2Desc: "Écrivez tous les points d'amélioration ou questions mal comprises - nous les implémenterons dans la prochaine version.",
     testingTip3Title: "Testez divers scénarios",
-    testingTip3Desc: "Essayez différents types de questions : véhicules, tarifs, réservations, accessoires, etc.",
+    testingTip3Desc: "Essayez différents types de questions : produits, conseils, commandes d'équipe, disponibilité, etc.",
     howItWorksTitle: "Testez votre chatbot",
     howItWorksDesc: "Utilisez le chat ci-dessous ou cliquez sur le widget en bas à gauche",
     chatTitle: "Chatbot en direct",
     chatDesc: "Testez directement le chatbot ici",
     examplesTitle: "Questions de test suggérées",
-    example1Title: "Choisir un véhicule",
-    example1Desc: "Quel véhicule convient pour un déménagement ?",
-    example2Title: "Tarifs location",
-    example2Desc: "Combien coûte la location d'un minibus pour un week-end ?",
-    example3Title: "Disponibilité",
-    example3Desc: "Avez-vous un camion de déménagement disponible la semaine prochaine ?",
-    example4Title: "Services inclus",
-    example4Desc: "L'assurance omnium est-elle incluse dans le prix ?",
-    example5Title: "Accessoires",
-    example5Desc: "Puis-je louer du matériel de déménagement comme des diables et des couvertures ?",
-    example6Title: "Réservation",
-    example6Desc: "Comment puis-je réserver un véhicule et quelles sont les conditions ?",
-    seoTitle: "Testez votre Assistant IA Autoverhuur Meerschaert - Propulsé par Glimps",
-    seoDescription: "Page de test pour l'assistant IA d'Autoverhuur Meerschaert. Découvrez comment le chatbot peut aider vos clients avec des questions sur la location de véhicules."
+    example1Title: "Chaussures de football",
+    example1Desc: "Quelles chaussures de football Nike conviennent pour terrain synthétique ?",
+    example2Title: "Équipement gardien",
+    example2Desc: "Quels gants de gardien recommandez-vous pour juniors ?",
+    example3Title: "Tenues d'équipe",
+    example3Desc: "Comment commander des maillots pour mon club avec impression ?",
+    example4Title: "Protections",
+    example4Desc: "Quelle taille de protège-tibias dois-je choisir ?",
+    example5Title: "Disponibilité",
+    example5Desc: "Avez-vous des chaussures Adidas Predator en stock en taille 42 ?",
+    example6Title: "Vêtements d'entraînement",
+    example6Desc: "Quel est votre assortiment de vêtements d'entraînement pour équipes ?",
+    seoTitle: "Testez votre Assistant IA Absolute Teamsport - Propulsé par Glimps",
+    seoDescription: "Page de test pour l'assistant IA d'Absolute Teamsport. Découvrez comment le chatbot peut aider vos clients avec des questions sur l'équipement de football."
   } : {
     title: "Test je",
-    subtitle: "Autoverhuur Meerschaert AI Assistent",
+    subtitle: "Absolute Teamsport AI Assistent",
     heading: "Mogelijk gemaakt door Glimps",
-    description: "Test vrijuit je nieuwe AI chatbot! Stel vragen over autoverhuur, tarieven, beschikbaarheid en diensten. Ontdek hoe AI je klanten 24/7 kan helpen met informatie over je wagenpark van meer dan 400 voertuigen.",
+    description: "Test vrijuit je nieuwe AI chatbot! Stel vragen over voetbalschoenen, sportuitrusting, teamkleding en diensten. Ontdek hoe AI je klanten 24/7 kan helpen met expertadvies over voetbalmateriaal.",
     feature1Title: "Altijd beschikbaar",
-    feature1Desc: "Je klanten kunnen op elk moment reserveren en informatie opvragen",
+    feature1Desc: "Je klanten kunnen op elk moment hun vragen stellen",
     feature2Title: "24/7 ondersteuning",
     feature2Desc: "Automatische hulp ook buiten openingsuren",
     feature3Title: "GDPR conform",
     feature3Desc: "Alle gesprekken zijn beveiligd en GDPR-compliant",
-    feature4Title: "Beschikbaarheid info",
-    feature4Desc: "De bot kent je wagenpark en kan beschikbaarheid doorgeven",
-    feature5Title: "Verhuur expert",
-    feature5Desc: "Specifiek getraind op je volledige gamma personenwagens, minibussen en bestelwagens",
-    feature6Title: "Praktisch advies",
-    feature6Desc: "Hulp bij het kiezen van het juiste voertuig en benodigde accessoires",
+    feature4Title: "Uitrustings expert",
+    feature4Desc: "De bot kent je volledige gamma schoenen, kleding en accessoires",
+    feature5Title: "Teamwear specialist",
+    feature5Desc: "Specifiek getraind op clubuitrustingen, bedrukking en voorraadbeheer voor clubs",
+    feature6Title: "Persoonlijk advies",
+    feature6Desc: "Hulp bij het kiezen van de juiste schoenen en uitrusting passend bij het speelniveau",
     testingTitle: "Hoe optimaal testen",
     testingDesc: "Volg deze tips voor een optimale testervaring",
     testingTip1Title: "Ververs het gesprek regelmatig",
@@ -93,26 +93,26 @@ const VerhuurMeerschaert = () => {
     testingTip2Title: "Noteer je feedback",
     testingTip2Desc: "Schrijf alle verbeterpunten of slecht begrepen vragen op - we verwerken dit in de volgende versie.",
     testingTip3Title: "Test verschillende scenario's",
-    testingTip3Desc: "Probeer allerlei types vragen: voertuigen, prijzen, reservaties, accessoires, etc.",
+    testingTip3Desc: "Probeer allerlei types vragen: producten, advies, teambestellingen, beschikbaarheid, etc.",
     howItWorksTitle: "Test je chatbot",
     howItWorksDesc: "Gebruik de chat hieronder of klik op de widget linksonder",
     chatTitle: "Live chatbot",
     chatDesc: "Test de chatbot direct hier",
     examplesTitle: "Gesuggereerde testvragen",
-    example1Title: "Voertuig kiezen",
-    example1Desc: "Welk voertuig is geschikt voor een verhuizing?",
-    example2Title: "Huurprijzen",
-    example2Desc: "Hoeveel kost het huren van een minibus voor een weekend?",
-    example3Title: "Beschikbaarheid",
-    example3Desc: "Hebben jullie volgende week een verhuiswagen beschikbaar?",
-    example4Title: "Inbegrepen diensten",
-    example4Desc: "Is een omniumverzekering inbegrepen in de prijs?",
-    example5Title: "Accessoires",
-    example5Desc: "Kan ik verhuismateriaal huren zoals steekwagens en verhuisdekens?",
-    example6Title: "Reserveren",
-    example6Desc: "Hoe kan ik een voertuig reserveren en wat zijn de voorwaarden?",
-    seoTitle: "Test je Autoverhuur Meerschaert AI Assistent - Mogelijk gemaakt door Glimps",
-    seoDescription: "Testpagina voor de Autoverhuur Meerschaert AI assistent. Ontdek hoe de chatbot je klanten kan helpen met vragen over autoverhuur."
+    example1Title: "Voetbalschoenen",
+    example1Desc: "Welke Nike voetbalschoenen zijn geschikt voor kunstgras?",
+    example2Title: "Keepersuitrusting",
+    example2Desc: "Welke keepershandschoenen raad je aan voor junioren?",
+    example3Title: "Teamkleding",
+    example3Desc: "Hoe kan ik shirts voor mijn club bestellen met bedrukking?",
+    example4Title: "Bescherming",
+    example4Desc: "Welke maat scheenbeschermers moet ik kiezen?",
+    example5Title: "Beschikbaarheid",
+    example5Desc: "Hebben jullie Adidas Predator schoenen op voorraad in maat 42?",
+    example6Title: "Trainingskledij",
+    example6Desc: "Wat is jullie aanbod aan trainingskledij voor teams?",
+    seoTitle: "Test je Absolute Teamsport AI Assistent - Mogelijk gemaakt door Glimps",
+    seoDescription: "Testpagina voor de Absolute Teamsport AI assistent. Ontdek hoe de chatbot je klanten kan helpen met vragen over voetbaluitrusting."
   };
 
   return (
@@ -120,7 +120,7 @@ const VerhuurMeerschaert = () => {
       <SEO
         title={content.seoTitle}
         description={content.seoDescription}
-        path={language === 'fr' ? '/fr/verhuur-meerschaert' : '/verhuur-meerschaert'}
+        path={language === 'fr' ? '/fr/absolute-teamsport' : '/absolute-teamsport'}
         language={language}
       />
       <Navigation />
@@ -129,7 +129,7 @@ const VerhuurMeerschaert = () => {
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 sm:mb-6 inline-flex items-center justify-center">
             <div className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-orange-500/20 to-red-500/20 shadow-lg">
-              <Car className="h-8 w-8 sm:h-10 sm:w-10 text-orange-600" />
+              <Trophy className="h-8 w-8 sm:h-10 sm:w-10 text-orange-600" />
             </div>
           </div>
           <h1 className="mb-4 sm:mb-6 font-inter text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
@@ -182,7 +182,7 @@ const VerhuurMeerschaert = () => {
 
             <Card className="border-2 p-4 shadow-lg transition-all hover:shadow-xl sm:p-6">
               <div className="mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-md">
-                <Calendar className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
+                <ShoppingBag className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </div>
               <h3 className="mb-2 text-base sm:text-lg font-bold text-foreground">{content.feature4Title}</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">
@@ -192,7 +192,7 @@ const VerhuurMeerschaert = () => {
 
             <Card className="border-2 p-4 shadow-lg transition-all hover:shadow-xl sm:p-6">
               <div className="mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-md">
-                <Truck className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
+                <Users className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </div>
               <h3 className="mb-2 text-base sm:text-lg font-bold text-foreground">{content.feature5Title}</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">
@@ -238,7 +238,7 @@ const VerhuurMeerschaert = () => {
 
             <Card className="border-2 border-orange-200 bg-orange-50/50 p-4 shadow-lg sm:p-6">
               <div className="mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-md">
-                <CheckCircle2 className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
+                <AlertCircle className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
               </div>
               <h3 className="mb-2 text-base sm:text-lg font-bold text-foreground">{content.testingTip2Title}</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">
@@ -354,13 +354,13 @@ const VerhuurMeerschaert = () => {
           <div className="flex justify-center">
             <div className="w-full max-w-[450px]">
               <iframe
-                src="https://static.chatbotkit.com/integrations/widget/v2/cmmjoimyq000n04l4i4r8tsls"
+                src="https://static.chatbotkit.com/integrations/widget/v2/cmmqw23pb000d04jjyw219odz"
                 width="100%"
                 height="650"
                 frameBorder="0"
                 className="rounded-xl shadow-2xl"
                 allow="clipboard-write"
-                title="Autoverhuur Meerschaert AI Chatbot"
+                title="Absolute Teamsport AI Chatbot"
               />
             </div>
           </div>
@@ -375,8 +375,8 @@ const VerhuurMeerschaert = () => {
           </h2>
           <p className="mb-4 sm:mb-6 text-base sm:text-lg text-muted-foreground px-2">
             {language === 'fr'
-              ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA aide vos clients avec la location de véhicules.'
-              : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt met autoverhuur.'}
+              ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA aide vos clients avec l\'équipement de football et les services pour équipes.'
+              : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt met voetbaluitrusting en teamdiensten.'}
           </p>
           <p className="text-xs sm:text-sm font-medium text-orange-700">
             {language === 'fr'
@@ -391,4 +391,4 @@ const VerhuurMeerschaert = () => {
   );
 };
 
-export default VerhuurMeerschaert;
+export default AbsoluteTeamsport;
