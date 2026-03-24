@@ -13,7 +13,7 @@ const ColpaertOnline = () => {
     const script = document.createElement('script');
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmmqrg0o5002x04jpku8csk38');
+    script.setAttribute('data-widget', 'cmn52t7zf000004l4b77wucmr');
     script.setAttribute('data-position', 'bottom-left');
     document.body.appendChild(script);
 
@@ -353,7 +353,7 @@ const ColpaertOnline = () => {
 
           <div className="flex justify-center items-center py-10">
             <iframe
-              src="https://static.chatbotkit.com/integrations/widget/cmmqrg0o5002x04jpku8csk38/frame"
+              src="https://static.chatbotkit.com/integrations/widget/cmn52t7zf000004l4b77wucmr/frame"
               width="700"
               height="700"
               frameBorder="0"
