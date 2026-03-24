@@ -38,6 +38,16 @@ import PersonalisatieAI from "./pages/blog/PersonalisatieAI";
 import ConversationalCommerce from "./pages/blog/ConversationalCommerce";
 import ChatbotsBoostenVerkoop from "./pages/blog/ChatbotsBoostenVerkoop";
 import CartAbandonmentReduceren from "./pages/blog/CartAbandonmentReduceren";
+import AIAgentsKlantenservice2026 from "./pages/blog/AIAgentsKlantenservice2026";
+import VoiceCommerceTrends2026 from "./pages/blog/VoiceCommerceTrends2026";
+import AIVoorraadbeheer2026 from "./pages/blog/AIVoorraadbeheer2026";
+import DuurzaamEcommerceAI from "./pages/blog/DuurzaamEcommerceAI";
+import ARVROnlineShopping2026 from "./pages/blog/ARVROnlineShopping2026";
+import AIFraudeDetectie2026 from "./pages/blog/AIFraudeDetectie2026";
+import HyperPersonalisatie2026 from "./pages/blog/HyperPersonalisatie2026";
+import AIContentGeneratie2026 from "./pages/blog/AIContentGeneratie2026";
+import PredictiveAnalytics2026 from "./pages/blog/PredictiveAnalytics2026";
+import AutonomeShoppingAssistenten2026 from "./pages/blog/AutonomeShoppingAssistenten2026";
 import FashionDesign from "./pages/industries/FashionDesign";
 import BeautyCosmetica from "./pages/industries/BeautyCosmetica";
 import Electronics from "./pages/industries/Electronics";
@@ -100,6 +110,16 @@ const App = () => (
         <Route path="/blog/conversational-commerce-trends" element={<ConversationalCommerce />} />
         <Route path="/blog/chatbots-boosten-verkoop" element={<ChatbotsBoostenVerkoop />} />
         <Route path="/blog/cart-abandonment-reduceren-chatbot" element={<CartAbandonmentReduceren />} />
+        <Route path="/blog/ai-agents-klantenservice-2026" element={<AIAgentsKlantenservice2026 />} />
+        <Route path="/blog/voice-commerce-trends-2026" element={<VoiceCommerceTrends2026 />} />
+        <Route path="/blog/ai-voorraadbeheer-2026" element={<AIVoorraadbeheer2026 />} />
+        <Route path="/blog/duurzaam-ecommerce-ai" element={<DuurzaamEcommerceAI />} />
+        <Route path="/blog/ar-vr-online-shopping-2026" element={<ARVROnlineShopping2026 />} />
+        <Route path="/blog/ai-fraude-detectie-2026" element={<AIFraudeDetectie2026 />} />
+        <Route path="/blog/hyper-personalisatie-2026" element={<HyperPersonalisatie2026 />} />
+        <Route path="/blog/ai-content-generatie-2026" element={<AIContentGeneratie2026 />} />
+        <Route path="/blog/predictive-analytics-2026" element={<PredictiveAnalytics2026 />} />
+        <Route path="/blog/autonome-shopping-assistenten-2026" element={<AutonomeShoppingAssistenten2026 />} />
         <Route path="/industries/fashion-design" element={<FashionDesign />} />
         <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
         <Route path="/industries/electronics" element={<Electronics />} />

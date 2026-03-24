@@ -44,6 +44,96 @@ const Blog = () => {
   };
   const articles = [
     {
+      title: "Autonome Shopping Assistenten: Je Persoonlijke AI Stylist",
+      excerpt: "AI shopping assistenten die begrijpen wat je wilt, suggesties doen, en zelfs namens jou aankopen doen. Ontdek de toekomst van persoonlijk winkelen.",
+      category: "Innovation",
+      date: "24 mrt 2026",
+      readTime: "8 min",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop",
+      slug: "/blog/autonome-shopping-assistenten-2026"
+    },
+    {
+      title: "Predictive Analytics: Voorspel de Toekomst van Je Webshop",
+      excerpt: "AI voorspelt nu wat klanten gaan kopen voordat ze het zelf weten. Ontdek hoe predictive analytics je e-commerce strategie transformeert in 2026.",
+      category: "Analytics",
+      date: "24 mrt 2026",
+      readTime: "9 min",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      slug: "/blog/predictive-analytics-2026"
+    },
+    {
+      title: "AI Genereert Perfecte Productbeschrijvingen in 2026",
+      excerpt: "AI schrijft nu SEO-geoptimaliseerde, overtuigende productbeschrijvingen in seconden. Ontdek hoe dit je content creatie transformeert.",
+      category: "Content",
+      date: "24 mrt 2026",
+      readTime: "7 min",
+      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop",
+      slug: "/blog/ai-content-generatie-2026"
+    },
+    {
+      title: "Hyper-Personalisatie: Elke Klant een Unieke Ervaring",
+      excerpt: "In 2026 krijgt elke klant een volledig gepersonaliseerde webshop ervaring. Ontdek hoe AI hyper-personalisatie mogelijk maakt en conversies verdubbelt.",
+      category: "Strategy",
+      date: "24 mrt 2026",
+      readTime: "9 min",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      slug: "/blog/hyper-personalisatie-2026"
+    },
+    {
+      title: "AI Fraudedetectie Beschermt je Webshop in 2026",
+      excerpt: "Ontdek hoe AI frauduleuze bestellingen, account takeovers en betaalfraude detecteert met 99.7% nauwkeurigheid. Bescherm je webshop en klanten.",
+      category: "Security",
+      date: "24 mrt 2026",
+      readTime: "8 min",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop",
+      slug: "/blog/ai-fraude-detectie-2026"
+    },
+    {
+      title: "AR en VR Transformeren Online Shopping in 2026",
+      excerpt: "Virtual try-ons, 3D product visualisatie en immersive shopping experiences. Ontdek hoe AR en VR de e-commerce revolutioneren in 2026.",
+      category: "Innovation",
+      date: "24 mrt 2026",
+      readTime: "7 min",
+      image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&h=400&fit=crop",
+      slug: "/blog/ar-vr-online-shopping-2026"
+    },
+    {
+      title: "Hoe AI E-commerce Duurzamer Maakt in 2026",
+      excerpt: "AI helpt webshops hun carbon footprint te verkleinen, verspilling te voorkomen en duurzamere keuzes te maken. Ontdek hoe in dit artikel.",
+      category: "Sustainability",
+      date: "24 mrt 2026",
+      readTime: "8 min",
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=400&fit=crop",
+      slug: "/blog/duurzaam-ecommerce-ai"
+    },
+    {
+      title: "AI-Gestuurd Voorraadbeheer: De Toekomst is Nu",
+      excerpt: "Ontdek hoe AI-powered inventory management out-of-stock situaties voorkomt, voorspelt wat je klanten willen en je voorraadkosten met 40% verlaagt.",
+      category: "Operations",
+      date: "24 mrt 2026",
+      readTime: "9 min",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop",
+      slug: "/blog/ai-voorraadbeheer-2026"
+    },
+    {
+      title: "Voice Commerce Trends 2026: Shoppen met Je Stem",
+      excerpt: "Voice commerce groeit explosief in 2026. Ontdek de laatste trends in spraakgestuurd winkelen en hoe e-commerce bedrijven hierop inspelen.",
+      category: "Trends",
+      date: "24 mrt 2026",
+      readTime: "7 min",
+      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=400&fit=crop",
+      slug: "/blog/voice-commerce-trends-2026"
+    },
+    {
+      title: "AI Agents Revolutioneren Klantenservice in 2026",
+      excerpt: "Ontdek hoe autonome AI agents de klantenservice transformeren in 2026. Van 24/7 ondersteuning tot proactieve hulp en emotionele intelligentie.",
+      category: "Customer Service",
+      date: "24 mrt 2026",
+      readTime: "8 min",
+      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=400&fit=crop",
+      slug: "/blog/ai-agents-klantenservice-2026"
+    },
+    {
       title: "Cart Abandonment Reduceren Met AI Chatbots: Van 69% naar 23%",
       excerpt: "AI chatbots reduceren cart abandonment met 66%. Ontdek de exacte strategie waarmee webshops €8.000-12.000 per maand aan verloren omzet terugwinnen.",
       category: "Strategy",
