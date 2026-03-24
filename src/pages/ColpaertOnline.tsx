@@ -355,7 +355,7 @@ const ColpaertOnline = () => {
             <iframe
               src="https://static.chatbotkit.com/integrations/widget/cmmqrg0o5002x04jpku8csk38/frame"
               width="700"
-              height="600"
+              height="700"
               frameBorder="0"
               className="rounded-xl shadow-2xl"
               allow="microphone"
