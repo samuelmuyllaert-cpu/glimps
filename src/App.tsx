@@ -48,6 +48,16 @@ import HyperPersonalisatie2026 from "./pages/blog/HyperPersonalisatie2026";
 import AIContentGeneratie2026 from "./pages/blog/AIContentGeneratie2026";
 import PredictiveAnalytics2026 from "./pages/blog/PredictiveAnalytics2026";
 import AutonomeShoppingAssistenten2026 from "./pages/blog/AutonomeShoppingAssistenten2026";
+import ChatbotMeerkanaalsStrategie from "./pages/blog/ChatbotMeerkanaalsStrategie";
+import ChatbotProductAanbevelingen from "./pages/blog/ChatbotProductAanbevelingen";
+import ChatbotKlantensegmentatie from "./pages/blog/ChatbotKlantensegmentatie";
+import ChatbotNaVerkoopService from "./pages/blog/ChatbotNaVerkoopService";
+import ChatbotTaalModellen from "./pages/blog/ChatbotTaalModellen";
+import ChatbotABTesting from "./pages/blog/ChatbotA-BTesting";
+import ChatbotMultilingual from "./pages/blog/ChatbotMultilingual";
+import ChatbotPrivacyGDPR from "./pages/blog/ChatbotPrivacyGDPR";
+import ChatbotVoiceIntegration from "./pages/blog/ChatbotVoiceIntegration";
+import ChatbotKosten from "./pages/blog/ChatbotKosten";
 import FashionDesign from "./pages/industries/FashionDesign";
 import BeautyCosmetica from "./pages/industries/BeautyCosmetica";
 import Electronics from "./pages/industries/Electronics";
@@ -120,6 +130,16 @@ const App = () => (
         <Route path="/blog/ai-content-generatie-2026" element={<AIContentGeneratie2026 />} />
         <Route path="/blog/predictive-analytics-2026" element={<PredictiveAnalytics2026 />} />
         <Route path="/blog/autonome-shopping-assistenten-2026" element={<AutonomeShoppingAssistenten2026 />} />
+        <Route path="/blog/chatbot-meerkanaals-strategie" element={<ChatbotMeerkanaalsStrategie />} />
+        <Route path="/blog/chatbot-product-aanbevelingen" element={<ChatbotProductAanbevelingen />} />
+        <Route path="/blog/chatbot-klantensegmentatie" element={<ChatbotKlantensegmentatie />} />
+        <Route path="/blog/chatbot-na-verkoop-service" element={<ChatbotNaVerkoopService />} />
+        <Route path="/blog/chatbot-taalmodellen-vergelijking" element={<ChatbotTaalModellen />} />
+        <Route path="/blog/chatbot-ab-testing" element={<ChatbotABTesting />} />
+        <Route path="/blog/meertalige-chatbot" element={<ChatbotMultilingual />} />
+        <Route path="/blog/chatbot-privacy-gdpr" element={<ChatbotPrivacyGDPR />} />
+        <Route path="/blog/chatbot-voice-integration" element={<ChatbotVoiceIntegration />} />
+        <Route path="/blog/chatbot-kosten-prijzen" element={<ChatbotKosten />} />
         <Route path="/industries/fashion-design" element={<FashionDesign />} />
         <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
         <Route path="/industries/electronics" element={<Electronics />} />
