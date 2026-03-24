@@ -254,15 +254,15 @@ const HyperPersonalisatie2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Start met hyper-personalisatie</h3>
+            <h3 className="text-xl font-bold mb-2">Verhoog je conversie met AI chatbots</h3>
             <p className="mb-4">
-              Glimps implementeert geavanceerde AI personalisatie systemen die je conversies verdubbelen door elke klant een unieke, relevante ervaring te bieden.
+              Glimps ontwikkelt AI chatbots die je klanten gepersonaliseerde hulp bieden, producten aanbevelen en direct conversies verhogen. Ontdek wat een chatbot voor jouw webshop kan betekenen.
             </p>
             <Link
               to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Ontdek personalisatie mogelijkheden
+              Plan een demo
             </Link>
           </div>
         </div>

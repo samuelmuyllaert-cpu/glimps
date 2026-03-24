@@ -207,15 +207,15 @@ const ARVROnlineShopping2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Breng AR/VR naar je webshop</h3>
+            <h3 className="text-xl font-bold mb-2">Verhoog je conversie met AI chatbots</h3>
             <p className="mb-4">
-              Glimps helpt e-commerce bedrijven met het implementeren van cutting-edge AR en VR shopping experiences. Van virtual try-ons tot immersive 3D stores.
+              Glimps ontwikkelt AI chatbots die je klanten direct helpen bij het vinden van producten, vragen beantwoorden en conversies verhogen. Ontdek wat een chatbot voor jouw webshop kan betekenen.
             </p>
             <Link
               to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Ontdek AR/VR mogelijkheden
+              Plan een demo
             </Link>
           </div>
         </div>

@@ -275,15 +275,15 @@ const AutonomeShoppingAssistenten2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Implementeer een AI shopping assistent</h3>
+            <h3 className="text-xl font-bold mb-2">Verhoog je conversie met AI chatbots</h3>
             <p className="mb-4">
-              Glimps ontwikkelt geavanceerde AI shopping assistenten die je klanten een persoonlijke, proactieve shopping ervaring bieden en loyalty en conversies verhogen.
+              Glimps ontwikkelt AI chatbots die je klanten direct helpen, vragen beantwoorden en conversies verhogen. Ontdek wat een chatbot voor jouw webshop kan betekenen.
             </p>
             <Link
               to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Ontdek AI assistant mogelijkheden
+              Plan een demo
             </Link>
           </div>
         </div>

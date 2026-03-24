@@ -307,15 +307,15 @@ const PredictiveAnalytics2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Voorspel je e-commerce succes</h3>
+            <h3 className="text-xl font-bold mb-2">Boost je omzet met AI chatbots</h3>
             <p className="mb-4">
-              Glimps implementeert geavanceerde predictive analytics die je helpen betere beslissingen te nemen, voorraad te optimaliseren en omzet te maximaliseren.
+              Glimps ontwikkelt AI chatbots die je klanten helpen, vragen beantwoorden en direct conversies verhogen. Ontdek wat een chatbot voor jouw webshop kan betekenen.
             </p>
             <Link
               to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Ontdek predictive analytics
+              Plan een demo
             </Link>
           </div>
         </div>

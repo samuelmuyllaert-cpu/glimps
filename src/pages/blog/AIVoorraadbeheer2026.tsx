@@ -183,15 +183,15 @@ const AIVoorraadbeheer2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Optimaliseer je voorraad met AI</h3>
+            <h3 className="text-xl font-bold mb-2">Verhoog je conversie met AI chatbots</h3>
             <p className="mb-4">
-              Glimps integreert geavanceerde AI inventory management systemen met je e-commerce platform. Van voorspellende analytics tot volledige automatisering.
+              Glimps ontwikkelt AI chatbots die je klanten helpen het juiste product te vinden, vragen beantwoorden en direct conversies verhogen. Ontdek wat chatbots voor jouw webshop kunnen betekenen.
             </p>
             <Link
               to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Ontdek de mogelijkheden
+              Plan een demo
             </Link>
           </div>
         </div>

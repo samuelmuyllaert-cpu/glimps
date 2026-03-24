@@ -131,9 +131,9 @@ const AIAgentsKlantenservice2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Klaar voor autonome AI agents?</h3>
+            <h3 className="text-xl font-bold mb-2">Klaar voor AI chatbots in je webshop?</h3>
             <p className="mb-4">
-              Bij Glimps ontwikkelen we cutting-edge AI agents die volledig geïntegreerd werken met jouw e-commerce platform. Van emotionele intelligentie tot proactieve service.
+              Bij Glimps ontwikkelen we AI chatbots die 24/7 je klanten helpen, vragen beantwoorden en verkoop boosten. Volledig geïntegreerd met jouw e-commerce platform.
             </p>
             <Link
               to="/demo"

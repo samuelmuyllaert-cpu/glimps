@@ -152,15 +152,15 @@ const VoiceCommerceTrends2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Maak je webshop klaar voor voice commerce</h3>
+            <h3 className="text-xl font-bold mb-2">Start met AI chatbots voor je webshop</h3>
             <p className="mb-4">
-              Glimps helpt e-commerce bedrijven met het implementeren van voice-enabled shopping experiences. Van conversational AI tot multi-modal interfaces.
+              Glimps ontwikkelt AI chatbots die je klanten direct helpen, producten aanbevelen en conversies verhogen. Klaar om te ontdekken wat chatbots voor jouw webshop kunnen betekenen?
             </p>
             <Link
-              to="/contact"
+              to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Neem contact op
+              Plan een demo
             </Link>
           </div>
         </div>

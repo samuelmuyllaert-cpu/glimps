@@ -221,15 +221,15 @@ const AIFraudeDetectie2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Bescherm je webshop met AI</h3>
+            <h3 className="text-xl font-bold mb-2">Verhoog je verkoop met AI chatbots</h3>
             <p className="mb-4">
-              Glimps integreert geavanceerde AI fraud detection systemen die je webshop en klanten beschermen zonder gebruikerservaring te verstoren.
+              Glimps ontwikkelt AI chatbots die je klanten helpen, vragen beantwoorden en direct conversies verhogen. Ontdek wat een chatbot voor jouw webshop kan betekenen.
             </p>
             <Link
-              to="/contact"
+              to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Vraag een security assessment aan
+              Plan een demo
             </Link>
           </div>
         </div>

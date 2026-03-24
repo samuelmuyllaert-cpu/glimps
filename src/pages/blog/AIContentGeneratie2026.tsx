@@ -228,15 +228,15 @@ const AIContentGeneratie2026 = () => {
           </p>
 
           <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold mb-2">Transform je content met AI</h3>
+            <h3 className="text-xl font-bold mb-2">Boost je verkoop met AI chatbots</h3>
             <p className="mb-4">
-              Glimps implementeert geavanceerde AI content generatie die SEO-geoptimaliseerde, persuasive productbeschrijvingen creëert op schaal. Van enkele producten tot volledige catalogi.
+              Glimps ontwikkelt AI chatbots die je klanten direct helpen, producten aanbevelen en conversies verhogen. Ontdek wat een chatbot voor jouw webshop kan betekenen.
             </p>
             <Link
-              to="/contact"
+              to="/demo"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Vraag een content audit aan
+              Plan een demo
             </Link>
           </div>
         </div>
