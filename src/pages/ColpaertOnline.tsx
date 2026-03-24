@@ -116,7 +116,7 @@ const ColpaertOnline = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-primary/5">
+    <div className="min-h-screen bg-white">
       <SEO
         title={content.seoTitle}
         description={content.seoDescription}
@@ -213,7 +213,7 @@ const ColpaertOnline = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-gradient-to-b from-primary/5 to-background">
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-white">
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 sm:mb-12 text-center">
             <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
@@ -339,7 +339,7 @@ const ColpaertOnline = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-gradient-to-b from-background to-primary/5">
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-white">
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 sm:mb-12 text-center">
             <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg">
