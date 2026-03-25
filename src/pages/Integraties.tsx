@@ -155,7 +155,7 @@ const Integraties = () => {
         },
         {
           name: "Picqer",
-          logo: "https://cdn.worldvectorlogo.com/logos/picqer.svg",
+          logo: "https://picqer.com/images/picqer-logo.svg",
           description: language === 'fr'
             ? "Système de gestion d'entrepôt et de stock"
             : "Magazijn- en voorraadbeheer systeem",
