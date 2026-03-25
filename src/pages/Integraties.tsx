@@ -178,27 +178,11 @@ const Integraties = () => {
       bgColor: "bg-green-500/10",
       integrations: [
         {
-          name: "WhatsApp Business",
-          logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-business.svg",
-          description: language === 'fr'
-            ? "Communication directe WhatsApp avec les clients"
-            : "Directe WhatsApp communicatie met klanten",
-          status: "Live"
-        },
-        {
           name: "Instagram",
           logo: "https://cdn.worldvectorlogo.com/logos/instagram-2016-5.svg",
           description: language === 'fr'
             ? "Répondez automatiquement aux DM et commentaires via Instagram"
             : "Beantwoord DM's en comments automatisch via Instagram",
-          status: "Live"
-        },
-        {
-          name: "Messenger",
-          logo: "https://cdn.worldvectorlogo.com/logos/facebook-messenger.svg",
-          description: language === 'fr'
-            ? "Intégration Facebook Messenger pour service client"
-            : "Facebook Messenger integratie voor klantenservice",
           status: "Live"
         },
         {
@@ -252,6 +236,22 @@ const Integraties = () => {
           : language === 'fr'
           ? "Bientôt"
           : "Binnenkort"
+        },
+        {
+          name: "WhatsApp",
+          logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-tile.svg",
+          description: language === 'fr'
+            ? "Service client via WhatsApp avec réponses automatiques"
+            : "Klantenservice via WhatsApp met automatische antwoorden",
+          status: "Live"
+        },
+        {
+          name: "Messenger",
+          logo: "https://cdn.worldvectorlogo.com/logos/messenger-1.svg",
+          description: language === 'fr'
+            ? "Automatisez vos conversations Facebook Messenger"
+            : "Automatiseer je Facebook Messenger gesprekken",
+          status: "Live"
         },
       ]
     },
