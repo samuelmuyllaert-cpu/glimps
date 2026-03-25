@@ -5,20 +5,7 @@ import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ShoppingCart, Package, MessageSquare, Mail, ChartBar as BarChart, Users, Zap, CircleCheck as CheckCircle2, Workflow } from "lucide-react";
-import bpostLogo from "@/assets/bpost-logo.png";
-import odooLogo from "@/assets/odoo-logo.png";
-import postnlLogo from "@/assets/postnl-logo.png";
-import sendcloudLogo from "@/assets/sendcloud-logo.png";
-import myparcelLogo from "@/assets/myparcel-logo.svg";
-import picqerLogo from "@/assets/picqer-logo.svg";
-import fulfillmentLogo from "@/assets/fulfillment-logo.svg";
-import hubspotLogo from "@/assets/hubspot-logo.png";
-import makeLogo from "@/assets/make-logo.svg";
-import zapierLogo from "@/assets/zapier-logo.svg";
-import n8nLogo from "@/assets/n8n-logo.svg";
-import apiLogo from "@/assets/api-logo.svg";
-import webhookLogo from "@/assets/webhook-logo.svg";
+import { ShoppingCart, Package, MessageSquare, Users, Zap, CircleCheck as CheckCircle2, Workflow } from "lucide-react";
 
 const Integraties = () => {
   const { language } = useLanguage();
@@ -60,7 +47,7 @@ const Integraties = () => {
         },
         {
           name: "Magento",
-          logo: "https://cdn.worldvectorlogo.com/logos/magento-1.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/magento.svg",
           description: language === 'fr'
             ? "Intégration de plateforme e-commerce entreprise"
             : "Enterprise e-commerce platform integratie",
@@ -68,7 +55,7 @@ const Integraties = () => {
         },
         {
           name: "Odoo",
-          logo: odooLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/odoo.svg",
           description: language === 'fr'
             ? "Intégration complète ERP et suite e-commerce"
             : "Complete ERP en e-commerce suite integratie",
@@ -76,7 +63,7 @@ const Integraties = () => {
         },
         {
           name: "Lightspeed",
-          logo: "https://cdn.worldvectorlogo.com/logos/lightspeed-pos.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/lightspeed.svg",
           description: language === 'fr'
             ? "Plateforme POS et e-commerce pour retail et horeca"
             : "POS en e-commerce platform voor retail en horeca",
@@ -92,7 +79,7 @@ const Integraties = () => {
         },
         {
           name: "Wix",
-          logo: "https://cdn.worldvectorlogo.com/logos/wix-2.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/wix.svg",
           description: language === 'fr'
             ? "Intégration plateforme boutique en ligne Wix"
             : "Wix webshop platform integratie",
@@ -100,7 +87,7 @@ const Integraties = () => {
         },
         {
           name: "WordPress",
-          logo: "https://cdn.worldvectorlogo.com/logos/wordpress-blue.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg",
           description: language === 'fr'
             ? "Intégration site web et blog WordPress"
             : "WordPress website en blog integratie",
@@ -120,7 +107,7 @@ const Integraties = () => {
       integrations: [
         {
           name: "SendCloud",
-          logo: sendcloudLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/sendcloud.svg",
           description: language === 'fr'
             ? "Track & trace, étiquettes d'expédition et mises à jour automatiques"
             : "Track & trace, verzendlabels en automatische updates",
@@ -128,7 +115,7 @@ const Integraties = () => {
         },
         {
           name: "bpost",
-          logo: bpostLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/bpost.svg",
           description: language === 'fr'
             ? "Intégration du système postal belge pour le suivi"
             : "Belgische postsysteem integratie voor tracking",
@@ -136,7 +123,7 @@ const Integraties = () => {
         },
         {
           name: "PostNL",
-          logo: postnlLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/postnl.svg",
           description: language === 'fr'
             ? "Suivi et expédition de la poste néerlandaise"
             : "Nederlandse post tracking en verzending",
@@ -144,7 +131,7 @@ const Integraties = () => {
         },
         {
           name: "DHL",
-          logo: "https://cdn.worldvectorlogo.com/logos/dhl-3.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/dhl.svg",
           description: language === 'fr'
             ? "Expédition et suivi international via DHL"
             : "Internationale verzending en tracking via DHL",
@@ -152,7 +139,7 @@ const Integraties = () => {
         },
         {
           name: "GLS",
-          logo: "https://cdn.worldvectorlogo.com/logos/gls-1.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/gls.svg",
           description: language === 'fr'
             ? "Livraison de colis européen et suivi"
             : "Europese pakketbezorging en tracking",
@@ -160,7 +147,7 @@ const Integraties = () => {
         },
         {
           name: "MyParcel",
-          logo: myparcelLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/myparcel.svg",
           description: language === 'fr'
             ? "Plateforme d'expédition multi-transporteurs pour boutiques en ligne"
             : "Multi-carrier verzendplatform voor webshops",
@@ -168,7 +155,7 @@ const Integraties = () => {
         },
         {
           name: "Picqer",
-          logo: picqerLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/picqer.svg",
           description: language === 'fr'
             ? "Système de gestion d'entrepôt et de stock"
             : "Magazijn- en voorraadbeheer systeem",
@@ -176,7 +163,7 @@ const Integraties = () => {
         },
         {
           name: "Fulfillment Centers",
-          logo: fulfillmentLogo,
+          logo: "https://cdn-icons-png.flaticon.com/512/679/679720.png",
           description: language === 'fr'
             ? "Connexion avec partenaires externes de fulfillment et logistique"
             : "Koppeling met externe fulfillment en logistieke partners",
@@ -192,7 +179,7 @@ const Integraties = () => {
       integrations: [
         {
           name: "WhatsApp Business",
-          logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-3.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-business.svg",
           description: language === 'fr'
             ? "Communication directe WhatsApp avec les clients"
             : "Directe WhatsApp communicatie met klanten",
@@ -200,7 +187,7 @@ const Integraties = () => {
         },
         {
           name: "Instagram",
-          logo: "https://cdn.worldvectorlogo.com/logos/instagram-2-1.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/instagram-2016-5.svg",
           description: language === 'fr'
             ? "Répondez automatiquement aux DM et commentaires via Instagram"
             : "Beantwoord DM's en comments automatisch via Instagram",
@@ -216,7 +203,7 @@ const Integraties = () => {
         },
         {
           name: "Telegram",
-          logo: "https://cdn.worldvectorlogo.com/logos/telegram-1.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/telegram.svg",
           description: language === 'fr'
             ? "Intégration bot Telegram pour communication client"
             : "Telegram bot integratie voor klantcommunicatie",
@@ -232,7 +219,7 @@ const Integraties = () => {
         },
         {
           name: "Email",
-          logo: "https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg",
+          logo: "https://cdn-icons-png.flaticon.com/512/732/732200.png",
           description: language === 'fr'
             ? "Gestion automatique des emails et réponses"
             : "Automatische email afhandeling en responses",
@@ -240,7 +227,7 @@ const Integraties = () => {
         },
         {
           name: "Zendesk",
-          logo: "https://cdn.worldvectorlogo.com/logos/zendesk-1.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/zendesk.svg",
           description: language === 'fr'
             ? "Intégration système de tickets support client"
             : "Customer support ticket systeem integratie",
@@ -256,7 +243,7 @@ const Integraties = () => {
         },
         {
           name: "HubSpot",
-          logo: hubspotLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/hubspot.svg",
           description: language === 'fr'
             ? "Synchronisation CRM et gestion des leads"
             : "CRM synchronisatie en lead management",
@@ -276,7 +263,7 @@ const Integraties = () => {
       integrations: [
         {
           name: "Make (Integromat)",
-          logo: makeLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/make-1.svg",
           description: language === 'fr'
             ? "Automatisation de workflow avancée et intégrations"
             : "Geavanceerde workflow automatisering en integraties",
@@ -284,7 +271,7 @@ const Integraties = () => {
         },
         {
           name: "Zapier",
-          logo: zapierLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/zapier.svg",
           description: language === 'fr'
             ? "Automatisez les tâches entre vos applications préférées"
             : "Automatiseer taken tussen je favoriete apps",
@@ -292,7 +279,7 @@ const Integraties = () => {
         },
         {
           name: "n8n",
-          logo: n8nLogo,
+          logo: "https://cdn.worldvectorlogo.com/logos/n8n.svg",
           description: language === 'fr'
             ? "Plateforme d'automatisation de workflow open-source"
             : "Open-source workflow automatisering platform",
@@ -300,7 +287,7 @@ const Integraties = () => {
         },
         {
           name: "REST API",
-          logo: apiLogo,
+          logo: "https://cdn-icons-png.flaticon.com/512/919/919836.png",
           description: language === 'fr'
             ? "API RESTful complète pour intégrations personnalisées"
             : "Volledige RESTful API voor custom integraties",
@@ -308,7 +295,7 @@ const Integraties = () => {
         },
         {
           name: "Webhooks",
-          logo: webhookLogo,
+          logo: "https://cdn-icons-png.flaticon.com/512/2166/2166823.png",
           description: language === 'fr'
             ? "Notifications d'événements en temps réel via webhooks"
             : "Real-time event notificaties via webhooks",
