@@ -5,17 +5,7 @@ import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/LanguageContext";
-import {
-  ShoppingCart,
-  Package,
-  MessageSquare,
-  Mail,
-  BarChart,
-  Users,
-  Zap,
-  CheckCircle2,
-  Workflow
-} from "lucide-react";
+import { ShoppingCart, Package, MessageSquare, Mail, ChartBar as BarChart, Users, Zap, CircleCheck as CheckCircle2, Workflow } from "lucide-react";
 import bpostLogo from "@/assets/bpost-logo.png";
 import odooLogo from "@/assets/odoo-logo.png";
 import postnlLogo from "@/assets/postnl-logo.png";
@@ -46,7 +36,7 @@ const Integraties = () => {
       integrations: [
         {
           name: "Shopify",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/shopify.svg",
           description: language === 'fr'
             ? "Synchronisation automatique des produits, stock et données clients"
             : "Automatische sync van producten, voorraad en klantgegevens",
@@ -54,15 +44,23 @@ const Integraties = () => {
         },
         {
           name: "WooCommerce",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/woocommerce.svg",
           description: language === 'fr'
             ? "Intégration complète avec WordPress et boutiques WooCommerce"
             : "Volledige integratie met WordPress en WooCommerce stores",
           status: "Live"
         },
         {
+          name: "Shopware",
+          logo: "https://cdn.worldvectorlogo.com/logos/shopware.svg",
+          description: language === 'fr'
+            ? "Plateforme e-commerce flexible pour entreprises innovantes"
+            : "Flexibel e-commerce platform voor innovatieve bedrijven",
+          status: "Live"
+        },
+        {
           name: "Magento",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Magento_Logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/magento-1.svg",
           description: language === 'fr'
             ? "Intégration de plateforme e-commerce entreprise"
             : "Enterprise e-commerce platform integratie",
@@ -78,7 +76,7 @@ const Integraties = () => {
         },
         {
           name: "Lightspeed",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Lightspeed_Logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/lightspeed-pos.svg",
           description: language === 'fr'
             ? "Plateforme POS et e-commerce pour retail et horeca"
             : "POS en e-commerce platform voor retail en horeca",
@@ -86,7 +84,7 @@ const Integraties = () => {
         },
         {
           name: "PrestaShop",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Prestashop_logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/prestashop.svg",
           description: language === 'fr'
             ? "Intégration de solution e-commerce open source"
             : "Open source e-commerce oplossing integratie",
@@ -94,7 +92,7 @@ const Integraties = () => {
         },
         {
           name: "Wix",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wix.com_website_logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/wix-2.svg",
           description: language === 'fr'
             ? "Intégration plateforme boutique en ligne Wix"
             : "Wix webshop platform integratie",
@@ -102,7 +100,7 @@ const Integraties = () => {
         },
         {
           name: "WordPress",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/wordpress-blue.svg",
           description: language === 'fr'
             ? "Intégration site web et blog WordPress"
             : "WordPress website en blog integratie",
@@ -146,7 +144,7 @@ const Integraties = () => {
         },
         {
           name: "DHL",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/a/ac/DHL_Logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/dhl-3.svg",
           description: language === 'fr'
             ? "Expédition et suivi international via DHL"
             : "Internationale verzending en tracking via DHL",
@@ -154,7 +152,7 @@ const Integraties = () => {
         },
         {
           name: "GLS",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/1/12/GLS_Logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/gls-1.svg",
           description: language === 'fr'
             ? "Livraison de colis européen et suivi"
             : "Europese pakketbezorging en tracking",
@@ -194,7 +192,7 @@ const Integraties = () => {
       integrations: [
         {
           name: "WhatsApp Business",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-3.svg",
           description: language === 'fr'
             ? "Communication directe WhatsApp avec les clients"
             : "Directe WhatsApp communicatie met klanten",
@@ -202,7 +200,7 @@ const Integraties = () => {
         },
         {
           name: "Instagram",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
+          logo: "https://cdn.worldvectorlogo.com/logos/instagram-2-1.svg",
           description: language === 'fr'
             ? "Répondez automatiquement aux DM et commentaires via Instagram"
             : "Beantwoord DM's en comments automatisch via Instagram",
@@ -210,7 +208,7 @@ const Integraties = () => {
         },
         {
           name: "Messenger",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/facebook-messenger.svg",
           description: language === 'fr'
             ? "Intégration Facebook Messenger pour service client"
             : "Facebook Messenger integratie voor klantenservice",
@@ -218,7 +216,7 @@ const Integraties = () => {
         },
         {
           name: "Telegram",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/telegram-1.svg",
           description: language === 'fr'
             ? "Intégration bot Telegram pour communication client"
             : "Telegram bot integratie voor klantcommunicatie",
@@ -226,7 +224,7 @@ const Integraties = () => {
         },
         {
           name: "Twilio",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/twilio.svg",
           description: language === 'fr'
             ? "Communication SMS et vocale via plateforme Twilio"
             : "SMS en voice communicatie via Twilio platform",
@@ -234,7 +232,7 @@ const Integraties = () => {
         },
         {
           name: "Email",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg",
           description: language === 'fr'
             ? "Gestion automatique des emails et réponses"
             : "Automatische email afhandeling en responses",
@@ -242,7 +240,7 @@ const Integraties = () => {
         },
         {
           name: "Zendesk",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zendesk_logo.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/zendesk-1.svg",
           description: language === 'fr'
             ? "Intégration système de tickets support client"
             : "Customer support ticket systeem integratie",
@@ -250,7 +248,7 @@ const Integraties = () => {
         },
         {
           name: "Slack",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
+          logo: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg",
           description: language === 'fr'
             ? "Notifications d'équipe et communication interne"
             : "Team notificaties en interne communicatie",
