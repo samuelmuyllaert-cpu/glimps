@@ -107,7 +107,7 @@ const Integraties = () => {
       integrations: [
         {
           name: "SendCloud",
-          logo: "https://cdn.worldvectorlogo.com/logos/sendcloud.svg",
+          logo: "https://www.sendcloud.com/wp-content/uploads/2023/09/Sendcloud_Logo-Secondary_Blue-White_RGB.svg",
           description: language === 'fr'
             ? "Track & trace, étiquettes d'expédition et mises à jour automatiques"
             : "Track & trace, verzendlabels en automatische updates",
