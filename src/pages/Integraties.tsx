@@ -147,7 +147,7 @@ const Integraties = () => {
         },
         {
           name: "MyParcel",
-          logo: "https://cdn.worldvectorlogo.com/logos/myparcel.svg",
+          logo: "https://www.myparcel.nl/app/uploads/MyParcel_logo_zwart-1.svg",
           description: language === 'fr'
             ? "Plateforme d'expédition multi-transporteurs pour boutiques en ligne"
             : "Multi-carrier verzendplatform voor webshops",
