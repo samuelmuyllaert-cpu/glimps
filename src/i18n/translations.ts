@@ -781,6 +781,374 @@ export const translations = {
         ctaTitle: 'Klaar om je tuin business te laten groeien?',
         ctaSubtitle: 'Ontdek hoe glimps jouw tuinwebshop bloeiend maakt',
         ctaButton: 'Start je gratis proefperiode'
+      },
+      health: {
+        badge: 'Gezondheid & Apotheken',
+        title: 'AI-Chatbots voor Apotheek & Gezondheid',
+        subtitle: 'Verbeter je apotheek webshop met AI die medicijnadvies geeft en klanten 24/7 helpt met gezondheidsproducten',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor apotheek webshops',
+        benefits: {
+          advice: { title: 'Medicijnadvies', desc: 'AI beantwoordt vragen over producten, werking en gebruik van medicijnen en supplementen' },
+          safety: { title: 'Veiligheidsinfo', desc: 'Geef direct informatie over bijwerkingen, interacties en contra-indicaties' },
+          support: { title: '24/7 Beschikbaarheid', desc: 'Klanten krijgen altijd antwoord, ook buiten openingstijden van de fysieke apotheek' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor apotheken',
+        useCases: [
+          'Productadvies voor vrij verkrijgbare medicijnen',
+          'Informatie over supplementen en vitamines',
+          'Vragen over gebruik en dosering beantwoorden',
+          'Gezondheidsproducten aanbevelen op basis van klachten',
+          'Receptinformatie en verzekering uitleggen'
+        ],
+        ctaTitle: 'Klaar voor betere apotheek service?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw apotheek webshop verbetert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      baby: {
+        badge: 'Baby & Kind',
+        title: 'AI-Chatbots voor Baby & Kind Webshops',
+        subtitle: 'Help ouders met persoonlijk advies over babyproducten, veiligheid en de beste keuzes voor hun kleintjes',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor baby webshops',
+        benefits: {
+          advice: { title: 'Ouder Ondersteuning', desc: 'AI helpt ouders bij het vinden van veilige en geschikte producten voor elke leeftijd' },
+          safety: { title: 'Veiligheidsinformatie', desc: 'Geef direct antwoord op vragen over veiligheid, certificeringen en leeftijdsgeschiktheid' },
+          recommendations: { title: 'Persoonlijke Aanbevelingen', desc: 'Adviseer producten op basis van leeftijd, ontwikkeling en specifieke behoeften' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor baby & kind',
+        useCases: [
+          'Advies over producten per leeftijdscategorie',
+          'Veiligheidsinformatie en certificeringen uitleggen',
+          'Complete babykamer sets samenstellen',
+          'Vragen over verzorging en gebruik beantwoorden',
+          'Cadeaulijstjes en registries helpen samenstellen'
+        ],
+        ctaTitle: 'Klaar om ouders beter te helpen?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw babywinkel laat groeien',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      pets: {
+        badge: 'Huisdieren',
+        title: 'AI-Chatbots voor Dierenwinkel & Huisdieren',
+        subtitle: 'Boost je dierenwinkel met AI die voedingsadvies geeft en huisdiereigenaren 24/7 helpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor dierenwinkels',
+        benefits: {
+          nutrition: { title: 'Voedingsadvies', desc: 'AI kent verschillende diersoorten, rassen en geeft persoonlijk voedingsadvies' },
+          products: { title: 'Productaanbevelingen', desc: 'Adviseer speelgoed, accessoires en verzorgingsproducten per huisdier' },
+          care: { title: 'Verzorgingstips', desc: 'Geef directe antwoorden op vragen over verzorging en welzijn' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor dierenwinkels',
+        useCases: [
+          'Voer adviseren op basis van diersoort, ras en leeftijd',
+          'Vragen over allergieën en speciale diëten beantwoorden',
+          'Speelgoed en accessoires per huisdier aanbevelen',
+          'Verzorgingsproducten suggereren',
+          'Informatie over maten en pasvorm van kleding/halsbanden'
+        ],
+        ctaTitle: 'Klaar voor meer tevreden huisdiereigenaren?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw dierenwinkel transformeert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      food: {
+        badge: 'Voeding & Dranken',
+        title: 'AI-Chatbots voor Voeding & Dranken E-commerce',
+        subtitle: 'Verhoog je food e-commerce met AI die receptideeën deelt, allergieën checkt en persoonlijke suggesties geeft',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor food webshops',
+        benefits: {
+          recipes: { title: 'Recept Suggesties', desc: 'AI geeft receptideeën en stelt ingrediëntenlijsten samen uit je assortiment' },
+          allergies: { title: 'Allergie Check', desc: 'Controleer automatisch producten op allergenen en dieetwensen' },
+          personalized: { title: 'Persoonlijke Voorkeuren', desc: 'Onthoud voorkeuren en beperkingen voor terugkerende klanten' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor food',
+        useCases: [
+          'Receptideeën delen op basis van ingrediënten',
+          'Allergenen en dieetwensen checken',
+          'Producten filteren op vegetarisch, vegan, halal, etc.',
+          'Maaltijdplannen en boodschappenlijsten maken',
+          'Vragen over houdbaarheid en opslag beantwoorden'
+        ],
+        ctaTitle: 'Klaar voor meer food conversies?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw food webshop boosted',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      diy: {
+        badge: 'DIY & Bouwmaterialen',
+        title: 'AI-Chatbots voor DIY & Bouwmaterialen',
+        subtitle: 'Help klussers met technisch advies, materiaalberekeningen en klusplanning via slimme AI',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor bouwmarkten',
+        benefits: {
+          technical: { title: 'Technisch Advies', desc: 'AI geeft deskundig advies over materialen, gereedschap en technieken' },
+          calculation: { title: 'Materiaalberekeningen', desc: 'Bereken automatisch hoeveel materiaal nodig is voor projecten' },
+          planning: { title: 'Project Planning', desc: 'Help klanten hun klus stap voor stap te plannen' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor DIY',
+        useCases: [
+          'Materialen berekenen voor specifieke projecten',
+          'Technisch advies over gereedschap en technieken',
+          'Stap-voor-stap klusgidsen delen',
+          'Productvergelijkingen en materiaaladvies',
+          'Veiligheidsinfo en beschermingsmiddelen adviseren'
+        ],
+        ctaTitle: 'Klaar om klussers beter te helpen?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw bouwmarkt webshop verbetert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      automotive: {
+        badge: 'Auto & Fietsen',
+        title: 'AI-Chatbots voor Auto & Fiets E-commerce',
+        subtitle: 'Boost je automotive webshop met AI die technische specs uitlegt en compatibiliteit controleert',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor auto & fiets webshops',
+        benefits: {
+          compatibility: { title: 'Compatibiliteit Check', desc: 'AI controleert of onderdelen passen bij specifieke auto- of fietsmodellen' },
+          technical: { title: 'Technische Specs', desc: 'Leg complexe specificaties uit in begrijpelijke taal' },
+          advice: { title: 'Onderdelenadvies', desc: 'Help klanten de juiste onderdelen en accessoires te vinden' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor automotive',
+        useCases: [
+          'Compatibiliteit checken voor auto onderdelen',
+          'Fietsmaat en framemaat adviseren',
+          'Technische specificaties uitleggen',
+          'Onderhoudsproducten en schema\'s adviseren',
+          'Accessoires en tuning producten aanbevelen'
+        ],
+        ctaTitle: 'Klaar voor meer automotive sales?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw auto & fiets webshop boosted',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      jewelry: {
+        badge: 'Sieraden & Luxe',
+        title: 'AI-Chatbots voor Sieraden & Luxe E-commerce',
+        subtitle: 'Verhoog je juwelier webshop met AI die persoonlijk advies geeft en luxe shopping ervaring biedt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor juweliers',
+        benefits: {
+          personalized: { title: 'Persoonlijk Advies', desc: 'AI geeft stijladvies en helpt bij het vinden van het perfecte sieraad' },
+          knowledge: { title: 'Edelstenen Kennis', desc: 'Deel informatie over edelstenen, certificaten en kwaliteit' },
+          luxury: { title: 'Luxe Ervaring', desc: 'Bied een premium shopping ervaring met gedetailleerd advies' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor sieraden',
+        useCases: [
+          'Persoonlijk stijladvies voor sieraden',
+          'Informatie over edelstenen en certificeringen',
+          'Cadeautips voor speciale gelegenheden',
+          'Maat en pasvorm advies voor ringen en armbanden',
+          'Onderhoudstips voor edele metalen en stenen'
+        ],
+        ctaTitle: 'Klaar voor meer luxe conversies?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw juwelier webshop laat stralen',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      gifts: {
+        badge: 'Cadeau & Gepersonaliseerd',
+        title: 'AI-Chatbots voor Cadeau & Gepersonaliseerde Producten',
+        subtitle: 'Verhoog conversies met AI die cadeau-ideeën suggereert en personalisatie opties uitlegt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor cadeauwinkels',
+        benefits: {
+          ideas: { title: 'Cadeau Inspiratie', desc: 'AI suggereert passende cadeaus op basis van gelegenheid en ontvanger' },
+          personalization: { title: 'Personalisatie Hulp', desc: 'Help klanten met gravures, teksten en customization opties' },
+          occasions: { title: 'Gelegenheid Gerichte Tips', desc: 'Geef suggesties voor verjaardagen, bruiloften, feestdagen en meer' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor cadeaus',
+        useCases: [
+          'Cadeau-ideeën suggereren per gelegenheid',
+          'Personalisatie opties uitleggen en adviseren',
+          'Budgetgerichte aanbevelingen doen',
+          'Cadeausets samenstellen',
+          'Levertijden voor gepersonaliseerde producten communiceren'
+        ],
+        ctaTitle: 'Klaar voor meer tevreden cadeaukopers?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw cadeauwinkel transformeert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      books: {
+        badge: 'Boeken & Educatie',
+        title: 'AI-Chatbots voor Boeken & Educatie E-commerce',
+        subtitle: 'Boost je boekwinkel met AI die lees-aanbevelingen doet en studenten helpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor boekwinkels',
+        benefits: {
+          recommendations: { title: 'Boek Aanbevelingen', desc: 'AI suggereert boeken op basis van interesses, genre en leesniveau' },
+          education: { title: 'Studieматериaal', desc: 'Help studenten de juiste studieboeken en materialen te vinden' },
+          discovery: { title: 'Ontdekking', desc: 'Laat klanten nieuwe auteurs en genres ontdekken' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor boeken',
+        useCases: [
+          'Boek aanbevelingen op basis van smaak',
+          'Studieboeken per opleiding en vak adviseren',
+          'Informatie over auteurs en series delen',
+          'Cadeautips voor boekenliefhebbers',
+          'E-book vs fysiek boek vergelijkingen'
+        ],
+        ctaTitle: 'Klaar voor meer boekverkopen?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw boekwinkel laat groeien',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      gaming: {
+        badge: 'Gaming & Entertainment',
+        title: 'AI-Chatbots voor Gaming & Entertainment',
+        subtitle: 'Verhoog je gaming webshop met AI die game-aanbevelingen doet en setup advies geeft',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor gaming webshops',
+        benefits: {
+          recommendations: { title: 'Game Aanbevelingen', desc: 'AI suggereert games op basis van genre, platform en speelstijl' },
+          technical: { title: 'Setup Advies', desc: 'Help gamers de perfecte setup samenstellen met compatibele hardware' },
+          specs: { title: 'Tech Specs', desc: 'Leg systeemeisen en specs uit in begrijpelijke taal' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor gaming',
+        useCases: [
+          'Game aanbevelingen per platform en genre',
+          'Gaming PC en console setup advies',
+          'Compatibiliteit van hardware checken',
+          'Systeemeisen uitleggen',
+          'Accessoires en randapparatuur adviseren'
+        ],
+        ctaTitle: 'Klaar voor meer gaming conversies?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw gaming webshop level-up geeft',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      b2b: {
+        badge: 'B2B Groothandel',
+        title: 'AI-Chatbots voor B2B Groothandel & Webshops',
+        subtitle: 'Optimaliseer je B2B webshop met AI die bulk orders afhandelt en zakelijke klanten ondersteunt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor B2B webshops',
+        benefits: {
+          bulk: { title: 'Bulk Order Handling', desc: 'AI helpt bij grote bestellingen, voorraadchecks en levertijden' },
+          quotes: { title: 'Offertes Genereren', desc: 'Automatisch offertes maken op basis van volume en klantvoorwaarden' },
+          support: { title: 'Zakelijke Support', desc: 'Professionele ondersteuning voor facturen, betalingen en levering' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor B2B',
+        useCases: [
+          'Bulk pricing en volumekortingen uitleggen',
+          'Voorraad en levertijden real-time checken',
+          'Offerteaanvragen voorbereiden',
+          'Factuur en betaalinformatie verstrekken',
+          'Account en ordergeschiedenis raadplegen'
+        ],
+        ctaTitle: 'Klaar voor betere B2B service?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw groothandel optimaliseert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      eco: {
+        badge: 'Duurzame Producten',
+        title: 'AI-Chatbots voor Duurzame & Eco Producten',
+        subtitle: 'Verhoog je eco webshop met AI die duurzaamheidsinfo deelt en bewuste consumenten helpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor eco webshops',
+        benefits: {
+          sustainability: { title: 'Duurzaamheidsinfo', desc: 'AI deelt informatie over certificeringen, materialen en impact' },
+          alternatives: { title: 'Groene Alternatieven', desc: 'Suggereer milieuvriendelijke alternatieven voor populaire producten' },
+          education: { title: 'Educatie', desc: 'Help klanten bewuste keuzes maken met uitleg over eco-labels' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor eco',
+        useCases: [
+          'Duurzaamheidscertificeringen uitleggen',
+          'Materialen en productieprocessen toelichten',
+          'Milieuvriendelijke alternatieven suggereren',
+          'Informatie over recycling en circulaire economie',
+          'Impact van productkeuzes berekenen'
+        ],
+        ctaTitle: 'Klaar voor meer groene conversies?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw eco webshop laat groeien',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      medical: {
+        badge: 'Medische Hulpmiddelen',
+        title: 'AI-Chatbots voor Medische Hulpmiddelen',
+        subtitle: 'Verbeter je medische webshop met AI die productadvies geeft en patiënten 24/7 helpt',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor medische webshops',
+        benefits: {
+          advice: { title: 'Productadvies', desc: 'AI helpt patiënten de juiste hulpmiddelen te vinden voor hun situatie' },
+          instructions: { title: 'Gebruiksinstructies', desc: 'Deel duidelijke uitleg over gebruik en onderhoud van hulpmiddelen' },
+          support: { title: 'Continue Support', desc: 'Bied 24/7 ondersteuning voor dringende vragen en hulp' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor medische hulpmiddelen',
+        useCases: [
+          'Hulpmiddelen adviseren per aandoening',
+          'Gebruiksinstructies en handleidingen delen',
+          'Vragen over verzekering en vergoeding',
+          'Maat en pasvorm bepalen',
+          'Onderhoud en hygiëne informatie geven'
+        ],
+        ctaTitle: 'Klaar voor betere patiëntenzorg?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw medische webshop verbetert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      adult: {
+        badge: 'Erotiek & Wellness',
+        title: 'AI-Chatbots voor Erotiek & Wellness E-commerce',
+        subtitle: 'Verhoog conversies met discrete AI die persoonlijk advies geeft in volledige vertrouwelijkheid',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor erotiek webshops',
+        benefits: {
+          discrete: { title: 'Discrete Service', desc: 'AI biedt een veilige, niet-oordelende omgeving voor vragen' },
+          personalized: { title: 'Persoonlijk Advies', desc: 'Geef gepersonaliseerde aanbevelingen zonder ongemak' },
+          available: { title: '24/7 Beschikbaar', desc: 'Klanten kunnen altijd vragen stellen, op elk moment' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor erotiek',
+        useCases: [
+          'Productadvies op basis van voorkeuren',
+          'Discrete vragen beantwoorden',
+          'Gebruiksinstructies en veiligheidstips',
+          'Materiaalinformatie en onderhoud',
+          'Cadeautips en cadeauverpakking'
+        ],
+        ctaTitle: 'Klaar voor hogere conversies?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw webshop discreet verbetert',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      hobby: {
+        badge: 'Hobby & Creatief',
+        title: 'AI-Chatbots voor Hobby & Creatief',
+        subtitle: 'Boost je hobbywinkel met AI die project-ideeën deelt en creatieve klanten inspireert',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor hobbywinkels',
+        benefits: {
+          inspiration: { title: 'Project Inspiratie', desc: 'AI deelt creatieve ideeën en project suggesties' },
+          materials: { title: 'Materiaaladvies', desc: 'Help klanten de juiste materialen en gereedschappen te vinden' },
+          guidance: { title: 'Stap-voor-stap Hulp', desc: 'Geef begeleiding bij technieken en projecten' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor hobby',
+        useCases: [
+          'Project ideeën en inspiratie delen',
+          'Materialen en gereedschap adviseren',
+          'Techniek uitleg en tips geven',
+          'Complete project kits samenstellen',
+          'Niveau-geschikte projecten suggereren'
+        ],
+        ctaTitle: 'Klaar om creatievelingen te inspireren?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw hobbywinkel boosted',
+        ctaButton: 'Start je gratis proefperiode'
+      },
+      lighting: {
+        badge: 'Verlichting',
+        title: 'AI-Chatbots voor Verlichting E-commerce',
+        subtitle: 'Verhoog je verlichting webshop met AI die technisch advies geeft en lichtplannen suggereert',
+        cta: { trial: 'Start gratis proefperiode', demo: 'Plan een demo' },
+        whyTitle: 'Waarom glimps perfect is voor verlichting webshops',
+        benefits: {
+          technical: { title: 'Technisch Advies', desc: 'AI legt specs uit zoals lumen, kelvin en energie-efficiëntie' },
+          planning: { title: 'Lichtplan Suggesties', desc: 'Help klanten het perfecte verlichtingsplan voor hun ruimte maken' },
+          style: { title: 'Stijl & Sfeer', desc: 'Adviseer verlichting die past bij interieurstijl en gewenste sfeer' }
+        },
+        useCasesTitle: 'Wat onze AI chatbot kan voor verlichting',
+        useCases: [
+          'Technische specificaties uitleggen',
+          'Lichtplan maken voor verschillende ruimtes',
+          'Armaturen adviseren per ruimte en functie',
+          'LED vs traditioneel vergelijken',
+          'Smart lighting oplossingen uitleggen'
+        ],
+        ctaTitle: 'Klaar om je verlichting sales te boosten?',
+        ctaSubtitle: 'Ontdek hoe glimps jouw verlichting webshop laat stralen',
+        ctaButton: 'Start je gratis proefperiode'
       }
     },
     partners: {
@@ -1920,6 +2288,374 @@ export const translations = {
         ctaTitle: 'Prêt à faire croître votre business jardin ?',
         ctaSubtitle: 'Découvrez comment glimps fait fleurir votre boutique de jardin',
         ctaButton: 'Commencez votre essai gratuit'
+      },
+      health: {
+        badge: 'Santé & Pharmacies',
+        title: 'Chatbots IA pour Pharmacies & Santé',
+        subtitle: 'Améliorez votre pharmacie en ligne avec une IA qui donne des conseils médicamenteux et aide les clients 24/7',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les pharmacies',
+        benefits: {
+          advice: { title: 'Conseils Médicaments', desc: 'L\'IA répond aux questions sur les produits, les effets et l\'utilisation des médicaments et suppléments' },
+          safety: { title: 'Infos Sécurité', desc: 'Fournissez directement des informations sur les effets secondaires, interactions et contre-indications' },
+          support: { title: 'Disponibilité 24/7', desc: 'Les clients obtiennent toujours des réponses, même en dehors des heures d\'ouverture' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les pharmacies',
+        useCases: [
+          'Conseils produits pour médicaments en vente libre',
+          'Informations sur les suppléments et vitamines',
+          'Répondre aux questions sur l\'utilisation et le dosage',
+          'Recommander des produits de santé selon les symptômes',
+          'Expliquer les informations sur ordonnances et assurances'
+        ],
+        ctaTitle: 'Prêt pour un meilleur service pharmaceutique ?',
+        ctaSubtitle: 'Découvrez comment glimps améliore votre pharmacie en ligne',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      baby: {
+        badge: 'Bébé & Enfant',
+        title: 'Chatbots IA pour Boutiques Bébé & Enfant',
+        subtitle: 'Aidez les parents avec des conseils personnalisés sur les produits bébé, la sécurité et les meilleurs choix',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques bébé',
+        benefits: {
+          advice: { title: 'Support Parents', desc: 'L\'IA aide les parents à trouver des produits sûrs et adaptés pour chaque âge' },
+          safety: { title: 'Informations Sécurité', desc: 'Répondez directement aux questions sur la sécurité, certifications et âge recommandé' },
+          recommendations: { title: 'Recommandations Personnalisées', desc: 'Conseillez des produits selon l\'âge, le développement et les besoins spécifiques' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour bébé & enfant',
+        useCases: [
+          'Conseils produits par tranche d\'âge',
+          'Expliquer les informations de sécurité et certifications',
+          'Composer des ensembles chambre bébé complets',
+          'Répondre aux questions sur les soins et l\'utilisation',
+          'Aider à composer des listes de naissance'
+        ],
+        ctaTitle: 'Prêt à mieux aider les parents ?',
+        ctaSubtitle: 'Découvrez comment glimps fait grandir votre boutique bébé',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      pets: {
+        badge: 'Animaux',
+        title: 'Chatbots IA pour Animaleries',
+        subtitle: 'Boostez votre animalerie avec une IA qui donne des conseils nutritionnels et aide les propriétaires 24/7',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les animaleries',
+        benefits: {
+          nutrition: { title: 'Conseils Nutrition', desc: 'L\'IA connaît différentes espèces, races et donne des conseils nutritionnels personnalisés' },
+          products: { title: 'Recommandations Produits', desc: 'Conseillez jouets, accessoires et produits de soins par animal' },
+          care: { title: 'Conseils Soins', desc: 'Répondez directement aux questions sur les soins et le bien-être' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les animaleries',
+        useCases: [
+          'Conseiller la nourriture selon espèce, race et âge',
+          'Répondre aux questions sur allergies et régimes spéciaux',
+          'Recommander jouets et accessoires par animal',
+          'Suggérer des produits de soins',
+          'Informations sur tailles et ajustement de vêtements/colliers'
+        ],
+        ctaTitle: 'Prêt pour plus de propriétaires satisfaits ?',
+        ctaSubtitle: 'Découvrez comment glimps transforme votre animalerie',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      food: {
+        badge: 'Alimentation & Boissons',
+        title: 'Chatbots IA pour E-commerce Alimentation',
+        subtitle: 'Augmentez votre e-commerce alimentaire avec une IA qui partage des idées recettes et vérifie les allergies',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour l\'e-commerce alimentaire',
+        benefits: {
+          recipes: { title: 'Suggestions Recettes', desc: 'L\'IA donne des idées recettes et compose des listes d\'ingrédients de votre assortiment' },
+          allergies: { title: 'Vérification Allergies', desc: 'Vérifiez automatiquement les produits pour allergènes et régimes' },
+          personalized: { title: 'Préférences Personnelles', desc: 'Mémorisez préférences et restrictions pour clients réguliers' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour l\'alimentation',
+        useCases: [
+          'Partager des idées recettes basées sur ingrédients',
+          'Vérifier allergènes et régimes alimentaires',
+          'Filtrer produits végétariens, vegan, halal, etc.',
+          'Créer plans de repas et listes de courses',
+          'Répondre aux questions sur conservation et stockage'
+        ],
+        ctaTitle: 'Prêt pour plus de conversions alimentaires ?',
+        ctaSubtitle: 'Découvrez comment glimps booste votre boutique alimentaire',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      diy: {
+        badge: 'Bricolage & Construction',
+        title: 'Chatbots IA pour Bricolage & Matériaux',
+        subtitle: 'Aidez les bricoleurs avec conseils techniques, calculs de matériaux et planification via IA intelligente',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les magasins de bricolage',
+        benefits: {
+          technical: { title: 'Conseils Techniques', desc: 'L\'IA donne des conseils experts sur matériaux, outils et techniques' },
+          calculation: { title: 'Calculs Matériaux', desc: 'Calculez automatiquement la quantité de matériaux nécessaires' },
+          planning: { title: 'Planification Projet', desc: 'Aidez les clients à planifier leur projet étape par étape' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour le bricolage',
+        useCases: [
+          'Calculer les matériaux pour projets spécifiques',
+          'Conseils techniques sur outils et techniques',
+          'Partager des guides bricolage étape par étape',
+          'Comparaisons produits et conseils matériaux',
+          'Infos sécurité et conseils équipements de protection'
+        ],
+        ctaTitle: 'Prêt à mieux aider les bricoleurs ?',
+        ctaSubtitle: 'Découvrez comment glimps améliore votre magasin de bricolage',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      automotive: {
+        badge: 'Auto & Vélo',
+        title: 'Chatbots IA pour E-commerce Auto & Vélo',
+        subtitle: 'Boostez votre boutique automobile avec une IA qui explique les specs et vérifie la compatibilité',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques auto & vélo',
+        benefits: {
+          compatibility: { title: 'Vérification Compatibilité', desc: 'L\'IA vérifie si les pièces conviennent aux modèles spécifiques' },
+          technical: { title: 'Specs Techniques', desc: 'Expliquez les spécifications complexes en langage compréhensible' },
+          advice: { title: 'Conseils Pièces', desc: 'Aidez les clients à trouver les bonnes pièces et accessoires' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour l\'automobile',
+        useCases: [
+          'Vérifier la compatibilité des pièces auto',
+          'Conseiller taille et cadre de vélo',
+          'Expliquer les spécifications techniques',
+          'Conseiller produits et calendriers d\'entretien',
+          'Recommander accessoires et produits tuning'
+        ],
+        ctaTitle: 'Prêt pour plus de ventes automobiles ?',
+        ctaSubtitle: 'Découvrez comment glimps booste votre boutique auto & vélo',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      jewelry: {
+        badge: 'Bijoux & Luxe',
+        title: 'Chatbots IA pour E-commerce Bijoux & Luxe',
+        subtitle: 'Augmentez votre bijouterie avec une IA qui donne des conseils personnalisés et offre une expérience luxueuse',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les bijouteries',
+        benefits: {
+          personalized: { title: 'Conseils Personnalisés', desc: 'L\'IA donne des conseils de style et aide à trouver le bijou parfait' },
+          knowledge: { title: 'Connaissance Pierres', desc: 'Partagez des informations sur pierres précieuses, certificats et qualité' },
+          luxury: { title: 'Expérience Luxe', desc: 'Offrez une expérience shopping premium avec conseils détaillés' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les bijoux',
+        useCases: [
+          'Conseils de style personnalisés pour bijoux',
+          'Informations sur pierres précieuses et certifications',
+          'Conseils cadeaux pour occasions spéciales',
+          'Conseils taille et ajustement bagues et bracelets',
+          'Conseils d\'entretien métaux et pierres précieux'
+        ],
+        ctaTitle: 'Prêt pour plus de conversions luxe ?',
+        ctaSubtitle: 'Découvrez comment glimps fait briller votre bijouterie',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      gifts: {
+        badge: 'Cadeaux & Personnalisés',
+        title: 'Chatbots IA pour Cadeaux & Produits Personnalisés',
+        subtitle: 'Augmentez les conversions avec une IA qui suggère des idées cadeaux et explique les options de personnalisation',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques cadeaux',
+        benefits: {
+          ideas: { title: 'Inspiration Cadeaux', desc: 'L\'IA suggère des cadeaux appropriés selon l\'occasion et le destinataire' },
+          personalization: { title: 'Aide Personnalisation', desc: 'Aidez les clients avec gravures, textes et options de customisation' },
+          occasions: { title: 'Conseils par Occasion', desc: 'Donnez des suggestions pour anniversaires, mariages, fêtes et plus' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les cadeaux',
+        useCases: [
+          'Suggérer des idées cadeaux par occasion',
+          'Expliquer et conseiller les options de personnalisation',
+          'Faire des recommandations selon le budget',
+          'Composer des ensembles cadeaux',
+          'Communiquer les délais pour produits personnalisés'
+        ],
+        ctaTitle: 'Prêt pour plus d\'acheteurs de cadeaux satisfaits ?',
+        ctaSubtitle: 'Découvrez comment glimps transforme votre boutique cadeaux',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      books: {
+        badge: 'Livres & Éducation',
+        title: 'Chatbots IA pour E-commerce Livres',
+        subtitle: 'Boostez votre librairie avec une IA qui fait des recommandations et aide les étudiants',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les librairies',
+        benefits: {
+          recommendations: { title: 'Recommandations Livres', desc: 'L\'IA suggère des livres selon intérêts, genre et niveau de lecture' },
+          education: { title: 'Matériel Étude', desc: 'Aidez les étudiants à trouver les bons manuels et matériels' },
+          discovery: { title: 'Découverte', desc: 'Faites découvrir de nouveaux auteurs et genres aux clients' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les livres',
+        useCases: [
+          'Recommandations livres selon les goûts',
+          'Conseiller manuels par formation et matière',
+          'Partager des informations sur auteurs et séries',
+          'Conseils cadeaux pour amateurs de livres',
+          'Comparaisons e-book vs livre physique'
+        ],
+        ctaTitle: 'Prêt pour plus de ventes de livres ?',
+        ctaSubtitle: 'Découvrez comment glimps fait grandir votre librairie',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      gaming: {
+        badge: 'Gaming & Divertissement',
+        title: 'Chatbots IA pour Gaming & Divertissement',
+        subtitle: 'Augmentez votre boutique gaming avec une IA qui recommande des jeux et donne des conseils de configuration',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques gaming',
+        benefits: {
+          recommendations: { title: 'Recommandations Jeux', desc: 'L\'IA suggère des jeux selon genre, plateforme et style de jeu' },
+          technical: { title: 'Conseils Configuration', desc: 'Aidez les gamers à composer la configuration parfaite avec matériel compatible' },
+          specs: { title: 'Specs Techniques', desc: 'Expliquez les exigences système en langage compréhensible' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour le gaming',
+        useCases: [
+          'Recommandations jeux par plateforme et genre',
+          'Conseils configuration PC et console gaming',
+          'Vérifier compatibilité du matériel',
+          'Expliquer les exigences système',
+          'Conseiller accessoires et périphériques'
+        ],
+        ctaTitle: 'Prêt pour plus de conversions gaming ?',
+        ctaSubtitle: 'Découvrez comment glimps fait level-up votre boutique gaming',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      b2b: {
+        badge: 'Grossiste B2B',
+        title: 'Chatbots IA pour Grossistes B2B',
+        subtitle: 'Optimisez votre boutique B2B avec une IA qui gère les commandes en gros et soutient les clients professionnels',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques B2B',
+        benefits: {
+          bulk: { title: 'Gestion Commandes Groupées', desc: 'L\'IA aide avec grandes commandes, vérifications de stock et délais' },
+          quotes: { title: 'Génération Devis', desc: 'Créez automatiquement des devis selon volume et conditions clients' },
+          support: { title: 'Support Professionnel', desc: 'Support professionnel pour factures, paiements et livraison' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour le B2B',
+        useCases: [
+          'Expliquer tarifs groupés et remises volume',
+          'Vérifier stock et délais en temps réel',
+          'Préparer demandes de devis',
+          'Fournir informations factures et paiements',
+          'Consulter compte et historique commandes'
+        ],
+        ctaTitle: 'Prêt pour un meilleur service B2B ?',
+        ctaSubtitle: 'Découvrez comment glimps optimise votre grossiste',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      eco: {
+        badge: 'Produits Durables',
+        title: 'Chatbots IA pour Produits Durables & Éco',
+        subtitle: 'Augmentez votre boutique éco avec une IA qui partage des infos durabilité et aide les consommateurs conscients',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques éco',
+        benefits: {
+          sustainability: { title: 'Infos Durabilité', desc: 'L\'IA partage des informations sur certifications, matériaux et impact' },
+          alternatives: { title: 'Alternatives Vertes', desc: 'Suggérez des alternatives écologiques pour produits populaires' },
+          education: { title: 'Éducation', desc: 'Aidez les clients à faire des choix conscients avec explications éco-labels' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour l\'éco',
+        useCases: [
+          'Expliquer les certifications de durabilité',
+          'Clarifier matériaux et processus de production',
+          'Suggérer des alternatives écologiques',
+          'Informations sur recyclage et économie circulaire',
+          'Calculer l\'impact des choix produits'
+        ],
+        ctaTitle: 'Prêt pour plus de conversions vertes ?',
+        ctaSubtitle: 'Découvrez comment glimps fait grandir votre boutique éco',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      medical: {
+        badge: 'Dispositifs Médicaux',
+        title: 'Chatbots IA pour Dispositifs Médicaux',
+        subtitle: 'Améliorez votre boutique médicale avec une IA qui donne des conseils produits et aide les patients 24/7',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques médicales',
+        benefits: {
+          advice: { title: 'Conseils Produits', desc: 'L\'IA aide les patients à trouver les bons dispositifs pour leur situation' },
+          instructions: { title: 'Instructions Utilisation', desc: 'Partagez des explications claires sur utilisation et entretien des dispositifs' },
+          support: { title: 'Support Continu', desc: 'Offrez un support 24/7 pour questions urgentes et aide' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les dispositifs médicaux',
+        useCases: [
+          'Conseiller dispositifs par pathologie',
+          'Partager instructions et manuels d\'utilisation',
+          'Questions sur assurance et remboursement',
+          'Déterminer taille et ajustement',
+          'Donner informations entretien et hygiène'
+        ],
+        ctaTitle: 'Prêt pour de meilleurs soins patients ?',
+        ctaSubtitle: 'Découvrez comment glimps améliore votre boutique médicale',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      adult: {
+        badge: 'Érotisme & Bien-être',
+        title: 'Chatbots IA pour E-commerce Érotisme',
+        subtitle: 'Augmentez les conversions avec une IA discrète qui donne des conseils personnalisés en toute confidentialité',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques érotiques',
+        benefits: {
+          discrete: { title: 'Service Discret', desc: 'L\'IA offre un environnement sûr et sans jugement pour les questions' },
+          personalized: { title: 'Conseils Personnalisés', desc: 'Donnez des recommandations personnalisées sans gêne' },
+          available: { title: 'Disponible 24/7', desc: 'Les clients peuvent poser des questions à tout moment' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour l\'érotisme',
+        useCases: [
+          'Conseils produits selon préférences',
+          'Répondre aux questions discrètes',
+          'Instructions d\'utilisation et conseils sécurité',
+          'Informations matériaux et entretien',
+          'Conseils cadeaux et emballage cadeau'
+        ],
+        ctaTitle: 'Prêt pour plus de conversions ?',
+        ctaSubtitle: 'Découvrez comment glimps améliore discrètement votre boutique',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      hobby: {
+        badge: 'Loisirs & Créatifs',
+        title: 'Chatbots IA pour Loisirs & Créatifs',
+        subtitle: 'Boostez votre magasin de loisirs avec une IA qui partage des idées projets et inspire les créatifs',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les magasins de loisirs',
+        benefits: {
+          inspiration: { title: 'Inspiration Projets', desc: 'L\'IA partage des idées créatives et suggestions de projets' },
+          materials: { title: 'Conseils Matériaux', desc: 'Aidez les clients à trouver les bons matériaux et outils' },
+          guidance: { title: 'Aide Étape par Étape', desc: 'Donnez des conseils sur techniques et projets' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour les loisirs',
+        useCases: [
+          'Partager idées et inspiration de projets',
+          'Conseiller matériaux et outils',
+          'Donner explications et conseils techniques',
+          'Composer des kits projets complets',
+          'Suggérer des projets adaptés au niveau'
+        ],
+        ctaTitle: 'Prêt à inspirer les créatifs ?',
+        ctaSubtitle: 'Découvrez comment glimps booste votre magasin de loisirs',
+        ctaButton: 'Commencez votre essai gratuit'
+      },
+      lighting: {
+        badge: 'Éclairage',
+        title: 'Chatbots IA pour E-commerce Éclairage',
+        subtitle: 'Augmentez votre boutique d\'éclairage avec une IA qui donne des conseils techniques et suggère des plans lumière',
+        cta: { trial: 'Commencer l\'essai gratuit', demo: 'Planifier une démo' },
+        whyTitle: 'Pourquoi glimps est parfait pour les boutiques d\'éclairage',
+        benefits: {
+          technical: { title: 'Conseils Techniques', desc: 'L\'IA explique les specs comme lumens, kelvin et efficacité énergétique' },
+          planning: { title: 'Suggestions Plan Lumière', desc: 'Aidez les clients à créer le plan d\'éclairage parfait pour leur espace' },
+          style: { title: 'Style & Ambiance', desc: 'Conseillez l\'éclairage qui correspond au style d\'intérieur et à l\'ambiance souhaitée' }
+        },
+        useCasesTitle: 'Ce que notre chatbot IA peut faire pour l\'éclairage',
+        useCases: [
+          'Expliquer les spécifications techniques',
+          'Créer des plans lumière pour différents espaces',
+          'Conseiller luminaires par pièce et fonction',
+          'Comparer LED vs traditionnel',
+          'Expliquer les solutions d\'éclairage intelligent'
+        ],
+        ctaTitle: 'Prêt à booster vos ventes d\'éclairage ?',
+        ctaSubtitle: 'Découvrez comment glimps fait briller votre boutique d\'éclairage',
+        ctaButton: 'Commencez votre essai gratuit'
       }
     }
   },
@@ -2704,6 +3440,374 @@ export const translations = {
         ],
         ctaTitle: 'Ready to grow your garden business?',
         ctaSubtitle: 'Discover how glimps makes your garden webshop flourish',
+        ctaButton: 'Start your free trial'
+      },
+      health: {
+        badge: 'Health & Pharmacies',
+        title: 'AI Chatbots for Pharmacy & Health',
+        subtitle: 'Improve your pharmacy webshop with AI that provides medication advice and helps customers 24/7',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for pharmacy webshops',
+        benefits: {
+          advice: { title: 'Medication Advice', desc: 'AI answers questions about products, effects, and usage of medications and supplements' },
+          safety: { title: 'Safety Information', desc: 'Provide direct information about side effects, interactions, and contraindications' },
+          support: { title: '24/7 Availability', desc: 'Customers always get answers, even outside pharmacy opening hours' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for pharmacies',
+        useCases: [
+          'Product advice for over-the-counter medications',
+          'Information about supplements and vitamins',
+          'Answer questions about usage and dosage',
+          'Recommend health products based on symptoms',
+          'Explain prescription information and insurance'
+        ],
+        ctaTitle: 'Ready for better pharmacy service?',
+        ctaSubtitle: 'Discover how glimps improves your pharmacy webshop',
+        ctaButton: 'Start your free trial'
+      },
+      baby: {
+        badge: 'Baby & Kids',
+        title: 'AI Chatbots for Baby & Kids Webshops',
+        subtitle: 'Help parents with personalized advice about baby products, safety, and the best choices for their little ones',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for baby webshops',
+        benefits: {
+          advice: { title: 'Parent Support', desc: 'AI helps parents find safe and suitable products for every age' },
+          safety: { title: 'Safety Information', desc: 'Provide direct answers about safety, certifications, and age suitability' },
+          recommendations: { title: 'Personalized Recommendations', desc: 'Advise products based on age, development, and specific needs' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for baby & kids',
+        useCases: [
+          'Advice on products per age category',
+          'Explain safety information and certifications',
+          'Assemble complete nursery sets',
+          'Answer questions about care and usage',
+          'Help compile baby registries and wishlists'
+        ],
+        ctaTitle: 'Ready to better help parents?',
+        ctaSubtitle: 'Discover how glimps grows your baby store',
+        ctaButton: 'Start your free trial'
+      },
+      pets: {
+        badge: 'Pets',
+        title: 'AI Chatbots for Pet Store & Pets',
+        subtitle: 'Boost your pet store with AI that provides nutrition advice and helps pet owners 24/7',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for pet stores',
+        benefits: {
+          nutrition: { title: 'Nutrition Advice', desc: 'AI knows different animal species, breeds, and provides personalized nutrition advice' },
+          products: { title: 'Product Recommendations', desc: 'Advise toys, accessories, and care products per pet' },
+          care: { title: 'Care Tips', desc: 'Provide direct answers to care and welfare questions' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for pet stores',
+        useCases: [
+          'Advise food based on animal species, breed, and age',
+          'Answer questions about allergies and special diets',
+          'Recommend toys and accessories per pet',
+          'Suggest care products',
+          'Information about sizes and fit of clothing/collars'
+        ],
+        ctaTitle: 'Ready for more satisfied pet owners?',
+        ctaSubtitle: 'Discover how glimps transforms your pet store',
+        ctaButton: 'Start your free trial'
+      },
+      food: {
+        badge: 'Food & Beverages',
+        title: 'AI Chatbots for Food & Beverages E-commerce',
+        subtitle: 'Increase your food e-commerce with AI that shares recipe ideas, checks allergies, and gives personal suggestions',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for food webshops',
+        benefits: {
+          recipes: { title: 'Recipe Suggestions', desc: 'AI provides recipe ideas and compiles ingredient lists from your assortment' },
+          allergies: { title: 'Allergy Check', desc: 'Automatically check products for allergens and dietary requirements' },
+          personalized: { title: 'Personal Preferences', desc: 'Remember preferences and restrictions for returning customers' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for food',
+        useCases: [
+          'Share recipe ideas based on ingredients',
+          'Check allergens and dietary requirements',
+          'Filter products for vegetarian, vegan, halal, etc.',
+          'Create meal plans and shopping lists',
+          'Answer questions about shelf life and storage'
+        ],
+        ctaTitle: 'Ready for more food conversions?',
+        ctaSubtitle: 'Discover how glimps boosts your food webshop',
+        ctaButton: 'Start your free trial'
+      },
+      diy: {
+        badge: 'DIY & Building Materials',
+        title: 'AI Chatbots for DIY & Building Materials',
+        subtitle: 'Help DIYers with technical advice, material calculations, and project planning via smart AI',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for hardware stores',
+        benefits: {
+          technical: { title: 'Technical Advice', desc: 'AI provides expert advice on materials, tools, and techniques' },
+          calculation: { title: 'Material Calculations', desc: 'Automatically calculate how much material is needed for projects' },
+          planning: { title: 'Project Planning', desc: 'Help customers plan their project step by step' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for DIY',
+        useCases: [
+          'Calculate materials for specific projects',
+          'Technical advice on tools and techniques',
+          'Share step-by-step DIY guides',
+          'Product comparisons and material advice',
+          'Safety info and protective equipment advice'
+        ],
+        ctaTitle: 'Ready to better help DIYers?',
+        ctaSubtitle: 'Discover how glimps improves your hardware store webshop',
+        ctaButton: 'Start your free trial'
+      },
+      automotive: {
+        badge: 'Automotive & Bikes',
+        title: 'AI Chatbots for Auto & Bike E-commerce',
+        subtitle: 'Boost your automotive webshop with AI that explains technical specs and checks compatibility',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for auto & bike webshops',
+        benefits: {
+          compatibility: { title: 'Compatibility Check', desc: 'AI checks if parts fit specific car or bike models' },
+          technical: { title: 'Technical Specs', desc: 'Explain complex specifications in understandable language' },
+          advice: { title: 'Parts Advice', desc: 'Help customers find the right parts and accessories' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for automotive',
+        useCases: [
+          'Check compatibility for car parts',
+          'Advise bike size and frame size',
+          'Explain technical specifications',
+          'Advise maintenance products and schedules',
+          'Recommend accessories and tuning products'
+        ],
+        ctaTitle: 'Ready for more automotive sales?',
+        ctaSubtitle: 'Discover how glimps boosts your auto & bike webshop',
+        ctaButton: 'Start your free trial'
+      },
+      jewelry: {
+        badge: 'Jewelry & Luxury',
+        title: 'AI Chatbots for Jewelry & Luxury E-commerce',
+        subtitle: 'Increase your jewelry webshop with AI that provides personal advice and offers a luxury shopping experience',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for jewelers',
+        benefits: {
+          personalized: { title: 'Personal Advice', desc: 'AI provides style advice and helps find the perfect jewelry' },
+          knowledge: { title: 'Gemstone Knowledge', desc: 'Share information about gemstones, certificates, and quality' },
+          luxury: { title: 'Luxury Experience', desc: 'Offer a premium shopping experience with detailed advice' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for jewelry',
+        useCases: [
+          'Personal style advice for jewelry',
+          'Information about gemstones and certifications',
+          'Gift tips for special occasions',
+          'Size and fit advice for rings and bracelets',
+          'Maintenance tips for precious metals and stones'
+        ],
+        ctaTitle: 'Ready for more luxury conversions?',
+        ctaSubtitle: 'Discover how glimps makes your jewelry webshop shine',
+        ctaButton: 'Start your free trial'
+      },
+      gifts: {
+        badge: 'Gifts & Personalized',
+        title: 'AI Chatbots for Gifts & Personalized Products',
+        subtitle: 'Increase conversions with AI that suggests gift ideas and explains personalization options',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for gift stores',
+        benefits: {
+          ideas: { title: 'Gift Inspiration', desc: 'AI suggests suitable gifts based on occasion and recipient' },
+          personalization: { title: 'Personalization Help', desc: 'Help customers with engravings, texts, and customization options' },
+          occasions: { title: 'Occasion-specific Tips', desc: 'Give suggestions for birthdays, weddings, holidays, and more' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for gifts',
+        useCases: [
+          'Suggest gift ideas per occasion',
+          'Explain and advise personalization options',
+          'Make budget-oriented recommendations',
+          'Assemble gift sets',
+          'Communicate delivery times for personalized products'
+        ],
+        ctaTitle: 'Ready for more satisfied gift buyers?',
+        ctaSubtitle: 'Discover how glimps transforms your gift store',
+        ctaButton: 'Start your free trial'
+      },
+      books: {
+        badge: 'Books & Education',
+        title: 'AI Chatbots for Books & Education E-commerce',
+        subtitle: 'Boost your bookstore with AI that makes reading recommendations and helps students',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for bookstores',
+        benefits: {
+          recommendations: { title: 'Book Recommendations', desc: 'AI suggests books based on interests, genre, and reading level' },
+          education: { title: 'Study Materials', desc: 'Help students find the right textbooks and materials' },
+          discovery: { title: 'Discovery', desc: 'Let customers discover new authors and genres' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for books',
+        useCases: [
+          'Book recommendations based on taste',
+          'Advise textbooks per education and subject',
+          'Share information about authors and series',
+          'Gift tips for book lovers',
+          'E-book vs physical book comparisons'
+        ],
+        ctaTitle: 'Ready for more book sales?',
+        ctaSubtitle: 'Discover how glimps grows your bookstore',
+        ctaButton: 'Start your free trial'
+      },
+      gaming: {
+        badge: 'Gaming & Entertainment',
+        title: 'AI Chatbots for Gaming & Entertainment',
+        subtitle: 'Increase your gaming webshop with AI that makes game recommendations and provides setup advice',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for gaming webshops',
+        benefits: {
+          recommendations: { title: 'Game Recommendations', desc: 'AI suggests games based on genre, platform, and play style' },
+          technical: { title: 'Setup Advice', desc: 'Help gamers assemble the perfect setup with compatible hardware' },
+          specs: { title: 'Tech Specs', desc: 'Explain system requirements and specs in understandable language' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for gaming',
+        useCases: [
+          'Game recommendations per platform and genre',
+          'Gaming PC and console setup advice',
+          'Check hardware compatibility',
+          'Explain system requirements',
+          'Advise accessories and peripherals'
+        ],
+        ctaTitle: 'Ready for more gaming conversions?',
+        ctaSubtitle: 'Discover how glimps levels up your gaming webshop',
+        ctaButton: 'Start your free trial'
+      },
+      b2b: {
+        badge: 'B2B Wholesale',
+        title: 'AI Chatbots for B2B Wholesale & Webshops',
+        subtitle: 'Optimize your B2B webshop with AI that handles bulk orders and supports business customers',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for B2B webshops',
+        benefits: {
+          bulk: { title: 'Bulk Order Handling', desc: 'AI helps with large orders, inventory checks, and delivery times' },
+          quotes: { title: 'Generate Quotes', desc: 'Automatically create quotes based on volume and customer terms' },
+          support: { title: 'Business Support', desc: 'Professional support for invoices, payments, and delivery' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for B2B',
+        useCases: [
+          'Explain bulk pricing and volume discounts',
+          'Check inventory and delivery times in real-time',
+          'Prepare quote requests',
+          'Provide invoice and payment information',
+          'Consult account and order history'
+        ],
+        ctaTitle: 'Ready for better B2B service?',
+        ctaSubtitle: 'Discover how glimps optimizes your wholesale business',
+        ctaButton: 'Start your free trial'
+      },
+      eco: {
+        badge: 'Sustainable Products',
+        title: 'AI Chatbots for Sustainable & Eco Products',
+        subtitle: 'Increase your eco webshop with AI that shares sustainability info and helps conscious consumers',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for eco webshops',
+        benefits: {
+          sustainability: { title: 'Sustainability Info', desc: 'AI shares information about certifications, materials, and impact' },
+          alternatives: { title: 'Green Alternatives', desc: 'Suggest environmentally friendly alternatives for popular products' },
+          education: { title: 'Education', desc: 'Help customers make conscious choices with eco-label explanations' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for eco',
+        useCases: [
+          'Explain sustainability certifications',
+          'Clarify materials and production processes',
+          'Suggest environmentally friendly alternatives',
+          'Information about recycling and circular economy',
+          'Calculate impact of product choices'
+        ],
+        ctaTitle: 'Ready for more green conversions?',
+        ctaSubtitle: 'Discover how glimps grows your eco webshop',
+        ctaButton: 'Start your free trial'
+      },
+      medical: {
+        badge: 'Medical Devices',
+        title: 'AI Chatbots for Medical Devices',
+        subtitle: 'Improve your medical webshop with AI that provides product advice and helps patients 24/7',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for medical webshops',
+        benefits: {
+          advice: { title: 'Product Advice', desc: 'AI helps patients find the right devices for their situation' },
+          instructions: { title: 'Usage Instructions', desc: 'Share clear explanations about usage and maintenance of devices' },
+          support: { title: 'Continuous Support', desc: 'Provide 24/7 support for urgent questions and help' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for medical devices',
+        useCases: [
+          'Advise devices per condition',
+          'Share usage instructions and manuals',
+          'Questions about insurance and reimbursement',
+          'Determine size and fit',
+          'Provide maintenance and hygiene information'
+        ],
+        ctaTitle: 'Ready for better patient care?',
+        ctaSubtitle: 'Discover how glimps improves your medical webshop',
+        ctaButton: 'Start your free trial'
+      },
+      adult: {
+        badge: 'Adult & Wellness',
+        title: 'AI Chatbots for Adult & Wellness E-commerce',
+        subtitle: 'Increase conversions with discreet AI that provides personal advice in complete confidentiality',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for adult webshops',
+        benefits: {
+          discrete: { title: 'Discreet Service', desc: 'AI provides a safe, non-judgmental environment for questions' },
+          personalized: { title: 'Personal Advice', desc: 'Give personalized recommendations without awkwardness' },
+          available: { title: 'Available 24/7', desc: 'Customers can ask questions at any time' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for adult',
+        useCases: [
+          'Product advice based on preferences',
+          'Answer discreet questions',
+          'Usage instructions and safety tips',
+          'Material information and maintenance',
+          'Gift tips and gift wrapping'
+        ],
+        ctaTitle: 'Ready for higher conversions?',
+        ctaSubtitle: 'Discover how glimps discreetly improves your webshop',
+        ctaButton: 'Start your free trial'
+      },
+      hobby: {
+        badge: 'Hobby & Creative',
+        title: 'AI Chatbots for Hobby & Creative',
+        subtitle: 'Boost your hobby store with AI that shares project ideas and inspires creative customers',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for hobby stores',
+        benefits: {
+          inspiration: { title: 'Project Inspiration', desc: 'AI shares creative ideas and project suggestions' },
+          materials: { title: 'Material Advice', desc: 'Help customers find the right materials and tools' },
+          guidance: { title: 'Step-by-step Help', desc: 'Provide guidance on techniques and projects' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for hobby',
+        useCases: [
+          'Share project ideas and inspiration',
+          'Advise materials and tools',
+          'Provide technique explanations and tips',
+          'Assemble complete project kits',
+          'Suggest level-appropriate projects'
+        ],
+        ctaTitle: 'Ready to inspire creatives?',
+        ctaSubtitle: 'Discover how glimps boosts your hobby store',
+        ctaButton: 'Start your free trial'
+      },
+      lighting: {
+        badge: 'Lighting',
+        title: 'AI Chatbots for Lighting E-commerce',
+        subtitle: 'Increase your lighting webshop with AI that provides technical advice and suggests lighting plans',
+        cta: { trial: 'Start free trial', demo: 'Schedule a demo' },
+        whyTitle: 'Why glimps is perfect for lighting webshops',
+        benefits: {
+          technical: { title: 'Technical Advice', desc: 'AI explains specs like lumens, kelvin, and energy efficiency' },
+          planning: { title: 'Lighting Plan Suggestions', desc: 'Help customers create the perfect lighting plan for their space' },
+          style: { title: 'Style & Ambiance', desc: 'Advise lighting that fits interior style and desired ambiance' }
+        },
+        useCasesTitle: 'What our AI chatbot can do for lighting',
+        useCases: [
+          'Explain technical specifications',
+          'Create lighting plans for different spaces',
+          'Advise fixtures per room and function',
+          'Compare LED vs traditional',
+          'Explain smart lighting solutions'
+        ],
+        ctaTitle: 'Ready to boost your lighting sales?',
+        ctaSubtitle: 'Discover how glimps makes your lighting webshop shine',
         ctaButton: 'Start your free trial'
       }
     },

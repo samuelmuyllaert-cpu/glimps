@@ -64,6 +64,22 @@ import Electronics from "./pages/industries/Electronics";
 import MeubelsInterieur from "./pages/industries/MeubelsInterieur";
 import SportkledingFitness from "./pages/industries/SportkledingFitness";
 import TuinBuitenleven from "./pages/industries/TuinBuitenleven";
+import GezondheidApotheken from "./pages/industries/GezondheidApotheken";
+import BabyKind from "./pages/industries/BabyKind";
+import Huisdieren from "./pages/industries/Huisdieren";
+import VoedingDranken from "./pages/industries/VoedingDranken";
+import DIYBouwmaterialen from "./pages/industries/DIYBouwmaterialen";
+import AutoFietsen from "./pages/industries/AutoFietsen";
+import SieradenLuxe from "./pages/industries/SieradenLuxe";
+import CadeauGepersonaliseerd from "./pages/industries/CadeauGepersonaliseerd";
+import BoekenEducatie from "./pages/industries/BoekenEducatie";
+import GamingEntertainment from "./pages/industries/GamingEntertainment";
+import B2BGroothandel from "./pages/industries/B2BGroothandel";
+import DuurzameProducten from "./pages/industries/DuurzameProducten";
+import MedischeHulpmiddelen from "./pages/industries/MedischeHulpmiddelen";
+import Erotiek from "./pages/industries/Erotiek";
+import HobbyCreatief from "./pages/industries/HobbyCreatief";
+import Verlichting from "./pages/industries/Verlichting";
 import Legal from "./pages/Legal";
 import ProSportLights from "./pages/ProSportLights";
 import LensOnline from "./pages/LensOnline";
@@ -146,6 +162,22 @@ const App = () => (
         <Route path="/industries/meubels-interieur" element={<MeubelsInterieur />} />
         <Route path="/industries/sportkleding-fitness" element={<SportkledingFitness />} />
         <Route path="/industries/tuin-buitenleven" element={<TuinBuitenleven />} />
+        <Route path="/industries/gezondheid-apotheken" element={<GezondheidApotheken />} />
+        <Route path="/industries/baby-kind" element={<BabyKind />} />
+        <Route path="/industries/huisdieren" element={<Huisdieren />} />
+        <Route path="/industries/voeding-dranken" element={<VoedingDranken />} />
+        <Route path="/industries/diy-bouwmaterialen" element={<DIYBouwmaterialen />} />
+        <Route path="/industries/auto-fietsen" element={<AutoFietsen />} />
+        <Route path="/industries/sieraden-luxe" element={<SieradenLuxe />} />
+        <Route path="/industries/cadeau-gepersonaliseerd" element={<CadeauGepersonaliseerd />} />
+        <Route path="/industries/boeken-educatie" element={<BoekenEducatie />} />
+        <Route path="/industries/gaming-entertainment" element={<GamingEntertainment />} />
+        <Route path="/industries/b2b-groothandel" element={<B2BGroothandel />} />
+        <Route path="/industries/duurzame-producten" element={<DuurzameProducten />} />
+        <Route path="/industries/medische-hulpmiddelen" element={<MedischeHulpmiddelen />} />
+        <Route path="/industries/erotiek" element={<Erotiek />} />
+        <Route path="/industries/hobby-creatief" element={<HobbyCreatief />} />
+        <Route path="/industries/verlichting" element={<Verlichting />} />
         <Route path="/legal" element={<Legal />} />
         <Route path="/prosportlights" element={<ProSportLights />} />
         <Route path="/lensonline" element={<LensOnline />} />
@@ -198,6 +230,22 @@ const App = () => (
         <Route path="/fr/industries/meubles-interieur" element={<MeubelsInterieur />} />
         <Route path="/fr/industries/vetements-sport-fitness" element={<SportkledingFitness />} />
         <Route path="/fr/industries/jardin-exterieur" element={<TuinBuitenleven />} />
+        <Route path="/fr/secteurs/sante-pharmacies" element={<GezondheidApotheken />} />
+        <Route path="/fr/secteurs/bebe-enfant" element={<BabyKind />} />
+        <Route path="/fr/secteurs/animaux" element={<Huisdieren />} />
+        <Route path="/fr/secteurs/alimentation-boissons" element={<VoedingDranken />} />
+        <Route path="/fr/secteurs/bricolage-materiaux-construction" element={<DIYBouwmaterialen />} />
+        <Route path="/fr/secteurs/auto-velo" element={<AutoFietsen />} />
+        <Route path="/fr/secteurs/bijoux-luxe" element={<SieradenLuxe />} />
+        <Route path="/fr/secteurs/cadeaux-personnalises" element={<CadeauGepersonaliseerd />} />
+        <Route path="/fr/secteurs/livres-education" element={<BoekenEducatie />} />
+        <Route path="/fr/secteurs/gaming-divertissement" element={<GamingEntertainment />} />
+        <Route path="/fr/secteurs/b2b-grossiste" element={<B2BGroothandel />} />
+        <Route path="/fr/secteurs/produits-durables" element={<DuurzameProducten />} />
+        <Route path="/fr/secteurs/dispositifs-medicaux" element={<MedischeHulpmiddelen />} />
+        <Route path="/fr/secteurs/erotisme" element={<Erotiek />} />
+        <Route path="/fr/secteurs/loisirs-creatifs" element={<HobbyCreatief />} />
+        <Route path="/fr/secteurs/eclairage" element={<Verlichting />} />
         <Route path="/fr/legal" element={<Legal />} />
         <Route path="/fr/prosportlights" element={<ProSportLights />} />
         <Route path="/fr/lensonline" element={<LensOnline />} />
@@ -246,6 +294,22 @@ const App = () => (
         <Route path="/en/industries/furniture-interior" element={<MeubelsInterieur />} />
         <Route path="/en/industries/sportswear-fitness" element={<SportkledingFitness />} />
         <Route path="/en/industries/garden-outdoor" element={<TuinBuitenleven />} />
+        <Route path="/en/industries/health-pharmacies" element={<GezondheidApotheken />} />
+        <Route path="/en/industries/baby-kids" element={<BabyKind />} />
+        <Route path="/en/industries/pets" element={<Huisdieren />} />
+        <Route path="/en/industries/food-beverages" element={<VoedingDranken />} />
+        <Route path="/en/industries/diy-building-materials" element={<DIYBouwmaterialen />} />
+        <Route path="/en/industries/automotive-bikes" element={<AutoFietsen />} />
+        <Route path="/en/industries/jewelry-luxury" element={<SieradenLuxe />} />
+        <Route path="/en/industries/gifts-personalized" element={<CadeauGepersonaliseerd />} />
+        <Route path="/en/industries/books-education" element={<BoekenEducatie />} />
+        <Route path="/en/industries/gaming-entertainment" element={<GamingEntertainment />} />
+        <Route path="/en/industries/b2b-wholesale" element={<B2BGroothandel />} />
+        <Route path="/en/industries/sustainable-products" element={<DuurzameProducten />} />
+        <Route path="/en/industries/medical-devices" element={<MedischeHulpmiddelen />} />
+        <Route path="/en/industries/adult-wellness" element={<Erotiek />} />
+        <Route path="/en/industries/hobby-creative" element={<HobbyCreatief />} />
+        <Route path="/en/industries/lighting" element={<Verlichting />} />
         <Route path="/en/legal" element={<Legal />} />
         <Route path="/en/prosportlights" element={<ProSportLights />} />
         <Route path="/en/lensonline" element={<LensOnline />} />

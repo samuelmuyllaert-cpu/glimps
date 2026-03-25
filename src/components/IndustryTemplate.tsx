@@ -3,11 +3,11 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Sparkles, LucideIcon } from "lucide-react";
+import { CircleCheck as CheckCircle2, Sparkles, Video as LucideIcon } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface IndustryTemplateProps {
-  industryKey: 'fashion' | 'beauty' | 'electronics' | 'furniture' | 'sports' | 'garden';
+  industryKey: 'fashion' | 'beauty' | 'electronics' | 'furniture' | 'sports' | 'garden' | 'health' | 'baby' | 'pets' | 'food' | 'diy' | 'automotive' | 'jewelry' | 'gifts' | 'books' | 'gaming' | 'b2b' | 'eco' | 'medical' | 'adult' | 'hobby' | 'lighting';
   Icon: LucideIcon;
   Icon2: LucideIcon;
   Icon3: LucideIcon;
