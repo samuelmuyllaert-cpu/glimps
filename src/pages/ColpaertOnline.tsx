@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Flame, CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Sparkles, Wrench, Zap, Truck, RefreshCw, Lightbulb, CircleAlert as AlertCircle } from "lucide-react";
+import { Flame, MessageSquare, Clock, Shield, Sparkles, Wrench, Truck, RefreshCw, Lightbulb, CircleAlert as AlertCircle } from "lucide-react";
 
 const ColpaertOnline = () => {
   const { language } = useLanguage();
@@ -50,23 +50,8 @@ const ColpaertOnline = () => {
     testingTip2Desc: "Écrivez tous les points d'amélioration ou questions mal comprises - nous les implémenterons dans la prochaine version.",
     testingTip3Title: "Testez divers scénarios",
     testingTip3Desc: "Essayez différents types de questions : produits, installation, entretien, dépannage, etc.",
-    howItWorksTitle: "Testez votre chatbot",
-    howItWorksDesc: "Utilisez le chat ci-dessous ou cliquez sur le widget en bas à gauche",
     chatTitle: "Chatbot en direct",
     chatDesc: "Testez directement le chatbot ici",
-    examplesTitle: "Questions de test suggérées",
-    example1Title: "Choisir un four",
-    example1Desc: "Quel four céramique convient pour un atelier amateur ?",
-    example2Title: "Types d'argile",
-    example2Desc: "Quelle est la différence entre l'argile de poterie et la porcelaine ?",
-    example3Title: "Glaçures",
-    example3Desc: "Comment appliquer correctement les glaçures céramiques ?",
-    example4Title: "Cuisson",
-    example4Desc: "Quelle température dois-je utiliser pour cuire la faïence ?",
-    example5Title: "Cours et formations",
-    example5Desc: "Quels cours de céramique proposez-vous ?",
-    example6Title: "Outils nécessaires",
-    example6Desc: "De quels outils ai-je besoin pour commencer le tournage ?",
     seoTitle: "Testez votre Assistant IA Colpaert - Propulsé par Glimps",
     seoDescription: "Page de test pour l'assistant IA de Colpaert. Découvrez comment le chatbot peut aider vos clients avec des questions sur la céramique et les fours."
   } : {
@@ -94,23 +79,8 @@ const ColpaertOnline = () => {
     testingTip2Desc: "Schrijf alle verbeterpunten of slecht begrepen vragen op - we verwerken dit in de volgende versie.",
     testingTip3Title: "Test verschillende scenario's",
     testingTip3Desc: "Probeer allerlei types vragen: producten, installatie, onderhoud, troubleshooting, etc.",
-    howItWorksTitle: "Test je chatbot",
-    howItWorksDesc: "Gebruik de chat hieronder of klik op de widget linksonder",
     chatTitle: "Live chatbot",
     chatDesc: "Test de chatbot direct hier",
-    examplesTitle: "Gesuggereerde testvragen",
-    example1Title: "Oven kiezen",
-    example1Desc: "Welke keramiekoven is geschikt voor een hobbywerkplaats?",
-    example2Title: "Kleisoorten",
-    example2Desc: "Wat is het verschil tussen draaiklei en porselein?",
-    example3Title: "Glazuren",
-    example3Desc: "Hoe breng ik keramiekglazuren correct aan?",
-    example4Title: "Bakken",
-    example4Desc: "Welke temperatuur moet ik gebruiken voor het bakken van aardewerk?",
-    example5Title: "Cursussen",
-    example5Desc: "Welke keramiekcursussen bieden jullie aan?",
-    example6Title: "Benodigdheden",
-    example6Desc: "Welke gereedschappen heb ik nodig om te beginnen met draaien?",
     seoTitle: "Test je Colpaert AI Assistent - Mogelijk gemaakt door Glimps",
     seoDescription: "Testpagina voor de Colpaert AI assistent. Ontdek hoe de chatbot je klanten kan helpen met vragen over keramiek en ovens."
   };
@@ -259,85 +229,6 @@ const ColpaertOnline = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16">
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-8 sm:mb-12 text-center">
-            <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg">
-              <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-            </div>
-            <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl font-bold">{content.howItWorksTitle}</h2>
-            <p className="text-base sm:text-lg text-muted-foreground px-4">
-              {content.howItWorksDesc}
-            </p>
-          </div>
-
-          <Card className="border-2 p-6 shadow-2xl sm:p-8 md:p-12">
-            <h3 className="mb-6 sm:mb-8 text-center text-xl sm:text-2xl font-bold">{content.examplesTitle}</h3>
-
-            <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-              <div className="flex items-start gap-4 rounded-lg bg-orange-50 p-4 transition-all hover:bg-orange-100">
-                <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-orange-600" />
-                <div>
-                  <p className="mb-1 font-semibold text-foreground">{content.example1Title}</p>
-                  <p className="text-sm text-muted-foreground">
-                    "{content.example1Desc}"
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 rounded-lg bg-orange-50 p-4 transition-all hover:bg-orange-100">
-                <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-orange-600" />
-                <div>
-                  <p className="mb-1 font-semibold text-foreground">{content.example2Title}</p>
-                  <p className="text-sm text-muted-foreground">
-                    "{content.example2Desc}"
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 rounded-lg bg-orange-50 p-4 transition-all hover:bg-orange-100">
-                <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-orange-600" />
-                <div>
-                  <p className="mb-1 font-semibold text-foreground">{content.example3Title}</p>
-                  <p className="text-sm text-muted-foreground">
-                    "{content.example3Desc}"
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 rounded-lg bg-orange-50 p-4 transition-all hover:bg-orange-100">
-                <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-orange-600" />
-                <div>
-                  <p className="mb-1 font-semibold text-foreground">{content.example4Title}</p>
-                  <p className="text-sm text-muted-foreground">
-                    "{content.example4Desc}"
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 rounded-lg bg-orange-50 p-4 transition-all hover:bg-orange-100">
-                <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-orange-600" />
-                <div>
-                  <p className="mb-1 font-semibold text-foreground">{content.example5Title}</p>
-                  <p className="text-sm text-muted-foreground">
-                    "{content.example5Desc}"
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 rounded-lg bg-orange-50 p-4 transition-all hover:bg-orange-100">
-                <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-orange-600" />
-                <div>
-                  <p className="mb-1 font-semibold text-foreground">{content.example6Title}</p>
-                  <p className="text-sm text-muted-foreground">
-                    "{content.example6Desc}"
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
 
       <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-white">
         <div className="mx-auto max-w-5xl">
