@@ -98,13 +98,13 @@ const HetCosmeticahuis = () => {
       <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 sm:mb-6 inline-flex items-center justify-center">
-            <div className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-pink-500/20 to-purple-500/20 shadow-lg">
-              <Sparkles className="h-8 w-8 sm:h-10 sm:w-10 text-pink-600" />
+            <div className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-orange-500/20 to-orange-600/20 shadow-lg">
+              <Sparkles className="h-8 w-8 sm:h-10 sm:w-10 text-orange-600" />
             </div>
           </div>
           <h1 className="mb-4 sm:mb-6 font-inter text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
             {content.title}<br />
-            <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
               {content.subtitle}
             </span>
           </h1>
@@ -121,7 +121,7 @@ const HetCosmeticahuis = () => {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card className="transform border-2 p-4 sm:p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 shadow-md">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md">
                 <MessageSquare className="h-7 w-7 text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold">{content.feature1Title}</h3>
@@ -131,7 +131,7 @@ const HetCosmeticahuis = () => {
             </Card>
 
             <Card className="transform border-2 p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 shadow-md">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md">
                 <Clock className="h-7 w-7 text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold">{content.feature2Title}</h3>
@@ -141,7 +141,7 @@ const HetCosmeticahuis = () => {
             </Card>
 
             <Card className="transform border-2 p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 shadow-md">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md">
                 <Shield className="h-7 w-7 text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold">{content.feature3Title}</h3>
@@ -151,7 +151,7 @@ const HetCosmeticahuis = () => {
             </Card>
 
             <Card className="transform border-2 p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 shadow-md">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md">
                 <UserCheck className="h-7 w-7 text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold">{content.feature4Title}</h3>
@@ -161,7 +161,7 @@ const HetCosmeticahuis = () => {
             </Card>
 
             <Card className="transform border-2 p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 shadow-md">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md">
                 <Beaker className="h-7 w-7 text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold">{content.feature5Title}</h3>
@@ -171,7 +171,7 @@ const HetCosmeticahuis = () => {
             </Card>
 
             <Card className="transform border-2 p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 shadow-md">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md">
                 <Sun className="h-7 w-7 text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold">{content.feature6Title}</h3>
@@ -233,7 +233,7 @@ const HetCosmeticahuis = () => {
       <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-white">
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 sm:mb-12 text-center">
-            <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-pink-500 to-purple-500 shadow-lg">
+            <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg">
               <MessageSquare className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
             </div>
             <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl font-bold">{content.chatTitle}</h2>
@@ -257,8 +257,8 @@ const HetCosmeticahuis = () => {
       </section>
 
       <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16">
-        <div className="mx-auto max-w-4xl rounded-xl sm:rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 p-6 text-center shadow-xl sm:p-8 md:p-12">
-          <Sparkles className="mx-auto mb-4 sm:mb-6 h-12 w-12 sm:h-16 sm:w-16 text-pink-600" />
+        <div className="mx-auto max-w-4xl rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 p-6 text-center shadow-xl sm:p-8 md:p-12">
+          <Sparkles className="mx-auto mb-4 sm:mb-6 h-12 w-12 sm:h-16 sm:w-16 text-orange-600" />
           <h2 className="mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl font-bold">
             {language === 'fr' ? 'Testez toutes les possibilités' : 'Test alle mogelijkheden'}
           </h2>
@@ -267,7 +267,7 @@ const HetCosmeticahuis = () => {
               ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA répond à vos clients sur les soins de la peau, les produits cosmétiques et les routines beauté.'
               : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt met huidverzorging, cosmetica en beauty routines.'}
           </p>
-          <p className="text-xs sm:text-sm font-medium text-pink-700">
+          <p className="text-xs sm:text-sm font-medium text-orange-700">
             {language === 'fr'
               ? 'Propulsé par Glimps - Votre partenaire pour l\'IA conversationnelle'
               : 'Mogelijk gemaakt door Glimps - Je partner voor conversationele AI'}
