@@ -58,6 +58,7 @@ import ChatbotMultilingual from "./pages/blog/ChatbotMultilingual";
 import ChatbotPrivacyGDPR from "./pages/blog/ChatbotPrivacyGDPR";
 import ChatbotVoiceIntegration from "./pages/blog/ChatbotVoiceIntegration";
 import ChatbotKosten from "./pages/blog/ChatbotKosten";
+import ChatbotConversieMeer from "./pages/blog/ChatbotConversieMeer";
 import FashionDesign from "./pages/industries/FashionDesign";
 import BeautyCosmetica from "./pages/industries/BeautyCosmetica";
 import Electronics from "./pages/industries/Electronics";
@@ -156,6 +157,7 @@ const App = () => (
         <Route path="/blog/chatbot-privacy-gdpr" element={<ChatbotPrivacyGDPR />} />
         <Route path="/blog/chatbot-voice-integration" element={<ChatbotVoiceIntegration />} />
         <Route path="/blog/chatbot-kosten-prijzen" element={<ChatbotKosten />} />
+        <Route path="/blog/chatbot-conversie-meer" element={<ChatbotConversieMeer />} />
         <Route path="/industries/fashion-design" element={<FashionDesign />} />
         <Route path="/industries/beauty-cosmetica" element={<BeautyCosmetica />} />
         <Route path="/industries/electronics" element={<Electronics />} />

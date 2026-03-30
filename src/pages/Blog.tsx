@@ -44,6 +44,15 @@ const Blog = () => {
   };
   const articles = [
     {
+      title: "Hoe een AI chatbot zorgt voor meer conversie bij e-commerce bedrijven",
+      excerpt: "Ontdek de wetenschappelijk bewezen manieren waarop AI chatbots de conversie bij e-commerce bedrijven verhogen. Van gepersonaliseerde aanbevelingen tot instant support.",
+      category: "Conversie Optimalisatie",
+      date: "31 mrt 2026",
+      readTime: "8 min",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      slug: "/blog/chatbot-conversie-meer"
+    },
+    {
       title: "Autonome Shopping Assistenten: Je Persoonlijke AI Stylist",
       excerpt: "AI shopping assistenten die begrijpen wat je wilt, suggesties doen, en zelfs namens jou aankopen doen. Ontdek de toekomst van persoonlijk winkelen.",
       category: "Innovation",
