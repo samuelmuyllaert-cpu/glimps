@@ -9,6 +9,21 @@ import { CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Sparkles, Wr
 const AbsoluteTeamsport = () => {
   const { language } = useLanguage();
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.id = 'chatbotkit-widget';
+    script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
+    script.setAttribute('data-widget', 'cmmqw23pb000d04jjyw219odz');
+    script.setAttribute('data-position', 'bottom-right');
+    document.body.appendChild(script);
+
+    return () => {
+      const existingScript = document.querySelector('#chatbotkit-widget');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   const content = language === 'fr' ? {
     title: "Testez votre",
@@ -337,17 +352,7 @@ const AbsoluteTeamsport = () => {
           </div>
 
           <div className="flex justify-center">
-            <div className="w-full max-w-[450px]">
-              <iframe
-                src="https://static.chatbotkit.com/integrations/widget/v2/cmmqw23pb000d04jjyw219odz"
-                width="100%"
-                height="650"
-                frameBorder="0"
-                className="rounded-xl shadow-2xl"
-                allow="clipboard-write"
-                title="Absolute Teamsport AI Chatbot"
-              />
-            </div>
+            <div className="w-full max-w-[450px]" />
           </div>
         </div>
       </section>
@@ -360,12 +365,12 @@ const AbsoluteTeamsport = () => {
           </h2>
           <p className="mb-4 sm:mb-6 text-base sm:text-lg text-muted-foreground px-2">
             {language === 'fr'
-              ? 'Ceci est votre environnement de test personnel. Posez n\'importe quelle question pour voir comment votre chatbot IA aide vos clients avec l\'équipement de football et les services pour équipes.'
+              ? 'Ceci est votre environnement de test personnel. Posez n\\'importe quelle question pour voir comment votre chatbot IA aide vos clients avec l\\'équipement de football et les services pour équipes.'
               : 'Dit is je persoonlijke testomgeving. Stel elke vraag die je wilt om te zien hoe je AI chatbot je klanten helpt met voetbaluitrusting en teamdiensten.'}
           </p>
           <p className="text-xs sm:text-sm font-medium text-orange-700">
             {language === 'fr'
-              ? 'Propulsé par Glimps - Votre partenaire pour l\'IA conversationnelle'
+              ? 'Propulsé par Glimps - Votre partenaire pour l\\'IA conversationnelle'
               : 'Mogelijk gemaakt door Glimps - Je partner voor conversationele AI'}
           </p>
         </div>
