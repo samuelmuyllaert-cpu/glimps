@@ -9,21 +9,6 @@ import { CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Sparkles, Wr
 const AbsoluteTeamsport = () => {
   const { language } = useLanguage();
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.id = 'chatbotkit-widget';
-    script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmmqw23pb000d04jjyw219odz');
-    script.setAttribute('data-position', 'bottom-right');
-    document.body.appendChild(script);
-
-    return () => {
-      const existingScript = document.querySelector('#chatbotkit-widget');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
 
   const content = language === 'fr' ? {
     title: "Testez votre",
