@@ -84,6 +84,7 @@ import Verlichting from "./pages/industries/Verlichting";
 import Legal from "./pages/Legal";
 import ProSportLights from "./pages/ProSportLights";
 import LensOnline from "./pages/LensOnline";
+import KMStore from "./pages/KMStore";
 import Lotana from "./pages/Lotana";
 import ColpaertOnline from "./pages/ColpaertOnline";
 import VerhuurMeerschaert from "./pages/VerhuurMeerschaert";
@@ -184,6 +185,7 @@ const App = () => (
         <Route path="/legal" element={<Legal />} />
         <Route path="/prosportlights" element={<ProSportLights />} />
         <Route path="/lensonline" element={<LensOnline />} />
+        <Route path="/kmstore" element={<KMStore />} />
         <Route path="/lotana" element={<Lotana />} />
         <Route path="/colpaert-online" element={<ColpaertOnline />} />
         <Route path="/verhuur-meerschaert" element={<VerhuurMeerschaert />} />
@@ -253,6 +255,7 @@ const App = () => (
         <Route path="/fr/legal" element={<Legal />} />
         <Route path="/fr/prosportlights" element={<ProSportLights />} />
         <Route path="/fr/lensonline" element={<LensOnline />} />
+        <Route path="/fr/kmstore" element={<KMStore />} />
         <Route path="/fr/lotana" element={<Lotana />} />
         <Route path="/fr/colpaert-online" element={<ColpaertOnline />} />
         <Route path="/fr/verhuur-meerschaert" element={<VerhuurMeerschaert />} />
