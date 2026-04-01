@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import StructuredData, { baseOrganization } from "@/components/StructuredData";
-import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe, Layout, AlertCircle, ChevronRight, Send } from "lucide-react";
+import { Check, Bot, RefreshCw, Package, RotateCcw, Users, MessageSquare, Code, ShoppingCart, Inbox, TrendingUp, Layers, Search, Zap, Star, Mic, Globe, LayoutGrid as Layout, CircleAlert as AlertCircle, ChevronRight, Send, Gift, Megaphone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/LanguageContext";
 import productSneakerBlue from "@/assets/product-sneaker-blue.png";
@@ -215,6 +215,76 @@ const Features = () => {
         "Automatische kortingen bij bundel aankoop"
       ],
       mockupType: "upsell"
+    },
+    {
+      icon: Gift,
+      badge: language === 'en' ? "SMART DISCOUNT CODES" : language === 'en'
+          ? "CODES DE RÉDUCTION INTELLIGENTS"
+          : language === 'fr'
+          ? "CODES DE RÉDUCTION INTELLIGENTS"
+          : "SLIMME KORTINGSCODES",
+      title: language === 'en' ? "Deploy discount codes at the perfect moment" : language === 'en'
+          ? "Déployez des codes de réduction au moment parfait"
+          : language === 'fr'
+          ? "Déployez des codes de réduction au moment parfait"
+          : "Zet kortingscodes in op het perfecte moment",
+      description: language === 'en' ? "The AI bot detects when a customer is hesitating and automatically offers a personalized discount code. Not just about price - it's about the right incentive at the right time. Recover lost sales and increase conversion rates." : language === 'en'
+          ? "Le bot IA detecte quand un client hesite et propose automatiquement un code de reduction personnalise. Il ne s'agit pas seulement de prix - c'est la bonne incitation au bon moment. Recuperez les ventes perdues et augmentez les taux de conversion."
+          : language === 'fr'
+          ? "Le bot IA détecte quand un client hésite et propose automatiquement un code de réduction personnalisé. Il ne s'agit pas seulement de prix - c'est la bonne incitation au bon moment. Récupérez les ventes perdues et augmentez les taux de conversion."
+          : "De AI bot detecteert wanneer een klant aarzelt en biedt automatisch een persoonlijke kortingscode aan. Het gaat niet alleen om prijs - het gaat om de juiste prikkel op het juiste moment. Behaal verloren verkopen en verhoog conversie.",
+      benefits: language === 'en' ? [
+        "Real-time hesitation detection",
+        "Personalized discount offers per customer",
+        "Automatic code generation and tracking",
+        "Smart recovery of abandoned sales"
+      ] : language === 'fr' ? [
+        "Détection d'hésitation en temps réel",
+        "Offres de réduction personnalisées par client",
+        "Génération et suivi automatiques de codes",
+        "Récupération intelligente des ventes abandonnées"
+      ] : [
+        "Real-time detectie van aarzeling",
+        "Persoonlijke kortingaanbiedingen per klant",
+        "Automatische code generatie en tracking",
+        "Slimme terugwinning van verloren verkopen"
+      ],
+      mockupType: "discount"
+    },
+    {
+      icon: Megaphone,
+      badge: language === 'en' ? "ADVERTISEMENT BOTS" : language === 'en'
+          ? "BOTS PUBLICITAIRES"
+          : language === 'fr'
+          ? "BOTS PUBLICITAIRES"
+          : "RECLAME BOTS",
+      title: language === 'en' ? "Convert ad clicks directly into sales" : language === 'en'
+          ? "Convertissez les clics publicitaires directement en ventes"
+          : language === 'fr'
+          ? "Convertissez les clics publicitaires directement en ventes"
+          : "Converteer advertentieklikken direct naar verkopen",
+      description: language === 'en' ? "Specialized bot trained on your complete product catalog. Works seamlessly with Google Ads and Facebook Ads. When customers click your ad, they land directly in a conversation with a bot expert who knows everything about your products and helps them find exactly what they're looking for. No browsing, no confusion - just direct guidance to the perfect product and instant checkout." : language === 'en'
+          ? "Bot specialise forme sur votre catalogue produits complet. Fonctionne parfaitement avec Google Ads et Facebook Ads. Quand les clients cliquent sur votre annonce, ils atterrissent directement dans une conversation avec un expert bot qui connait tout sur vos produits et les aide a trouver exactement ce qu'ils cherchent. Pas de navigation, pas de confusion - juste un guide direct vers le produit parfait et un paiement instantane."
+          : language === 'fr'
+          ? "Bot spécialisé formé sur votre catalogue produits complet. Fonctionne parfaitement avec Google Ads et Facebook Ads. Quand les clients cliquent sur votre annonce, ils atterrissent directement dans une conversation avec un expert bot qui connaît tout sur vos produits et les aide à trouver exactement ce qu'ils cherchent. Pas de navigation, pas de confusion - juste un guide direct vers le produit parfait et un paiement instantané."
+          : "Gespecialiseerde bot getraind op je volledige productcatalogus. Werkt naadloos met Google Ads en Facebook Ads. Wanneer klanten op je advertentie klikken, belanden zij direct in een gesprek met een bot expert die alles over je producten weet en hen helpt precies te vinden wat ze zoeken. Geen bladeren, geen verwarring - gewoon directe begeleiding naar het perfecte product en instant checkout.",
+      benefits: language === 'en' ? [
+        "Trained on your complete product database",
+        "Seamless integration with Google & Facebook Ads",
+        "Expert product recommendations per campaign",
+        "Direct purchase path from ad click to checkout"
+      ] : language === 'fr' ? [
+        "Formé sur votre base de données complète de produits",
+        "Intégration transparente avec Google et Facebook Ads",
+        "Recommandations de produits d'experts par campagne",
+        "Chemin d'achat direct du clic publicitaire à la caisse"
+      ] : [
+        "Getraind op je volledige productdatabase",
+        "Naadloze integratie met Google en Facebook Ads",
+        "Expert productaanbevelingen per campagne",
+        "Directe aankooppad van advertentieklik naar checkout"
+      ],
+      mockupType: "advertisement"
     },
     {
       icon: Mic,
@@ -1553,6 +1623,163 @@ const Features = () => {
                                 {language === 'en' ? 'Add' : language === 'fr' ? 'Ajouter' : 'Voeg toe'}
                               </button>
                             </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "discount" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-amber-500/10 border border-amber-500/30 rounded-xl">
+                            <Gift className="w-5 h-5 text-amber-600" />
+                            <span className="text-sm text-amber-800 dark:text-amber-300">
+                              {language === 'en' ? 'We noticed you\'re still thinking... 🤔' : language === 'fr' ? 'Nous avons remarqué que vous réfléchissiez encore... 🤔' : 'We zagen dat je nog aan het nadenken bent... 🤔'}
+                            </span>
+                          </div>
+
+                          <div className="p-4 border-2 border-amber-500/50 bg-gradient-to-br from-amber-500/5 to-amber-500/0 rounded-lg space-y-3">
+                            <div className="text-sm font-semibold text-amber-900 dark:text-amber-300">
+                              {language === 'en' ? 'Special offer just for you!' : language === 'fr' ? 'Offre spéciale rien que pour vous !' : 'Speciaal aanbod alleen voor jou!'}
+                            </div>
+
+                            <div className="p-4 bg-background border-2 border-amber-500 rounded-lg space-y-3">
+                              <div className="flex items-center justify-between">
+                                <div>
+                                  <div className="text-2xl font-bold text-amber-600">
+                                    {language === 'en' ? '-20%' : language === 'fr' ? '-20%' : '-20%'}
+                                  </div>
+                                  <div className="text-xs text-muted-foreground">
+                                    {language === 'en' ? 'on your entire order' : language === 'fr' ? 'sur votre commande entière' : 'op je gehele bestelling'}
+                                  </div>
+                                </div>
+                                <div className="text-3xl">🎉</div>
+                              </div>
+
+                              <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+                                <div className="text-xs text-muted-foreground mb-2">
+                                  {language === 'en' ? 'Your unique code:' : language === 'fr' ? 'Votre code unique :' : 'Je unieke code:'}
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  <code className="flex-1 font-mono font-bold text-amber-600 bg-background px-3 py-2 rounded text-center">
+                                    SAVE20XYZ
+                                  </code>
+                                  <button className="px-3 py-2 bg-primary text-primary-foreground rounded font-semibold text-sm">
+                                    {language === 'en' ? 'Copy' : language === 'fr' ? 'Copier' : 'Kopië'}
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div className="pt-3 border-t border-border">
+                                <div className="text-xs text-muted-foreground mb-2">
+                                  {language === 'en' ? 'Your cart:' : language === 'fr' ? 'Votre panier :' : 'Je winkelmandje:'}
+                                </div>
+                                <div className="space-y-2">
+                                  <div className="flex justify-between text-sm">
+                                    <span>Subtotal</span>
+                                    <span>€79,98</span>
+                                  </div>
+                                  <div className="flex justify-between text-sm text-green-600 font-semibold">
+                                    <span>{language === 'en' ? 'Discount (20%)' : language === 'fr' ? 'Réduction (20%)' : 'Korting (20%)'}</span>
+                                    <span>-€16,00</span>
+                                  </div>
+                                  <div className="flex justify-between text-lg font-bold border-t border-border pt-2">
+                                    <span>{language === 'en' ? 'Total' : language === 'fr' ? 'Total' : 'Totaal'}</span>
+                                    <span className="text-primary">€63,98</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                            {language === 'en' ? 'Complete purchase now' : language === 'fr' ? 'Finaliser l\'achat maintenant' : 'Bestelling afronden'}
+                          </button>
+
+                          <div className="p-3 bg-muted/30 rounded-lg text-xs text-muted-foreground text-center">
+                            {language === 'en' ? '⏰ This offer expires in 1 hour' : language === 'fr' ? '⏰ Cette offre expire dans 1 heure' : '⏰ Dit aanbod vervalt over 1 uur'}
+                          </div>
+                        </div>
+                      )}
+
+                      {feature.mockupType === "advertisement" && (
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl border border-primary/30">
+                            <Megaphone className="w-5 h-5 text-primary" />
+                            <span className="text-sm font-semibold">
+                              {language === 'en' ? 'Ad Bot Active 📢' : language === 'fr' ? 'Bot Publicitaire Actif 📢' : 'Advertentie Bot Actief 📢'}
+                            </span>
+                          </div>
+
+                          <div className="p-4 border-2 border-primary/50 bg-gradient-to-br from-primary/5 to-background rounded-lg space-y-4">
+                            <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                              {language === 'en' ? 'You clicked: Premium Headphones' : language === 'fr' ? 'Vous avez cliqué : Casques Premium' : 'Je hebt geklikt op: Premium Koptelefoons'}
+                            </div>
+
+                            <div className="relative">
+                              <div className="absolute -inset-2 bg-gradient-to-r from-primary to-primary/50 rounded-lg blur opacity-20" />
+                              <div className="relative bg-card border-2 border-primary rounded-lg p-4">
+                                <div className="flex items-start gap-3 pb-3 border-b border-border">
+                                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                                    <Bot className="w-6 h-6 text-primary-foreground" />
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="font-semibold text-sm">
+                                      {language === 'en' ? 'Glimps Product Expert' : language === 'fr' ? 'Expert en Produits Glimps' : 'Glimps Product Expert'}
+                                    </div>
+                                    <div className="text-xs text-green-600 flex items-center gap-1">
+                                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                                      {language === 'en' ? 'Ready to help' : language === 'fr' ? 'Prêt à aider' : 'Klaar om te helpen'}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="mt-3 space-y-3">
+                                  <div className="bg-primary/10 border border-primary/20 rounded-2xl rounded-tl-sm p-3">
+                                    <p className="text-sm mb-2">
+                                      {language === 'en' ? 'Perfect! I can help you find the best premium headphones for your needs.' : language === 'fr' ? 'Parfait ! Je peux vous aider à trouver les meilleurs casques premium selon vos besoins.' : 'Perfect! Ik kan je helpen de beste premium koptelefoons voor jouw behoeften te vinden.'}
+                                    </p>
+                                    <p className="text-sm text-muted-foreground">
+                                      {language === 'en' ? 'What matters most to you?' : language === 'fr' ? 'Qu\'est-ce qui est le plus important pour vous ?' : 'Wat is voor jou het belangrijkst?'}
+                                    </p>
+                                  </div>
+
+                                  <div className="grid grid-cols-2 gap-2">
+                                    <button className="p-3 border-2 border-primary/50 hover:border-primary bg-background rounded-lg text-left hover:bg-primary/5 transition-colors">
+                                      <div className="text-lg mb-1">🔊</div>
+                                      <div className="text-xs font-semibold">
+                                        {language === 'en' ? 'Sound Quality' : language === 'fr' ? 'Qualité du Son' : 'Geluidskwaliteit'}
+                                      </div>
+                                    </button>
+                                    <button className="p-3 border border-border hover:border-primary bg-background rounded-lg text-left hover:bg-primary/5 transition-colors">
+                                      <div className="text-lg mb-1">🔋</div>
+                                      <div className="text-xs font-semibold">
+                                        {language === 'en' ? 'Battery Life' : language === 'fr' ? 'Autonomie' : 'Batterijduur'}
+                                      </div>
+                                    </button>
+                                    <button className="p-3 border border-border hover:border-primary bg-background rounded-lg text-left hover:bg-primary/5 transition-colors">
+                                      <div className="text-lg mb-1">💰</div>
+                                      <div className="text-xs font-semibold">
+                                        {language === 'en' ? 'Budget' : language === 'fr' ? 'Budget' : 'Budget'}
+                                      </div>
+                                    </button>
+                                    <button className="p-3 border border-border hover:border-primary bg-background rounded-lg text-left hover:bg-primary/5 transition-colors">
+                                      <div className="text-lg mb-1">🎵</div>
+                                      <div className="text-xs font-semibold">
+                                        {language === 'en' ? 'Music Type' : language === 'fr' ? 'Genre Musique' : 'Muzieksoort'}
+                                      </div>
+                                    </button>
+                                  </div>
+
+                                  <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg text-xs text-green-700 dark:text-green-400 flex items-center gap-2">
+                                    <Check className="w-4 h-4" />
+                                    {language === 'en' ? 'Based on 10,000+ reviews in our database' : language === 'fr' ? 'Sur la base de 10 000+ avis dans notre base de données' : 'Gebaseerd op 10.000+ reviews in onze database'}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-blue-700 dark:text-blue-400 text-center">
+                            {language === 'en' ? '💡 This bot is trained on your complete product catalog' : language === 'fr' ? '💡 Ce bot est formé sur votre catalogue produits complet' : '💡 Deze bot is getraind op je volledige productcatalogus'}
                           </div>
                         </div>
                       )}
