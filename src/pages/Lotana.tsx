@@ -254,6 +254,32 @@ const Lotana = () => {
         </div>
       </section>
 
+      <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 bg-white">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-8 sm:mb-12 text-center">
+            <div className="mb-4 sm:mb-6 inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-lg">
+              <MessageSquare className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+            </div>
+            <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl font-bold">{language === 'fr' ? 'Chatbot en direct' : 'Live chatbot'}</h2>
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
+              {language === 'fr' ? 'Testez directement le chatbot ici' : 'Test de chatbot direct hier'}
+            </p>
+          </div>
+
+          <div className="flex justify-center items-center py-10">
+            <iframe
+              src="https://static.chatbotkit.com/integrations/widget/cmm3vjek8007i04l4s840o6oi/frame"
+              width="700"
+              height="700"
+              frameBorder="0"
+              className="rounded-xl shadow-2xl"
+              allow="microphone"
+              title="Lotana AI Chatbot"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 sm:mb-12 text-center">
