@@ -112,27 +112,13 @@ const VerhuurMeerschaert = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-primary/5">
+    <div className="min-h-screen bg-white">
       <SEO
         title={content.seoTitle}
         description={content.seoDescription}
         path={language === 'fr' ? '/fr/verhuur-meerschaert' : '/verhuur-meerschaert'}
         language={language}
       />
-
-      <section className="w-full min-h-screen bg-white flex items-center justify-center p-4">
-        <div className="flex justify-center w-full max-w-[700px]">
-          <iframe
-            src="https://static.chatbotkit.com/integrations/widget/cmmjoimyq000n04l4i4r8tsls/frame"
-            width="100%"
-            height="700"
-            frameBorder="0"
-            className="rounded-xl shadow-2xl"
-            allow="microphone"
-            title="Autoverhuur Meerschaert AI Chatbot"
-          />
-        </div>
-      </section>
     </div>
   );
 };
