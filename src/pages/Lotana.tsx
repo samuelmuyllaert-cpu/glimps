@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -8,12 +7,6 @@ import { Puzzle, CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Spar
 
 const Lotana = () => {
   const { language } = useLanguage();
-
-  useEffect(() => {
-    if (window.chatbotKitLoader) {
-      window.chatbotKitLoader.load();
-    }
-  }, []);
 
   const content = language === 'fr' ? {
     title: "Testez votre",
