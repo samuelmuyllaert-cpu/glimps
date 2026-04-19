@@ -94,6 +94,7 @@ import ChatbotAgencyVlaanderen from "./pages/ChatbotAgencyVlaanderen";
 import AIAgencyBelgieChatbots from "./pages/AIAgencyBelgieChatbots";
 import AIChatbotBureauBelgie from "./pages/AIChatbotBureauBelgie";
 import ChatbotBouwBedrijfVlaanderen from "./pages/ChatbotBouwBedrijfVlaanderen";
+import TheSoulStore from "./pages/TheSoulStore";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -195,6 +196,7 @@ const App = () => (
         <Route path="/ai-agency-belgie-chatbots" element={<AIAgencyBelgieChatbots />} />
         <Route path="/ai-chatbot-bureau-belgie-ecommerce" element={<AIChatbotBureauBelgie />} />
         <Route path="/chatbot-bouw-bedrijf-vlaanderen-ecommerce" element={<ChatbotBouwBedrijfVlaanderen />} />
+        <Route path="/the-soul-store" element={<TheSoulStore />} />
         {/* French Routes */}
         <Route path="/fr" element={<Index />} />
         <Route path="/fr/fonctionnalites" element={<Features />} />
@@ -261,6 +263,7 @@ const App = () => (
         <Route path="/fr/verhuur-meerschaert" element={<VerhuurMeerschaert />} />
         <Route path="/fr/absolute-teamsport" element={<AbsoluteTeamsport />} />
         <Route path="/fr/het-cosmeticahuis" element={<HetCosmeticahuis />} />
+        <Route path="/fr/the-soul-store" element={<TheSoulStore />} />
         {/* English Routes */}
         <Route path="/en" element={<Index />} />
         <Route path="/en/features" element={<Features />} />
@@ -326,6 +329,7 @@ const App = () => (
         <Route path="/en/verhuur-meerschaert" element={<VerhuurMeerschaert />} />
         <Route path="/en/absolute-teamsport" element={<AbsoluteTeamsport />} />
         <Route path="/en/het-cosmeticahuis" element={<HetCosmeticahuis />} />
+        <Route path="/en/the-soul-store" element={<TheSoulStore />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
         </Routes>
