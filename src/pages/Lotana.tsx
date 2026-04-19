@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -8,22 +7,6 @@ import { Puzzle, CircleCheck as CheckCircle2, MessageSquare, Clock, Shield, Spar
 
 const Lotana = () => {
   const { language } = useLanguage();
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.id = 'chatbotkit-widget';
-    script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmo5ia46s000004jrjtr8ql47');
-    script.async = true;
-    document.head.appendChild(script);
-
-    return () => {
-      const existingScript = document.querySelector('#chatbotkit-widget');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
 
   const content = language === 'fr' ? {
     title: "Testez votre",
