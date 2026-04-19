@@ -10,6 +10,15 @@ const Lotana = () => {
   const { language } = useLanguage();
 
   useEffect(() => {
+    const cleanupWidget = () => {
+      const existingScript = document.querySelector('#chatbotkit-widget');
+      if (existingScript) existingScript.remove();
+      document.querySelectorAll('[id^="chatbotkit"]').forEach(el => el.remove());
+      document.querySelectorAll('[class*="chatbotkit"]').forEach(el => el.remove());
+    };
+
+    cleanupWidget();
+
     const script = document.createElement('script');
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
@@ -18,10 +27,7 @@ const Lotana = () => {
     document.body.appendChild(script);
 
     return () => {
-      const existingScript = document.querySelector('#chatbotkit-widget');
-      if (existingScript) {
-        existingScript.remove();
-      }
+      cleanupWidget();
     };
   }, []);
 
