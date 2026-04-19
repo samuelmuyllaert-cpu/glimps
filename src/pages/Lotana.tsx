@@ -13,7 +13,7 @@ const Lotana = () => {
     const script = document.createElement('script');
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmm3vjek8007i04l4s840o6oi');
+    script.setAttribute('data-widget', 'cmo5ia46s000004jrjtr8ql47');
     document.body.appendChild(script);
 
     return () => {
@@ -268,7 +268,7 @@ const Lotana = () => {
 
           <div className="flex justify-center items-center py-10">
             <iframe
-              src="https://static.chatbotkit.com/integrations/widget/cmm3vjek8007i04l4s840o6oi/frame"
+              src="https://static.chatbotkit.com/integrations/widget/cmo5ia46s000004jrjtr8ql47/frame"
               width="700"
               height="700"
               frameBorder="0"
