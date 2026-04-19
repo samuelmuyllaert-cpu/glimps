@@ -14,7 +14,8 @@ const Lotana = () => {
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
     script.setAttribute('data-widget', 'cmo5ia46s000004jrjtr8ql47');
-    document.body.appendChild(script);
+    script.async = true;
+    document.head.appendChild(script);
 
     return () => {
       const existingScript = document.querySelector('#chatbotkit-widget');
