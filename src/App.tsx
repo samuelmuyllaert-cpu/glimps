@@ -95,6 +95,9 @@ import AIAgencyBelgieChatbots from "./pages/AIAgencyBelgieChatbots";
 import AIChatbotBureauBelgie from "./pages/AIChatbotBureauBelgie";
 import ChatbotBouwBedrijfVlaanderen from "./pages/ChatbotBouwBedrijfVlaanderen";
 import TheSoulStore from "./pages/TheSoulStore";
+import Nomige from "./pages/Nomige";
+import ROIGeleFlamingo from "./pages/ROIGeleFlamingo";
+import ROIROIDeGeleFlamingo from "./pages/ROIROIDeGeleFlamingo";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -197,6 +200,9 @@ const App = () => (
         <Route path="/ai-chatbot-bureau-belgie-ecommerce" element={<AIChatbotBureauBelgie />} />
         <Route path="/chatbot-bouw-bedrijf-vlaanderen-ecommerce" element={<ChatbotBouwBedrijfVlaanderen />} />
         <Route path="/the-soul-store" element={<TheSoulStore />} />
+        <Route path="/nomige" element={<Nomige />} />
+        <Route path="/roi-gele-flamingo" element={<ROIGeleFlamingo />} />
+        <Route path="/roi-roi-de-gele-flamingo" element={<ROIROIDeGeleFlamingo />} />
         {/* French Routes */}
         <Route path="/fr" element={<Index />} />
         <Route path="/fr/fonctionnalites" element={<Features />} />
