@@ -96,6 +96,7 @@ import AIChatbotBureauBelgie from "./pages/AIChatbotBureauBelgie";
 import ChatbotBouwBedrijfVlaanderen from "./pages/ChatbotBouwBedrijfVlaanderen";
 import TheSoulStore from "./pages/TheSoulStore";
 import Nomige from "./pages/Nomige";
+import ShopifyIntegration from "./pages/integrations/Shopify";
 import ROIGeleFlamingo from "./pages/ROIGeleFlamingo";
 import ROIROIDeGeleFlamingo from "./pages/ROIROIDeGeleFlamingo";
 import NotFound from "./pages/NotFound";
@@ -201,6 +202,8 @@ const App = () => (
         <Route path="/chatbot-bouw-bedrijf-vlaanderen-ecommerce" element={<ChatbotBouwBedrijfVlaanderen />} />
         <Route path="/the-soul-store" element={<TheSoulStore />} />
         <Route path="/nomige" element={<Nomige />} />
+        <Route path="/integrations/shopify" element={<ShopifyIntegration />} />
+        <Route path="/fr/integrations/shopify" element={<ShopifyIntegration />} />
         <Route path="/roi-gele-flamingo" element={<ROIGeleFlamingo />} />
         <Route path="/roi-roi-de-gele-flamingo" element={<ROIROIDeGeleFlamingo />} />
         {/* French Routes */}
