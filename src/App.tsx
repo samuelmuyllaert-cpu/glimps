@@ -97,6 +97,14 @@ import ChatbotBouwBedrijfVlaanderen from "./pages/ChatbotBouwBedrijfVlaanderen";
 import TheSoulStore from "./pages/TheSoulStore";
 import Nomige from "./pages/Nomige";
 import ShopifyIntegration from "./pages/integrations/Shopify";
+import WooCommerceIntegration from "./pages/integrations/WooCommerce";
+import ShopwareIntegration from "./pages/integrations/Shopware";
+import MagentoIntegration from "./pages/integrations/Magento";
+import OdooIntegration from "./pages/integrations/Odoo";
+import LightspeedIntegration from "./pages/integrations/Lightspeed";
+import PrestaShopIntegration from "./pages/integrations/PrestaShop";
+import WixIntegration from "./pages/integrations/Wix";
+import WordPressIntegration from "./pages/integrations/WordPress";
 import ROIGeleFlamingo from "./pages/ROIGeleFlamingo";
 import ROIROIDeGeleFlamingo from "./pages/ROIROIDeGeleFlamingo";
 import NotFound from "./pages/NotFound";
@@ -205,6 +213,30 @@ const App = () => (
         <Route path="/integrations/shopify" element={<ShopifyIntegration />} />
         <Route path="/fr/integrations/shopify" element={<ShopifyIntegration />} />
         <Route path="/en/integrations/shopify" element={<ShopifyIntegration />} />
+        <Route path="/integrations/woocommerce" element={<WooCommerceIntegration />} />
+        <Route path="/fr/integrations/woocommerce" element={<WooCommerceIntegration />} />
+        <Route path="/en/integrations/woocommerce" element={<WooCommerceIntegration />} />
+        <Route path="/integrations/shopware" element={<ShopwareIntegration />} />
+        <Route path="/fr/integrations/shopware" element={<ShopwareIntegration />} />
+        <Route path="/en/integrations/shopware" element={<ShopwareIntegration />} />
+        <Route path="/integrations/magento" element={<MagentoIntegration />} />
+        <Route path="/fr/integrations/magento" element={<MagentoIntegration />} />
+        <Route path="/en/integrations/magento" element={<MagentoIntegration />} />
+        <Route path="/integrations/odoo" element={<OdooIntegration />} />
+        <Route path="/fr/integrations/odoo" element={<OdooIntegration />} />
+        <Route path="/en/integrations/odoo" element={<OdooIntegration />} />
+        <Route path="/integrations/lightspeed" element={<LightspeedIntegration />} />
+        <Route path="/fr/integrations/lightspeed" element={<LightspeedIntegration />} />
+        <Route path="/en/integrations/lightspeed" element={<LightspeedIntegration />} />
+        <Route path="/integrations/prestashop" element={<PrestaShopIntegration />} />
+        <Route path="/fr/integrations/prestashop" element={<PrestaShopIntegration />} />
+        <Route path="/en/integrations/prestashop" element={<PrestaShopIntegration />} />
+        <Route path="/integrations/wix" element={<WixIntegration />} />
+        <Route path="/fr/integrations/wix" element={<WixIntegration />} />
+        <Route path="/en/integrations/wix" element={<WixIntegration />} />
+        <Route path="/integrations/wordpress" element={<WordPressIntegration />} />
+        <Route path="/fr/integrations/wordpress" element={<WordPressIntegration />} />
+        <Route path="/en/integrations/wordpress" element={<WordPressIntegration />} />
         <Route path="/roi-gele-flamingo" element={<ROIGeleFlamingo />} />
         <Route path="/roi-roi-de-gele-flamingo" element={<ROIROIDeGeleFlamingo />} />
         {/* French Routes */}
