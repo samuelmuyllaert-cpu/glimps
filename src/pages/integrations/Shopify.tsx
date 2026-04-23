@@ -5,9 +5,9 @@ import StructuredData from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
+import glimpsLogo from "@/assets/glimps-logo-new.png";
 import {
   ShoppingCart,
-  Zap,
   CircleCheck as CheckCircle2,
   Package,
   MessageSquare,
@@ -337,8 +337,8 @@ const ShopifyIntegration = () => {
               />
             </div>
             <span className="text-muted-foreground">+</span>
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary p-1.5">
-              <Zap className="h-5 w-5 text-white" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg overflow-hidden">
+              <img src={glimpsLogo} alt="Glimps AI" className="h-full w-full object-contain" />
             </div>
             <span className="font-semibold">Glimps AI</span>
           </div>
