@@ -13,7 +13,7 @@ const WordPressIntegration = () => {
   const isFR = language === 'fr';
   const isEN = language === 'en';
 
-  const wpLogoUrl = "https://cdn.worldvectorlogo.com/logos/wordpress-blue.svg";
+  const wpLogoUrl = "https://s.w.org/style/images/about/WordPress-logotype-wmark.png";
 
   const enContent = {
     badge: "WordPress Integration",
