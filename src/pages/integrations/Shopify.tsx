@@ -22,6 +22,93 @@ const ShopifyIntegration = () => {
   const { language } = useLanguage();
 
   const isFR = language === 'fr';
+  const isEN = language === 'en';
+
+  const enContent = {
+    badge: "Shopify Integration",
+    title: "AI Chatbot for",
+    titleHighlight: "Shopify",
+    subtitle: "Connect Glimps to your Shopify store via a simple widget. Automatic synchronisation of products, stock and orders — for smart customer service 24/7.",
+    ctaButton: "Request a demo",
+    howTitle: "How the Shopify integration works",
+    howSteps: [
+      {
+        step: "01",
+        title: "Add the widget",
+        desc: "Paste a simple snippet into your Shopify store. No app, no complex installation."
+      },
+      {
+        step: "02",
+        title: "Automatic sync",
+        desc: "All your products, categories, prices and stock are automatically imported via the Shopify API."
+      },
+      {
+        step: "03",
+        title: "AI training",
+        desc: "The chatbot learns your products, policies and tone of voice within a few hours."
+      },
+      {
+        step: "04",
+        title: "Live and running",
+        desc: "Your Shopify chatbot is live and answers customers 24/7."
+      }
+    ],
+    benefitsTitle: "What Glimps does for your Shopify store",
+    benefits: [
+      {
+        icon: ShoppingCart,
+        title: "Product recommendations",
+        desc: "The AI guides visitors to the right products based on their needs, increasing average order value."
+      },
+      {
+        icon: Package,
+        title: "Real-time order tracking",
+        desc: "Customers can track their order directly via chat, without contacting your team."
+      },
+      {
+        icon: RefreshCw,
+        title: "Returns & exchanges",
+        desc: "The chatbot guides customers through the return process in line with your Shopify policy."
+      },
+      {
+        icon: TrendingUp,
+        title: "Recover abandoned carts",
+        desc: "Automatically re-engage visitors who leave without buying and boost your conversions."
+      },
+      {
+        icon: MessageSquare,
+        title: "Multilingual support",
+        desc: "Serve your customers in Dutch, French, English and more — fully automatically."
+      },
+      {
+        icon: Clock,
+        title: "Available 24/7",
+        desc: "Your store never sleeps. The chatbot responds instantly, even on weekends and at night."
+      }
+    ],
+    useCasesTitle: "What your customers can ask",
+    useCases: [
+      "\"Where is my Shopify order #12345?\"",
+      "\"Do you have this t-shirt in size L?\"",
+      "\"What is your return policy?\"",
+      "\"Recommend me shoes for running\"",
+      "\"How long does delivery to the UK take?\"",
+      "\"Is this product suitable for sensitive skin?\"",
+      "\"Can I still change my delivery address?\"",
+      "\"Are there any current discounts?\""
+    ],
+    statsTitle: "Average results for Shopify stores with Glimps",
+    stats: [
+      { value: "73%", label: "Of all questions handled automatically" },
+      { value: "+21%", label: "Increase in conversion rate" },
+      { value: "Fast", label: "Setup via widget" },
+      { value: "24/7", label: "Continuous customer service" }
+    ],
+    ctaTitle: "Ready to connect Glimps to Shopify?",
+    ctaSubtitle: "Join hundreds of Shopify stores using Glimps to automate their customer service and sell more.",
+    seoTitle: "AI Chatbot for Shopify - Glimps AI | Shopify Integration",
+    seoDescription: "Connect Glimps to your Shopify store via a widget. Automatic product sync and order tracking. AI customer service 24/7 for your Shopify store.",
+  };
 
   const content = isFR ? {
     badge: "Intégration Shopify",
@@ -193,22 +280,26 @@ const ShopifyIntegration = () => {
     seoDescription: "Verbind Glimps met je Shopify webshop via een widget. Automatische productsync en besteltracking. AI klantenservice 24/7 voor je Shopify webshop.",
   };
 
+  const activeContent = isEN ? enContent : content;
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={content.seoTitle}
-        description={content.seoDescription}
-        path={isFR ? "/fr/integrations/shopify" : "/integrations/shopify"}
+        title={activeContent.seoTitle}
+        description={activeContent.seoDescription}
+        path={isFR ? "/fr/integrations/shopify" : isEN ? "/en/integrations/shopify" : "/integrations/shopify"}
         language={language}
       />
       <StructuredData type="organization" />
       <StructuredData
         type="webpage"
         data={{
-          name: content.seoTitle,
-          description: content.seoDescription,
+          name: activeContent.seoTitle,
+          description: activeContent.seoDescription,
           url: isFR
             ? "https://www.glimps.be/fr/integrations/shopify"
+            : isEN
+            ? "https://www.glimps.be/en/integrations/shopify"
             : "https://www.glimps.be/integrations/shopify"
         }}
       />
@@ -219,7 +310,7 @@ const ShopifyIntegration = () => {
         <div className="pointer-events-none absolute bottom-[-200px] left-1/2 h-[600px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#96bf48]/20 via-[#96bf48]/10 to-transparent blur-3xl" />
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-            {content.badge}
+            {activeContent.badge}
           </span>
           <div className="mb-6 flex justify-center">
             <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-border bg-card p-4 shadow-lg">
@@ -231,19 +322,19 @@ const ShopifyIntegration = () => {
             </div>
           </div>
           <h1 className="mb-6 font-inter text-4xl font-normal leading-tight text-foreground md:text-5xl lg:text-6xl">
-            {content.title}{" "}
+            {activeContent.title}{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              {content.titleHighlight}
+              {activeContent.titleHighlight}
             </span>
           </h1>
           <p className="mb-10 mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
-            {content.subtitle}
+            {activeContent.subtitle}
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild variant="hero" size="lg" className="rounded-full">
-              <a href={isFR ? "/fr/demo" : "/demo"}>
+              <a href={isFR ? "/fr/demo" : isEN ? "/en/demo" : "/demo"}>
                 <Sparkles className="h-5 w-5" />
-                {content.ctaButton}
+                {activeContent.ctaButton}
               </a>
             </Button>
           </div>
@@ -254,10 +345,10 @@ const ShopifyIntegration = () => {
       <section className="border-y bg-muted/30 px-6 py-12">
         <div className="mx-auto max-w-5xl">
           <p className="mb-8 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            {content.statsTitle}
+            {activeContent.statsTitle}
           </p>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {content.stats.map((stat, i) => (
+            {activeContent.stats.map((stat, i) => (
               <div key={i} className="text-center">
                 <p className="text-4xl font-bold text-primary">{stat.value}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
@@ -271,15 +362,15 @@ const ShopifyIntegration = () => {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="mb-12 text-center font-inter text-3xl font-normal md:text-4xl">
-            {content.howTitle}
+            {activeContent.howTitle}
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {content.howSteps.map((step, i) => (
+            {activeContent.howSteps.map((step, i) => (
               <div key={i} className="relative rounded-2xl border border-border/50 bg-card p-6">
                 <span className="mb-4 block text-4xl font-bold text-primary/20">{step.step}</span>
                 <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
                 <p className="text-sm text-muted-foreground">{step.desc}</p>
-                {i < content.howSteps.length - 1 && (
+                {i < activeContent.howSteps.length - 1 && (
                   <ArrowRight className="absolute -right-3 top-1/2 hidden -translate-y-1/2 h-6 w-6 text-muted-foreground/40 lg:block" />
                 )}
               </div>
@@ -292,10 +383,10 @@ const ShopifyIntegration = () => {
       <section className="bg-muted/20 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-12 text-center font-inter text-3xl font-normal md:text-4xl">
-            {content.benefitsTitle}
+            {activeContent.benefitsTitle}
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {content.benefits.map((benefit, i) => (
+            {activeContent.benefits.map((benefit, i) => (
               <Card key={i} className="p-6 transition-all hover:shadow-md hover:-translate-y-0.5">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                   <benefit.icon className="h-6 w-6 text-primary" />
@@ -312,10 +403,10 @@ const ShopifyIntegration = () => {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-12 text-center font-inter text-3xl font-normal md:text-4xl">
-            {content.useCasesTitle}
+            {activeContent.useCasesTitle}
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
-            {content.useCases.map((useCase, i) => (
+            {activeContent.useCases.map((useCase, i) => (
               <div key={i} className="flex items-start gap-3 rounded-xl border border-border/50 bg-card p-4">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
                 <p className="text-sm text-muted-foreground">{useCase}</p>
@@ -349,14 +440,14 @@ const ShopifyIntegration = () => {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-br from-primary/10 to-primary/5 p-12 text-center">
           <h2 className="mb-4 font-inter text-3xl font-normal md:text-4xl">
-            {content.ctaTitle}
+            {activeContent.ctaTitle}
           </h2>
           <p className="mb-8 text-lg text-muted-foreground">
-            {content.ctaSubtitle}
+            {activeContent.ctaSubtitle}
           </p>
           <Button asChild variant="hero" size="lg" className="rounded-full">
-            <a href={isFR ? "/fr/demo" : "/demo"}>
-              {content.ctaButton}
+            <a href={isFR ? "/fr/demo" : isEN ? "/en/demo" : "/demo"}>
+              {activeContent.ctaButton}
             </a>
           </Button>
         </div>

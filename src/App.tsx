@@ -204,6 +204,7 @@ const App = () => (
         <Route path="/nomige" element={<Nomige />} />
         <Route path="/integrations/shopify" element={<ShopifyIntegration />} />
         <Route path="/fr/integrations/shopify" element={<ShopifyIntegration />} />
+        <Route path="/en/integrations/shopify" element={<ShopifyIntegration />} />
         <Route path="/roi-gele-flamingo" element={<ROIGeleFlamingo />} />
         <Route path="/roi-roi-de-gele-flamingo" element={<ROIROIDeGeleFlamingo />} />
         {/* French Routes */}
