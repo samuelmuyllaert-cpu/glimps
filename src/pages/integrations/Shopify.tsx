@@ -14,7 +14,6 @@ import {
   TrendingUp,
   Clock,
   RefreshCw,
-  Star,
   ArrowRight,
   Sparkles,
 } from "lucide-react";
@@ -28,20 +27,19 @@ const ShopifyIntegration = () => {
     badge: "Intégration Shopify",
     title: "Chatbot IA pour",
     titleHighlight: "Shopify",
-    subtitle: "Connectez Glimps à votre boutique Shopify en quelques minutes. Synchronisation automatique des produits, du stock et des commandes — pour un service client intelligent 24/7.",
-    ctaTrial: "Démarrer gratuitement",
-    ctaDemo: "Voir la démo",
+    subtitle: "Connectez Glimps à votre boutique Shopify via un simple widget. Synchronisation automatique des produits, du stock et des commandes — pour un service client intelligent 24/7.",
+    ctaButton: "Demander une démo",
     howTitle: "Comment fonctionne l'intégration Shopify",
     howSteps: [
       {
         step: "01",
-        title: "Installez l'application",
-        desc: "Ajoutez Glimps depuis l'App Store Shopify en un clic. Aucun code requis."
+        title: "Ajoutez le widget",
+        desc: "Collez un simple extrait de code dans votre boutique Shopify. Aucune application, aucun code complexe."
       },
       {
         step: "02",
         title: "Synchronisation automatique",
-        desc: "Tous vos produits, catégories, prix et stock sont importés automatiquement."
+        desc: "Tous vos produits, catégories, prix et stock sont importés automatiquement via l'API Shopify."
       },
       {
         step: "03",
@@ -51,7 +49,7 @@ const ShopifyIntegration = () => {
       {
         step: "04",
         title: "En ligne et opérationnel",
-        desc: "Votre bot Shopify est actif et répond aux clients 24h/24, 7j/7."
+        desc: "Votre chatbot Shopify est actif et répond aux clients 24h/24, 7j/7."
       }
     ],
     benefitsTitle: "Ce que Glimps fait pour votre boutique Shopify",
@@ -102,32 +100,30 @@ const ShopifyIntegration = () => {
     stats: [
       { value: "73%", label: "Des questions traitées automatiquement" },
       { value: "+21%", label: "Augmentation du taux de conversion" },
-      { value: "4 min", label: "Temps de configuration moyen" },
+      { value: "Rapide", label: "Mise en place via widget" },
       { value: "24/7", label: "Support client continu" }
     ],
     ctaTitle: "Prêt à connecter Glimps à Shopify ?",
     ctaSubtitle: "Rejoignez des centaines de boutiques Shopify qui utilisent Glimps pour automatiser leur service client et augmenter leurs ventes.",
-    ctaButton: "Démarrer avec Shopify →",
     seoTitle: "Chatbot IA pour Shopify - Glimps AI | Intégration Shopify",
-    seoDescription: "Connectez Glimps à votre boutique Shopify en quelques minutes. Synchronisation automatique des produits et commandes. Service client IA 24/7 pour votre webshop Shopify.",
+    seoDescription: "Connectez Glimps à votre boutique Shopify via un widget. Synchronisation automatique des produits et commandes. Service client IA 24/7 pour votre webshop Shopify.",
   } : {
     badge: "Shopify Integratie",
     title: "AI Chatbot voor",
     titleHighlight: "Shopify",
-    subtitle: "Verbind Glimps met je Shopify webshop in enkele minuten. Automatische synchronisatie van producten, voorraad en bestellingen — voor slimme klantenservice 24/7.",
-    ctaTrial: "Gratis starten",
-    ctaDemo: "Bekijk demo",
+    subtitle: "Verbind Glimps met je Shopify webshop via een eenvoudige widget. Automatische synchronisatie van producten, voorraad en bestellingen — voor slimme klantenservice 24/7.",
+    ctaButton: "Demo aanvragen",
     howTitle: "Hoe de Shopify integratie werkt",
     howSteps: [
       {
         step: "01",
-        title: "Installeer de app",
-        desc: "Voeg Glimps toe vanuit de Shopify App Store met één klik. Geen code nodig."
+        title: "Voeg de widget toe",
+        desc: "Plak een eenvoudig stukje code in je Shopify webshop. Geen app, geen complexe installatie."
       },
       {
         step: "02",
         title: "Automatische synchronisatie",
-        desc: "Al je producten, categorieën, prijzen en voorraad worden automatisch ingeladen."
+        desc: "Al je producten, categorieën, prijzen en voorraad worden automatisch ingeladen via de Shopify API."
       },
       {
         step: "03",
@@ -137,7 +133,7 @@ const ShopifyIntegration = () => {
       {
         step: "04",
         title: "Live en operationeel",
-        desc: "Je Shopify bot staat live en beantwoordt klanten 24/7."
+        desc: "Je Shopify chatbot staat live en beantwoordt klanten 24/7."
       }
     ],
     benefitsTitle: "Wat Glimps doet voor jouw Shopify webshop",
@@ -188,14 +184,13 @@ const ShopifyIntegration = () => {
     stats: [
       { value: "73%", label: "Van alle vragen automatisch afgehandeld" },
       { value: "+21%", label: "Stijging in conversieratio" },
-      { value: "4 min", label: "Gemiddelde setup-tijd" },
+      { value: "Snel", label: "Setup via widget" },
       { value: "24/7", label: "Continue klantenservice" }
     ],
     ctaTitle: "Klaar om Glimps aan Shopify te koppelen?",
     ctaSubtitle: "Sluit je aan bij honderden Shopify webshops die Glimps gebruiken om hun klantenservice te automatiseren en meer te verkopen.",
-    ctaButton: "Starten met Shopify →",
     seoTitle: "AI Chatbot voor Shopify - Glimps AI | Shopify Integratie",
-    seoDescription: "Verbind Glimps met je Shopify webshop in enkele minuten. Automatische productsync en besteltracking. AI klantenservice 24/7 voor je Shopify webshop.",
+    seoDescription: "Verbind Glimps met je Shopify webshop via een widget. Automatische productsync en besteltracking. AI klantenservice 24/7 voor je Shopify webshop.",
   };
 
   return (
@@ -248,11 +243,8 @@ const ShopifyIntegration = () => {
             <Button asChild variant="hero" size="lg" className="rounded-full">
               <a href={isFR ? "/fr/demo" : "/demo"}>
                 <Sparkles className="h-5 w-5" />
-                {content.ctaTrial}
+                {content.ctaButton}
               </a>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full">
-              <a href={isFR ? "/fr/demo" : "/demo"}>{content.ctaDemo}</a>
             </Button>
           </div>
         </div>
@@ -349,10 +341,6 @@ const ShopifyIntegration = () => {
               <Zap className="h-5 w-5 text-white" />
             </div>
             <span className="font-semibold">Glimps AI</span>
-            <span className="ml-2 flex items-center gap-1 text-sm text-green-600 font-medium">
-              <Star className="h-4 w-4 fill-green-500 text-green-500" />
-              {isFR ? "Intégration officielle" : "Officiële integratie"}
-            </span>
           </div>
         </div>
       </section>
