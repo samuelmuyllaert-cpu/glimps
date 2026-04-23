@@ -174,7 +174,7 @@ const ShopwareIntegration = () => {
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">{activeContent.badge}</span>
           <div className="mb-6 flex justify-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-border bg-card p-4 shadow-lg">
+            <div className="flex h-20 w-48 items-center justify-center rounded-2xl border border-border bg-card px-6 py-4 shadow-lg">
               <img src={shopwareLogo} alt="Shopware logo" className="h-full w-full object-contain" />
             </div>
           </div>

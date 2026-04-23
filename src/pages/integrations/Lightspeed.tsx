@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import glimpsLogo from "@/assets/glimps-logo-new.png";
-import lightspeedLogo from "@/assets/lightspeed-logo.svg";
+const lightspeedLogoUrl = "https://cdn.worldvectorlogo.com/logos/lightspeed-commerce.svg";
 import {
   ShoppingCart,
   CircleCheck as CheckCircle2,
@@ -175,8 +175,8 @@ const LightspeedIntegration = () => {
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">{activeContent.badge}</span>
           <div className="mb-6 flex justify-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-border bg-card p-4 shadow-lg">
-              <img src={lightspeedLogo} alt="Lightspeed logo" className="h-full w-full object-contain" />
+            <div className="flex h-20 w-48 items-center justify-center rounded-2xl border border-border bg-card px-5 py-4 shadow-lg">
+              <img src={lightspeedLogoUrl} alt="Lightspeed logo" className="h-full w-full object-contain" />
             </div>
           </div>
           <h1 className="mb-6 font-inter text-4xl font-normal leading-tight text-foreground md:text-5xl lg:text-6xl">
@@ -248,7 +248,7 @@ const LightspeedIntegration = () => {
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-3 rounded-2xl border border-border bg-card px-6 py-4 shadow-sm">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-white p-1.5">
-              <img src={lightspeedLogo} alt="Lightspeed" className="h-full w-full object-contain" />
+              <img src={lightspeedLogoUrl} alt="Lightspeed" className="h-full w-full object-contain" />
             </div>
             <span className="text-muted-foreground">+</span>
             <div className="flex h-10 w-10 items-center justify-center rounded-lg overflow-hidden">
