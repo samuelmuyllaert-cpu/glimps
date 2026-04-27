@@ -49,7 +49,14 @@ const Navigation = () => {
   const navLinks = getNavLinks();
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-md shadow-sm">
+    <div className="sticky top-0 z-50 w-full">
+      {/* Announcement banner */}
+      <div className="flex items-center justify-center gap-2 bg-foreground px-4 py-2 text-center text-xs font-medium text-background sm:text-sm">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-2 py-0.5 text-xs font-semibold text-white uppercase tracking-wide">Coming soon</span>
+        <span>NEW AI EMAIL AGENTS</span>
+        <span className="hidden text-background/60 sm:inline">— Automated email handling powered by AI</span>
+      </div>
+    <nav className="w-full border-b border-border/50 bg-background/95 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -162,6 +169,7 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 

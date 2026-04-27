@@ -106,6 +106,13 @@ import PrestaShopIntegration from "./pages/integrations/PrestaShop";
 import WixIntegration from "./pages/integrations/Wix";
 import WordPressIntegration from "./pages/integrations/WordPress";
 import SendcloudIntegration from "./pages/integrations/Sendcloud";
+import BpostIntegration from "./pages/integrations/Bpost";
+import PostNLIntegration from "./pages/integrations/PostNL";
+import DHLIntegration from "./pages/integrations/DHL";
+import GLSIntegration from "./pages/integrations/GLS";
+import MyParcelIntegration from "./pages/integrations/MyParcel";
+import PicqerIntegration from "./pages/integrations/Picqer";
+import FulfillmentCentersIntegration from "./pages/integrations/FulfillmentCenters";
 import ROIGeleFlamingo from "./pages/ROIGeleFlamingo";
 import ROIROIDeGeleFlamingo from "./pages/ROIROIDeGeleFlamingo";
 import NotFound from "./pages/NotFound";
@@ -241,6 +248,27 @@ const App = () => (
         <Route path="/integrations/sendcloud" element={<SendcloudIntegration />} />
         <Route path="/fr/integrations/sendcloud" element={<SendcloudIntegration />} />
         <Route path="/en/integrations/sendcloud" element={<SendcloudIntegration />} />
+        <Route path="/integrations/bpost" element={<BpostIntegration />} />
+        <Route path="/fr/integrations/bpost" element={<BpostIntegration />} />
+        <Route path="/en/integrations/bpost" element={<BpostIntegration />} />
+        <Route path="/integrations/postnl" element={<PostNLIntegration />} />
+        <Route path="/fr/integrations/postnl" element={<PostNLIntegration />} />
+        <Route path="/en/integrations/postnl" element={<PostNLIntegration />} />
+        <Route path="/integrations/dhl" element={<DHLIntegration />} />
+        <Route path="/fr/integrations/dhl" element={<DHLIntegration />} />
+        <Route path="/en/integrations/dhl" element={<DHLIntegration />} />
+        <Route path="/integrations/gls" element={<GLSIntegration />} />
+        <Route path="/fr/integrations/gls" element={<GLSIntegration />} />
+        <Route path="/en/integrations/gls" element={<GLSIntegration />} />
+        <Route path="/integrations/myparcel" element={<MyParcelIntegration />} />
+        <Route path="/fr/integrations/myparcel" element={<MyParcelIntegration />} />
+        <Route path="/en/integrations/myparcel" element={<MyParcelIntegration />} />
+        <Route path="/integrations/picqer" element={<PicqerIntegration />} />
+        <Route path="/fr/integrations/picqer" element={<PicqerIntegration />} />
+        <Route path="/en/integrations/picqer" element={<PicqerIntegration />} />
+        <Route path="/integrations/fulfillment-centers" element={<FulfillmentCentersIntegration />} />
+        <Route path="/fr/integrations/fulfillment-centers" element={<FulfillmentCentersIntegration />} />
+        <Route path="/en/integrations/fulfillment-centers" element={<FulfillmentCentersIntegration />} />
         <Route path="/roi-gele-flamingo" element={<ROIGeleFlamingo />} />
         <Route path="/roi-roi-de-gele-flamingo" element={<ROIROIDeGeleFlamingo />} />
         {/* French Routes */}

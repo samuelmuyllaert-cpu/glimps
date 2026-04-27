@@ -178,7 +178,28 @@ const routesToPrerender = [
   '/en/integrations/wordpress',
   '/integrations/sendcloud',
   '/fr/integrations/sendcloud',
-  '/en/integrations/sendcloud'
+  '/en/integrations/sendcloud',
+  '/integrations/bpost',
+  '/fr/integrations/bpost',
+  '/en/integrations/bpost',
+  '/integrations/postnl',
+  '/fr/integrations/postnl',
+  '/en/integrations/postnl',
+  '/integrations/dhl',
+  '/fr/integrations/dhl',
+  '/en/integrations/dhl',
+  '/integrations/gls',
+  '/fr/integrations/gls',
+  '/en/integrations/gls',
+  '/integrations/myparcel',
+  '/fr/integrations/myparcel',
+  '/en/integrations/myparcel',
+  '/integrations/picqer',
+  '/fr/integrations/picqer',
+  '/en/integrations/picqer',
+  '/integrations/fulfillment-centers',
+  '/fr/integrations/fulfillment-centers',
+  '/en/integrations/fulfillment-centers'
 ];
 
 (async () => {
