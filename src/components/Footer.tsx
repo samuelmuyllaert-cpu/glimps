@@ -369,33 +369,26 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    {/* SEO integration links — visually minimal, below main footer */}
-    <div className="border-t border-border/30 bg-background px-6 py-6">
+    <div className="border-t border-border/20 bg-background px-6 py-5">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground/50">
-          {language === 'fr' ? 'Intégrations' : language === 'en' ? 'Integrations' : 'Integraties'}
-        </p>
-        <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground/40">
-          {/* Platforms */}
-          <a href={language === 'fr' ? '/fr/integrations/shopify' : language === 'en' ? '/en/integrations/shopify' : '/integrations/shopify'} className="hover:text-muted-foreground transition-colors">Shopify</a>
-          <a href={language === 'fr' ? '/fr/integrations/woocommerce' : language === 'en' ? '/en/integrations/woocommerce' : '/integrations/woocommerce'} className="hover:text-muted-foreground transition-colors">WooCommerce</a>
-          <a href={language === 'fr' ? '/fr/integrations/shopware' : language === 'en' ? '/en/integrations/shopware' : '/integrations/shopware'} className="hover:text-muted-foreground transition-colors">Shopware</a>
-          <a href={language === 'fr' ? '/fr/integrations/magento' : language === 'en' ? '/en/integrations/magento' : '/integrations/magento'} className="hover:text-muted-foreground transition-colors">Magento</a>
-          <a href={language === 'fr' ? '/fr/integrations/odoo' : language === 'en' ? '/en/integrations/odoo' : '/integrations/odoo'} className="hover:text-muted-foreground transition-colors">Odoo</a>
-          <a href={language === 'fr' ? '/fr/integrations/lightspeed' : language === 'en' ? '/en/integrations/lightspeed' : '/integrations/lightspeed'} className="hover:text-muted-foreground transition-colors">Lightspeed</a>
-          <a href={language === 'fr' ? '/fr/integrations/prestashop' : language === 'en' ? '/en/integrations/prestashop' : '/integrations/prestashop'} className="hover:text-muted-foreground transition-colors">PrestaShop</a>
-          <a href={language === 'fr' ? '/fr/integrations/wix' : language === 'en' ? '/en/integrations/wix' : '/integrations/wix'} className="hover:text-muted-foreground transition-colors">Wix</a>
-          <a href={language === 'fr' ? '/fr/integrations/wordpress' : language === 'en' ? '/en/integrations/wordpress' : '/integrations/wordpress'} className="hover:text-muted-foreground transition-colors">WordPress</a>
-          {/* Carriers & logistics */}
-          <a href={language === 'fr' ? '/fr/integrations/sendcloud' : language === 'en' ? '/en/integrations/sendcloud' : '/integrations/sendcloud'} className="hover:text-muted-foreground transition-colors">Sendcloud</a>
-          <a href={language === 'fr' ? '/fr/integrations/bpost' : language === 'en' ? '/en/integrations/bpost' : '/integrations/bpost'} className="hover:text-muted-foreground transition-colors">bpost</a>
-          <a href={language === 'fr' ? '/fr/integrations/postnl' : language === 'en' ? '/en/integrations/postnl' : '/integrations/postnl'} className="hover:text-muted-foreground transition-colors">PostNL</a>
-          <a href={language === 'fr' ? '/fr/integrations/dhl' : language === 'en' ? '/en/integrations/dhl' : '/integrations/dhl'} className="hover:text-muted-foreground transition-colors">DHL</a>
-          <a href={language === 'fr' ? '/fr/integrations/gls' : language === 'en' ? '/en/integrations/gls' : '/integrations/gls'} className="hover:text-muted-foreground transition-colors">GLS</a>
-          <a href={language === 'fr' ? '/fr/integrations/myparcel' : language === 'en' ? '/en/integrations/myparcel' : '/integrations/myparcel'} className="hover:text-muted-foreground transition-colors">MyParcel</a>
-          <a href={language === 'fr' ? '/fr/integrations/picqer' : language === 'en' ? '/en/integrations/picqer' : '/integrations/picqer'} className="hover:text-muted-foreground transition-colors">Picqer</a>
-          <a href={language === 'fr' ? '/fr/integrations/fulfillment-centers' : language === 'en' ? '/en/integrations/fulfillment-centers' : '/integrations/fulfillment-centers'} className="hover:text-muted-foreground transition-colors">{language === 'fr' ? 'Centres de fulfillment' : language === 'en' ? 'Fulfillment Centers' : 'Fulfillment Centers'}</a>
-        </div>
+        {(() => {
+          const prefix = language === 'fr' ? '/fr' : language === 'en' ? '/en' : '';
+          const integrations = [
+            'shopify', 'woocommerce', 'shopware', 'magento', 'odoo',
+            'lightspeed', 'prestashop', 'wix', 'wordpress', 'sendcloud',
+            'bpost', 'postnl', 'dhl', 'gls', 'myparcel', 'picqer', 'fulfillment-centers',
+          ];
+          const labels: Record<string, string> = { 'fulfillment-centers': 'Fulfillment Centers', prestashop: 'PrestaShop', postnl: 'PostNL', woocommerce: 'WooCommerce' };
+          return (
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-muted-foreground/35">
+              {integrations.map((slug) => (
+                <a key={slug} href={`${prefix}/integrations/${slug}`} className="hover:text-muted-foreground/60 transition-colors capitalize">
+                  {labels[slug] ?? slug}
+                </a>
+              ))}
+            </div>
+          );
+        })()}
       </div>
     </div>
     </>
