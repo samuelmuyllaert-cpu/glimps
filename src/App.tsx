@@ -105,6 +105,7 @@ import LightspeedIntegration from "./pages/integrations/Lightspeed";
 import PrestaShopIntegration from "./pages/integrations/PrestaShop";
 import WixIntegration from "./pages/integrations/Wix";
 import WordPressIntegration from "./pages/integrations/WordPress";
+import SendcloudIntegration from "./pages/integrations/Sendcloud";
 import ROIGeleFlamingo from "./pages/ROIGeleFlamingo";
 import ROIROIDeGeleFlamingo from "./pages/ROIROIDeGeleFlamingo";
 import NotFound from "./pages/NotFound";
@@ -237,6 +238,9 @@ const App = () => (
         <Route path="/integrations/wordpress" element={<WordPressIntegration />} />
         <Route path="/fr/integrations/wordpress" element={<WordPressIntegration />} />
         <Route path="/en/integrations/wordpress" element={<WordPressIntegration />} />
+        <Route path="/integrations/sendcloud" element={<SendcloudIntegration />} />
+        <Route path="/fr/integrations/sendcloud" element={<SendcloudIntegration />} />
+        <Route path="/en/integrations/sendcloud" element={<SendcloudIntegration />} />
         <Route path="/roi-gele-flamingo" element={<ROIGeleFlamingo />} />
         <Route path="/roi-roi-de-gele-flamingo" element={<ROIROIDeGeleFlamingo />} />
         {/* French Routes */}

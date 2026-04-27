@@ -175,7 +175,10 @@ const routesToPrerender = [
   '/en/integrations/wix',
   '/integrations/wordpress',
   '/fr/integrations/wordpress',
-  '/en/integrations/wordpress'
+  '/en/integrations/wordpress',
+  '/integrations/sendcloud',
+  '/fr/integrations/sendcloud',
+  '/en/integrations/sendcloud'
 ];
 
 (async () => {
