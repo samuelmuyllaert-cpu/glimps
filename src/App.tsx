@@ -115,6 +115,7 @@ import PicqerIntegration from "./pages/integrations/Picqer";
 import FulfillmentCentersIntegration from "./pages/integrations/FulfillmentCenters";
 import ROIGeleFlamingo from "./pages/ROIGeleFlamingo";
 import ROIROIDeGeleFlamingo from "./pages/ROIROIDeGeleFlamingo";
+import ROIChatbot from "./pages/ROIChatbot";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -271,6 +272,7 @@ const App = () => (
         <Route path="/en/integrations/fulfillment-centers" element={<FulfillmentCentersIntegration />} />
         <Route path="/roi-gele-flamingo" element={<ROIGeleFlamingo />} />
         <Route path="/roi-roi-de-gele-flamingo" element={<ROIROIDeGeleFlamingo />} />
+        <Route path="/roi-chatbot" element={<ROIChatbot />} />
         {/* French Routes */}
         <Route path="/fr" element={<Index />} />
         <Route path="/fr/fonctionnalites" element={<Features />} />
