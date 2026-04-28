@@ -218,6 +218,60 @@ export default function ROIChatbot() {
           </div>
         </Section>
 
+        {/* 5b. PERSONNEL COST PERSPECTIVE */}
+        <Section label="Personeelskost-perspectief — meerdere medewerkers">
+          <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ background: "#111111", padding: "13px 20px" }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "white", letterSpacing: "-0.2px", margin: 0 }}>
+                Absolute eurobesparing op basis van aantal medewerkers
+              </p>
+            </div>
+            <div style={{ padding: 20 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14, marginBottom: 20 }}>
+                {[1, 2, 3, 5, 10].map((staff) => {
+                  const staffTV = (calc.tv || 0) * staff;
+                  const totalBenefit = staffTV + (calc.rm || 0);
+                  const netAfterPackage = totalBenefit - (calc.pkgCost || 0);
+                  return (
+                    <div key={staff} style={{ border: staff === csStaff ? "2px solid #E74E4D" : "1px solid #E5E7EB", borderRadius: 10, padding: 16, background: staff === csStaff ? "#FFF5F6" : "white", transition: "all 0.2s" }}>
+                      <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.5px", color: staff === csStaff ? "#C41E3A" : "#6B7280", marginBottom: 8 }}>
+                        {staff === 1 ? "1 medewerker" : `${staff} medewerkers`}
+                        {staff === csStaff && <span style={{ marginLeft: 6, fontSize: 9, background: "#E74E4D", color: "white", padding: "1px 7px", borderRadius: 3 }}>huiden</span>}
+                      </div>
+                      <div style={{ display: "grid", gap: 10 }}>
+                        <div>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>Personeelsbesparing</div>
+                          <div style={{ fontSize: 22, fontWeight: 800, color: "#E74E4D", letterSpacing: "-0.5px" }}>
+                            {fmt(staffTV)}
+                          </div>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginTop: 2 }}>
+                            {Math.round(calc.hrs || 0)}u × €{wage} × {staff}
+                          </div>
+                        </div>
+                        <div style={{ borderTop: "1px solid #E5E7EB", paddingTop: 10 }}>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>+ Bot-omzet marge</div>
+                          <div style={{ fontSize: 14, fontWeight: 700, color: "#111111" }}>
+                            {fmt(calc.rm || 0)}
+                          </div>
+                        </div>
+                        <div style={{ background: staff === csStaff ? "#FEE2E2" : "#F3F4F6", borderRadius: 6, padding: 10 }}>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>Netto na pakket (€{calc.pkgCost})</div>
+                          <div style={{ fontSize: 18, fontWeight: 800, color: netAfterPackage >= 0 ? "#059669" : "#DC2626", letterSpacing: "-0.3px" }}>
+                            {eu(netAfterPackage)}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div style={{ background: "#ECFDF5", border: "1px solid #A7F3D0", borderRadius: 8, padding: 14, fontSize: 11, lineHeight: 1.6 }}>
+                <strong style={{ color: "#065F46" }}>Het kernpunt:</strong> Met meer medewerkers stijgt de absolute personeelskost-besparing lineair. 2 medewerkers × €{wage}/u × {Math.round(calc.hrs || 0)}u = <strong>{fmt((calc.tv || 0) * 2)}/maand</strong> alleen al op personeelskost. Bijkomende omzet van de bot maakt het voordeel nog groter.
+              </div>
+            </div>
+          </div>
+        </Section>
+
         {/* 6. SPLIT */}
         <Section>
           <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, padding: 20 }}>
