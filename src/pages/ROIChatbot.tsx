@@ -329,7 +329,7 @@ export default function ROIChatbot() {
         </Section>
 
         {/* 9. MISSED VALUE */}
-        <Section label="Wat kost het als je dit niet doet?">
+        <Section label="De kost van uitstellen">
           <div style={{ background: "#111111", borderRadius: 12, padding: 22 }}>
             <div style={{ fontSize: 16, fontWeight: 700, color: "white", letterSpacing: "-0.3px", marginBottom: 5 }}>
               Gederfde waarde per maand zonder bot
