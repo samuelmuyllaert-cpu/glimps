@@ -68,21 +68,6 @@ export default function ROIChatbot() {
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#F9FAFB", fontFamily: "-apple-system,'Helvetica Neue',Arial,sans-serif", color: "#111111" }}>
       <Navigation />
 
-      {/* Header */}
-      <div style={{ background: "#111111", padding: "22px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-        <div>
-          <div style={{ fontSize: 22, fontWeight: 700, color: "white", letterSpacing: "-0.5px" }}>
-            glimps<span style={{ color: "#E74E4D" }}>.</span>
-          </div>
-          <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>
-            AI Chatbot ROI Calculator — bereken jouw return on investment
-          </div>
-        </div>
-        <div style={{ background: "#E74E4D", color: "white", fontSize: 9, fontWeight: 700, padding: "5px 14px", borderRadius: 999, letterSpacing: "0.4px", textTransform: "uppercase" }}>
-          Interactief model
-        </div>
-      </div>
-
       {/* Content */}
       <div style={{ maxWidth: 980, margin: "0 auto", padding: "36px 24px 72px", width: "100%", flex: 1 }}>
         {/* 1. PACKAGES */}
