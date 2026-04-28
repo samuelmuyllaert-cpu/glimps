@@ -44,10 +44,10 @@ const SECTORS: SectorPreset[] = [
 ];
 
 const PACKAGES = [
-  { label: "Growth",     price: 325, desc: "500 gesprekken/m" },
-  { label: "Business",   price: 525, desc: "1.000 gesprekken/m" },
-  { label: "Pro",        price: 725, desc: "2.000 gesprekken/m" },
-  { label: "Enterprise", price: 925, desc: "Ongelimiteerd" },
+  { label: "Growth",     price: 325, desc: "500 gesprekken/m",      limit: 500 },
+  { label: "Business",   price: 525, desc: "1.000 gesprekken/m",    limit: 1000 },
+  { label: "Pro",        price: 725, desc: "2.000 gesprekken/m",    limit: 2000 },
+  { label: "Enterprise", price: 925, desc: "Ongelimiteerd",         limit: Infinity },
 ];
 const SETUPS = [
   { label: "Eenvoudig",  price: 500 },
@@ -199,6 +199,11 @@ export default function ROI() {
     const cpcMedewerker   = (timeMin / 60) * wage;
     const cpcAI           = automatedChats > 0 ? monthlyCost / automatedChats : 0;
 
+    // Recommended package based on total conversations
+    const totalConversations = chats + chatSessions;
+    const recommendedPackage = PACKAGES.findIndex(p => p.limit >= totalConversations);
+    const packageTooSmall = PACKAGES[selectedPackage].limit < totalConversations;
+
     // Break-even
     const monthly12 = Array.from({ length: 12 }, (_, i) =>
       grossBenefit * (i + 1) - monthlyCost * (i + 1) - setupCost
@@ -232,6 +237,7 @@ export default function ROI() {
       cpcMedewerker, cpcAI,
       monthly12, beMonth,
       scenarios,
+      totalConversations, recommendedPackage, packageTooSmall,
     };
   }, [
     selectedPackage, selectedSetup,
@@ -302,24 +308,54 @@ export default function ROI() {
           {/* ── 3. PACKAGE + SETUP ───────────────────────────────────────── */}
           <section className="grid sm:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-lg font-semibold mb-4">Maandpakket</h2>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold">Maandpakket</h2>
+                <span className="text-xs text-muted-foreground">
+                  Jouw volume: ~{fmtNum(calc.totalConversations)} gesprekken/m
+                </span>
+              </div>
+
+              {calc.packageTooSmall && (
+                <div className="mb-3 bg-amber-50 border border-amber-300 rounded-xl px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-sm">
+                  <p className="text-amber-800 font-medium">
+                    Je volume ({fmtNum(calc.totalConversations)} gesprekken) overschrijdt de limiet van dit pakket.
+                  </p>
+                  <button
+                    onClick={() => setSelectedPackage(calc.recommendedPackage)}
+                    className="text-xs font-semibold bg-amber-600 text-white px-3 py-1.5 rounded-lg hover:bg-amber-700 transition-colors whitespace-nowrap"
+                  >
+                    Wissel naar {PACKAGES[calc.recommendedPackage].label}
+                  </button>
+                </div>
+              )}
+
               <div className="space-y-2">
-                {PACKAGES.map((p, i) => (
+                {PACKAGES.map((p, i) => {
+                  const tooSmall = p.limit < calc.totalConversations;
+                  return (
                   <button
                     key={p.label}
                     onClick={() => setSelectedPackage(i)}
-                    className={`w-full rounded-lg border px-4 py-3 text-sm text-left flex justify-between items-center transition-all ${
+                    className={`w-full rounded-lg border px-4 py-3 text-sm text-left flex justify-between items-center gap-2 transition-all ${
                       selectedPackage === i
                         ? "bg-primary text-primary-foreground border-primary"
-                        : "bg-card border-border hover:border-primary/50"
+                        : tooSmall
+                          ? "bg-card border-border opacity-50 hover:border-primary/50"
+                          : "bg-card border-border hover:border-primary/50"
                     }`}
                   >
                     <span className="font-medium">{p.label}</span>
-                    <span className={`text-xs ${selectedPackage === i ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                      €{p.price}/m · {p.desc}
-                    </span>
+                    <div className="flex items-center gap-2 ml-auto">
+                      {tooSmall && selectedPackage !== i && (
+                        <span className="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">te klein</span>
+                      )}
+                      <span className={`text-xs ${selectedPackage === i ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
+                        €{p.price}/m · {p.desc}
+                      </span>
+                    </div>
                   </button>
-                ))}
+                  );
+                })}
               </div>
             </div>
             <div>
