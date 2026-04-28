@@ -327,7 +327,7 @@ export default function ROIChatbot() {
                     <div style={{ fontSize: 8, fontWeight: 700, textAlign: "center", color: v >= 0 ? "#059669" : "#DC2626" }}>
                       {(v >= 0 ? "+" : "−") + "€" + (Math.round(Math.abs(v) / 100) / 10).toFixed(1) + "k"}
                     </div>
-                    <div style={{ width: "100%", height: h, background: v >= 0 ? "#E74E4D" : "#FEE2E2", borderRadius: v >= 0 ? "3px 3px 0 0" : "0 0 3px 3px" }} />
+                    <div style={{ width: "100%", height: h, background: v >= 0 ? "#059669" : "#FEE2E2", borderRadius: v >= 0 ? "3px 3px 0 0" : "0 0 3px 3px" }} />
                     <div style={{ fontSize: 8, color: "#6B7280" }}>M{i + 1}</div>
                   </div>
                 );
