@@ -24,24 +24,6 @@ function fmtPct(n: number, decimals = 0): string {
 
 // ─── data ────────────────────────────────────────────────────────────────────
 
-type SectorPreset = {
-  label: string;
-  chats: number; time: number; wage: number; auto: number;
-  visitors: number; engagement: number; conversion: number;
-  aov: number; margin: number; aovUplift: number;
-};
-
-const SECTORS: SectorPreset[] = [
-  { label: "Elektro & Tech",   chats: 800, time: 9,  wage: 19, auto: 75, visitors: 20000, engagement: 4,  conversion: 14, aov: 120, margin: 22, aovUplift: 10 },
-  { label: "Mode & Fashion",   chats: 600, time: 7,  wage: 18, auto: 70, visitors: 18000, engagement: 3,  conversion: 12, aov:  75, margin: 45, aovUplift:  8 },
-  { label: "Sport & Fitness",  chats: 400, time: 8,  wage: 17, auto: 68, visitors: 12000, engagement: 3,  conversion: 11, aov:  85, margin: 35, aovUplift:  7 },
-  { label: "Interieur",        chats: 350, time: 10, wage: 19, auto: 65, visitors: 10000, engagement: 2,  conversion: 10, aov: 250, margin: 38, aovUplift: 12 },
-  { label: "Baby & Kids",      chats: 500, time: 8,  wage: 18, auto: 72, visitors: 15000, engagement: 3,  conversion: 12, aov:  75, margin: 40, aovUplift:  8 },
-  { label: "Beauty",           chats: 550, time: 7,  wage: 18, auto: 73, visitors: 16000, engagement: 4,  conversion: 15, aov:  55, margin: 55, aovUplift:  9 },
-  { label: "Voeding & Health", chats: 450, time: 6,  wage: 17, auto: 70, visitors: 13000, engagement: 3,  conversion: 11, aov:  60, margin: 30, aovUplift:  6 },
-  { label: "Andere",           chats: 500, time: 8,  wage: 18, auto: 70, visitors: 15000, engagement: 3,  conversion: 12, aov:  95, margin: 25, aovUplift:  8 },
-];
-
 const PACKAGES = [
   { label: "Growth",     price: 325, desc: "500 gesprekken/m",   limit: 500      },
   { label: "Business",   price: 525, desc: "1.000 gesprekken/m", limit: 1000     },
@@ -231,32 +213,25 @@ function MoreSliders({ children }: { children: React.ReactNode }) {
 
 // ─── main ─────────────────────────────────────────────────────────────────────
 
+const DEFAULTS = { chats: 500, time: 8, wage: 18, auto: 70, visitors: 15000, engagement: 3, conversion: 12, aov: 95, margin: 25, aovUplift: 8 };
+
 export default function ROI() {
-  const [selectedSector, setSelectedSector] = useState(0);
   const [selectedPackage, setSelectedPackage] = useState(1);
   const [selectedSetup, setSelectedSetup] = useState(0);
 
-  const [chats, setChats] = useState(SECTORS[0].chats);
-  const [timeMin, setTimeMin] = useState(SECTORS[0].time);
-  const [wage, setWage] = useState(SECTORS[0].wage);
-  const [autoPct, setAutoPct] = useState(SECTORS[0].auto);
+  const [chats, setChats] = useState(DEFAULTS.chats);
+  const [timeMin, setTimeMin] = useState(DEFAULTS.time);
+  const [wage, setWage] = useState(DEFAULTS.wage);
+  const [autoPct, setAutoPct] = useState(DEFAULTS.auto);
 
-  const [visitors, setVisitors] = useState(SECTORS[0].visitors);
-  const [engagement, setEngagement] = useState(SECTORS[0].engagement);
-  const [conversion, setConversion] = useState(SECTORS[0].conversion);
-  const [aov, setAov] = useState(SECTORS[0].aov);
-  const [margin, setMargin] = useState(SECTORS[0].margin);
-  const [aovUplift, setAovUplift] = useState(SECTORS[0].aovUplift);
+  const [visitors, setVisitors] = useState(DEFAULTS.visitors);
+  const [engagement, setEngagement] = useState(DEFAULTS.engagement);
+  const [conversion, setConversion] = useState(DEFAULTS.conversion);
+  const [aov, setAov] = useState(DEFAULTS.aov);
+  const [margin, setMargin] = useState(DEFAULTS.margin);
+  const [aovUplift, setAovUplift] = useState(DEFAULTS.aovUplift);
 
   const [utmOpen, setUtmOpen] = useState(false);
-
-  function applySector(idx: number) {
-    const s = SECTORS[idx];
-    setSelectedSector(idx);
-    setChats(s.chats); setTimeMin(s.time); setWage(s.wage); setAutoPct(s.auto);
-    setVisitors(s.visitors); setEngagement(s.engagement); setConversion(s.conversion);
-    setAov(s.aov); setMargin(s.margin); setAovUplift(s.aovUplift);
-  }
 
   const calc = useMemo(() => {
     const monthlyCost = PACKAGES[selectedPackage].price;
@@ -383,27 +358,7 @@ export default function ROI() {
 
         <div className="max-w-5xl mx-auto px-4 pt-10 pb-28 space-y-6">
 
-          {/* ── 1. SECTOR ────────────────────────────────────────────────── */}
-          <section className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
-            <SectionLabel>Jouw sector</SectionLabel>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {SECTORS.map((s, i) => (
-                <button
-                  key={s.label}
-                  onClick={() => applySector(i)}
-                  className={`rounded-xl border px-3 py-2.5 text-sm font-medium transition-all text-left ${
-                    selectedSector === i
-                      ? "bg-foreground text-white border-foreground"
-                      : "bg-zinc-50 border-zinc-200 text-foreground hover:border-zinc-400 hover:bg-zinc-100"
-                  }`}
-                >
-                  {s.label}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          {/* ── 2. BLOK A ────────────────────────────────────────────────── */}
+          {/* ── 1. BLOK A ────────────────────────────────────────────────── */}
           <section className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
             <BlockLabel
               letter="A"
@@ -464,7 +419,7 @@ export default function ROI() {
             </div>
           </section>
 
-          {/* ── 3. BLOK B ────────────────────────────────────────────────── */}
+          {/* ── 2. BLOK B ────────────────────────────────────────────────── */}
           <section className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
             <BlockLabel
               letter="B"
