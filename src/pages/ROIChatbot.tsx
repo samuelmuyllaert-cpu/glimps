@@ -50,11 +50,12 @@ export default function ROIChatbot() {
     const netM1 = tot - pkgCost - setupCost;
     const netY = tot * 12 - pkgCost * 12 - setupCost;
     const hC = (time / 60) * wage;
-    const aC = aut > 0 ? pkgCost / aut : pkgCost / chats;
+    const aC = chats > 0 ? pkgCost / chats : 0;
     const sC = Math.max(hC - aC, 0);
     const csPct = tot > 0 ? Math.round((tv / tot) * 100) : 50;
     const rvPct = 100 - csPct;
     const hPW = Math.round((hrs / 4.3) * 10) / 10;
+    const hrsPerEmployee = csStaff > 0 ? hrs / csStaff : 0;
     const mC = 8 * wage;
     const ns = Math.max(hrs - 8, 0);
     const sp = hrs > 0 ? Math.round((ns / hrs) * 100) : 0;
@@ -62,7 +63,7 @@ export default function ROIChatbot() {
     const beM = m12.findIndex((v) => v >= 0) + 1;
     const apPct = hC > 0 ? Math.max(Math.min(Math.round((aC / hC) * 100), 100), 4) : 4;
 
-    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, mC, ns, sp, m12, beM, apPct });
+    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, hrsPerEmployee, mC, ns, sp, m12, beM, apPct });
   }, [cP, cS, chats, time, autVal, wage, botRev, margin, csStaff]);
 
   return (
@@ -170,7 +171,7 @@ export default function ROIChatbot() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
               {[
                 { lbl: "Medewerker", val: fmtC(calc.hC || 0), color: "#DC2626", desc: `${time} min x €${wage}/u` },
-                { lbl: "AI — Glimps", val: fmtC(calc.aC || 0), color: "#059669", desc: `€${calc.pkgCost || 0} / ${calc.aut || 0} gesprekken` },
+                { lbl: "AI — Glimps", val: fmtC(calc.aC || 0), color: "#059669", desc: `€${calc.pkgCost || 0} / ${chats} gesprekken` },
                 { lbl: "Besparing per gesprek", val: fmtC(calc.sC || 0), color: "#D97706", desc: `x ${calc.aut || 0} = ${fmt((calc.sC || 0) * (calc.aut || 0))}/maand` },
               ].map((col) => (
                 <div key={col.lbl} style={{ padding: "20px 16px", borderRight: col === PKGS[0] ? "1px solid #E5E7EB" : "none", textAlign: "center" }}>
@@ -211,8 +212,8 @@ export default function ROIChatbot() {
         {/* 5. METRICS */}
         <Section label="Maandelijkse impact — na go-live">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
-            <Met dark label="Vrijgekomen uren CS" val={Math.round(calc.hrs || 0) + "u"} sub={`${calc.aut || 0} geautomatiseerd`} sub2={`~${calc.hPW || 0}u per week`} />
-            <Met label="Waarde vrijgekomen tijd" val={fmt(calc.tv || 0)} sub={`${Math.round(calc.hrs || 0)}u x €${wage}/u`} />
+            <Met dark label="Vrijgekomen uren CS" val={Math.round(calc.hrs || 0) + "u"} sub={`${calc.aut || 0} geautomatiseerd`} sub2={csStaff > 1 ? `${Math.round(calc.hrsPerEmployee || 0)}u per medewerker` : `~${calc.hPW || 0}u per week`} />
+            <Met label="Waarde vrijgekomen tijd" val={fmt(calc.tv || 0)} sub={`${Math.round(calc.hrs || 0)}u x €${wage}/u`} sub2={csStaff > 1 ? `x ${csStaff} medewerkers` : ""} />
             <Met label="Bot-omzet marge-aandeel" val={fmt(calc.rm || 0)} sub={`€${botRev.toLocaleString("nl-BE")} x ${margin}%`} />
             <Met green={calc.netM >= 0} label="Netto ROI / maand" val={eu(calc.netM || 0)} sub={`na aftrek €${calc.pkgCost || 0}/maand`} />
           </div>
@@ -424,13 +425,16 @@ export default function ROIChatbot() {
               <div style={{ background: "white", padding: "16px 18px" }}>
                 {[
                   { lbl: "Technische opzet & integraties", val: "Externe developer", neg: true },
-                  { lbl: "Maandelijkse monitoring", val: "6–10u/maand", neg: true },
+                  { lbl: "Maandelijkse monitoring", val: "6–10u/maand", neg: true, note: csStaff > 1 ? " (1 persoon volgt)" : "" },
                   { lbl: "Kostprijs monitoring (uurloon)", val: "−€\u202f" + Math.round(calc.mC || 0) + "/mnd", neg: true },
                   { lbl: "Content-updates bij collecties", val: "5u/maand", neg: true },
                   { lbl: "Netto tijdwinst na botbeheer", val: "~" + Math.round(calc.ns || 0) + "u netto", neg: false },
                 ].map((row, idx) => (
                   <div key={idx} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: idx < 4 ? "1px solid #E5E7EB" : "none", gap: 8 }}>
-                    <span style={{ fontSize: 12, color: "#111111" }}>{row.lbl}</span>
+                    <span style={{ fontSize: 12, color: "#111111" }}>
+                      {row.lbl}
+                      {row.note && <span style={{ fontSize: 10, color: "#6B7280", fontWeight: 400 }}>{row.note}</span>}
+                    </span>
                     <span style={{ fontSize: 13, fontWeight: 700, color: row.neg ? "#DC2626" : "#111111" }}>{row.val}</span>
                   </div>
                 ))}
@@ -469,7 +473,7 @@ export default function ROIChatbot() {
           <div style={{ background: "#111111", borderRadius: 12, padding: "16px 20px", marginTop: 12 }}>
             <p style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, margin: 0 }}>
               <strong style={{ color: "#FCA5A5" }}>Het kernpunt:</strong> De tijdsbesparing is alleen reëel als niemand die uren terugstopt in het beheren van de bot. Bij zelfbeheer gaat gemakkelijk{" "}
-              <strong style={{ color: "#FCA5A5" }}>6–10u/maand</strong> verloren. Glimps regelt alles proactief — jij merkt de bot enkel wanneer hij waarde levert.
+              <strong style={{ color: "#FCA5A5" }}>6–10u/maand</strong> verloren. {csStaff > 1 && <>Met <strong>{csStaff}</strong> medewerkers: één volgt de bot, <strong>{csStaff - 1}</strong> profiteren volledig van de vrijgekomen uren. </>}Glimps regelt alles proactief — jij merkt de bot enkel wanneer hij waarde levert.
             </p>
           </div>
         </Section>
