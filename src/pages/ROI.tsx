@@ -346,77 +346,82 @@ export default function ROI() {
             </div>
           </section>
 
-          {/* ── 4. BLOCK A — SUPPORT ROI ─────────────────────────────────── */}
-          <section className="bg-card border border-border rounded-2xl p-6 md:p-8">
-            <SectionHeader
-              label="Blok A — Support ROI"
-              note="Tijdsbesparing klantenservice — bruto bijdrage"
-            />
-            <div className="space-y-6 mb-8">
-              <SliderRow label="Inkomende vragen / maand" hint="Inclusief chat, e-mail en herhalingen" value={chats} min={50} max={3000} step={50} unit="vragen" onChange={setChats} />
-              <SliderRow label="Gem. tijd per vraag (min)" hint="Benchmarks: eenvoudig 4–6 min, complex 10–15 min" value={timeMin} min={2} max={30} step={1} unit="min" onChange={setTimeMin} />
-              <SliderRow label="Bruto uurloon CS-medewerker" hint="Inclusief RSZ en patronale lasten" value={wage} min={14} max={40} step={1} unit="€/u" onChange={setWage} />
-              <SliderRow label="% door bot zelf afgehandeld (zonder medewerker)" hint="Het aandeel vragen dat de bot volledig zelfstandig beantwoordt — geen menselijke tussenkomst nodig. Mediaan Glimps-klanten: 65–80% na 90 dagen. Vereist volledige kennisbasis." value={autoPct} min={30} max={85} step={1} unit="%" onChange={setAutoPct} />
+          {/* ── 4 + 5. SUPPORT ROI + REVENUE ROI naast elkaar ───────────── */}
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+
+            {/* Blok A */}
+            <div className="bg-card border border-border rounded-2xl p-6 h-full flex flex-col">
+              <SectionHeader
+                label="Blok A — Support ROI"
+                note="Tijdsbesparing klantenservice — bruto bijdrage"
+              />
+              <div className="space-y-6 mb-8 flex-1">
+                <SliderRow label="Inkomende vragen / maand" hint="Inclusief chat, e-mail en herhalingen" value={chats} min={50} max={3000} step={50} unit="vragen" onChange={setChats} />
+                <SliderRow label="Gem. tijd per vraag (min)" hint="Benchmarks: eenvoudig 4–6 min, complex 10–15 min" value={timeMin} min={2} max={30} step={1} unit="min" onChange={setTimeMin} />
+                <SliderRow label="Bruto uurloon CS-medewerker" hint="Inclusief RSZ en patronale lasten" value={wage} min={14} max={40} step={1} unit="€/u" onChange={setWage} />
+                <SliderRow label="% door bot zelf afgehandeld (zonder medewerker)" hint="Het aandeel vragen dat de bot volledig zelfstandig beantwoordt — geen menselijke tussenkomst nodig. Mediaan Glimps-klanten: 65–80% na 90 dagen. Vereist volledige kennisbasis." value={autoPct} min={30} max={85} step={1} unit="%" onChange={setAutoPct} />
+              </div>
+
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-sm space-y-1">
+                <p className="text-amber-800 font-medium">
+                  Huidig chatvolume = {fmtPct(calc.ftePct, 1)} van een voltijds CS-medewerker
+                </p>
+                <p className="text-amber-700">
+                  Huidige personeelskost voor dit volume: {fmt(calc.currentCost)}/maand
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <MetricCard label="Vrijgekomen uren / maand" value={fmtNum(calc.freedHours) + " uur"} />
+                <MetricCard label="Waarde vrijgekomen tijd" value={fmt(calc.supportSaving)} />
+                <MetricCard label="Bruto Support Bijdrage / maand" value={fmt(calc.supportSaving)} sub="bruto — kost wordt éénmalig afgetrokken in totaal" accent="green" />
+              </div>
             </div>
 
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-sm space-y-1">
-              <p className="text-amber-800 font-medium">
-                Huidig chatvolume = {fmtPct(calc.ftePct, 1)} van een voltijds CS-medewerker
-              </p>
-              <p className="text-amber-700">
-                Huidige personeelskost voor dit volume: {fmt(calc.currentCost)}/maand
-              </p>
-            </div>
+            {/* Blok B */}
+            <div className="bg-card border border-border rounded-2xl p-6 h-full flex flex-col">
+              <SectionHeader
+                label="Blok B — Revenue ROI"
+                note="Extra omzet via chatbot-interacties — bruto bijdrage"
+              />
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <MetricCard label="Vrijgekomen uren / maand" value={fmtNum(calc.freedHours) + " uur"} />
-              <MetricCard label="Waarde vrijgekomen tijd" value={fmt(calc.supportSaving)} />
-              <MetricCard label="Bruto Support Bijdrage / maand" value={fmt(calc.supportSaving)} sub="bruto — kost wordt éénmalig afgetrokken in totaal" accent="green" />
-            </div>
-          </section>
-
-          {/* ── 5. BLOCK B — REVENUE ROI ─────────────────────────────────── */}
-          <section className="bg-card border border-border rounded-2xl p-6 md:p-8">
-            <SectionHeader
-              label="Blok B — Revenue ROI"
-              note="Extra omzet via chatbot-interacties — bruto bijdrage"
-            />
-
-            {/* visual chain */}
-            <div className="flex flex-wrap items-center gap-1 mb-8 text-xs">
-              {[
-                { label: "Bezoekers/m", val: fmtNum(visitors) },
-                { label: "Chat-interactie", val: fmtPct(engagement, 1) },
-                { label: "Chatgesprekken", val: fmtNum(calc.chatSessions) },
-                { label: "Assisted conv.", val: fmtPct(conversion, 1) },
-                { label: "Extra orders", val: fmtNum(calc.extraOrders) },
-                { label: "AOV", val: fmt(aov) },
-                { label: "Extra omzet/m", val: fmt(calc.totalExtraRev), highlight: true },
-              ].map((step, i, arr) => (
-                <div key={step.label} className="flex items-center gap-1">
-                  <div className={`rounded-lg px-2.5 py-1.5 border ${step.highlight ? "bg-primary text-primary-foreground border-primary font-semibold" : "bg-muted/50 border-border"}`}>
-                    <div className={`font-semibold ${step.highlight ? "" : "text-foreground"}`}>{step.val}</div>
-                    <div className={`text-[10px] ${step.highlight ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{step.label}</div>
+              {/* visual chain */}
+              <div className="flex flex-wrap items-center gap-1 mb-6 text-xs">
+                {[
+                  { label: "Bezoekers/m", val: fmtNum(visitors) },
+                  { label: "Chat-interactie", val: fmtPct(engagement, 1) },
+                  { label: "Chatgesprekken", val: fmtNum(calc.chatSessions) },
+                  { label: "Assisted conv.", val: fmtPct(conversion, 1) },
+                  { label: "Extra orders", val: fmtNum(calc.extraOrders) },
+                  { label: "AOV", val: fmt(aov) },
+                  { label: "Extra omzet/m", val: fmt(calc.totalExtraRev), highlight: true },
+                ].map((step, i, arr) => (
+                  <div key={step.label} className="flex items-center gap-1">
+                    <div className={`rounded-lg px-2.5 py-1.5 border ${step.highlight ? "bg-primary text-primary-foreground border-primary font-semibold" : "bg-muted/50 border-border"}`}>
+                      <div className={`font-semibold ${step.highlight ? "" : "text-foreground"}`}>{step.val}</div>
+                      <div className={`text-[10px] ${step.highlight ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{step.label}</div>
+                    </div>
+                    {i < arr.length - 1 && <ArrowRight className="w-3 h-3 text-muted-foreground flex-shrink-0" />}
                   </div>
-                  {i < arr.length - 1 && <ArrowRight className="w-3 h-3 text-muted-foreground flex-shrink-0" />}
-                </div>
-              ))}
+                ))}
+              </div>
+
+              <div className="space-y-6 mb-8 flex-1">
+                <SliderRow label="Maandelijkse bezoekers" hint="Unieke sessies per maand (Google Analytics)" value={visitors} min={1000} max={200000} step={1000} unit="bezoekers" onChange={setVisitors} />
+                <SliderRow label="Chat-interactie ratio %" hint="% bezoekers dat gesprek start. Sector mediaan: 2–5%" value={engagement} min={1} max={15} step={0.5} unit="%" onChange={setEngagement} />
+                <SliderRow label="Assisted conversie %" hint="% chatgesprekken dat leidt tot aankoop. E-com gemiddelde: 8–18%" value={conversion} min={3} max={35} step={1} unit="%" onChange={setConversion} />
+                <SliderRow label="Gem. orderwaarde AOV" hint="Jouw gemiddelde orderwaarde uit Shopify/analytics" value={aov} min={20} max={500} step={5} unit="€" onChange={setAov} />
+                <SliderRow label="Brutomarge %" hint="Marge na inkoop, exclusief vaste kosten" value={margin} min={5} max={70} step={1} unit="%" onChange={setMargin} />
+                <SliderRow label="AOV-uplift via aanbevelingen %" hint="Upsell via productcarousel. Conservatief: 5–10%. Stel 0% bij twijfel." value={aovUplift} min={0} max={25} step={1} unit="%" onChange={setAovUplift} />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <MetricCard label="Extra orders / maand" value={fmtNum(calc.extraOrders) + " orders"} />
+                <MetricCard label="Extra omzet / maand (bruto)" value={fmt(calc.totalExtraRev)} />
+                <MetricCard label="Bruto Revenue Bijdrage / maand" value={fmt(calc.revenueMargin)} sub="bruto — kost wordt éénmalig afgetrokken in totaal" accent="blue" />
+              </div>
             </div>
 
-            <div className="space-y-6 mb-8">
-              <SliderRow label="Maandelijkse bezoekers" hint="Unieke sessies per maand (Google Analytics)" value={visitors} min={1000} max={200000} step={1000} unit="bezoekers" onChange={setVisitors} />
-              <SliderRow label="Chat-interactie ratio %" hint="% bezoekers dat gesprek start. Sector mediaan: 2–5%" value={engagement} min={1} max={15} step={0.5} unit="%" onChange={setEngagement} />
-              <SliderRow label="Assisted conversie %" hint="% chatgesprekken dat leidt tot aankoop. E-com gemiddelde: 8–18%" value={conversion} min={3} max={35} step={1} unit="%" onChange={setConversion} />
-              <SliderRow label="Gem. orderwaarde AOV" hint="Jouw gemiddelde orderwaarde uit Shopify/analytics" value={aov} min={20} max={500} step={5} unit="€" onChange={setAov} />
-              <SliderRow label="Brutomarge %" hint="Marge na inkoop, exclusief vaste kosten" value={margin} min={5} max={70} step={1} unit="%" onChange={setMargin} />
-              <SliderRow label="AOV-uplift via aanbevelingen %" hint="Upsell via productcarousel. Conservatief: 5–10%. Stel 0% bij twijfel." value={aovUplift} min={0} max={25} step={1} unit="%" onChange={setAovUplift} />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <MetricCard label="Extra orders / maand" value={fmtNum(calc.extraOrders) + " orders"} />
-              <MetricCard label="Extra omzet / maand (bruto)" value={fmt(calc.totalExtraRev)} />
-              <MetricCard label="Bruto Revenue Bijdrage / maand" value={fmt(calc.revenueMargin)} sub="bruto — kost wordt éénmalig afgetrokken in totaal" accent="blue" />
-            </div>
           </section>
 
           {/* ── 6. TOTAL BUSINESS CASE ───────────────────────────────────── */}
