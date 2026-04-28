@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chatbot ROI Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --primary: #2563eb;
+    --primary-light: #eff6ff;
+    --primary-dark: #1d4ed8;
+    --success: #10b981;
+    --success-light: #ecfdf5;
+    --error: #ef4444;
+    --error-light: #fef2f2;
+    --warning: #f59e0b;
+    --warning-light: #fffbeb;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md: 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+  }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    color: var(--gray-800);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+    color: #fff;
+    padding: 64px 16px 72px;
+    text-align: center;
+  }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
+  .hero p { font-size: 1.1rem; opacity: .85; max-width: 560px; margin: 0 auto 36px; }
+  .hero-stats { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .hero-stat {
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    min-width: 200px;
+  }
+  .hero-stat .stat-num { font-size: 1.8rem; font-weight: 800; display: block; }
+  .hero-stat .stat-label { font-size: .85rem; opacity: .8; }
+
+  /* SECTIONS */
+  .section { padding: 48px 0 0; }
+  .section:last-child { padding-bottom: 64px; }
+  .section-title {
+    font-size: 1.4rem; font-weight: 700; color: var(--gray-900);
+    margin-bottom: 6px;
+  }
+  .section-sub { color: var(--gray-500); font-size: .92rem; margin-bottom: 24px; }
+  .section-divider { height: 1px; background: var(--gray-200); margin: 48px 0 0; }
+
+  /* CARDS */
+  .card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .metric-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .metric-card .mc-label { font-size: .8rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+  .metric-card .mc-value { font-size: 1.5rem; font-weight: 700; color: var(--gray-900); }
+  .metric-card .mc-sub { font-size: .8rem; color: var(--gray-400); margin-top: 4px; }
+  .metric-card.success { border-color: var(--success); background: var(--success-light); }
+  .metric-card.success .mc-value { color: var(--success); }
+  .metric-card.primary { border-color: var(--primary); background: var(--primary-light); }
+  .metric-card.primary .mc-value { color: var(--primary); }
+  .metric-card.error { border-color: var(--error); background: var(--error-light); }
+  .metric-card.error .mc-value { color: var(--error); }
+
+  /* SECTOR GRID */
+  .sector-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+  .sector-btn {
+    padding: 14px 10px;
+    background: #fff;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    text-align: center;
+    transition: all .15s;
+  }
+  .sector-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+  .sector-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+  /* PACKAGES */
+  .pkg-setup-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 600px) { .pkg-setup-row { grid-template-columns: 1fr; } }
+  .pkg-group-label { font-weight: 600; font-size: .95rem; color: var(--gray-700); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .volume-badge { font-size: .75rem; font-weight: 500; background: var(--gray-100); color: var(--gray-600); border-radius: 20px; padding: 2px 10px; }
+  .pkg-cards { display: flex; flex-direction: column; gap: 8px; }
+  .pkg-card {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 14px;
+    background: #fff;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all .15s;
+  }
+  .pkg-card:hover { border-color: var(--primary); }
+  .pkg-card.active { border-color: var(--primary); background: var(--primary-light); }
+  .pkg-card .pkg-name { font-weight: 600; font-size: .92rem; color: var(--gray-800); }
+  .pkg-card .pkg-desc { font-size: .78rem; color: var(--gray-500); }
+  .pkg-card .pkg-price { font-weight: 700; color: var(--primary); font-size: .95rem; }
+  .badge-small { font-size: .7rem; font-weight: 700; background: var(--warning); color: #fff; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
+  .warning-banner {
+    background: var(--warning-light);
+    border: 1px solid #fde68a;
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    margin-top: 14px; flex-wrap: wrap;
+  }
+  .warning-banner p { font-size: .88rem; color: #92400e; }
+  .btn-small {
+    font-family: inherit; font-size: .8rem; font-weight: 600;
+    background: var(--warning); color: #fff;
+    border: none; border-radius: var(--radius-sm);
+    padding: 6px 14px; cursor: pointer; white-space: nowrap;
+  }
+  .btn-small:hover { background: #d97706; }
+
+  /* SLIDERS */
+  .sliders-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .slider-item { display: flex; flex-direction: column; gap: 6px; }
+  .slider-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .slider-label { font-weight: 600; font-size: .9rem; color: var(--gray-700); }
+  .slider-value { font-weight: 700; font-size: 1rem; color: var(--primary); }
+  .slider-hint { font-size: .75rem; color: var(--gray-400); }
+  input[type="range"] {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; height: 6px;
+    background: var(--gray-200); border-radius: 3px; outline: none; cursor: pointer;
+    accent-color: var(--primary);
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 18px; height: 18px;
+    background: var(--primary); border-radius: 50%; cursor: pointer;
+    box-shadow: 0 1px 4px rgba(37,99,235,.4);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 18px; height: 18px;
+    background: var(--primary); border-radius: 50%; cursor: pointer; border: none;
+  }
+
+  /* INFO BOX */
+  .info-box {
+    background: var(--warning-light);
+    border: 1px solid #fde68a;
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    font-size: .88rem;
+    color: #92400e;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .info-box .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* FUNNEL */
+  .funnel-row {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: var(--primary-light);
+    border-radius: var(--radius-sm);
+    border: 1px solid #bfdbfe;
+  }
+  .funnel-step { text-align: center; min-width: 80px; }
+  .funnel-step .fs-val { font-size: 1rem; font-weight: 700; color: var(--gray-900); }
+  .funnel-step .fs-label { font-size: .7rem; color: var(--gray-500); }
+  .funnel-arrow { font-size: 1.2rem; color: var(--primary); opacity: .7; }
+  .funnel-pct { font-size: .75rem; font-weight: 600; color: var(--primary); }
+
+  /* SCENARIO CARDS */
+  .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .scenario-card {
+    background: #fff;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .scenario-card.expected { border-color: var(--primary); }
+  .scenario-card .sc-tag { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+  .sc-tag.conservatief { color: var(--gray-500); }
+  .sc-tag.verwacht { color: var(--primary); }
+  .sc-tag.sterk { color: var(--success); }
+  .scenario-card .sc-net { font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; }
+  .sc-detail { font-size: .8rem; color: var(--gray-500); display: flex; justify-content: space-between; margin-bottom: 4px; }
+  .sc-detail span:last-child { font-weight: 600; color: var(--gray-700); }
+
+  /* PROGRESS BAR */
+  .progress-row { margin-bottom: 16px; }
+  .progress-header { display: flex; justify-content: space-between; font-size: .85rem; margin-bottom: 6px; }
+  .progress-bar-bg { background: var(--gray-100); border-radius: 4px; height: 10px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; border-radius: 4px; transition: width .4s; }
+
+  /* CHART */
+  .chart-container { overflow-x: auto; }
+  .chart-wrap { min-width: 560px; }
+  .bars-area { display: flex; align-items: flex-end; gap: 6px; height: 220px; padding: 0 4px; }
+  .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 32px; }
+  .bar-val { font-size: .62rem; font-weight: 700; margin-bottom: 3px; text-align: center; }
+  .bar-rect { width: 100%; border-radius: 4px 4px 0 0; transition: height .4s; }
+  .bar-label { font-size: .7rem; color: var(--gray-500); margin-top: 6px; }
+  .bar-be { outline: 3px solid var(--primary); outline-offset: 1px; }
+  .be-legend { font-size: .8rem; color: var(--gray-500); margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .be-dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 5px; vertical-align: middle; }
+
+  /* TABLE */
+  .cost-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .cost-table th { text-align: left; padding: 10px 12px; background: var(--gray-50); color: var(--gray-600); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; border-bottom: 2px solid var(--gray-200); }
+  .cost-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-100); }
+  .cost-table tr:last-child td { border-bottom: none; font-weight: 700; background: var(--gray-50); }
+  .cost-table .pos { color: var(--success); font-weight: 600; }
+  .cost-table .neg { color: var(--error); font-weight: 600; }
+
+  /* ACCORDION */
+  .accordion { border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; }
+  .accordion-header {
+    width: 100%; padding: 16px 20px;
+    background: var(--gray-50); border: none;
+    display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer; font-family: inherit; font-size: .95rem; font-weight: 600;
+    color: var(--gray-800); text-align: left; transition: background .15s;
+  }
+  .accordion-header:hover { background: var(--gray-100); }
+  .accordion-header .chevron { transition: transform .3s; font-size: 1.1rem; }
+  .accordion-header.open .chevron { transform: rotate(180deg); }
+  .accordion-body { display: none; padding: 24px 20px; background: #fff; border-top: 1px solid var(--gray-200); }
+  .accordion-body.open { display: block; }
+  .steps-list { counter-reset: steps; }
+  .step-item { counter-increment: steps; display: flex; gap: 14px; margin-bottom: 18px; }
+  .step-item::before {
+    content: counter(steps);
+    min-width: 28px; height: 28px;
+    background: var(--primary); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: .8rem; font-weight: 700; flex-shrink: 0;
+  }
+  .step-content h4 { font-size: .9rem; font-weight: 600; margin-bottom: 3px; }
+  .step-content p { font-size: .82rem; color: var(--gray-500); }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    font-size: .78rem;
+    color: var(--gray-400);
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  /* TOTAL CASE */
+  .total-hero {
+    background: linear-gradient(135deg, #064e3b, #059669);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .total-hero .th-label { font-size: .85rem; opacity: .8; margin-bottom: 6px; }
+  .total-hero .th-val { font-size: 2.4rem; font-weight: 800; }
+  .total-hero .th-sub { font-size: .9rem; opacity: .75; margin-top: 6px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .metric-grid { grid-template-columns: 1fr 1fr; }
+    .sliders-grid { grid-template-columns: 1fr; }
+    .bars-area { gap: 3px; }
+    .bar-val { font-size: .55rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="container">
+    <h1>Wat levert een AI chatbot jouw webshop op?</h1>
+    <p>Bereken je return on investment in minder dan 2 minuten. Stel de sliders in op jouw situatie en zie meteen het resultaat.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="stat-num">65–80%</span>
+        <span class="stat-label">Automatisatie van support</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-num">€325–925/m</span>
+        <span class="stat-label">Pakketprijs per maand</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ===== SECTOR PICKER ===== -->
+  <div class="section">
+    <div class="section-title">Kies jouw sector</div>
+    <div class="section-sub">We vullen de standaardwaarden in op basis van gemiddelden in jouw branche.</div>
+    <div class="sector-grid" id="sectorGrid"></div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== PACKAGES + SETUP ===== -->
+  <div class="section">
+    <div class="section-title">Pakket & Opstartkost</div>
+    <div class="section-sub">Kies het pakket dat past bij jouw volume en de gewenste opzetcomplexiteit.</div>
+    <div class="pkg-setup-row">
+      <div>
+        <div class="pkg-group-label">
+          Pakket <span class="volume-badge" id="volumeBadge"></span>
+        </div>
+        <div class="pkg-cards" id="pkgCards"></div>
+        <div id="pkgWarning" style="display:none" class="warning-banner">
+          <p id="pkgWarningText"></p>
+          <button class="btn-small" id="pkgUpgradeBtn">Wissel</button>
+        </div>
+      </div>
+      <div>
+        <div class="pkg-group-label">Opstartkost</div>
+        <div class="pkg-cards" id="setupCards"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== BLOCK A: SUPPORT ROI ===== -->
+  <div class="section">
+    <div class="section-title">A. Support ROI — Tijdsbesparing</div>
+    <div class="section-sub">Hoeveel kost jouw supportteam nu, en hoeveel bespaar je met automatisatie?</div>
+    <div id="infoBox" class="info-box">
+      <span class="icon">ℹ️</span>
+      <span id="infoBoxText"></span>
+    </div>
+    <div class="card" style="margin-bottom:20px">
+      <div class="sliders-grid" id="supportSliders"></div>
+    </div>
+    <div class="metric-grid" id="supportMetrics"></div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== BLOCK B: REVENUE ROI ===== -->
+  <div class="section">
+    <div class="section-title">B. Revenue ROI — Extra omzet via chat</div>
+    <div class="section-sub">Bezoekers die chatten, kopen vaker en meer. Bereken de directe omzetimpact.</div>
+    <div id="funnelRow" class="funnel-row"></div>
+    <div class="card" style="margin-bottom:20px">
+      <div class="sliders-grid" id="revenueSliders"></div>
+    </div>
+    <div class="metric-grid" id="revenueMetrics"></div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== TOTAL BUSINESS CASE ===== -->
+  <div class="section">
+    <div class="section-title">Totale business case</div>
+    <div class="section-sub">Gecombineerde impact van support- en omzetoptimalisatie.</div>
+    <div class="total-hero">
+      <div class="th-label">Netto maandvoordeel (na maandkost)</div>
+      <div class="th-val" id="totalNetMonthly"></div>
+      <div class="th-sub" id="totalNetMonth1sub"></div>
+    </div>
+    <div class="metric-grid" id="totalMetrics"></div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== SCENARIOS ===== -->
+  <div class="section">
+    <div class="section-title">Scenario-analyse</div>
+    <div class="section-sub">Wat als de resultaten mee- of tegenvallen?</div>
+    <div class="scenario-grid" id="scenarioGrid"></div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== COST PER CONVERSATION ===== -->
+  <div class="section">
+    <div class="section-title">Kost per gesprek</div>
+    <div class="section-sub">Vergelijking tussen menselijke support en AI-chatbot per afgehandeld gesprek.</div>
+    <div class="metric-grid" id="cpcMetrics"></div>
+    <div style="margin-top:20px">
+      <div class="progress-row">
+        <div class="progress-header">
+          <span>Medewerker</span>
+          <span id="cpcMedLabel"></span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="cpcMedBar" style="background:var(--error)"></div>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-header">
+          <span>AI Chatbot</span>
+          <span id="cpcAiLabel"></span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="cpcAiBar" style="background:var(--primary)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== BREAK-EVEN CHART ===== -->
+  <div class="section">
+    <div class="section-title">Break-even analyse</div>
+    <div class="section-sub">Cumulatief netto resultaat over 12 maanden, inclusief eenmalige opstartkost.</div>
+    <div class="card">
+      <div class="chart-container">
+        <div class="chart-wrap">
+          <div class="bars-area" id="barChart"></div>
+          <div style="display:flex; gap:6px; padding:0 4px; margin-top:4px" id="barLabels"></div>
+        </div>
+      </div>
+      <div class="be-legend" id="beLegend"></div>
+    </div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== COST BREAKDOWN TABLE ===== -->
+  <div class="section">
+    <div class="section-title">Volledige kostenanalyse</div>
+    <div class="section-sub">Gedetailleerd overzicht van alle baten en kosten.</div>
+    <div class="card" style="padding:0; overflow:hidden">
+      <table class="cost-table" id="costTable"></table>
+    </div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ===== UTM TRACKING ===== -->
+  <div class="section">
+    <div class="section-title">UTM-tracking & conversie-attributie</div>
+    <div class="section-sub">Volg je ROI nauwkeurig met UTM-parameters en conversietracking.</div>
+    <div class="accordion">
+      <button class="accordion-header" id="utmToggle" onclick="toggleAccordion()">
+        <span>Hoe stel je UTM-tracking in voor je chatbot?</span>
+        <span class="chevron">▼</span>
+      </button>
+      <div class="accordion-body" id="utmBody">
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-content">
+              <h4>Voeg UTM-parameters toe aan chatlinks</h4>
+              <p>Gebruik utm_source=chatbot, utm_medium=chat, utm_campaign=support voor alle links die de chatbot verstuurt naar productpagina's of checkouts.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-content">
+              <h4>Stel conversiedoelen in</h4>
+              <p>Maak een apart doel aan in Google Analytics of je e-commerce platform voor sessies met chatinteractie. Track zowel directe als geassisteerde conversies.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-content">
+              <h4>Monitor de chatbot-sessies</h4>
+              <p>Filter alle sessies met chatinteractie en vergelijk conversieratio, gemiddeld orderbedrag en bounce rate met sessies zonder chat.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-content">
+              <h4>Bereken de reële ROI maandelijks</h4>
+              <p>Exporteer je data elke maand en vergelijk met de projecties uit deze calculator. Pas de sliders aan op basis van werkelijke prestaties voor betere voorspellingen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="metric-grid" id="utmMetrics" style="margin-top:16px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DISCLAIMER ===== -->
+  <div class="disclaimer">
+    Deze calculator geeft indicatieve schattingen op basis van branchegemiddelden. Werkelijke resultaten kunnen afwijken op basis van implementatie, doelgroep en marktomstandigheden. Geen rechten kunnen worden ontleend aan de gepresenteerde cijfers. © 2024
+  </div>
+
+</div><!-- /container -->
+
+<script>
+// ==============================
+// DATA
+// ==============================
+const SECTORS = [
+  { label:"Elektro & Tech",   chats:800, time:9,  wage:19, auto:75, visitors:20000, engagement:4,  conversion:14, aov:120, margin:22, aovUplift:10 },
+  { label:"Mode & Fashion",   chats:600, time:7,  wage:18, auto:70, visitors:18000, engagement:3,  conversion:12, aov:75,  margin:45, aovUplift:8  },
+  { label:"Sport & Fitness",  chats:400, time:8,  wage:17, auto:68, visitors:12000, engagement:3,  conversion:11, aov:85,  margin:35, aovUplift:7  },
+  { label:"Interieur",        chats:350, time:10, wage:19, auto:65, visitors:10000, engagement:2,  conversion:10, aov:250, margin:38, aovUplift:12 },
+  { label:"Baby & Kids",      chats:500, time:8,  wage:18, auto:72, visitors:15000, engagement:3,  conversion:12, aov:75,  margin:40, aovUplift:8  },
+  { label:"Beauty",           chats:550, time:7,  wage:18, auto:73, visitors:16000, engagement:4,  conversion:15, aov:55,  margin:55, aovUplift:9  },
+  { label:"Voeding & Health", chats:450, time:6,  wage:17, auto:70, visitors:13000, engagement:3,  conversion:11, aov:60,  margin:30, aovUplift:6  },
+  { label:"Andere",           chats:500, time:8,  wage:18, auto:70, visitors:15000, engagement:3,  conversion:12, aov:95,  margin:25, aovUplift:8  },
+];
+
+const PACKAGES = [
+  { label:"Growth",     price:325, desc:"500 gesprekken/m",   limit:500      },
+  { label:"Business",   price:525, desc:"1.000 gesprekken/m", limit:1000     },
+  { label:"Pro",        price:725, desc:"2.000 gesprekken/m", limit:2000     },
+  { label:"Enterprise", price:925, desc:"Ongelimiteerd",      limit:Infinity },
+];
+
+const SETUPS = [
+  { label:"Eenvoudig", price:500  },
+  { label:"Standaard", price:999  },
+  { label:"Complex",   price:1500 },
+  { label:"Maatwerk",  price:2000 },
+];
+
+// ==============================
+// STATE
+// ==============================
+const state = {
+  sector: 0,
+  pkg: 1,
+  setup: 1,
+  chats: 600,
+  timeMin: 7,
+  wage: 18,
+  autoPct: 70,
+  visitors: 18000,
+  engagement: 3,
+  conversion: 12,
+  aov: 75,
+  margin: 45,
+  aovUplift: 8,
+};
+
+// ==============================
+// FORMATTING
+// ==============================
+function fmtThousands(n) {
+  return Math.round(Math.abs(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+function fmt(n) {
+  const v = Math.round(n);
+  return (v < 0 ? '−€' : '€') + fmtThousands(v);
+}
+function fmtPos(n) {
+  const v = Math.round(n);
+  return (v < 0 ? '−€' : '+€') + fmtThousands(v);
+}
+function fmtNum(n) {
+  return Math.round(Math.abs(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+function fmtPct(n, decimals = 0) {
+  if (decimals === 0) return Math.round(n) + '%';
+  const factor = Math.pow(10, decimals);
+  const fixed = Math.round(n * factor) / factor;
+  return fixed.toString().replace('.', ',') + '%';
+}
+
+// ==============================
+// CALCULATIONS
+// ==============================
+function calc(s) {
+  const monthlyCost = PACKAGES[s.pkg].price;
+  const setupCost = SETUPS[s.setup].price;
+
+  const automatedChats = Math.floor(s.chats * s.autoPct / 100);
+  const freedHours = automatedChats * (s.timeMin / 60);
+  const supportSaving = Math.round(freedHours * s.wage);
+  const totalHours = s.chats * (s.timeMin / 60);
+  const ftePct = (totalHours / 176) * 100;
+  const currentCost = Math.round(totalHours * s.wage);
+
+  const chatSessions = Math.floor(s.visitors * s.engagement / 100);
+  const extraOrders = Math.floor(chatSessions * s.conversion / 100);
+  const baseRevenue = extraOrders * s.aov;
+  const upliftRevenue = baseRevenue * s.aovUplift / 100;
+  const totalExtraRev = baseRevenue + upliftRevenue;
+  const revenueMarginBase = Math.round(baseRevenue * s.margin / 100);
+  const revenueMarginUplift = Math.round(upliftRevenue * s.margin / 100);
+  const revenueMargin = Math.round(totalExtraRev * s.margin / 100);
+
+  const grossBenefit = supportSaving + revenueMargin;
+  const netMonthly = grossBenefit - monthlyCost;
+  const netMonth1 = grossBenefit - monthlyCost - setupCost;
+  const netYear1 = grossBenefit * 12 - monthlyCost * 12 - setupCost;
+
+  const cpcMedewerker = (s.timeMin / 60) * s.wage;
+  const cpcAI = automatedChats > 0 ? monthlyCost / automatedChats : 0;
+
+  const totalConversations = s.chats + chatSessions;
+  let recommendedPkg = PACKAGES.length - 1;
+  for (let i = 0; i < PACKAGES.length; i++) {
+    if (PACKAGES[i].limit >= totalConversations) { recommendedPkg = i; break; }
+  }
+  const packageTooSmall = PACKAGES[s.pkg].limit < totalConversations;
+
+  const monthly12 = Array.from({length:12}, (_,i) =>
+    grossBenefit*(i+1) - monthlyCost*(i+1) - setupCost
+  );
+  let beMonth = -1;
+  for (let i = 0; i < 12; i++) {
+    if (monthly12[i] >= 0) { beMonth = i; break; }
+  }
+
+  // Scenarios
+  function calcScenario(aP, eP, cP) {
+    const aC = Math.floor(s.chats * aP / 100);
+    const fH = aC * (s.timeMin / 60);
+    const sS = Math.round(fH * s.wage);
+    const cS = Math.floor(s.visitors * eP / 100);
+    const eO = Math.floor(cS * cP / 100);
+    const bR = eO * s.aov;
+    const uR = bR * s.aovUplift / 100;
+    const rM = Math.round((bR + uR) * s.margin / 100);
+    const net = sS + rM - monthlyCost;
+    return { autoP:aP, engP:eP, convP:cP, sS, rM, net };
+  }
+  const scenarios = {
+    conservative: calcScenario(45, Math.max(1, s.engagement * 0.5), Math.max(3, s.conversion * 0.7)),
+    expected:     calcScenario(s.autoPct, s.engagement, s.conversion),
+    strong:       calcScenario(82, Math.min(15, s.engagement * 1.5), Math.min(35, s.conversion * 1.3)),
+  };
+
+  return {
+    monthlyCost, setupCost,
+    automatedChats, freedHours, supportSaving, totalHours, ftePct, currentCost,
+    chatSessions, extraOrders, baseRevenue, upliftRevenue, totalExtraRev,
+    revenueMarginBase, revenueMarginUplift, revenueMargin,
+    grossBenefit, netMonthly, netMonth1, netYear1,
+    cpcMedewerker, cpcAI,
+    totalConversations, recommendedPkg, packageTooSmall,
+    monthly12, beMonth,
+    scenarios,
+  };
+}
+
+// ==============================
+// SLIDER DEFINITIONS
+// ==============================
+const SUPPORT_SLIDERS = [
+  { key:'chats',   label:'Chats per maand', min:50,  max:3000, step:10,  unit:'', hint:'Totaal aantal supportgesprekken per maand' },
+  { key:'timeMin', label:'Gem. gespreksduur', min:2,  max:30,   step:1,   unit:' min', hint:'Gemiddelde duur van één supportgesprek' },
+  { key:'wage',    label:'Uurloon medewerker', min:14, max:40,  step:0.5, unit:' €/u', hint:'Bruto uurloon inclusief sociale lasten' },
+  { key:'autoPct', label:'Automatisatiegraad', min:30, max:85,  step:1,   unit:'%', hint:'% gesprekken dat AI volledig afhandelt' },
+];
+const REVENUE_SLIDERS = [
+  { key:'visitors',   label:'Bezoekers/maand',     min:1000,  max:200000, step:500,  unit:'', hint:'Unieke bezoekers per maand' },
+  { key:'engagement', label:'Chat-engagementrate',  min:1,     max:15,     step:0.5,  unit:'%', hint:'% bezoekers dat een chatgesprek start' },
+  { key:'conversion', label:'Conversieratio chat',  min:3,     max:35,     step:0.5,  unit:'%', hint:'% chatbezoekers dat een bestelling plaatst' },
+  { key:'aov',        label:'Gem. orderwaarde (AOV)', min:20,  max:500,    step:5,    unit:' €', hint:'Gemiddeld bestelbedrag per order' },
+  { key:'margin',     label:'Marge',                min:5,     max:70,     step:1,    unit:'%', hint:'Uw nettomarge op de extra omzet' },
+  { key:'aovUplift',  label:'AOV-uplift via chat',  min:0,     max:25,     step:0.5,  unit:'%', hint:'Extra besteedbaar via chatadvies (upsell/cross-sell)' },
+];
+
+// ==============================
+// RENDER HELPERS
+// ==============================
+function el(id) { return document.getElementById(id); }
+
+function renderSliders(containerId, sliders) {
+  const c = el(containerId);
+  c.innerHTML = '';
+  sliders.forEach(s_def => {
+    const val = state[s_def.key];
+    const displayVal = s_def.unit === '%' ? fmtPct(val) : (s_def.key === 'visitors' ? fmtNum(val) : val + s_def.unit);
+    const div = document.createElement('div');
+    div.className = 'slider-item';
+    div.innerHTML = `
+      <div class="slider-header">
+        <span class="slider-label">${s_def.label}</span>
+        <span class="slider-value" id="sv_${s_def.key}">${displayVal}</span>
+      </div>
+      <input type="range" min="${s_def.min}" max="${s_def.max}" step="${s_def.step}"
+        value="${val}" id="sl_${s_def.key}" data-key="${s_def.key}">
+      <span class="slider-hint">${s_def.hint}</span>
+    `;
+    c.appendChild(div);
+    div.querySelector('input').addEventListener('input', function() {
+      state[this.dataset.key] = parseFloat(this.value);
+      update();
+    });
+  });
+}
+
+function updateSliderValues() {
+  [...SUPPORT_SLIDERS, ...REVENUE_SLIDERS].forEach(s_def => {
+    const inp = el('sl_' + s_def.key);
+    const lbl = el('sv_' + s_def.key);
+    if (!inp || !lbl) return;
+    inp.value = state[s_def.key];
+    const val = state[s_def.key];
+    let displayVal;
+    if (s_def.unit === '%') displayVal = fmtPct(val);
+    else if (s_def.key === 'visitors') displayVal = fmtNum(val);
+    else displayVal = val + s_def.unit;
+    lbl.textContent = displayVal;
+  });
+}
+
+// ==============================
+// SECTOR GRID
+// ==============================
+function renderSectorGrid() {
+  const c = el('sectorGrid');
+  c.innerHTML = '';
+  SECTORS.forEach((sec, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'sector-btn' + (i === state.sector ? ' active' : '');
+    btn.textContent = sec.label;
+    btn.addEventListener('click', () => {
+      state.sector = i;
+      const sec = SECTORS[i];
+      state.chats = sec.chats;
+      state.timeMin = sec.time;
+      state.wage = sec.wage;
+      state.autoPct = sec.auto;
+      state.visitors = sec.visitors;
+      state.engagement = sec.engagement;
+      state.conversion = sec.conversion;
+      state.aov = sec.aov;
+      state.margin = sec.margin;
+      state.aovUplift = sec.aovUplift;
+      renderSectorGrid();
+      updateSliderValues();
+      update();
+    });
+    c.appendChild(btn);
+  });
+}
+
+// ==============================
+// PACKAGES + SETUP
+// ==============================
+function renderPkgCards(c) {
+  const r = calc(state);
+  c.innerHTML = '';
+  PACKAGES.forEach((pkg, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'pkg-card' + (i === state.pkg ? ' active' : '');
+    const tooSmall = pkg.limit < r.totalConversations;
+    btn.innerHTML = `
+      <div>
+        <div class="pkg-name">${pkg.label}${tooSmall ? '<span class="badge-small">te klein</span>' : ''}</div>
+        <div class="pkg-desc">${pkg.desc}</div>
+      </div>
+      <div class="pkg-price">${fmt(pkg.price)}/m</div>
+    `;
+    btn.addEventListener('click', () => {
+      state.pkg = i;
+      update();
+    });
+    c.appendChild(btn);
+  });
+}
+
+function renderSetupCards(c) {
+  c.innerHTML = '';
+  SETUPS.forEach((su, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'pkg-card' + (i === state.setup ? ' active' : '');
+    btn.innerHTML = `
+      <div>
+        <div class="pkg-name">${su.label}</div>
+      </div>
+      <div class="pkg-price">${fmt(su.price)}</div>
+    `;
+    btn.addEventListener('click', () => {
+      state.setup = i;
+      update();
+    });
+    c.appendChild(btn);
+  });
+}
+
+// ==============================
+// FUNNEL
+// ==============================
+function renderFunnel(r) {
+  el('funnelRow').innerHTML = `
+    <div class="funnel-step">
+      <div class="fs-val">${fmtNum(state.visitors)}</div>
+      <div class="fs-label">bezoekers</div>
+    </div>
+    <div style="text-align:center">
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-pct">${fmtPct(state.engagement, 1)}</div>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-val">${fmtNum(r.chatSessions)}</div>
+      <div class="fs-label">chatsessies</div>
+    </div>
+    <div style="text-align:center">
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-pct">${fmtPct(state.conversion, 1)}</div>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-val">${fmtNum(r.extraOrders)}</div>
+      <div class="fs-label">extra orders</div>
+    </div>
+    <div style="text-align:center">
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-pct">× ${fmt(state.aov)}</div>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-val">${fmt(r.baseRevenue)}</div>
+      <div class="fs-label">basisomzet</div>
+    </div>
+    <div style="text-align:center">
+      <div class="funnel-arrow">→</div>
+      <div class="funnel-pct">+${fmtPct(state.aovUplift, 1)}</div>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-val">${fmt(r.totalExtraRev)}</div>
+      <div class="fs-label">totale extra omzet</div>
+    </div>
+  `;
+}
+
+// ==============================
+// METRIC GRIDS
+// ==============================
+function metricCard(label, value, sub, type) {
+  return `<div class="metric-card${type ? ' '+type : ''}">
+    <div class="mc-label">${label}</div>
+    <div class="mc-value">${value}</div>
+    ${sub ? `<div class="mc-sub">${sub}</div>` : ''}
+  </div>`;
+}
+
+function renderSupportMetrics(r) {
+  el('supportMetrics').innerHTML =
+    metricCard('Geautomatiseerde chats', fmtNum(r.automatedChats) + ' /m', fmtPct(state.autoPct) + ' van ' + fmtNum(state.chats) + ' chats', 'primary') +
+    metricCard('Vrijgemaakte uren', fmtNum(r.freedHours) + ' u/m', fmtNum(r.automatedChats) + ' chats × ' + state.timeMin + ' min', '') +
+    metricCard('Maandelijkse tijdsbesparing', fmt(r.supportSaving), fmtNum(r.freedHours) + ' u × ' + fmt(state.wage) + '/u', 'success');
+}
+
+function renderRevenueMetrics(r) {
+  el('revenueMetrics').innerHTML =
+    metricCard('Extra orders via chat', fmtNum(r.extraOrders) + ' /m', r.extraOrders + ' orders × ' + fmt(state.aov), 'primary') +
+    metricCard('Extra omzet (incl. AOV-uplift)', fmt(r.totalExtraRev) + ' /m', 'Basis: ' + fmt(r.baseRevenue) + ' + uplift: ' + fmt(r.upliftRevenue), '') +
+    metricCard('Omzet marge bijdrage', fmt(r.revenueMargin) + ' /m', fmtPct(state.margin) + ' marge op ' + fmt(r.totalExtraRev), 'success');
+}
+
+function renderTotalMetrics(r) {
+  el('totalNetMonthly').textContent = fmt(r.netMonthly);
+  el('totalNetMonth1sub').textContent = 'Maand 1 (na opstartkost): ' + fmt(r.netMonth1) + ' | Jaar 1: ' + fmt(r.netYear1);
+  el('totalMetrics').innerHTML =
+    metricCard('Bruto maandvoordeel', fmt(r.grossBenefit), fmt(r.supportSaving) + ' besparing + ' + fmt(r.revenueMargin) + ' marge', 'success') +
+    metricCard('Maandkost pakket', fmt(-r.monthlyCost), PACKAGES[state.pkg].label + ' pakket', 'error') +
+    metricCard('Netto jaar 1', fmt(r.netYear1), 'Na opstartkost ' + fmt(r.setupCost), r.netYear1 >= 0 ? 'success' : 'error') +
+    metricCard('Break-even maand', r.beMonth >= 0 ? 'Maand ' + (r.beMonth + 1) : 'Niet in jaar 1', r.beMonth >= 0 ? 'Cumulatief positief vanaf maand ' + (r.beMonth + 1) : 'Verhoog je volume of verlaag kosten', r.beMonth >= 0 ? 'primary' : 'error');
+}
+
+// ==============================
+// SCENARIOS
+// ==============================
+function renderScenarios(r) {
+  const sc = r.scenarios;
+  function scenCard(key, label, tagClass, isExpected) {
+    const d = sc[key];
+    const netColor = d.net >= 0 ? 'var(--success)' : 'var(--error)';
+    return `<div class="scenario-card${isExpected ? ' expected' : ''}">
+      <div class="sc-tag ${tagClass}">${label}</div>
+      <div class="sc-net" style="color:${netColor}">${fmt(d.net)}/m</div>
+      <div class="sc-detail"><span>Automatisatie</span><span>${fmtPct(d.autoP)}</span></div>
+      <div class="sc-detail"><span>Engagementrate</span><span>${fmtPct(d.engP, 1)}</span></div>
+      <div class="sc-detail"><span>Conversieratio</span><span>${fmtPct(d.convP, 1)}</span></div>
+      <div class="sc-detail"><span>Tijdsbesparing</span><span>${fmt(d.sS)}</span></div>
+      <div class="sc-detail"><span>Omzetmarge</span><span>${fmt(d.rM)}</span></div>
+    </div>`;
+  }
+  el('scenarioGrid').innerHTML =
+    scenCard('conservative', 'Conservatief', 'conservatief', false) +
+    scenCard('expected', 'Verwacht', 'verwacht', true) +
+    scenCard('strong', 'Sterk', 'sterk', false);
+}
+
+// ==============================
+// CPC
+// ==============================
+function renderCPC(r) {
+  const max = Math.max(r.cpcMedewerker, r.cpcAI, 0.01);
+  const medPct = (r.cpcMedewerker / max * 100).toFixed(1);
+  const aiPct = (r.cpcAI / max * 100).toFixed(1);
+  const saving = r.cpcMedewerker - r.cpcAI;
+  const savingPct = r.cpcMedewerker > 0 ? (saving / r.cpcMedewerker * 100) : 0;
+
+  el('cpcMetrics').innerHTML =
+    metricCard('Kost/gesprek medewerker', fmt(r.cpcMedewerker), state.timeMin + ' min × ' + fmt(state.wage) + '/u', 'error') +
+    metricCard('Kost/gesprek AI', fmt(r.cpcAI), fmt(PACKAGES[state.pkg].price) + ' ÷ ' + fmtNum(r.automatedChats) + ' chats', 'success') +
+    metricCard('Besparing per gesprek', fmtPos(saving), fmtPct(savingPct, 1) + ' goedkoper', 'primary');
+
+  el('cpcMedLabel').textContent = fmt(r.cpcMedewerker) + '/gesprek';
+  el('cpcAiLabel').textContent = fmt(r.cpcAI) + '/gesprek';
+  el('cpcMedBar').style.width = medPct + '%';
+  el('cpcAiBar').style.width = aiPct + '%';
+}
+
+// ==============================
+// BREAK-EVEN CHART
+// ==============================
+function renderChart(r) {
+  const vals = r.monthly12;
+  const maxAbs = Math.max(...vals.map(v => Math.abs(v)), 1);
+  const CHART_H = 200;
+
+  let barsHtml = '';
+  let labelsHtml = '';
+
+  vals.forEach((v, i) => {
+    const pct = Math.abs(v) / maxAbs;
+    const h = Math.max(4, Math.round(pct * CHART_H));
+    const isPos = v >= 0;
+    const isBe = i === r.beMonth;
+    const color = isBe ? 'var(--primary)' : (isPos ? 'var(--success)' : 'var(--error)');
+    const valStr = v >= 0 ? '+' + fmtNum(v) : '−' + fmtNum(Math.abs(v));
+    const valColor = v >= 0 ? 'var(--success)' : 'var(--error)';
+
+    barsHtml += `
+      <div class="bar-col">
+        <div class="bar-val" style="color:${valColor}">€${valStr}</div>
+        <div class="bar-rect${isBe ? ' bar-be' : ''}" style="height:${h}px;background:${color}"></div>
+      </div>`;
+    labelsHtml += `<div style="flex:1;text-align:center;font-size:.7rem;color:var(--gray-400)">M${i+1}</div>`;
+  });
+
+  el('barChart').innerHTML = barsHtml;
+  el('barLabels').innerHTML = labelsHtml;
+
+  let legend = `
+    <span><span class="be-dot" style="background:var(--success)"></span>Positief</span>
+    <span><span class="be-dot" style="background:var(--error)"></span>Negatief</span>
+  `;
+  if (r.beMonth >= 0) {
+    legend += `<span><span class="be-dot" style="background:var(--primary)"></span>Break-even maand (M${r.beMonth + 1})</span>`;
+  } else {
+    legend += `<span>Geen break-even bereikt in jaar 1</span>`;
+  }
+  el('beLegend').innerHTML = legend;
+}
+
+// ==============================
+// COST TABLE
+// ==============================
+function renderCostTable(r) {
+  el('costTable').innerHTML = `
+    <thead>
+      <tr>
+        <th>Post</th>
+        <th>Maand</th>
+        <th>Jaar 1</th>
+        <th>Opmerking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tijdsbesparing support</td>
+        <td class="pos">${fmtPos(r.supportSaving)}</td>
+        <td class="pos">${fmtPos(r.supportSaving * 12)}</td>
+        <td>${fmtNum(r.automatedChats)} chats × ${state.timeMin} min × ${fmt(state.wage)}/u</td>
+      </tr>
+      <tr>
+        <td>Extra omzet marge (basis)</td>
+        <td class="pos">${fmtPos(r.revenueMarginBase)}</td>
+        <td class="pos">${fmtPos(r.revenueMarginBase * 12)}</td>
+        <td>${fmtNum(r.extraOrders)} orders × ${fmt(state.aov)} × ${fmtPct(state.margin)} marge</td>
+      </tr>
+      <tr>
+        <td>AOV-uplift marge</td>
+        <td class="pos">${fmtPos(r.revenueMarginUplift)}</td>
+        <td class="pos">${fmtPos(r.revenueMarginUplift * 12)}</td>
+        <td>${fmtPct(state.aovUplift)} uplift op basisomzet × ${fmtPct(state.margin)} marge</td>
+      </tr>
+      <tr>
+        <td>Maandelijkse pakketskosten</td>
+        <td class="neg">${fmt(-r.monthlyCost)}</td>
+        <td class="neg">${fmt(-r.monthlyCost * 12)}</td>
+        <td>${PACKAGES[state.pkg].label} — ${PACKAGES[state.pkg].desc}</td>
+      </tr>
+      <tr>
+        <td>Eenmalige opstartkost</td>
+        <td class="neg">—</td>
+        <td class="neg">${fmt(-r.setupCost)}</td>
+        <td>${SETUPS[state.setup].label} implementatie</td>
+      </tr>
+      <tr>
+        <td><strong>Netto resultaat</strong></td>
+        <td class="${r.netMonthly >= 0 ? 'pos' : 'neg'}"><strong>${fmtPos(r.netMonthly)}</strong></td>
+        <td class="${r.netYear1 >= 0 ? 'pos' : 'neg'}"><strong>${fmtPos(r.netYear1)}</strong></td>
+        <td>Maand 1: ${fmt(r.netMonth1)}</td>
+      </tr>
+    </tbody>
+  `;
+}
+
+// ==============================
+// UTM METRICS
+// ==============================
+function renderUTMMetrics(r) {
+  el('utmMetrics').innerHTML =
+    metricCard('Te tracken extra orders', fmtNum(r.extraOrders) + '/m', 'Via chatbot-geïnitieerde sessies', 'primary') +
+    metricCard('Verwachte omzet via chat', fmt(r.totalExtraRev) + '/m', 'Attributeerbaar aan chatinteractie', 'success') +
+    metricCard('ROI na 12 maanden', fmtPos(r.netYear1), 'Netto jaar 1 inclusief opstartkost', r.netYear1 >= 0 ? 'success' : 'error');
+}
+
+// ==============================
+// INFO BOX
+// ==============================
+function renderInfoBox(r) {
+  el('infoBoxText').innerHTML =
+    `Jouw team besteedt momenteel <strong>${fmtNum(r.totalHours)} uur/maand</strong> aan support ` +
+    `(${fmtPct(r.ftePct, 1)} FTE). Dat vertegenwoordigt een kost van <strong>${fmt(r.currentCost)}/maand</strong>. ` +
+    `Met ${fmtPct(state.autoPct)} automatisatie behoudt het team ${fmtNum(Math.round(r.totalHours - r.freedHours))} uur/maand voor complexe vragen.`;
+}
+
+// ==============================
+// VOLUME BADGE & PKG WARNING
+// ==============================
+function renderPkgInfo(r) {
+  el('volumeBadge').textContent = 'Jouw volume: ~' + fmtNum(r.totalConversations) + ' gesprekken/m';
+
+  if (r.packageTooSmall) {
+    const recPkg = PACKAGES[r.recommendedPkg];
+    el('pkgWarningText').innerHTML =
+      `⚠️ Je geselecteerde pakket is te klein voor ~${fmtNum(r.totalConversations)} gesprekken/m. Wissel naar <strong>${recPkg.label}</strong> (${fmt(recPkg.price)}/m).`;
+    el('pkgWarning').style.display = 'flex';
+    el('pkgUpgradeBtn').textContent = 'Wissel naar ' + recPkg.label;
+    el('pkgUpgradeBtn').onclick = () => {
+      state.pkg = r.recommendedPkg;
+      update();
+    };
+  } else {
+    el('pkgWarning').style.display = 'none';
+  }
+}
+
+// ==============================
+// ACCORDION
+// ==============================
+function toggleAccordion() {
+  const btn = el('utmToggle');
+  const body = el('utmBody');
+  btn.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+// ==============================
+// MAIN UPDATE
+// ==============================
+function update() {
+  const r = calc(state);
+
+  renderPkgCards(el('pkgCards'));
+  renderSetupCards(el('setupCards'));
+  renderPkgInfo(r);
+  renderInfoBox(r);
+  renderFunnel(r);
+  renderSupportMetrics(r);
+  renderRevenueMetrics(r);
+  renderTotalMetrics(r);
+  renderScenarios(r);
+  renderCPC(r);
+  renderChart(r);
+  renderCostTable(r);
+  renderUTMMetrics(r);
+}
+
+// ==============================
+// INIT
+// ==============================
+(function init() {
+  renderSectorGrid();
+  renderSliders('supportSliders', SUPPORT_SLIDERS);
+  renderSliders('revenueSliders', REVENUE_SLIDERS);
+  update();
+})();
+</script>
+</body>
+</html>
