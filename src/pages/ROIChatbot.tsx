@@ -110,7 +110,6 @@ export default function ROIChatbot() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 10, color: "#6B7280", marginTop: 8 }}>Jaarlijks gefactureerd · Minimum 1 jaar engagement</p>
         </Section>
 
         {/* 2. SETUP */}
