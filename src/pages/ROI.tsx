@@ -358,7 +358,7 @@ export default function ROI() {
               <SliderRow label="Inkomende vragen / maand" hint="Inclusief chat, e-mail en herhalingen" value={chats} min={50} max={3000} step={50} unit="vragen" onChange={setChats} />
               <SliderRow label="Gem. tijd per vraag (min)" hint="Benchmarks: eenvoudig 4–6 min, complex 10–15 min" value={timeMin} min={2} max={30} step={1} unit="min" onChange={setTimeMin} />
               <SliderRow label="Bruto uurloon CS-medewerker" hint="Inclusief RSZ en patronale lasten" value={wage} min={14} max={40} step={1} unit="€/u" onChange={setWage} />
-              <SliderRow label="% automatisch afgehandeld" hint="Mediaan klanten: 65–80% na 90 dagen. Vereist volledige kennisbasis." value={autoPct} min={30} max={85} step={1} unit="%" onChange={setAutoPct} />
+              <SliderRow label="% door bot zelf afgehandeld (zonder medewerker)" hint="Het aandeel vragen dat de bot volledig zelfstandig beantwoordt — geen menselijke tussenkomst nodig. Mediaan Glimps-klanten: 65–80% na 90 dagen. Vereist volledige kennisbasis." value={autoPct} min={30} max={85} step={1} unit="%" onChange={setAutoPct} />
             </div>
 
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-sm space-y-1">
