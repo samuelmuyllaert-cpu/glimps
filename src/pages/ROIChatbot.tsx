@@ -69,7 +69,7 @@ export default function ROIChatbot() {
       <Navigation />
 
       {/* Content */}
-      <div style={{ maxWidth: 980, margin: "0 auto", padding: "36px 24px 72px", width: "100%", flex: 1 }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 24px 72px", width: "100%", flex: 1, fontSize: "1.1em" }}>
         {/* 1. PACKAGES */}
         <Section label="Kies je pakket">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
@@ -394,13 +394,12 @@ export default function ROIChatbot() {
               </div>
               <div style={{ background: "white", padding: "16px 18px" }}>
                 {[
-                  { lbl: "Technische opzet & integraties", val: "Inbegrepen" },
                   { lbl: "Maandelijkse monitoring", val: "Inbegrepen" },
                   { lbl: "Kostprijs monitoring", val: "€0" },
                   { lbl: "Content-updates bij collecties", val: "Inbegrepen" },
                   { lbl: "Netto tijdwinst na Glimps-beheer", val: Math.round(calc.hrs || 0) + "u — 100%" },
                 ].map((row, idx) => (
-                  <div key={idx} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: idx < 4 ? "1px solid #E5E7EB" : "none", gap: 8 }}>
+                  <div key={idx} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: idx < 3 ? "1px solid #E5E7EB" : "none", gap: 8 }}>
                     <span style={{ fontSize: 12, color: "#111111" }}>{row.lbl}</span>
                     <span style={{ fontSize: 13, fontWeight: 700, color: "#059669" }}>{row.val}</span>
                   </div>
@@ -422,7 +421,7 @@ export default function ROIChatbot() {
 
         {/* FOOTER NOTE */}
         <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, padding: "18px 20px", color: "#6B7280", fontSize: 11, lineHeight: 1.7 }}>
-          <strong style={{ color: "#111111" }}>Hoe werkt deze calculator?</strong> Tijdsbesparing = geautomatiseerde gesprekken × minuten per ticket × uurloon. Omzet-ROI = extra omzet × jouw brutomarge. Alle cijfers zijn schattingen op basis van jouw aannames. Eerst doorloop je een interne demo — pas daarna gaat de bot live. Eens live zijn alle resultaten exact meetbaar via UTM-tags in Shopify en Google Analytics.
+          <strong style={{ color: "#111111" }}>Hoe werkt deze calculator?</strong> Tijdsbesparing = geautomatiseerde gesprekken × minuten per ticket × uurloon. Omzet-ROI = extra omzet × jouw brutomarge. Alle cijfers zijn schattingen op basis van jouw aannames. Eerst doorloop je een interne demo — pas daarna gaat de bot live. Eens live zijn alle resultaten exact meetbaar via UTM-tags en Google Analytics.
         </div>
       </div>
 
