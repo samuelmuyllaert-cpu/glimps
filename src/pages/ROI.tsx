@@ -239,8 +239,6 @@ export default function ROI() {
     visitors, engagement, conversion, aov, margin, aovUplift,
   ]);
 
-  const maxBar = Math.max(...calc.monthly12.map(Math.abs), 1);
-
   return (
     <>
       <SEO
@@ -505,50 +503,108 @@ export default function ROI() {
           </section>
 
           {/* ── 9. BREAK-EVEN CHART ──────────────────────────────────────── */}
-          <section>
-            <h2 className="text-xl font-bold mb-2">Break-even analyse</h2>
-            <p className="text-sm text-muted-foreground mb-6">
-              {calc.beMonth >= 0
-                ? `Break-even in maand ${calc.beMonth + 1}`
-                : "Geen break-even in jaar 1 op basis van huidige instellingen"}
-            </p>
-            <div className="flex items-end gap-1.5 h-48">
-              {calc.monthly12.map((val, i) => {
-                const isBreakEven = i === calc.beMonth;
-                const isPos = val >= 0;
-                const height = Math.max(4, Math.abs(val / maxBar) * 100);
-                return (
-                  <div key={i} className="flex-1 flex flex-col items-center gap-1">
-                    {isPos ? (
-                      <>
-                        <div className="flex-1 flex items-end w-full">
-                          <div
-                            className={`w-full rounded-t transition-all ${isBreakEven ? "bg-primary" : "bg-emerald-500"}`}
-                            style={{ height: `${height}%` }}
-                          />
-                        </div>
-                        <div className="h-[2px] w-full bg-border" />
-                      </>
-                    ) : (
-                      <>
-                        <div className="flex-1 w-full" />
-                        <div className="h-[2px] w-full bg-border" />
-                        <div
-                          className="w-full rounded-b bg-red-300 transition-all"
-                          style={{ height: `${height}%`, maxHeight: "60%" }}
-                        />
-                      </>
-                    )}
-                    <span className="text-[10px] text-muted-foreground">M{i + 1}</span>
-                  </div>
-                );
-              })}
-            </div>
-            {calc.beMonth >= 0 && (
-              <div className="mt-3 inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                Break-even maand {calc.beMonth + 1}
+          <section className="bg-card border border-border rounded-2xl p-6 md:p-8">
+            <div className="flex flex-wrap items-start justify-between gap-3 mb-6">
+              <div>
+                <h2 className="text-xl font-bold">Break-even analyse</h2>
+                <p className="text-sm text-muted-foreground mt-1">Cumulatief netto resultaat per maand (incl. opstartkost)</p>
               </div>
-            )}
+              {calc.beMonth >= 0 ? (
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-semibold">
+                  Break-even in maand {calc.beMonth + 1}
+                </div>
+              ) : (
+                <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  Geen break-even in jaar 1
+                </div>
+              )}
+            </div>
+
+            {/* Chart */}
+            {(() => {
+              const CHART_H = 200; // px, half above + half below zero line
+              const TOP_AREA = CHART_H * 0.55;   // 55% above zero line
+              const BOT_AREA = CHART_H * 0.45;   // 45% below zero line
+              const maxPos = Math.max(...calc.monthly12.filter(v => v >= 0), 1);
+              const maxNeg = Math.max(...calc.monthly12.filter(v => v < 0).map(Math.abs), 1);
+
+              return (
+                <div className="w-full">
+                  {/* value axis labels */}
+                  <div className="flex gap-1.5 mb-1">
+                    {calc.monthly12.map((val, i) => (
+                      <div key={i} className="flex-1 text-center">
+                        <span className={`text-[9px] font-medium leading-none ${val >= 0 ? "text-emerald-700" : "text-red-500"}`}>
+                          {val >= 0 ? "+" : "−"}€{Math.round(Math.abs(val) / 1000) > 0 ? (Math.abs(val) / 1000).toFixed(1).replace(".", ",") + "k" : Math.round(Math.abs(val))}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* bar area */}
+                  <div className="relative w-full" style={{ height: CHART_H }}>
+                    {/* zero line */}
+                    <div
+                      className="absolute left-0 right-0 h-[2px] bg-border z-10"
+                      style={{ top: TOP_AREA }}
+                    />
+
+                    {/* bars */}
+                    <div className="absolute inset-0 flex gap-1.5 items-stretch">
+                      {calc.monthly12.map((val, i) => {
+                        const isBreakEven = i === calc.beMonth;
+                        const isPos = val >= 0;
+                        const barH = isPos
+                          ? Math.max(4, (val / maxPos) * TOP_AREA * 0.9)
+                          : Math.max(4, (Math.abs(val) / maxNeg) * BOT_AREA * 0.9);
+
+                        return (
+                          <div key={i} className="flex-1 relative">
+                            {isPos ? (
+                              /* positive bar grows upward from zero line */
+                              <div
+                                className={`absolute left-0 right-0 rounded-t-md transition-all duration-300 ${
+                                  isBreakEven ? "bg-primary" : "bg-emerald-500"
+                                }`}
+                                style={{
+                                  bottom: BOT_AREA,
+                                  height: barH,
+                                }}
+                              />
+                            ) : (
+                              /* negative bar grows downward from zero line */
+                              <div
+                                className="absolute left-0 right-0 rounded-b-md bg-red-300 transition-all duration-300"
+                                style={{
+                                  top: TOP_AREA + 2,
+                                  height: barH,
+                                }}
+                              />
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* month labels */}
+                  <div className="flex gap-1.5 mt-2">
+                    {calc.monthly12.map((_, i) => (
+                      <div key={i} className="flex-1 text-center">
+                        <span className="text-[10px] text-muted-foreground">M{i + 1}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* legend */}
+            <div className="flex flex-wrap gap-4 mt-5 text-xs text-muted-foreground">
+              <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-emerald-500 inline-block" />Positief</span>
+              <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-red-300 inline-block" />Negatief</span>
+              <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-primary inline-block" />Break-even maand</span>
+            </div>
           </section>
 
           {/* ── 10. BREAKDOWN TABLE ──────────────────────────────────────── */}
