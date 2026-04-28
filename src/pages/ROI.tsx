@@ -419,6 +419,54 @@ export default function ROI() {
             </div>
           </section>
 
+          {/* ── DONE FOR YOU ─────────────────────────────────────────────── */}
+          <section className="grid sm:grid-cols-2 gap-4">
+            {/* Zelf beheren */}
+            <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="text-base">⚠️</span>
+                <p className="text-sm font-bold text-foreground">Zelf beheren / andere aanbieder</p>
+              </div>
+              <div className="space-y-3">
+                {[
+                  { label: "Technische opzet & integraties", value: "Externe developer nodig", negative: true },
+                  { label: "Maandelijkse monitoring & bijsturing", value: "6–10u/maand", negative: true },
+                  { label: "Kostprijs monitoring (intern uurloon)", value: "−€144/maand", negative: true },
+                  { label: "Content-updates bij producten & collecties", value: "5u/maand", negative: true },
+                  { label: "Netto tijdwinst na eigen botbeheer", value: "~40u netto", negative: false },
+                  { label: "Reële tijdwinst per maand", value: "~83% behoudt", negative: false },
+                ].map(({ label, value, negative }) => (
+                  <div key={label} className="flex items-start justify-between gap-4 py-2.5 border-b border-zinc-100 last:border-0">
+                    <span className="text-xs text-muted-foreground leading-relaxed">{label}</span>
+                    <span className={`text-xs font-semibold whitespace-nowrap ${negative ? "text-red-500" : "text-foreground"}`}>{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Glimps done for you */}
+            <div className="bg-foreground rounded-2xl p-6">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="text-base">✅</span>
+                <p className="text-sm font-bold text-white">Glimps — volledig "done for you"</p>
+              </div>
+              <div className="space-y-3">
+                {[
+                  { label: "Maandelijkse monitoring & fine-tuning", value: "Inbegrepen" },
+                  { label: "Kostprijs monitoring voor jullie team", value: "€0" },
+                  { label: "Content-updates bij producten & collecties", value: "Inbegrepen" },
+                  { label: "Netto tijdwinst na Glimps-beheer", value: "48u — 100% vrij" },
+                  { label: "Reële tijdwinst per maand", value: "48u — 100% behoudt" },
+                ].map(({ label, value }) => (
+                  <div key={label} className="flex items-start justify-between gap-4 py-2.5 border-b border-white/10 last:border-0">
+                    <span className="text-xs text-white/60 leading-relaxed">{label}</span>
+                    <span className="text-xs font-semibold text-emerald-400 whitespace-nowrap">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* ── 2. BLOK B ────────────────────────────────────────────────── */}
           <section className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
             <BlockLabel
