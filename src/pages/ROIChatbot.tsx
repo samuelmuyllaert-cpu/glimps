@@ -43,13 +43,12 @@ export default function ROIChatbot() {
     const setupCost = SETUPS[cS];
     const aut = Math.round((chats * autVal) / 100);
     const hrs = (aut * time) / 60;
-    const tv = hrs * wage;
-    const csCost = 160 * 40 * wage * csStaff;
+    const tv = hrs * wage * csStaff;
     const rm = botRev * (margin / 100);
     const tot = tv + rm;
     const netM = tot - pkgCost;
     const netM1 = tot - pkgCost - setupCost;
-    const netY = tot * 12 - pkgCost * 12 - setupCost - csCost;
+    const netY = tot * 12 - pkgCost * 12 - setupCost;
     const hC = (time / 60) * wage;
     const aC = aut > 0 ? pkgCost / aut : pkgCost / chats;
     const sC = Math.max(hC - aC, 0);
@@ -59,11 +58,11 @@ export default function ROIChatbot() {
     const mC = 8 * wage;
     const ns = Math.max(hrs - 8, 0);
     const sp = hrs > 0 ? Math.round((ns / hrs) * 100) : 0;
-    const m12 = Array.from({ length: 12 }, (_, i) => tot * (i + 1) - pkgCost * (i + 1) - setupCost - csCost);
+    const m12 = Array.from({ length: 12 }, (_, i) => tot * (i + 1) - pkgCost * (i + 1) - setupCost);
     const beM = m12.findIndex((v) => v >= 0) + 1;
     const apPct = hC > 0 ? Math.max(Math.min(Math.round((aC / hC) * 100), 100), 4) : 4;
 
-    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, mC, ns, sp, m12, beM, apPct, csCost });
+    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, mC, ns, sp, m12, beM, apPct });
   }, [cP, cS, chats, time, autVal, wage, botRev, margin, csStaff]);
 
   return (
