@@ -151,7 +151,7 @@ export default function ROIChatbot() {
             <SlCard label="Chats / tickets per maand" val={chats.toString()} onChange={(v) => setChats(Number(v))} min={50} max={3000} step={50} unit="gesprekken" />
             <SlCard label="Gem. tijd per ticket" val={time.toString()} onChange={(v) => setTime(Number(v))} min={3} max={25} step={1} unit="min" />
             <SlCard label="% automatisch afgehandeld" val={autVal + "%"} onChange={(v) => setAutVal(Number(v))} min={40} max={90} step={1} unit="%" />
-            <SlCard label="Maandelijkse kost customer service huidig" val={"€\u202f" + (wage * 8 * 4.3).toLocaleString("nl-BE")} onChange={(v) => setWage(Number(v) / (8 * 4.3))} min={14} max={35} step={1} unit="€/maand" />
+            <SlCard label="Maandelijkse kost customer service huidig" val={"€\u202f" + (wage * 8 * 4.3).toLocaleString("nl-BE")} onChange={(v) => setWage(Number(v) / (8 * 4.3))} min={448} max={5800} step={50} unit="€/maand" />
             <SlCard label="Extra omzet gegenereerd door de bot" val={"€\u202f" + botRev.toLocaleString("nl-BE")} onChange={(v) => setBotRev(Number(v))} min={500} max={25000} step={500} unit="€/maand" red />
             <SlCard label="Brutomarge (%)" val={margin + "%"} onChange={(v) => setMargin(Number(v))} min={5} max={60} step={1} unit="%" />
           </div>
