@@ -34,6 +34,7 @@ export default function ROIChatbot() {
   const [wage, setWage] = useState(18);
   const [botRev, setBotRev] = useState(5000);
   const [margin, setMargin] = useState(18);
+  const [csStaff, setCSStaff] = useState(1);
 
   const [calc, setCalc] = useState<any>({});
 
@@ -42,7 +43,7 @@ export default function ROIChatbot() {
     const setupCost = SETUPS[cS];
     const aut = Math.round((chats * autVal) / 100);
     const hrs = (aut * time) / 60;
-    const tv = hrs * wage;
+    const tv = hrs * wage * csStaff;
     const rm = botRev * (margin / 100);
     const tot = tv + rm;
     const netM = tot - pkgCost;
@@ -62,7 +63,7 @@ export default function ROIChatbot() {
     const apPct = hC > 0 ? Math.max(Math.min(Math.round((aC / hC) * 100), 100), 4) : 4;
 
     setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, mC, ns, sp, m12, beM, apPct });
-  }, [cP, cS, chats, time, autVal, wage, botRev, margin]);
+  }, [cP, cS, chats, time, autVal, wage, botRev, margin, csStaff]);
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#F9FAFB", fontFamily: "-apple-system,'Helvetica Neue',Arial,sans-serif", color: "#111111" }}>
@@ -151,6 +152,7 @@ export default function ROIChatbot() {
             <SlCard label="Chats / tickets per maand" val={chats.toString()} onChange={(v) => setChats(Number(v))} min={50} max={3000} step={50} unit="gesprekken" />
             <SlCard label="Gem. tijd per ticket" val={time.toString()} onChange={(v) => setTime(Number(v))} min={3} max={25} step={1} unit="min" />
             <SlCard label="% automatisch afgehandeld" val={autVal + "%"} onChange={(v) => setAutVal(Number(v))} min={40} max={90} step={1} unit="%" />
+            <SlCard label="CS-medewerkers (momenteel)" val={csStaff.toString()} onChange={(v) => setCSStaff(Number(v))} min={1} max={10} step={1} unit="personen" />
             <SlCard label="Uurloon CS-medewerker (bruto)" val={"€" + wage} onChange={(v) => setWage(Number(v))} min={14} max={35} step={1} unit="€/u" />
             <SlCard label="Extra omzet gegenereerd door de bot" val={"€\u202f" + botRev.toLocaleString("nl-BE")} onChange={(v) => setBotRev(Number(v))} min={500} max={25000} step={500} unit="€/maand" red />
             <SlCard label="Brutomarge (%)" val={margin + "%"} onChange={(v) => setMargin(Number(v))} min={5} max={60} step={1} unit="%" />
