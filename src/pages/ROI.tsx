@@ -262,10 +262,9 @@ export default function ROI() {
             <p className="text-lg text-muted-foreground mb-12">
               Vul jouw situatie in. Alle uitkomsten zijn herleidbaar tot concrete inputvariabelen.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
               {[
                 { stat: "65–80%", label: "automatisatie", src: "Mediaan Glimps-klanten na 90 dagen" },
-                { stat: "+23%",   label: "conversie uplift", src: "Gemeten bij Zelektro via UTM, jaar 1" },
                 { stat: "€325–925/m", label: "pakket", src: "Afhankelijk van volume & features" },
               ].map(({ stat, label, src }) => (
                 <div key={stat} className="bg-card border border-border rounded-xl p-5">
@@ -715,7 +714,7 @@ export default function ROI() {
           <section className="bg-foreground text-background rounded-2xl p-6 text-xs leading-relaxed space-y-1">
             <p className="font-semibold text-sm mb-2">Methodologie & disclaimer</p>
             <p className="text-background/70">
-              Support-besparing berekend op bruto uurloon. Revenue-impact berekend op marge-aandeel, niet brutoomzet. De maandkost Glimps wordt eenmalig afgetrokken in het totaal — niet per blok apart. Automatisatie-% vereist volledige kennisbasis. +23% conversie uplift gemeten bij Zelektro (jaar 1, UTM-tracking) — geen garantie voor vergelijkbare resultaten. Prijzen exclusief 21% BTW.
+              Support-besparing berekend op bruto uurloon. Revenue-impact berekend op marge-aandeel, niet brutoomzet. De maandkost Glimps wordt eenmalig afgetrokken in het totaal — niet per blok apart. Automatisatie-% vereist volledige kennisbasis. Prijzen exclusief 21% BTW.
             </p>
           </section>
 
