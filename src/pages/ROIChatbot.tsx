@@ -34,7 +34,6 @@ export default function ROIChatbot() {
   const [wage, setWage] = useState(18);
   const [botRev, setBotRev] = useState(5000);
   const [margin, setMargin] = useState(18);
-  const [csStaff, setCSStaff] = useState(1);
 
   const [calc, setCalc] = useState<any>({});
 
@@ -43,19 +42,18 @@ export default function ROIChatbot() {
     const setupCost = SETUPS[cS];
     const aut = Math.round((chats * autVal) / 100);
     const hrs = (aut * time) / 60;
-    const tv = hrs * wage * csStaff;
+    const tv = hrs * wage;
     const rm = botRev * (margin / 100);
     const tot = tv + rm;
     const netM = tot - pkgCost;
     const netM1 = tot - pkgCost - setupCost;
     const netY = tot * 12 - pkgCost * 12 - setupCost;
     const hC = (time / 60) * wage;
-    const aC = chats > 0 ? pkgCost / chats : 0;
+    const aC = aut > 0 ? pkgCost / aut : pkgCost / chats;
     const sC = Math.max(hC - aC, 0);
     const csPct = tot > 0 ? Math.round((tv / tot) * 100) : 50;
     const rvPct = 100 - csPct;
     const hPW = Math.round((hrs / 4.3) * 10) / 10;
-    const hrsPerEmployee = csStaff > 0 ? hrs / csStaff : 0;
     const mC = 8 * wage;
     const ns = Math.max(hrs - 8, 0);
     const sp = hrs > 0 ? Math.round((ns / hrs) * 100) : 0;
@@ -63,18 +61,18 @@ export default function ROIChatbot() {
     const beM = m12.findIndex((v) => v >= 0) + 1;
     const apPct = hC > 0 ? Math.max(Math.min(Math.round((aC / hC) * 100), 100), 4) : 4;
 
-    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, hrsPerEmployee, mC, ns, sp, m12, beM, apPct });
-  }, [cP, cS, chats, time, autVal, wage, botRev, margin, csStaff]);
+    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, mC, ns, sp, m12, beM, apPct });
+  }, [cP, cS, chats, time, autVal, wage, botRev, margin]);
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#F9FAFB", fontFamily: "-apple-system,'Helvetica Neue',Arial,sans-serif", color: "#111111" }}>
       <Navigation />
 
       {/* Content */}
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 16px 72px", width: "100%", flex: 1, fontSize: "1.1em" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 24px 72px", width: "100%", flex: 1, fontSize: "1.1em" }}>
         {/* 1. PACKAGES */}
         <Section label="Kies je pakket">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 8 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
             {PKGS.map((p, i) => (
               <div
                 key={p.n}
@@ -116,7 +114,7 @@ export default function ROIChatbot() {
 
         {/* 2. SETUP */}
         <Section label="Kies je opstartkost (eenmalig)">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 8 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
             {SETUPS.map((s, i) => (
               <div
                 key={s}
@@ -149,11 +147,10 @@ export default function ROIChatbot() {
 
         {/* 3. SLIDERS */}
         <Section label="Jouw situatie — pas aan">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 10 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
             <SlCard label="Chats / tickets per maand" val={chats.toString()} onChange={(v) => setChats(Number(v))} min={50} max={3000} step={50} unit="gesprekken" />
             <SlCard label="Gem. tijd per ticket" val={time.toString()} onChange={(v) => setTime(Number(v))} min={3} max={25} step={1} unit="min" />
             <SlCard label="% automatisch afgehandeld" val={autVal + "%"} onChange={(v) => setAutVal(Number(v))} min={40} max={90} step={1} unit="%" />
-            <SlCard label="CS-medewerkers (momenteel)" val={csStaff.toString()} onChange={(v) => setCSStaff(Number(v))} min={1} max={10} step={1} unit="personen" />
             <SlCard label="Uurloon CS-medewerker (bruto)" val={"€" + wage} onChange={(v) => setWage(Number(v))} min={14} max={35} step={1} unit="€/u" />
             <SlCard label="Extra omzet gegenereerd door de bot" val={"€\u202f" + botRev.toLocaleString("nl-BE")} onChange={(v) => setBotRev(Number(v))} min={500} max={25000} step={500} unit="€/maand" red />
             <SlCard label="Brutomarge (%)" val={margin + "%"} onChange={(v) => setMargin(Number(v))} min={5} max={60} step={1} unit="%" />
@@ -168,17 +165,17 @@ export default function ROIChatbot() {
                 Wat kost een gesprek — manueel vs. automatisch?
               </p>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
               {[
                 { lbl: "Medewerker", val: fmtC(calc.hC || 0), color: "#DC2626", desc: `${time} min x €${wage}/u` },
-                { lbl: "AI — Glimps", val: fmtC(calc.aC || 0), color: "#059669", desc: `€${calc.pkgCost || 0} / ${chats} gesprekken` },
+                { lbl: "AI — Glimps", val: fmtC(calc.aC || 0), color: "#059669", desc: `€${calc.pkgCost || 0} / ${calc.aut || 0} gesprekken` },
                 { lbl: "Besparing per gesprek", val: fmtC(calc.sC || 0), color: "#D97706", desc: `x ${calc.aut || 0} = ${fmt((calc.sC || 0) * (calc.aut || 0))}/maand` },
               ].map((col) => (
-                <div key={col.lbl} style={{ padding: "20px 16px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
+                <div key={col.lbl} style={{ padding: "20px 16px", borderRight: col === PKGS[0] ? "1px solid #E5E7EB" : "none", textAlign: "center" }}>
                   <div style={{ fontSize: 9, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.6px", color: "#6B7280", marginBottom: 9 }}>
                     {col.lbl}
                   </div>
-                  <div style={{ fontSize: "clamp(24px, 6vw, 38px)", fontWeight: 800, lineHeight: 1, marginBottom: 5, letterSpacing: "-1px", color: col.color }}>
+                  <div style={{ fontSize: 38, fontWeight: 800, lineHeight: 1, marginBottom: 5, letterSpacing: "-1px", color: col.color }}>
                     {col.val}
                   </div>
                   <div style={{ fontSize: 10, color: "#6B7280", lineHeight: 1.4 }}>{col.desc}</div>
@@ -211,65 +208,11 @@ export default function ROIChatbot() {
 
         {/* 5. METRICS */}
         <Section label="Maandelijkse impact — na go-live">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 10 }}>
-            <Met dark label="Vrijgekomen uren CS" val={Math.round(calc.hrs || 0) + "u"} sub={`${calc.aut || 0} geautomatiseerd`} sub2={csStaff > 1 ? `${Math.round(calc.hrsPerEmployee || 0)}u per medewerker` : `~${calc.hPW || 0}u per week`} />
-            <Met label="Waarde vrijgekomen tijd" val={fmt(calc.tv || 0)} sub={`${Math.round(calc.hrs || 0)}u x €${wage}/u`} sub2={csStaff > 1 ? `x ${csStaff} medewerkers` : ""} />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
+            <Met dark label="Vrijgekomen uren CS" val={Math.round(calc.hrs || 0) + "u"} sub={`${calc.aut || 0} geautomatiseerd`} sub2={`~${calc.hPW || 0}u per week`} />
+            <Met label="Waarde vrijgekomen tijd" val={fmt(calc.tv || 0)} sub={`${Math.round(calc.hrs || 0)}u x €${wage}/u`} />
             <Met label="Bot-omzet marge-aandeel" val={fmt(calc.rm || 0)} sub={`€${botRev.toLocaleString("nl-BE")} x ${margin}%`} />
             <Met green={calc.netM >= 0} label="Netto ROI / maand" val={eu(calc.netM || 0)} sub={`na aftrek €${calc.pkgCost || 0}/maand`} />
-          </div>
-        </Section>
-
-        {/* 5b. PERSONNEL COST PERSPECTIVE */}
-        <Section label="Personeelskost-perspectief — meerdere medewerkers">
-          <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
-            <div style={{ background: "#111111", padding: "13px 20px" }}>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "white", letterSpacing: "-0.2px", margin: 0 }}>
-                Absolute eurobesparing op basis van aantal medewerkers
-              </p>
-            </div>
-            <div style={{ padding: 20 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14, marginBottom: 20 }}>
-                {[1, 2, 3, 5, 10].map((staff) => {
-                  const staffTV = (calc.tv || 0) * staff;
-                  const totalBenefit = staffTV + (calc.rm || 0);
-                  const netAfterPackage = totalBenefit - (calc.pkgCost || 0);
-                  return (
-                    <div key={staff} style={{ border: staff === csStaff ? "2px solid #E74E4D" : "1px solid #E5E7EB", borderRadius: 10, padding: 16, background: staff === csStaff ? "#FFF5F6" : "white", transition: "all 0.2s" }}>
-                      <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.5px", color: staff === csStaff ? "#C41E3A" : "#6B7280", marginBottom: 8 }}>
-                        {staff === 1 ? "1 medewerker" : `${staff} medewerkers`}
-                        {staff === csStaff && <span style={{ marginLeft: 6, fontSize: 9, background: "#E74E4D", color: "white", padding: "1px 7px", borderRadius: 3 }}>huiden</span>}
-                      </div>
-                      <div style={{ display: "grid", gap: 10 }}>
-                        <div>
-                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>Personeelsbesparing</div>
-                          <div style={{ fontSize: 22, fontWeight: 800, color: "#E74E4D", letterSpacing: "-0.5px" }}>
-                            {fmt(staffTV)}
-                          </div>
-                          <div style={{ fontSize: 9, color: "#6B7280", marginTop: 2 }}>
-                            {Math.round(calc.hrs || 0)}u × €{wage} × {staff}
-                          </div>
-                        </div>
-                        <div style={{ borderTop: "1px solid #E5E7EB", paddingTop: 10 }}>
-                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>+ Bot-omzet marge</div>
-                          <div style={{ fontSize: 14, fontWeight: 700, color: "#111111" }}>
-                            {fmt(calc.rm || 0)}
-                          </div>
-                        </div>
-                        <div style={{ background: staff === csStaff ? "#FEE2E2" : "#F3F4F6", borderRadius: 6, padding: 10 }}>
-                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>Netto na pakket (€{calc.pkgCost})</div>
-                          <div style={{ fontSize: 18, fontWeight: 800, color: netAfterPackage >= 0 ? "#059669" : "#DC2626", letterSpacing: "-0.3px" }}>
-                            {eu(netAfterPackage)}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div style={{ background: "#ECFDF5", border: "1px solid #A7F3D0", borderRadius: 8, padding: 14, fontSize: 11, lineHeight: 1.6 }}>
-                <strong style={{ color: "#065F46" }}>Het kernpunt:</strong> Met meer medewerkers stijgt de absolute personeelskost-besparing lineair. 2 medewerkers × €{wage}/u × {Math.round(calc.hrs || 0)}u = <strong>{fmt((calc.tv || 0) * 2)}/maand</strong> alleen al op personeelskost. Bijkomende omzet van de bot maakt het voordeel nog groter.
-              </div>
-            </div>
           </div>
         </Section>
 
@@ -293,13 +236,13 @@ export default function ROIChatbot() {
                 )}
               </div>
             </div>
-            <div style={{ display: "flex", gap: 18, flexWrap: "wrap", marginBottom: 12, fontSize: "clamp(9px, 2vw, 10px)" }}>
+            <div style={{ display: "flex", gap: 18, flexWrap: "wrap", marginBottom: 12 }}>
               {[
                 { bg: "#E74E4D", lbl: "Tijdsbesparing CS", val: fmt(calc.tv || 0) },
                 { bg: "#111111", lbl: "Omzet marge", val: fmt(calc.rm || 0) },
                 { bg: "#E5E7EB", lbl: "Pakketkost", val: "€" + (calc.pkgCost || 0) },
               ].map((leg) => (
-                <div key={leg.lbl} style={{ display: "flex", alignItems: "center", gap: 5, color: "#6B7280" }}>
+                <div key={leg.lbl} style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 10, color: "#6B7280" }}>
                   <div style={{ width: 8, height: 8, borderRadius: 2, background: leg.bg }} />
                   {leg.lbl} — <strong style={{ color: "#111111" }}>{leg.val}</strong>
                 </div>
@@ -325,8 +268,8 @@ export default function ROIChatbot() {
 
         {/* 7. TABLE */}
         <Section label="Kosten & opbrengsten — volledig overzicht">
-          <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, overflow: "auto" }}>
-            <div style={{ background: "#111111", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "11px 20px", minWidth: "100%" }}>
+          <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ background: "#111111", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "11px 20px" }}>
               {["Post", "Maand 1", "Per maand", "Jaar 1"].map((h) => (
                 <span key={h} style={{ fontSize: 9, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.5px", color: "rgba(255,255,255,0.4)" }}>
                   {h}
@@ -339,7 +282,7 @@ export default function ROIChatbot() {
             <BSection>Investering</BSection>
             <BRow label="Opstartkost (eenmalig)" c1={"−€\u202f" + (calc.setupCost || 0).toLocaleString("nl-BE")} cm="—" cy={"−€\u202f" + (calc.setupCost || 0).toLocaleString("nl-BE")} neg />
             <BRow label={`Pakketkost — ${PKGS[cP].n} €${calc.pkgCost}/maand`} c1={"−€\u202f" + (calc.pkgCost || 0)} cm={"−€\u202f" + (calc.pkgCost || 0)} cy={"−€\u202f" + ((calc.pkgCost || 0) * 12).toLocaleString("nl-BE")} neg />
-            <div style={{ background: "#FFF0F2", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "14px 20px", borderTop: "2px solid #E74E4D", minWidth: "100%" }}>
+            <div style={{ background: "#FFF0F2", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "14px 20px", borderTop: "2px solid #E74E4D" }}>
               <div style={{ fontSize: 12, fontWeight: 700 }}>Netto resultaat</div>
               {[calc.netM1 || 0, calc.netM || 0, calc.netY || 0].map((v, i) => (
                 <div key={i} style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.3px", color: v >= 0 ? "#059669" : "#DC2626" }}>
@@ -393,7 +336,7 @@ export default function ROIChatbot() {
             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 18, lineHeight: 1.5 }}>
               Elke maand zonder bot laat je waarde liggen. Dit zijn de gemiste opbrengsten op basis van jouw aannames.
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 10 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
               {[
                 { val: fmt(calc.tv || 0), lbl: "Gemiste tijdsbesparing CS", day: "~" + fmt((calc.tv || 0) / 30) + "/dag" },
                 { val: fmt(calc.rm || 0), lbl: "Gemiste omzet (marge-aandeel)", day: "~" + fmt((calc.rm || 0) / 30) + "/dag" },
@@ -415,7 +358,7 @@ export default function ROIChatbot() {
 
         {/* 10. DFY */}
         <Section label="Done for you — zelf beheren vs. Glimps">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 14 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
             {/* ZELF */}
             <div style={{ border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
               <div style={{ padding: "13px 18px", background: "#FEF2F2", borderBottom: "1px solid #FECACA", display: "flex", alignItems: "center", gap: 8 }}>
@@ -425,16 +368,13 @@ export default function ROIChatbot() {
               <div style={{ background: "white", padding: "16px 18px" }}>
                 {[
                   { lbl: "Technische opzet & integraties", val: "Externe developer", neg: true },
-                  { lbl: "Maandelijkse monitoring", val: "6–10u/maand", neg: true, note: csStaff > 1 ? " (1 persoon volgt)" : "" },
+                  { lbl: "Maandelijkse monitoring", val: "6–10u/maand", neg: true },
                   { lbl: "Kostprijs monitoring (uurloon)", val: "−€\u202f" + Math.round(calc.mC || 0) + "/mnd", neg: true },
                   { lbl: "Content-updates bij collecties", val: "5u/maand", neg: true },
                   { lbl: "Netto tijdwinst na botbeheer", val: "~" + Math.round(calc.ns || 0) + "u netto", neg: false },
                 ].map((row, idx) => (
                   <div key={idx} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: idx < 4 ? "1px solid #E5E7EB" : "none", gap: 8 }}>
-                    <span style={{ fontSize: 12, color: "#111111" }}>
-                      {row.lbl}
-                      {row.note && <span style={{ fontSize: 10, color: "#6B7280", fontWeight: 400 }}>{row.note}</span>}
-                    </span>
+                    <span style={{ fontSize: 12, color: "#111111" }}>{row.lbl}</span>
                     <span style={{ fontSize: 13, fontWeight: 700, color: row.neg ? "#DC2626" : "#111111" }}>{row.val}</span>
                   </div>
                 ))}
@@ -473,7 +413,7 @@ export default function ROIChatbot() {
           <div style={{ background: "#111111", borderRadius: 12, padding: "16px 20px", marginTop: 12 }}>
             <p style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, margin: 0 }}>
               <strong style={{ color: "#FCA5A5" }}>Het kernpunt:</strong> De tijdsbesparing is alleen reëel als niemand die uren terugstopt in het beheren van de bot. Bij zelfbeheer gaat gemakkelijk{" "}
-              <strong style={{ color: "#FCA5A5" }}>6–10u/maand</strong> verloren. {csStaff > 1 && <>Met <strong>{csStaff}</strong> medewerkers: één volgt de bot, <strong>{csStaff - 1}</strong> profiteren volledig van de vrijgekomen uren. </>}Glimps regelt alles proactief — jij merkt de bot enkel wanneer hij waarde levert.
+              <strong style={{ color: "#FCA5A5" }}>6–10u/maand</strong> verloren. Glimps regelt alles proactief — jij merkt de bot enkel wanneer hij waarde levert.
             </p>
           </div>
         </Section>
@@ -554,13 +494,13 @@ function BSection({ children }: any) {
 
 function BRow({ label, c1, cm, cy, pos, neg }: any) {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "12px 20px", borderBottom: "1px solid #E5E7EB", alignItems: "center", minWidth: "100%", fontSize: "clamp(12px, 2vw, 15px)" }}>
-      <div style={{ color: "#111111" }}>{label}</div>
-      <div style={{ fontWeight: 800, color: pos ? "#059669" : neg ? "#DC2626" : "#111111" }}>{c1}</div>
-      <div style={{ fontWeight: cm === "—" ? 400 : 800, color: pos ? "#059669" : neg ? "#DC2626" : "#6B7280" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "12px 20px", borderBottom: "1px solid #E5E7EB", alignItems: "center" }}>
+      <div style={{ fontSize: 12, color: "#111111" }}>{label}</div>
+      <div style={{ fontSize: 15, fontWeight: 800, color: pos ? "#059669" : neg ? "#DC2626" : "#111111" }}>{c1}</div>
+      <div style={{ fontSize: cm === "—" ? 11 : 15, fontWeight: cm === "—" ? 400 : 800, color: pos ? "#059669" : neg ? "#DC2626" : "#6B7280" }}>
         {cm}
       </div>
-      <div style={{ fontWeight: 800, color: pos ? "#059669" : neg ? "#DC2626" : "#111111" }}>{cy}</div>
+      <div style={{ fontSize: 15, fontWeight: 800, color: pos ? "#059669" : neg ? "#DC2626" : "#111111" }}>{cy}</div>
     </div>
   );
 }
