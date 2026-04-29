@@ -111,7 +111,7 @@ const Navigation = () => {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[85vw] max-w-xs sm:max-w-sm">
               <div className="flex flex-col gap-6 mt-8">
                 {navLinks.map((link) => (
                   <a

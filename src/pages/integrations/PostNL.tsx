@@ -306,8 +306,8 @@ const PostNLIntegration = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative overflow-visible px-6 py-20">
-        <div className="pointer-events-none absolute bottom-[-200px] left-1/2 h-[600px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#0073E6]/20 via-[#0073E6]/10 to-transparent blur-3xl" />
+      <section className="relative overflow-hidden px-6 py-20">
+        <div className="pointer-events-none absolute bottom-[-200px] left-1/2 h-[300px] w-[400px] sm:h-[600px] sm:w-[800px] md:w-[1000px] md:h-[600px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#0073E6]/20 via-[#0073E6]/10 to-transparent blur-3xl" />
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
             {activeContent.badge}

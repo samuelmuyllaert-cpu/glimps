@@ -22,10 +22,10 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-primary/5 via-purple-50/30 to-background py-24">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-primary/5 via-purple-50/30 to-background py-12 sm:py-16 lg:py-24">
       {/* Decorative gradient blobs */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/10 to-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-tr from-blue-500/10 to-primary/10 rounded-full blur-3xl"></div>
       
       <div className="mx-auto max-w-6xl px-4 sm:px-6 relative z-10">
         {/* Header */}
