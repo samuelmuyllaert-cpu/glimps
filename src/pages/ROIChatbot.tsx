@@ -34,6 +34,7 @@ export default function ROIChatbot() {
   const [wage, setWage] = useState(18);
   const [botRev, setBotRev] = useState(5000);
   const [margin, setMargin] = useState(18);
+  const [csStaff, setCSStaff] = useState(1);
 
   const [calc, setCalc] = useState<any>({});
 
@@ -42,18 +43,19 @@ export default function ROIChatbot() {
     const setupCost = SETUPS[cS];
     const aut = Math.round((chats * autVal) / 100);
     const hrs = (aut * time) / 60;
-    const tv = hrs * wage;
+    const tv = hrs * wage * csStaff;
     const rm = botRev * (margin / 100);
     const tot = tv + rm;
     const netM = tot - pkgCost;
     const netM1 = tot - pkgCost - setupCost;
     const netY = tot * 12 - pkgCost * 12 - setupCost;
     const hC = (time / 60) * wage;
-    const aC = aut > 0 ? pkgCost / aut : pkgCost / chats;
+    const aC = chats > 0 ? pkgCost / chats : 0;
     const sC = Math.max(hC - aC, 0);
     const csPct = tot > 0 ? Math.round((tv / tot) * 100) : 50;
     const rvPct = 100 - csPct;
     const hPW = Math.round((hrs / 4.3) * 10) / 10;
+    const hrsPerEmployee = csStaff > 0 ? hrs / csStaff : 0;
     const mC = 8 * wage;
     const ns = Math.max(hrs - 8, 0);
     const sp = hrs > 0 ? Math.round((ns / hrs) * 100) : 0;
@@ -61,8 +63,8 @@ export default function ROIChatbot() {
     const beM = m12.findIndex((v) => v >= 0) + 1;
     const apPct = hC > 0 ? Math.max(Math.min(Math.round((aC / hC) * 100), 100), 4) : 4;
 
-    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, mC, ns, sp, m12, beM, apPct });
-  }, [cP, cS, chats, time, autVal, wage, botRev, margin]);
+    setCalc({ pkgCost, setupCost, aut, hrs, tv, rm, tot, netM, netM1, netY, hC, aC, sC, csPct, rvPct, hPW, hrsPerEmployee, mC, ns, sp, m12, beM, apPct });
+  }, [cP, cS, chats, time, autVal, wage, botRev, margin, csStaff]);
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#F9FAFB", fontFamily: "-apple-system,'Helvetica Neue',Arial,sans-serif", color: "#111111" }}>
@@ -151,7 +153,8 @@ export default function ROIChatbot() {
             <SlCard label="Chats / tickets per maand" val={chats.toString()} onChange={(v) => setChats(Number(v))} min={50} max={3000} step={50} unit="gesprekken" />
             <SlCard label="Gem. tijd per ticket" val={time.toString()} onChange={(v) => setTime(Number(v))} min={3} max={25} step={1} unit="min" />
             <SlCard label="% automatisch afgehandeld" val={autVal + "%"} onChange={(v) => setAutVal(Number(v))} min={40} max={90} step={1} unit="%" />
-            <SlCard label="Maandelijkse kost customer service huidig" val={"€\u202f" + (wage * 8 * 4.3).toLocaleString("nl-BE")} onChange={(v) => setWage(Number(v) / (8 * 4.3))} min={448} max={5800} step={50} unit="€/maand" />
+            <SlCard label="CS-medewerkers (momenteel)" val={csStaff.toString()} onChange={(v) => setCSStaff(Number(v))} min={1} max={10} step={1} unit="personen" />
+            <SlCard label="Uurloon CS-medewerker (bruto)" val={"€" + wage} onChange={(v) => setWage(Number(v))} min={14} max={35} step={1} unit="€/u" />
             <SlCard label="Extra omzet gegenereerd door de bot" val={"€\u202f" + botRev.toLocaleString("nl-BE")} onChange={(v) => setBotRev(Number(v))} min={500} max={25000} step={500} unit="€/maand" red />
             <SlCard label="Brutomarge (%)" val={margin + "%"} onChange={(v) => setMargin(Number(v))} min={5} max={60} step={1} unit="%" />
           </div>
@@ -168,7 +171,7 @@ export default function ROIChatbot() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
               {[
                 { lbl: "Medewerker", val: fmtC(calc.hC || 0), color: "#DC2626", desc: `${time} min x €${wage}/u` },
-                { lbl: "AI — Glimps", val: fmtC(calc.aC || 0), color: "#059669", desc: `€${calc.pkgCost || 0} / ${calc.aut || 0} gesprekken` },
+                { lbl: "AI — Glimps", val: fmtC(calc.aC || 0), color: "#059669", desc: `€${calc.pkgCost || 0} / ${chats} gesprekken` },
                 { lbl: "Besparing per gesprek", val: fmtC(calc.sC || 0), color: "#D97706", desc: `x ${calc.aut || 0} = ${fmt((calc.sC || 0) * (calc.aut || 0))}/maand` },
               ].map((col) => (
                 <div key={col.lbl} style={{ padding: "20px 16px", borderRight: col === PKGS[0] ? "1px solid #E5E7EB" : "none", textAlign: "center" }}>
@@ -209,10 +212,64 @@ export default function ROIChatbot() {
         {/* 5. METRICS */}
         <Section label="Maandelijkse impact — na go-live">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
-            <Met dark label="Vrijgekomen uren CS" val={Math.round(calc.hrs || 0) + "u"} sub={`${calc.aut || 0} geautomatiseerd`} sub2={`~${calc.hPW || 0}u per week`} />
-            <Met label="Waarde vrijgekomen tijd" val={fmt(calc.tv || 0)} sub={`${Math.round(calc.hrs || 0)}u x €${wage}/u`} />
+            <Met dark label="Vrijgekomen uren CS" val={Math.round(calc.hrs || 0) + "u"} sub={`${calc.aut || 0} geautomatiseerd`} sub2={csStaff > 1 ? `${Math.round(calc.hrsPerEmployee || 0)}u per medewerker` : `~${calc.hPW || 0}u per week`} />
+            <Met label="Waarde vrijgekomen tijd" val={fmt(calc.tv || 0)} sub={`${Math.round(calc.hrs || 0)}u x €${wage}/u`} sub2={csStaff > 1 ? `x ${csStaff} medewerkers` : ""} />
             <Met label="Bot-omzet marge-aandeel" val={fmt(calc.rm || 0)} sub={`€${botRev.toLocaleString("nl-BE")} x ${margin}%`} />
             <Met green={calc.netM >= 0} label="Netto ROI / maand" val={eu(calc.netM || 0)} sub={`na aftrek €${calc.pkgCost || 0}/maand`} />
+          </div>
+        </Section>
+
+        {/* 5b. PERSONNEL COST PERSPECTIVE */}
+        <Section label="Personeelskost-perspectief — meerdere medewerkers">
+          <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ background: "#111111", padding: "13px 20px" }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "white", letterSpacing: "-0.2px", margin: 0 }}>
+                Absolute eurobesparing op basis van aantal medewerkers
+              </p>
+            </div>
+            <div style={{ padding: 20 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14, marginBottom: 20 }}>
+                {[1, 2, 3, 5, 10].map((staff) => {
+                  const staffTV = (calc.tv || 0) * staff;
+                  const totalBenefit = staffTV + (calc.rm || 0);
+                  const netAfterPackage = totalBenefit - (calc.pkgCost || 0);
+                  return (
+                    <div key={staff} style={{ border: staff === csStaff ? "2px solid #E74E4D" : "1px solid #E5E7EB", borderRadius: 10, padding: 16, background: staff === csStaff ? "#FFF5F6" : "white", transition: "all 0.2s" }}>
+                      <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.5px", color: staff === csStaff ? "#C41E3A" : "#6B7280", marginBottom: 8 }}>
+                        {staff === 1 ? "1 medewerker" : `${staff} medewerkers`}
+                        {staff === csStaff && <span style={{ marginLeft: 6, fontSize: 9, background: "#E74E4D", color: "white", padding: "1px 7px", borderRadius: 3 }}>huiden</span>}
+                      </div>
+                      <div style={{ display: "grid", gap: 10 }}>
+                        <div>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>Personeelsbesparing</div>
+                          <div style={{ fontSize: 22, fontWeight: 800, color: "#E74E4D", letterSpacing: "-0.5px" }}>
+                            {fmt(staffTV)}
+                          </div>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginTop: 2 }}>
+                            {Math.round(calc.hrs || 0)}u × €{wage} × {staff}
+                          </div>
+                        </div>
+                        <div style={{ borderTop: "1px solid #E5E7EB", paddingTop: 10 }}>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>+ Bot-omzet marge</div>
+                          <div style={{ fontSize: 14, fontWeight: 700, color: "#111111" }}>
+                            {fmt(calc.rm || 0)}
+                          </div>
+                        </div>
+                        <div style={{ background: staff === csStaff ? "#FEE2E2" : "#F3F4F6", borderRadius: 6, padding: 10 }}>
+                          <div style={{ fontSize: 9, color: "#6B7280", marginBottom: 3 }}>Netto na pakket (€{calc.pkgCost})</div>
+                          <div style={{ fontSize: 18, fontWeight: 800, color: netAfterPackage >= 0 ? "#059669" : "#DC2626", letterSpacing: "-0.3px" }}>
+                            {eu(netAfterPackage)}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div style={{ background: "#ECFDF5", border: "1px solid #A7F3D0", borderRadius: 8, padding: 14, fontSize: 11, lineHeight: 1.6 }}>
+                <strong style={{ color: "#065F46" }}>Het kernpunt:</strong> Met meer medewerkers stijgt de absolute personeelskost-besparing lineair. 2 medewerkers × €{wage}/u × {Math.round(calc.hrs || 0)}u = <strong>{fmt((calc.tv || 0) * 2)}/maand</strong> alleen al op personeelskost. Bijkomende omzet van de bot maakt het voordeel nog groter.
+              </div>
+            </div>
           </div>
         </Section>
 
@@ -368,13 +425,16 @@ export default function ROIChatbot() {
               <div style={{ background: "white", padding: "16px 18px" }}>
                 {[
                   { lbl: "Technische opzet & integraties", val: "Externe developer", neg: true },
-                  { lbl: "Maandelijkse monitoring", val: "6–10u/maand", neg: true },
+                  { lbl: "Maandelijkse monitoring", val: "6–10u/maand", neg: true, note: csStaff > 1 ? " (1 persoon volgt)" : "" },
                   { lbl: "Kostprijs monitoring (uurloon)", val: "−€\u202f" + Math.round(calc.mC || 0) + "/mnd", neg: true },
                   { lbl: "Content-updates bij collecties", val: "5u/maand", neg: true },
                   { lbl: "Netto tijdwinst na botbeheer", val: "~" + Math.round(calc.ns || 0) + "u netto", neg: false },
                 ].map((row, idx) => (
                   <div key={idx} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: idx < 4 ? "1px solid #E5E7EB" : "none", gap: 8 }}>
-                    <span style={{ fontSize: 12, color: "#111111" }}>{row.lbl}</span>
+                    <span style={{ fontSize: 12, color: "#111111" }}>
+                      {row.lbl}
+                      {row.note && <span style={{ fontSize: 10, color: "#6B7280", fontWeight: 400 }}>{row.note}</span>}
+                    </span>
                     <span style={{ fontSize: 13, fontWeight: 700, color: row.neg ? "#DC2626" : "#111111" }}>{row.val}</span>
                   </div>
                 ))}
@@ -413,7 +473,7 @@ export default function ROIChatbot() {
           <div style={{ background: "#111111", borderRadius: 12, padding: "16px 20px", marginTop: 12 }}>
             <p style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, margin: 0 }}>
               <strong style={{ color: "#FCA5A5" }}>Het kernpunt:</strong> De tijdsbesparing is alleen reëel als niemand die uren terugstopt in het beheren van de bot. Bij zelfbeheer gaat gemakkelijk{" "}
-              <strong style={{ color: "#FCA5A5" }}>6–10u/maand</strong> verloren. Glimps regelt alles proactief — jij merkt de bot enkel wanneer hij waarde levert.
+              <strong style={{ color: "#FCA5A5" }}>6–10u/maand</strong> verloren. {csStaff > 1 && <>Met <strong>{csStaff}</strong> medewerkers: één volgt de bot, <strong>{csStaff - 1}</strong> profiteren volledig van de vrijgekomen uren. </>}Glimps regelt alles proactief — jij merkt de bot enkel wanneer hij waarde levert.
             </p>
           </div>
         </Section>
