@@ -2,6 +2,23 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+const styles = `
+  @media (max-width: 640px) {
+    .roi-table-row {
+      grid-template-columns: 1fr !important;
+      gap: 6px !important;
+      padding: 10px 16px !important;
+    }
+    .roi-container {
+      padding: 24px 16px 48px !important;
+      font-size: 0.95em !important;
+    }
+    .roi-container > div:nth-child(2) {
+      font-size: 0.9em !important;
+    }
+  }
+`;
+
 const PKGS = [
   { n: "Growth",     p: 325 },
   { n: "Business",   p: 525 },
@@ -66,13 +83,14 @@ export default function ROIChatbot() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#F9FAFB", fontFamily: "-apple-system,'Helvetica Neue',Arial,sans-serif", color: "#111111" }}>
+      <style>{styles}</style>
       <Navigation />
 
       {/* Content */}
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 24px 72px", width: "100%", flex: 1, fontSize: "1.1em" }}>
+      <div className="roi-container" style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 24px 72px", width: "100%", flex: 1, fontSize: "1.1em" }}>
         {/* 1. PACKAGES */}
         <Section label="Kies je pakket">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))", gap: 8 }}>
             {PKGS.map((p, i) => (
               <div
                 key={p.n}
@@ -114,7 +132,7 @@ export default function ROIChatbot() {
 
         {/* 2. SETUP */}
         <Section label="Kies je opstartkost (eenmalig)">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))", gap: 8 }}>
             {SETUPS.map((s, i) => (
               <div
                 key={s}
@@ -147,7 +165,7 @@ export default function ROIChatbot() {
 
         {/* 3. SLIDERS */}
         <Section label="Jouw situatie — pas aan">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 10 }}>
             <SlCard label="Chats / tickets per maand" val={chats.toString()} onChange={(v) => setChats(Number(v))} min={50} max={3000} step={50} unit="gesprekken" />
             <SlCard label="Gem. tijd per ticket" val={time.toString()} onChange={(v) => setTime(Number(v))} min={3} max={25} step={1} unit="min" />
             <SlCard label="% automatisch afgehandeld" val={autVal + "%"} onChange={(v) => setAutVal(Number(v))} min={40} max={90} step={1} unit="%" />
@@ -165,7 +183,7 @@ export default function ROIChatbot() {
                 Wat kost een gesprek — manueel vs. automatisch?
               </p>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))" }}>
               {[
                 { lbl: "Medewerker", val: fmtC(calc.hC || 0), color: "#DC2626", desc: `${time} min x €${wage}/u` },
                 { lbl: "AI — Glimps", val: fmtC(calc.aC || 0), color: "#059669", desc: `€${calc.pkgCost || 0} / ${calc.aut || 0} gesprekken` },
@@ -208,7 +226,7 @@ export default function ROIChatbot() {
 
         {/* 5. METRICS */}
         <Section label="Maandelijkse impact — na go-live">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 10 }}>
             <Met dark label="Vrijgekomen uren CS" val={Math.round(calc.hrs || 0) + "u"} sub={`${calc.aut || 0} geautomatiseerd`} sub2={`~${calc.hPW || 0}u per week`} />
             <Met label="Waarde vrijgekomen tijd" val={fmt(calc.tv || 0)} sub={`${Math.round(calc.hrs || 0)}u x €${wage}/u`} />
             <Met label="Bot-omzet marge-aandeel" val={fmt(calc.rm || 0)} sub={`€${botRev.toLocaleString("nl-BE")} x ${margin}%`} />
@@ -268,8 +286,8 @@ export default function ROIChatbot() {
 
         {/* 7. TABLE */}
         <Section label="Kosten & opbrengsten — volledig overzicht">
-          <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
-            <div style={{ background: "#111111", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "11px 20px" }}>
+          <div style={{ background: "white", border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden", overflowX: "auto" }}>
+            <div style={{ background: "#111111", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "11px 20px", minWidth: "100%" }}>
               {["Post", "Maand 1", "Per maand", "Jaar 1"].map((h) => (
                 <span key={h} style={{ fontSize: 9, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.5px", color: "rgba(255,255,255,0.4)" }}>
                   {h}
@@ -282,7 +300,7 @@ export default function ROIChatbot() {
             <BSection>Investering</BSection>
             <BRow label="Opstartkost (eenmalig)" c1={"−€\u202f" + (calc.setupCost || 0).toLocaleString("nl-BE")} cm="—" cy={"−€\u202f" + (calc.setupCost || 0).toLocaleString("nl-BE")} neg />
             <BRow label={`Pakketkost — ${PKGS[cP].n} €${calc.pkgCost}/maand`} c1={"−€\u202f" + (calc.pkgCost || 0)} cm={"−€\u202f" + (calc.pkgCost || 0)} cy={"−€\u202f" + ((calc.pkgCost || 0) * 12).toLocaleString("nl-BE")} neg />
-            <div style={{ background: "#FFF0F2", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "14px 20px", borderTop: "2px solid #E74E4D" }}>
+            <div style={{ background: "#FFF0F2", display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "14px 20px", borderTop: "2px solid #E74E4D", minWidth: "100%" }}>
               <div style={{ fontSize: 12, fontWeight: 700 }}>Netto resultaat</div>
               {[calc.netM1 || 0, calc.netM || 0, calc.netY || 0].map((v, i) => (
                 <div key={i} style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.3px", color: v >= 0 ? "#059669" : "#DC2626" }}>
@@ -336,7 +354,7 @@ export default function ROIChatbot() {
             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 18, lineHeight: 1.5 }}>
               Elke maand zonder bot laat je waarde liggen. Dit zijn de gemiste opbrengsten op basis van jouw aannames.
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 10 }}>
               {[
                 { val: fmt(calc.tv || 0), lbl: "Gemiste tijdsbesparing CS", day: "~" + fmt((calc.tv || 0) / 30) + "/dag" },
                 { val: fmt(calc.rm || 0), lbl: "Gemiste omzet (marge-aandeel)", day: "~" + fmt((calc.rm || 0) / 30) + "/dag" },
@@ -358,7 +376,7 @@ export default function ROIChatbot() {
 
         {/* 10. DFY */}
         <Section label="Done for you — zelf beheren vs. Glimps">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 14 }}>
             {/* ZELF */}
             <div style={{ border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
               <div style={{ padding: "13px 18px", background: "#FEF2F2", borderBottom: "1px solid #FECACA", display: "flex", alignItems: "center", gap: 8 }}>
@@ -494,7 +512,7 @@ function BSection({ children }: any) {
 
 function BRow({ label, c1, cm, cy, pos, neg }: any) {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "12px 20px", borderBottom: "1px solid #E5E7EB", alignItems: "center" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "2.2fr 1fr 1fr 1fr", gap: 10, padding: "12px 20px", borderBottom: "1px solid #E5E7EB", alignItems: "center", minWidth: "100%" }} className="roi-table-row">
       <div style={{ fontSize: 12, color: "#111111" }}>{label}</div>
       <div style={{ fontSize: 15, fontWeight: 800, color: pos ? "#059669" : neg ? "#DC2626" : "#111111" }}>{c1}</div>
       <div style={{ fontSize: cm === "—" ? 11 : 15, fontWeight: cm === "—" ? 400 : 800, color: pos ? "#059669" : neg ? "#DC2626" : "#6B7280" }}>
