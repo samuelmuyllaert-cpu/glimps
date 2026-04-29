@@ -7,7 +7,7 @@ const Features = () => {
 
   return <section className="relative py-12 px-4 sm:py-16 sm:px-6 lg:py-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Left side - Content */}
           <div>
             <div className="inline-block mb-4 sm:mb-6 px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/10 rounded-full">

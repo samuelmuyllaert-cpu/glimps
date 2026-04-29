@@ -297,7 +297,7 @@ const AIJourney = () => {
               return (
                 <div key={index} className="flex items-start gap-8 flex-shrink-0">
                   {/* Step Card */}
-                  <Card className="w-[280px] h-[320px] p-5 flex flex-col shadow-lg hover:shadow-xl transition-shadow bg-white">
+                  <Card className="w-full sm:w-[280px] h-auto sm:h-[320px] p-5 flex flex-col shadow-lg hover:shadow-xl transition-shadow bg-white min-w-[260px] sm:min-w-[280px]">
                     <div className="flex items-start justify-between mb-4">
                       <div
                         className="w-12 h-12 rounded-2xl flex items-center justify-center"
@@ -323,8 +323,8 @@ const AIJourney = () => {
 
                   {/* Arrow between steps */}
                   {index < journeySteps.length - 1 && (
-                    <div className="flex items-center h-[320px]">
-                      <ArrowRight className="w-8 h-8 text-muted-foreground/40" />
+                    <div className="flex items-center h-auto sm:h-[320px]">
+                      <ArrowRight className="w-6 sm:w-8 h-6 sm:h-8 text-muted-foreground/40 flex-shrink-0" />
                     </div>
                   )}
                 </div>

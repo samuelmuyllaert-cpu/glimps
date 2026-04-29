@@ -9,12 +9,11 @@ const styles = `
       gap: 6px !important;
       padding: 10px 16px !important;
     }
+  }
+  @media (min-width: 641px) {
     .roi-container {
-      padding: 24px 16px 48px !important;
-      font-size: 0.95em !important;
-    }
-    .roi-container > div:nth-child(2) {
-      font-size: 0.9em !important;
+      padding: 36px 24px 72px !important;
+      font-size: 1.1em !important;
     }
   }
 `;
@@ -87,7 +86,7 @@ export default function ROIChatbot() {
       <Navigation />
 
       {/* Content */}
-      <div className="roi-container" style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 24px 72px", width: "100%", flex: 1, fontSize: "1.1em" }}>
+      <div className="roi-container" style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 16px 48px", width: "100%", flex: 1, fontSize: "1em" }}>
         {/* 1. PACKAGES */}
         <Section label="Kies je pakket">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))", gap: 8 }}>

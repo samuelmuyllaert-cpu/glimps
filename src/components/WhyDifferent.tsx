@@ -40,10 +40,10 @@ const WhyDifferent = () => {
             <Sparkles className="h-4 w-4" />
             {t('whyDifferent.badge')}
           </div>
-          <h2 className="mb-6 font-inter text-4xl font-normal text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="mb-6 font-inter text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-normal text-foreground">
             {t('whyDifferent.title1')}
           </h2>
-          <h2 className="mb-6 font-inter text-4xl font-normal text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="mb-6 font-inter text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-normal text-foreground">
             {t('whyDifferent.title2')}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
@@ -52,11 +52,11 @@ const WhyDifferent = () => {
         </div>
 
         {/* Feature Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="group relative p-8 bg-card border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              className="group relative p-4 sm:p-6 md:p-8 bg-card border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
               {/* Subtle background glow effect */}
               <div 

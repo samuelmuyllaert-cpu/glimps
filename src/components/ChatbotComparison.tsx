@@ -414,7 +414,7 @@ const ChatbotComparison = () => {
                     className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
                   >
                     <div 
-                      className={`max-w-[80%] p-4 rounded-2xl ${
+                      className={`max-w-xs sm:max-w-sm md:max-w-[80%] p-4 rounded-2xl ${
                         message.role === 'user' 
                           ? 'bg-foreground text-background' 
                           : 'bg-card border border-border'
@@ -482,7 +482,7 @@ const ChatbotComparison = () => {
                     className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
                   >
                     <div 
-                      className={`max-w-[80%] p-4 rounded-2xl ${
+                      className={`max-w-xs sm:max-w-sm md:max-w-[80%] p-4 rounded-2xl ${
                         message.role === 'user' 
                           ? 'bg-foreground text-background' 
                           : 'bg-card border border-primary/30'

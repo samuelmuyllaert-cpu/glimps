@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
-import { BarChart3, Zap, Users } from "lucide-react";
+import { ChartBar as BarChart3, Zap, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProductFeatures = () => {
@@ -13,7 +13,7 @@ const ProductFeatures = () => {
           <p className="text-sm uppercase tracking-wider text-primary mb-4">
             {language === 'en' ? 'PRODUCT FEATURES' : language === 'fr' ? 'FONCTIONNALITÉS PRODUIT' : 'PRODUCT FEATURES'}
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
             {language === 'en' ? 'Unleash the power of automation' : language === 'fr' ? 'Libérez la puissance de l\'automatisation' : 'Ontketen de kracht van automatisering'}
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -28,8 +28,8 @@ const ProductFeatures = () => {
         </div>
 
         <Tabs defaultValue="analytics" className="w-full">
-          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-            <TabsTrigger value="analytics" className="flex items-center gap-2">
+          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 gap-1 sm:gap-2 mb-8 sm:mb-12">
+            <TabsTrigger value="analytics" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base">
               <BarChart3 className="w-4 h-4" />
               {language === 'en' ? 'AI Analytics' : language === 'fr' ? 'Analytics IA' : 'AI Analytics'}
             </TabsTrigger>
@@ -44,10 +44,10 @@ const ProductFeatures = () => {
           </TabsList>
 
           <TabsContent value="analytics" className="mt-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-3xl font-bold mb-4">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                     {language === 'en'
                       ? 'Strengthen your brand and reach customers in an unprecedented way with Glimps'
                       : language === 'fr'
@@ -65,15 +65,15 @@ const ProductFeatures = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-4 sm:gap-8">
                   <div>
-                    <div className="text-5xl font-bold mb-2">92%</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">92%</div>
                     <p className="text-muted-foreground">
                       {language === 'en' ? 'Increase in conversion' : language === 'fr' ? 'Augmentation de la conversion' : 'Toename in conversie'}
                     </p>
                   </div>
                   <div>
-                    <div className="text-5xl font-bold mb-2">3.8x</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">3.8x</div>
                     <p className="text-muted-foreground">
                       {language === 'en' ? 'More sales' : language === 'fr' ? 'Plus de ventes' : 'Meer verkoop'}
                     </p>
@@ -160,10 +160,10 @@ const ProductFeatures = () => {
           </TabsContent>
 
           <TabsContent value="automation" className="mt-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-3xl font-bold mb-4">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                     {language === 'en'
                       ? 'Automate your workflows and save time'
                       : language === 'fr'
@@ -181,15 +181,15 @@ const ProductFeatures = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-4 sm:gap-8">
                   <div>
-                    <div className="text-5xl font-bold mb-2">85%</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">85%</div>
                     <p className="text-muted-foreground">
                       {language === 'en' ? 'Less manual work' : language === 'fr' ? 'Moins de travail manuel' : 'Minder handmatig werk'}
                     </p>
                   </div>
                   <div>
-                    <div className="text-5xl font-bold mb-2">24/7</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">24/7</div>
                     <p className="text-muted-foreground">
                       {language === 'en' ? 'Always available' : language === 'fr' ? 'Toujours disponible' : 'Altijd beschikbaar'}
                     </p>
@@ -214,10 +214,10 @@ const ProductFeatures = () => {
           </TabsContent>
 
           <TabsContent value="personalization" className="mt-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-3xl font-bold mb-4">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                     {language === 'en'
                       ? 'Personalized experiences that convert'
                       : language === 'fr'
@@ -235,15 +235,15 @@ const ProductFeatures = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-4 sm:gap-8">
                   <div>
-                    <div className="text-5xl font-bold mb-2">4.5x</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">4.5x</div>
                     <p className="text-muted-foreground">
                       {language === 'en' ? 'Higher engagement' : language === 'fr' ? 'Engagement supérieur' : 'Hogere engagement'}
                     </p>
                   </div>
                   <div>
-                    <div className="text-5xl font-bold mb-2">76%</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">76%</div>
                     <p className="text-muted-foreground">
                       {language === 'en' ? 'More repeat purchases' : language === 'fr' ? 'Plus d\'achats répétés' : 'Meer herhaalaankopen'}
                     </p>

@@ -30,7 +30,7 @@ const FAQ = () => {
           </div>
 
           {/* FAQ Content */}
-          <div className="grid gap-8 lg:grid-cols-[350px,1fr]">
+          <div className="grid gap-8 md:grid-cols-[250px,1fr] lg:grid-cols-[350px,1fr]">
             {/* Contact Card */}
             <div>
               <Card className="p-6">

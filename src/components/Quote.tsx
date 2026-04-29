@@ -4,11 +4,11 @@ const Quote = () => {
   const { language } = useLanguage();
 
   return (
-    <section className="relative w-full overflow-hidden bg-muted/30 py-32 md:py-40">
-      <div className="container mx-auto px-6">
+    <section className="relative w-full overflow-hidden bg-muted/30 py-16 sm:py-24 md:py-32 lg:py-40">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <blockquote className="space-y-4">
-            <p className="font-inter text-3xl font-normal leading-tight text-foreground md:text-5xl lg:text-6xl">
+          <blockquote className="space-y-4 px-4">
+            <p className="font-inter text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal leading-tight text-foreground">
               {language === 'fr' ? (
                 <>
                   Embrassez l'avenir de

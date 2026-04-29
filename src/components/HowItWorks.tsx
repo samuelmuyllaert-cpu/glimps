@@ -21,17 +21,17 @@ const HowItWorks = () => {
             <h2 className="mb-3 sm:mb-4 font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-foreground px-4">
               {t('howItWorks.title')}
             </h2>
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-foreground px-4">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-foreground px-4">
               {t('howItWorks.subtitle')}
             </p>
           </div>
 
           {/* Content Grid */}
-          <div className="grid gap-8 sm:gap-10 lg:gap-12 lg:grid-cols-[1fr,1fr]">
+          <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:gap-12 lg:grid-cols-[1fr,1fr]">
             {/* Left Side - Icon */}
             <div className="flex items-center justify-center order-2 lg:order-1">
               <div className="relative">
-                <div className="rounded-2xl sm:rounded-3xl bg-primary/5 p-8 sm:p-12 lg:p-16">
+                <div className="rounded-2xl sm:rounded-3xl bg-primary/5 p-6 sm:p-12 lg:p-16">
                   <Bot className="h-20 w-20 sm:h-24 sm:w-24 lg:h-32 lg:w-32 text-primary" strokeWidth={1.5} />
                 </div>
               </div>

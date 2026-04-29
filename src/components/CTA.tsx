@@ -6,19 +6,19 @@ const CTA = () => {
   const { language, t } = useLanguage();
 
   return (
-    <section className="relative w-full overflow-hidden py-20">
+    <section className="relative w-full overflow-hidden py-12 sm:py-16 lg:py-20">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#e6575e]/20 via-[#f88a8f]/30 to-[#e6575e]/20" />
-      <div className="absolute bottom-0 left-1/2 h-[500px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#e6575e]/40 via-[#f88a8f]/50 to-[#e6575e]/40 blur-3xl" />
+      <div className="absolute bottom-0 left-1/2 h-[300px] sm:h-[500px] w-[600px] sm:w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#e6575e]/40 via-[#f88a8f]/50 to-[#e6575e]/40 blur-3xl" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+          <span className="mb-4 inline-block text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary">
             {t('cta.overline')}
           </span>
 
-          <h2 className="mb-6 font-inter text-4xl font-normal text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="mb-6 font-inter text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-normal text-foreground">
             {t('cta.title').split('\n').map((line, i) => (
               <span key={i}>
                 {line}
@@ -27,7 +27,7 @@ const CTA = () => {
             ))}
           </h2>
 
-          <p className="mb-10 text-lg text-muted-foreground md:text-xl">
+          <p className="mb-8 sm:mb-10 text-sm sm:text-base md:text-lg text-muted-foreground lg:text-xl px-4">
             {t('cta.description')}
           </p>
 

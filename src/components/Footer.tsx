@@ -74,8 +74,8 @@ const Footer = () => {
     <>
     <footer className="border-t border-border/50 bg-background">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-5">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid gap-8 sm:gap-12 grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
           {/* Company Info */}
           <div className="space-y-4 md:col-span-1">
             <a href="/" className="flex items-center">

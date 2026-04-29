@@ -27,9 +27,9 @@ const Integrations = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/10 to-primary/10 rounded-full blur-3xl"></div>
       
-      <div className="mx-auto max-w-6xl px-6 relative z-10">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 relative z-10">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-12 sm:mb-16 text-center">
           <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-purple-500/20 border border-primary/20 mb-4">
             <p className="text-sm font-semibold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               {language === 'en' ? 'OUR PRIMARY INTEGRATIONS' : language === 'fr' ? 'NOS INTÉGRATIONS PRINCIPALES' : 'ONZE PRIMAIRE INTEGRATIES'}
@@ -46,11 +46,11 @@ const Integrations = () => {
         </div>
 
         {/* Integration Grid */}
-        <div className="grid grid-cols-3 gap-8 md:grid-cols-4 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 md:grid-cols-4 md:gap-8 lg:grid-cols-5">
           {integrations.map((integration, index) => (
             <div
               key={index}
-              className="group flex items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:bg-gradient-to-br hover:from-card hover:to-primary/5"
+              className="group flex items-center justify-center rounded-lg sm:rounded-2xl border border-border bg-card p-3 sm:p-6 transition-all hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:bg-gradient-to-br hover:from-card hover:to-primary/5"
             >
               <img
                 src={integration.logo}

@@ -89,11 +89,11 @@ const IndustryTemplate = ({
       {/* Benefits Section */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center font-inter text-3xl font-normal md:text-4xl">
+          <h2 className="mb-8 sm:mb-12 text-center font-inter text-2xl sm:text-3xl md:text-4xl font-normal">
             {industry.whyTitle}
           </h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-2xl border border-border/50 bg-card p-8">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
+            <div className="rounded-xl sm:rounded-2xl border border-border/50 bg-card p-4 sm:p-6 md:p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Icon className="h-6 w-6 text-primary" />
               </div>
@@ -105,7 +105,7 @@ const IndustryTemplate = ({
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border/50 bg-card p-8">
+            <div className="rounded-xl sm:rounded-2xl border border-border/50 bg-card p-4 sm:p-6 md:p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Icon2 className="h-6 w-6 text-primary" />
               </div>
@@ -117,7 +117,7 @@ const IndustryTemplate = ({
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border/50 bg-card p-8">
+            <div className="rounded-xl sm:rounded-2xl border border-border/50 bg-card p-4 sm:p-6 md:p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                 <Icon3 className="h-6 w-6 text-primary" />
               </div>

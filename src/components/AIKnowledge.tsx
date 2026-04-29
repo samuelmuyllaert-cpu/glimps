@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+import { CircleCheck as CheckCircle2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -6,12 +6,12 @@ const AIKnowledge = () => {
   const { language } = useLanguage();
 
   return (
-    <section className="relative w-full overflow-hidden bg-background py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+    <section className="relative w-full overflow-hidden bg-background py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="mb-6 font-inter text-4xl font-normal text-foreground md:text-5xl">
+            <h2 className="mb-6 font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
               {language === 'en' ? (
                 <>AI that <span className="italic">knows</span> what you sell</>
               ) : language === 'fr' ? (
