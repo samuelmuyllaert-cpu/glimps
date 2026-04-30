@@ -9,7 +9,7 @@ const CTA = () => {
     <section className="relative w-full overflow-hidden py-12 sm:py-16 lg:py-20">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#e6575e]/20 via-[#f88a8f]/30 to-[#e6575e]/20" />
-      <div className="absolute bottom-0 left-1/2 h-[250px] sm:h-[300px] md:h-[500px] w-[300px] sm:w-[600px] md:w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#e6575e]/40 via-[#f88a8f]/50 to-[#e6575e]/40 blur-3xl" />
+      <div className="absolute bottom-0 left-1/2 h-[250px] sm:h-[400px] md:h-[600px] lg:h-[800px] w-[300px] sm:w-[600px] md:w-[1000px] lg:w-[1200px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#e6575e]/40 via-[#f88a8f]/50 to-[#e6575e]/40 blur-3xl" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6">
