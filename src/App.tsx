@@ -116,6 +116,7 @@ import FulfillmentCentersIntegration from "./pages/integrations/FulfillmentCente
 import ROIGeleFlamingo from "./pages/ROIGeleFlamingo";
 import ROIROIDeGeleFlamingo from "./pages/ROIROIDeGeleFlamingo";
 import ROIChatbot from "./pages/ROIChatbot";
+import Klantcases from "./pages/Klantcases";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -144,6 +145,7 @@ const App = () => (
         <Route path="/consultancy" element={<Consultancy />} />
         <Route path="/integraties" element={<Integraties />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/klantcases" element={<Klantcases />} />
         <Route path="/blog/conversie-verhogen" element={<ConversieVerhogen />} />
         <Route path="/blog/toekomst-ai-2025" element={<ToekomstAI2025 />} />
         <Route path="/blog/case-study-fashionhub" element={<CaseStudyFashionHub />} />
