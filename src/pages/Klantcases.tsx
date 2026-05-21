@@ -19,22 +19,10 @@ const formSchema = z.object({
 });
 
 const cases = [
-  {
-    label: "Klantcase #1",
-    desc: "Een Belgische webshop in sportartikelen automatiseerde hun volledige klantenservice.",
-  },
-  {
-    label: "Klantcase #2",
-    desc: "Een cosmeticawebshop verhoogde hun gemiddelde bestelwaarde met AI-aanbevelingen.",
-  },
-  {
-    label: "Klantcase #3",
-    desc: "Een beautyspecialist bood gepersonaliseerde productadviezen aan via chatbot.",
-  },
-  {
-    label: "Klantcase #4",
-    desc: "Een optiekwebshop bood 24/7 klantenondersteuning en verminderde wachttijden drastisch.",
-  },
+  { label: "Klantcase #1" },
+  { label: "Klantcase #2" },
+  { label: "Klantcase #3" },
+  { label: "Klantcase #4" },
 ];
 
 const Klantcases = () => {
@@ -135,12 +123,9 @@ const Klantcases = () => {
                       <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
                         <FileText className="h-5 w-5 text-primary" />
                       </div>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <span className="font-semibold">{c.label}</span>
-                          <Lock className="h-3.5 w-3.5 text-muted-foreground" />
-                        </div>
-                        <p className="mt-1 text-sm text-muted-foreground">{c.desc}</p>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold">{c.label}</span>
+                        <Lock className="h-3.5 w-3.5 text-muted-foreground" />
                       </div>
                     </div>
                   ))}
