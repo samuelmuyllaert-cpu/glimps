@@ -20,20 +20,20 @@ const formSchema = z.object({
 
 const cases = [
   {
-    label: "Absolute Teamsport",
-    desc: "Hoe Absolute Teamsport hun klantenservice automatiseerde en conversies verhoogde.",
+    label: "Klantcase #1",
+    desc: "Een Belgische webshop in sportartikelen automatiseerde hun volledige klantenservice.",
   },
   {
-    label: "Het Cosmeticahuis",
-    desc: "Productaanbevelingen via AI die de gemiddelde bestelwaarde verhoogden.",
+    label: "Klantcase #2",
+    desc: "Een cosmeticawebshop verhoogde hun gemiddelde bestelwaarde met AI-aanbevelingen.",
   },
   {
-    label: "Nomige",
-    desc: "Gepersonaliseerde huidverzorgingsadviezen via een intelligente chatbot.",
+    label: "Klantcase #3",
+    desc: "Een beautyspecialist bood gepersonaliseerde productadviezen aan via chatbot.",
   },
   {
-    label: "Lens Online",
-    desc: "24/7 klantenondersteuning die de wachttijden drastisch verminderde.",
+    label: "Klantcase #4",
+    desc: "Een optiekwebshop bood 24/7 klantenondersteuning en verminderde wachttijden drastisch.",
   },
 ];
 
