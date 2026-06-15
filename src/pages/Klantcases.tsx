@@ -3,14 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CircleCheck as CheckCircle2, FileText, Download } from "lucide-react";
-
-const cases = [
-  { label: "Klantcase #1" },
-  { label: "Klantcase #2" },
-  { label: "Klantcase #3" },
-  { label: "Klantcase #4" },
-];
+import { CircleCheck as CheckCircle2, Download } from "lucide-react";
 
 const Klantcases = () => {
   return (
@@ -42,20 +35,6 @@ const Klantcases = () => {
       <section className="container mx-auto px-6 pb-24">
         <div className="mx-auto max-w-3xl">
           <div className="space-y-6">
-            <div className="space-y-4">
-              {cases.map((c, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 rounded-xl border bg-muted/30 p-5"
-                >
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <FileText className="h-5 w-5 text-primary" />
-                  </div>
-                  <span className="font-semibold">{c.label}</span>
-                </div>
-              ))}
-            </div>
-
             <Card className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-white">
               <h3 className="mb-4 font-bold">Wat je leert uit de cases</h3>
               <ul className="space-y-3">
