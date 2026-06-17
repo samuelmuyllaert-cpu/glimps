@@ -269,7 +269,7 @@ const Lotana = () => {
 
           <div className="flex justify-center items-center py-10">
             <iframe
-              src="https://static.chatbotkit.com/integrations/widget/cmo5ia46s000004jrjtr8ql47/frame"
+              src="https://static.chatbotkit.com/integrations/widget/cmq7te9yz000m04jmxpo0zshu/frame"
               width="700"
               height="700"
               frameBorder="0"
