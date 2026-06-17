@@ -13,7 +13,7 @@ const Lotana = () => {
     const script = document.createElement('script');
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmo5ia46s000004jrjtr8ql47');
+    script.setAttribute('data-widget', 'cmq89vt1r000y04l7a4hcngrf');
     script.setAttribute('data-position', 'bottom-right');
     document.body.appendChild(script);
 
