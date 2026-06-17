@@ -10,10 +10,17 @@ const Lotana = () => {
   const { language } = useLanguage();
 
   useEffect(() => {
+    const widgetId =
+      language === 'fr'
+        ? 'cmo1m19vm002704l1vu9yynvf'
+        : language === 'en'
+        ? 'cmq7te9yz000m04jmxpo0zshu'
+        : 'cmo5ia46s000004jrjtr8ql47';
+
     const script = document.createElement('script');
     script.id = 'chatbotkit-widget';
     script.src = 'https://static.chatbotkit.com/integrations/widget/v2.js';
-    script.setAttribute('data-widget', 'cmo5ia46s000004jrjtr8ql47');
+    script.setAttribute('data-widget', widgetId);
     script.setAttribute('data-position', 'bottom-right');
     document.body.appendChild(script);
 
@@ -23,7 +30,7 @@ const Lotana = () => {
         existingScript.remove();
       }
     };
-  }, []);
+  }, [language]);
 
   const content = language === 'fr' ? {
     title: "Testez votre",
@@ -269,7 +276,13 @@ const Lotana = () => {
 
           <div className="flex justify-center items-center py-10">
             <iframe
-              src="https://static.chatbotkit.com/integrations/widget/cmo5ia46s000004jrjtr8ql47/frame"
+              src={`https://static.chatbotkit.com/integrations/widget/${
+                language === 'fr'
+                  ? 'cmo1m19vm002704l1vu9yynvf'
+                  : language === 'en'
+                  ? 'cmq7te9yz000m04jmxpo0zshu'
+                  : 'cmo5ia46s000004jrjtr8ql47'
+              }/frame`}
               width="700"
               height="700"
               frameBorder="0"
