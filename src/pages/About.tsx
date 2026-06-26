@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Target, TrendingUp, Lightbulb, Zap, Heart } from "lucide-react";
-import samuelPhoto from "@/assets/samuel.png";
+import samuelPhoto from "@/assets/1777392448773.jpeg";
 import tomPhoto from "@/assets/tom.png";
 import SEO from "@/components/SEO";
 import StructuredData, { baseOrganization } from "@/components/StructuredData";
@@ -80,7 +80,7 @@ const About = () => {
           {/* Samuel */}
           <div className="space-y-6">
             <div className="mx-auto h-48 w-48 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-primary/5 p-1">
-              <img src={samuelPhoto} alt="Samuel Muyllaert" className="h-full w-full rounded-full object-cover" />
+              <img src={samuelPhoto} alt="Samuel Muyllaert" className="h-full w-full rounded-full object-cover grayscale" />
             </div>
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Samuel Muyllaert</h3>
