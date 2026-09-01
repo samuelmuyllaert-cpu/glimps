@@ -1,0 +1,14 @@
+{
+  "name": "glimps-li-runner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LinkedIn outreach runner voor Glimps — fase 1: lezen",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "quota": "node src/cli.js quota",
+    "due": "node src/cli.js due",
+    "plan": "node src/cli.js scrape:plan",
+    "save": "node src/cli.js scrape:save"
+  }
+}
