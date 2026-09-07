@@ -664,7 +664,11 @@ const Features = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background">
+    <div className="min-h-screen features-orange" style={{ background: '#fff', color: '#10161F' }}>
+      {/* Background decorations */}
+      <div style={{ position: 'absolute', inset: '0 0 auto', height: 940, backgroundImage: 'repeating-linear-gradient(90deg, rgba(27,58,92,0.05) 0 1px, rgba(0,0,0,0) 1px 64px), repeating-linear-gradient(0deg, rgba(27,58,92,0.05) 0 1px, rgba(0,0,0,0) 1px 64px)', maskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, rgba(0,0,0,0) 100%)', WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, rgba(0,0,0,0) 100%)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: -300, left: -280, width: 1240, height: 940, borderRadius: '50%', background: 'radial-gradient(circle, #F5E0D0 0%, #FAF0E8 62%, rgba(250,240,232,0) 100%)', opacity: 0.85, filter: 'blur(120px)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 560, right: -300, width: 1120, height: 820, borderRadius: '50%', background: 'radial-gradient(circle, #D8E4F0 0%, #E7EEF5 58%, rgba(231,238,245,0) 100%)', opacity: 0.85, filter: 'blur(130px)', pointerEvents: 'none' }} />
       <SEO
         title={language === 'en' ? "Features - Glimps AI Chatbot | Complete E-commerce Solution" : language === 'en'
           ? "Fonctionnalites - Glimps AI Chatbot | Solution E-commerce Complete"
@@ -696,11 +700,12 @@ const Features = () => {
       <StructuredData type="graph" data={graphData} />
       <Navigation />
 
-      <section className="py-20 px-6">
+      <section className="relative py-20 px-6" style={{ paddingTop: 160, paddingBottom: 80 }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
-            <h1 className="font-inter text-4xl md:text-6xl font-normal mb-6 leading-tight">
+            <span style={{ display: 'inline-block', fontSize: 11.5, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: '#E8772E', marginBottom: 18 }}>CHATBOT</span>
+            <h1 style={{ margin: 0, fontFamily: "'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: 'clamp(40px, 5.4vw, 78px)', lineHeight: 1.03, letterSpacing: '-0.02em' }}>
               {language === 'en'
                 ? "Our AI chatbot offers complete functionality for every phase of the customer journey"
                 : language === 'fr'
@@ -711,7 +716,7 @@ const Features = () => {
           </div>
 
           {/* Features */}
-          <div className="space-y-32">
+          <div className="space-y-32" style={{ paddingBottom: 80 }}>
             {features.map((feature, index) => (
               <div 
                 key={index}
@@ -721,24 +726,24 @@ const Features = () => {
               >
                 {/* Content Side */}
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <Badge variant="outline" className="mb-6 px-4 py-2 bg-primary/10 border-primary/20 text-primary">
-                    <feature.icon className="w-4 h-4 mr-2" />
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#FFF4EC', color: '#E8772E', fontSize: 12, fontWeight: 600, letterSpacing: '0.06em', padding: '8px 16px', borderRadius: 999, marginBottom: 24 }}>
+                    <feature.icon className="w-4 h-4" />
                     {feature.badge}
-                  </Badge>
+                  </span>
                   
-                  <h2 className="font-inter text-3xl md:text-4xl font-normal mb-4 leading-tight">
+                  <h2 style={{ margin: '0 0 16px', fontFamily: "'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: 'clamp(28px, 3.6vw, 52px)', lineHeight: 1.05, letterSpacing: '-0.025em' }}>
                     {feature.title}
                   </h2>
                   
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  <p style={{ margin: '0 0 24px', fontSize: 17, lineHeight: 1.6, color: '#5A6472' }}>
                     {feature.description}
                   </p>
 
                   <div className="space-y-3">
                     {feature.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{benefit}</span>
+                        <span style={{ flexShrink: 0, width: 22, height: 22, borderRadius: 999, background: '#FFF4EC', color: '#E8772E', fontSize: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>&#10003;</span>
+                        <span style={{ fontSize: 16, color: '#5A6472', lineHeight: 1.5 }}>{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -747,11 +752,8 @@ const Features = () => {
                 {/* Mockup Side */}
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                   <div className="relative">
-                    {/* Background gradient blur */}
-                    <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl" />
-                    
                     {/* Main mockup card */}
-                    <div className="relative bg-card border border-border rounded-2xl shadow-2xl p-8">
+                    <div className="relative rounded-2xl p-8" style={{ background: '#fff', boxShadow: '0 2px 4px -2px rgba(6,20,36,0.12), 0 22px 44px -20px rgba(6,20,36,0.24)', borderRadius: 20 }}>
                       {feature.mockupType === "voice" && (
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 p-4 bg-primary/10 rounded-xl">
@@ -2079,16 +2081,12 @@ const Features = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-32 text-center">
-            <div className="inline-flex flex-col items-center gap-4 p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
-              <h3 className="font-inter text-2xl font-semibold">
-                {language === 'en' ? "Ready to get started?" : language === 'en'
-          ? "Prêt à commencer ?"
-          : language === 'fr'
-          ? "Prêt à commencer ?"
-          : "Klaar om te beginnen?"}
+          <div style={{ marginTop: 80, borderRadius: 36, background: '#14273D', color: '#fff', padding: '72px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 48, flexWrap: 'wrap' as const }}>
+            <div>
+              <h3 style={{ margin: 0, maxWidth: 520, fontFamily: "'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: 48, lineHeight: 1.05, letterSpacing: '-0.025em' }}>
+                {language === 'en' ? "Ready to get started?" : language === 'fr' ? "Prêt à commencer ?" : "Klaar om te beginnen?"}
               </h3>
-              <p className="text-muted-foreground max-w-md">
+              <p style={{ margin: '18px 0 0', fontSize: 17, color: '#D3DDE8' }}>
                 {language === 'en'
                   ? "Discover how our AI chatbot elevates your e-commerce customer service to the next level."
                   : language === 'fr'
@@ -2096,18 +2094,10 @@ const Features = () => {
                   : "Ontdek hoe onze AI-chatbot jouw e-commerce klantenservice naar een hoger niveau tilt."
                 }
               </p>
-              <a href={language === 'en' ? "/en/contact" : language === 'en'
-          ? "/fr/contact"
-          : language === 'fr'
-          ? "/fr/contact"
-          : "/contact"} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-colors inline-block">
-                {language === 'en' ? "Sign up for free" : language === 'en'
-          ? "S'inscrire gratuitement"
-          : language === 'fr'
-          ? "S'inscrire gratuitement"
-          : "Gratis aanmelden"}
-              </a>
             </div>
+            <a href={language === 'en' ? "/en/contact" : language === 'fr' ? "/fr/contact" : "/contact"} style={{ flexShrink: 0, display: 'flex', alignItems: 'center', minHeight: 52, background: '#fff', color: '#14273D', fontSize: 15.5, fontWeight: 500, padding: '0 30px', borderRadius: 999, textDecoration: 'none' }}>
+              {language === 'en' ? "Plan a conversation" : language === 'fr' ? "Planifier un entretien" : "Plan een gesprek"}
+            </a>
           </div>
         </div>
       </section>

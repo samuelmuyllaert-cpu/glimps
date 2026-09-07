@@ -187,3 +187,8 @@ All colors MUST be HSL.
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+.features-orange {
+  --primary: 28 80% 54%;
+  --primary-foreground: 0 0% 100%;
+}

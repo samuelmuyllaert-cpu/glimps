@@ -137,6 +137,15 @@ const EmailAgentPage = () => {
     .replace(/<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 72px; padding-top: 26px; border-top: 1px solid #E4E7EC; font-size: 13px; color: #5A6472">[\s\S]*?<\/div>\s*/, '')
     // Fix outermost div width
     .replace('width: 1440px', 'width: 100%')
+    // Make Postvak IN and scanritme bars stay above scrolling mail list
+    .replace(
+      'display: flex; align-items: center; gap: 10px; padding: 18px 22px; border-bottom: 1px solid #EDF1F6',
+      'position: relative; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 18px 22px; border-bottom: 1px solid #EDF1F6; background: #fff'
+    )
+    .replace(
+      'display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 22px; border-bottom: 1px solid #EDF1F6; background: #fff',
+      'position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 22px; border-bottom: 1px solid #EDF1F6; background: #fff'
+    )
     // Add IDs that the IntersectionObserver and scroll handlers need
     .replace(
       'style="animation-delay: 200ms; position: relative; width: 1180px; margin: 72px auto 0"',
