@@ -47,24 +47,43 @@ const EmailAgentPage = () => {
 
   useEffect(() => {
     const list = document.getElementById('mail-list');
-    const section = document.getElementById('inbox-section');
-    if (!list || !section) return;
+    const panel = document.getElementById('inbox-panel');
+    if (!list || !panel) return;
     const prefersRM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersRM || window.innerWidth < 900) return;
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const r = section.getBoundingClientRect();
-          const p = Math.max(0, Math.min(1, (window.innerHeight - r.top) / (r.height + window.innerHeight)));
-          list.style.transform = 'translate3d(0,' + (-p * (list.scrollHeight - 520 + 80)) + 'px,0)';
-          ticking = false;
-        });
-        ticking = true;
+    if (prefersRM) return;
+
+    let animId: number | null = null;
+    let current = 0;
+    const speed = 0.35;
+
+    const animate = () => {
+      const maxScroll = list.scrollHeight - panel.clientHeight;
+      if (maxScroll <= 0) return;
+      current += speed;
+      if (current >= maxScroll) current = maxScroll;
+      list.style.transform = `translate3d(0,${-current}px,0)`;
+      if (current < maxScroll) {
+        animId = requestAnimationFrame(animate);
       }
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          current = 0;
+          list.style.transform = 'translate3d(0,0,0)';
+          animId = requestAnimationFrame(animate);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(panel);
+
+    return () => {
+      observer.disconnect();
+      if (animId) cancelAnimationFrame(animId);
+    };
   }, []);
 
   useEffect(() => {
@@ -117,11 +136,11 @@ const EmailAgentPage = () => {
     // Remove footer address bar
     .replace(/<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 72px; padding-top: 26px; border-top: 1px solid #E4E7EC; font-size: 13px; color: #5A6472">[\s\S]*?<\/div>\s*/, '')
     // Fix outermost div width
-    .replace('width: 1440px', 'max-width: 1440px; width: 100%')
+    .replace('width: 1440px', 'width: 100%')
     // Add IDs that the IntersectionObserver and scroll handlers need
     .replace(
       'style="animation-delay: 200ms; position: relative; width: 1180px; margin: 72px auto 0"',
-      'id="inbox-section" style="animation-delay: 200ms; position: relative; width: 1180px; margin: 72px auto 0"'
+      'id="inbox-section" style="animation-delay: 200ms; position: relative; max-width: 1180px; width: 100%; margin: 72px auto 0; padding: 0 24px; box-sizing: border-box"'
     )
     .replace(
       'style="position: relative; height: 520px; overflow: hidden; border-radius: 20px; background: #fff; box-shadow:',
@@ -140,7 +159,7 @@ const EmailAgentPage = () => {
   return (
     <>
       <Navigation />
-      <div id="email-agent-root" dangerouslySetInnerHTML={{ __html: markup }} />
+      <div id="email-agent-root" style={{ overflowX: 'hidden' }} dangerouslySetInnerHTML={{ __html: markup }} />
       {/* Inject typed text via portal-like approach */}
       <TypedInjector text={typed} />
 
