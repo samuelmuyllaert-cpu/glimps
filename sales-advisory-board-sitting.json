@@ -6,12 +6,12 @@
     "against": 1
   },
   "question": {
-    "headline": "Build for sales managers, or resell what already works?",
+    "headline": "Order status questions - cost problem or revenue problem?",
     "asked_label": "You asked",
-    "asked": "My business mentor told me it is easier to sell something that makes people money than something that saves them cost. I sell email agents that save cost. That offer is fully worked out, I know it inside out, and I have two live requests for it right now - it is only harder to sell. My market today is ecommerce, transport and wholesale, on cost saving. The alternative is helping sales managers quote faster and respond faster, which makes them money - but I would have to build the whole product, do the research, and rethink everything for a market I have never sold to. This is my business (Glimps, AI chatbots and agents for small and mid-sized companies in Belgium) and it decides where my revenue comes from. What do I do?"
+    "asked": "My business mentor told me it is easier to sell something that makes people money than something that saves them cost. I sell email agents that save cost. That offer is fully worked out, I know it inside out, and I have two live requests for it right now - it is only harder to sell. My market today is ecommerce, transport and wholesale, on cost saving. The alternative is helping sales managers quote faster and respond faster, which makes them money - but I would have to build the whole product, do the research, and rethink everything for a market I have never sold to. This is my business (Glimps, AI chatbots and agents for small and mid-sized companies in Belgium) and it decides where my revenue comes from. What do I do? Correction: my ecommerce clients are B2B, and in transport and wholesale most of the inbound is not quote requests at all - it is customers asking where their order is."
   },
   "verdict": {
-    "read": "Two live requests and a market you know beats a product you'd have to invent. Transport and wholesale already lose deals on slow quotes - sell them that.",
+    "read": "Then quote speed is the wrong number. In wholesale and transport the money is the reorder you lose when nobody answers, not the support minute you save.",
     "quotes": [
       {
         "who": "Alex Hormozi",
@@ -29,19 +29,19 @@
       }
     ],
     "call": {
-      "heading": "Stay in your market, sell speed",
-      "text": "Sales managers were never the answer. A transport firm or wholesaler that answers a quote request in minutes wins orders it used to lose. Same agent, same buyers, new promise. Start with your two live requests."
+      "heading": "Sell orders kept, not minutes saved",
+      "text": "Same agent, same three sectors, same where-is-my-order volume. Change what you count: not hours of support, but buyers who stopped reordering because they could not get an answer."
     },
     "actions": [
       {
-        "do": "Rewrite the two live proposals around orders won",
-        "how": "Lead with quote speed, keep cost saving as the second reason",
-        "detail": "You do not need research for this. You have two people already asking, and you already know what the agent does. What changes is the first line of the proposal.\n\nRight now it opens with hours saved. Open it instead with the order they lost: an enquiry that sat until Thursday while a competitor quoted on Tuesday.\n\nHormozi's move: the cost saving does not disappear, it moves down the page. It becomes the reason to keep paying, not the reason to buy. Buyers sign for what they gain and renew for what they save.\n\nSend both proposals this week. Nothing to build."
+        "do": "Put a churn number on unanswered order questions",
+        "how": "Ask both prospects how many buyers stopped reordering last year",
+        "detail": "A wholesaler does not lose the order he is chasing. He loses the next one. The buyer who waited two days for a delivery date remembers it the following month, and quietly places that order with someone else.\n\nRackham's move: ask how many accounts ordered less this year than last, and what an average account is worth over twelve months. Then ask how often those accounts had to chase for an answer.\n\nThat is the same agent you already sell. You are simply counting the loss on the right side of the ledger.\n\nKeenan's move: the gap is not slow support, it is a customer who stopped trusting the answer."
       },
       {
-        "do": "Ask both prospects what a slow quote costs",
-        "how": "One question in the next call, then use their number",
-        "detail": "This is the cheapest research you will ever do, and it replaces the market study you were dreading.\n\nRackham's move: ask how many quote requests came in last month, how many got an answer within the hour, and what an average order is worth. Three questions, one call.\n\nNow you have their arithmetic in their numbers. Twenty late quotes at four thousand euro is eighty thousand on the table, and your price stops being a discussion.\n\nKeenan's move: do not guess the gap for them. Let them say it out loud, then repeat it back in the proposal in their own words."
+        "do": "Keep the cost pitch for whoever feels cost",
+        "how": "Two numbers in one proposal, retention first, savings second",
+        "detail": "Do not contort the product to fit your mentor's rule. Some buyers genuinely are buying a lower support bill, and telling them otherwise costs you the sale you already had.\n\nSandler's move: let the buyer pick. Open with the reorder question. If he shrugs, he is a cost buyer, so sell him cost and close him this month.\n\nBelfort's point holds too: you can only sell what you believe. You have two live requests for a product you know inside out. Send both proposals with the retention number on top and the savings underneath, and let the market tell you which half they read."
       }
     ],
     "split": {
@@ -52,14 +52,14 @@
       "hung": false
     },
     "dissent": {
-      "text": "Blount's point stands: two requests is not a pipeline. Winning both still leaves you with nothing booked for next quarter.",
-      "full": "Blount is not arguing with the call any more. He is arguing with how small it is. Two inbound requests are two conversations, and both could close and you would still be starting next month from zero.\n\nHis position: the reframe is free, so do it today, but the real job is outbound into the same three sectors. You now know exactly who to call and exactly what to open with - that is a prospecting list, not a product decision.\n\nSandler adds the warning: two warm requests are the easiest thing in the world to over-read. If both buy, that proves the story works on people who already came to you. It does not yet prove it works cold."
+      "text": "Blount is blunter: status questions are a support problem, and dressing them as revenue is a story, not a product. Sell the cost saving and move.",
+      "full": "Blount thinks the bench is being clever. Where is my order is a support ticket. It has always been a support ticket, and a wholesaler who hears a churn theory attached to it will smell the reframe.\n\nHis position: you already have two people who want a cheaper support desk. Sell them that, take the money, and stop redesigning the pitch for a rule someone gave you over coffee.\n\nThe bench went the other way because the retention number is real and checkable, not invented. But Blount is right about the risk: if you cannot get the buyer to say the reorder loss out loud, drop it and sell what he came for."
     },
     "vote_label": "The vote — each adviser names who should make the call"
   },
   "last_reviewed": {
-    "when": "7 Sep, 15:41",
-    "note": "re-weighed on two live requests and the existing ecom, transport and wholesale market"
+    "when": "7 Sep, 15:52",
+    "note": "re-weighed: the inbound is order status, not quote requests"
   },
   "tabs": {
     "pv": {
@@ -88,7 +88,7 @@
           "name": "Alex Hormozi",
           "lead": true,
           "seat_label": "Lead seat",
-          "text": "You have two people asking to buy the thing you already built. That is not the moment to invent a second business for a market you have never sold to. Sales managers were your mentor's example, not your market.",
+          "text": "Then you just told me the answer. Where is my order is not a cost question either - it is the reorder you lose. Same agent, same inbox, a different number on the proposal. Still nothing to build.",
           "quote": {
             "who": "Alex Hormozi",
             "text": "you make another product and then within two or three years all of a sudden you have four mini businesses",
@@ -101,48 +101,48 @@
           "who": "carnegie",
           "name": "Dale Carnegie",
           "seat_label": "Rapport",
-          "text": "Carnegie's principle: talk in terms of the other person's interest. A wholesaler does not care about your hours. He cares about the order that went to the competitor who answered first. Same agent, his words."
+          "text": "Carnegie's principle: talk in terms of the other person's interest. A buyer chasing a delivery date is not thinking about your efficiency. He is deciding whether you are easy to work with next month."
         },
         {
           "who": "keenan",
           "name": "Jim Keenan",
           "seat_label": "Discovery",
-          "text": "The gap in transport and wholesale is not overhead, it is the quote that goes out too late. You have been selling the cure and describing the wrong disease."
+          "text": "The gap moved. It is not slow quoting, it is a customer who stopped trusting that he will get an answer. The same agent closes it, but you have to name the right gap."
         },
         {
           "who": "rackham",
           "name": "Neil Rackham",
           "seat_label": "SPIN",
-          "text": "Ask what a late quote costs and the problem changes size. That is the whole move. It takes one question in a call you are already having, not a product build."
+          "text": "Ask what a chased order costs and you get a support figure. Ask what a lost account is worth over a year and you get a different meeting entirely."
         },
         {
           "who": "sandler",
           "name": "David Sandler",
           "seat_label": "Qualify",
-          "text": "You have two live requests. Qualify them properly before you rewrite anything. Do they actually lose orders on speed, or did they come to you to cut costs? Do not sell them a story they did not ask for."
+          "text": "Careful. Some of these buyers really are buying cheaper support. Qualify which one is in front of you before you decide which story to tell."
         },
         {
           "who": "voss",
           "name": "Chris Voss",
           "seat_label": "Negotiation",
-          "text": "Say it before they can: you probably came to us to cut costs. Then let them tell you what it really costs when nobody answers. Their answer is your proposal."
+          "text": "Say it first: most people call us to cut their support load. Then ask whether any customer has quietly gone quiet on them. What comes back is your pitch."
         },
         {
           "who": "blount",
           "name": "Jeb Blount",
           "seat_label": "Pipeline",
-          "text": "Two requests is two requests. Whatever you call the offer, you are one bad month from an empty pipeline. Ecommerce, transport and wholesale is a list. Go work it."
+          "text": "Or you accept that this is a support product, sell it as one to the two people already asking, and get on the phone to thirty more."
         },
         {
           "who": "belfort",
           "name": "Jordan Belfort",
           "seat_label": "Conviction",
-          "text": "You believe in this product. That is worth more than the mentor's rule. Do not trade a thing you can sell today for a slide deck about sales managers."
+          "text": "Whatever you pick, pick one and mean it. A half-believed revenue story sounds worse than a confident cost pitch."
         }
       ],
       "conclusion": {
         "label": "Where round one landed",
-        "text": "The bench threw out the pivot. The revenue story lives inside the market you already sell to, and your two live requests are where it gets tested."
+        "text": "The bench dropped quote speed the moment you corrected it. The volume is order status, and the money in order status is the reorder, not the minute."
       }
     },
     {
@@ -153,33 +153,33 @@
           "name": "Jeb Blount",
           "replying_to": "Hormozi",
           "reply": true,
-          "text": "Alex, you are polishing a message for two people. He needs thirty conversations in those three sectors, not two. The wording is a five minute job."
+          "text": "Alex, this is a support tool. You are attaching a churn story to a ticket queue because a mentor said revenue sells better."
         },
         {
           "who": "hormozi",
           "name": "Alex Hormozi",
           "replying_to": "Blount",
           "reply": true,
-          "text": "Then it is a five minute job he should do before he makes thirty calls, Jeb. Same effort, better opening line."
+          "text": "It is only a story if the number is invented, Jeb. Ask the wholesaler what a lost account costs him, and either the number is there or it is not."
         },
         {
           "who": "sandler",
           "name": "David Sandler",
           "replying_to": "Hormozi",
           "reply": true,
-          "text": "And do not read two closed deals as proof. They came to him. A story that works on inbound has not been tested on anyone who was not already looking."
+          "text": "Then let the number decide, not the framing. If he cannot get the buyer to say it out loud, he is selling cost, and that is not a failure."
         },
         {
           "who": "keenan",
           "name": "Jim Keenan",
           "replying_to": "Blount",
           "reply": true,
-          "text": "Volume without the right diagnosis is thirty polite refusals. He now knows the gap is quote speed. That is what makes the list worth calling."
+          "text": "The ticket queue is the symptom. If nobody diagnoses what the unanswered ticket costs, he is back to selling hours and wondering why it is hard."
         }
       ],
       "conclusion": {
         "label": "Where round two left it",
-        "text": "Nobody defended building for sales managers. The split is only about what comes after the reframe: Blount wants outbound volume, Sandler wants the two requests qualified first."
+        "text": "Everyone agrees the product does not change. The split is whether the retention number holds up in a real call - and that is answerable this week, not arguable."
       }
     }
   ],
@@ -188,49 +188,49 @@
       "who": "blount",
       "voter": "Blount",
       "vote": "Hormozi",
-      "why": "Two requests is not a pipeline"
+      "why": "It is a support product, sell it"
     },
     {
       "who": "carnegie",
       "voter": "Carnegie",
       "vote": "Hormozi",
-      "why": "Speak in the wholesaler's own interest"
+      "why": "The buyer judges ease, not efficiency"
     },
     {
       "who": "keenan",
       "voter": "Keenan",
       "vote": "Hormozi",
-      "why": "The gap is quote speed, not overhead"
+      "why": "Name the right gap first"
     },
     {
       "who": "rackham",
       "voter": "Rackham",
       "vote": "Hormozi",
-      "why": "One question resizes the whole problem"
+      "why": "A lost account beats a saved minute"
     },
     {
       "who": "sandler",
       "voter": "Sandler",
       "vote": "Hormozi",
-      "why": "Qualify the two before rewriting anything"
+      "why": "Qualify which buyer is in front"
     },
     {
       "who": "hormozi",
       "voter": "Hormozi",
       "vote": "Blount",
-      "why": "Volume still beats a better sentence"
+      "why": "Two requests is still not a pipeline"
     },
     {
       "who": "voss",
       "voter": "Voss",
       "vote": "Hormozi",
-      "why": "Their words, not the mentor's frame"
+      "why": "Let their answer choose the story"
     },
     {
       "who": "belfort",
       "voter": "Belfort",
       "vote": "Hormozi",
-      "why": "Sell what you can already sell"
+      "why": "Pick one story and mean it"
     }
   ],
   "ballot_note": "The chair never votes for himself."
