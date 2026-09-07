@@ -6,42 +6,42 @@
     "against": 1
   },
   "question": {
-    "headline": "Keep the cost-saving offer, or build the revenue one?",
+    "headline": "Build for sales managers, or resell what already works?",
     "asked_label": "You asked",
-    "asked": "My business mentor told me it is easier to sell something that makes people money than something that saves them cost. I currently sell email agents that save cost - that offer is fully worked out and I can sell it easily today. The alternative is helping sales managers and their teams quote faster and respond to customers faster, which would make them money - but I have not worked that out at all yet. This is my business (Glimps, AI chatbots and agents for small and mid-sized companies in Belgium) and it decides where my revenue comes from. What do I do?"
+    "asked": "My business mentor told me it is easier to sell something that makes people money than something that saves them cost. I sell email agents that save cost. That offer is fully worked out, I know it inside out, and I have two live requests for it right now - it is only harder to sell. My market today is ecommerce, transport and wholesale, on cost saving. The alternative is helping sales managers quote faster and respond faster, which makes them money - but I would have to build the whole product, do the research, and rethink everything for a market I have never sold to. This is my business (Glimps, AI chatbots and agents for small and mid-sized companies in Belgium) and it decides where my revenue comes from. What do I do?"
   },
   "verdict": {
-    "read": "Your mentor is right about positioning, not about product. The email agent already saves cost and speeds up replies - that is a revenue story you haven't told yet.",
+    "read": "Two live requests and a market you know beats a product you'd have to invent. Transport and wholesale already lose deals on slow quotes - sell them that.",
     "quotes": [
+      {
+        "who": "Alex Hormozi",
+        "text": "you make another product and then within two or three years all of a sudden you have four mini businesses",
+        "link": "https://youtu.be/8C_6qojTA78?t=1426",
+        "pill": "yt",
+        "meta": "Helping E-Commerce Owners Scale · [23:53]"
+      },
       {
         "who": "Alex Hormozi",
         "text": "not stop doing that. Like if it keeps working, you keep doing it.",
         "link": "https://youtu.be/AL1775NTMpQ?t=342",
         "pill": "yt",
         "meta": "Only 3 Things That Make Money · [5:49]"
-      },
-      {
-        "who": "Alex Hormozi",
-        "text": "when you have a starving crowd when the supply demand curve is in your favor it's hard to not make money",
-        "link": "https://youtu.be/F3NyhOtRpOE?t=1079",
-        "pill": "yt",
-        "meta": "Growth Levers · [18:06]"
       }
     ],
     "call": {
-      "heading": "Keep the offer, change the story",
-      "text": "Don't build a second product. Sell the same email agent to sales teams, led by speed to quote and faster replies. If ten conversations prove that story lands harder, then build."
+      "heading": "Stay in your market, sell speed",
+      "text": "Sales managers were never the answer. A transport firm or wholesaler that answers a quote request in minutes wins orders it used to lose. Same agent, same buyers, new promise. Start with your two live requests."
     },
     "actions": [
       {
-        "do": "Rewrite your pitch around revenue, not cost saved",
-        "how": "Same product, new headline: quotes out faster, replies same day",
-        "detail": "Your email agent already does the work a revenue pitch needs. It reads the inbox, drafts the reply, and gets a quote out while the buyer is still warm. You have simply been selling the hour it saves instead of the deal it wins.\n\nHormozi's move: the offer is the same, the promise changes. Stop saying it saves your team six hours a week. Say every enquiry gets an answer the same day, and quotes go out in minutes instead of days.\n\nKeenan's move: put a number on the gap. Ask how many enquiries went cold last month because nobody replied in time. That number is your price."
+        "do": "Rewrite the two live proposals around orders won",
+        "how": "Lead with quote speed, keep cost saving as the second reason",
+        "detail": "You do not need research for this. You have two people already asking, and you already know what the agent does. What changes is the first line of the proposal.\n\nRight now it opens with hours saved. Open it instead with the order they lost: an enquiry that sat until Thursday while a competitor quoted on Tuesday.\n\nHormozi's move: the cost saving does not disappear, it moves down the page. It becomes the reason to keep paying, not the reason to buy. Buyers sign for what they gain and renew for what they save.\n\nSend both proposals this week. Nothing to build."
       },
       {
-        "do": "Test the revenue story in ten real conversations",
-        "how": "Pitch it to sales managers this month, build nothing yet",
-        "detail": "Ten conversations is enough to settle this, and it costs you nothing but time. Book them with sales managers, not owners - the manager feels the slow quote every day.\n\nRackham's move: ask what a late quote costs them. How often does a prospect go quiet while they wait? What happens to the deal when a competitor answers first? Let them do the arithmetic out loud.\n\nThen count. If the revenue story pulls harder than your cost pitch, you have found the hungrier crowd and you already own the product. If it doesn't, your mentor's rule does not hold in your market, and you go back to selling what works."
+        "do": "Ask both prospects what a slow quote costs",
+        "how": "One question in the next call, then use their number",
+        "detail": "This is the cheapest research you will ever do, and it replaces the market study you were dreading.\n\nRackham's move: ask how many quote requests came in last month, how many got an answer within the hour, and what an average order is worth. Three questions, one call.\n\nNow you have their arithmetic in their numbers. Twenty late quotes at four thousand euro is eighty thousand on the table, and your price stops being a discussion.\n\nKeenan's move: do not guess the gap for them. Let them say it out loud, then repeat it back in the proposal in their own words."
       }
     ],
     "split": {
@@ -52,10 +52,14 @@
       "hung": false
     },
     "dissent": {
-      "text": "Blount pushed back hard: a new story means nothing if nobody hears it. The bottleneck may be your outreach volume, not your positioning.",
-      "full": "Blount's objection is the one worth keeping. He does not argue that the revenue framing is wrong - he argues it is not the constraint. If you are only having four sales conversations a month, a better story gets you a better four, and four is still four.\n\nHis position: fix the volume first. Same offer, same pitch, twenty conversations instead of four, and the market tells you the answer far faster than a repositioning exercise does.\n\nThe bench sided with Hormozi because you cannot know which story to scale until you have tested both. But Blount is right that the test is worthless if you only run it three times."
+      "text": "Blount's point stands: two requests is not a pipeline. Winning both still leaves you with nothing booked for next quarter.",
+      "full": "Blount is not arguing with the call any more. He is arguing with how small it is. Two inbound requests are two conversations, and both could close and you would still be starting next month from zero.\n\nHis position: the reframe is free, so do it today, but the real job is outbound into the same three sectors. You now know exactly who to call and exactly what to open with - that is a prospecting list, not a product decision.\n\nSandler adds the warning: two warm requests are the easiest thing in the world to over-read. If both buy, that proves the story works on people who already came to you. It does not yet prove it works cold."
     },
     "vote_label": "The vote — each adviser names who should make the call"
+  },
+  "last_reviewed": {
+    "when": "7 Sep, 15:41",
+    "note": "re-weighed on two live requests and the existing ecom, transport and wholesale market"
   },
   "tabs": {
     "pv": {
@@ -84,61 +88,61 @@
           "name": "Alex Hormozi",
           "lead": true,
           "seat_label": "Lead seat",
-          "text": "Your mentor gave you a rule about positioning and you heard it as a rule about product. Those are not the same thing. The email agent you already sell answers enquiries faster - that is revenue. Don't build a second thing so you can say a sentence you could say today.",
+          "text": "You have two people asking to buy the thing you already built. That is not the moment to invent a second business for a market you have never sold to. Sales managers were your mentor's example, not your market.",
           "quote": {
             "who": "Alex Hormozi",
-            "text": "not stop doing that. Like if it keeps working, you keep doing it.",
-            "link": "https://youtu.be/AL1775NTMpQ?t=342",
+            "text": "you make another product and then within two or three years all of a sudden you have four mini businesses",
+            "link": "https://youtu.be/8C_6qojTA78?t=1426",
             "pill": "yt",
-            "meta": "Only 3 Things That Make Money · [5:49]"
+            "meta": "Helping E-Commerce Owners Scale · [23:53]"
           }
         },
         {
           "who": "carnegie",
           "name": "Dale Carnegie",
           "seat_label": "Rapport",
-          "text": "Carnegie's principle: talk in terms of the other person's interest. A sales manager does not lie awake about overhead. He lies awake about the enquiry that went cold on Friday. Say it his way and it is the same product."
+          "text": "Carnegie's principle: talk in terms of the other person's interest. A wholesaler does not care about your hours. He cares about the order that went to the competitor who answered first. Same agent, his words."
         },
         {
           "who": "keenan",
           "name": "Jim Keenan",
           "seat_label": "Discovery",
-          "text": "Gap selling says the offer is whatever closes the gap between where they are and where they want to be. Cost saved and money made are two descriptions of one gap. Go find out which side of it your buyer actually feels."
+          "text": "The gap in transport and wholesale is not overhead, it is the quote that goes out too late. You have been selling the cure and describing the wrong disease."
         },
         {
           "who": "rackham",
           "name": "Neil Rackham",
           "seat_label": "SPIN",
-          "text": "This is what implication questions are for. A slow quote is a small cost until you ask what it costs - then it becomes lost deals. You do not need a new product to move a problem from minor to serious."
+          "text": "Ask what a late quote costs and the problem changes size. That is the whole move. It takes one question in a call you are already having, not a product build."
         },
         {
           "who": "sandler",
           "name": "David Sandler",
           "seat_label": "Qualify",
-          "text": "Before you build anything for sales managers, qualify them. Do they have budget, do they decide, and do they hurt enough to move? A market you have never sold into is not a plan, it is a hope."
+          "text": "You have two live requests. Qualify them properly before you rewrite anything. Do they actually lose orders on speed, or did they come to you to cut costs? Do not sell them a story they did not ask for."
         },
         {
           "who": "voss",
           "name": "Chris Voss",
           "seat_label": "Negotiation",
-          "text": "Let their language pick the framing. Ask a sales manager what happens when a quote takes three days, then listen for the words he uses. Those words are your pitch, and you did not have to invent them."
+          "text": "Say it before they can: you probably came to us to cut costs. Then let them tell you what it really costs when nobody answers. Their answer is your proposal."
         },
         {
           "who": "blount",
           "name": "Jeb Blount",
           "seat_label": "Pipeline",
-          "text": "I'll be the difficult one. Positioning is not your constraint, activity is. A perfect story told to four people a month loses to a decent story told to thirty. Fix the number of conversations before you rewrite the script."
+          "text": "Two requests is two requests. Whatever you call the offer, you are one bad month from an empty pipeline. Ecommerce, transport and wholesale is a list. Go work it."
         },
         {
           "who": "belfort",
           "name": "Jordan Belfort",
           "seat_label": "Conviction",
-          "text": "You will sell whichever one you actually believe. Right now you believe in the email agent because you have done the work. Chasing a story you have not built yet will show up in your voice on the first call."
+          "text": "You believe in this product. That is worth more than the mentor's rule. Do not trade a thing you can sell today for a slide deck about sales managers."
         }
       ],
       "conclusion": {
         "label": "Where round one landed",
-        "text": "Seven seats say the same thing: the revenue story is a reframe of what you already own, not a new product. Blount wants the volume question answered first."
+        "text": "The bench threw out the pivot. The revenue story lives inside the market you already sell to, and your two live requests are where it gets tested."
       }
     },
     {
@@ -149,33 +153,33 @@
           "name": "Jeb Blount",
           "replying_to": "Hormozi",
           "reply": true,
-          "text": "Alex, you are solving the wrong bottleneck. He has one finished offer and he is asking whether to build a second. Neither answer helps if he is only in four conversations a month. Volume is the test, not the wording."
+          "text": "Alex, you are polishing a message for two people. He needs thirty conversations in those three sectors, not two. The wording is a five minute job."
         },
         {
           "who": "hormozi",
           "name": "Alex Hormozi",
           "replying_to": "Blount",
           "reply": true,
-          "text": "Volume without a story just spreads a weak message faster. But you are right that the test needs numbers. Run the reframe at higher volume - that is one experiment, not two."
+          "text": "Then it is a five minute job he should do before he makes thirty calls, Jeb. Same effort, better opening line."
         },
         {
           "who": "sandler",
           "name": "David Sandler",
           "replying_to": "Hormozi",
           "reply": true,
-          "text": "Then be honest about what the test proves. Ten conversations with sales managers who cannot buy proves nothing. Qualify the seat first, or you will read a no as a verdict on your story."
+          "text": "And do not read two closed deals as proof. They came to him. A story that works on inbound has not been tested on anyone who was not already looking."
         },
         {
           "who": "keenan",
           "name": "Jim Keenan",
           "replying_to": "Blount",
           "reply": true,
-          "text": "Volume hides the diagnosis, Jeb. Thirty conversations with the wrong framing gets thirty polite refusals and no idea why. He needs the gap named before he scales anything."
+          "text": "Volume without the right diagnosis is thirty polite refusals. He now knows the gap is quote speed. That is what makes the list worth calling."
         }
       ],
       "conclusion": {
         "label": "Where round two left it",
-        "text": "The bench agrees on the move and splits on the sequence. Hormozi and Keenan want the story fixed first; Blount wants the numbers up first. Sandler wants the buyer qualified before either."
+        "text": "Nobody defended building for sales managers. The split is only about what comes after the reframe: Blount wants outbound volume, Sandler wants the two requests qualified first."
       }
     }
   ],
@@ -184,49 +188,49 @@
       "who": "blount",
       "voter": "Blount",
       "vote": "Hormozi",
-      "why": "It's an offer question before a volume one"
+      "why": "Two requests is not a pipeline"
     },
     {
       "who": "carnegie",
       "voter": "Carnegie",
       "vote": "Hormozi",
-      "why": "Talk in terms of the other's interest"
+      "why": "Speak in the wholesaler's own interest"
     },
     {
       "who": "keenan",
       "voter": "Keenan",
       "vote": "Hormozi",
-      "why": "The gap is revenue, not hours saved"
+      "why": "The gap is quote speed, not overhead"
     },
     {
       "who": "rackham",
       "voter": "Rackham",
       "vote": "Hormozi",
-      "why": "Implication questions turn cost into revenue"
+      "why": "One question resizes the whole problem"
     },
     {
       "who": "sandler",
       "voter": "Sandler",
       "vote": "Hormozi",
-      "why": "Qualify the new market before building it"
+      "why": "Qualify the two before rewriting anything"
     },
     {
       "who": "hormozi",
       "voter": "Hormozi",
       "vote": "Blount",
-      "why": "Nothing sells if the pipeline stays empty"
+      "why": "Volume still beats a better sentence"
     },
     {
       "who": "voss",
       "voter": "Voss",
       "vote": "Hormozi",
-      "why": "Their words decide the framing, not ours"
+      "why": "Their words, not the mentor's frame"
     },
     {
       "who": "belfort",
       "voter": "Belfort",
       "vote": "Hormozi",
-      "why": "Conviction needs a story worth believing"
+      "why": "Sell what you can already sell"
     }
   ],
   "ballot_note": "The chair never votes for himself."
