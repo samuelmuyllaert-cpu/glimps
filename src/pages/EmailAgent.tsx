@@ -118,8 +118,11 @@ const EmailAgentPage = () => {
     .replace(/<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 72px; padding-top: 26px; border-top: 1px solid #E4E7EC; font-size: 13px; color: #5A6472">[\s\S]*?<\/div>\s*/, '')
     // Fix outermost div width
     .replace('width: 1440px', 'max-width: 1440px; width: 100%')
-    // Original no-op replaces
-    .replace('{{ typed }}', '').replace(/id="typed-text"/, 'id="typed-text"');
+    // Add id to typed-text paragraph so TypedInjector can find it
+    .replace(
+      '<p style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.62; color: #5A6472; min-height: 48px; font-variant-numeric: tabular-nums">',
+      '<p id="typed-text" style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.62; color: #5A6472; min-height: 48px; font-variant-numeric: tabular-nums">'
+    );
 
   return (
     <>
@@ -135,7 +138,16 @@ const EmailAgentPage = () => {
 const TypedInjector = ({ text }: { text: string }) => {
   useEffect(() => {
     const el = document.getElementById('typed-text');
-    if (el) el.textContent = text;
+    if (!el) return;
+    const caret = el.querySelector('.caret');
+    const existingText = el.firstChild;
+    if (existingText && existingText.nodeType === 3) {
+      existingText.textContent = text;
+    } else if (caret) {
+      el.insertBefore(document.createTextNode(text), caret);
+    } else {
+      el.textContent = text;
+    }
   }, [text]);
   return null;
 };
