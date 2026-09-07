@@ -599,7 +599,7 @@ const Index = () => {
   const graphData = getStructuredData();
 
   return (
-    <div className="min-h-screen bg-background" style={{ zoom: '0.8' }}>
+    <div className="min-h-screen bg-background">
       <SEO
         title={t('seo.home.title')}
         description={t('seo.home.description')}

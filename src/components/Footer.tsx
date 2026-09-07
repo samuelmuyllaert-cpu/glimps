@@ -85,22 +85,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Bottom bar */}
-          <div style={{
-            borderTop: '1px solid #EDF1F6', marginTop: 64, padding: '24px 0 32px',
-            display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 8,
-          }}>
-            <span style={{ fontSize: 13, color: '#5A6472' }}>
-              Rustenburgstraat 9, 8000 Brugge &middot; BE 0682.779.139
-            </span>
-            <span style={{ fontSize: 13, color: '#5A6472' }}>
-              {t(
-                'Glimps is onderdeel van Uplevel bv',
-                'Glimps fait partie de Uplevel bv',
-                'Glimps is part of Uplevel bv'
-              )}
-            </span>
-          </div>
+          <div style={{ marginTop: 64 }} />
         </div>
       </footer>
 
