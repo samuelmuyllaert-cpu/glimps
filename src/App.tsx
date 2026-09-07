@@ -96,6 +96,7 @@ import AIChatbotBureauBelgie from "./pages/AIChatbotBureauBelgie";
 import ChatbotBouwBedrijfVlaanderen from "./pages/ChatbotBouwBedrijfVlaanderen";
 import TheSoulStore from "./pages/TheSoulStore";
 import Nomige from "./pages/Nomige";
+import EmailAgent from "./pages/EmailAgent";
 import ShopifyIntegration from "./pages/integrations/Shopify";
 import WooCommerceIntegration from "./pages/integrations/WooCommerce";
 import ShopwareIntegration from "./pages/integrations/Shopware";
@@ -221,6 +222,7 @@ const App = () => (
         <Route path="/chatbot-bouw-bedrijf-vlaanderen-ecommerce" element={<ChatbotBouwBedrijfVlaanderen />} />
         <Route path="/the-soul-store" element={<TheSoulStore />} />
         <Route path="/nomige" element={<Nomige />} />
+        <Route path="/email-agent" element={<EmailAgent />} />
         <Route path="/integrations/shopify" element={<ShopifyIntegration />} />
         <Route path="/fr/integrations/shopify" element={<ShopifyIntegration />} />
         <Route path="/en/integrations/shopify" element={<ShopifyIntegration />} />
@@ -342,6 +344,7 @@ const App = () => (
         <Route path="/fr/absolute-teamsport" element={<AbsoluteTeamsport />} />
         <Route path="/fr/het-cosmeticahuis" element={<HetCosmeticahuis />} />
         <Route path="/fr/the-soul-store" element={<TheSoulStore />} />
+        <Route path="/fr/email-agent" element={<EmailAgent />} />
         {/* English Routes */}
         <Route path="/en" element={<Index />} />
         <Route path="/en/features" element={<Features />} />
@@ -408,6 +411,7 @@ const App = () => (
         <Route path="/en/absolute-teamsport" element={<AbsoluteTeamsport />} />
         <Route path="/en/het-cosmeticahuis" element={<HetCosmeticahuis />} />
         <Route path="/en/the-soul-store" element={<TheSoulStore />} />
+        <Route path="/en/email-agent" element={<EmailAgent />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
         </Routes>

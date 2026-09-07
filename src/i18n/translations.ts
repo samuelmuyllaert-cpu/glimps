@@ -1232,6 +1232,68 @@ export const translations = {
         email: 'Stuur een email naar',
         response: 'We nemen binnen 24 uur contact met je op'
       }
+    },
+    emailAgent: {
+      nav: {
+        emailAgent: 'E-mailagent',
+        chatbot: 'Chatbot',
+        howWeWork: 'Hoe we werken',
+        about: 'Over ons',
+        cta: 'Plan een gesprek'
+      },
+      hero: {
+        title: 'Een digitale medewerker voor je inbox',
+        subtitle: 'Hij doet het mailwerk van je binnendienst. Voorbereid, jij verstuurt.',
+        cta: 'Plan een gesprek'
+      },
+      steps: {
+        s1: 'Hij zoekt op in je ERP',
+        s2: 'Hij schrijft het concept',
+        s3: 'Jij klikt verzenden'
+      },
+      cost: {
+        eyebrow: 'VANDAAG',
+        title: 'Wat het je vandaag kost',
+        card1Title: 'Tien uur klikken',
+        card1Mock: '10:00 u',
+        card1MockSub: '100 mails \u00d7 6 min',
+        card1Text: 'Honderd mails per dag tussen mailbox en ERP.',
+        card2Title: 'Te laat antwoorden',
+        card2You: 'Jullie',
+        card2Competitor: 'Concurrent',
+        card2Text: 'Wie eerst antwoordt, wint de bestelling.',
+        card3Title: 'Mails die verdwijnen',
+        card3Label: 'dubbel beantwoord',
+        card3Text: 'Verkeerde inbox, dubbel beantwoord of nooit.'
+      },
+      howItWorks: {
+        eyebrow: 'ZO WERKT HIJ',
+        title: 'Zo werkt hij',
+        card1Num: '01',
+        card1Title: 'Hij leest je inbox',
+        card1Text: 'Nieuwe mails worden automatisch opgepikt.',
+        card2Num: '02',
+        card2Title: 'Hij zoekt het op',
+        card2Text: 'Orderdata komt live uit je ERP.',
+        card3Num: '03',
+        card3Title: 'Hij schrijft het concept',
+        card3Text: 'Een antwoord klaar in jouw tone of voice.',
+        card4Num: '04',
+        card4Title: 'Jij klikt verzenden',
+        card4Text: 'Jij behoudt altijd de laatste controle.'
+      },
+      inbox: {
+        label: 'POSTVAK IN',
+        scanLabel: 'Jullie kiezen zelf het scanritme.',
+        scanQuarter: 'Elk kwartier',
+        scanHour: 'Elk uur',
+        scanTwice: 'Twee keer per dag',
+        draftBadge: 'Concept klaar',
+        draftTo: 'Antwoord aan Karel Nordveld',
+        draftBody: 'Beste Karel, de levertermijn voor order 4821 is momenteel 8 werkdagen. Uw pakket wordt vrijdag 12 september verzonden via PostNL. U ontvangt een track & trace zodra het onderweg is.',
+        sendBtn: 'Verzenden',
+        lookupNote: 'Opgezocht in Odoo, 12 seconden geleden'
+      }
     }
   },
   fr: {
@@ -2657,6 +2719,68 @@ export const translations = {
         ctaSubtitle: 'Découvrez comment glimps fait briller votre boutique d\'éclairage',
         ctaButton: 'Commencez votre essai gratuit'
       }
+    },
+    emailAgent: {
+      nav: {
+        emailAgent: 'Agent e-mail',
+        chatbot: 'Chatbot',
+        howWeWork: 'Comment nous travaillons',
+        about: 'À propos',
+        cta: 'Planifier un appel'
+      },
+      hero: {
+        title: 'Un collaborateur digital pour votre boîte mail',
+        subtitle: 'Il prépare les e-mails de votre service interne. Prêt à envoyer, vous validez.',
+        cta: 'Planifier un appel'
+      },
+      steps: {
+        s1: 'Il recherche dans votre ERP',
+        s2: 'Il rédige le brouillon',
+        s3: 'Vous cliquez envoyer'
+      },
+      cost: {
+        eyebrow: 'AUJOURD\u2019HUI',
+        title: 'Ce que ça vous coûte aujourd\u2019hui',
+        card1Title: 'Dix heures de clics',
+        card1Mock: '10:00 h',
+        card1MockSub: '100 mails × 6 min',
+        card1Text: 'Cent mails par jour entre boîte mail et ERP.',
+        card2Title: 'Réponses trop tardives',
+        card2You: 'Vous',
+        card2Competitor: 'Concurrent',
+        card2Text: 'Qui répond en premier remporte la commande.',
+        card3Title: 'Des mails qui disparaissent',
+        card3Label: 'double réponse',
+        card3Text: 'Mauvaise boîte, double réponse ou jamais.'
+      },
+      howItWorks: {
+        eyebrow: 'COMMENT ÇA MARCHE',
+        title: 'Comment ça marche',
+        card1Num: '01',
+        card1Title: 'Il lit votre boîte mail',
+        card1Text: 'Les nouveaux mails sont captés automatiquement.',
+        card2Num: '02',
+        card2Title: 'Il recherche les données',
+        card2Text: 'Données de commande en direct de votre ERP.',
+        card3Num: '03',
+        card3Title: 'Il rédige le brouillon',
+        card3Text: 'Une réponse prête dans votre ton.',
+        card4Num: '04',
+        card4Title: 'Vous cliquez envoyer',
+        card4Text: 'Vous gardez toujours le dernier contrôle.'
+      },
+      inbox: {
+        label: 'BOÎTE DE RÉCEPTION',
+        scanLabel: 'Vous choisissez le rythme de scan.',
+        scanQuarter: 'Chaque quart d\u2019heure',
+        scanHour: 'Chaque heure',
+        scanTwice: 'Deux fois par jour',
+        draftBadge: 'Brouillon prêt',
+        draftTo: 'Réponse à Karel Nordveld',
+        draftBody: 'Cher Karel, le délai de livraison pour la commande 4821 est actuellement de 8 jours ouvrables. Votre colis sera expédié le vendredi 12 septembre via PostNL. Vous recevrez un suivi dès qu\u2019il sera en route.',
+        sendBtn: 'Envoyer',
+        lookupNote: 'Recherché dans Odoo, il y a 12 secondes'
+      }
     }
   },
   en: {
@@ -4005,6 +4129,68 @@ export const translations = {
         popular: 'Popular requests'
       }
     },
+    emailAgent: {
+      nav: {
+        emailAgent: 'Email agent',
+        chatbot: 'Chatbot',
+        howWeWork: 'How we work',
+        about: 'About us',
+        cta: 'Book a call'
+      },
+      hero: {
+        title: 'A digital employee for your inbox',
+        subtitle: 'It handles the email work of your back office. Prepared, you send.',
+        cta: 'Book a call'
+      },
+      steps: {
+        s1: 'It looks up your ERP',
+        s2: 'It drafts the reply',
+        s3: 'You click send'
+      },
+      cost: {
+        eyebrow: 'TODAY',
+        title: 'What it costs you today',
+        card1Title: 'Ten hours clicking',
+        card1Mock: '10:00 h',
+        card1MockSub: '100 emails \u00d7 6 min',
+        card1Text: 'A hundred emails a day between inbox and ERP.',
+        card2Title: 'Replying too late',
+        card2You: 'You',
+        card2Competitor: 'Competitor',
+        card2Text: 'Whoever replies first wins the order.',
+        card3Title: 'Emails that vanish',
+        card3Label: 'double replied',
+        card3Text: 'Wrong inbox, double replied or never.'
+      },
+      howItWorks: {
+        eyebrow: 'HOW IT WORKS',
+        title: 'How it works',
+        card1Num: '01',
+        card1Title: 'It reads your inbox',
+        card1Text: 'New emails are picked up automatically.',
+        card2Num: '02',
+        card2Title: 'It looks it up',
+        card2Text: 'Order data comes live from your ERP.',
+        card3Num: '03',
+        card3Title: 'It drafts the reply',
+        card3Text: 'A reply ready in your tone of voice.',
+        card4Num: '04',
+        card4Title: 'You click send',
+        card4Text: 'You always keep the final control.'
+      },
+      inbox: {
+        label: 'INBOX',
+        scanLabel: 'You choose the scan rhythm.',
+        scanQuarter: 'Every 15 min',
+        scanHour: 'Every hour',
+        scanTwice: 'Twice a day',
+        draftBadge: 'Draft ready',
+        draftTo: 'Reply to Karel Nordveld',
+        draftBody: 'Dear Karel, the delivery time for order 4821 is currently 8 business days. Your parcel will be shipped on Friday 12 September via PostNL. You will receive a track & trace once it is on its way.',
+        sendBtn: 'Send',
+        lookupNote: 'Looked up in Odoo, 12 seconds ago'
+      }
+    }
   }
 };
 

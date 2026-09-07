@@ -1,398 +1,172 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import { Shield, Lock, Award, ArrowRight } from "lucide-react";
-import { useState } from "react";
-import logoIcon from "@/assets/logo-icon.png";
-import glimpsLogoFooter from "@/assets/glimps-logo-new.png";
-import { toast } from "sonner";
+import glimpsLogo from "@/assets/glimps-logo-new.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
-  const { language, t } = useLanguage();
-  const [newsletterEmail, setNewsletterEmail] = useState("");
-  const [submittingNewsletter, setSubmittingNewsletter] = useState(false);
+  const { language } = useLanguage();
+  const prefix = language === 'fr' ? '/fr' : language === 'en' ? '/en' : '';
 
-  const handleNewsletterSignup = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!newsletterEmail.trim()) {
-      toast.error(
-        language === 'en'
-          ? "Please enter a valid email address"
-          : language === 'fr'
-          ? "Veuillez entrer une adresse e-mail valide"
-          : "Vul een geldig e-mailadres in"
-      );
-      return;
-    }
-
-    setSubmittingNewsletter(true);
-
-    try {
-      const response = await fetch("https://hook.eu2.make.com/9ag2uhlgs336u7dc4fuinlrikixrmmjr", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: newsletterEmail }),
-      });
-
-      if (response.ok) {
-        toast.success(
-          language === 'en'
-            ? "You're subscribed to the newsletter!"
-            : language === 'fr'
-            ? "Vous êtes inscrit à la newsletter !"
-            : "Je bent ingeschreven voor de nieuwsbrief!"
-        );
-        setNewsletterEmail("");
-      } else {
-        toast.error(
-          language === 'en'
-            ? "Something went wrong. Please try again."
-            : language === 'fr'
-            ? "Une erreur s'est produite. Veuillez réessayer."
-            : "Er ging iets mis. Probeer het opnieuw."
-        );
-      }
-    } catch (error) {
-      console.error("Newsletter signup error:", error);
-      toast.error(
-        language === 'en'
-          ? "Something went wrong. Please try again."
-          : language === 'fr'
-          ? "Une erreur s'est produite. Veuillez réessayer."
-          : "Er ging iets mis. Probeer het opnieuw."
-      );
-    } finally {
-      setSubmittingNewsletter(false);
-    }
-  };
+  const t = (nl: string, fr: string, en: string) =>
+    language === 'fr' ? fr : language === 'en' ? en : nl;
 
   return (
     <>
-    <footer className="border-t border-border/50 bg-background">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="grid gap-8 sm:gap-12 grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
-          {/* Company Info */}
-          <div className="space-y-4 md:col-span-1">
-            <a href="/" className="flex items-center">
-              <img src={glimpsLogoFooter} alt="glimps" className="h-16" />
-            </a>
-            <p className="text-sm text-muted-foreground">
-              {language === 'en'
-                ? 'The smartest AI chatbot for e-commerce. Boost your revenue with automated customer service.'
-                : language === 'fr'
-                ? 'Le chatbot IA le plus intelligent pour l\'e-commerce. Boostez votre chiffre d\'affaires avec un service client automatisé.'
-                : 'De slimste AI-chatbot voor e-commerce. Boost je omzet met geautomatiseerde klantenservice.'
-              }
-            </p>
-
-            {/* Trust Badges */}
-            <div className="space-y-3 pt-4">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <Shield className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium">GDPR Compliant</p>
-                  <p className="text-xs text-muted-foreground">
-                    {language === 'en' ? '100% EU regulation' : language === 'fr' ? '100% réglementation UE' : '100% EU regelgeving'}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <Lock className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium">Privacy First</p>
-                  <p className="text-xs text-muted-foreground">
-                    {language === 'en' ? 'Your data is secure' : language === 'fr' ? 'Vos données sont sécurisées' : 'Jouw data is veilig'}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <Award className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium">Best in Tech</p>
-                  <p className="text-xs text-muted-foreground">
-                    {language === 'en' ? 'Latest AI technology' : language === 'fr' ? 'Dernière technologie IA' : 'Nieuwste AI technologie'}
-                  </p>
-                </div>
-              </div>
+      <footer style={{ background: '#fff', padding: '80px 24px 0' }}>
+        <div style={{ maxWidth: 1180, margin: '0 auto' }}>
+          {/* Five columns */}
+          <div
+            className="grid gap-12"
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}
+          >
+            {/* Col 1 — Brand */}
+            <div style={{ maxWidth: 260 }}>
+              <a href={prefix || '/'}>
+                <img src={glimpsLogo} alt="glimps" style={{ height: 32, marginBottom: 16 }} />
+              </a>
+              <p style={{ fontSize: 15, color: '#5A6472', lineHeight: 1.55, marginBottom: 16 }}>
+                {t(
+                  'Een digitale medewerker voor je inbox',
+                  'Un collaborateur digital pour votre boîte mail',
+                  'A digital employee for your inbox'
+                )}
+              </p>
+              <span style={{ fontSize: 11, letterSpacing: '0.06em', color: '#5A6472', textTransform: 'uppercase' as const }}>
+                {t('HET ANTWOORD LIGT AL KLAAR', 'LA RÉPONSE EST DÉJÀ PRÊTE', 'THE ANSWER IS ALREADY READY')}
+              </span>
             </div>
-          </div>
 
-          {/* Product Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold">{language === 'en' ? 'Product' : language === 'fr' ? 'Produit' : 'Product'}</h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href={language === 'en' ? '/en/features' : language === 'fr' ? '/fr/fonctionnalites' : '/features'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'Features' : language === 'fr' ? 'Fonctionnalités' : 'Features'}
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/integrations' : language === 'fr' ? '/fr/integrations' : '/integraties'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'Integrations' : language === 'fr' ? 'Intégrations' : 'Integraties'}
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/demo' : language === 'fr' ? '/fr/demo' : '/demo'} className="text-muted-foreground hover:text-primary">
-                  Demo
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/ecom-readiness' : language === 'fr' ? '/fr/pret-ecom' : '/ecom-readiness'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'Readiness Quiz' : language === 'fr' ? 'Quiz de préparation' : 'Readiness Quiz'}
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/ecom-agents' : language === 'fr' ? '/fr/agents-ecom' : '/ecom-agents'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'Ecom Agents' : language === 'fr' ? 'Agents E-com' : 'Ecom Agents'}
-                </a>
-              </li>
-            </ul>
-          </div>
+            {/* Col 2 — Email Agent */}
+            <div>
+              <ColHeading>{t('E-MAILAGENT', 'AGENT E-MAIL', 'EMAIL AGENT')}</ColHeading>
+              <ColLinks links={[
+                { href: `${prefix}/email-agent`, label: t('Hoe het werkt', 'Comment ça marche', 'How it works') },
+                { href: `${prefix}/integraties`, label: t('Integraties', 'Intégrations', 'Integrations') },
+                { href: `${prefix}/email-agent`, label: t('Voor welke bedrijven', 'Pour quelles entreprises', 'For which companies') },
+                { href: `${prefix}/faq`, label: t('Veelgestelde vragen', 'Questions fréquentes', 'FAQ') },
+              ]} />
+            </div>
 
-          {/* Company Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold">{language === 'en' ? 'Company' : language === 'fr' ? 'Entreprise' : 'Bedrijf'}</h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href={language === 'en' ? '/en/about' : language === 'fr' ? '/fr/a-propos' : '/about'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'About Us' : language === 'fr' ? 'À propos' : 'Over Ons'}
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/how-we-work' : language === 'fr' ? '/fr/comment-nous-travaillons' : '/how-we-work'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'How we work' : language === 'fr' ? 'Comment nous travaillons' : 'Hoe we werken'}
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/partners' : language === 'fr' ? '/fr/partenaires' : '/partners'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'Partners' : language === 'fr' ? 'Partenaires' : 'Partners'}
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/blog' : language === 'fr' ? '/fr/blog' : '/blog'} className="text-muted-foreground hover:text-primary">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/career' : language === 'fr' ? '/fr/carrieres' : '/career'} className="text-muted-foreground hover:text-primary">
-                  {language === 'en' ? 'Career' : language === 'fr' ? 'Carrière' : 'Carrière'}
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/consultancy' : language === 'fr' ? '/fr/consultance' : '/consultancy'} className="text-muted-foreground hover:text-primary">
-                  Consultancy
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/contact' : language === 'fr' ? '/fr/contact' : '/contact'} className="text-muted-foreground hover:text-primary">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href={language === 'en' ? '/en/changelog' : language === 'fr' ? '/fr/changelog' : '/changelog'} className="text-muted-foreground hover:text-primary">
-                  Changelog
-                </a>
-              </li>
-            </ul>
-          </div>
+            {/* Col 3 — Chatbot */}
+            <div>
+              <ColHeading>CHATBOT</ColHeading>
+              <ColLinks links={[
+                { href: language === 'fr' ? `${prefix}/fonctionnalites` : `${prefix}/features`, label: 'Features' },
+                { href: `${prefix}/integraties`, label: t('Integraties', 'Intégrations', 'Integrations') },
+                { href: language === 'fr' ? `${prefix}/industries/mode-design` : `${prefix}/industries/fashion-design`, label: t('Sectoren', 'Secteurs', 'Industries') },
+                { href: language === 'fr' ? `${prefix}/pret-ecom` : `${prefix}/ecom-readiness`, label: 'Readiness quiz' },
+              ]} />
+            </div>
 
-          {/* Industries Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold">
-              {language === 'en' ? 'Industries' : language === 'fr' ? 'Secteurs' : 'Industrieën'}
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href={language === 'en' ? '/en/industries/fashion-design' : language === 'fr' ? '/fr/industries/mode-design' : '/industries/fashion-design'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Fashion & Design' : language === 'fr' ? 'Mode & Design' : 'Fashion & Design'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/industries/beauty-cosmetics' : language === 'fr' ? '/fr/industries/beaute-cosmetique' : '/industries/beauty-cosmetica'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Beauty & Cosmetics' : language === 'fr' ? 'Beauté & Cosmétiques' : 'Beauty & Cosmetica'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/industries/electronics' : language === 'fr' ? '/fr/industries/electronique' : '/industries/electronics'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Electronics & Technology' : language === 'fr' ? 'Électronique & Technologie' : 'Electronics & Technology'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/industries/furniture-interior' : language === 'fr' ? '/fr/industries/meubles-interieur' : '/industries/meubels-interieur'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Furniture & Interior' : language === 'fr' ? 'Meubles & Intérieur' : 'Meubels & Interieur'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/industries/sportswear-fitness' : language === 'fr' ? '/fr/industries/vetements-sport-fitness' : '/industries/sportkleding-fitness'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Sportswear & Fitness' : language === 'fr' ? 'Vêtements de Sport & Fitness' : 'Sportkleding & Fitness'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/industries/garden-outdoor' : language === 'fr' ? '/fr/industries/jardin-exterieur' : '/industries/tuin-buitenleven'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Garden & Outdoor Living' : language === 'fr' ? 'Jardin et Vie en Plein Air' : 'Tuin en Buitenleven'}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold">
-              {language === 'en' ? 'Legal' : language === 'fr' ? 'Juridique' : 'Juridisch'}
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Privacy Policy' : language === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Terms & Conditions' : language === 'fr' ? 'Conditions Générales' : 'Algemene Voorwaarden'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {language === 'en' ? 'Cookie Policy' : language === 'fr' ? 'Politique des Cookies' : 'Cookie Policy'}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={language === 'en' ? '/en/legal' : language === 'fr' ? '/fr/legal' : '/legal'}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  GDPR
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="mt-12 border-t border-border/50 pt-12">
-          <div className="max-w-md mx-auto text-center">
-            <h4 className="font-semibold text-lg mb-2">
-              {language === 'en' ? 'Stay informed' : language === 'fr' ? 'Restez informé' : 'Blijf op de hoogte'}
-            </h4>
-            <p className="text-sm text-muted-foreground mb-4">
-              {language === 'en'
-                ? 'Receive the latest updates, tips and AI insights directly in your inbox'
-                : language === 'fr'
-                ? 'Recevez les dernières mises à jour, conseils et insights IA directement dans votre boîte mail'
-                : 'Ontvang de nieuwste updates, tips en AI-insights direct in je inbox'
-              }
-            </p>
-            <form onSubmit={handleNewsletterSignup} className="flex gap-2">
-              <Input
-                type="email"
-                placeholder={language === 'en' ? 'you@email.com' : language === 'fr' ? 'vous@email.be' : 'je@email.be'}
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                disabled={submittingNewsletter}
-                className="bg-background"
-              />
-              <Button
-                type="submit"
-                variant="default"
-                className="rounded-full"
-                disabled={submittingNewsletter}
+            {/* Col 4 — Company */}
+            <div>
+              <ColHeading>{t('BEDRIJF', 'ENTREPRISE', 'COMPANY')}</ColHeading>
+              <ColLinks links={[
+                { href: language === 'fr' ? `${prefix}/a-propos` : `${prefix}/about`, label: t('Over ons', 'À propos', 'About us') },
+                { href: language === 'fr' ? `${prefix}/comment-nous-travaillons` : `${prefix}/how-we-work`, label: t('Hoe we werken', 'Comment nous travaillons', 'How we work') },
+                { href: `${prefix}/blog`, label: 'Blog' },
+                { href: language === 'fr' ? `${prefix}/carrieres` : `${prefix}/career`, label: t('Vacatures', 'Emplois', 'Careers') },
+                { href: `${prefix}/contact`, label: 'Contact' },
+              ]} />
+              <a
+                href={`${prefix}/contact`}
+                style={{ display: 'block', fontSize: 14, fontStyle: 'italic', color: '#5A6472', marginTop: 12 }}
               >
-                {submittingNewsletter
-                  ? (language === 'en' ? "Submitting..." : language === 'fr' ? "En cours..." : "Bezig...")
-                  : (language === 'en' ? "Subscribe" : language === 'fr' ? "S'abonner" : "Abonneer")
-                }
-              </Button>
-            </form>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Glimps. {language === 'en' ? 'All rights reserved.' : language === 'fr' ? 'Tous droits réservés.' : 'Alle rechten voorbehouden.'}
-          </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-              </svg>
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
-              </svg>
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div className="border-t border-border/20 bg-background px-6 py-5">
-      <div className="mx-auto max-w-6xl">
-        {(() => {
-          const prefix = language === 'fr' ? '/fr' : language === 'en' ? '/en' : '';
-          const integrations = [
-            'shopify', 'woocommerce', 'shopware', 'magento', 'odoo',
-            'lightspeed', 'prestashop', 'wix', 'wordpress', 'sendcloud',
-            'bpost', 'postnl', 'dhl', 'gls', 'myparcel', 'picqer', 'fulfillment-centers',
-          ];
-          const labels: Record<string, string> = { 'fulfillment-centers': 'Fulfillment Centers', prestashop: 'PrestaShop', postnl: 'PostNL', woocommerce: 'WooCommerce' };
-          return (
-            <div className="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-muted-foreground/35">
-              {integrations.map((slug) => (
-                <a key={slug} href={`${prefix}/integrations/${slug}`} className="hover:text-muted-foreground/60 transition-colors capitalize">
-                  {labels[slug] ?? slug}
-                </a>
-              ))}
+                {t('Klantcases op aanvraag', 'Études de cas sur demande', 'Case studies on request')}
+              </a>
             </div>
-          );
-        })()}
+
+            {/* Col 5 — Legal */}
+            <div>
+              <ColHeading>{t('JURIDISCH', 'JURIDIQUE', 'LEGAL')}</ColHeading>
+              <ColLinks links={[
+                { href: language === 'fr' ? `${prefix}/legal` : `${prefix}/legal`, label: t('Privacy', 'Confidentialité', 'Privacy') },
+                { href: `${prefix}/legal`, label: t('Algemene voorwaarden', 'Conditions générales', 'Terms & conditions') },
+                { href: `${prefix}/legal`, label: 'Cookies' },
+              ]} />
+            </div>
+          </div>
+
+          {/* Bottom bar */}
+          <div style={{
+            borderTop: '1px solid #EDF1F6', marginTop: 64, padding: '24px 0 32px',
+            display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 8,
+          }}>
+            <span style={{ fontSize: 13, color: '#5A6472' }}>
+              Rustenburgstraat 9, 8000 Brugge &middot; BE 0682.779.139
+            </span>
+            <span style={{ fontSize: 13, color: '#5A6472' }}>
+              {t(
+                'Glimps is onderdeel van Uplevel bv',
+                'Glimps fait partie de Uplevel bv',
+                'Glimps is part of Uplevel bv'
+              )}
+            </span>
+          </div>
+        </div>
+      </footer>
+
+      {/* Integration links row */}
+      <div style={{ background: '#fff', padding: '0 24px 24px' }}>
+        <div style={{ maxWidth: 1180, margin: '0 auto' }}>
+          {(() => {
+            const integrations = [
+              'shopify', 'woocommerce', 'shopware', 'magento', 'odoo',
+              'lightspeed', 'prestashop', 'wix', 'wordpress', 'sendcloud',
+              'bpost', 'postnl', 'dhl', 'gls', 'myparcel', 'picqer', 'fulfillment-centers',
+            ];
+            const labels: Record<string, string> = {
+              'fulfillment-centers': 'Fulfillment Centers',
+              prestashop: 'PrestaShop',
+              postnl: 'PostNL',
+              woocommerce: 'WooCommerce',
+            };
+            return (
+              <div className="flex flex-wrap gap-x-3 gap-y-1" style={{ fontSize: 11, color: 'rgba(90,100,114,0.35)' }}>
+                {integrations.map((slug) => (
+                  <a
+                    key={slug}
+                    href={`${prefix}/integrations/${slug}`}
+                    style={{ textTransform: 'capitalize' }}
+                    className="hover:text-muted-foreground/60 transition-colors"
+                  >
+                    {labels[slug] ?? slug}
+                  </a>
+                ))}
+              </div>
+            );
+          })()}
+        </div>
       </div>
-    </div>
     </>
   );
 };
+
+function ColHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h4 style={{
+      fontSize: 11, letterSpacing: '0.06em', color: '#5A6472',
+      fontWeight: 600, marginBottom: 20, textTransform: 'uppercase' as const,
+    }}>
+      {children}
+    </h4>
+  );
+}
+
+function ColLinks({ links }: { links: { href: string; label: string }[] }) {
+  return (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+      {links.map((link) => (
+        <li key={link.href + link.label}>
+          <a
+            href={link.href}
+            style={{ fontSize: 14, color: '#5A6472', textDecoration: 'none' }}
+            className="hover:text-foreground transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default Footer;

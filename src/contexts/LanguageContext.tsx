@@ -81,6 +81,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       '/blog/shopify-integratie': '/blog/integration-shopify',
       '/blog/toekomst-ai-2025': '/blog/avenir-ia-2025',
       '/blog/toekomst-ai-ecommerce-2026': '/blog/avenir-ia-ecommerce-2026',
+      '/email-agent': '/email-agent',
     };
 
     const nlToEn: Record<string, string> = {
@@ -126,6 +127,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       '/blog/shopify-integratie': '/blog/shopify-integration',
       '/blog/toekomst-ai-2025': '/blog/future-ai-2025',
       '/blog/toekomst-ai-ecommerce-2026': '/blog/future-ai-ecommerce-2026',
+      '/email-agent': '/email-agent',
     };
 
     // Helper to remove language prefix

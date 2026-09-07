@@ -199,7 +199,10 @@ const routesToPrerender = [
   '/en/integrations/picqer',
   '/integrations/fulfillment-centers',
   '/fr/integrations/fulfillment-centers',
-  '/en/integrations/fulfillment-centers'
+  '/en/integrations/fulfillment-centers',
+  '/email-agent',
+  '/fr/email-agent',
+  '/en/email-agent'
 ];
 
 (async () => {
