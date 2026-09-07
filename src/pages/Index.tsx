@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+
 import SEO from "@/components/SEO";
 import StructuredData, { baseOrganization } from "@/components/StructuredData";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -411,7 +411,7 @@ const Index = () => {
         }
       `}</style>
 
-      <Footer />
+
     </>
   );
 };

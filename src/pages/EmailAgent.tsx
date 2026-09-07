@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+
 
 const FULL_TEXT = 'Beste Karel, bestelling 4821 staat gepland voor donderdag 11/09. De twee rekken uit lijn 3 zijn gisteren binnengekomen, dus de levering blijft volledig.';
 
@@ -118,6 +118,19 @@ const EmailAgentPage = () => {
     .replace(/<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 72px; padding-top: 26px; border-top: 1px solid #E4E7EC; font-size: 13px; color: #5A6472">[\s\S]*?<\/div>\s*/, '')
     // Fix outermost div width
     .replace('width: 1440px', 'max-width: 1440px; width: 100%')
+    // Add IDs that the IntersectionObserver and scroll handlers need
+    .replace(
+      'style="animation-delay: 200ms; position: relative; width: 1180px; margin: 72px auto 0"',
+      'id="inbox-section" style="animation-delay: 200ms; position: relative; width: 1180px; margin: 72px auto 0"'
+    )
+    .replace(
+      'style="position: relative; height: 520px; overflow: hidden; border-radius: 20px; background: #fff; box-shadow:',
+      'id="inbox-panel" style="position: relative; height: 520px; overflow: hidden; border-radius: 20px; background: #fff; box-shadow:'
+    )
+    .replace(
+      'style="will-change: transform"',
+      'id="mail-list" style="will-change: transform"'
+    )
     // Add id to typed-text paragraph so TypedInjector can find it
     .replace(
       '<p style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.62; color: #5A6472; min-height: 48px; font-variant-numeric: tabular-nums">',
@@ -130,7 +143,7 @@ const EmailAgentPage = () => {
       <div id="email-agent-root" dangerouslySetInnerHTML={{ __html: markup }} />
       {/* Inject typed text via portal-like approach */}
       <TypedInjector text={typed} />
-      <Footer />
+
     </>
   );
 };
