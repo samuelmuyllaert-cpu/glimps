@@ -1,604 +1,75 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import { useLanguage } from '@/contexts/LanguageContext';
-import Atmosphere from '@/components/Atmosphere';
-import glimpsLogo from '@/assets/glimps-logo.png';
+import { useEffect, useRef, useState } from 'react';
 
-const EmailAgent = () => {
-  const { t, language } = useLanguage();
-  const [logoError, setLogoError] = useState(false);
+const FULL_TEXT = 'Beste Karel, bestelling 4821 staat gepland voor donderdag 11/09. De twee rekken uit lijn 3 zijn gisteren binnengekomen, dus de levering blijft volledig.';
 
-  const demoHref =
-    language === 'fr' ? '/fr/demo' : language === 'en' ? '/en/demo' : '/demo';
-  const chatbotHref =
-    language === 'fr' ? '/fr' : language === 'en' ? '/en' : '/';
-  const howWeWorkHref =
-    language === 'fr'
-      ? '/fr/comment-nous-travaillons'
-      : language === 'en'
-        ? '/en/how-we-work'
-        : '/how-we-work';
-  const aboutHref =
-    language === 'fr'
-      ? '/fr/a-propos'
-      : language === 'en'
-        ? '/en/about'
-        : '/about';
-
-  return (
-    <div className="relative min-h-screen bg-white overflow-hidden">
-      <Atmosphere showGrid />
-
-      {/* Floating nav pill */}
-      <div
-        className="relative z-10"
-        style={{ padding: '22px 64px 0' }}
-      >
-        <header
-          className="flex items-center"
-          style={{
-            background: 'rgba(255,255,255,0.86)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            border: '1px solid #E4E7EC',
-            borderRadius: 999,
-            boxShadow: '0 14px 34px -22px rgba(21,23,28,0.28)',
-            padding: '8px 8px 8px 28px',
-          }}
-        >
-          {/* Logo */}
-          <Link to={language === 'fr' ? '/fr' : language === 'en' ? '/en' : '/'} className="flex-shrink-0">
-            {logoError ? (
-              <span className="font-semibold text-ink text-sm">glimps</span>
-            ) : (
-              <img
-                src={glimpsLogo}
-                alt="glimps"
-                style={{ height: 28 }}
-                onError={() => setLogoError(true)}
-              />
-            )}
-          </Link>
-
-          {/* Nav links */}
-          <nav className="hidden md:flex items-center gap-1 ml-8">
-            <NavLink href="#" active dotColor="#1B3A5C">
-              {t('emailAgent.nav.emailAgent')}
-            </NavLink>
-            <NavLink href={chatbotHref} dotColor="#E74E4D">
-              {t('emailAgent.nav.chatbot')}
-            </NavLink>
-            <NavLink href={howWeWorkHref}>
-              {t('emailAgent.nav.howWeWork')}
-            </NavLink>
-            <NavLink href={aboutHref}>
-              {t('emailAgent.nav.about')}
-            </NavLink>
-          </nav>
-
-          {/* CTA */}
-          <div className="ml-auto">
-            <Link
-              to={demoHref}
-              className="inline-flex items-center justify-center motion-press"
-              style={{
-                background: '#E74E4D',
-                color: '#fff',
-                fontSize: '14.5px',
-                fontWeight: 600,
-                height: 40,
-                padding: '0 22px',
-                borderRadius: 999,
-              }}
-            >
-              {t('emailAgent.nav.cta')}
-            </Link>
-          </div>
-        </header>
-      </div>
-
-      {/* Hero */}
-      <section
-        className="relative z-10 flex flex-col items-center text-center"
-        style={{ padding: '200px 24px 200px' }}
-      >
-        <h1
-          className="font-serif motion-enter"
-          style={{
-            fontWeight: 400,
-            fontSize: 78,
-            lineHeight: 1.03,
-            letterSpacing: '-0.02em',
-            maxWidth: 860,
-            textWrap: 'balance',
-            color: '#10161F',
-            animationDelay: '40ms',
-          }}
-        >
-          {t('emailAgent.hero.title')}
-        </h1>
-
-        <p
-          className="motion-enter"
-          style={{
-            fontSize: 18,
-            lineHeight: 1.62,
-            color: '#5A6472',
-            maxWidth: 600,
-            marginTop: 24,
-            animationDelay: '60ms',
-          }}
-        >
-          {t('emailAgent.hero.subtitle')}
-        </p>
-
-        <Link
-          to={demoHref}
-          className="motion-enter motion-press"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: '#10161F',
-            color: '#fff',
-            height: 48,
-            padding: '0 30px',
-            borderRadius: 999,
-            fontSize: '15px',
-            fontWeight: 500,
-            marginTop: 36,
-            animationDelay: '120ms',
-          }}
-        >
-          {t('emailAgent.hero.cta')}
-        </Link>
-      </section>
-
-      {/* Section 1 — Steps strip */}
-      <section className="relative z-10" style={{ padding: '0 24px 160px' }}>
-        <div className="flex items-center justify-center gap-4 flex-wrap" style={{ maxWidth: 1180, margin: '0 auto' }}>
-          <StepBubble num={1} text={t('emailAgent.steps.s1')} />
-          <ArrowRight />
-          <StepBubble num={2} text={t('emailAgent.steps.s2')} />
-          <ArrowRight />
-          <span
-            className="inline-flex items-center gap-2"
-            style={{
-              background: '#1B3A5C',
-              color: '#fff',
-              fontSize: 15,
-              fontWeight: 600,
-              height: 44,
-              padding: '0 24px',
-              borderRadius: 999,
-            }}
-          >
-            <span style={{
-              width: 22, height: 22, borderRadius: '50%',
-              background: 'rgba(255,255,255,0.2)',
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 12, fontWeight: 700,
-            }}>3</span>
-            {t('emailAgent.steps.s3')}
-          </span>
-        </div>
-      </section>
-
-      {/* Section 2 — Cost */}
-      <section className="relative z-10" style={{ padding: '160px 24px' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-          <SectionHeader eyebrow={t('emailAgent.cost.eyebrow')} title={t('emailAgent.cost.title')} />
-          <div className="grid md:grid-cols-3 gap-8" style={{ marginTop: 56 }}>
-            {/* Card 1 — Timer */}
-            <CostCard title={t('emailAgent.cost.card1Title')} text={t('emailAgent.cost.card1Text')}>
-              <div className="flex flex-col items-center justify-center" style={{ height: 120 }}>
-                <span style={{ fontFamily: 'Instrument Sans, sans-serif', fontVariantNumeric: 'tabular-nums', fontSize: 40, fontWeight: 700, color: '#10161F', lineHeight: 1 }}>
-                  {t('emailAgent.cost.card1Mock')}
-                </span>
-                <span style={{ fontSize: 13, color: '#5A6472', marginTop: 8 }}>
-                  {t('emailAgent.cost.card1MockSub')}
-                </span>
-              </div>
-            </CostCard>
-
-            {/* Card 2 — Mail rows */}
-            <CostCard title={t('emailAgent.cost.card2Title')} text={t('emailAgent.cost.card2Text')}>
-              <div className="flex flex-col gap-3 justify-center" style={{ height: 120 }}>
-                <MailRow label={t('emailAgent.cost.card2You')} time="14:12" color="#5A6472" dimmed />
-                <MailRow label={t('emailAgent.cost.card2Competitor')} time="09:03" color="#0E7C66" />
-              </div>
-            </CostCard>
-
-            {/* Card 3 — Double replied */}
-            <CostCard title={t('emailAgent.cost.card3Title')} text={t('emailAgent.cost.card3Text')}>
-              <div className="flex items-center gap-3 justify-center" style={{ height: 120 }}>
-                <div className="flex items-center gap-2">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 8L8 3v3H2v4h6v3l6-5z" fill="#5A6472"/></svg>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 8L8 3v3H2v4h6v3l6-5z" fill="#5A6472"/></svg>
-                </div>
-                <span style={{
-                  fontSize: 12, fontWeight: 600, color: '#E74E4D',
-                  background: 'rgba(231,78,77,0.08)', padding: '4px 10px', borderRadius: 999,
-                }}>
-                  {t('emailAgent.cost.card3Label')}
-                </span>
-              </div>
-            </CostCard>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 3 — How it works */}
-      <section className="relative z-10" style={{ padding: '160px 24px' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-          <SectionHeader eyebrow={t('emailAgent.howItWorks.eyebrow')} title={t('emailAgent.howItWorks.title')} />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" style={{ marginTop: 56 }}>
-            <HowCard num={t('emailAgent.howItWorks.card1Num')} title={t('emailAgent.howItWorks.card1Title')} text={t('emailAgent.howItWorks.card1Text')} />
-            <HowCard num={t('emailAgent.howItWorks.card2Num')} title={t('emailAgent.howItWorks.card2Title')} text={t('emailAgent.howItWorks.card2Text')} />
-            <HowCard num={t('emailAgent.howItWorks.card3Num')} title={t('emailAgent.howItWorks.card3Title')} text={t('emailAgent.howItWorks.card3Text')} />
-            <HowCard num={t('emailAgent.howItWorks.card4Num')} title={t('emailAgent.howItWorks.card4Title')} text={t('emailAgent.howItWorks.card4Text')} dark />
-          </div>
-        </div>
-      </section>
-
-      {/* Inbox panel */}
-      <InboxPanel t={t} />
-    </div>
-  );
-};
-
-const MAILS = [
-  { initials: 'KN', from: 'Karel Nordveld', time: '09:41', subject: 'Levertermijn order 4821' },
-  { initials: 'BW', from: 'Bouwshop Waregem', time: '09:38', subject: 'Creditnota factuur 2291' },
-  { initials: 'MD', from: 'Machinehandel Dierckx', time: '09:35', subject: 'Filter 4400 serie' },
-  { initials: 'TV', from: 'Transport Vermeulen', time: '09:31', subject: 'Status zending 88214' },
-  { initials: 'VC', from: 'Verhuur Callens', time: '09:27', subject: 'Hoogtewerker 12–15 okt' },
-  { initials: 'BS', from: 'Bakkerij Sint-Jan', time: '09:22', subject: 'Offerte verpakkingsmateriaal' },
-  { initials: 'ED', from: 'Elektro Depot', time: '09:18', subject: 'Retour beschadigd artikel' },
-  { initials: 'GD', from: 'Garage Descamps', time: '09:14', subject: 'Bestelling remschijven 306' },
-  { initials: 'TR', from: 'Tuincentrum Ravels', time: '09:10', subject: 'Levering buxusplanten' },
-  { initials: 'IL', from: 'Interieur Lambrechts', time: '09:06', subject: 'Kleurstalen behangpapier' },
-  { initials: 'BD', from: 'Bouwmarkt Deleu', time: '09:02', subject: 'Voorraad houtpanelen' },
-  { initials: 'PV', from: 'Printing Vanhoeck', time: '08:57', subject: 'Proefdruk brochure Q4' },
-  { initials: 'SK', from: 'Sanitair Knockaert', time: '08:52', subject: 'Garantieclaim boiler' },
-  { initials: 'LM', from: 'Logistiek Maes', time: '08:47', subject: 'Palletlevering woensdag' },
-  { initials: 'HB', from: 'Horecashop Brugge', time: '08:42', subject: 'Bestek nabestelling' },
-  { initials: 'AJ', from: 'Atelier Janssens', time: '08:38', subject: 'Laserdelen op maat' },
-  { initials: 'FT', from: 'Fietswereld Tienen', time: '08:33', subject: 'Shimano onderdelen' },
-  { initials: 'WC', from: 'Webshop Claes', time: '08:28', subject: 'API-koppeling catalogus' },
-];
-
-function InboxPanel({ t }: { t: (key: string) => string }) {
-  const panelRef = useRef<HTMLDivElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
-  const [typedCount, setTypedCount] = useState(0);
-  const [hasTyped, setHasTyped] = useState(false);
-  const draftText = t('emailAgent.inbox.draftBody');
-  const prefersReduced = useRef(false);
-  const isNarrow = useRef(false);
+const EmailAgentPage = () => {
+  const [typed, setTyped] = useState('');
+  const hasTyped = useRef(false);
 
   useEffect(() => {
-    prefersReduced.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    isNarrow.current = window.innerWidth < 900;
-
-    if (prefersReduced.current || isNarrow.current) {
-      setTypedCount(999);
-      setHasTyped(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasTyped) {
-          setHasTyped(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.4 }
-    );
-    if (panelRef.current) observer.observe(panelRef.current);
-    return () => observer.disconnect();
-  }, [hasTyped]);
-
-  useEffect(() => {
-    if (!hasTyped || prefersReduced.current || isNarrow.current) return;
-    if (typedCount >= draftText.length) return;
-    const timer = setTimeout(() => setTypedCount((c) => c + 1), 28);
-    return () => clearTimeout(timer);
-  }, [hasTyped, typedCount, draftText.length]);
-
-  const handleScroll = useCallback(() => {
-    if (prefersReduced.current || isNarrow.current || !panelRef.current || !listRef.current) return;
-    requestAnimationFrame(() => {
-      const rect = panelRef.current!.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const progress = Math.max(0, Math.min(1, (vh - rect.top) / (vh + rect.height)));
-      const offset = -(progress * 320);
-      listRef.current!.style.transform = `translate3d(0,${offset}px,0)`;
-    });
+    const style = document.createElement('style');
+    style.textContent = "\n@keyframes gEnter { from { opacity: 0; transform: translate3d(0, 14px, 0); } to { opacity: 1; transform: none; } }\n@keyframes gFade { from { opacity: 0; } to { opacity: 1; } }\n@keyframes gFloat { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -6px, 0); } }\n@keyframes gBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }\n.enter-anim { animation: gEnter 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }\n.press { transition: transform 160ms ease-out; }\n.press:active { transform: scale(0.97); }\n.caret { animation: gBlink 1s steps(1, end) infinite; }\n.float-anim { animation: gFloat 8s ease-in-out infinite; }\n.logo-hover { opacity: 1; }\n@media (hover: hover) and (pointer: fine) {\n  .lift { transition: transform 240ms cubic-bezier(0.23, 1, 0.32, 1); }\n  .lift:hover { transform: translate3d(0, -3px, 0); }\n  .nav-link { transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1); }\n  .nav-link:hover { opacity: 0.62; }\n  img.logo-hover { transition: filter 200ms ease-out; }\n  img.logo-hover:hover { filter: brightness(0); }\n  span.logo-hover { transition: color 200ms ease-out; }\n  span.logo-hover:hover { color: #10161F; }\n}\n@media (prefers-reduced-motion: reduce) {\n  .enter-anim { animation: gFade 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }\n  .caret { animation: none; }\n  .press, .lift, img.logo-hover, span.logo-hover { transition: none; }\n  .float-anim { animation: none; }\n  .press:active, .lift:hover { transform: none; }\n}\n";
+    document.head.appendChild(style);
+    return () => { document.head.removeChild(style); };
   }, []);
 
   useEffect(() => {
-    if (prefersReduced.current || isNarrow.current) return;
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+    const panel = document.getElementById('inbox-panel');
+    if (!panel) return;
+    const prefersRM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const observer = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting && !hasTyped.current) {
+        hasTyped.current = true;
+        if (prefersRM) { setTyped(FULL_TEXT); return; }
+        let i = 0;
+        const iv = setInterval(() => {
+          if (i < FULL_TEXT.length) { setTyped(FULL_TEXT.slice(0, ++i)); } else clearInterval(iv);
+        }, 28);
+      }
+    }, { threshold: 0.4 });
+    observer.observe(panel);
+    return () => observer.disconnect();
+  }, []);
 
-  const showCursor = typedCount < draftText.length && !(prefersReduced.current || isNarrow.current);
+  useEffect(() => {
+    const list = document.getElementById('mail-list');
+    const section = document.getElementById('inbox-section');
+    if (!list || !section) return;
+    const prefersRM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersRM || window.innerWidth < 900) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const r = section.getBoundingClientRect();
+          const p = Math.max(0, Math.min(1, (window.innerHeight - r.top) / (r.height + window.innerHeight)));
+          list.style.transform = 'translate3d(0,' + (-p * (list.scrollHeight - 520 + 80)) + 'px,0)';
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const markup = "<div style=\"position: relative; width: 1440px; margin: 0 auto; background: #fff; color: #10161F; overflow: hidden\">\n\n  <div style=\"position: absolute; inset: 0 0 auto; height: 940px; background-image: repeating-linear-gradient(90deg, rgba(27,58,92,0.05) 0 1px, rgba(0,0,0,0) 1px 64px), repeating-linear-gradient(0deg, rgba(27,58,92,0.05) 0 1px, rgba(0,0,0,0) 1px 64px); mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, rgba(0,0,0,0) 100%); pointer-events: none\"></div>\n  <div style=\"position: absolute; top: -300px; left: -280px; width: 1240px; height: 940px; border-radius: 50%; background: radial-gradient(circle, #D8E4F0 0%, #E7EEF5 62%, rgba(231,238,245,0) 100%); opacity: 0.85; filter: blur(120px); pointer-events: none\"></div>\n  <div style=\"position: absolute; top: 560px; right: -300px; width: 1120px; height: 820px; border-radius: 50%; background: radial-gradient(circle, #F6D9D5 0%, #FAE7E5 58%, rgba(250,231,229,0) 100%); opacity: 0.85; filter: blur(130px); pointer-events: none\"></div>\n\n  <div style=\"position: relative; padding: 22px 64px 0\">\n    <header class=\"enter-anim\" style=\"display: flex; align-items: center; justify-content: space-between; gap: 32px; background: rgba(255,255,255,0.86); backdrop-filter: blur(10px); border: 1px solid #E4E7EC; border-radius: 999px; box-shadow: 0 14px 34px -22px rgba(21,23,28,0.28); padding: 8px 8px 8px 28px\">\n      <div style=\"display: flex; align-items: center; gap: 40px\">\n        <a h style=\"display: flex; align-items: center\">\n          <img src=\"https://www.glimps.be/assets/glimps-logo-DKYlSeD9.png\" alt=\"Glimps\" onError=\"this.style.display='none';this.nextSibling.style.display='block'\" style=\"display: block; height: 28px; width: auto\" /><span style=\"display: none; font-size: 23px; font-weight: 600; letter-spacing: -0.035em\">glimps</span>\n        </a>\n        <nav style=\"display: flex; align-items: center; gap: 6px; font-size: 14.5px; color: #5A6472\">\n          <a h class=\"nav-link\" style=\"display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; color: #1B3A5C; font-weight: 600\">\n            <span style=\"width: 6px; height: 6px; border-radius: 999px; background: #1B3A5C\"></span>E-mailagent\n          </a>\n          <a h class=\"nav-link\" style=\"display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px\">\n            <span style=\"width: 6px; height: 6px; border-radius: 999px; background: #E74E4D\"></span>Chatbot\n          </a>\n          <a h class=\"nav-link\" style=\"display: flex; align-items: center; min-height: 44px; padding: 0 12px\">Hoe we werken</a>\n          <a h class=\"nav-link\" style=\"display: flex; align-items: center; min-height: 44px; padding: 0 12px\">Over ons</a>\n        </nav>\n      </div>\n      <a h class=\"press\" style=\"display: flex; align-items: center; min-height: 44px; background: #E74E4D; color: #fff; font-size: 14.5px; font-weight: 500; padding: 0 24px; border-radius: 999px\">Plan een gesprek</a>\n    </header>\n  </div>\n\n  <section style=\"position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 200px 0 200px\">\n    <h1 class=\"enter-anim\" style=\"animation-delay: 40ms; margin: 0; max-width: 860px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 78px; line-height: 1.03; letter-spacing: -0.02em; text-wrap: balance\">Een digitale medewerker voor je inbox</h1>\n    <p class=\"enter-anim\" style=\"animation-delay: 60ms; margin: 26px 0 0; max-width: 600px; font-size: 18px; line-height: 1.62; color: #5A6472; text-wrap: pretty\">Hij doet het mailwerk van je binnendienst. Voorbereid, jij verstuurt.</p>\n    <div class=\"enter-anim\" style=\"animation-delay: 120ms; display: flex; align-items: center; gap: 24px; margin-top: 38px\">\n      <a h class=\"press\" style=\"display: flex; align-items: center; min-height: 48px; background: #10161F; color: #fff; font-size: 15px; font-weight: 500; padding: 0 30px; border-radius: 999px\">Plan een gesprek</a>\n    </div>\n\n    <div class=\"enter-anim\"  style=\"animation-delay: 200ms; position: relative; width: 1180px; margin: 72px auto 0\">\n      <div style=\"position: relative; height: 520px; overflow: hidden; border-radius: 20px; background: #fff; box-shadow: 0 2px 4px -2px rgba(6,20,36,0.32), 0 24px 40px -22px rgba(6,20,36,0.38), 0 60px 100px -44px rgba(6,20,36,0.5); text-align: left\">\n        <div style=\"display: flex; align-items: center; gap: 10px; padding: 18px 22px; border-bottom: 1px solid #EDF1F6\">\n          <span style=\"width: 9px; height: 9px; border-radius: 999px; background: #E4E7EC\"></span>\n          <span style=\"width: 9px; height: 9px; border-radius: 999px; background: #E4E7EC\"></span>\n          <span style=\"width: 9px; height: 9px; border-radius: 999px; background: #E4E7EC\"></span>\n          <span style=\"margin-left: 10px; font-size: 12px; color: #5A6472; letter-spacing: 0.06em; text-transform: uppercase\">Postvak IN</span>\n        </div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 22px; border-bottom: 1px solid #EDF1F6; background: #fff\">\n          <span style=\"font-size: 13px; color: #5A6472\">Jullie kiezen zelf het scanritme.</span>\n          <span style=\"display: flex; align-items: center; gap: 10px\">\n            <span style=\"display: flex; align-items: center; gap: 8px; border: 1px solid #E4E7EC; border-radius: 999px; padding: 8px 14px; font-size: 13px; color: #5A6472\">\n              <span style=\"width: 12px; height: 12px; border-radius: 999px; border: 1px solid #C6CEDA\"></span>Elk kwartier\n            </span>\n            <span style=\"display: flex; align-items: center; gap: 8px; border: 1px solid #1B3A5C; background: #E7EEF5; border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 600; color: #1B3A5C\">\n              <span style=\"width: 12px; height: 12px; border-radius: 999px; background: #1B3A5C\"></span>Elk uur\n            </span>\n            <span style=\"display: flex; align-items: center; gap: 8px; border: 1px solid #E4E7EC; border-radius: 999px; padding: 8px 14px; font-size: 13px; color: #5A6472\">\n              <span style=\"width: 12px; height: 12px; border-radius: 999px; border: 1px solid #C6CEDA\"></span>Twee keer per dag\n            </span>\n          </span>\n        </div>\n        <div  style=\"will-change: transform\">\n          <div style=\"display: flex; gap: 15px; padding: 22px\">\n            <span style=\"flex: none; width: 40px; height: 40px; border-radius: 14px; background: #1B3A5C; color: #fff; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center\">NG</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; justify-content: space-between; gap: 14px\">\n                <span style=\"font-size: 15px; font-weight: 600\">Nordveld Groothandel</span>\n                <span style=\"font-size: 12.5px; color: #5A6472; font-variant-numeric: tabular-nums\">08:14</span>\n              </div>\n              <div style=\"margin-top: 4px; font-size: 14.5px; line-height: 1.4; font-variant-numeric: tabular-nums\">Klopt de levertermijn van bestelling 4821 nog?</div>\n            </div>\n          </div>\n          <div style=\"display: flex; flex-direction: column; padding: 22px 22px 26px; background: #F4F7FA; border-top: 1px solid #EDF1F6\">\n            <div style=\"display: flex; align-items: center; gap: 10px\">\n              <span style=\"display: inline-flex; align-items: center; gap: 7px; background: #fff; color: #0E7C66; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; padding: 6px 12px; border-radius: 999px\">\n                <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n              </span>\n              <span style=\"font-size: 12.5px; color: #5A6472\">Antwoord aan Karel Nordveld</span>\n            </div>\n            <p style=\"margin: 16px 0 0; font-size: 14.5px; line-height: 1.62; color: #5A6472; min-height: 48px; font-variant-numeric: tabular-nums\"><span class=\"caret\" style=\"display: inline-block; width: 2px; height: 16px; margin-left: 2px; vertical-align: -2px; background: #1B3A5C\"></span></p>\n            <div style=\"display: flex; align-items: center; gap: 16px; margin-top: 22px\">\n              <span class=\"press\" style=\"display: inline-flex; align-items: center; min-height: 40px; background: #1B3A5C; color: #fff; font-size: 13.5px; font-weight: 500; padding: 0 20px; border-radius: 12px\">Verzenden</span>\n              <span style=\"font-size: 12.5px; color: #5A6472; font-variant-numeric: tabular-nums\">Opgezocht in Odoo, 12 seconden geleden</span>\n            </div>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">BW</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Bouwshop Waregem</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:02</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Graag een creditnota voor factuur 2291</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">MD</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Machinehandel Dierckx</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:07</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Welk filter past op de 4400 serie?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">TV</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Transport Vermeulen</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:11</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Waar zit zending 88214?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">VC</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Verhuur Callens</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:16</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Is de hoogtewerker vrij van 12 tot 15 oktober?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">BS</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Bakkerij Sint-Jan</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:19</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Wanneer wordt onze bestelling geleverd?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">ED</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Elektro Depot</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:24</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Prijs voor honderd stuks artikel A-220?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">GD</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Garage Descamps</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:28</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Kunnen we de levering verzetten naar maandag?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">TR</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Tuincentrum Ravels</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:33</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Staat artikel B-118 nog op voorraad?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">IL</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Interieur Lambrechts</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:37</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Graag een offerte voor veertig stoelen</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">BD</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Bouwmarkt Deleu</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:41</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Factuur 3320 klopt niet</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">SV</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Staalbouw Verhaeghe</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:46</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Zijn de keuringsattesten al doorgestuurd?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">SM</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Schrijnwerkerij Maes</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:50</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Levertermijn voor eiken planken type C?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">GD</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Groothandel Dhaenens</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:55</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Kunnen we order 4790 nog aanvullen?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">IV</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Installatie Vandaele</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">08:59</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Welk vermogen heeft pomp P-32?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">BR</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Bouwshop Roeselare</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">09:04</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Graag een pro-formafactuur voor order 5012</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">MC</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Metaalwerken Coussens</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">09:08</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Is profiel 40x40 uit voorraad leverbaar?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">HG</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Horeca Depot Gent</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">09:13</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Wanneer vertrekt onze levering van morgen?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n          <div style=\"display: flex; align-items: center; gap: 15px; padding: 18px 22px; border-top: 1px solid #EDF1F6\">\n            <span style=\"flex: none; width: 38px; height: 38px; border-radius: 13px; background: #E7EEF5; color: #1B3A5C; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center\">LD</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"display: flex; align-items: baseline; gap: 12px\">\n                <span style=\"font-size: 14.5px; font-weight: 600\">Landbouw Devos</span>\n                <span style=\"font-size: 12px; color: #5A6472; font-variant-numeric: tabular-nums\">09:17</span>\n              </div>\n              <div style=\"margin-top: 3px; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Past deze ketting op de 3200 serie?</div>\n            </div>\n            <span style=\"flex: none; display: inline-flex; align-items: center; gap: 6px; background: #F4F7FA; color: #0E7C66; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #0E7C66\"></span>Concept klaar\n            </span>\n          </div>\n        </div>\n        <div style=\"position: absolute; left: 0; right: 0; bottom: 0; height: 96px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 62%, #ffffff 100%); pointer-events: none\"></div>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 280ms; position: absolute; z-index: 4; left: 250px; top: -28px; display: flex; align-items: center; gap: 11px; background: #fff; border-radius: 16px; box-shadow: 0 22px 44px -24px rgba(16,22,31,0.45), 0 2px 5px -2px rgba(16,22,31,0.08); padding: 11px 14px; text-align: left\">\n        <span style=\"width: 32px; height: 32px; border-radius: 10px; background: #F4F7FA; display: flex; align-items: center; justify-content: center\">\n          <img src=\"https://cdn.simpleicons.org/odoo/9AA1AC\" alt=\"Odoo\" onError=\"{{ hideTile }}\" style=\"display: block; height: 16px; width: auto\" />\n        </span>\n        <span style=\"display: flex; flex-direction: column\">\n          <span style=\"font-size: 12.5px; font-weight: 600; color: #10161F; font-variant-numeric: tabular-nums\">Odoo, order 4821</span>\n          <span style=\"font-size: 11.5px; color: #5A6472\">Levering donderdag</span>\n        </span>\n      </div>\n    </div>\n\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n      <div class=\"enter-anim\" style=\"display: flex; align-items: center; justify-content: center; gap: 8px\">\n        <span style=\"display: flex; align-items: center; gap: 12px; padding: 10px 22px\">\n          <span style=\"width: 26px; height: 26px; border-radius: 999px; background: #E7EEF5; color: #1B3A5C; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums\">1</span>\n          <span style=\"font-size: 16.5px; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap\">Hij zoekt op in je ERP</span>\n        </span>\n        <span style=\"display: flex; align-items: center; color: #C6CEDA; font-size: 16px\">&#8594;</span>\n        <span style=\"display: flex; align-items: center; gap: 12px; padding: 10px 22px\">\n          <span style=\"width: 26px; height: 26px; border-radius: 999px; background: #E7EEF5; color: #1B3A5C; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums\">2</span>\n          <span style=\"font-size: 16.5px; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap\">Hij schrijft het concept</span>\n        </span>\n        <span style=\"display: flex; align-items: center; color: #C6CEDA; font-size: 16px\">&#8594;</span>\n        <span style=\"display: flex; align-items: center; gap: 12px; padding: 10px 22px; background: #14273D; color: #fff; border-radius: 999px\">\n          <span style=\"width: 26px; height: 26px; border-radius: 999px; background: #fff; color: #14273D; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums\">3</span>\n          <span style=\"font-size: 16.5px; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap\">Jij klikt verzenden</span>\n        </span>\n      </div>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 56px\">\n      <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5A6472\">Vandaag</span>\n      <h2 style=\"margin: 14px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Wat het je vandaag kost</h2>\n    </div>\n    <div style=\"display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px\">\n      <div class=\"enter-anim\" style=\"display: flex; flex-direction: column; gap: 26px\">\n        <div style=\"background: #fff; border-radius: 18px; box-shadow: 0 22px 44px -34px rgba(16,22,31,0.38), 0 2px 6px -3px rgba(16,22,31,0.07); padding: 22px\">\n          <div style=\"display: flex; align-items: baseline; gap: 10px\">\n            <span style=\"font-size: 40px; font-weight: 600; letter-spacing: -0.03em; font-variant-numeric: tabular-nums\">10:00</span>\n            <span style=\"font-size: 16px; color: #5A6472\">u</span>\n          </div>\n          <div style=\"margin-top: 12px; padding-top: 14px; border-top: 1px solid #EDF1F6; font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums\">100 mails &times; 6 minuten</div>\n        </div>\n        <div>\n          <h3 style=\"margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.015em\">Tien uur klikken</h3>\n          <p style=\"margin: 12px 0 0; font-size: 16.5px; line-height: 1.55; color: #5A6472\">Honderd mails per dag tussen mailbox en ERP.</p>\n        </div>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 60ms; display: flex; flex-direction: column; gap: 26px\">\n        <div style=\"background: #fff; border-radius: 18px; box-shadow: 0 22px 44px -34px rgba(16,22,31,0.38), 0 2px 6px -3px rgba(16,22,31,0.07); padding: 22px\">\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid #EDF1F6\">\n            <span style=\"font-size: 13.5px; color: #5A6472\">Jullie antwoord</span>\n            <span style=\"font-size: 14px; font-weight: 600; color: #5A6472; font-variant-numeric: tabular-nums\">14:12</span>\n          </div>\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 14px\">\n            <span style=\"font-size: 13.5px; color: #10161F\">De concurrent</span>\n            <span style=\"font-size: 14px; font-weight: 600; color: #0E7C66; font-variant-numeric: tabular-nums\">09:03</span>\n          </div>\n        </div>\n        <div>\n          <h3 style=\"margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.015em\">Te laat antwoorden</h3>\n          <p style=\"margin: 12px 0 0; font-size: 16.5px; line-height: 1.55; color: #5A6472\">Wie eerst antwoordt, wint de bestelling.</p>\n        </div>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 120ms; display: flex; flex-direction: column; gap: 26px\">\n        <div style=\"background: #fff; border-radius: 18px; box-shadow: 0 22px 44px -34px rgba(16,22,31,0.38), 0 2px 6px -3px rgba(16,22,31,0.07); padding: 22px\">\n          <div style=\"display: flex; align-items: center; gap: 12px\">\n            <span style=\"flex: none; width: 34px; height: 34px; border-radius: 12px; background: #E7EEF5; color: #1B3A5C; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center\">KP</span>\n            <div style=\"min-width: 0; flex: 1\">\n              <div style=\"font-size: 13.5px; font-weight: 600\">Karel Peeters</div>\n              <div style=\"font-size: 12.5px; color: #5A6472; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Prijs voor 40 stuks rek type B?</div>\n            </div>\n            <span style=\"display: flex; gap: 2px; font-size: 14px; color: #5A6472\">&#8629;&#8629;</span>\n          </div>\n          <div style=\"margin-top: 16px; padding-top: 14px; border-top: 1px solid #EDF1F6\">\n            <span style=\"display: inline-flex; align-items: center; gap: 7px; background: #FDF4F3; color: #E74E4D; font-size: 11.5px; font-weight: 600; padding: 6px 11px; border-radius: 999px\">\n              <span style=\"width: 5px; height: 5px; border-radius: 999px; background: #E74E4D\"></span>dubbel beantwoord\n            </span>\n          </div>\n        </div>\n        <div>\n          <h3 style=\"margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.015em\">Mails die verdwijnen</h3>\n          <p style=\"margin: 12px 0 0; font-size: 16.5px; line-height: 1.55; color: #5A6472\">Verkeerde inbox, dubbel beantwoord of nooit.</p>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section id=\"werkt\" style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 56px\">\n      <h2 style=\"margin: 14px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Zo werkt hij</h2>\n    </div>\n    <div style=\"display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px\">\n      <div class=\"enter-anim\" class=\"lift\" style=\"display: flex; flex-direction: column; gap: 14px; background: #F4F7FA; border-radius: 24px; padding: 32px\">\n        <span style=\"font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; line-height: 1; color: #1B3A5C; font-variant-numeric: tabular-nums\">1</span>\n        <span style=\"font-size: 19px; font-weight: 600; letter-spacing: -0.01em\">Hij leest je inbox</span>\n        <span style=\"font-size: 15px; line-height: 1.5; color: #5A6472\">Op het ritme dat jullie kiezen.</span>\n      </div>\n      <div class=\"enter-anim\" class=\"lift\" style=\"animation-delay: 60ms; display: flex; flex-direction: column; gap: 14px; background: #F4F7FA; border-radius: 24px; padding: 32px\">\n        <span style=\"font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; line-height: 1; color: #1B3A5C; font-variant-numeric: tabular-nums\">2</span>\n        <span style=\"font-size: 19px; font-weight: 600; letter-spacing: -0.01em\">Hij zoekt het op</span>\n        <span style=\"font-size: 15px; line-height: 1.5; color: #5A6472\">Order of klantfiche uit jullie Odoo.</span>\n      </div>\n      <div class=\"enter-anim\" class=\"lift\" style=\"animation-delay: 120ms; display: flex; flex-direction: column; gap: 14px; background: #F4F7FA; border-radius: 24px; padding: 32px\">\n        <span style=\"font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; line-height: 1; color: #1B3A5C; font-variant-numeric: tabular-nums\">3</span>\n        <span style=\"font-size: 19px; font-weight: 600; letter-spacing: -0.01em\">Hij schrijft het concept</span>\n        <span style=\"font-size: 15px; line-height: 1.5; color: #5A6472\">In jullie toon, met de juiste bijlage.</span>\n      </div>\n      <div class=\"enter-anim\" class=\"lift\" style=\"animation-delay: 180ms; display: flex; flex-direction: column; gap: 14px; background: #E7EEF5; border-radius: 24px; padding: 32px\">\n        <span style=\"font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; line-height: 1; color: #1B3A5C; font-variant-numeric: tabular-nums\">4</span>\n        <span style=\"font-size: 19px; font-weight: 600; letter-spacing: -0.01em\">Jij klikt verzenden</span>\n        <span style=\"font-size: 15px; line-height: 1.5; color: #5A6472\">Jullie doen de laatste klik.</span>\n      </div>\n    </div>\n\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 56px\">\n      <h2 style=\"margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Wat hij opzoekt en doet</h2>\n    </div>\n    <div style=\"display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px\">\n      <span style=\"grid-column: span 3; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1B3A5C\">Opzoeken</span>\n      <div class=\"enter-anim\" class=\"lift\" style=\"display: flex; flex-direction: column; gap: 18px; background: #E7EEF5; border-radius: 20px; padding: 26px\">\n        <span style=\"display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em\">\n          <span style=\"flex: none; width: 8px; height: 8px; border-radius: 999px; background: #1B3A5C\"></span>Orderstatus\n        </span>\n        <div style=\"background: #fff; border-radius: 14px; box-shadow: 0 16px 32px -28px rgba(16,22,31,0.4), 0 1px 4px -2px rgba(16,22,31,0.06); padding: 14px 16px\">\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 13.5px\">\n            <span style=\"color: #5A6472\">Order 4821</span>\n            <span style=\"font-weight: 600; color: #10161F; font-variant-numeric: tabular-nums\">In levering</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"enter-anim\" class=\"lift\" style=\"animation-delay: 60ms; display: flex; flex-direction: column; gap: 18px; background: #E7EEF5; border-radius: 20px; padding: 26px\">\n        <span style=\"display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em\">\n          <span style=\"flex: none; width: 8px; height: 8px; border-radius: 999px; background: #1B3A5C\"></span>Voorraad en prijs\n        </span>\n        <div style=\"background: #fff; border-radius: 14px; box-shadow: 0 16px 32px -28px rgba(16,22,31,0.4), 0 1px 4px -2px rgba(16,22,31,0.06); padding: 14px 16px\">\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 13.5px\">\n            <span style=\"color: #5A6472\">Artikel A-220</span>\n            <span style=\"font-weight: 600; color: #10161F; font-variant-numeric: tabular-nums\">34 stuks &middot; &euro; 18,40</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"enter-anim\" class=\"lift\" style=\"animation-delay: 120ms; display: flex; flex-direction: column; gap: 18px; background: #E7EEF5; border-radius: 20px; padding: 26px\">\n        <span style=\"display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em\">\n          <span style=\"flex: none; width: 8px; height: 8px; border-radius: 999px; background: #1B3A5C\"></span>Levertermijn\n        </span>\n        <div style=\"background: #fff; border-radius: 14px; box-shadow: 0 16px 32px -28px rgba(16,22,31,0.4), 0 1px 4px -2px rgba(16,22,31,0.06); padding: 14px 16px\">\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 13.5px\">\n            <span style=\"color: #5A6472\">Verwacht</span>\n            <span style=\"font-weight: 600; color: #10161F; font-variant-numeric: tabular-nums\">donderdag 11 september</span>\n          </div>\n        </div>\n      </div>\n      <span style=\"grid-column: span 3; margin-top: 24px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E74E4D\">Acties</span>\n      <div class=\"enter-anim\" class=\"lift\" style=\"display: flex; flex-direction: column; gap: 18px; background: #FDF4F3; border-radius: 20px; padding: 26px\">\n        <span style=\"display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em\">\n          <span style=\"flex: none; width: 8px; height: 8px; border-radius: 999px; background: #E74E4D\"></span>Notitie loggen\n        </span>\n        <div style=\"background: #fff; border-radius: 14px; box-shadow: 0 16px 32px -28px rgba(16,22,31,0.4), 0 1px 4px -2px rgba(16,22,31,0.06); padding: 14px 16px\">\n          <div style=\"display: flex; align-items: center; gap: 10px; font-size: 13.5px\">\n            <span style=\"flex: none; width: 18px; height: 18px; border-radius: 999px; background: #F4F7FA; color: #0E7C66; font-size: 10px; display: flex; align-items: center; justify-content: center\">&#10003;</span>\n            <span style=\"font-weight: 600\">Notitie toegevoegd</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"enter-anim\" class=\"lift\" style=\"animation-delay: 60ms; display: flex; flex-direction: column; gap: 18px; background: #FDF4F3; border-radius: 20px; padding: 26px\">\n        <span style=\"display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em\">\n          <span style=\"flex: none; width: 8px; height: 8px; border-radius: 999px; background: #E74E4D\"></span>Status bijwerken\n        </span>\n        <div style=\"background: #fff; border-radius: 14px; box-shadow: 0 16px 32px -28px rgba(16,22,31,0.4), 0 1px 4px -2px rgba(16,22,31,0.06); padding: 14px 16px\">\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 13.5px\">\n            <span style=\"color: #5A6472\">Status</span>\n            <span style=\"font-weight: 600; color: #10161F; font-variant-numeric: tabular-nums\">Verzonden</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"enter-anim\" class=\"lift\" style=\"animation-delay: 120ms; display: flex; flex-direction: column; gap: 18px; background: #FDF4F3; border-radius: 20px; padding: 26px\">\n        <span style=\"display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em\">\n          <span style=\"flex: none; width: 8px; height: 8px; border-radius: 999px; background: #E74E4D\"></span>Doorsturen naar collega\n        </span>\n        <div style=\"background: #fff; border-radius: 14px; box-shadow: 0 16px 32px -28px rgba(16,22,31,0.4), 0 1px 4px -2px rgba(16,22,31,0.06); padding: 14px 16px\">\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 13.5px\">\n            <span style=\"color: #5A6472\">Doorgestuurd naar</span>\n            <span style=\"font-weight: 600; color: #10161F; font-variant-numeric: tabular-nums\">Sofie</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 56px\">\n      <h2 style=\"margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Hij sorteert ook je inbox</h2>\n    </div>\n    <div style=\"display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 72px; align-items: center\">\n      <div>\n        <div style=\"padding: 20px 0; border-top: 1px solid #E4E7EC; font-size: 17.5px\">Naar de juiste collega</div>\n        <div style=\"padding: 20px 0; border-top: 1px solid #E4E7EC; font-size: 17.5px\">Facturen naar boekhouding</div>\n        <div style=\"padding: 20px 0; border-top: 1px solid #E4E7EC; font-size: 17.5px\">In de juiste map</div>\n        <div style=\"padding: 20px 0; border-top: 1px solid #E4E7EC; font-size: 17.5px\">Ruis apart gezet</div>\n      </div>\n      <div class=\"enter-anim\" style=\"background: #fff; border-radius: 20px; box-shadow: 0 30px 60px -44px rgba(16,22,31,0.42), 0 2px 6px -3px rgba(16,22,31,0.07); overflow: hidden\">\n        <div style=\"display: flex; align-items: center; gap: 14px; padding: 20px 22px; border-bottom: 1px solid #EDF1F6\">\n          <span style=\"flex: none; width: 34px; height: 34px; border-radius: 12px; background: #E7EEF5; color: #1B3A5C; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center\">BW</span>\n          <div style=\"min-width: 0; flex: 1\">\n            <div style=\"font-size: 14.5px; font-weight: 600\">Bouwshop Waregem</div>\n            <div style=\"font-size: 13px; color: #5A6472; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap\">Graag een creditnota voor factuur 2291</div>\n          </div>\n          <span style=\"flex: none; display: inline-flex; align-items: center; gap: 8px; background: #E7EEF5; color: #1B3A5C; font-size: 11.5px; font-weight: 600; padding: 6px 12px; border-radius: 999px; white-space: nowrap\">\n            <span style=\"font-size: 12px\">&#8594;</span>Boekhouding\n          </span>\n        </div>\n        <div style=\"padding: 14px 14px 18px\">\n          <span style=\"display: block; padding: 0 8px 10px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6472\">Mappen</span>\n            <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 18px; border-radius: 12px; background: transparent\">\n              <span style=\"display: flex; align-items: center; gap: 12px; font-size: 15px; \">\n                <span style=\"width: 20px; height: 15px; border-radius: 4px; background: #C6CEDA\"></span>Behandeld\n              </span>\n              <span style=\"font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums\">128</span>\n            </div>\n            <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 18px; border-radius: 12px; background: #E7EEF5\">\n              <span style=\"display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; color: #1B3A5C\">\n                <span style=\"width: 20px; height: 15px; border-radius: 4px; background: #1B3A5C\"></span>Boekhouding\n              </span>\n              <span style=\"font-size: 13.5px; color: #1B3A5C; font-variant-numeric: tabular-nums\">34</span>\n            </div>\n            <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 18px; border-radius: 12px; background: transparent\">\n              <span style=\"display: flex; align-items: center; gap: 12px; font-size: 15px; \">\n                <span style=\"width: 20px; height: 15px; border-radius: 4px; background: #C6CEDA\"></span>Offertes\n              </span>\n              <span style=\"font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums\">19</span>\n            </div>\n            <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 18px; border-radius: 12px; background: transparent\">\n              <span style=\"display: flex; align-items: center; gap: 12px; font-size: 15px; \">\n                <span style=\"width: 20px; height: 15px; border-radius: 4px; background: #C6CEDA\"></span>Ruis\n              </span>\n              <span style=\"font-size: 13.5px; color: #5A6472; font-variant-numeric: tabular-nums\">61</span>\n            </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 56px\">\n      <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5A6472\">Grenzen</span>\n      <h2 style=\"margin: 14px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Wat hij nooit doet</h2>\n    </div>\n    <div style=\"display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px\">\n      <div class=\"enter-anim\" style=\"display: flex; flex-direction: column; gap: 26px\">\n        <div style=\"background: #fff; border-radius: 18px; box-shadow: 0 22px 44px -34px rgba(16,22,31,0.38), 0 2px 6px -3px rgba(16,22,31,0.07); padding: 22px\">\n          <div style=\"display: flex; align-items: center; gap: 14px\">\n            <span style=\"display: inline-flex; align-items: center; min-height: 40px; background: #EDF1F6; color: #9AA1AC; font-size: 13.5px; font-weight: 500; padding: 0 20px; border-radius: 12px\">Verzenden</span>\n            <span style=\"font-size: 12.5px; color: #5A6472\">alleen jij</span>\n          </div>\n        </div>\n        <div style=\"display: flex; gap: 14px; align-items: flex-start\">\n          <span style=\"flex: none; margin-top: 2px; width: 22px; height: 22px; border-radius: 999px; background: #F4F7FA; color: #5A6472; font-size: 12px; display: flex; align-items: center; justify-content: center\">&#10005;</span>\n          <div>\n            <h3 style=\"margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.015em\">Hij verstuurt nooit zelf</h3>\n            <p style=\"margin: 8px 0 0; font-size: 17px; line-height: 1.55; text-wrap: pretty\">Jullie doen de laatste klik.</p>\n            <p style=\"margin: 10px 0 0; font-size: 14px; line-height: 1.5; color: #5A6472; text-wrap: pretty\">Wil je bepaalde mails toch automatisch laten vertrekken, dan spreken we dat af.</p>\n          </div>\n        </div>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 60ms; display: flex; flex-direction: column; gap: 26px\">\n        <div style=\"background: #fff; border-radius: 18px; box-shadow: 0 22px 44px -34px rgba(16,22,31,0.38), 0 2px 6px -3px rgba(16,22,31,0.07); padding: 22px\">\n          <p style=\"margin: 0; font-size: 13.5px; line-height: 1.55; color: #5A6472; font-variant-numeric: tabular-nums\">Bestelling 4821 staat gepland voor donderdag 11/09.</p>\n          <div style=\"display: flex; align-items: center; gap: 9px; margin-top: 14px; padding-top: 14px; border-top: 1px solid #EDF1F6\">\n            <img src=\"https://cdn.simpleicons.org/odoo/9AA1AC\" alt=\"Odoo\" onError=\"{{ hideTile }}\" style=\"display: block; height: 14px; width: auto\" />\n            <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6472\">bron Odoo</span>\n          </div>\n        </div>\n        <div style=\"display: flex; gap: 14px; align-items: flex-start\">\n          <span style=\"flex: none; margin-top: 2px; width: 22px; height: 22px; border-radius: 999px; background: #F4F7FA; color: #5A6472; font-size: 12px; display: flex; align-items: center; justify-content: center\">&#10005;</span>\n          <p style=\"margin: 0; font-size: 17px; line-height: 1.55; text-wrap: pretty\">Hij verzint niets dat niet in jullie systemen staat.</p>\n        </div>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 120ms; display: flex; flex-direction: column; gap: 26px\">\n        <div style=\"background: #fff; border-radius: 18px; box-shadow: 0 22px 44px -34px rgba(16,22,31,0.38), 0 2px 6px -3px rgba(16,22,31,0.07); overflow: hidden\">\n          <div style=\"display: flex; align-items: center; gap: 9px; padding: 14px 18px; border-bottom: 1px solid #EDF1F6\">\n            <span style=\"width: 8px; height: 8px; border-radius: 999px; background: #E4E7EC\"></span>\n            <span style=\"width: 8px; height: 8px; border-radius: 999px; background: #E4E7EC\"></span>\n            <span style=\"width: 8px; height: 8px; border-radius: 999px; background: #E4E7EC\"></span>\n            <span style=\"margin-left: 8px; font-size: 11px; color: #5A6472; letter-spacing: 0.06em; text-transform: uppercase\">Postvak IN</span>\n          </div>\n          <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px\">\n            <span style=\"font-size: 13px; color: #5A6472\">Outlook, Gmail of HubSpot</span>\n            <span style=\"font-size: 12.5px; font-weight: 600; color: #1B3A5C\">geen nieuw platform</span>\n          </div>\n        </div>\n        <div style=\"display: flex; gap: 14px; align-items: flex-start\">\n          <span style=\"flex: none; margin-top: 2px; width: 22px; height: 22px; border-radius: 999px; background: #F4F7FA; color: #5A6472; font-size: 12px; display: flex; align-items: center; justify-content: center\">&#10005;</span>\n          <p style=\"margin: 0; font-size: 17px; line-height: 1.55; text-wrap: pretty\">Hij verplaatst jullie niet naar een nieuw platform.</p>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 40px\">\n      <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5A6472\">Sectoren</span>\n      <h2 style=\"margin: 14px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Voor welke bedrijven</h2>\n    </div>\n    <div style=\"display: flex; align-items: center; gap: 10px; margin-bottom: 36px\">\n      <span class=\"press\" onClick=\"{{ setS0 }}\" role=\"button\" tabIndex=\"{{ 0 }}\" style=\"{{ tab0 }}\">Groothandel</span>\n      <span class=\"press\" onClick=\"{{ setS1 }}\" role=\"button\" tabIndex=\"{{ 0 }}\" style=\"{{ tab1 }}\">Verhuur</span>\n      <span class=\"press\" onClick=\"{{ setS2 }}\" role=\"button\" tabIndex=\"{{ 0 }}\" style=\"{{ tab2 }}\">Transport</span>\n      <span class=\"press\" onClick=\"{{ setS3 }}\" role=\"button\" tabIndex=\"{{ 0 }}\" style=\"{{ tab3 }}\">Retail</span>\n      <span class=\"press\" onClick=\"{{ setS4 }}\" role=\"button\" tabIndex=\"{{ 0 }}\" style=\"{{ tab4 }}\">Machinebouw</span>\n    </div>\n    <div style=\"max-width: 880px; background: #fff; border-radius: 20px; box-shadow: 0 30px 60px -44px rgba(16,22,31,0.42), 0 2px 6px -3px rgba(16,22,31,0.07); overflow: hidden\">\n      <div style=\"display: flex; align-items: center; gap: 10px; padding: 16px 22px; border-bottom: 1px solid #EDF1F6\">\n        <span style=\"width: 9px; height: 9px; border-radius: 999px; background: #E4E7EC\"></span>\n        <span style=\"width: 9px; height: 9px; border-radius: 999px; background: #E4E7EC\"></span>\n        <span style=\"width: 9px; height: 9px; border-radius: 999px; background: #E4E7EC\"></span>\n        <span style=\"margin-left: 10px; font-size: 12px; color: #5A6472; letter-spacing: 0.06em; text-transform: uppercase\">Voorbeeldmail</span>\n      </div>\n      <div style=\"display: flex; gap: 15px; padding: 24px 22px\">\n        <span style=\"flex: none; width: 40px; height: 40px; border-radius: 14px; background: #1B3A5C; color: #fff; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center\">{{ secInitials }}</span>\n        <div style=\"min-width: 0; flex: 1\">\n          <div style=\"display: flex; align-items: baseline; justify-content: space-between; gap: 14px\">\n            <span style=\"font-size: 15px; font-weight: 600\">{{ secSender }}</span>\n            <span style=\"font-size: 12.5px; color: #5A6472; font-variant-numeric: tabular-nums\">{{ secTime }}</span>\n          </div>\n          <div style=\"margin-top: 5px; font-size: 15px; line-height: 1.4; font-variant-numeric: tabular-nums\">{{ secSubject }}</div>\n        </div>\n      </div>\n      <div style=\"display: flex; align-items: center; gap: 12px; padding: 18px 22px; background: #F4F7FA; border-top: 1px solid #EDF1F6\">\n        <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6472; white-space: nowrap\">Waar hij kijkt</span>\n        <span style=\"font-size: 14px; color: #10161F; font-variant-numeric: tabular-nums\">{{ secLookup }}</span>\n      </div>\n    </div>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 56px\">\n      <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5A6472\">Starten</span>\n      <h2 style=\"margin: 14px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Zo start je</h2>\n    </div>\n    <div style=\"position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px\">\n      <div style=\"position: absolute; top: 15px; left: 0; right: 0; height: 1px; background: #E4E7EC\"></div>\n      <div class=\"enter-anim\" style=\"position: relative\">\n        <span style=\"display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #fff; border: 1px solid #E4E7EC; color: #1B3A5C; font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums\">1</span>\n        <h3 style=\"margin: 24px 0 0; font-size: 20px; font-weight: 600; letter-spacing: -0.015em\">Kennismaking</h3>\n        <p style=\"margin: 10px 0 0; font-size: 16px; line-height: 1.5; color: #5A6472\">Dertig minuten over jullie mailwerk.</p>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 60ms; position: relative\">\n        <span style=\"display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #fff; border: 1px solid #E4E7EC; color: #1B3A5C; font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums\">2</span>\n        <h3 style=\"margin: 24px 0 0; font-size: 20px; font-weight: 600; letter-spacing: -0.015em\">Koppelen</h3>\n        <p style=\"margin: 10px 0 0; font-size: 16px; line-height: 1.5; color: #5A6472\">Je logt in met je eigen account.</p>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 120ms; position: relative\">\n        <span style=\"display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #fff; border: 1px solid #E4E7EC; color: #1B3A5C; font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums\">3</span>\n        <h3 style=\"margin: 24px 0 0; font-size: 20px; font-weight: 600; letter-spacing: -0.015em\">Meelezen</h3>\n        <p style=\"margin: 10px 0 0; font-size: 16px; line-height: 1.5; color: #5A6472\">Twee weken concepten nakijken en bijsturen.</p>\n      </div>\n      <div class=\"enter-anim\" style=\"animation-delay: 180ms; position: relative\">\n        <span style=\"display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #14273D; color: #fff; font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums\">4</span>\n        <h3 style=\"margin: 24px 0 0; font-size: 20px; font-weight: 600; letter-spacing: -0.015em\">Hij draait</h3>\n        <p style=\"margin: 10px 0 0; font-size: 16px; line-height: 1.5; color: #5A6472\">Elke ochtend staan de concepten klaar.</p>\n      </div>\n    </div>\n    <div class=\"enter-anim\" style=\"position: relative; margin-top: 56px; border-radius: 36px; overflow: hidden; background: #F4F7FA; padding: 72px\">\n      <div style=\"position: absolute; top: -150px; right: -80px; width: 560px; height: 460px; border-radius: 50%; background: rgba(27,58,92,0.05); filter: blur(120px); pointer-events: none\"></div>\n      <span class=\"float-anim\" style=\"animation-delay: 0s; position: absolute; left: 96px; top: 92px; width: 48px; height: 48px; border-radius: 999px; background: #fff; box-shadow: 0 16px 32px -20px rgba(16,22,31,0.4); opacity: 0.9; display: flex; align-items: center; justify-content: center; pointer-events: none\">\n        <img src=\"https://cdn.simpleicons.org/gmail\" alt=\"Gmail\" onError=\"{{ hideTile }}\" style=\"display: block; height: 20px; width: auto\" />\n      </span>\n      <span class=\"float-anim\" style=\"animation-delay: 1.2s; position: absolute; left: 210px; top: 250px; width: 42px; height: 42px; border-radius: 999px; background: #fff; box-shadow: 0 16px 32px -20px rgba(16,22,31,0.4); opacity: 0.75; display: flex; align-items: center; justify-content: center; pointer-events: none\">\n        <img src=\"https://cdn.simpleicons.org/hubspot\" alt=\"HubSpot\" onError=\"{{ hideTile }}\" style=\"display: block; height: 18px; width: auto\" />\n      </span>\n      <span class=\"float-anim\" style=\"animation-delay: 2.4s; position: absolute; left: 150px; bottom: 96px; width: 46px; height: 46px; border-radius: 999px; background: #fff; box-shadow: 0 16px 32px -20px rgba(16,22,31,0.4); opacity: 0.85; display: flex; align-items: center; justify-content: center; pointer-events: none\">\n        <img src=\"https://cdn.simpleicons.org/odoo\" alt=\"Odoo\" onError=\"{{ hideTile }}\" style=\"display: block; height: 19px; width: auto\" />\n      </span>\n      <span class=\"float-anim\" style=\"animation-delay: 0.6s; position: absolute; right: 104px; top: 120px; width: 46px; height: 46px; border-radius: 999px; background: #fff; box-shadow: 0 16px 32px -20px rgba(16,22,31,0.4); opacity: 0.85; display: flex; align-items: center; justify-content: center; pointer-events: none\">\n        <img src=\"https://cdn.simpleicons.org/shopify\" alt=\"Shopify\" onError=\"{{ hideTile }}\" style=\"display: block; height: 19px; width: auto\" />\n      </span>\n      <span class=\"float-anim\" style=\"animation-delay: 1.8s; position: absolute; right: 216px; top: 268px; width: 42px; height: 42px; border-radius: 999px; background: #fff; box-shadow: 0 16px 32px -20px rgba(16,22,31,0.4); opacity: 0.75; display: flex; align-items: center; justify-content: center; pointer-events: none\">\n        <img src=\"https://cdn.simpleicons.org/woocommerce\" alt=\"WooCommerce\" onError=\"{{ hideTile }}\" style=\"display: block; height: 18px; width: auto\" />\n      </span>\n      <span class=\"float-anim\" style=\"animation-delay: 3s; position: absolute; right: 140px; bottom: 104px; width: 48px; height: 48px; border-radius: 999px; background: #fff; box-shadow: 0 16px 32px -20px rgba(16,22,31,0.4); opacity: 0.9; display: flex; align-items: center; justify-content: center; pointer-events: none\">\n        <img src=\"https://cdn.simpleicons.org/wordpress\" alt=\"WordPress\" onError=\"{{ hideTile }}\" style=\"display: block; height: 20px; width: auto\" />\n      </span>\n      <div style=\"position: relative; width: 460px; margin: 0 auto; background: #fff; border-radius: 22px; box-shadow: 0 2px 4px -2px rgba(6,20,36,0.35), 0 22px 36px -20px rgba(6,20,36,0.42), 0 56px 92px -38px rgba(6,20,36,0.6); overflow: hidden\">\n        <div style=\"display: flex; align-items: center; justify-content: center; gap: 0; padding: 40px 40px 34px\">\n          <span style=\"width: 64px; height: 64px; border-radius: 999px; background: #fff; border: 1px solid #E4E7EC; box-shadow: 0 12px 24px -16px rgba(21,23,28,0.35); display: flex; align-items: center; justify-content: center\">\n            <img src=\"https://www.glimps.be/favicon.png\" alt=\"Glimps\" onError=\"{{ hideTile }}\" style=\"display: block; width: 36px; height: 36px\" />\n          </span>\n          <span style=\"width: 48px; height: 1px; border-top: 1px dashed #C6CEDA\"></span>\n          <span style=\"width: 64px; height: 64px; border-radius: 999px; background: #fff; border: 1px solid #E4E7EC; box-shadow: 0 12px 24px -16px rgba(21,23,28,0.35); display: flex; align-items: center; justify-content: center\">\n            <img src=\"https://www.google.com/s2/favicons?domain=outlook.com&amp;sz=256\" alt=\"Outlook\" onError=\"{{ hideTile }}\" style=\"display: block; width: 36px; height: 36px\" />\n          </span>\n        </div>\n        <div style=\"display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 40px 34px\">\n          <span style=\"font-size: 20px; font-weight: 600; letter-spacing: -0.015em\">Glimps wil verbinden met je Outlook</span>\n          <span style=\"margin-top: 10px; font-size: 14.5px; color: #5A6472\">Je logt in met je eigen account</span>\n          <span class=\"press\" style=\"display: flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; margin-top: 26px; background: #1B3A5C; color: #fff; font-size: 15px; font-weight: 500; border-radius: 14px\">Verbinden</span>\n        </div>\n      </div>\n    </div>\n    <p style=\"margin: 32px 0 0; font-size: 13px; color: #5A6472\">Beveiligd via OAuth. Je kan de toegang op elk moment intrekken.</p>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div style=\"margin-bottom: 40px\">\n      <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5A6472\">Vragen</span>\n      <h2 style=\"margin: 14px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em\">Veelgestelde vragen</h2>\n    </div>\n    <div style=\"display: flex; flex-direction: column; max-width: 1120px\">\n      <div style=\"display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 26px 0; border-top: 1px solid #E4E7EC\">\n        <span style=\"font-size: 18.5px; font-weight: 600; letter-spacing: -0.015em\">Ziet de klant dat het AI is?</span>\n        <span style=\"font-size: 16.5px; color: #5A6472\">Nee. Jullie doen de laatste klik. Wil je bepaalde mails automatisch laten vertrekken, dan spreken we dat af.</span>\n      </div>\n      <div style=\"display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 26px 0; border-top: 1px solid #E4E7EC\">\n        <span style=\"font-size: 18.5px; font-weight: 600; letter-spacing: -0.015em\">Waar blijft onze data?</span>\n        <span style=\"font-size: 16.5px; color: #5A6472\">In jullie eigen systemen. Wij bewaren geen mailarchief.</span>\n      </div>\n      <div style=\"display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 26px 0; border-top: 1px solid #E4E7EC\">\n        <span style=\"font-size: 18.5px; font-weight: 600; letter-spacing: -0.015em\">Moeten we van systeem veranderen?</span>\n        <span style=\"font-size: 16.5px; color: #5A6472\">Nee, hij werkt in jullie huidige inbox.</span>\n      </div>\n      <div style=\"display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 26px 0; border-top: 1px solid #E4E7EC; border-bottom: 1px solid #E4E7EC\">\n        <span style=\"font-size: 18.5px; font-weight: 600; letter-spacing: -0.015em\">Hoe lang duurt het opzetten?</span>\n        <span style=\"font-size: 16.5px; color: #5A6472\">Koppelen duurt een minuut, meelezen twee weken.</span>\n      </div>\n    </div>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div class=\"enter-anim\" style=\"display: flex; flex-direction: column; align-items: center\">\n      <span style=\"font-size: 11.5px; color: #5A6472; letter-spacing: 0.06em; margin-bottom: 18px\">Werkt in de systemen die je al gebruikt</span>\n      <div style=\"display: flex; align-items: center; gap: 48px\">\n        <span class=\"logo-hover\" style=\"display: flex; align-items: center; font-size: 17px; font-weight: 500; color: #9AA1AC; letter-spacing: -0.01em; white-space: nowrap\">Outlook</span>\n        <span style=\"display: flex; align-items: center\">\n          <img src=\"https://cdn.simpleicons.org/gmail/9AA1AC\" alt=\"Gmail\" class=\"logo-hover\" onError=\"{{ iconFallback }}\" style=\"display: block; height: 22px; width: auto\" />\n          <span class=\"logo-hover\" style=\"display: none; font-size: 17px; font-weight: 500; color: #9AA1AC; letter-spacing: -0.01em\">Gmail</span>\n        </span>\n        <span style=\"display: flex; align-items: center\">\n          <img src=\"https://cdn.simpleicons.org/hubspot/9AA1AC\" alt=\"HubSpot\" class=\"logo-hover\" onError=\"{{ iconFallback }}\" style=\"display: block; height: 26px; width: auto\" />\n          <span class=\"logo-hover\" style=\"display: none; font-size: 17px; font-weight: 500; color: #9AA1AC; letter-spacing: -0.01em\">HubSpot</span>\n        </span>\n        <span style=\"display: flex; align-items: center\">\n          <img src=\"https://cdn.simpleicons.org/odoo/9AA1AC\" alt=\"Odoo\" class=\"logo-hover\" onError=\"{{ iconFallback }}\" style=\"display: block; height: 26px; width: auto\" />\n          <span class=\"logo-hover\" style=\"display: none; font-size: 17px; font-weight: 500; color: #9AA1AC; letter-spacing: -0.01em\">Odoo</span>\n        </span>\n        <span class=\"logo-hover\" style=\"display: flex; align-items: center; font-size: 17px; font-weight: 500; color: #9AA1AC; letter-spacing: -0.01em; white-space: nowrap\">Exact Online</span>\n        <span class=\"logo-hover\" style=\"display: flex; align-items: center; font-size: 17px; font-weight: 500; color: #9AA1AC; letter-spacing: -0.01em; white-space: nowrap\">Teamleader</span>\n      </div>\n    </div>\n  </section>\n\n  <section style=\"position: relative; padding: 0 64px 160px\">\n    <div class=\"enter-anim\" style=\"display: flex; align-items: center; justify-content: space-between; gap: 48px; border-radius: 36px; background: #14273D; color: #fff; padding: 72px\">\n      <div>\n        <h2 style=\"margin: 0; max-width: 520px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 48px; line-height: 1.05; letter-spacing: -0.025em\">Klaar om te starten?</h2>\n        <p style=\"margin: 18px 0 0; font-size: 17px; color: #D3DDE8\">Dertig minuten, en je weet of het past.</p>\n      </div>\n      <a h class=\"press\" style=\"flex: none; display: flex; align-items: center; min-height: 52px; background: #fff; color: #14273D; font-size: 15.5px; font-weight: 500; padding: 0 30px; border-radius: 999px\">Plan een gesprek</a>\n    </div>\n  </section>\n\n  <footer style=\"position: relative; border-top: 1px solid #E4E7EC; padding: 88px 64px 40px\">\n    <div style=\"display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 56px\">\n      <div style=\"display: flex; flex-direction: column; gap: 16px; max-width: 300px\">\n        <span style=\"display: flex; align-items: center; justify-content: flex-start\">\n          <img src=\"https://www.glimps.be/assets/glimps-logo-DKYlSeD9.png\" alt=\"Glimps\" onError=\"this.style.display='none';this.nextSibling.style.display='block'\" style=\"display: block; height: 32px; width: auto\" /><span style=\"display: none; font-size: 23px; font-weight: 600; letter-spacing: -0.035em\">glimps</span>\n        </span>\n        <span style=\"font-family: 'Instrument Serif', Georgia, serif; font-size: 22px; line-height: 1.2; letter-spacing: -0.015em\">Een digitale medewerker voor je inbox</span>\n        <span style=\"font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #5A6472\">Het antwoord ligt al klaar</span>\n      </div>\n      <div style=\"display: flex; flex-direction: column; gap: 14px\">\n        <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #10161F\">E-mailagent</span>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Hoe het werkt</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Integraties</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Voor welke bedrijven</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Veelgestelde vragen</a>\n      </div>\n      <div style=\"display: flex; flex-direction: column; gap: 14px\">\n        <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #10161F\">Chatbot</span>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Features</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Integraties</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Sectoren</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Readiness quiz</a>\n      </div>\n      <div style=\"display: flex; flex-direction: column; gap: 14px\">\n        <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #10161F\">Bedrijf</span>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Over ons</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Hoe we werken</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Blog</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Vacatures</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Contact</a>\n        <a h class=\"nav-link\" style=\"margin-top: 10px; font-size: 13.5px; color: #5A6472; font-style: italic\">Klantcases op aanvraag</a>\n      </div>\n      <div style=\"display: flex; flex-direction: column; gap: 14px\">\n        <span style=\"font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #10161F\">Juridisch</span>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Privacy</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Algemene voorwaarden</a>\n        <a h class=\"nav-link\" style=\"font-size: 14.5px; color: #5A6472\">Cookies</a>\n      </div>\n    </div>\n    <div style=\"display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 72px; padding-top: 26px; border-top: 1px solid #E4E7EC; font-size: 13px; color: #5A6472\">\n      <span style=\"font-variant-numeric: tabular-nums\">Rustenburgstraat 9, 8000 Brugge, BE 0682.779.139</span>\n      <span>Glimps is onderdeel van Uplevel bv</span>\n    </div>\n  </footer>\n</div>\n".replace('{{ typed }}', '').replace(/id="typed-text"/, 'id="typed-text"');
 
   return (
-    <div className="relative z-10" style={{ padding: '0 24px 160px' }}>
-      <div
-        ref={panelRef}
-        style={{
-          maxWidth: 1180, margin: '0 auto', height: 520, overflow: 'hidden',
-          borderRadius: 20, background: '#fff',
-          boxShadow: '0 2px 4px -2px rgba(6,20,36,.32), 0 24px 40px -22px rgba(6,20,36,.38), 0 60px 100px -44px rgba(6,20,36,.5)',
-          position: 'relative',
-        }}
-      >
-        {/* Top bar */}
-        <div style={{
-          display: 'flex', alignItems: 'center', gap: 8,
-          padding: '14px 24px', borderBottom: '1px solid #EDF1F6',
-        }}>
-          <span style={{ width: 9, height: 9, borderRadius: '50%', background: '#E4E7EC' }} />
-          <span style={{ width: 9, height: 9, borderRadius: '50%', background: '#E4E7EC' }} />
-          <span style={{ width: 9, height: 9, borderRadius: '50%', background: '#E4E7EC' }} />
-          <span style={{
-            fontSize: 12, letterSpacing: '0.06em', color: '#5A6472',
-            marginLeft: 12, fontWeight: 500,
-          }}>
-            {t('emailAgent.inbox.label')}
-          </span>
-        </div>
-
-        {/* Scan rhythm row */}
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '12px 24px', borderBottom: '1px solid #EDF1F6', flexWrap: 'wrap', gap: 8,
-        }}>
-          <span style={{ fontSize: 13, color: '#5A6472' }}>{t('emailAgent.inbox.scanLabel')}</span>
-          <div style={{ display: 'flex', gap: 6 }}>
-            <ScanPill label={t('emailAgent.inbox.scanQuarter')} />
-            <ScanPill label={t('emailAgent.inbox.scanHour')} selected />
-            <ScanPill label={t('emailAgent.inbox.scanTwice')} />
-          </div>
-        </div>
-
-        {/* Mail list with gradient masks */}
-        <div style={{ position: 'relative', flex: 1, overflow: 'hidden', height: 'calc(100% - 96px)' }}>
-          <div
-            style={{
-              position: 'absolute', top: 0, left: 0, right: 0, height: 40, zIndex: 2,
-              background: 'linear-gradient(180deg, #fff 0%, transparent 100%)', pointerEvents: 'none',
-            }}
-          />
-          <div
-            style={{
-              position: 'absolute', bottom: 0, left: 0, right: 0, height: 40, zIndex: 2,
-              background: 'linear-gradient(0deg, #fff 0%, transparent 100%)', pointerEvents: 'none',
-            }}
-          />
-
-          <div ref={listRef} style={{ willChange: 'transform', padding: '8px 0' }}>
-            {MAILS.map((mail, i) => (
-              <div key={i}>
-                <InboxRow {...mail} />
-                {i === 0 && (
-                  <div style={{ background: '#F4F7FA', padding: '16px 24px 16px 80px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-                      <span style={{
-                        display: 'inline-flex', alignItems: 'center', gap: 5,
-                        background: '#fff', borderRadius: 999, padding: '4px 10px',
-                        fontSize: 12, fontWeight: 600, color: '#0E7C66',
-                      }}>
-                        <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#0E7C66' }} />
-                        {t('emailAgent.inbox.draftBadge')}
-                      </span>
-                      <span style={{ fontSize: 12.5, color: '#5A6472' }}>
-                        {t('emailAgent.inbox.draftTo')}
-                      </span>
-                    </div>
-                    <p style={{ fontSize: 14, color: '#10161F', lineHeight: 1.6, marginBottom: 12, minHeight: 44 }}>
-                      {draftText.slice(0, typedCount)}
-                      {showCursor && (
-                        <span style={{
-                          display: 'inline-block', width: 2, height: 16,
-                          background: '#1B3A5C', marginLeft: 1, verticalAlign: 'text-bottom',
-                          animation: 'blink 1s step-end infinite',
-                        }} />
-                      )}
-                    </p>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                      <button style={{
-                        background: '#1B3A5C', color: '#fff', border: 'none',
-                        borderRadius: 999, height: 36, padding: '0 20px',
-                        fontSize: 13, fontWeight: 600, cursor: 'pointer',
-                      }}>
-                        {t('emailAgent.inbox.sendBtn')}
-                      </button>
-                      <span style={{ fontSize: 12.5, color: '#5A6472' }}>
-                        {t('emailAgent.inbox.lookupNote')}
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <div dangerouslySetInnerHTML={{ __html: markup }} />
+      {/* Inject typed text via portal-like approach */}
+      <TypedInjector text={typed} />
+    </>
   );
-}
+};
 
-function ScanPill({ label, selected }: { label: string; selected?: boolean }) {
-  return (
-    <span style={{
-      display: 'inline-flex', alignItems: 'center', gap: 6,
-      border: `1px solid ${selected ? '#1B3A5C' : '#E4E7EC'}`,
-      background: selected ? '#E7EEF5' : 'transparent',
-      borderRadius: 999, padding: '8px 14px', fontSize: 13,
-      fontWeight: selected ? 600 : 400, color: selected ? '#1B3A5C' : '#5A6472',
-    }}>
-      <span style={{
-        width: 10, height: 10, borderRadius: '50%',
-        border: selected ? 'none' : '1.5px solid #E4E7EC',
-        background: selected ? '#1B3A5C' : 'transparent',
-      }} />
-      {label}
-    </span>
-  );
-}
+const TypedInjector = ({ text }: { text: string }) => {
+  useEffect(() => {
+    const el = document.getElementById('typed-text');
+    if (el) el.textContent = text;
+  }, [text]);
+  return null;
+};
 
-function InboxRow({ initials, from, time, subject }: { initials: string; from: string; time: string; subject: string }) {
-  return (
-    <div style={{
-      display: 'flex', alignItems: 'center', gap: 16,
-      padding: '10px 24px', cursor: 'default',
-    }}>
-      <div style={{
-        width: 40, height: 40, borderRadius: 14, background: '#1B3A5C',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        color: '#fff', fontSize: 13, fontWeight: 600, flexShrink: 0,
-      }}>
-        {initials}
-      </div>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-          <span style={{ fontSize: 15, fontWeight: 600, color: '#10161F' }}>{from}</span>
-          <span style={{ fontSize: 12.5, color: '#5A6472', fontVariantNumeric: 'tabular-nums', flexShrink: 0, marginLeft: 8 }}>{time}</span>
-        </div>
-        <span style={{ fontSize: 14.5, color: '#5A6472', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'block' }}>{subject}</span>
-      </div>
-    </div>
-  );
-}
-
-function SectionHeader({ eyebrow, title }: { eyebrow: string; title: string }) {
-  return (
-    <div className="text-center">
-      <span style={{
-        display: 'block', fontSize: 12, letterSpacing: '0.06em',
-        color: '#5A6472', textTransform: 'uppercase' as const, marginBottom: 12,
-      }}>
-        {eyebrow}
-      </span>
-      <h2 className="font-serif" style={{
-        fontWeight: 400, fontSize: 44, lineHeight: 1.12,
-        letterSpacing: '-0.015em', color: '#10161F',
-      }}>
-        {title}
-      </h2>
-    </div>
-  );
-}
-
-function StepBubble({ num, text }: { num: number; text: string }) {
-  return (
-    <span className="inline-flex items-center gap-2" style={{ fontSize: 15, color: '#5A6472' }}>
-      <span style={{
-        width: 22, height: 22, borderRadius: '50%', border: '1.5px solid #E4E7EC',
-        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: 12, fontWeight: 600, color: '#5A6472',
-      }}>{num}</span>
-      {text}
-    </span>
-  );
-}
-
-function ArrowRight() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}>
-      <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="#E4E7EC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function CostCard({ title, text, children }: { title: string; text: string; children: React.ReactNode }) {
-  return (
-    <div>
-      <div style={{
-        background: '#fff', borderRadius: 14,
-        boxShadow: '0 2px 4px -2px rgba(6,20,36,.2), 0 18px 30px -20px rgba(6,20,36,.3)',
-        padding: 24, marginBottom: 20,
-      }}>
-        {children}
-      </div>
-      <h3 style={{ fontSize: 18, fontWeight: 600, color: '#10161F', marginBottom: 6 }}>{title}</h3>
-      <p style={{ fontSize: 15, color: '#5A6472', lineHeight: 1.55 }}>{text}</p>
-    </div>
-  );
-}
-
-function MailRow({ label, time, color, dimmed }: { label: string; time: string; color: string; dimmed?: boolean }) {
-  return (
-    <div className="flex items-center justify-between" style={{
-      background: dimmed ? '#F4F7FA' : '#F4F7FA', borderRadius: 8, padding: '10px 16px',
-      opacity: dimmed ? 0.6 : 1,
-    }}>
-      <span style={{ fontSize: 14, color: '#5A6472' }}>{label}</span>
-      <span style={{ fontVariantNumeric: 'tabular-nums', fontSize: 14, fontWeight: 600, color }}>{time}</span>
-    </div>
-  );
-}
-
-function HowCard({ num, title, text, dark }: { num: string; title: string; text: string; dark?: boolean }) {
-  return (
-    <div style={{
-      background: dark ? '#1B3A5C' : '#fff',
-      border: dark ? 'none' : '1px solid #E4E7EC',
-      borderRadius: 16, padding: 28,
-    }}>
-      <span style={{
-        fontSize: 32, fontWeight: 700, lineHeight: 1,
-        color: dark ? 'rgba(255,255,255,0.25)' : '#E4E7EC',
-        display: 'block', marginBottom: 16,
-      }}>{num}</span>
-      <h3 style={{ fontSize: 17, fontWeight: 600, color: dark ? '#fff' : '#10161F', marginBottom: 8 }}>{title}</h3>
-      <p style={{ fontSize: 15, color: dark ? 'rgba(255,255,255,0.7)' : '#5A6472', lineHeight: 1.55 }}>{text}</p>
-    </div>
-  );
-}
-
-function NavLink({
-  href,
-  children,
-  active,
-  dotColor,
-}: {
-  href: string;
-  children: React.ReactNode;
-  active?: boolean;
-  dotColor?: string;
-}) {
-  return (
-    <Link
-      to={href}
-      className="inline-flex items-center gap-2 px-3"
-      style={{
-        fontSize: '14.5px',
-        color: '#5A6472',
-        fontWeight: active ? 600 : 400,
-        minHeight: 44,
-      }}
-    >
-      {dotColor && (
-        <span
-          style={{
-            width: 6,
-            height: 6,
-            borderRadius: '50%',
-            background: dotColor,
-            flexShrink: 0,
-          }}
-        />
-      )}
-      {children}
-    </Link>
-  );
-}
-
-export default EmailAgent;
+export default EmailAgentPage;
