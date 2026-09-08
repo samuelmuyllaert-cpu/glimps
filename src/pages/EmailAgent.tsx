@@ -22,7 +22,7 @@ const EmailAgentPage = () => {
 
   useEffect(() => {
     const style = document.createElement('style');
-    style.textContent = "\n@keyframes gEnter { from { opacity: 0; transform: translate3d(0, 14px, 0); } to { opacity: 1; transform: none; } }\n@keyframes gFade { from { opacity: 0; } to { opacity: 1; } }\n@keyframes gFloat { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -6px, 0); } }\n@keyframes gBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }\n.enter-anim { animation: gEnter 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }\n.press { transition: transform 160ms ease-out; }\n.press:active { transform: scale(0.97); }\n.caret { animation: gBlink 1s steps(1, end) infinite; }\n.float-anim { animation: gFloat 8s ease-in-out infinite; }\n.logo-hover { opacity: 1; }\n@media (hover: hover) and (pointer: fine) {\n  .lift { transition: transform 240ms cubic-bezier(0.23, 1, 0.32, 1); }\n  .lift:hover { transform: translate3d(0, -3px, 0); }\n  .nav-link { transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1); }\n  .nav-link:hover { opacity: 0.62; }\n  img.logo-hover { transition: filter 200ms ease-out; }\n  img.logo-hover:hover { filter: brightness(0); }\n  span.logo-hover { transition: color 200ms ease-out; }\n  span.logo-hover:hover { color: #10161F; }\n}\n@media (prefers-reduced-motion: reduce) {\n  .enter-anim { animation: gFade 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }\n  .caret { animation: none; }\n  .press, .lift, img.logo-hover, span.logo-hover { transition: none; }\n  .float-anim { animation: none; }\n  .press:active, .lift:hover { transform: none; }\n}\n";
+    style.textContent = "\n@keyframes gEnter { from { opacity: 0; transform: translate3d(0, 14px, 0); } to { opacity: 1; transform: none; } }\n@keyframes gFade { from { opacity: 0; } to { opacity: 1; } }\n@keyframes gFloat { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -6px, 0); } }\n@keyframes gBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }\n.enter-anim { animation: gEnter 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }\n.press { transition: transform 160ms ease-out; }\n.press:active { transform: scale(0.97); }\n.caret { animation: gBlink 1s steps(1, end) infinite; }\n.float-anim { animation: gFloat 8s ease-in-out infinite; }\n.logo-hover { opacity: 1; }\n@media (hover: hover) and (pointer: fine) {\n  .lift { transition: transform 240ms cubic-bezier(0.23, 1, 0.32, 1); }\n  .lift:hover { transform: translate3d(0, -3px, 0); }\n  .nav-link { transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1); }\n  .nav-link:hover { opacity: 0.62; }\n  img.logo-hover { transition: filter 200ms ease-out; }\n  img.logo-hover:hover { filter: brightness(0); }\n  span.logo-hover { transition: color 200ms ease-out; }\n  span.logo-hover:hover { color: #10161F; }\n}\n@media (prefers-reduced-motion: reduce) {\n  .enter-anim { animation: gFade 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }\n  .caret { animation: none; }\n  .press, .lift, img.logo-hover, span.logo-hover { transition: none; }\n  .float-anim { animation: none; }\n  .press:active, .lift:hover { transform: none; }\n}\n@media (max-width: 768px) {\n  div[style*=\"grid-template-columns: repeat(3\"] { grid-template-columns: 1fr !important; }\n  div[style*=\"grid-template-columns: repeat(4\"] { grid-template-columns: 1fr !important; gap: 24px !important; }\n  div[style*=\"grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)\"] { grid-template-columns: 1fr !important; gap: 16px !important; }\n  div[style*=\"grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr)\"] { grid-template-columns: 1fr !important; gap: 32px !important; }\n  span[style*=\"grid-column: span 3\"] { grid-column: 1 !important; margin-top: 12px !important; }\n  div[style*=\"background: #14273D\"][style*=\"padding: 72px\"] { flex-direction: column !important; gap: 24px !important; text-align: center !important; }\n  .float-anim { display: none !important; }\n  div[style*=\"position: absolute; top: 15px; left: 0; right: 0; height: 1px\"] { display: none !important; }\n  div[style*=\"gap: 10px; margin-bottom: 36px\"] { overflow-x: auto !important; flex-wrap: nowrap !important; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }\n  div[style*=\"justify-content: space-between; gap: 20px; padding: 16px 22px\"] { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }\n  span[style*=\"display: flex; align-items: center; gap: 10px\"] { flex-wrap: wrap !important; }\n  div[style*=\"display: flex; align-items: center; justify-content: center; gap: 8px\"] { flex-wrap: wrap !important; justify-content: flex-start !important; gap: 12px !important; }\n  div[style*=\"margin-bottom: 56px\"] { margin-bottom: 28px !important; }\n}\n";
     document.head.appendChild(style);
     return () => { document.head.removeChild(style); };
   }, []);
@@ -163,7 +163,25 @@ const EmailAgentPage = () => {
     .replace(
       '<p style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.62; color: #5A6472; min-height: 48px; font-variant-numeric: tabular-nums">',
       '<p id="typed-text" style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.62; color: #5A6472; min-height: 48px; font-variant-numeric: tabular-nums">'
-    );
+    )
+    // Mobile responsive: fluid section padding
+    .replace(/padding: 0 64px 160px/g, 'padding: 0 clamp(20px, 5vw, 64px) clamp(80px, 12vw, 160px)')
+    // Mobile responsive: hero padding
+    .replace(/padding: 200px 0 200px/g, 'padding: clamp(100px, 18vw, 200px) 0 clamp(80px, 15vw, 200px)')
+    // Mobile responsive: fluid font sizes
+    .replace(/font-size: 78px/g, 'font-size: clamp(36px, 8vw, 78px)')
+    .replace(/font-size: 52px/g, 'font-size: clamp(28px, 5.5vw, 52px)')
+    .replace(/font-size: 48px/g, 'font-size: clamp(26px, 5vw, 48px)')
+    // Mobile responsive: connection card width
+    .replace(/width: 460px/g, 'max-width: 460px; width: 100%')
+    // Mobile responsive: Odoo badge position
+    .replace(/left: 250px; top: -28px/g, 'left: clamp(16px, 20vw, 250px); top: -28px')
+    // Mobile responsive: large gaps
+    .replace(/gap: 72px/g, 'gap: clamp(24px, 5vw, 72px)')
+    .replace(/gap: 48px/g, 'gap: clamp(20px, 4vw, 48px)')
+    // Mobile responsive: large padding
+    .replace(/padding: 72px/g, 'padding: clamp(32px, 6vw, 72px)')
+    ;
 
   return (
     <>
