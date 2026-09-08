@@ -136,8 +136,8 @@ const Legal = () => {
             <div className="space-y-4 text-muted-foreground">
               <p>
                 {language === 'fr'
-                  ? "Chez Glimps, nous accordons une grande importance à la transparence et à la protection de votre vie privée. Tous nos processus sont conformes au RGPD et respectent la législation européenne sur la protection des données."
-                  : "Bij Glimps hechten we veel waarde aan transparantie en de bescherming van jouw privacy. Al onze processen zijn GDPR-compliant en voldoen aan de Europese privacywetgeving."
+                  ? "Chez Glimps, nous accordons une grande importance à la transparence et à la protection de votre vie privée. Nous concevons nos processus en tenant compte du RGPD et de la législation européenne sur la protection des données."
+                  : "Bij Glimps hechten we veel waarde aan transparantie en de bescherming van jouw privacy. We ontwerpen onze processen met aandacht voor GDPR en de Europese privacywetgeving."
                 }
               </p>
               <p>

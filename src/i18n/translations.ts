@@ -228,7 +228,7 @@ export const translations = {
       gdprCompliant: 'GDPR-bewust',
       gdprDesc: 'In lijn met EU-regelgeving',
       privacyFirst: 'Privacy First',
-      privacyDesc: 'Jouw data is veilig',
+      privacyDesc: 'We beschermen jouw data',
       bestInTech: 'Best in Tech',
       techDesc: 'Nieuwste AI technologie',
       newsletter: 'Nieuwsbrief',
@@ -1525,7 +1525,7 @@ export const translations = {
       gdprCompliant: 'RGPD en tête',
       gdprDesc: 'Aligné sur la réglementation européenne',
       privacyFirst: 'Confidentialité d\'abord',
-      privacyDesc: 'Vos données sont sécurisées',
+      privacyDesc: 'Nous protégeons vos données',
       bestInTech: 'Meilleure technologie',
       techDesc: 'Technologie IA la plus récente',
       newsletter: 'Newsletter',
@@ -1571,7 +1571,7 @@ export const translations = {
         },
         {
           title: 'Fiable & Transparent',
-          description: 'Conforme RGPD et toujours transparent sur le fonctionnement de l\'IA.'
+          description: 'Conçu avec le RGPD à l\'esprit et transparent sur le fonctionnement de l\'IA.'
         },
         {
           title: 'Collaboration Fluide',
@@ -3012,7 +3012,7 @@ export const translations = {
       gdprCompliant: 'GDPR-bewust',
       gdprDesc: 'Aligned with EU regulations',
       privacyFirst: 'Privacy First',
-      privacyDesc: 'Your data is safe',
+      privacyDesc: 'We protect your data',
       bestInTech: 'Best in Tech',
       techDesc: 'Latest AI technology',
       newsletter: 'Newsletter',
