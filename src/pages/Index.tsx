@@ -64,20 +64,21 @@ const Index = () => {
         canonicalPath={prefix || '/'}
       />
       <StructuredData data={structuredData} />
+      {/* Background decorations — sits behind Navigation so color starts at top */}
+      <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
+        <div style={{
+          position: 'absolute', inset: '0 0 auto', height: 940,
+          backgroundImage: 'repeating-linear-gradient(90deg, rgba(27,58,92,0.05) 0 1px, transparent 1px 64px), repeating-linear-gradient(0deg, rgba(27,58,92,0.05) 0 1px, transparent 1px 64px)',
+          maskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, transparent 100%)',
+        }} />
+        <div style={{ position: 'absolute', top: -300, left: -280, width: 1240, height: 940, borderRadius: '50%', background: 'radial-gradient(circle, #D8E4F0 0%, #E7EEF5 62%, rgba(231,238,245,0) 100%)', opacity: 0.85, filter: 'blur(120px)' }} />
+        <div style={{ position: 'absolute', top: 560, right: -300, width: 1120, height: 820, borderRadius: '50%', background: 'radial-gradient(circle, #F6D9D5 0%, #FAE7E5 58%, rgba(250,231,229,0) 100%)', opacity: 0.85, filter: 'blur(130px)' }} />
+      </div>
+
       <Navigation />
 
-      <div style={{ background: '#fff', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
-        {/* Background decorations */}
-        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
-          <div style={{
-            position: 'absolute', inset: '0 0 auto', height: 940,
-            backgroundImage: 'repeating-linear-gradient(90deg, rgba(27,58,92,0.05) 0 1px, transparent 1px 64px), repeating-linear-gradient(0deg, rgba(27,58,92,0.05) 0 1px, transparent 1px 64px)',
-            maskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 52%, transparent 100%)',
-          }} />
-          <div style={{ position: 'absolute', top: -300, left: -280, width: 1240, height: 940, borderRadius: '50%', background: 'radial-gradient(circle, #D8E4F0 0%, #E7EEF5 62%, rgba(231,238,245,0) 100%)', opacity: 0.85, filter: 'blur(120px)' }} />
-          <div style={{ position: 'absolute', top: 560, right: -300, width: 1120, height: 820, borderRadius: '50%', background: 'radial-gradient(circle, #F6D9D5 0%, #FAE7E5 58%, rgba(250,231,229,0) 100%)', opacity: 0.85, filter: 'blur(130px)' }} />
-        </div>
+      <div style={{ background: 'transparent', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
 
         {/* Hero */}
         <section style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '180px 24px 48px' }}>

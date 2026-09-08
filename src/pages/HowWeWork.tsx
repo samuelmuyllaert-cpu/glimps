@@ -163,7 +163,6 @@ const HowWeWork = () => {
     },
   ];
 
-  /* ── render ───────────────────────────────────────────────── */
   return (
     <div className="min-h-screen bg-white" style={{ color: "#10161F" }}>
       <SEO
@@ -173,7 +172,7 @@ const HowWeWork = () => {
       />
       <Navigation />
 
-      {/* ─── Decorative background blobs ─── */}
+      {/* Decorative background blobs */}
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div
           className="absolute -left-[280px] -top-[300px] h-[940px] w-[1240px] rounded-full opacity-[0.55]"
@@ -191,10 +190,9 @@ const HowWeWork = () => {
         />
       </div>
 
-      {/* ═══════════════════ HERO ═══════════════════ */}
-      <section className="relative pt-32 pb-20 md:pt-44 md:pb-28">
+      {/* HERO */}
+      <section className="relative pt-36 pb-16 md:pt-48 md:pb-24">
         <div className="mx-auto max-w-[1120px] px-6 text-center">
-          {/* Uppercase label */}
           <p
             className="mb-6 inline-block font-semibold uppercase tracking-[0.14em]"
             style={{ fontSize: "11.5px", color: "#1B3A5C" }}
@@ -203,108 +201,151 @@ const HowWeWork = () => {
           </p>
 
           <h1
-            className="mx-auto max-w-4xl font-serif font-normal leading-[1.08]"
-            style={{ fontSize: "clamp(40px, 5.4vw, 78px)", letterSpacing: "-0.025em", color: "#10161F" }}
+            className="mx-auto max-w-4xl font-serif font-normal leading-[1.05]"
+            style={{ fontSize: "clamp(42px, 5.6vw, 82px)", letterSpacing: "-0.025em", color: "#10161F" }}
           >
             {t('howWeWork.title')}{" "}
             <span style={{ color: "#1B3A5C" }}>{t('howWeWork.titleHighlight')}</span>
           </h1>
 
           <p
-            className="mx-auto mt-7 max-w-2xl leading-relaxed"
-            style={{ fontSize: "18px", lineHeight: 1.62, color: "#5A6472" }}
+            className="mx-auto mt-7 max-w-xl leading-relaxed"
+            style={{ fontSize: "18px", lineHeight: 1.65, color: "#5A6472" }}
           >
             {t('howWeWork.description')}
           </p>
         </div>
       </section>
 
-      {/* ═══════════════════ OVERVIEW GRID (5 step cards) ═══════════════════ */}
-      <section className="relative pb-28">
-        <div className="mx-auto max-w-[1120px] px-6">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {steps.map((step) => (
-              <a
-                key={step.number}
-                href={`#step-${step.number}`}
-                className="group flex flex-col rounded-[20px] bg-white p-7 shadow-[0_2px_24px_-4px_rgba(0,0,0,0.08)] transition-shadow hover:shadow-[0_8px_40px_-8px_rgba(0,0,0,0.13)]"
-              >
-                <span
-                  className="font-serif leading-none"
-                  style={{ fontSize: "42px", color: step.accent }}
+      {/* TIMELINE OVERVIEW */}
+      <section className="relative pb-8">
+        <div className="mx-auto max-w-[960px] px-6">
+          {/* Desktop: horizontal timeline */}
+          <div className="hidden lg:block">
+            <div className="relative flex items-start justify-between">
+              {/* Connecting line */}
+              <div
+                className="absolute left-[10%] right-[10%] top-[20px]"
+                style={{ height: 2, background: "#E7EEF5" }}
+              />
+              {steps.map((step) => (
+                <a
+                  key={step.number}
+                  href={`#step-${step.number}`}
+                  className="group relative z-10 flex w-[18%] flex-col items-center text-center"
                 >
-                  {step.number}
-                </span>
-                <span
-                  className="mt-3 text-[15px] font-semibold"
-                  style={{ color: "#10161F" }}
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-full border-[3px] bg-white font-serif text-[18px] transition-all duration-200 group-hover:scale-110"
+                    style={{ borderColor: step.accent, color: step.accent }}
+                  >
+                    {step.number}
+                  </div>
+                  <span
+                    className="mt-4 text-[14px] font-semibold leading-tight"
+                    style={{ color: "#10161F" }}
+                  >
+                    {step.label}
+                  </span>
+                  <span
+                    className="mt-1.5 text-[13px] leading-snug"
+                    style={{ color: "#5A6472" }}
+                  >
+                    {step.subtitle}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile: vertical timeline */}
+          <div className="lg:hidden">
+            <div className="relative ml-5 border-l-2 border-[#E7EEF5] pl-8 space-y-6">
+              {steps.map((step) => (
+                <a
+                  key={step.number}
+                  href={`#step-${step.number}`}
+                  className="relative block"
                 >
-                  {step.label}
-                </span>
-                <span
-                  className="mt-1.5 text-[13.5px] leading-snug"
-                  style={{ color: "#5A6472" }}
-                >
-                  {step.subtitle}
-                </span>
-              </a>
-            ))}
+                  <div
+                    className="absolute -left-[calc(2rem+13px)] top-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white text-[12px] font-bold"
+                    style={{ borderColor: step.accent, color: step.accent }}
+                  >
+                    {step.number}
+                  </div>
+                  <span className="text-[14px] font-semibold" style={{ color: "#10161F" }}>
+                    {step.label}
+                  </span>
+                  <span className="ml-2 text-[13px]" style={{ color: "#5A6472" }}>
+                    {step.subtitle}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════ DETAILED STEPS ═══════════════════ */}
+      {/* DETAILED STEPS */}
       {steps.map((step, idx) => {
         const Icon = step.icon;
-        const isEven = idx % 2 === 1;
+        const cardOnRight = idx % 2 === 0;
 
         return (
           <section
             key={step.number}
             id={`step-${step.number}`}
             className="relative scroll-mt-24"
-            style={{
-              paddingTop: "80px",
-              paddingBottom: "80px",
-              background: isEven ? "#F4F7FA" : "transparent",
-            }}
+            style={{ paddingTop: 100, paddingBottom: 100 }}
           >
+            {/* Subtle separator */}
             <div className="mx-auto max-w-[1120px] px-6">
-              <div className={`grid items-start gap-16 lg:grid-cols-2 ${isEven ? "lg:direction-rtl" : ""}`}>
-                {/* ── Left: text content ── */}
-                <div className={isEven ? "lg:[direction:ltr]" : ""}>
-                  {/* Step indicator */}
+              {idx > 0 && (
+                <div className="absolute left-1/2 top-0 -translate-x-1/2" style={{ width: 1, height: 60, background: "linear-gradient(180deg, transparent, #E7EEF5)" }} />
+              )}
+
+              <div className={`grid items-center gap-12 lg:gap-20 lg:grid-cols-2`}>
+                {/* Text side */}
+                <div className={cardOnRight ? "lg:order-1" : "lg:order-2"}>
+                  {/* Large watermark number */}
+                  <div className="relative">
+                    <span
+                      className="absolute -left-4 -top-16 font-serif leading-none select-none pointer-events-none"
+                      style={{ fontSize: 160, color: step.accent, opacity: 0.04 }}
+                    >
+                      {step.number}
+                    </span>
+                  </div>
+
                   <p
-                    className="mb-5 font-semibold uppercase tracking-[0.14em]"
+                    className="mb-4 font-semibold uppercase tracking-[0.14em]"
                     style={{ fontSize: "11.5px", color: step.accent }}
                   >
-                    Stap {step.number}/5
+                    {step.label}
                   </p>
 
-                  <div className="mb-6 flex items-center gap-4">
+                  <div className="mb-5 flex items-center gap-4">
                     <div
-                      className="flex h-14 w-14 items-center justify-center rounded-[16px]"
+                      className="flex h-12 w-12 items-center justify-center rounded-[14px]"
                       style={{ background: step.accentBg }}
                     >
-                      <Icon className="h-6 w-6" style={{ color: step.accent }} strokeWidth={1.8} />
+                      <Icon className="h-5 w-5" style={{ color: step.accent }} strokeWidth={1.8} />
                     </div>
                     <h2
-                      className="font-serif font-normal leading-[1.1]"
-                      style={{ fontSize: "clamp(32px, 3.4vw, 52px)", letterSpacing: "-0.025em" }}
+                      className="font-serif font-normal leading-[1.08]"
+                      style={{ fontSize: "clamp(30px, 3.2vw, 48px)", letterSpacing: "-0.025em" }}
                     >
                       {step.title}
                     </h2>
                   </div>
 
                   <p
-                    className="mb-6 max-w-lg leading-relaxed"
-                    style={{ fontSize: "17px", lineHeight: 1.6, color: "#5A6472" }}
+                    className="mb-7 max-w-lg leading-relaxed"
+                    style={{ fontSize: "17px", lineHeight: 1.62, color: "#5A6472" }}
                   >
                     {step.description}
                   </p>
 
-                  {/* Features */}
-                  <ul className="space-y-3.5">
+                  <ul className="space-y-3">
                     {step.features.map((feat, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2
@@ -312,17 +353,13 @@ const HowWeWork = () => {
                           style={{ color: step.accent }}
                           strokeWidth={2}
                         />
-                        <span
-                          className="text-[15.5px] leading-snug"
-                          style={{ color: "#3A4250" }}
-                        >
+                        <span className="text-[15px] leading-snug" style={{ color: "#3A4250" }}>
                           {feat}
                         </span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* Warning (step 1 only) */}
                   {step.warning && (
                     <div
                       className="mt-6 rounded-[14px] border px-5 py-4 text-[14px] leading-relaxed"
@@ -336,7 +373,6 @@ const HowWeWork = () => {
                     </div>
                   )}
 
-                  {/* Next step link */}
                   {step.next && (
                     <div className="mt-8 flex items-center gap-2 text-[14px] font-medium" style={{ color: step.accent }}>
                       <ArrowRight className="h-4 w-4" />
@@ -345,38 +381,13 @@ const HowWeWork = () => {
                   )}
                 </div>
 
-                {/* ── Right: card ── */}
-                <div className={isEven ? "lg:[direction:ltr]" : ""}>
-                  {step.number === "1" && (
-                    <StepCard1
-                      card={step.card as typeof steps[0]["card"]}
-                      accent={step.accent}
-                    />
-                  )}
-                  {step.number === "2" && (
-                    <StepCard2
-                      card={step.card as typeof steps[1]["card"]}
-                      accent={step.accent}
-                    />
-                  )}
-                  {step.number === "3" && (
-                    <StepCard3
-                      card={step.card as typeof steps[2]["card"]}
-                      accent={step.accent}
-                    />
-                  )}
-                  {step.number === "4" && (
-                    <StepCard4
-                      card={step.card as typeof steps[3]["card"]}
-                      accent={step.accent}
-                    />
-                  )}
-                  {step.number === "5" && (
-                    <StepCard5
-                      card={step.card as typeof steps[4]["card"]}
-                      accent={step.accent}
-                    />
-                  )}
+                {/* Card side */}
+                <div className={cardOnRight ? "lg:order-2" : "lg:order-1"}>
+                  {step.number === "1" && <StepCard1 card={step.card as any} accent={step.accent} />}
+                  {step.number === "2" && <StepCard2 card={step.card as any} accent={step.accent} />}
+                  {step.number === "3" && <StepCard3 card={step.card as any} accent={step.accent} />}
+                  {step.number === "4" && <StepCard4 card={step.card as any} accent={step.accent} />}
+                  {step.number === "5" && <StepCard5 card={step.card as any} accent={step.accent} />}
                 </div>
               </div>
             </div>
@@ -384,25 +395,28 @@ const HowWeWork = () => {
         );
       })}
 
-      {/* ═══════════════════ CTA ═══════════════════ */}
-      <section className="relative py-28 md:py-36">
-        <div className="mx-auto max-w-[720px] px-6 text-center">
+      {/* CTA */}
+      <section className="relative px-6 py-20 md:py-28">
+        <div
+          className="mx-auto max-w-[1120px] rounded-[28px] px-8 py-20 text-center md:py-28"
+          style={{ background: "#10161F" }}
+        >
           <h2
-            className="font-serif font-normal leading-[1.1]"
+            className="mx-auto max-w-2xl font-serif font-normal leading-[1.08] text-white"
             style={{ fontSize: "clamp(34px, 3.8vw, 56px)", letterSpacing: "-0.025em" }}
           >
             {t('howWeWork.cta.title')}
           </h2>
           <p
             className="mx-auto mt-5 max-w-md leading-relaxed"
-            style={{ fontSize: "17px", lineHeight: 1.6, color: "#5A6472" }}
+            style={{ fontSize: "17px", lineHeight: 1.6, color: "rgba(255,255,255,0.65)" }}
           >
             {t('howWeWork.cta.description')}
           </p>
           <a
             href="/contact"
-            className="mt-9 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
-            style={{ background: "#10161F" }}
+            className="mt-9 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[15px] font-semibold transition-opacity hover:opacity-90"
+            style={{ background: "#fff", color: "#10161F" }}
           >
             {t('howWeWork.cta.button')}
             <ArrowRight className="h-4 w-4" />
@@ -418,12 +432,14 @@ const HowWeWork = () => {
 export default HowWeWork;
 
 /* ═══════════════════════════════════════════════════════════════
-   STEP DETAIL CARDS — clean white cards with subtle shadows
+   STEP DETAIL CARDS
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── Card wrapper ──────────────────────────────────────────── */
 const CardShell = ({ children }: { children: React.ReactNode }) => (
-  <div className="rounded-[22px] bg-white p-7 shadow-[0_4px_32px_-6px_rgba(0,0,0,0.10)]">
+  <div
+    className="rounded-[22px] bg-white p-7"
+    style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 8px 32px -8px rgba(0,0,0,0.08)", border: "1px solid #EDF1F6" }}
+  >
     {children}
   </div>
 );
@@ -437,7 +453,6 @@ const Pill = ({ children, bg, color }: { children: React.ReactNode; bg: string; 
   </span>
 );
 
-/* ── Step 1 : Screening ─────────────────────────────────────── */
 function StepCard1({ card, accent }: { card: any; accent: string }) {
   return (
     <CardShell>
@@ -458,16 +473,12 @@ function StepCard1({ card, accent }: { card: any; accent: string }) {
               <span className="font-semibold" style={{ color: "#10161F" }}>{item.value}</span>
             </div>
             <div className="h-[6px] w-full rounded-full" style={{ background: "#E7EEF5" }}>
-              <div
-                className="h-full rounded-full"
-                style={{ width: item.value, background: accent }}
-              />
+              <div className="h-full rounded-full" style={{ width: item.value, background: accent }} />
             </div>
           </div>
         ))}
       </div>
 
-      {/* Readiness score */}
       <div className="mt-7 flex flex-col items-center rounded-[16px] py-6" style={{ background: "#F4F7FA" }}>
         <span className="text-[13px] font-medium" style={{ color: "#5A6472" }}>
           {card.readinessScore}
@@ -476,21 +487,14 @@ function StepCard1({ card, accent }: { card: any; accent: string }) {
           <svg className="absolute inset-0 h-full w-full -rotate-90" viewBox="0 0 112 112">
             <circle cx="56" cy="56" r="48" stroke="#E7EEF5" strokeWidth="7" fill="none" />
             <circle
-              cx="56"
-              cy="56"
-              r="48"
-              stroke={accent}
-              strokeWidth="7"
-              fill="none"
+              cx="56" cy="56" r="48" stroke={accent} strokeWidth="7" fill="none"
               strokeLinecap="round"
               strokeDasharray={`${2 * Math.PI * 48}`}
               strokeDashoffset={`${2 * Math.PI * 48 * (1 - card.score / 100)}`}
             />
           </svg>
           <div className="relative text-center">
-            <span className="font-serif text-[36px] leading-none" style={{ color: accent }}>
-              {card.score}
-            </span>
+            <span className="font-serif text-[36px] leading-none" style={{ color: accent }}>{card.score}</span>
             <span className="block text-[12px]" style={{ color: "#5A6472" }}>/100</span>
           </div>
         </div>
@@ -499,7 +503,6 @@ function StepCard1({ card, accent }: { card: any; accent: string }) {
   );
 }
 
-/* ── Step 2 : Analyse ───────────────────────────────────────── */
 function StepCard2({ card, accent }: { card: any; accent: string }) {
   return (
     <CardShell>
@@ -559,7 +562,6 @@ function StepCard2({ card, accent }: { card: any; accent: string }) {
   );
 }
 
-/* ── Step 3 : Implementatie ─────────────────────────────────── */
 function StepCard3({ card, accent }: { card: any; accent: string }) {
   return (
     <CardShell>
@@ -581,10 +583,7 @@ function StepCard3({ card, accent }: { card: any; accent: string }) {
               strokeWidth={2}
             />
             <div className="flex-1">
-              <div
-                className="mb-1 text-[14px]"
-                style={{ color: item.pct === 100 ? "#10161F" : "#5A6472" }}
-              >
+              <div className="mb-1 text-[14px]" style={{ color: item.pct === 100 ? "#10161F" : "#5A6472" }}>
                 {item.label}
               </div>
               <Bar pct={item.pct} color={accent} />
@@ -599,9 +598,7 @@ function StepCard3({ card, accent }: { card: any; accent: string }) {
       <div className="mt-7 grid grid-cols-3 gap-4 rounded-[16px] py-5 px-4" style={{ background: "#F4F7FA" }}>
         {card.stats.map((s: any, i: number) => (
           <div key={i} className="text-center">
-            <div className="font-serif text-[28px] leading-none" style={{ color: accent }}>
-              {s.value}
-            </div>
+            <div className="font-serif text-[28px] leading-none" style={{ color: accent }}>{s.value}</div>
             <div className="mt-1 text-[12px]" style={{ color: "#5A6472" }}>{s.label}</div>
           </div>
         ))}
@@ -610,37 +607,22 @@ function StepCard3({ card, accent }: { card: any; accent: string }) {
   );
 }
 
-/* ── Step 4 : Livegang ──────────────────────────────────────── */
 function StepCard4({ card, accent }: { card: any; accent: string }) {
   return (
     <CardShell>
       <div className="mb-5 flex items-center justify-between">
         <div>
-          <span className="text-[16px] font-semibold" style={{ color: "#10161F" }}>
-            {card.title}
-          </span>
-          <span className="ml-2 text-[13px]" style={{ color: "#5A6472" }}>
-            {card.period}
-          </span>
+          <span className="text-[16px] font-semibold" style={{ color: "#10161F" }}>{card.title}</span>
+          <span className="ml-2 text-[13px]" style={{ color: "#5A6472" }}>{card.period}</span>
         </div>
-        <Pill bg="rgba(14,124,102,0.10)" color="#0E7C66">
-          {card.live}
-        </Pill>
+        <Pill bg="rgba(14,124,102,0.10)" color="#0E7C66">{card.live}</Pill>
       </div>
 
       <div className="grid grid-cols-2 gap-4">
         {card.metrics.map((m: any, i: number) => (
-          <div
-            key={i}
-            className="rounded-[14px] p-4"
-            style={{ background: "#F4F7FA" }}
-          >
-            <div className="text-[12.5px] font-medium" style={{ color: "#5A6472" }}>
-              {m.label}
-            </div>
-            <div className="mt-1 font-serif text-[32px] leading-none" style={{ color: "#10161F" }}>
-              {m.value}
-            </div>
+          <div key={i} className="rounded-[14px] p-4" style={{ background: "#F4F7FA" }}>
+            <div className="text-[12.5px] font-medium" style={{ color: "#5A6472" }}>{m.label}</div>
+            <div className="mt-1 font-serif text-[32px] leading-none" style={{ color: "#10161F" }}>{m.value}</div>
             <div className="mt-1 text-[12px] font-semibold" style={{ color: "#0E7C66" }}>
               {m.change} {card.vsPreviousMonth}
             </div>
@@ -649,9 +631,7 @@ function StepCard4({ card, accent }: { card: any; accent: string }) {
       </div>
 
       <div className="mt-5 rounded-[14px] p-5" style={{ background: "#F4F7FA" }}>
-        <div className="mb-2 text-[13px] font-medium" style={{ color: "#5A6472" }}>
-          {card.conversionRate}
-        </div>
+        <div className="mb-2 text-[13px] font-medium" style={{ color: "#5A6472" }}>{card.conversionRate}</div>
         <div className="mb-3 text-right text-[22px] font-bold" style={{ color: "#0E7C66" }}>+43%</div>
         <div className="flex h-28 items-end gap-1">
           {[30, 45, 40, 55, 50, 65, 60, 75, 70, 85, 80, 90].map((h, i) => (
@@ -675,7 +655,6 @@ function StepCard4({ card, accent }: { card: any; accent: string }) {
   );
 }
 
-/* ── Step 5 : Data Insights ─────────────────────────────────── */
 function StepCard5({ card, accent }: { card: any; accent: string }) {
   const sentimentData = [
     { label: card.positive, pct: 78, color: "#0E7C66" },
@@ -687,24 +666,15 @@ function StepCard5({ card, accent }: { card: any; accent: string }) {
     <CardShell>
       <div className="mb-5 flex items-center justify-between">
         <div>
-          <span className="text-[16px] font-semibold" style={{ color: "#10161F" }}>
-            {card.title}
-          </span>
-          <span className="ml-2 text-[13px]" style={{ color: "#5A6472" }}>
-            {card.period}
-          </span>
+          <span className="text-[16px] font-semibold" style={{ color: "#10161F" }}>{card.title}</span>
+          <span className="ml-2 text-[13px]" style={{ color: "#5A6472" }}>{card.period}</span>
         </div>
-        <Pill bg="rgba(231,78,77,0.10)" color="#E74E4D">
-          {card.live}
-        </Pill>
+        <Pill bg="rgba(231,78,77,0.10)" color="#E74E4D">{card.live}</Pill>
       </div>
 
-      {/* Top products */}
       <div className="rounded-[14px] p-4" style={{ background: "#F4F7FA" }}>
         <div className="mb-3 flex items-center justify-between">
-          <span className="text-[13px] font-medium" style={{ color: "#5A6472" }}>
-            {card.topProducts}
-          </span>
+          <span className="text-[13px] font-medium" style={{ color: "#5A6472" }}>{card.topProducts}</span>
           <Pill bg="rgba(27,58,92,0.08)" color="#1B3A5C">{card.top3}</Pill>
         </div>
         <div className="space-y-2">
@@ -719,11 +689,8 @@ function StepCard5({ card, accent }: { card: any; accent: string }) {
         </div>
       </div>
 
-      {/* Sentiment */}
       <div className="mt-4 rounded-[14px] p-4" style={{ background: "#F4F7FA" }}>
-        <div className="mb-3 text-[13px] font-medium" style={{ color: "#5A6472" }}>
-          {card.sentiment}
-        </div>
+        <div className="mb-3 text-[13px] font-medium" style={{ color: "#5A6472" }}>{card.sentiment}</div>
         <div className="space-y-3">
           {sentimentData.map((s, i) => (
             <div key={i}>
@@ -737,19 +704,14 @@ function StepCard5({ card, accent }: { card: any; accent: string }) {
         </div>
       </div>
 
-      {/* Improvement */}
       <div
         className="mt-4 flex items-start gap-3 rounded-[14px] px-4 py-3.5"
         style={{ background: "rgba(231,78,77,0.06)" }}
       >
         <BarChart3 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: accent }} />
         <div>
-          <div className="text-[13.5px] font-semibold" style={{ color: "#10161F" }}>
-            {card.improvement}
-          </div>
-          <div className="mt-0.5 text-[12.5px] leading-snug" style={{ color: "#5A6472" }}>
-            {card.improvementText}
-          </div>
+          <div className="text-[13.5px] font-semibold" style={{ color: "#10161F" }}>{card.improvement}</div>
+          <div className="mt-0.5 text-[12.5px] leading-snug" style={{ color: "#5A6472" }}>{card.improvementText}</div>
         </div>
       </div>
 
@@ -764,7 +726,6 @@ function StepCard5({ card, accent }: { card: any; accent: string }) {
   );
 }
 
-/* ── Inline bar helper (used inside card components) ── */
 function Bar({ pct, color }: { pct: number; color: string }) {
   return (
     <div className="h-[6px] w-full rounded-full" style={{ background: "#E7EEF5" }}>
