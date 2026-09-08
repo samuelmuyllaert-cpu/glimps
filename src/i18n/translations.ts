@@ -157,7 +157,7 @@ export const translations = {
       benefits: [
         'Hogere conversie rate',
         'Terugkerende vragen automatisch opgelost',
-        'Volledig GDPR-compliant',
+        'Ontworpen met GDPR in gedachten',
         'Live binnen 2 weken'
       ],
       formTitle: 'Plan je demo',
@@ -225,8 +225,8 @@ export const translations = {
       resources: 'Resources',
       legal: 'Juridisch',
       allRightsReserved: 'Alle rechten voorbehouden',
-      gdprCompliant: 'GDPR Compliant',
-      gdprDesc: '100% EU regelgeving',
+      gdprCompliant: 'GDPR-bewust',
+      gdprDesc: 'In lijn met EU-regelgeving',
       privacyFirst: 'Privacy First',
       privacyDesc: 'Jouw data is veilig',
       bestInTech: 'Best in Tech',
@@ -274,7 +274,7 @@ export const translations = {
         },
         {
           title: 'Betrouwbaar & Transparant',
-          description: 'GDPR-compliant en altijd transparant over hoe AI werkt.'
+          description: 'Ontworpen met GDPR in gedachten en transparant over hoe AI werkt.'
         },
         {
           title: 'Naadloze Samenwerking',
@@ -1454,7 +1454,7 @@ export const translations = {
       benefits: [
         'Taux de conversion plus élevé',
         'Questions récurrentes résolues automatiquement',
-        'Entièrement conforme RGPD',
+        'Conçu avec le RGPD à l’esprit',
         'En ligne dans les 2 semaines'
       ],
       formTitle: 'Planifiez votre démo',
@@ -1522,8 +1522,8 @@ export const translations = {
       resources: 'Ressources',
       legal: 'Juridique',
       allRightsReserved: 'Tous droits réservés',
-      gdprCompliant: 'Conforme RGPD',
-      gdprDesc: '100% réglementation UE',
+      gdprCompliant: 'RGPD en tête',
+      gdprDesc: 'Aligné sur la réglementation européenne',
       privacyFirst: 'Confidentialité d\'abord',
       privacyDesc: 'Vos données sont sécurisées',
       bestInTech: 'Meilleure technologie',
@@ -2941,7 +2941,7 @@ export const translations = {
       benefits: [
         'Higher conversion rate',
         'Recurring questions solved automatically',
-        'Fully GDPR compliant',
+        'Designed with GDPR in mind',
         'Live within 2 weeks'
       ],
       formTitle: 'Schedule your demo',
@@ -3009,8 +3009,8 @@ export const translations = {
       resources: 'Resources',
       legal: 'Legal',
       allRightsReserved: 'All rights reserved',
-      gdprCompliant: 'GDPR Compliant',
-      gdprDesc: '100% EU regulations',
+      gdprCompliant: 'GDPR-bewust',
+      gdprDesc: 'Aligned with EU regulations',
       privacyFirst: 'Privacy First',
       privacyDesc: 'Your data is safe',
       bestInTech: 'Best in Tech',
@@ -3058,7 +3058,7 @@ export const translations = {
         },
         {
           title: 'Reliable & Transparent',
-          description: 'GDPR compliant and always transparent about how AI works.'
+          description: 'Designed with GDPR in mind and transparent about how AI works.'
         },
         {
           title: 'Seamless Collaboration',
