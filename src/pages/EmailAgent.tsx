@@ -181,6 +181,10 @@ const EmailAgentPage = () => {
     .replace(/gap: 48px/g, 'gap: clamp(20px, 4vw, 48px)')
     // Mobile responsive: large padding
     .replace(/padding: 72px/g, 'padding: clamp(32px, 6vw, 72px)')
+    .replace(
+      '<div style="position: relative; width: 100%; margin: 0 auto; background: #fff; color: #10161F; overflow: hidden">',
+      '<div style="position: relative; width: 100%; margin: 0 auto; background: #fff; color: #10161F; overflow: hidden; font-family: \'Segoe UI\', system-ui, sans-serif">'
+    )
     ;
 
   return (
