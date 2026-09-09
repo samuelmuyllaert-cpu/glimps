@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -13,15 +13,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage } = useLanguage();
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 12);
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const prefix = language === 'fr' ? '/fr' : language === 'en' ? '/en' : '';
 
@@ -50,19 +42,18 @@ const Navigation = () => {
   const demoHref = `${prefix}/demo`;
 
   return (
-    <div className="sticky top-0 z-50 w-full" style={{ padding: '0 24px' }}>
+    <div className="sticky top-0 z-50 w-full" style={{ padding: '16px 24px 0' }}>
       <header
         className="mx-auto flex items-center"
         style={{
           maxWidth: 1180,
-          background: isScrolled ? '#1B3A5C' : 'transparent',
-          backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-          WebkitBackdropFilter: isScrolled ? 'blur(10px)' : 'none',
-          border: isScrolled ? '1px solid #1B3A5C' : '1px solid transparent',
+          background: 'rgba(255,255,255,0.86)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          border: '1px solid #E4E7EC',
           borderRadius: 999,
-          boxShadow: isScrolled ? '0 14px 34px -22px rgba(6,20,36,0.42)' : 'none',
+          boxShadow: '0 14px 34px -22px rgba(21,23,28,0.28)',
           padding: '8px 8px 8px 28px',
-          transition: 'background 200ms ease, border-color 200ms ease, box-shadow 200ms ease',
         }}
       >
         <a href={prefix || '/'} className="flex-shrink-0">
@@ -76,7 +67,7 @@ const Navigation = () => {
               key={link.href}
               href={link.href}
               className="inline-flex items-center gap-2 px-3"
-              style={{ fontSize: '14.5px', color: isScrolled ? '#fff' : '#5A6472', fontWeight: 400, minHeight: 44, transition: 'color 200ms ease' }}
+              style={{ fontSize: '14.5px', color: '#5A6472', fontWeight: 400, minHeight: 44 }}
             >
               {link.dot && (
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: link.dot, flexShrink: 0 }} />
@@ -94,9 +85,8 @@ const Navigation = () => {
                 className="inline-flex items-center justify-center"
                 style={{
                   width: 36, height: 36, borderRadius: '50%',
-                  border: `1px solid ${isScrolled ? 'rgba(255,255,255,0.4)' : '#E4E7EC'}`, background: 'transparent',
-                  fontSize: 13, fontWeight: 500, color: isScrolled ? '#fff' : '#5A6472', cursor: 'pointer',
-                  transition: 'color 200ms ease, border-color 200ms ease',
+                  border: '1px solid #E4E7EC', background: 'transparent',
+                  fontSize: 13, fontWeight: 500, color: '#5A6472', cursor: 'pointer',
                 }}
               >
                 {language.toUpperCase()}
